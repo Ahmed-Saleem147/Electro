@@ -51,7 +51,9 @@ function initShopPage() {
 
 function renderShopGrid(products) {
   const grid = document.getElementById('shopProductsGrid');
+  const gridFull = document.getElementById('shopProductsGridFull');
   if (!grid) return;
+  if (gridFull) gridFull.innerHTML = '';
   if (products.length === 0) {
     grid.innerHTML = `
       <div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text-muted)">
@@ -64,6 +66,28 @@ function renderShopGrid(products) {
   grid.innerHTML = products.map(p => renderProductCard(p)).join('');
   updateWishlistButtons();
   triggerReveal();
+  requestAnimationFrame(splitProductsBelowSidebar);
+}
+
+function splitProductsBelowSidebar() {
+  if (window.innerWidth < 1024) return;
+  const grid = document.getElementById('shopProductsGrid');
+  const gridFull = document.getElementById('shopProductsGridFull');
+  const sidebar = document.querySelector('.shop-sidebar');
+  if (!grid || !gridFull || !sidebar) return;
+
+  const sidebarH = sidebar.offsetHeight;
+  const cards = Array.from(grid.children).filter(el => el.classList.contains('product-card'));
+  if (!cards.length) return;
+
+  const cardH = cards[0].offsetHeight + 20;
+  const cols = 3;
+  const rowsAlongside = Math.max(1, Math.floor(sidebarH / cardH));
+  const cardsAlongside = rowsAlongside * cols;
+
+  if (cards.length <= cardsAlongside) return;
+
+  cards.slice(cardsAlongside).forEach(card => gridFull.appendChild(card));
 }
 
 function setupShopFilters(initialProducts) {

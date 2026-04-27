@@ -1650,6 +1650,8 @@ input, select, textarea { font-family: inherit; }
   .section-title { font-size: clamp(1.5rem,2.5vw,2rem); }
   .products-grid { grid-template-columns: repeat(3,1fr); gap: 20px; padding: 0; }
   #shopProductsGrid { padding: 0; grid-template-columns: repeat(3,1fr); }
+  #shopProductsGridFull { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; padding: 0; margin-top: 20px; }
+  #shopProductsGridFull:empty { display: none; }
   .product-img-wrap { aspect-ratio: 1/1; }
   .product-img-icon { font-size: 88px; }
   .product-name { font-size: 14px; }

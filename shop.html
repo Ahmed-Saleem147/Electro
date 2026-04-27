@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – Orbiva Technologies</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-left">
+      <span><i class="fas fa-phone-alt"></i> 050 257 8905</span>
+      <span><i class="fas fa-envelope"></i> info@orbivagh.com</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="contact.html">Track Order</a>
+      <a href="contact.html">Help</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header (same as index) -->
+<header class="header" id="mainHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="img/logo.jpeg" alt="Orbiva Technologies" class="logo-img">
+    </a>
+    <div class="search-bar" id="searchBar">
+      <div class="search-input-wrap">
+        <select class="search-category" id="searchCategory">
+          <option>All Categories</option>
+          <option>Televisions</option>
+          <option>Air Conditioners</option>
+          <option>Refrigerators</option>
+          <option>Washing Machines</option>
+          <option>Kitchen Appliances</option>
+          <option>Small Appliances</option>
+        </select>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for products, brands..." />
+        <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+    <div class="header-actions">
+      <button class="action-btn" id="wishlistToggle" title="Wishlist">
+        <i class="fas fa-heart"></i><span class="badge" id="wishlistCount">0</span>
+      </button>
+      <button class="action-btn cart-btn" id="cartToggle" title="Cart">
+        <i class="fas fa-shopping-cart"></i><span class="badge" id="cartCount">0</span>
+        <span class="cart-total-label" id="cartTotalLabel">GH₵ 0</span>
+      </button>
+      <button class="action-btn" id="accountToggle" title="Account"><i class="fas fa-user"></i></button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link active">Shop</a></li>
+        <li class="has-dropdown">
+          <a href="shop.html" class="nav-link">Categories <i class="fas fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown" id="catDropdown"></ul>
+        </li>
+        <li><a href="shop.html" class="nav-link">Brands</a></li>
+        <li><a href="shop.html?filter=deals" class="nav-link deals-link"><i class="fas fa-fire"></i> Deals <span class="hot-tag">HOT</span></a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-promo"><i class="fas fa-truck"></i><span>Free delivery on orders above GH₵ 500</span></div>
+    </div>
+  </nav>
+</header>
+
+<!-- Sidebars & Modals (same structure) -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-sidebar-header">
+    <h3><i class="fas fa-shopping-cart"></i> Your Cart (<span id="cartItemCount">0</span>)</h3>
+    <button class="close-btn" id="closeCart"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items-wrap" id="cartItemsWrap">
+    <div class="cart-empty" id="cartEmpty"><i class="fas fa-shopping-cart"></i><p>Your cart is empty</p><a href="shop.html" class="btn-primary">Start Shopping</a></div>
+    <ul class="cart-items-list" id="cartItemsList"></ul>
+  </div>
+  <div class="cart-sidebar-footer" id="cartFooter" style="display:none">
+    <div class="cart-subtotal"><span>Subtotal</span><strong id="cartSubtotal">GH₵ 0</strong></div>
+    <div class="cart-total-row"><span>Total</span><strong id="cartTotal">GH₵ 0</strong></div>
+    <a href="checkout.html" class="btn-primary btn-block">Checkout</a>
+    <a href="shop.html" class="btn-outline btn-block">Continue Shopping</a>
+  </div>
+</aside>
+<aside class="wishlist-sidebar" id="wishlistSidebar">
+  <div class="cart-sidebar-header">
+    <h3><i class="fas fa-heart"></i> Wishlist (<span id="wishlistItemCount">0</span>)</h3>
+    <button class="close-btn" id="closeWishlist"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items-wrap" id="wishlistItemsWrap">
+    <div class="cart-empty" id="wishlistEmpty"><i class="fas fa-heart"></i><p>Your wishlist is empty</p></div>
+    <ul class="cart-items-list" id="wishlistItemsList"></ul>
+  </div>
+</aside>
+<div class="modal" id="accountModal">
+  <div class="modal-box">
+    <button class="close-btn modal-close" id="closeAccount"><i class="fas fa-times"></i></button>
+    <div class="modal-tabs">
+      <button class="tab-btn active" data-tab="login">Login</button>
+      <button class="tab-btn" data-tab="register">Register</button>
+    </div>
+    <div class="tab-content active" id="loginTab">
+      <h2>Welcome Back!</h2>
+      <form class="auth-form" id="loginForm">
+        <div class="form-group"><label>Email</label><input type="email" required /></div>
+        <div class="form-group"><label>Password</label><input type="password" required /></div>
+        <button type="submit" class="btn-primary btn-block">Sign In</button>
+      </form>
+    </div>
+    <div class="tab-content" id="registerTab">
+      <h2>Create Account</h2>
+      <form class="auth-form" id="registerForm">
+        <div class="form-group"><label>Email</label><input type="email" required /></div>
+        <div class="form-group"><label>Password</label><input type="password" required /></div>
+        <button type="submit" class="btn-primary btn-block">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Shop Hero Banner -->
+<section class="shop-hero">
+  <div class="container">
+    <h1 id="shopPageTitle">All Products</h1>
+    <p>Discover our full range of premium electronics and home appliances</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span id="shopBreadcrumb">Shop</span>
+    </div>
+  </div>
+</section>
+
+<!-- Main Shop Layout -->
+<div class="container">
+  <div class="shop-layout">
+
+    <!-- Sidebar Filters -->
+    <aside class="shop-sidebar">
+      <!-- Category Filter -->
+      <div class="filter-section">
+        <h3>Categories <i class="fas fa-chevron-down"></i></h3>
+        <div class="filter-items" id="catFilterList"></div>
+      </div>
+
+      <!-- Price Range -->
+      <div class="filter-section">
+        <h3>Price Range <i class="fas fa-chevron-down"></i></h3>
+        <div class="price-range-wrap">
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:8px">Max: <strong id="priceLabelValue">GH₵ 15,000</strong></p>
+          <input type="range" class="price-range" id="priceRange" min="500" max="15000" step="100" value="15000" />
+          <div class="price-labels"><span>GH₵ 500</span><span>GH₵ 15,000</span></div>
+        </div>
+      </div>
+
+      <!-- Brands Filter -->
+      <div class="filter-section">
+        <h3>Brands <i class="fas fa-chevron-down"></i></h3>
+        <div class="filter-items" id="brandFilterList"></div>
+      </div>
+
+      <!-- Rating Filter -->
+      <div class="filter-section">
+        <h3>Customer Rating <i class="fas fa-chevron-down"></i></h3>
+        <div class="filter-items">
+          <label class="filter-item"><input type="radio" name="rating" value="4"> <div class="stars-row" style="display:inline-flex"><i class="fas fa-star" style="color:var(--gold);font-size:12px"></i><i class="fas fa-star" style="color:var(--gold);font-size:12px"></i><i class="fas fa-star" style="color:var(--gold);font-size:12px"></i><i class="fas fa-star" style="color:var(--gold);font-size:12px"></i><i class="fas fa-star" style="color:var(--gold);font-size:12px"></i></div> & Up</label>
+          <label class="filter-item"><input type="radio" name="rating" value="3"> 3+ Stars</label>
+          <label class="filter-item"><input type="radio" name="rating" value="0" checked> All Ratings</label>
+        </div>
+      </div>
+
+      <!-- Clear Filters -->
+      <button class="btn-outline" style="width:100%;margin-top:8px" onclick="window.location.href='shop.html'">
+        <i class="fas fa-times"></i> Clear All Filters
+      </button>
+    </aside>
+
+    <!-- Products Main -->
+    <main>
+      <div class="shop-main-header">
+        <span class="results-count" id="resultsCount">Loading…</span>
+        <div style="display:flex;align-items:center;gap:12px">
+          <label style="font-size:13px;color:var(--text-muted)">Sort by:</label>
+          <select class="sort-select" id="shopSort">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest First</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+            <option value="discount">Biggest Discount</option>
+          </select>
+          <button class="action-btn" title="Grid view" onclick="setView('grid')" id="gridViewBtn"><i class="fas fa-th"></i></button>
+          <button class="action-btn" title="List view" onclick="setView('list')" id="listViewBtn"><i class="fas fa-list"></i></button>
+        </div>
+      </div>
+
+      <div class="products-grid" id="shopProductsGrid">
+        <!-- Skeleton loaders while JS initializes -->
+        ${Array.from({length:8}).map(() => `
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-img"></div>
+            <div class="skeleton-body">
+              <div class="skeleton skeleton-line w-3-4"></div>
+              <div class="skeleton skeleton-line w-1-2"></div>
+              <div class="skeleton skeleton-line w-1-3"></div>
+            </div>
+          </div>`).join('')}
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Footer (abbreviated) -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><img src="img/logo.jpeg" alt="Orbiva Technologies" class="logo-img"></div>
+      <p class="footer-about">Ghana's #1 destination for premium electronics.</p>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Categories</h4><ul id="footerCatLinks"></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">FAQs</a></li><li><a href="contact.html">Returns</a></li><li><a href="contact.html">Track Order</a></li></ul></div>
+    <div class="footer-col footer-contact-col"><h4>Contact</h4><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>050 257 8905</span></div><div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@orbivagh.com</span></div></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2025 Orbiva Technologies.</p></div></div>
+</footer>
+
+<nav class="bottom-nav" id="bottomNav">
+  <a href="index.html" class="bottom-nav-item">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+  <a href="shop.html" class="bottom-nav-item active">
+    <i class="fas fa-th-large"></i>
+    <span>Shop</span>
+  </a>
+  <button class="bottom-nav-item" id="bnavCart" onclick="document.getElementById('cartToggle').click()">
+    <i class="fas fa-shopping-cart"></i>
+    <span>Cart</span>
+    <span class="bnav-badge" id="bnavCartCount">0</span>
+  </button>
+  <button class="bottom-nav-item" id="bnavWish" onclick="document.getElementById('wishlistToggle').click()">
+    <i class="fas fa-heart"></i>
+    <span>Saved</span>
+    <span class="bnav-badge" id="bnavWishCount">0</span>
+  </button>
+  <button class="bottom-nav-item" id="bnavAccount" onclick="document.getElementById('accountToggle').click()">
+    <i class="fas fa-user"></i>
+    <span>Account</span>
+  </button>
+</nav>
+
+<div class="toast-container" id="toastContainer"></div>
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shop.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Populate category filter
+  const catList = document.getElementById('catFilterList');
+  if (catList) {
+    catList.innerHTML = CATEGORIES.map(c => `
+      <label class="filter-item">
+        <input type="checkbox" class="cat-filter-check" value="${c.id}" />
+        <span>${c.name}</span>
+        <span class="filter-count">${c.count}</span>
+      </label>`).join('');
+  }
+
+  // Populate brand filter
+  const brandList = document.getElementById('brandFilterList');
+  if (brandList) {
+    brandList.innerHTML = BRANDS.slice(0, 8).map(b => `
+      <label class="filter-item">
+        <input type="checkbox" class="brand-filter-check" value="${b.id}" />
+        <span>${b.name}</span>
+        <span class="filter-count">${b.products}</span>
+      </label>`).join('');
+  }
+
+  // Footer cats
+  const footerCats = document.getElementById('footerCatLinks');
+  if (footerCats) {
+    footerCats.innerHTML = CATEGORIES.slice(0, 6).map(c => `<li><a href="shop.html?cat=${c.id}">${c.name}</a></li>`).join('');
+  }
+
+  // Nav category dropdown
+  const catDd = document.getElementById('catDropdown');
+  if (catDd) {
+    catDd.innerHTML = CATEGORIES.map(c => `<li><a href="shop.html?cat=${c.id}"><i class="${c.icon}" style="color:${c.color};margin-right:8px;width:16px"></i>${c.name}</a></li>`).join('');
+  }
+
+  initShopPage();
+  initMegaBackdrop();
+});
+
+function setView(type) {
+  const grid = document.getElementById('shopProductsGrid');
+  if (!grid) return;
+  if (type === 'list') {
+    grid.style.gridTemplateColumns = '1fr';
+    document.querySelectorAll('.product-card').forEach(c => c.style.display = 'flex');
+    document.getElementById('listViewBtn').style.color = 'var(--primary)';
+    document.getElementById('gridViewBtn').style.color = '';
+  } else {
+    grid.style.gridTemplateColumns = '';
+    document.querySelectorAll('.product-card').forEach(c => c.style.display = '');
+    document.getElementById('gridViewBtn').style.color = 'var(--primary)';
+    document.getElementById('listViewBtn').style.color = '';
+  }
+}
+</script>
+</body>
+</html>

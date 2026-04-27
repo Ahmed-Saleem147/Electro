@@ -82,7 +82,7 @@ function splitProductsBelowSidebar() {
 
   const cardH = cards[0].offsetHeight + 20;
   const cols = 3;
-  const rowsAlongside = Math.max(1, Math.floor(sidebarH / cardH));
+  const rowsAlongside = Math.max(1, Math.ceil(sidebarH / cardH));
   const cardsAlongside = rowsAlongside * cols;
 
   if (cards.length <= cardsAlongside) return;

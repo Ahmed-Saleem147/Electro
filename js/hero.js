@@ -43,13 +43,24 @@
     heroEl.addEventListener('mouseleave', startAuto);
   }
 
-  // Touch/swipe support
+  // Touch/swipe support — suppress slide onclick when swiping
   let touchStartX = 0;
+  let wasSwiped = false;
   if (heroEl) {
-    heroEl.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    heroEl.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+      wasSwiped = false;
+    }, { passive: true });
     heroEl.addEventListener('touchend', e => {
       const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 50) { stopAuto(); dx < 0 ? next() : prev(); startAuto(); }
+      if (Math.abs(dx) > 50) {
+        wasSwiped = true;
+        stopAuto(); dx < 0 ? next() : prev(); startAuto();
+      }
     }, { passive: true });
+    // Block click navigation when the gesture was a swipe
+    heroEl.addEventListener('click', e => {
+      if (wasSwiped) { e.stopImmediatePropagation(); wasSwiped = false; }
+    }, true);
   }
 })();

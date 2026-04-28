@@ -125,16 +125,6 @@ const BRANDS = [
 /* ── FLASH SALE ── */
 const FLASH_PRODUCTS = [
   {
-    id: 1,
-    name: "NASCO 24\" LED FHD Satellite TV",
-    icon: "📺",
-    price: 699,
-    oldPrice: 1099,
-    discount: 36,
-    soldPct: 68,
-    brand: "NASCO"
-  },
-  {
     id: 11,
     name: "Midea 1.5HP R410 Split AC",
     icon: "❄️",
@@ -144,92 +134,10 @@ const FLASH_PRODUCTS = [
     soldPct: 55,
     brand: "Midea"
   },
-  {
-    id: 35,
-    name: "Midea 1.5Ltrs Table Blender",
-    icon: "🍳",
-    price: 299,
-    oldPrice: 499,
-    discount: 40,
-    soldPct: 82,
-    brand: "Midea"
-  },
-  {
-    id: 36,
-    name: "Midea 20Ltrs Solo Microwave",
-    icon: "🍳",
-    price: 699,
-    oldPrice: 1099,
-    discount: 36,
-    soldPct: 47,
-    brand: "Midea"
-  }
 ];
 
 /* ── PRODUCTS ── */
 const PRODUCTS = [
-  {
-    id: 1,
-    name: "NASCO 24\" LED FHD Digital Satellite TV",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "",
-    category: "tv",
-    image: "/img/products/1NASCO-24-LED-FHD-DIGITAL-SATELLITE-TV.jpg",
-    images: ["/img/products/1NASCO-24-LED-FHD-DIGITAL-SATELLITE-TV.jpg"],
-    price: 699,
-    oldPrice: 1099,
-    discount: 36,
-    rating: 4.3,
-    reviews: 87,
-    icon: "📺",
-    color: "#003087",
-    tags: [
-      "top-deals",
-      "best-sellers"
-    ],
-    badge: "sale",
-    flashSale: true,
-    featured: true,
-    description: "24\" Full HD LED TV with built-in digital satellite receiver. Perfect for bedrooms and small spaces.",
-    specs: {
-      Size: "24\"",
-      Resolution: "Full HD 1080p",
-      Type: "LED",
-      Tuner: "Digital Satellite",
-      HDMI: "2"
-    }
-  },
-  {
-    id: 2,
-    name: "Nasco 32\" LED Digital Satellite TV",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "",
-    category: "tv",
-    image: "/img/products/1NASCO-32-LED-FHD-SATELLITE-SMART-TV-1.jpg",
-    images: ["/img/products/1NASCO-32-LED-FHD-SATELLITE-SMART-TV-1.jpg"],
-    price: 999,
-    oldPrice: 1499,
-    discount: 33,
-    rating: 4.4,
-    reviews: 143,
-    icon: "📺",
-    color: "#003087",
-    tags: [
-      "top-deals",
-      "new-arrivals"
-    ],
-    badge: "sale",
-    description: "32\" LED Full HD Digital Satellite TV with crisp picture quality and built-in satellite decoder.",
-    specs: {
-      Size: "32\"",
-      Resolution: "Full HD",
-      Type: "LED",
-      Tuner: "Digital Satellite",
-      HDMI: "2"
-    }
-  },
   {
     id: 3,
     name: "Nasco 32\" LED Satellite Smart TV",
@@ -1177,68 +1085,6 @@ const PRODUCTS = [
     }
   },
   {
-    id: 35,
-    name: "Midea 1.5Ltrs Table Blender",
-    brand: "Midea",
-    brandId: "midea",
-    model: "",
-    category: "kitchen",
-    image: "/img/products/MIDEA-1.5LTR-WHITE-BLENDER-MJ-BL2516CEE-MP01S-768x768.jpg",
-    images: ["/img/products/MIDEA-1.5LTR-WHITE-BLENDER-MJ-BL2516CEE-MP01S-768x768.jpg"],
-    price: 299,
-    oldPrice: 499,
-    discount: 40,
-    rating: 4.2,
-    reviews: 312,
-    icon: "🍳",
-    color: "#00a0e9",
-    tags: [
-      "top-deals",
-      "best-sellers"
-    ],
-    badge: "sale",
-    flashSale: true,
-    description: "1.5-litre table blender with stainless steel blades, 3-speed control, and easy-clean design.",
-    specs: {
-      Capacity: "1.5 Litres",
-      Speeds: "3",
-      Blades: "Stainless Steel",
-      Power: "350W"
-    }
-  },
-  {
-    id: 36,
-    name: "Midea 20Ltrs Microwave Solo",
-    brand: "Midea",
-    brandId: "midea",
-    model: "",
-    category: "kitchen",
-    image: "/img/products/MM7P012MZ-B-2-jpg-768x768.webp",
-    images: ["/img/products/MM7P012MZ-B-2-jpg-768x768.webp"],
-    price: 699,
-    oldPrice: 1099,
-    discount: 36,
-    rating: 4.3,
-    reviews: 267,
-    icon: "🍳",
-    color: "#00a0e9",
-    tags: [
-      "top-deals",
-      "best-sellers"
-    ],
-    badge: "sale",
-    flashSale: true,
-    featured: true,
-    description: "20-litre solo microwave with 5 power levels, digital display, auto-defrost, and child lock.",
-    specs: {
-      Capacity: "20 Litres",
-      Power: "700W",
-      Levels: "5",
-      Functions: "Solo Microwave",
-      Control: "Digital"
-    }
-  },
-  {
     id: 37,
     name: "Midea 20Ltrs Grill Microwave Silver",
     brand: "Midea",
@@ -1406,63 +1252,6 @@ const PRODUCTS = [
       Programs: "6",
       "Noise Level": "47dB",
       Energy: "A+"
-    }
-  },
-  {
-    id: 43,
-    name: "Midea 16\" Standing Fan",
-    brand: "Midea",
-    brandId: "midea",
-    model: "",
-    category: "small",
-    image: "/img/products/FS40-21M-768x768.png",
-    images: ["/img/products/FS40-21M-768x768.png"],
-    price: 249,
-    oldPrice: 279,
-    discount: 11,
-    rating: 4.2,
-    reviews: 423,
-    icon: "💨",
-    color: "#00a0e9",
-    tags: [
-      "top-deals",
-      "best-sellers"
-    ],
-    badge: "sale",
-    flashSale: true,
-    description: "16-inch 3-speed standing fan with adjustable height, oscillation, and quiet operation.",
-    specs: {
-      Blade: "16\"",
-      Speeds: "3",
-      Oscillation: "Yes",
-      Height: "Adjustable"
-    }
-  },
-  {
-    id: 44,
-    name: "Midea 16 Ceiling Fan",
-    brand: "Midea",
-    brandId: "midea",
-    model: "",
-    category: "small",
-    image: "/img/products/MIDEA-16-CEILING-FAN.jpg",
-    images: ["/img/products/MIDEA-16-CEILING-FAN.jpg"],
-    price: 479,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.3,
-    reviews: 198,
-    icon: "💨",
-    color: "#00a0e9",
-    tags: [
-      "best-sellers"
-    ],
-    description: "16-inch ceiling fan with 3 speed settings, pull-chain control, and energy-saving motor.",
-    specs: {
-      Blade: "16\"",
-      Speeds: "3",
-      Control: "Pull Chain",
-      Motor: "Energy Saving"
     }
   },
   {
@@ -2508,110 +2297,6 @@ const PRODUCTS = [
     specs: {
       Capacity: "632 L",
       Model: "RF65DG9H0EB1EU"
-    }
-  },
-  {
-    id: 81,
-    name: "Samsung WHITE Glass Panel (RA-F18DBB12GG)",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "RA-F18DBB12GG",
-    category: "fridge",
-    image: "/img/products/ae-bespoke-panels-459137-ra-f18dbb12gg-536473800.jpg",
-    images: ["/img/products/ae-bespoke-panels-459137-ra-f18dbb12gg-536473800.jpg"],
-    price: 899,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 89,
-    icon: "🧊",
-    color: "",
-    tags: [
-      "samsung",
-      "fridge"
-    ],
-    badge: "sale",
-    description: "Samsung WHITE GLASS PANEL. High-capacity refrigerator with efficient cooling and spacious storage.",
-    specs: {
-      Model: "RA-F18DBB12GG"
-    }
-  },
-  {
-    id: 82,
-    name: "Samsung SATIN BEIGE Glass Panel (RA-F18DBB39GG)",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "RA-F18DBB39GG",
-    category: "fridge",
-    image: "/img/products/ra-f18dbb39gg_brandpng",
-    images: ["/img/products/ra-f18dbb39gg_brandpng"],
-    price: 899,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.6,
-    reviews: 312,
-    icon: "🧊",
-    color: "",
-    tags: [
-      "samsung",
-      "fridge"
-    ],
-    badge: "sale",
-    description: "Samsung SATIN BEIGE GLASS PANEL. High-capacity refrigerator with efficient cooling and spacious storage.",
-    specs: {
-      Model: "RA-F18DBB39GG"
-    }
-  },
-  {
-    id: 83,
-    name: "Samsung WHITE Glass Panel (RA-F18DUU12GG)",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "RA-F18DUU12GG",
-    category: "fridge",
-    image: "/img/products/ra-f18duu12gg_brandpng",
-    images: ["/img/products/ra-f18duu12gg_brandpng"],
-    price: 899,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.8,
-    reviews: 145,
-    icon: "🧊",
-    color: "",
-    tags: [
-      "samsung",
-      "fridge"
-    ],
-    badge: "sale",
-    description: "Samsung WHITE GLASS PANEL. High-capacity refrigerator with efficient cooling and spacious storage.",
-    specs: {
-      Model: "RA-F18DUU12GG"
-    }
-  },
-  {
-    id: 84,
-    name: "Samsung SATIN BEIGE Glass Panel (RA-F18DUU39GG)",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "RA-F18DUU39GG",
-    category: "fridge",
-    image: "/img/products/ra-f18duu39gg_brandpng",
-    images: ["/img/products/ra-f18duu39gg_brandpng"],
-    price: 899,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.6,
-    reviews: 178,
-    icon: "🧊",
-    color: "",
-    tags: [
-      "samsung",
-      "fridge"
-    ],
-    badge: "sale",
-    description: "Samsung SATIN BEIGE GLASS PANEL. High-capacity refrigerator with efficient cooling and spacious storage.",
-    specs: {
-      Model: "RA-F18DUU39GG"
     }
   },
   {
@@ -6431,57 +6116,6 @@ const PRODUCTS = [
     }
   },
   {
-    id: 220,
-    name: "Midea Standing Fan (FS40-19K)",
-    brand: "Midea",
-    brandId: "midea",
-    model: "FS40-19K",
-    category: "small",
-    image: "/img/products/fs40-19k_brandpng",
-    images: ["/img/products/fs40-19k_brandpng"],
-    price: 699,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 124,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "sale",
-    description: "Midea STANDING FAN. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      Model: "FS40-19K"
-    }
-  },
-  {
-    id: 221,
-    name: "Midea Standing Fan (FS40-21M)",
-    brand: "Midea",
-    brandId: "midea",
-    model: "FS40-21M",
-    category: "small",
-    image: "/img/products/fs40-21m_brandpng",
-    images: ["/img/products/fs40-21m_brandpng"],
-    price: 279,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 312,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    description: "Midea STANDING FAN. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      Model: "FS40-21M"
-    }
-  },
-  {
     id: 222,
     name: "Midea 16\" Standing Fan",
     brand: "Midea",
@@ -7995,60 +7629,6 @@ const PRODUCTS = [
     }
   },
   {
-    id: 278,
-    name: "Midea 4 LTR - BLACK Air Fryer",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MF-CN40E2",
-    category: "small",
-    image: "/img/products/MIDEA-7LTR-AIR-FRYER-MF-CY70K.jpg",
-    images: ["/img/products/MIDEA-7LTR-AIR-FRYER-MF-CY70K.jpg"],
-    price: 899,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.7,
-    reviews: 178,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "sale",
-    description: "Midea 4 LTR - BLACK AIR FRYER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "4 LTR - BLACK",
-      Model: "MF-CN40E2"
-    }
-  },
-  {
-    id: 279,
-    name: "Midea 4.5 LTR - BLACK Air Fryer",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MF-CN45WK",
-    category: "small",
-    image: "/img/products/mf-cn45wk_brandpng",
-    images: ["/img/products/mf-cn45wk_brandpng"],
-    price: 999,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.3,
-    reviews: 145,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "sale",
-    description: "Midea 4.5 LTR - BLACK AIR FRYER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "4.5 LTR - BLACK",
-      Model: "MF-CN45WK"
-    }
-  },
-  {
     id: 280,
     name: "Midea 6 LTR - BLACK Air Fryer",
     brand: "Midea",
@@ -8127,378 +7707,6 @@ const PRODUCTS = [
     specs: {
       "Size/Capacity": "7 LTR - BLACK",
       Model: "MF-CY85WK"
-    }
-  },
-  {
-    id: 283,
-    name: "Midea 0.5 LTR Juicer",
-    brand: "Midea",
-    brandId: "midea",
-    model: "JE2802",
-    category: "small",
-    image: "/img/products/je2802_brandpng",
-    images: ["/img/products/je2802_brandpng"],
-    price: 799,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.2,
-    reviews: 145,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "sale",
-    description: "Midea 0.5 LTR JUICER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "0.5 LTR",
-      Model: "JE2802"
-    }
-  },
-  {
-    id: 284,
-    name: "Midea 1.7 LTR Kettle (MK-17S32A2)",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MK-17S32A2",
-    category: "small",
-    image: "/img/products/mk-17s32a2_brandpng",
-    images: ["/img/products/mk-17s32a2_brandpng"],
-    price: 299,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 312,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "sale",
-    description: "Midea 1.7 LTR KETTLE. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "1.7 LTR",
-      Model: "MK-17S32A2"
-    }
-  },
-  {
-    id: 285,
-    name: "Midea 1.7 LTR Kettle (MK-17G02A2)",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MK-17G02A2",
-    category: "small",
-    image: "/img/products/mk-17g02a2_brandpng",
-    images: ["/img/products/mk-17g02a2_brandpng"],
-    price: 299,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.2,
-    reviews: 124,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    description: "Midea 1.7 LTR KETTLE. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "1.7 LTR",
-      Model: "MK-17G02A2"
-    }
-  },
-  {
-    id: 286,
-    name: "Midea 2 LTRS Stand Mixer",
-    brand: "Midea",
-    brandId: "midea",
-    model: "HM0293A",
-    category: "small",
-    image: "/img/products/MIDEA-400W-STAND-MIXER1-1.jpg",
-    images: ["/img/products/MIDEA-400W-STAND-MIXER1-1.jpg"],
-    price: 599,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.4,
-    reviews: 234,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "hot",
-    description: "Midea 2 LTRS STAND MIXER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "2 LTRS",
-      Model: "HM0293A"
-    }
-  },
-  {
-    id: 287,
-    name: "Midea 1.5 LTR - BLACK Table Blender",
-    brand: "Midea",
-    brandId: "midea",
-    model: "BL2518",
-    category: "small",
-    image: "/img/products/UKYGUION.jpg",
-    images: ["/img/products/UKYGUION.jpg"],
-    price: 329,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.7,
-    reviews: 312,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "hot",
-    description: "Midea 1.5 LTR - BLACK TABLE BLENDER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "1.5 LTR - BLACK",
-      Model: "BL2518"
-    }
-  },
-  {
-    id: 288,
-    name: "Midea 1.5 LTR - WHITE Table Blender (MJ-BL40G1)",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MJ-BL40G1",
-    category: "small",
-    image: "/img/products/mj-bl40g1_brandpng",
-    images: ["/img/products/mj-bl40g1_brandpng"],
-    price: 529,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.3,
-    reviews: 267,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "hot",
-    description: "Midea 1.5 LTR - WHITE TABLE BLENDER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "1.5 LTR - WHITE",
-      Model: "MJ-BL40G1"
-    }
-  },
-  {
-    id: 289,
-    name: "Midea 1.5 LTR - WHITE Table Blender (MJ-BL2516CEE-MP01S)",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MJ-BL2516CEE-MP01S",
-    category: "small",
-    image: "/img/products/mj-bl2516cee-mp01s_brandpng",
-    images: ["/img/products/mj-bl2516cee-mp01s_brandpng"],
-    price: 499,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 203,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "sale",
-    description: "Midea 1.5 LTR - WHITE TABLE BLENDER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "1.5 LTR - WHITE",
-      Model: "MJ-BL2516CEE-MP01S"
-    }
-  },
-  {
-    id: 290,
-    name: "Midea 1.5 LTR - BLACK Stand Blender",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MJ-BL6006W",
-    category: "small",
-    image: "/img/products/MJ-BL6008BW.jpg",
-    images: ["/img/products/MJ-BL6008BW.jpg"],
-    price: 469,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.7,
-    reviews: 445,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "hot",
-    description: "Midea 1.5 LTR - BLACK STAND BLENDER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "1.5 LTR - BLACK",
-      Model: "MJ-BL6006W"
-    }
-  },
-  {
-    id: 291,
-    name: "Midea 1 LTR - BLACK Stand Blender",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MJ-BL6008BW",
-    category: "small",
-    image: "/img/products/mj-bl6008bw_brandpng",
-    images: ["/img/products/mj-bl6008bw_brandpng"],
-    price: 399,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.6,
-    reviews: 124,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    badge: "hot",
-    description: "Midea 1 LTR - BLACK STAND BLENDER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "1 LTR - BLACK",
-      Model: "MJ-BL6008BW"
-    }
-  },
-  {
-    id: 292,
-    name: "Midea 800W- WHITE Stand Blender",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MJ-FP8003W",
-    category: "small",
-    image: "/img/products/mj-fp8003w_brandpng",
-    images: ["/img/products/mj-fp8003w_brandpng"],
-    price: 699,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.2,
-    reviews: 89,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    description: "Midea 800W- WHITE STAND BLENDER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "800W- WHITE",
-      Model: "MJ-FP8003W"
-    }
-  },
-  {
-    id: 293,
-    name: "Midea 1 LTR- GOLD Rice Cooker",
-    brand: "Midea",
-    brandId: "midea",
-    model: "YJ308J",
-    category: "kitchen",
-    image: "/img/products/YJ508J.png",
-    images: ["/img/products/YJ508J.png"],
-    price: 379,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.7,
-    reviews: 234,
-    icon: "🍳",
-    color: "",
-    tags: [
-      "midea",
-      "kitchen"
-    ],
-    description: "Midea 1 LTR- GOLD RICE COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
-    specs: {
-      "Size/Capacity": "1 LTR- GOLD",
-      Model: "YJ308J"
-    }
-  },
-  {
-    id: 294,
-    name: "Midea 1.8 LTR- GOLD Rice Cooker",
-    brand: "Midea",
-    brandId: "midea",
-    model: "YJ508J",
-    category: "kitchen",
-    image: "/img/products/YJ508J.png",
-    images: ["/img/products/YJ508J.png"],
-    price: 399,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.6,
-    reviews: 124,
-    icon: "🍳",
-    color: "",
-    tags: [
-      "midea",
-      "kitchen"
-    ],
-    description: "Midea 1.8 LTR- GOLD RICE COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
-    specs: {
-      "Size/Capacity": "1.8 LTR- GOLD",
-      Model: "YJ508J"
-    }
-  },
-  {
-    id: 295,
-    name: "Midea 600W-BLACK Hand Blender",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MJ-BH6001W",
-    category: "small",
-    image: "/img/products/MIDEA-300WATT-HAND-BLENDER1.jpg",
-    images: ["/img/products/MIDEA-300WATT-HAND-BLENDER1.jpg"],
-    price: 449,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.8,
-    reviews: 178,
-    icon: "⚡",
-    color: "",
-    tags: [
-      "midea",
-      "small"
-    ],
-    description: "Midea 600W-BLACK HAND BLENDER. Compact and efficient appliance for everyday household needs.",
-    specs: {
-      "Size/Capacity": "600W-BLACK",
-      Model: "MJ-BH6001W"
-    }
-  },
-  {
-    id: 296,
-    name: "Midea 1000W Electric Pressure Cooker (MY-CS6037WP2)",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MY-CS6037WP2",
-    category: "kitchen",
-    image: "/img/products/MIDEA-5.7LTR-ELECTRIC-COOKER-MY-CS6037WP2.jpg",
-    images: ["/img/products/MIDEA-5.7LTR-ELECTRIC-COOKER-MY-CS6037WP2.jpg"],
-    price: 999,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.6,
-    reviews: 203,
-    icon: "🍳",
-    color: "",
-    tags: [
-      "midea",
-      "kitchen"
-    ],
-    description: "Midea 1000W ELECTRIC PRESSURE COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
-    specs: {
-      "Size/Capacity": "1000W",
-      Model: "MY-CS6037WP2"
     }
   },
   {
@@ -10886,33 +10094,6 @@ const PRODUCTS = [
     }
   },
   {
-    id: 383,
-    name: "NASCO 20 LTRS Microwaves - Solo",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "MWO20NAS-2LV(B)",
-    category: "kitchen",
-    image: "/img/products/MWO20NAS-2LVB.png",
-    images: ["/img/products/MWO20NAS-2LVB.png"],
-    price: 849,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.7,
-    reviews: 312,
-    icon: "🍳",
-    color: "",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    badge: "hot",
-    description: "NASCO 20 LTRS MICROWAVES - SOLO. Reliable kitchen appliance built for everyday use with easy controls.",
-    specs: {
-      "Size/Capacity": "20 LTRS",
-      Model: "MWO20NAS-2LV(B)"
-    }
-  },
-  {
     id: 384,
     name: "NASCO 5 KGS Washing Machines ( Twin Top ) Washing Machine",
     brand: "NASCO",
@@ -11425,32 +10606,6 @@ const PRODUCTS = [
     specs: {
       "Size/Capacity": "26 LB - BLACK",
       Model: "IMB1008-GS"
-    }
-  },
-  {
-    id: 403,
-    name: "NASCO 5 WATT Ice Maker",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "MKNAS-200",
-    category: "kitchen",
-    image: "/img/products/NASCO-2000-WATT-SANDWICH-MAKER1-1.jpg",
-    images: ["/img/products/NASCO-2000-WATT-SANDWICH-MAKER1-1.jpg"],
-    price: 249,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 234,
-    icon: "🍳",
-    color: "",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "NASCO 5 WATT ICE MAKER. Reliable kitchen appliance built for everyday use with easy controls.",
-    specs: {
-      "Size/Capacity": "5 WATT",
-      Model: "MKNAS-200"
     }
   },
   {
@@ -13022,61 +12177,6 @@ const PRODUCTS = [
     }
   },
   {
-    id: 456,
-    name: "Samsung Galaxy Fit 3",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "SM-R390NZSAMEA",
-    category: "phones",
-    image: "/img/products/africa-en-galaxy-zflip6-f741-513164-sm-f741blbeafb-542774622.jpg",
-    images: ["/img/products/africa-en-galaxy-zflip6-f741-513164-sm-f741blbeafb-542774622.jpg"],
-    price: 799,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.3,
-    reviews: 189,
-    icon: "📱",
-    color: "#1428a0",
-    tags: [
-      "samsung",
-      "wearable"
-    ],
-    description: "Slim Galaxy Fit 3 fitness band with BT 5.3, 4CM display, 16MB+256MB, 208mAh.",
-    specs: {
-      Type: "Fitness Band",
-      Bluetooth: "5.3",
-      Battery: "208mAh",
-      Display: "4CM"
-    }
-  },
-  {
-    id: 457,
-    name: "Samsung Galaxy Buds Core",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "SM-R410NZKAMEA",
-    category: "phones",
-    image: "/img/products/sm-r410nzkamea_brandpng",
-    images: ["/img/products/sm-r410nzkamea_brandpng"],
-    price: 659,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.2,
-    reviews: 234,
-    icon: "📱",
-    color: "#1428a0",
-    tags: [
-      "samsung",
-      "audio"
-    ],
-    description: "Galaxy Buds Core with BT 5.4, 65mAh battery, real-time interpreter. Comfortable fit.",
-    specs: {
-      Bluetooth: "5.4",
-      Battery: "65mAh",
-      Feature: "Real-time Interpreter"
-    }
-  },
-  {
     id: 458,
     name: "Samsung Galaxy Buds 3 FE",
     brand: "Samsung",
@@ -13155,140 +12255,6 @@ const PRODUCTS = [
       Bluetooth: "5.4",
       Battery: "6 hours",
       "Water Resistance": "IP57"
-    }
-  },
-  {
-    id: 461,
-    name: "Samsung A07 Silicon Cover",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "A07-SC",
-    category: "phones",
-    image: "/img/products/a07-sc_brandpng",
-    images: ["/img/products/a07-sc_brandpng"],
-    price: 99,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.1,
-    reviews: 312,
-    icon: "📱",
-    color: "#1428a0",
-    tags: [
-      "samsung",
-      "accessories"
-    ],
-    description: "Official Samsung Galaxy A07 silicone protective cover. Flexible and shock-absorbing.",
-    specs: {
-      Compatible: "Galaxy A07",
-      Material: "Silicone",
-      Type: "Back Cover"
-    }
-  },
-  {
-    id: 462,
-    name: "Samsung A07 Screen Protector",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "A07-SP",
-    category: "phones",
-    image: "/img/products/a07-sp_brandpng",
-    images: ["/img/products/a07-sp_brandpng"],
-    price: 10,
-    oldPrice: null,
-    discount: 0,
-    rating: 4,
-    reviews: 445,
-    icon: "📱",
-    color: "#1428a0",
-    tags: [
-      "samsung",
-      "accessories"
-    ],
-    description: "Official Samsung Galaxy A07 screen protector. Crystal-clear tempered glass protection.",
-    specs: {
-      Compatible: "Galaxy A07",
-      Type: "Screen Protector"
-    }
-  },
-  {
-    id: 463,
-    name: "Samsung Fast Charger 45W (Type-C)",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "EP-T4511XBEGAE",
-    category: "phones",
-    image: "/img/products/ep-t4511xbegae_brandpng",
-    images: ["/img/products/ep-t4511xbegae_brandpng"],
-    price: 449,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 267,
-    icon: "📱",
-    color: "#1428a0",
-    tags: [
-      "samsung",
-      "accessories"
-    ],
-    description: "Samsung 45W Type-C complete fast charger. Rapid charging for compatible Galaxy devices.",
-    specs: {
-      Wattage: "45W",
-      Connector: "Type-C",
-      Includes: "Cable + Head"
-    }
-  },
-  {
-    id: 464,
-    name: "Samsung Fast Charger 25W (Type-C Head Only)",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "EP-TA800NBEGWW",
-    category: "phones",
-    image: "/img/products/ep-ta800nbegww_brandpng",
-    images: ["/img/products/ep-ta800nbegww_brandpng"],
-    price: 299,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.4,
-    reviews: 312,
-    icon: "📱",
-    color: "#1428a0",
-    tags: [
-      "samsung",
-      "accessories"
-    ],
-    description: "Samsung 25W Type-C fast charger head only. Compact and travel-friendly.",
-    specs: {
-      Wattage: "25W",
-      Connector: "Type-C",
-      Includes: "Head Only"
-    }
-  },
-  {
-    id: 465,
-    name: "Samsung Type-C to Type-C Cable",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "EP-DA705BWE",
-    category: "phones",
-    image: "/img/products/ep-da705bwe_brandpng",
-    images: ["/img/products/ep-da705bwe_brandpng"],
-    price: 149,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.3,
-    reviews: 389,
-    icon: "📱",
-    color: "#1428a0",
-    tags: [
-      "samsung",
-      "accessories"
-    ],
-    description: "Official Samsung Type-C to Type-C data and fast-charging cable, White.",
-    specs: {
-      Type: "USB-C to USB-C",
-      Color: "White",
-      Use: "Data + Charging"
     }
   },
   {
@@ -14266,387 +13232,6 @@ const PRODUCTS = [
     }
   },
   {
-    id: 500,
-    name: "Midea Extension Board 3-Socket 2M Cable",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MDL-3K3B-2M-U",
-    category: "small",
-    image: null,
-    images: [],
-    price: 135,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.2,
-    reviews: 234,
-    icon: "🔌",
-    color: "",
-    tags: [
-      "midea",
-      "accessories",
-      "extension"
-    ],
-    description: "16A extension board with 3 sockets and 2-metre cable. Surge-protected for home and office use.",
-    specs: {
-      Sockets: "3",
-      "Cable Length": "2M",
-      Amperage: "16A",
-      "Surge Protection": "Yes"
-    }
-  },
-  {
-    id: 501,
-    name: "Midea Extension Board 3-Socket 5M Cable",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MDL-3K3B-5M-U",
-    category: "small",
-    image: null,
-    images: [],
-    price: 200,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.2,
-    reviews: 198,
-    icon: "🔌",
-    color: "",
-    tags: [
-      "midea",
-      "accessories",
-      "extension"
-    ],
-    description: "16A extension board with 3 sockets and 5-metre cable for flexible reach.",
-    specs: {
-      Sockets: "3",
-      "Cable Length": "5M",
-      Amperage: "16A"
-    }
-  },
-  {
-    id: 502,
-    name: "Midea Extension Board 5-Socket 2M Cable",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MDL-5K5B-2M-U",
-    category: "small",
-    image: null,
-    images: [],
-    price: 155,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.3,
-    reviews: 267,
-    icon: "🔌",
-    color: "",
-    tags: [
-      "midea",
-      "accessories",
-      "extension"
-    ],
-    description: "16A extension board with 5 sockets and 2-metre cable. More outlets for busy workspaces.",
-    specs: {
-      Sockets: "5",
-      "Cable Length": "2M",
-      Amperage: "16A"
-    }
-  },
-  {
-    id: 503,
-    name: "Midea Extension Board 5-Socket 5M Cable",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MDL-5K5B-5M-U",
-    category: "small",
-    image: null,
-    images: [],
-    price: 220,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.3,
-    reviews: 189,
-    icon: "🔌",
-    color: "",
-    tags: [
-      "midea",
-      "accessories",
-      "extension"
-    ],
-    description: "16A extension board with 5 sockets and 5-metre cable for maximum flexibility.",
-    specs: {
-      Sockets: "5",
-      "Cable Length": "5M",
-      Amperage: "16A"
-    }
-  },
-  {
-    id: 504,
-    name: "Midea Extension Board 3-Socket + USB-C 2M",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MDL-4K3B2U1C-2M-U",
-    category: "small",
-    image: null,
-    images: [],
-    price: 190,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.4,
-    reviews: 156,
-    icon: "🔌",
-    color: "",
-    tags: [
-      "midea",
-      "accessories",
-      "extension"
-    ],
-    description: "16A extension board with 3 sockets, USB-A ports and USB-C port. 2-metre cable.",
-    specs: {
-      Sockets: "3",
-      "USB-C": "Yes",
-      "Cable Length": "2M",
-      Amperage: "16A"
-    }
-  },
-  {
-    id: 505,
-    name: "Midea Extension Board 3-Socket + USB-C 5M",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MDL-4K3B2U1C-5M-U",
-    category: "small",
-    image: null,
-    images: [],
-    price: 260,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.4,
-    reviews: 134,
-    icon: "🔌",
-    color: "",
-    tags: [
-      "midea",
-      "accessories",
-      "extension"
-    ],
-    description: "16A extension board with 3 sockets, USB ports and USB-C. 5-metre cable.",
-    specs: {
-      Sockets: "3",
-      "USB-C": "Yes",
-      "Cable Length": "5M",
-      Amperage: "16A"
-    }
-  },
-  {
-    id: 506,
-    name: "Midea Extension Board 4-Socket + USB-C 2M",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MDL-5K4B2U1C-2M-U",
-    category: "small",
-    image: null,
-    images: [],
-    price: 200,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 112,
-    icon: "🔌",
-    color: "",
-    tags: [
-      "midea",
-      "accessories",
-      "extension"
-    ],
-    description: "16A extension board with 4 sockets, 2 USB-A and 1 USB-C port. 2-metre cable.",
-    specs: {
-      Sockets: "4",
-      "USB-C": "Yes",
-      "Cable Length": "2M",
-      Amperage: "16A"
-    }
-  },
-  {
-    id: 507,
-    name: "Midea Extension Board 4-Socket + USB-C 5M",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MDL-5K4B2U1C-5M-U",
-    category: "small",
-    image: null,
-    images: [],
-    price: 270,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 98,
-    icon: "🔌",
-    color: "",
-    tags: [
-      "midea",
-      "accessories",
-      "extension"
-    ],
-    description: "16A extension board with 4 sockets, 2 USB-A and 1 USB-C port. 5-metre cable.",
-    specs: {
-      Sockets: "4",
-      "USB-C": "Yes",
-      "Cable Length": "5M",
-      Amperage: "16A"
-    }
-  },
-  {
-    id: 508,
-    name: "TV Wall Bracket 32\"-63\" Fixed",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "MCR-Y3260",
-    category: "tv",
-    image: null,
-    images: [],
-    price: 99,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.3,
-    reviews: 312,
-    icon: "📌",
-    color: "",
-    tags: [
-      "nasco",
-      "accessories",
-      "wall-bracket"
-    ],
-    description: "Fixed flat TV wall bracket. Fits 32\"-63\" screens. VESA 400×400mm, holds up to 45kg.",
-    specs: {
-      Fits: "32\"-63\"",
-      VESA: "400×400mm",
-      Load: "45kg",
-      "Distance to Wall": "28mm",
-      Type: "Fixed"
-    }
-  },
-  {
-    id: 509,
-    name: "TV Wall Bracket 40\"-80\" Fixed",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "MCR-Y4080",
-    category: "tv",
-    image: null,
-    images: [],
-    price: 199,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.3,
-    reviews: 178,
-    icon: "📌",
-    color: "",
-    tags: [
-      "nasco",
-      "accessories",
-      "wall-bracket"
-    ],
-    description: "Fixed flat TV wall bracket for large screens 40\"-80\". VESA 600×500mm, holds up to 35kg.",
-    specs: {
-      Fits: "40\"-80\"",
-      VESA: "600×500mm",
-      Load: "35kg",
-      "Distance to Wall": "28mm",
-      Type: "Fixed"
-    }
-  },
-  {
-    id: 510,
-    name: "TV Wall Bracket 32\"-70\" Tilt",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "MCR-WG09",
-    category: "tv",
-    image: null,
-    images: [],
-    price: 189,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.4,
-    reviews: 234,
-    icon: "📌",
-    color: "",
-    tags: [
-      "nasco",
-      "accessories",
-      "wall-bracket"
-    ],
-    description: "Tilt TV wall bracket (0-15° tilt) for 32\"-70\" screens. VESA 600×400mm, holds 40kg.",
-    specs: {
-      Fits: "32\"-70\"",
-      VESA: "600×400mm",
-      Load: "40kg",
-      Tilt: "0-15°",
-      Type: "Tilt"
-    }
-  },
-  {
-    id: 511,
-    name: "TV Wall Bracket 26\"-55\" Full Motion",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "MCR-500",
-    category: "tv",
-    image: null,
-    images: [],
-    price: 399,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.5,
-    reviews: 389,
-    icon: "📌",
-    color: "",
-    tags: [
-      "nasco",
-      "accessories",
-      "wall-bracket"
-    ],
-    description: "Full motion articulating bracket for 26\"-55\" TVs. Extends up to 450mm, tilts and swivels 90°.",
-    specs: {
-      Fits: "26\"-55\"",
-      VESA: "400×400mm",
-      Load: "35kg",
-      Tilt: "0-15°",
-      Swivel: "±90°",
-      Type: "Full Motion"
-    }
-  },
-  {
-    id: 512,
-    name: "TV Wall Bracket 32\"-70\" Full Motion Heavy Duty",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NS-P800",
-    category: "tv",
-    image: null,
-    images: [],
-    price: 999,
-    oldPrice: null,
-    discount: 0,
-    rating: 4.6,
-    reviews: 198,
-    icon: "📌",
-    color: "",
-    tags: [
-      "nasco",
-      "accessories",
-      "wall-bracket"
-    ],
-    description: "Heavy-duty full motion bracket for 32\"-70\" screens. 45kg capacity, tilts and swivels 65°.",
-    specs: {
-      Fits: "32\"-70\"",
-      VESA: "600×400mm",
-      Load: "45kg",
-      Tilt: "±15°",
-      Swivel: "±65°",
-      Type: "Full Motion"
-    }
-  },
-  {
     id: 513,
     name: "TV Wall Bracket 32\"-65\" 360° Swivel",
     brand: "NASCO",
@@ -14818,26 +13403,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 519,
-    name: "Nasco 20L Solo Microwave",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "MWO20NAS-2LVB",
-    category: "kitchen",
-    image: "/img/products/MWO20NAS-2LVB.png",
-    images: ["/img/products/MWO20NAS-2LVB.png"],
-    price: 679,
-    rating: 4.4,
-    reviews: 88,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "20Liters · 700 Watt · Speedy Cooking · 5 Power Levels · Black · Interior lighting",
-    badge: "new"
-  },
-  {
     id: 520,
     name: "TCL 2.0HP Split ON/OFF Air Condition",
     brand: "TCL",
@@ -14995,26 +13560,6 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5HP · R32 Gas · T-Al Energy Saving · Fast Cooling &amp; Heating · Smart Wi-Fi Control · Healthy Filters · Coanda Airflow",
-    badge: "new"
-  },
-  {
-    id: 528,
-    name: "Midea Contact Sandwich Grill",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MC-JK2313P-1-1",
-    category: "kitchen",
-    image: "/img/products/MC-JK2313P-1-1.png",
-    images: ["/img/products/MC-JK2313P-1-1.png"],
-    price: 199,
-    rating: 4.4,
-    reviews: 97,
-    icon: "🍳",
-    tags: [
-      "midea",
-      "kitchen"
-    ],
-    description: "1500W · Indicator lights · Non-stick coated plates · Fast heating system · Compact design · Black · Cool-touch handle",
     badge: "new"
   },
   {
@@ -15255,26 +13800,6 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "528L · Fast cooling · Manual Temperature · Silver Grey · Interior Led Light · Twin Eco Inverter",
-    badge: "new"
-  },
-  {
-    id: 541,
-    name: "Midea Steam Iron",
-    brand: "Midea",
-    brandId: "midea",
-    model: "YPJ26A1W",
-    category: "small",
-    image: "/img/products/YPJ26A1W.png",
-    images: ["/img/products/YPJ26A1W.png"],
-    price: 399,
-    rating: 4.4,
-    reviews: 66,
-    icon: "⚡",
-    tags: [
-      "midea",
-      "small"
-    ],
-    description: "380ML · Dry Burn · Variable Level Steaming · Overheat Protection · Fast Heating Up · Dry &amp; Wet Ironing",
     badge: "new"
   },
   {
@@ -15638,46 +14163,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 560,
-    name: "Nasco Satellite TV",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "Artboard-1",
-    category: "tv",
-    image: "/img/products/Artboard-1.png",
-    images: ["/img/products/Artboard-1.png"],
-    price: 649,
-    rating: 4.4,
-    reviews: 75,
-    icon: "📺",
-    tags: [
-      "nasco",
-      "tv"
-    ],
-    description: "24&#8243; · HDMI x 1 · USB x 1 · HD TV · Slim TV",
-    badge: "new"
-  },
-  {
-    id: 561,
-    name: "Nasco Kettle",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "KEC-1798A",
-    category: "kitchen",
-    image: "/img/products/KEC-1798A.png",
-    images: ["/img/products/KEC-1798A.png"],
-    price: 149,
-    rating: 4.4,
-    reviews: 47,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "1.7 Liters · Stainless Steel · Light Indicator · Cordless ·  Stable Base",
-    badge: "new"
-  },
-  {
     id: 562,
     name: "TCL Floor Standing Air Condition",
     brand: "TCL",
@@ -15795,26 +14280,6 @@ const PRODUCTS = [
       "small"
     ],
     description: "Overload Protection · Controlled CPU · Over Voltage Protection · Fast Automatic Correction · Stable Output Voltage · Energy-efficient operation",
-    badge: "new"
-  },
-  {
-    id: 568,
-    name: "Midea Blender",
-    brand: "Midea",
-    brandId: "midea",
-    model: "BL2518-1",
-    category: "kitchen",
-    image: "/img/products/BL2518-1.png",
-    images: ["/img/products/BL2518-1.png"],
-    price: 249,
-    rating: 4.4,
-    reviews: 85,
-    icon: "🍳",
-    tags: [
-      "midea",
-      "kitchen"
-    ],
-    description: "1.5 Liter · Smooth Speed · 4 Slices Blade · Stainless Steel ·  · &nbsp;",
     badge: "new"
   },
   {
@@ -16558,26 +15023,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 606,
-    name: "Midea Air Condition",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MFPA-18CRDN11",
-    category: "ac",
-    image: "/img/products/MFPA-18CRDN11.png",
-    images: ["/img/products/MFPA-18CRDN11.png"],
-    price: 699,
-    rating: 4.4,
-    reviews: 75,
-    icon: "❄️",
-    tags: [
-      "midea",
-      "ac"
-    ],
-    description: "Fast Cooling · Low Noise · Side Air Inlet · Energy Saving · Auto Restart · Touch Control",
-    badge: "new"
-  },
-  {
     id: 607,
     name: "Midea Air Condition",
     brand: "Midea",
@@ -17278,66 +15723,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 642,
-    name: "Nasco Steam Iron",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-1200-WATTS-STEAM-IRON-NAS-2202A-DSS-FRONT",
-    category: "small",
-    image: "/img/products/NASCO-1200-WATTS-STEAM-IRON-NAS-2202A-DSS-FRONT.png",
-    images: ["/img/products/NASCO-1200-WATTS-STEAM-IRON-NAS-2202A-DSS-FRONT.png"],
-    price: 199,
-    rating: 4.4,
-    reviews: 39,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Steam Iron · Spray Control · Self Clean · 1200 Watt",
-    badge: "new"
-  },
-  {
-    id: 643,
-    name: "Nasco Handheld Steamer",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-HANDHELD-STEAMER-NAS-2206-GS-RIGHT",
-    category: "small",
-    image: "/img/products/NASCO-HANDHELD-STEAMER-NAS-2206-GS-RIGHT.png",
-    images: ["/img/products/NASCO-HANDHELD-STEAMER-NAS-2206-GS-RIGHT.png"],
-    price: 299,
-    rating: 4.4,
-    reviews: 97,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Handheld Steamer",
-    badge: "new"
-  },
-  {
-    id: 644,
-    name: "Nasco Dry Iron",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-100-WATTS-STEAM-IRON-NAS-2203-DI-FRONT",
-    category: "small",
-    image: "/img/products/NASCO-100-WATTS-STEAM-IRON-NAS-2203-DI-FRONT.png",
-    images: ["/img/products/NASCO-100-WATTS-STEAM-IRON-NAS-2203-DI-FRONT.png"],
-    price: 149,
-    rating: 4.4,
-    reviews: 85,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Dry Iron · 1000 Watt · Anti-Drop · Power Indicator ·  · &nbsp;",
-    badge: "new"
-  },
-  {
     id: 645,
     name: "Nasco Steam Iron",
     brand: "NASCO",
@@ -17378,26 +15763,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 647,
-    name: "Midea 1500Watt Garment Steamer",
-    brand: "Other",
-    brandId: "other",
-    model: "YGJ15Q1W",
-    category: "small",
-    image: "/img/products/YGJ15Q1W.jpg",
-    images: ["/img/products/YGJ15Q1W.jpg"],
-    price: 899,
-    rating: 4.4,
-    reviews: 76,
-    icon: "⚡",
-    tags: [
-      "other",
-      "small"
-    ],
-    description: "1500Watt · Garment Steamer",
-    badge: "new"
-  },
-  {
     id: 648,
     name: "Midea 1.7Ltrs Kettle",
     brand: "Midea",
@@ -17435,26 +15800,6 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "98 Ltrs · Manual Defrost · Glass Shelves · Grey · Vegetable Box",
-    badge: "new"
-  },
-  {
-    id: 650,
-    name: "Midea 18&#8243; Rechargeable Fan",
-    brand: "Midea",
-    brandId: "midea",
-    model: "FS45-23MRD-FRONT",
-    category: "small",
-    image: "/img/products/FS45-23MRD-FRONT.jpg",
-    images: ["/img/products/FS45-23MRD-FRONT.jpg"],
-    price: 999,
-    rating: 4.4,
-    reviews: 99,
-    icon: "⚡",
-    tags: [
-      "midea",
-      "small"
-    ],
-    description: "",
     badge: "new"
   },
   {
@@ -18338,26 +16683,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 695,
-    name: "Nasco 2.2Ltrs Air Fryer",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "AF9009-GS-OPENED",
-    category: "kitchen",
-    image: "/img/products/AF9009-GS-OPENED.jpg",
-    images: ["/img/products/AF9009-GS-OPENED.jpg"],
-    price: 649,
-    rating: 4.4,
-    reviews: 71,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "2.2 Ltrs · 1000 W · Black",
-    badge: "new"
-  },
-  {
     id: 696,
     name: "Samsung 40Ltrs Solo Microwave",
     brand: "Samsung",
@@ -18678,46 +17003,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 712,
-    name: "Nasco Blender 400 Watt",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-400-WATTS-PROFESSIONAL-BLENDER-BL-J2001AK-CB",
-    category: "small",
-    image: "/img/products/NASCO-400-WATTS-PROFESSIONAL-BLENDER-BL-J2001AK-CB.jpg",
-    images: ["/img/products/NASCO-400-WATTS-PROFESSIONAL-BLENDER-BL-J2001AK-CB.jpg"],
-    price: 299,
-    rating: 4.4,
-    reviews: 95,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "400 Watt · 5 Ltr · White And Blue · Grinder · Stainless Stell Blade",
-    badge: "new"
-  },
-  {
-    id: 713,
-    name: "Nasco Rice Cooker 2.8 Liter",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WB-FRONT",
-    category: "kitchen",
-    image: "/img/products/NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WB-FRONT.jpg",
-    images: ["/img/products/NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WB-FRONT.jpg"],
-    price: 379,
-    rating: 4.4,
-    reviews: 69,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "2.8 Liter · 1000 Watt · Multi Cooking · Control Mechanism Thermostat · Nonstick Coating Inner Pot",
-    badge: "new"
-  },
-  {
     id: 714,
     name: "Nasco Rice Cooker 2.8 Liter",
     brand: "NASCO",
@@ -18795,26 +17080,6 @@ const PRODUCTS = [
       "tv"
     ],
     description: "83&#8243; · Dolby Atmos · HDR Oled+ · Ambient Mode · Built-In Voice Assistant · Ots Lite · Q-Symphony · Laser Slim Design",
-    badge: "new"
-  },
-  {
-    id: 718,
-    name: "Nasco Att Mosquito Killer Lamp",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-2WATT-MOSQUITO-KILLER-FANAS-2W-BLACK-FRONT",
-    category: "small",
-    image: "/img/products/NASCO-2WATT-MOSQUITO-KILLER-FANAS-2W-BLACK-FRONT.jpg",
-    images: ["/img/products/NASCO-2WATT-MOSQUITO-KILLER-FANAS-2W-BLACK-FRONT.jpg"],
-    price: 99,
-    rating: 4.4,
-    reviews: 22,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "2Watts · Energy Saving · Minimal  Noise · Durable Design · Nascompact And Portable",
     badge: "new"
   },
   {
@@ -19698,26 +17963,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 763,
-    name: "Nasco 2200 Watts Steam Iron",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NGFDJFGCJ",
-    category: "small",
-    image: "/img/products/NGFDJFGCJ.jpg",
-    images: ["/img/products/NGFDJFGCJ.jpg"],
-    price: 299,
-    rating: 4.4,
-    reviews: 33,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Steam Iron ·   170 Ml · ▪   2200 W",
-    badge: "new"
-  },
-  {
     id: 764,
     name: "Nasco 2.5Hp R410 Split Air Conditioner Design",
     brand: "NASCO",
@@ -19738,26 +17983,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 765,
-    name: "Nasco 1000 Watts Dry Iron",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "yukguyuk",
-    category: "small",
-    image: "/img/products/yukguyuk.jpg",
-    images: ["/img/products/yukguyuk.jpg"],
-    price: 199,
-    rating: 4.4,
-    reviews: 64,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "1000 W · Auto Clean · Dry-Iron · Anti-Drop · Stainless Steel Sole Plate",
-    badge: "new"
-  },
-  {
     id: 766,
     name: "Nasco 120Ltrs Display Fridge",
     brand: "NASCO",
@@ -19775,26 +18000,6 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Black · Glass Door · 2 Shelves · Interior Light",
-    badge: "new"
-  },
-  {
-    id: 767,
-    name: "Nasco 0.25Ltrs Coffee Maker",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "GDFG",
-    category: "kitchen",
-    image: "/img/products/GDFG.jpg",
-    images: ["/img/products/GDFG.jpg"],
-    price: 549,
-    rating: 4.4,
-    reviews: 98,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "400-480W · Turkish Coffee Maker · 25L · Red",
     badge: "new"
   },
   {
@@ -19835,26 +18040,6 @@ const PRODUCTS = [
       "tv"
     ],
     description: "65 Inchines · 4K · G- Viewing Angle · Smart Hub · Wifi-Built-In · HDMIx4 · USBx3 · Dobly Digital Plus",
-    badge: "new"
-  },
-  {
-    id: 770,
-    name: "Nasco 3.0Ltrs Kettle",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "DFHDXH",
-    category: "small",
-    image: "/img/products/DFHDXH.jpg",
-    images: ["/img/products/DFHDXH.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 36,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Cordless · Water Heater",
     badge: "new"
   },
   {
@@ -19918,26 +18103,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 774,
-    name: "Nasco 1.75Ltr 800Watts Blender",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "CXHBFH",
-    category: "kitchen",
-    image: "/img/products/CXHBFH.jpg",
-    images: ["/img/products/CXHBFH.jpg"],
-    price: 449,
-    rating: 4.4,
-    reviews: 73,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "75L-Standstainless Steelsilver",
-    badge: "new"
-  },
-  {
     id: 775,
     name: "Nasco Water Boiler",
     brand: "NASCO",
@@ -19958,26 +18123,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 776,
-    name: "Nasco 1.2Ltrs Rice Cooker",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "HNGCKHG",
-    category: "kitchen",
-    image: "/img/products/HNGCKHG.jpg",
-    images: ["/img/products/HNGCKHG.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 89,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "500 W · 2Ltr · Water Rice Cooker",
-    badge: "new"
-  },
-  {
     id: 777,
     name: "Nasco 4 Burner Electric Hob With Oven",
     brand: "NASCO",
@@ -19995,26 +18140,6 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "60 X 60 Cm · Silver · 4 Burners · Full Electric Cookers",
-    badge: "new"
-  },
-  {
-    id: 778,
-    name: "Nasco 2Ltrs Air Cooler",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "GHKCGHM",
-    category: "small",
-    image: "/img/products/GHKCGHM.jpg",
-    images: ["/img/products/GHKCGHM.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 78,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "7 Hrs Timer · Remote Control · Led Display · Water Tank · White And Blue",
     badge: "new"
   },
   {
@@ -20075,26 +18200,6 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "60 X 60 Cm · Silver · 4 Burners · Full Electric Cookers",
-    badge: "new"
-  },
-  {
-    id: 782,
-    name: "Nasco 3 Burner Gas Sstove Silver Gold Cap",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "FGFGCGH",
-    category: "kitchen",
-    image: "/img/products/FGFGCGH.jpg",
-    images: ["/img/products/FGFGCGH.jpg"],
-    price: 849,
-    rating: 4.4,
-    reviews: 78,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "3 Gas Burners · Stainless Steel · Gold Cap · 2 Shelves Stand · Silver",
     badge: "new"
   },
   {
@@ -20195,26 +18300,6 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Lock &amp; Key · Fast Cooling · Silver · Top Mount Freezer · Energy Saving",
-    badge: "new"
-  },
-  {
-    id: 788,
-    name: "Nasco 1200 Watts Steam Iron",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "SFHHD",
-    category: "small",
-    image: "/img/products/SFHHD.jpg",
-    images: ["/img/products/SFHHD.jpg"],
-    price: 199,
-    rating: 4.4,
-    reviews: 71,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Steam Iron · 170 Ml · 1200 W",
     badge: "new"
   },
   {
@@ -20458,66 +18543,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 801,
-    name: "Nasco 1.5Ltr Espresso Coffee Maker",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "LJKGVJHH",
-    category: "kitchen",
-    image: "/img/products/LJKGVJHH.jpg",
-    images: ["/img/products/LJKGVJHH.jpg"],
-    price: 549,
-    rating: 4.4,
-    reviews: 93,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "850 W · Espresso Coffee Maker · Removable Funnel · Anti Drip · 15 Bar",
-    badge: "new"
-  },
-  {
-    id: 802,
-    name: "Nasco 1.5Ltr Professional Blender",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "GFXGFVCHG",
-    category: "kitchen",
-    image: "/img/products/GFXGFVCHG.jpg",
-    images: ["/img/products/GFXGFVCHG.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 32,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "5 Ltrs Body · Lid · Handle · White Knob · Base · White Plastic Jug",
-    badge: "new"
-  },
-  {
-    id: 803,
-    name: "Nasco Electric Hot Pot, 3.5 L, 1200W",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "TFGRJHRFGJH",
-    category: "kitchen",
-    image: "/img/products/TFGRJHRFGJH.jpg",
-    images: ["/img/products/TFGRJHRFGJH.jpg"],
-    price: 449,
-    rating: 4.4,
-    reviews: 69,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Capacity :3.5 L · Power: 1200 Watt · Voltage :220-240 V · Frequency: 60 Hz",
-    badge: "new"
-  },
-  {
     id: 804,
     name: "Nasco 800W Stand Mixer",
     brand: "NASCO",
@@ -20535,106 +18560,6 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "5 Speed · ▪  Red/5 Ltr · ▪   800W",
-    badge: "new"
-  },
-  {
-    id: 805,
-    name: "Nasco 2.4Ltrs Food Processor",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "JHGDTG",
-    category: "kitchen",
-    image: "/img/products/JHGDTG.jpg",
-    images: ["/img/products/JHGDTG.jpg"],
-    price: 599,
-    rating: 4.4,
-    reviews: 61,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Full Function · Chopping · Slicing · Shredding · Kneading · Egg Beating · Full Accessories",
-    badge: "new"
-  },
-  {
-    id: 806,
-    name: "Nasco 3.5Ltrs Multi Cooker Airfryer",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "VGHKU",
-    category: "kitchen",
-    image: "/img/products/VGHKU.jpg",
-    images: ["/img/products/VGHKU.jpg"],
-    price: 999,
-    rating: 4.4,
-    reviews: 98,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Capacity :2 · 7 L · Power: 1300 Watt · Voltage :220-240 V · Frequency: 60 Hz",
-    badge: "new"
-  },
-  {
-    id: 807,
-    name: "Nasco 4.5Ltrs Deep Fryer",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "FY8XDFE",
-    category: "kitchen",
-    image: "/img/products/FY8XDFE.jpg",
-    images: ["/img/products/FY8XDFE.jpg"],
-    price: 449,
-    rating: 4.4,
-    reviews: 73,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Deep Fryer 4 · 5L, · 1830-2180W, · Stainless Steel",
-    badge: "new"
-  },
-  {
-    id: 808,
-    name: "Nasco 800Watt Meat Grinder",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "JUYFJHGJKL",
-    category: "kitchen",
-    image: "/img/products/JUYFJHGJKL.jpg",
-    images: ["/img/products/JUYFJHGJKL.jpg"],
-    price: 899,
-    rating: 4.4,
-    reviews: 90,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Material: Metal Nascones · Power: 800 Watt · Plastic Tray",
-    badge: "new"
-  },
-  {
-    id: 809,
-    name: "Nasco 600Watt Meat Grinder",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-600WATT-MEAT-GRINDER-NAS-MG5000GS-FRONT",
-    category: "kitchen",
-    image: "/img/products/NASCO-600WATT-MEAT-GRINDER-NAS-MG5000GS-FRONT.jpg",
-    images: ["/img/products/NASCO-600WATT-MEAT-GRINDER-NAS-MG5000GS-FRONT.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 25,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Material: Metal Nascones · Power: 600 Watt · Molded Hopper",
     badge: "new"
   },
   {
@@ -20758,26 +18683,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 816,
-    name: "Nasco 1600 Watts Steam Iron",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "JHKG",
-    category: "small",
-    image: "/img/products/JHKG.jpg",
-    images: ["/img/products/JHKG.jpg"],
-    price: 199,
-    rating: 4.4,
-    reviews: 53,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Steam Iron · 170 Ml · 1600 W",
-    badge: "new"
-  },
-  {
     id: 817,
     name: "Nasco 1600 Watts Steam Iron",
     brand: "NASCO",
@@ -20895,66 +18800,6 @@ const PRODUCTS = [
       "small"
     ],
     description: "Stand Fan · 15-25W · 5 Plates · 3 Modes · Rechargeable",
-    badge: "new"
-  },
-  {
-    id: 823,
-    name: "Nasco 18 Industrial Standing Fan",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "FS45-5-png",
-    category: "small",
-    image: "/img/products/FS45-5-png.png",
-    images: ["/img/products/FS45-5-png.png"],
-    price: 289,
-    rating: 4.4,
-    reviews: 87,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Industrial Stand Fan · 55W · 3 Speeds · Oscillating Function",
-    badge: "new"
-  },
-  {
-    id: 824,
-    name: "Nasco 18 Industrial Standing Fan Fs4",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "FS45-5-png",
-    category: "small",
-    image: "/img/products/FS45-5-png.png",
-    images: ["/img/products/FS45-5-png.png"],
-    price: 549,
-    rating: 4.4,
-    reviews: 34,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Industrial Stand Fan · 55W · 5 Blades · Oscillating Function",
-    badge: "new"
-  },
-  {
-    id: 825,
-    name: "Nasco 16 &#8221; Standing Fan 5 Blades",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "fs40-22-main",
-    category: "small",
-    image: "/img/products/fs40-22-main.jpg",
-    images: ["/img/products/fs40-22-main.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 86,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Stand Fan · High Volume Air Movement · Remote Control · 7.5 Timer · 5 Blades",
     badge: "new"
   },
   {
@@ -21098,46 +18943,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 833,
-    name: "Nasco 5.5Ltrs Air Cooler",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "FGJGJH",
-    category: "small",
-    image: "/img/products/FGJGJH.jpg",
-    images: ["/img/products/FGJGJH.jpg"],
-    price: 849,
-    rating: 4.4,
-    reviews: 41,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Air Purifier · Remote Control · Water Tank · 5.0Hp · 5 Ltrs · 80 Watts",
-    badge: "new"
-  },
-  {
-    id: 834,
-    name: "Nasco 7Ltrs Air Cooler",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "DGHTGH",
-    category: "small",
-    image: "/img/products/DGHTGH.jpg",
-    images: ["/img/products/DGHTGH.jpg"],
-    price: 999,
-    rating: 4.4,
-    reviews: 76,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "7 Hrs Timer · Remote Control · Led Display · Water Tank · Air Purifer",
-    badge: "new"
-  },
-  {
     id: 835,
     name: "Nasco 5 Burner Gas Cooker With Oven &amp; Grill",
     brand: "NASCO",
@@ -21155,26 +18960,6 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "60 x 90 cm · Black · 5 Burners · Grill",
-    badge: "new"
-  },
-  {
-    id: 836,
-    name: "Midea Electric Kettle Stainless Steel 1.7Ltrs",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MK-17S32A2-KETTLE",
-    category: "kitchen",
-    image: "/img/products/MK-17S32A2-KETTLE.png",
-    images: ["/img/products/MK-17S32A2-KETTLE.png"],
-    price: 199,
-    rating: 4.4,
-    reviews: 34,
-    icon: "🍳",
-    tags: [
-      "midea",
-      "kitchen"
-    ],
-    description: "1.7L · Power: 1850 &#8211; 2200W · 360 Degree Rotational Base · Auto Cut Off · Durable Thermostat",
     badge: "new"
   },
   {
@@ -21238,26 +19023,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 840,
-    name: "Nasco 16 &#8221; Standing Fan Black",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-16-INCES-STAND-FAN-BLACK",
-    category: "small",
-    image: "/img/products/NASCO-16-INCES-STAND-FAN-BLACK.jpg",
-    images: ["/img/products/NASCO-16-INCES-STAND-FAN-BLACK.jpg"],
-    price: 899,
-    rating: 4.4,
-    reviews: 42,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Stand, Desk, Wall Fan · With Remote Control · 8H Timer",
-    badge: "new"
-  },
-  {
     id: 841,
     name: "Nasco 16 &#8221; Standing Fan 5 Blades",
     brand: "NASCO",
@@ -21275,86 +19040,6 @@ const PRODUCTS = [
       "small"
     ],
     description: "Stand Fan · High Volume Air Movement · Remote Control · 7.5 Timer · 5 Blades",
-    badge: "new"
-  },
-  {
-    id: 842,
-    name: "Nasco 55Watts Standing Fan 16 &#8220;",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-55WATTS-STANDING-FAN-16INCHES",
-    category: "small",
-    image: "/img/products/NASCO-55WATTS-STANDING-FAN-16INCHES.jpg",
-    images: ["/img/products/NASCO-55WATTS-STANDING-FAN-16INCHES.jpg"],
-    price: 749,
-    rating: 4.4,
-    reviews: 41,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Remote Stand Fan · Touch Screen · 3 Speeds · 7.5 Timer · Sleep Mode",
-    badge: "new"
-  },
-  {
-    id: 843,
-    name: "Nasco 16 &#8221; Standing Fan Red",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-16-INCHES-STANDING-FAN-RED",
-    category: "small",
-    image: "/img/products/NASCO-16-INCHES-STANDING-FAN-RED.jpg",
-    images: ["/img/products/NASCO-16-INCHES-STANDING-FAN-RED.jpg"],
-    price: 649,
-    rating: 4.4,
-    reviews: 43,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Remote Stand Fan · Touch Screen · 3 Speeds · 7.5 Timer · Sleep Mode",
-    badge: "new"
-  },
-  {
-    id: 844,
-    name: "Nasco 16 &#8221; 55 Watt Standing Fan",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-55WATT-STANDING-FAN",
-    category: "small",
-    image: "/img/products/NASCO-55WATT-STANDING-FAN.jpg",
-    images: ["/img/products/NASCO-55WATT-STANDING-FAN.jpg"],
-    price: 749,
-    rating: 4.4,
-    reviews: 29,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Remote Stand Fan · Touch Screen · 3 Speeds · 7.5 Timer · Sleep Mode",
-    badge: "new"
-  },
-  {
-    id: 845,
-    name: "Nasco 16 &#8221; Standing Fan White",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-16-INCHE-STANDING-FAN-WHITE",
-    category: "small",
-    image: "/img/products/NASCO-16-INCHE-STANDING-FAN-WHITE.jpg",
-    images: ["/img/products/NASCO-16-INCHE-STANDING-FAN-WHITE.jpg"],
-    price: 199,
-    rating: 4.4,
-    reviews: 36,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Stand Fan · 45Watt · 3 Speeds Oscillating Function ·  220-240V / 50-60Hz",
     badge: "new"
   },
   {
@@ -21378,46 +19063,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 847,
-    name: "Nasco 16 &#8221; 45 Watts Wall Fan",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-16-INCHE-45-WATTS-WALL-FAN",
-    category: "small",
-    image: "/img/products/NASCO-16-INCHE-45-WATTS-WALL-FAN.jpeg",
-    images: ["/img/products/NASCO-16-INCHE-45-WATTS-WALL-FAN.jpeg"],
-    price: 549,
-    rating: 4.4,
-    reviews: 65,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Stand Fan 3 In 1 · 45W · 3Speeds · 220-240V / 50-6Hz",
-    badge: "new"
-  },
-  {
-    id: 848,
-    name: "Nasco 16 Standing Fan",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-16inches-METAL-STANDING-FAN",
-    category: "small",
-    image: "/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg",
-    images: ["/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg"],
-    price: 749,
-    rating: 4.4,
-    reviews: 74,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Metal Stand Fan Chrome · 3 Speeds · ▪7 · 5 Timer · Sleep Mode",
-    badge: "new"
-  },
-  {
     id: 849,
     name: "Samsung 23Ltrs Solo Microwave",
     brand: "Samsung",
@@ -21435,26 +19080,6 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Cooking From Fresh Ingredients Made Simple · Enhance Your Kitchen Look · Keep It Clean With Ceramic",
-    badge: "new"
-  },
-  {
-    id: 850,
-    name: "Nasco 16 Tripod Fan",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-16inch-TRYPOD-FAN",
-    category: "small",
-    image: "/img/products/NASCO-16inch-TRYPOD-FAN.jpg",
-    images: ["/img/products/NASCO-16inch-TRYPOD-FAN.jpg"],
-    price: 549,
-    rating: 4.4,
-    reviews: 72,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "35 Watt · 25 Cm · Tripod · 3 Speeds · Wooden",
     badge: "new"
   },
   {
@@ -22498,26 +20123,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 903,
-    name: "Samsung 32&#8243; Inch Digital Satellite LED Full Hd Television",
-    brand: "Samsung",
-    brandId: "samsung",
-    model: "1-3-jpg",
-    category: "tv",
-    image: "/img/products/1-3-jpg.webp",
-    images: ["/img/products/1-3-jpg.webp"],
-    price: 699,
-    rating: 4.4,
-    reviews: 70,
-    icon: "📺",
-    tags: [
-      "samsung",
-      "tv"
-    ],
-    description: "DIGITAL CLEAR VIEW · WIDE COLOUR ENHANCER · FHD · CONNECT &amp; SHARE · SAT",
-    badge: "new"
-  },
-  {
     id: 904,
     name: "Nasco 95Ltrs Double Door Top Freezer",
     brand: "NASCO",
@@ -22658,26 +20263,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 911,
-    name: "Nasco 300 Watt Blender",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-300-WATT-BLENDER1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-300-WATT-BLENDER1-1.jpg",
-    images: ["/img/products/NASCO-300-WATT-BLENDER1-1.jpg"],
-    price: 449,
-    rating: 4.4,
-    reviews: 52,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "800 Ml Plastic Jar · Ss Blades · Ability To Blend Different Kinds Of Fruit",
-    badge: "new"
-  },
-  {
     id: 912,
     name: "Nasco 170 Watt Hand Blender",
     brand: "NASCO",
@@ -22778,66 +20363,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 917,
-    name: "Nasco 1200 Watts Pop Corn Maker",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-1200-WATTS-POP-CORN-MAKER1",
-    category: "kitchen",
-    image: "/img/products/NASCO-1200-WATTS-POP-CORN-MAKER1.jpg",
-    images: ["/img/products/NASCO-1200-WATTS-POP-CORN-MAKER1.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 36,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Plastic Body · High Efficiency · 3 Min Popcorn · Red",
-    badge: "new"
-  },
-  {
-    id: 918,
-    name: "Nasco 370 Watts Pop Corn Maker",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-370-WATTS-POP-CORN-MAKER",
-    category: "kitchen",
-    image: "/img/products/NASCO-370-WATTS-POP-CORN-MAKER.jpg",
-    images: ["/img/products/NASCO-370-WATTS-POP-CORN-MAKER.jpg"],
-    price: 499,
-    rating: 4.4,
-    reviews: 58,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Kettle With Built-In Stirring System · 10 Cups Capacity · Illuminated Chamber",
-    badge: "new"
-  },
-  {
-    id: 919,
-    name: "Nasco 850 Watt 2 Slice Toaster",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-850-WATT-2-SLICE-TOASTER1",
-    category: "kitchen",
-    image: "/img/products/NASCO-850-WATT-2-SLICE-TOASTER1.jpg",
-    images: ["/img/products/NASCO-850-WATT-2-SLICE-TOASTER1.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 57,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "2 Slice Capacity · Ready Light · Fixed Temp · 850 W · White",
-    badge: "new"
-  },
-  {
     id: 920,
     name: "Midea 4.5Ltrs Kitchen Machine",
     brand: "Midea",
@@ -22855,366 +20380,6 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Multi Function · Blender · 25Ltr · Processor · 25Ltrs · 7 Speed · Timer · Whisk · Hook · Beater",
-    badge: "new"
-  },
-  {
-    id: 921,
-    name: "Midea 0.5Ltrs Juice Extractor",
-    brand: "Midea",
-    brandId: "midea",
-    model: "MIDEA-0.5LTR-JUICE-EXTRACTOR1-1",
-    category: "kitchen",
-    image: "/img/products/MIDEA-0.5LTR-JUICE-EXTRACTOR1-1.jpg",
-    images: ["/img/products/MIDEA-0.5LTR-JUICE-EXTRACTOR1-1.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 23,
-    icon: "🍳",
-    tags: [
-      "midea",
-      "kitchen"
-    ],
-    description: "2 Speed Control · Plastic · 400 Watt · Anti Slip Feet",
-    badge: "new"
-  },
-  {
-    id: 922,
-    name: "Nasco 1.5Ltrs Juicer",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-600LTR-JUICER1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-600LTR-JUICER1-1.jpg",
-    images: ["/img/products/NASCO-600LTR-JUICER1-1.jpg"],
-    price: 549,
-    rating: 4.4,
-    reviews: 29,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Plastic Body · Stainless Filter · Safety Interlock · 1.5 Liter",
-    badge: "new"
-  },
-  {
-    id: 923,
-    name: "Nasco 200Watts Food Chopper",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "Artboard-1",
-    category: "kitchen",
-    image: "/img/products/Artboard-1.jpg",
-    images: ["/img/products/Artboard-1.jpg"],
-    price: 299,
-    rating: 4.4,
-    reviews: 70,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Plastic Body · One Touch Button · Stainless Steel · 200 Watt",
-    badge: "new"
-  },
-  {
-    id: 924,
-    name: "Nasco 800Watts Crepe Maker",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-800WATTS-CREPE-MAKER1",
-    category: "kitchen",
-    image: "/img/products/NASCO-800WATTS-CREPE-MAKER1.jpg",
-    images: ["/img/products/NASCO-800WATTS-CREPE-MAKER1.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 52,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Cord Storage · Led Indicator · Adjustable Temp · Non Slip Rubber",
-    badge: "new"
-  },
-  {
-    id: 925,
-    name: "Nasco 1.0Ltr Coffee Maker",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-1.0LTR-COFFEE-MAKER1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-1.0LTR-COFFEE-MAKER1-1.jpg",
-    images: ["/img/products/NASCO-1.0LTR-COFFEE-MAKER1-1.jpg"],
-    price: 649,
-    rating: 4.4,
-    reviews: 86,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "900 W · Nylon Filter · Removable Funnel · Anti Drip · Keep Warm",
-    badge: "new"
-  },
-  {
-    id: 926,
-    name: "Nasco 400Watts Blender",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-400WATTS-BLENDER1",
-    category: "kitchen",
-    image: "/img/products/NASCO-400WATTS-BLENDER1.jpg",
-    images: ["/img/products/NASCO-400WATTS-BLENDER1.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 61,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "1.7 Ltrs · White Plastic Jug · Grinder",
-    badge: "new"
-  },
-  {
-    id: 927,
-    name: "Nasco 2100 Watt Oven Toaster",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-2100-WATT-OVEN-TOASTER",
-    category: "kitchen",
-    image: "/img/products/NASCO-2100-WATT-OVEN-TOASTER.jpg",
-    images: ["/img/products/NASCO-2100-WATT-OVEN-TOASTER.jpg"],
-    price: 899,
-    rating: 4.4,
-    reviews: 58,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "32L Oven · Single Glass Door · With Vde Plug · 2100W",
-    badge: "new"
-  },
-  {
-    id: 928,
-    name: "Nasco 3000 Watt Deep Fryer",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-3000-WSTT-DEEP-FRYER1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-3000-WSTT-DEEP-FRYER1-1.jpg",
-    images: ["/img/products/NASCO-3000-WSTT-DEEP-FRYER1-1.jpg"],
-    price: 299,
-    rating: 4.4,
-    reviews: 84,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Adjustable Stem · Power Indicator · 4 L · 3000W",
-    badge: "new"
-  },
-  {
-    id: 929,
-    name: "Nasco 500 Wtts Professional Blender",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-500-WATTS-PROFESSIONAL-BLENDER1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-500-WATTS-PROFESSIONAL-BLENDER1-1.jpg",
-    images: ["/img/products/NASCO-500-WATTS-PROFESSIONAL-BLENDER1-1.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 63,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "1.5 Ltrs Body · Lid · Handle · White Knob · Base · Black Glass Jug",
-    badge: "new"
-  },
-  {
-    id: 930,
-    name: "Nasco 300 Watts Professional Blender",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-300-WATTS-PROFESSIONAL-BLENDER",
-    category: "kitchen",
-    image: "/img/products/NASCO-300-WATTS-PROFESSIONAL-BLENDER.jpg",
-    images: ["/img/products/NASCO-300-WATTS-PROFESSIONAL-BLENDER.jpg"],
-    price: 249,
-    rating: 4.4,
-    reviews: 61,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "700 Ml Cup · Full Accessories · Chopper Attached · Blend Rob",
-    badge: "new"
-  },
-  {
-    id: 931,
-    name: "Nasco 300 Watts Hand Mixer Silver And Black Design",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-300-WATTS-HAND-MIXER-SILVER-AND-BLACK-DESIGN1",
-    category: "kitchen",
-    image: "/img/products/NASCO-300-WATTS-HAND-MIXER-SILVER-AND-BLACK-DESIGN1.jpg",
-    images: ["/img/products/NASCO-300-WATTS-HAND-MIXER-SILVER-AND-BLACK-DESIGN1.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 49,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Egg And Dough Mixer · 2 Blades Included · Stainless Steel Decoration",
-    badge: "new"
-  },
-  {
-    id: 932,
-    name: "Nasco 250 Watt Hand Mixer White",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-250-WATT-HAND-MIXER-WHITE",
-    category: "kitchen",
-    image: "/img/products/NASCO-250-WATT-HAND-MIXER-WHITE.jpg",
-    images: ["/img/products/NASCO-250-WATT-HAND-MIXER-WHITE.jpg"],
-    price: 179,
-    rating: 4.4,
-    reviews: 78,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "2 Blades · 3 Adjustable Speeds",
-    badge: "new"
-  },
-  {
-    id: 933,
-    name: "Nasco 250 Watt Hand Mixer",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-250-WATT-HAND-MIXER1",
-    category: "kitchen",
-    image: "/img/products/NASCO-250-WATT-HAND-MIXER1.jpg",
-    images: ["/img/products/NASCO-250-WATT-HAND-MIXER1.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 85,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "2.3 Ltrs · Two Beaters Included · Beating Egg Function · Safety Button · White",
-    badge: "new"
-  },
-  {
-    id: 934,
-    name: "Nasco 1300 Watt 4 Slice Toaster",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-1300-WATT-4-SLICE-TOASTER1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-1300-WATT-4-SLICE-TOASTER1-1.jpg",
-    images: ["/img/products/NASCO-1300-WATT-4-SLICE-TOASTER1-1.jpg"],
-    price: 649,
-    rating: 4.4,
-    reviews: 44,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "4 Slice Capacity · Ready Light · Fixed Temp",
-    badge: "new"
-  },
-  {
-    id: 935,
-    name: "Nasco 1.2Ltrs Food Processor",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-1.2LTR-FOOD-PROCESSOR1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-1.2LTR-FOOD-PROCESSOR1-1.jpg",
-    images: ["/img/products/NASCO-1.2LTR-FOOD-PROCESSOR1-1.jpg"],
-    price: 499,
-    rating: 4.4,
-    reviews: 87,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Full Function ·   Chopping · Slicing · Shredding · Kneading ·   Egg Beating ·   Full Accessories",
-    badge: "new"
-  },
-  {
-    id: 936,
-    name: "Nasco 0.5Ltr Coffee Maker",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-0.5LTR-COFFEE-MAKER1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-0.5LTR-COFFEE-MAKER1-1.jpg",
-    images: ["/img/products/NASCO-0.5LTR-COFFEE-MAKER1-1.jpg"],
-    price: 179,
-    rating: 4.4,
-    reviews: 86,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "On/Off Indicator · Removable Filter",
-    badge: "new"
-  },
-  {
-    id: 937,
-    name: "Nasco 1.7Ltrs Kettle Stainless Steel",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-1.7LTR-KETTLESTAINLESS-STEEL1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-1.7LTR-KETTLESTAINLESS-STEEL1-1.jpg",
-    images: ["/img/products/NASCO-1.7LTR-KETTLESTAINLESS-STEEL1-1.jpg"],
-    price: 199,
-    rating: 4.4,
-    reviews: 60,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Stainless Steel · 7 Ltrs · Cordless",
-    badge: "new"
-  },
-  {
-    id: 938,
-    name: "Nasco 1.7Ltrs Kettle, Transperent Glass",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "NASCO-1.7LTR-KETTLE-TRANSPERENT-GLASS1-1",
-    category: "kitchen",
-    image: "/img/products/NASCO-1.7LTR-KETTLE-TRANSPERENT-GLASS1-1.jpg",
-    images: ["/img/products/NASCO-1.7LTR-KETTLE-TRANSPERENT-GLASS1-1.jpg"],
-    price: 299,
-    rating: 4.4,
-    reviews: 33,
-    icon: "🍳",
-    tags: [
-      "nasco",
-      "kitchen"
-    ],
-    description: "Transparent Glass ·   1 · 7 Ltrs · Cordless",
     badge: "new"
   },
   {
@@ -23298,26 +20463,6 @@ const PRODUCTS = [
     badge: "new"
   },
   {
-    id: 943,
-    name: "Nasco Wall Mount Voltage Regulator Digital Display",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "1NASCO-1000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY",
-    category: "small",
-    image: "/img/products/1NASCO-1000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg",
-    images: ["/img/products/1NASCO-1000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"],
-    price: 399,
-    rating: 4.4,
-    reviews: 83,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Wall Mount · Digital Display · Whitecolor · Input/Output:100V260V/220Vac · Sockets:2*S33 · Plug:",
-    badge: "new"
-  },
-  {
     id: 944,
     name: "Nasco Wall Mount Voltage Regulator Digital Display",
     brand: "NASCO",
@@ -23395,26 +20540,6 @@ const PRODUCTS = [
       "small"
     ],
     description: "Digital Display · White Color · Input/Output :100V-260V/220Vac · Sockets2*S33 · Plug: P09",
-    badge: "new"
-  },
-  {
-    id: 948,
-    name: "Nasco Voltage Regulator Meter Display White",
-    brand: "NASCO",
-    brandId: "nasco",
-    model: "1NASCO-5000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE",
-    category: "small",
-    image: "/img/products/1NASCO-5000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE.jpg",
-    images: ["/img/products/1NASCO-5000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE.jpg"],
-    price: 649,
-    rating: 4.4,
-    reviews: 98,
-    icon: "⚡",
-    tags: [
-      "nasco",
-      "small"
-    ],
-    description: "Meter Display · White Color · Input/Output :100V-260V/220Vac · Sockets:2*S33 · Plug: P09",
     badge: "new"
   },
   {

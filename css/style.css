@@ -1402,7 +1402,7 @@ input, select, textarea { font-family: inherit; }
 ================================================================ */
 .shop-hero {
   background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  padding: 28px 16px 24px; color: #fff;
+  padding: 28px 0 24px; color: #fff; overflow: hidden;
 }
 .shop-hero h1 { font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.2; }
 .shop-hero p { font-size: 13.5px; color: rgba(255,255,255,0.88); margin-bottom: 2px; }
@@ -1897,4 +1897,51 @@ input, select, textarea { font-family: inherit; }
 
   /* Shop hero font tweak for small screens */
   .shop-hero h1 { font-size: 22px; }
+
+  /* Flash sale: smaller section, no bolt icon */
+  .flash-sale-section { padding: 14px 0; }
+  .flash-badge i { display: none; }
+  .flash-badge { font-size: 10px; padding: 4px 10px; }
+  .flash-left h2 { font-size: 16px; margin-bottom: 4px; }
+  .flash-left p { font-size: 12px; margin-bottom: 10px; }
+  .count-unit span { width: 40px; height: 44px; font-size: 18px; }
+  .count-sep { font-size: 16px; }
 }
+
+/* ================================================================
+   PRODUCT GALLERY – MULTI-IMAGE SUPPORT
+================================================================ */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.92);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s, transform 0.2s;
+  color: var(--text-dark);
+  font-size: 13px;
+}
+.gallery-arrow:hover { background: var(--primary); color: #fff; transform: translateY(-50%) scale(1.08); }
+.gallery-prev { left: 8px; }
+.gallery-next { right: 8px; }
+
+.product-thumbs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+.thumb {
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.thumb:hover { transform: scale(1.05); border-color: var(--primary-light, #93c5fd); }

@@ -110,15 +110,6 @@ const BRANDS = [
     color: "#003087",
     bg: "linear-gradient(135deg,#003087,#001a5c)",
     logoStyle: "font-size:13px;letter-spacing:1px"
-  },
-  {
-    id: "alcatel",
-    name: "Alcatel",
-    shortName: "Alcatel",
-    products: 1,
-    color: "#0099dd",
-    bg: "linear-gradient(135deg,#0099dd,#006699)",
-    logoStyle: "font-size:14px"
   }
 ];
 
@@ -13064,33 +13055,6 @@ const PRODUCTS = [
       Resolution: "4K UHD",
       Smart: "Yes",
       Type: "Hospitality TV"
-    }
-  },
-  {
-    id: 494,
-    name: "Alcatel A31 (64GB)",
-    brand: "Alcatel",
-    brandId: "alcatel",
-    model: "ALCATEL-A31",
-    category: "phones",
-    image: null,
-    images: [],
-    price: 1099,
-    oldPrice: null,
-    discount: 0,
-    rating: 4,
-    reviews: 187,
-    icon: "📱",
-    color: "",
-    tags: [
-      "alcatel",
-      "phones"
-    ],
-    description: "6.5\" Alcatel A31 smartphone with essential features and reliable performance for everyday use.",
-    specs: {
-      Screen: "6.5\"",
-      Storage: "64GB",
-      Battery: "5000mAh"
     }
   },
   {

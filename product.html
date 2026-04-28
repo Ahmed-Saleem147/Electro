@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product – Orbiva Technologies</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    /* ── Product Page Layout ── */
+    .product-page-hero {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 16px 0; color: #fff; overflow: hidden;
+    }
+    .product-page-hero .breadcrumb { opacity: 0.85; font-size: 13px; }
+    .product-page-hero .breadcrumb a { color: rgba(255,255,255,0.9); }
+    .product-page-hero .breadcrumb span { opacity: 0.6; }
+
+    .product-page-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 0 0 40px;
+    }
+    @media (min-width: 900px) {
+      .product-page-wrap {
+        grid-template-columns: 55% 45%;
+        gap: 0;
+        padding: 0 0 60px;
+        align-items: start;
+      }
+    }
+
+    /* ── Gallery ── */
+    .pp-gallery {
+      position: sticky;
+      top: 80px;
+      padding: 24px 16px 16px;
+    }
+    @media (min-width: 1280px) { .pp-gallery { padding: 32px 24px 24px; } }
+
+    .pp-main-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      max-height: 520px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #f8fafc;
+      display: flex; align-items: center; justify-content: center;
+      cursor: zoom-in;
+      position: relative;
+    }
+    .pp-main-img img {
+      width: 100%; height: 100%; object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .pp-main-img:hover img { transform: scale(1.03); }
+    .pp-main-icon { font-size: 120px; }
+
+    .pp-thumbs {
+      display: flex; gap: 10px; margin-top: 14px;
+      overflow-x: auto; scrollbar-width: none; padding-bottom: 4px;
+    }
+    .pp-thumbs::-webkit-scrollbar { display: none; }
+    .pp-thumb {
+      flex-shrink: 0;
+      width: 72px; height: 72px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      background: #f1f5f9;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .pp-thumb.active { border-color: var(--primary); }
+    .pp-thumb img { width: 100%; height: 100%; object-fit: contain; }
+
+    .pp-gallery-nav {
+      display: flex; gap: 8px; margin-top: 12px; justify-content: center;
+    }
+    .pp-nav-btn {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid var(--border); background: #fff;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 14px; color: var(--text-dark);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .pp-nav-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    /* ── Info panel ── */
+    .pp-info {
+      padding: 24px 16px 16px;
+      border-left: none;
+    }
+    @media (min-width: 900px) {
+      .pp-info {
+        padding: 32px 24px 24px;
+        border-left: 1px solid var(--border);
+      }
+    }
+
+    .pp-brand-badge {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--primary);
+      background: rgba(29,78,216,0.08);
+      padding: 4px 12px; border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .pp-name {
+      font-family: var(--font-heading);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 800; color: var(--text-dark);
+      line-height: 1.25; margin-bottom: 14px;
+    }
+    .pp-rating { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; }
+    .pp-stars i { color: #f59e0b; font-size: 14px; }
+    .pp-review-count { font-size: 13px; color: var(--text-muted); }
+
+    .pp-desc {
+      font-size: 14px; line-height: 1.75;
+      color: var(--text-muted); margin-bottom: 22px;
+    }
+
+    .pp-price-row {
+      display: flex; align-items: baseline; gap: 12px;
+      margin-bottom: 22px;
+    }
+    .pp-price {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 800; color: var(--primary);
+    }
+    .pp-old-price {
+      font-size: 16px; color: var(--text-muted);
+      text-decoration: line-through;
+    }
+    .pp-discount-badge {
+      font-size: 12px; font-weight: 700; color: #fff;
+      background: var(--accent); padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .pp-qty-row {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 18px;
+    }
+    .pp-qty-label { font-size: 14px; font-weight: 600; color: var(--text-dark); }
+    .pp-qty-ctrl {
+      display: flex; align-items: center; gap: 0;
+      border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+    }
+    .pp-qty-ctrl button {
+      width: 38px; height: 38px; background: #f8fafc;
+      border: none; font-size: 18px; cursor: pointer;
+      color: var(--text-dark); transition: background 0.15s;
+    }
+    .pp-qty-ctrl button:hover { background: var(--primary-light); color: #fff; }
+    .pp-qty-ctrl input {
+      width: 48px; text-align: center; border: none;
+      font-size: 15px; font-weight: 600; background: #fff;
+      height: 38px; outline: none;
+    }
+
+    .pp-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+    .pp-actions .btn-primary { flex: 1; min-width: 180px; }
+    .pp-wish-btn {
+      width: 46px; height: 46px; border-radius: 50%;
+      border: 1px solid var(--border); background: #fff;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 18px; color: var(--text-muted);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .pp-wish-btn:hover, .pp-wish-btn.active { color: var(--accent); border-color: var(--accent); }
+
+    .pp-specs {
+      border-top: 1px solid var(--border);
+      padding-top: 20px; margin-top: 4px;
+    }
+    .pp-specs h4 {
+      font-size: 14px; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 12px;
+    }
+    .pp-specs .spec-table { width: 100%; }
+    .pp-not-found {
+      text-align: center; padding: 80px 20px;
+      color: var(--text-muted);
+    }
+    .pp-not-found i { font-size: 48px; display: block; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-left">
+      <span><i class="fas fa-phone-alt"></i> 050 257 8905</span>
+      <span><i class="fas fa-envelope"></i> info@orbivagh.com</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="contact.html">Track Order</a>
+      <a href="contact.html">Help</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="mainHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="img/logo.jpeg" alt="Orbiva Technologies" class="logo-img">
+    </a>
+    <div class="search-bar" id="searchBar">
+      <div class="search-input-wrap">
+        <select class="search-category" id="searchCategory">
+          <option>All Categories</option>
+          <option>Televisions</option>
+          <option>Air Conditioners</option>
+          <option>Refrigerators</option>
+          <option>Washing Machines</option>
+          <option>Kitchen Appliances</option>
+          <option>Small Appliances</option>
+        </select>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search for products, brands..." />
+        <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+    <div class="header-actions">
+      <button class="action-btn" id="wishlistToggle" title="Wishlist"><i class="fas fa-heart"></i><span class="badge" id="wishCount">0</span></button>
+      <button class="action-btn cart-btn" id="cartToggle" title="Cart">
+        <i class="fas fa-shopping-cart"></i><span class="badge" id="cartCount">0</span>
+        <span class="cart-total-label" id="cartTotalLabel">GH₵ 0</span>
+      </button>
+      <button class="action-btn" id="accountToggle" title="Account"><i class="fas fa-user"></i></button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link active">Shop</a></li>
+        <li class="has-dropdown">
+          <a href="shop.html" class="nav-link">Categories <i class="fas fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown" id="catDropdown"></ul>
+        </li>
+        <li><a href="shop.html" class="nav-link">Brands</a></li>
+        <li><a href="shop.html?filter=deals" class="nav-link deals-link"><i class="fas fa-fire"></i> Deals <span class="hot-tag">HOT</span></a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-promo"><i class="fas fa-truck"></i><span>Free delivery on orders above GH₵ 500</span></div>
+    </div>
+  </nav>
+</header>
+
+<!-- Sidebars & Modals -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-sidebar-header">
+    <h3><i class="fas fa-shopping-cart"></i> Your Cart (<span id="cartItemCount">0</span>)</h3>
+    <button class="close-btn" id="closeCart"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items-wrap" id="cartItemsWrap">
+    <div class="cart-empty" id="cartEmpty"><i class="fas fa-shopping-cart"></i><p>Your cart is empty</p><a href="shop.html" class="btn-primary">Start Shopping</a></div>
+    <ul class="cart-items-list" id="cartItemsList"></ul>
+  </div>
+  <div class="cart-sidebar-footer" id="cartFooter" style="display:none">
+    <div class="cart-subtotal"><span>Subtotal</span><strong id="cartSubtotal">GH₵ 0</strong></div>
+    <div class="cart-total-row"><span>Total</span><strong id="cartTotal">GH₵ 0</strong></div>
+    <a href="checkout.html" class="btn-primary btn-block">Checkout</a>
+    <a href="shop.html" class="btn-outline btn-block">Continue Shopping</a>
+  </div>
+</aside>
+<aside class="wishlist-sidebar" id="wishlistSidebar">
+  <div class="cart-sidebar-header">
+    <h3><i class="fas fa-heart"></i> Wishlist (<span id="wishlistItemCount">0</span>)</h3>
+    <button class="close-btn" id="closeWishlist"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items-wrap" id="wishlistItemsWrap">
+    <div class="cart-empty" id="wishlistEmpty"><i class="fas fa-heart"></i><p>Your wishlist is empty</p></div>
+    <ul class="cart-items-list" id="wishlistItemsList"></ul>
+  </div>
+</aside>
+<div class="modal" id="accountModal">
+  <div class="modal-box">
+    <button class="close-btn modal-close" id="closeAccount"><i class="fas fa-times"></i></button>
+    <div class="modal-tabs">
+      <button class="tab-btn active" data-tab="login">Login</button>
+      <button class="tab-btn" data-tab="register">Register</button>
+    </div>
+    <div class="tab-content active" data-tab="login">
+      <h3>Welcome back</h3>
+      <form id="loginForm">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit" class="btn-primary btn-block">Login</button>
+      </form>
+    </div>
+    <div class="tab-content" data-tab="register">
+      <h3>Create account</h3>
+      <form id="registerForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit" class="btn-primary btn-block">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Hero breadcrumb bar -->
+<section class="product-page-hero">
+  <div class="container">
+    <div class="breadcrumb" id="ppBreadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="shop.html">Shop</a>
+      <span>/</span>
+      <span id="ppBreadcrumbName">Product</span>
+    </div>
+  </div>
+</section>
+
+<!-- Product Content -->
+<div class="container">
+  <div class="product-page-wrap" id="productPageWrap">
+    <div class="pp-not-found" id="ppNotFound" style="display:none">
+      <i class="fas fa-box-open"></i>
+      <p>Product not found.</p>
+      <a href="shop.html" class="btn-primary" style="display:inline-block;margin-top:16px">Back to Shop</a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><img src="img/logo.jpeg" alt="Orbiva Technologies" class="logo-img"></div>
+      <p class="footer-about">Ghana's #1 destination for premium electronics.</p>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Categories</h4><ul id="footerCatLinks"></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">FAQs</a></li><li><a href="contact.html">Returns</a></li><li><a href="contact.html">Track Order</a></li></ul></div>
+    <div class="footer-col footer-contact-col"><h4>Contact</h4><div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>050 257 8905</span></div><div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@orbivagh.com</span></div></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2025 Orbiva Technologies.</p></div></div>
+</footer>
+
+<nav class="bottom-nav" id="bottomNav">
+  <a href="index.html" class="bottom-nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+  <a href="shop.html" class="bottom-nav-item"><i class="fas fa-th-large"></i><span>Shop</span></a>
+  <button class="bottom-nav-item" id="bnavCart" onclick="document.getElementById('cartToggle').click()">
+    <i class="fas fa-shopping-cart"></i><span>Cart</span><span class="bnav-badge" id="bnavCartCount">0</span>
+  </button>
+  <button class="bottom-nav-item" id="bnavWish" onclick="document.getElementById('wishlistToggle').click()">
+    <i class="fas fa-heart"></i><span>Saved</span><span class="bnav-badge" id="bnavWishCount">0</span>
+  </button>
+  <button class="bottom-nav-item" id="bnavAccount" onclick="document.getElementById('accountToggle').click()">
+    <i class="fas fa-user"></i><span>Account</span>
+  </button>
+</nav>
+
+<div class="toast-container" id="toastContainer"></div>
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Populate nav dropdowns
+  const catDd = document.getElementById('catDropdown');
+  if (catDd) catDd.innerHTML = CATEGORIES.map(c => `<li><a href="shop.html?cat=${c.id}"><i class="${c.icon}" style="color:${c.color};margin-right:8px;width:16px"></i>${c.name}</a></li>`).join('');
+  const footerCats = document.getElementById('footerCatLinks');
+  if (footerCats) footerCats.innerHTML = CATEGORIES.slice(0, 6).map(c => `<li><a href="shop.html?cat=${c.id}">${c.name}</a></li>`).join('');
+
+  // Read product ID from URL
+  const params = new URLSearchParams(window.location.search);
+  const pid = parseInt(params.get('id'));
+  const p = PRODUCTS.find(x => x.id === pid);
+
+  if (!p) {
+    document.getElementById('ppNotFound').style.display = 'block';
+    return;
+  }
+
+  // Update page title and breadcrumb
+  document.title = p.name + ' – Orbiva Technologies';
+  document.getElementById('ppBreadcrumbName').textContent = p.name;
+
+  // Track recently viewed
+  let rv = JSON.parse(localStorage.getItem('obv_rv') || '[]');
+  rv = [p.id, ...rv.filter(id => id !== p.id)].slice(0, 8);
+  localStorage.setItem('obv_rv', JSON.stringify(rv));
+
+  // Images
+  const imgs = (p.images && p.images.length) ? p.images : [];
+  let currentIdx = 0;
+
+  function fmt(n) { return 'GH₵ ' + (n || 0).toLocaleString(); }
+
+  // Stars
+  const stars = Array.from({ length: 5 }, (_, i) =>
+    i < Math.floor(p.rating)
+      ? '<i class="fas fa-star"></i>'
+      : (i < p.rating ? '<i class="fas fa-star-half-alt"></i>' : '<i class="far fa-star"></i>')
+  ).join('');
+
+  // Specs
+  const specsHtml = p.specs ? Object.entries(p.specs).map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('') : '';
+
+  // Main image HTML
+  const mainImgHtml = imgs.length
+    ? `<img id="ppMainImg" src="${imgs[0]}" alt="${p.name}"
+         onerror="this.style.display='none';document.getElementById('ppMainIcon').style.display='flex'">`
+    : '';
+  const mainIconHtml = `<div class="pp-main-icon" id="ppMainIcon" style="${imgs.length ? 'display:none' : ''}">${p.icon}</div>`;
+
+  // Thumbnails
+  const thumbsHtml = imgs.length > 1
+    ? imgs.map((src, i) => `
+        <div class="pp-thumb ${i === 0 ? 'active' : ''}" data-idx="${i}">
+          <img src="${src}" alt="${p.name} ${i+1}">
+        </div>`).join('')
+    : '';
+
+  // Nav arrows (only if multiple images)
+  const navHtml = imgs.length > 1 ? `
+    <div class="pp-gallery-nav">
+      <button class="pp-nav-btn" id="ppPrev"><i class="fas fa-chevron-left"></i></button>
+      <button class="pp-nav-btn" id="ppNext"><i class="fas fa-chevron-right"></i></button>
+    </div>` : '';
+
+  const wrap = document.getElementById('productPageWrap');
+  wrap.innerHTML = `
+    <!-- Gallery -->
+    <div class="pp-gallery">
+      <div class="pp-main-img" id="ppMainImgWrap" title="Click to enlarge">
+        ${mainImgHtml}${mainIconHtml}
+      </div>
+      <div class="pp-thumbs" id="ppThumbs">${thumbsHtml}</div>
+      ${navHtml}
+    </div>
+
+    <!-- Info -->
+    <div class="pp-info">
+      <div class="pp-brand-badge">${p.brand}</div>
+      <h1 class="pp-name">${p.name}</h1>
+      <div class="pp-rating">
+        <div class="pp-stars">${stars}</div>
+        <span class="pp-review-count">(${p.reviews.toLocaleString()} reviews)</span>
+      </div>
+      <p class="pp-desc">${p.description || ''}</p>
+      <div class="pp-price-row">
+        <span class="pp-price">${fmt(p.price)}</span>
+        ${p.oldPrice ? `<span class="pp-old-price">${fmt(p.oldPrice)}</span>` : ''}
+        ${p.discount ? `<span class="pp-discount-badge">-${p.discount}% OFF</span>` : ''}
+      </div>
+      <div class="pp-qty-row">
+        <span class="pp-qty-label">Quantity:</span>
+        <div class="pp-qty-ctrl">
+          <button onclick="const i=document.getElementById('ppQty');i.value=Math.max(1,parseInt(i.value)-1)">−</button>
+          <input type="number" id="ppQty" value="1" min="1" max="10">
+          <button onclick="const i=document.getElementById('ppQty');i.value=Math.min(10,parseInt(i.value)+1)">+</button>
+        </div>
+      </div>
+      <div class="pp-actions">
+        <button class="btn-primary" id="ppAddCart">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+        <button class="pp-wish-btn" id="ppWishBtn" title="Add to Wishlist">
+          <i class="fas fa-heart"></i>
+        </button>
+      </div>
+      ${specsHtml ? `
+        <div class="pp-specs">
+          <h4>Specifications</h4>
+          <table class="spec-table">${specsHtml}</table>
+        </div>` : ''}
+    </div>
+  `;
+
+  // ── Wire up interactions ──
+  // Add to cart
+  document.getElementById('ppAddCart').addEventListener('click', () => {
+    const qty = parseInt(document.getElementById('ppQty').value) || 1;
+    addToCart(p.id, qty);
+  });
+
+  // Wishlist
+  document.getElementById('ppWishBtn').addEventListener('click', () => {
+    toggleWishlist(p.id);
+  });
+
+  // Image lightbox on click
+  const mainWrap = document.getElementById('ppMainImgWrap');
+  mainWrap.addEventListener('click', () => {
+    const img = document.getElementById('ppMainImg');
+    if (img && img.style.display !== 'none') openLightbox(img.src, p.name);
+  });
+
+  // Thumbnails
+  document.getElementById('ppThumbs')?.addEventListener('click', e => {
+    const thumb = e.target.closest('.pp-thumb');
+    if (!thumb) return;
+    const idx = parseInt(thumb.dataset.idx);
+    switchPPImg(idx);
+  });
+
+  // Prev / Next nav
+  document.getElementById('ppPrev')?.addEventListener('click', () => {
+    switchPPImg((currentIdx - 1 + imgs.length) % imgs.length);
+  });
+  document.getElementById('ppNext')?.addEventListener('click', () => {
+    switchPPImg((currentIdx + 1) % imgs.length);
+  });
+
+  function switchPPImg(idx) {
+    currentIdx = idx;
+    const mainImg = document.getElementById('ppMainImg');
+    if (mainImg) { mainImg.src = imgs[idx]; }
+    document.querySelectorAll('.pp-thumb').forEach((t, i) => {
+      t.classList.toggle('active', i === idx);
+    });
+  }
+
+  initMegaBackdrop();
+});
+</script>
+</body>
+</html>

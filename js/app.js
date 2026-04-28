@@ -98,14 +98,7 @@ function handleAddToCart(btn, productId) {
 
 /* ── Product Quick View / Detail ── */
 function openProduct(productId) {
-  const p = PRODUCTS.find(x => x.id === productId);
-  if (!p) return;
-  // Track recently viewed
-  let rv = JSON.parse(localStorage.getItem('obv_rv') || '[]');
-  rv = [p.id, ...rv.filter(id => id !== p.id)].slice(0, 8);
-  localStorage.setItem('obv_rv', JSON.stringify(rv));
-  // Navigate to product page (mock: show modal in this demo)
-  showProductModal(p);
+  window.location.href = 'product.html?id=' + productId;
 }
 
 function showProductModal(p) {
@@ -144,7 +137,6 @@ function showProductModal(p) {
                 <div class="main-img main-img-zoomable" id="mainImgZoom" data-current="0" data-total="${imgs.length}">
                   <img id="modalMainImg" src="${imgs[0]}" alt="${p.name}" class="modal-img-photo"
                     onerror="this.onerror=null;this.closest('.main-img-zoomable').id='';this.closest('.main-img').classList.remove('main-img-zoomable');this.style.fontSize='80px';this.outerHTML='<span style=\\'font-size:80px\\'>${p.icon}</span>'">
-                  <div class="zoom-hint"><i class="fas fa-search-plus"></i> Tap to zoom</div>
                   ${arrows}
                 </div>
                 <div class="product-thumbs" id="modalThumbs">${thumbs}</div>`;

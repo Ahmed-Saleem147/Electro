@@ -1,7 +1,7 @@
 /* ================================================================
    ORBIVA – DATA LAYER
    Sources: Electroland (images) + EGL Easter Promo + EGL April 2026
-            + Samsung Mobile April 2026
+            + Samsung Mobile April 2026,
    Prices: All at RETAIL price
 ================================================================ */
 
@@ -2064,7 +2064,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "RT22HAR4DSA/GH",
     category: "fridge",
-    image: "/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg"
+    image: "/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg",
     price: 7299,
     oldPrice: null,
     discount: 0,
@@ -2092,7 +2092,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "RT28HAR4DSA",
     category: "fridge",
-    image: "/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg"
+    image: "/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg",
     price: 7299,
     oldPrice: null,
     discount: 0,
@@ -2280,7 +2280,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "RT53DG7B60B1UT",
     category: "fridge",
-    image: "/img/products/RT53DG7B60B1UT-1.png"
+    image: "/img/products/RT53DG7B60B1UT-1.png",
     price: 17499,
     oldPrice: null,
     discount: 0,
@@ -2333,7 +2333,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "RS57DG4100B4GH",
     category: "fridge",
-    image: "/img/products/br-rs4000dc-side-by-side-with-large-capacity-rs57dg4100m9bz-544181303-300x300-1.jpg"
+    image: "/img/products/br-rs4000dc-side-by-side-with-large-capacity-rs57dg4100m9bz-544181303-300x300-1.jpg",
     price: 18299,
     oldPrice: null,
     discount: 0,
@@ -2360,7 +2360,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "RF65DB970E22",
     category: "fridge",
-    image: "/img/products/uk-t-style-french-door-see-thru-door-rf65db970e22eu-540378321-1.jpg"
+    image: "/img/products/uk-t-style-french-door-see-thru-door-rf65db970e22eu-540378321-1.jpg",
     price: 52199,
     oldPrice: null,
     discount: 0,
@@ -2386,7 +2386,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "RF65DB960E22EF",
     category: "fridge",
-    image: "/img/products/uk-4-door-beverage-center-rf65db960e22eu-540091199.jpg"
+    image: "/img/products/uk-4-door-beverage-center-rf65db960e22eu-540091199.jpg",
     price: 52199,
     oldPrice: null,
     discount: 0,
@@ -2412,7 +2412,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "RF65DG9H0EB1EU",
     category: "fridge",
-    image: "/img/products/RF65DG9H0EB1EU-1.png"
+    image: "/img/products/RF65DG9H0EB1EU-1.png",
     price: 59999,
     oldPrice: null,
     discount: 0,
@@ -2754,7 +2754,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "AR40F18D0AG/AF",
     category: "ac",
-    image: "/img/products/AR40F18D0AGAF-FRONT.png"
+    image: "/img/products/AR40F18D0AGAF-FRONT.png",
     price: 14999,
     oldPrice: null,
     discount: 0,
@@ -2837,7 +2837,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "AC048TNPPEH/AC048TXQREH",
     category: "ac",
-    image: "/img/products/AC048TNPPEH-FRONT.png"
+    image: "/img/products/AC048TNPPEH-FRONT.png",
     price: 42999,
     oldPrice: null,
     discount: 0,
@@ -2915,7 +2915,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "WA80F17S8CNQ",
     category: "laundry",
-    image: "/img/products/WA80F17S8CNQ.png"
+    image: "/img/products/WA80F17S8CNQ.png",
     price: 10799,
     oldPrice: null,
     discount: 0,
@@ -2941,7 +2941,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "WA16CG6745BDNQ",
     category: "laundry",
-    image: "/img/products/WA16CG6745BDNQ-jpg.webp"
+    image: "/img/products/WA16CG6745BDNQ-jpg.webp",
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -2967,7 +2967,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "WA13CG5441BYNQ",
     category: "laundry",
-    image: "/img/products/WA13CG5441BYNQ-3-jpg.webp"
+    image: "/img/products/WA13CG5441BYNQ-3-jpg.webp",
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -2993,7 +2993,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "WA80F13S5CNQ",
     category: "laundry",
-    image: "/img/products/WA80F13S5CNQ.png"
+    image: "/img/products/WA80F13S5CNQ.png",
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -3020,7 +3020,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "WA80CG4240BWNQ",
     category: "laundry",
-    image: "/img/products/WA80CG4240BWNQ-jpg.webp"
+    image: "/img/products/WA80CG4240BWNQ-jpg.webp",
     price: 5699,
     oldPrice: null,
     discount: 0,
@@ -3075,7 +3075,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "WW10DG6U94LBNQ",
     category: "laundry",
-    image: "/img/products/WW10DG6U94LBNQ-FRONT.png"
+    image: "/img/products/WW10DG6U94LBNQ-FRONT.png",
     price: 12999,
     oldPrice: null,
     discount: 0,
@@ -3156,7 +3156,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "WW70T3010BS/NQ",
     category: "laundry",
-    image: "/img/products/africa-en-front-loading-washer-ww70t301mbwle-ww70t3010bs-nq-462165959.webp"
+    image: "/img/products/africa-en-front-loading-washer-ww70t301mbwle-ww70t3010bs-nq-462165959.webp",
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -3236,7 +3236,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "WD21T6300GV/NQ",
     category: "laundry",
-    image: "/img/products/africa-en-wd6000t-wd22t6500gvco-wd21t6300gv-nq-400244833.webp.webp"
+    image: "/img/products/africa-en-wd6000t-wd22t6500gvco-wd21t6300gv-nq-400244833.webp.webp",
     price: 25299,
     oldPrice: null,
     discount: 0,
@@ -3262,7 +3262,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "WD17T6300GP/SP",
     category: "laundry",
-    image: "/img/products/my-wd6000t-wd22t6500gvco-431584-wd17t6300gp-sp-533231073.jpg"
+    image: "/img/products/my-wd6000t-wd22t6500gvco-431584-wd17t6300gp-sp-533231073.jpg",
     price: 21799,
     oldPrice: null,
     discount: 0,
@@ -3416,7 +3416,7 @@ const PRODUCTS = [
     brandId: "samsung",
     model: "MG30T5018AK/EF",
     category: "kitchen",
-    image: "/img/products/MG30T5018AKEF-FRONT-2.png"
+    image: "/img/products/MG30T5018AKEF-FRONT-2.png",
     price: 3299,
     oldPrice: null,
     discount: 0,
@@ -3638,7 +3638,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "75P6K",
     category: "tv",
-    image: "/img/products/Tcl-75″-UHD-4K-Smart-Andriod-Television-75P6K-FRONT.png"
+    image: "/img/products/Tcl-75″-UHD-4K-Smart-Andriod-Television-75P6K-FRONT.png",
     price: 16599,
     oldPrice: null,
     discount: 0,
@@ -3729,7 +3729,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "55P7K",
     category: "tv",
-    image: "/img/products/55P7K-SIDE-1.png"
+    image: "/img/products/55P7K-SIDE-1.png",
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -3760,7 +3760,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "65P7K",
     category: "tv",
-    image: "/img/products/TCL-TV-QLED-GOOGLE-65-AIPQ-PROCESSOR-65P7K-FRONT.png"
+    image: "/img/products/TCL-TV-QLED-GOOGLE-65-AIPQ-PROCESSOR-65P7K-FRONT.png",
     price: 12299,
     oldPrice: null,
     discount: 0,
@@ -3852,7 +3852,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "98P8k",
     category: "tv",
-    image: "/img/products/98P8K.png"
+    image: "/img/products/98P8K.png",
     price: 49999,
     oldPrice: null,
     discount: 0,
@@ -3910,7 +3910,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "75C6K",
     category: "tv",
-    image: "/img/products/TCL-TV-QLED-75-QD-MINI-LED-ONKYO-75C6K-FRONT.png"
+    image: "/img/products/TCL-TV-QLED-75-QD-MINI-LED-ONKYO-75C6K-FRONT.png",
     price: 27899,
     oldPrice: null,
     discount: 0,
@@ -4022,7 +4022,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "115C7K",
     category: "tv",
-    image: "/img/products/115C7K.png"
+    image: "/img/products/115C7K.png",
     price: 299999,
     oldPrice: null,
     discount: 0,
@@ -4076,7 +4076,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "34R83Q",
     category: "tv",
-    image: "/img/products/TCL-34__-HDR-PROFESSIONAL-MONITOR-34R83Q-FRONT.png"
+    image: "/img/products/TCL-34__-HDR-PROFESSIONAL-MONITOR-34R83Q-FRONT.png",
     price: 16599,
     oldPrice: null,
     discount: 0,
@@ -4252,7 +4252,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "TP300K",
     category: "tv",
-    image: "/img/products/TP300K.png"
+    image: "/img/products/TP300K.png",
     price: 6299,
     oldPrice: null,
     discount: 0,
@@ -4935,7 +4935,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "P540TMGWD",
     category: "fridge",
-    image: "/img/products/P540TMGWD-FRONT.png"
+    image: "/img/products/P540TMGWD-FRONT.png",
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -5037,7 +5037,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "F410BFS",
     category: "fridge",
-    image: "/img/products/TCL-309L-Bottom-Mount-Fridge-F410BFS-Front.png"
+    image: "/img/products/TCL-309L-Bottom-Mount-Fridge-F410BFS-Front.png",
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -5091,7 +5091,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "P692SBNWD",
     category: "fridge",
-    image: "/img/products/TCL-Side-By-Side-Refrigerator-P692SBNWD-FRONT.png"
+    image: "/img/products/TCL-Side-By-Side-Refrigerator-P692SBNWD-FRONT.png",
     price: 11999,
     oldPrice: null,
     discount: 0,
@@ -5119,7 +5119,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "P692SBBG",
     category: "fridge",
-    image: "/img/products/TCL-Side-By-Side-Refrigerator-P692SBBG-FRONT.png"
+    image: "/img/products/TCL-Side-By-Side-Refrigerator-P692SBBG-FRONT.png",
     price: 11999,
     oldPrice: null,
     discount: 0,
@@ -5224,7 +5224,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "F494CFSL",
     category: "fridge",
-    image: "/img/products/TCL-308-Chest-Freezer-F494CFSL-SPECS-1.png"
+    image: "/img/products/TCL-308-Chest-Freezer-F494CFSL-SPECS-1.png",
     price: 5499,
     oldPrice: null,
     discount: 0,
@@ -5303,7 +5303,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "F211TT",
     category: "laundry",
-    image: "/img/products/F211TT_front.png"
+    image: "/img/products/F211TT_front.png",
     price: 2999,
     oldPrice: null,
     discount: 0,
@@ -5442,7 +5442,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "P1109FLG",
     category: "laundry",
-    image: "/img/products/TCL-FRONT-LOAD-INVERTER-9KG-WASHING-MACHINE-P1109FLG-FRONT.jpg"
+    image: "/img/products/TCL-FRONT-LOAD-INVERTER-9KG-WASHING-MACHINE-P1109FLG-FRONT.jpg",
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -5471,7 +5471,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "P211FLG",
     category: "laundry",
-    image: "/img/products/TCL-FRONT-LOAD-INVERTER-10.5KG-WASHING-MACHINE-P211FLG-FRONT.jpg"
+    image: "/img/products/TCL-FRONT-LOAD-INVERTER-10.5KG-WASHING-MACHINE-P211FLG-FRONT.jpg",
     price: 8299,
     oldPrice: null,
     discount: 0,
@@ -5501,7 +5501,7 @@ const PRODUCTS = [
     brandId: "tcl",
     model: "C211WDG",
     category: "laundry",
-    image: "/img/products/TCL-COMBO-10.5-KG-6-KGS-WASHING-MACHINE-C211WDG-FRONT.jpg"
+    image: "/img/products/TCL-COMBO-10.5-KG-6-KGS-WASHING-MACHINE-C211WDG-FRONT.jpg",
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -6371,7 +6371,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "MDRT134FGN50",
     category: "fridge",
-    image: "/img/products/MDRT134FGN50-2.png"
+    image: "/img/products/MDRT134FGN50-2.png",
     price: 3499,
     oldPrice: null,
     discount: 0,
@@ -6425,7 +6425,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "MDRT489MTN46",
     category: "fridge",
-    image: "/img/products/MDRT489MTN46-2.png"
+    image: "/img/products/MDRT489MTN46-2.png",
     price: 9199,
     oldPrice: null,
     discount: 0,
@@ -6559,7 +6559,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "MDRC280FZN43",
     category: "fridge",
-    image: "/img/products/MIDEA-198LTRS-CHEST-FREEZER-MDRC280FZN43-FRONT.jpg"
+    image: "/img/products/MIDEA-198LTRS-CHEST-FREEZER-MDRC280FZN43-FRONT.jpg",
     price: 4499,
     oldPrice: null,
     discount: 0,
@@ -6614,7 +6614,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "MDRC564FZN01",
     category: "fridge",
-    image: "/img/products/MDRC564FZN01-2.png"
+    image: "/img/products/MDRC564FZN01-2.png",
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -6641,7 +6641,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "MDRC698FZN01",
     category: "fridge",
-    image: "/img/products/MIDEA-508LTRS-CHEST-FREEZER-MDRC698FZN01-FRONT.jpg"
+    image: "/img/products/MIDEA-508LTRS-CHEST-FREEZER-MDRC698FZN01-FRONT.jpg",
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -6668,7 +6668,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "MDRC193FZG43D",
     category: "small",
-    image: "/img/products/MDRC193FZG43D-3.png"
+    image: "/img/products/MDRC193FZG43D-3.png",
     price: 2499,
     oldPrice: null,
     discount: 0,
@@ -6803,7 +6803,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "MF110W70/T",
     category: "laundry",
-    image: "/img/products/MF110W70-OPENED.png"
+    image: "/img/products/MF110W70-OPENED.png",
     price: 5499,
     oldPrice: null,
     discount: 0,
@@ -6857,7 +6857,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "MT100W70/WG",
     category: "laundry",
-    image: "/img/products/MT100W70W-GH-3.jpg"
+    image: "/img/products/MT100W70W-GH-3.jpg",
     price: 2199,
     oldPrice: null,
     discount: 0,
@@ -6909,7 +6909,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "SP5055T082-S",
     category: "small",
-    image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg"
+    image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg",
     price: 2699,
     oldPrice: null,
     discount: 0,
@@ -6934,7 +6934,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "SP5055T082-BG",
     category: "small",
-    image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg"
+    image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg",
     price: 2699,
     oldPrice: null,
     discount: 0,
@@ -6959,7 +6959,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "SP5055T082-SGH",
     category: "small",
-    image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg"
+    image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg",
     price: 2699,
     oldPrice: null,
     discount: 0,
@@ -6984,7 +6984,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "24TMG4G081-S",
     category: "small",
-    image: "/img/products/24TMG4G081-B-1.png"
+    image: "/img/products/24TMG4G081-B-1.png",
     price: 3799,
     oldPrice: null,
     discount: 0,
@@ -7009,7 +7009,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "24TMG4G081-B",
     category: "small",
-    image: "/img/products/24TMG4G081-B-1.png"
+    image: "/img/products/24TMG4G081-B-1.png",
     price: 3899,
     oldPrice: null,
     discount: 0,
@@ -7034,7 +7034,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "24TMG4G081-WD",
     category: "small",
-    image: "/img/products/24TMG4G081-B-1.png"
+    image: "/img/products/24TMG4G081-B-1.png",
     price: 3999,
     oldPrice: null,
     discount: 0,
@@ -7084,7 +7084,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "30AMG5G027-SILVER",
     category: "small",
-    image: "/img/products/30AMG5G027-SILVER.jpg"
+    image: "/img/products/30AMG5G027-SILVER.jpg",
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -7110,7 +7110,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "36LMG5G080V",
     category: "small",
-    image: "/img/products/36LMG5G080V.png"
+    image: "/img/products/36LMG5G080V.png",
     price: 9199,
     oldPrice: null,
     discount: 0,
@@ -7135,7 +7135,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "36LMG5G027-C",
     category: "small",
-    image: "/img/products/136LMG5G027-C.15.png"
+    image: "/img/products/136LMG5G027-C.15.png",
     price: 9199,
     oldPrice: null,
     discount: 0,
@@ -7160,7 +7160,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "LMG90030",
     category: "small",
-    image: "/img/products/LMG90030-3-1.png"
+    image: "/img/products/LMG90030-3-1.png",
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -7209,7 +7209,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "EM9P032MO-B",
     category: "small",
-    image: "/img/products/EM9P032MO-B-1.png"
+    image: "/img/products/EM9P032MO-B-1.png",
     price: 1699,
     oldPrice: null,
     discount: 0,
@@ -7234,7 +7234,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "MM7P012MZ-B",
     category: "small",
-    image: "/img/products/MM7P012MZ-B-2-jpg.webp"
+    image: "/img/products/MM7P012MZ-B-2-jpg.webp",
     price: 1199,
     oldPrice: null,
     discount: 0,
@@ -7286,7 +7286,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "AM925BVE",
     category: "kitchen",
-    image: "/img/products/AM925BVE-B.png"
+    image: "/img/products/AM925BVE-B.png",
     price: 4899,
     oldPrice: null,
     discount: 0,
@@ -7518,7 +7518,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "90M21",
     category: "kitchen",
-    image: "/img/products/90M21-S-1.png"
+    image: "/img/products/90M21-S-1.png",
     price: 3799,
     oldPrice: null,
     discount: 0,
@@ -8137,7 +8137,7 @@ const PRODUCTS = [
     brandId: "midea",
     model: "YJ508J",
     category: "kitchen",
-    image: "/img/products/YJ508J.png"
+    image: "/img/products/YJ508J.png",
     price: 399,
     oldPrice: null,
     discount: 0,
@@ -10510,7 +10510,7 @@ const PRODUCTS = [
     brandId: "nasco",
     model: "MWO20NAS-2LV(B)",
     category: "kitchen",
-    image: "/img/products/MWO20NAS-2LVB.png"
+    image: "/img/products/MWO20NAS-2LVB.png",
     price: 849,
     oldPrice: null,
     discount: 0,

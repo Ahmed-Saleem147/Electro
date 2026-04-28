@@ -47,7 +47,7 @@ function renderProductCard(product) {
   return `
     <div class="product-card reveal" data-tags="${product.tags.join(',')}" data-id="${product.id}" onclick="openProduct(${product.id})">
       <div class="product-img-wrap">
-        ${product.image ? `<img src="${product.image}" alt="${product.name}" class="product-img-photo" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=\\'product-img-icon\\'>${product.icon}</div>'">` : `<div class="product-img-icon">${product.icon}</div>`}
+        ${(product.images && product.images.length) ? `<img src="${product.images[0]}" alt="${product.name}" class="product-img-photo" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=\\'product-img-icon\\'>${product.icon}</div>'">` : `<div class="product-img-icon">${product.icon}</div>`}
         <div class="product-badges">${badge}</div>
         <div class="product-actions">
           <button class="prod-action-btn${wishlisted}" data-wishlist="${product.id}" title="Add to Wishlist" onclick="event.stopPropagation();toggleWishlist(${product.id})">
@@ -129,17 +129,30 @@ function showProductModal(p) {
       <button class="close-btn modal-close" style="position:absolute;top:16px;right:16px;z-index:10" onclick="this.closest('.modal').remove()"><i class="fas fa-times"></i></button>
       <div class="product-detail-layout">
         <div class="product-gallery">
-          ${p.image
-            ? `<div class="main-img main-img-zoomable" id="mainImgZoom">
-                <img src="${p.image}" alt="${p.name}" class="modal-img-photo" onerror="this.onerror=null;this.closest('.main-img-zoomable').id='';this.closest('.main-img').classList.remove('main-img-zoomable');this.style.fontSize='80px';this.outerHTML='<span style=\\'font-size:80px\\'>${p.icon}</span>'">
-                <div class="zoom-hint"><i class="fas fa-search-plus"></i> Tap to zoom</div>
-               </div>`
-            : `<div class="main-img" style="font-size:80px">${p.icon}</div>`}
-          <div class="product-thumbs">
-            ${p.image
-              ? `<div class="thumb active"><img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain"></div>`
-              : [p.icon, p.icon, p.icon].map((ic, i) => `<div class="thumb ${i === 0 ? 'active' : ''}">${ic}</div>`).join('')}
-          </div>
+          ${(() => {
+            const imgs = (p.images && p.images.length) ? p.images : [];
+            if (imgs.length) {
+              const thumbs = imgs.map((src, i) =>
+                `<div class="thumb ${i===0?'active':''}" data-idx="${i}" onclick="switchModalImg(this,'${src.replace(/'/g,"\\'")}','${p.name.replace(/'/g,"\\'")}')">
+                  <img src="${src}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain">
+                </div>`
+              ).join('');
+              const arrows = imgs.length > 1 ? `
+                <button class="gallery-arrow gallery-prev" onclick="stepModalImg(-1)" title="Previous"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-arrow gallery-next" onclick="stepModalImg(1)" title="Next"><i class="fas fa-chevron-right"></i></button>` : '';
+              return `
+                <div class="main-img main-img-zoomable" id="mainImgZoom" data-current="0" data-total="${imgs.length}">
+                  <img id="modalMainImg" src="${imgs[0]}" alt="${p.name}" class="modal-img-photo"
+                    onerror="this.onerror=null;this.closest('.main-img-zoomable').id='';this.closest('.main-img').classList.remove('main-img-zoomable');this.style.fontSize='80px';this.outerHTML='<span style=\\'font-size:80px\\'>${p.icon}</span>'">
+                  <div class="zoom-hint"><i class="fas fa-search-plus"></i> Tap to zoom</div>
+                  ${arrows}
+                </div>
+                <div class="product-thumbs" id="modalThumbs">${thumbs}</div>`;
+            } else {
+              return `<div class="main-img" style="font-size:80px">${p.icon}</div>
+                      <div class="product-thumbs">${[p.icon,p.icon,p.icon].map((ic,i)=>`<div class="thumb ${i===0?'active':''}">${ic}</div>`).join('')}</div>`;
+            }
+          })()}
         </div>
         <div class="product-detail-info">
           <div class="product-brand">${p.brand}</div>
@@ -193,6 +206,31 @@ function showProductModal(p) {
   }
 }
 
+/* ── Modal gallery helpers ── */
+function switchModalImg(thumb, src, name) {
+  const mainImg = document.getElementById('modalMainImg');
+  const zoomEl  = document.getElementById('mainImgZoom');
+  if (mainImg) { mainImg.src = src; mainImg.alt = name; }
+  if (zoomEl)  { zoomEl.dataset.current = thumb.dataset.idx; }
+  document.querySelectorAll('#modalThumbs .thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+
+function stepModalImg(dir) {
+  const zoomEl = document.getElementById('mainImgZoom');
+  const thumbs = [...document.querySelectorAll('#modalThumbs .thumb')];
+  if (!zoomEl || !thumbs.length) return;
+  let current = parseInt(zoomEl.dataset.current || 0);
+  const total  = parseInt(zoomEl.dataset.total  || thumbs.length);
+  current = (current + dir + total) % total;
+  const target = thumbs[current];
+  if (target) {
+    const img = target.querySelector('img');
+    switchModalImg(target, img ? img.src : '', img ? img.alt : '');
+    target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+}
+
 /* ── Image lightbox ── */
 function openLightbox(src, name) {
   const lb = document.createElement('div');
@@ -234,8 +272,8 @@ function renderFlashProducts() {
   if (!grid) return;
   grid.innerHTML = FLASH_PRODUCTS.map(fp => {
     const full = PRODUCTS.find(p => p.id === fp.id);
-    const imgHtml = full && full.image
-      ? `<img src="${full.image}" alt="${fp.name}" class="flash-product-img" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=\\'flash-product-icon\\'>${fp.icon}</div>'">`
+    const imgHtml = full && full.images && full.images.length
+      ? `<img src="${full.images[0]}" alt="${fp.name}" class="flash-product-img" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=\\'flash-product-icon\\'>${fp.icon}</div>'">`
       : `<div class="flash-product-icon">${fp.icon}</div>`;
     return `
     <div class="flash-product-card" onclick="openProduct(${fp.id})">

@@ -14,22 +14,50 @@ function getUrlParams() {
   };
 }
 
+/* ── Sub-category keyword map ── */
+const SUB_KEYWORDS = {
+  uhd:    ['uhd','4k'],
+  miniled:['mini-led','mini led','qned'],
+  side:   ['side-by-side','side by side'],
+  french: ['french door','french-door'],
+  single: ['single door','single-door'],
+  double: ['double door','double-door'],
+  front:  ['front load','front-load','front loader'],
+  top:    ['top load','top-load','top loader'],
+  combo:  ['washer-dryer','washer dryer']
+};
+const SUB_TITLES = {
+  uhd:'UHD / 4K',qled:'QLED',oled:'OLED',miniled:'Mini-LED',smart:'Smart',
+  split:'Split',window:'Window',portable:'Portable',inverter:'Inverter',central:'Central',
+  single:'Single Door',double:'Double Door',side:'Side-by-Side',french:'French Door',mini:'Mini',
+  front:'Front Load',top:'Top Load',dryer:'Dryer',combo:'Washer-Dryer Combo'
+};
+function applySubFilter(products, sub) {
+  if (!sub) return products;
+  const keywords = SUB_KEYWORDS[sub] || [sub];
+  return products.filter(p => {
+    const hay = (p.name + ' ' + (p.tags||[]).join(' ')).toLowerCase();
+    return keywords.some(kw => hay.includes(kw));
+  });
+}
+
 /* ── Shop page init ── */
 function initShopPage() {
   if (!document.getElementById('shopProductsGrid')) return;
 
-  const { cat, brand, q, filter } = getUrlParams();
+  const { cat, brand, q, filter, sub } = getUrlParams();
   let filtered = [...PRODUCTS];
 
   // Apply filters from URL
-  if (cat) filtered = filtered.filter(p => p.category === cat);
-  if (brand) filtered = filtered.filter(p => p.brandId === brand);
-  if (q) filtered = filtered.filter(p => p.name.toLowerCase().includes(q.toLowerCase()) || p.brand.toLowerCase().includes(q.toLowerCase()));
+  if (cat)    filtered = filtered.filter(p => p.category === cat);
+  if (brand)  filtered = filtered.filter(p => p.brandId === brand);
+  if (q)      filtered = filtered.filter(p => p.name.toLowerCase().includes(q.toLowerCase()) || p.brand.toLowerCase().includes(q.toLowerCase()));
+  if (sub)    filtered = applySubFilter(filtered, sub);
   if (filter === 'deals' || filter === 'flash') filtered = filtered.filter(p => p.flashSale || p.discount >= 25);
   if (filter === 'clearance') filtered = filtered.filter(p => p.discount >= 30);
 
   renderShopGrid(filtered);
-  setupShopFilters(filtered);
+  setupShopFilters(filtered, sub);
   updateResultCount(filtered.length);
 
   // Set page title
@@ -37,7 +65,8 @@ function initShopPage() {
   if (pageTitle) {
     if (cat) {
       const catData = CATEGORIES.find(c => c.id === cat);
-      pageTitle.textContent = catData ? catData.name : 'Products';
+      const catName = catData ? catData.name : 'Products';
+      pageTitle.textContent = sub && SUB_TITLES[sub] ? SUB_TITLES[sub] + ' ' + catName : catName;
     } else if (brand) {
       const brandData = BRANDS.find(b => b.id === brand);
       pageTitle.textContent = brandData ? brandData.name + ' Products' : 'Brand Products';
@@ -90,16 +119,17 @@ function splitProductsBelowSidebar() {
   cards.slice(cardsAlongside).forEach(card => gridFull.appendChild(card));
 }
 
-function setupShopFilters(initialProducts) {
+function setupShopFilters(initialProducts, sub) {
   const sortSelect = document.getElementById('shopSort');
   const priceRange = document.getElementById('priceRange');
   const priceLabel = document.getElementById('priceLabelValue');
 
   let currentProducts = [...PRODUCTS];
   const { cat, brand, q } = getUrlParams();
-  if (cat) currentProducts = currentProducts.filter(p => p.category === cat);
+  if (cat)   currentProducts = currentProducts.filter(p => p.category === cat);
   if (brand) currentProducts = currentProducts.filter(p => p.brandId === brand);
-  if (q) currentProducts = currentProducts.filter(p => p.name.toLowerCase().includes(q.toLowerCase()));
+  if (q)     currentProducts = currentProducts.filter(p => p.name.toLowerCase().includes(q.toLowerCase()));
+  if (sub)   currentProducts = applySubFilter(currentProducts, sub);
 
   function applyFilters() {
     let filtered = [...currentProducts];

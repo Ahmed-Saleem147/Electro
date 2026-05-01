@@ -18,6 +18,20 @@
     .product-page-hero .breadcrumb { opacity: 0.85; font-size: 13px; }
     .product-page-hero .breadcrumb a { color: rgba(255,255,255,0.9); }
     .product-page-hero .breadcrumb span { opacity: 0.6; }
+    .product-page-hero .hero-bar-inner { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .pp-back-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 16px; border-radius: 999px;
+      background: rgba(255,255,255,0.15); color: #fff;
+      font-size: 13px; font-weight: 600; white-space: nowrap;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      cursor: pointer; transition: background .15s;
+      text-decoration: none; flex-shrink: 0;
+    }
+    .pp-back-btn:hover { background: rgba(255,255,255,0.25); }
+    @media (max-width: 599px) {
+      .pp-back-btn { font-size: 12px; padding: 6px 12px; }
+    }
 
     .product-page-wrap {
       display: grid;
@@ -316,12 +330,17 @@
 <!-- Hero breadcrumb bar -->
 <section class="product-page-hero">
   <div class="container">
-    <div class="breadcrumb" id="ppBreadcrumb">
-      <a href="index.html">Home</a>
-      <span>/</span>
-      <a href="shop.html">Shop</a>
-      <span>/</span>
-      <span id="ppBreadcrumbName">Product</span>
+    <div class="hero-bar-inner">
+      <div class="breadcrumb" id="ppBreadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="shop.html">Shop</a>
+        <span>/</span>
+        <span id="ppBreadcrumbName">Product</span>
+      </div>
+      <button class="pp-back-btn" onclick="history.length > 1 ? history.back() : window.location='shop.html'">
+        <i class="fas fa-arrow-left"></i> Back
+      </button>
     </div>
   </div>
 </section>

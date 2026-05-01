@@ -26,15 +26,29 @@ function showToast(type, title, msg, icon) {
   }, 3500);
 }
 
+/* ── Apply admin product edits/adds/deletes from localStorage ── */
+(function() {
+  try {
+    const edits = JSON.parse(localStorage.getItem('obv_prod_edits') || '{}');
+    const adds  = JSON.parse(localStorage.getItem('obv_prod_adds')  || '[]');
+    const dels  = new Set(JSON.parse(localStorage.getItem('obv_prod_dels') || '[]'));
+    for (let i = PRODUCTS.length - 1; i >= 0; i--) {
+      if (dels.has(PRODUCTS[i].id)) { PRODUCTS.splice(i, 1); continue; }
+      if (edits[PRODUCTS[i].id]) Object.assign(PRODUCTS[i], edits[PRODUCTS[i].id]);
+    }
+    adds.forEach(p => PRODUCTS.push(p));
+  } catch(e) {}
+})();
+
 /* ── Product card renderer ── */
 const CAT_NAMES = { tv: 'Televisions', ac: 'Air Conditioners', fridge: 'Refrigerators', laundry: 'Washing Machines', kitchen: 'Kitchen Appliances', small: 'Small Appliances' };
 
 function renderProductCard(product) {
   const discountStr = product.oldPrice ? `<span class="product-discount">-${product.discount}%</span>` : '';
   const oldPriceStr = product.oldPrice ? `<span class="product-old-price">${fmt(product.oldPrice)}</span>` : '';
-  const badgeMap = { new: 'badge-new', sale: 'badge-sale', hot: 'badge-hot', best: 'badge-best' };
-  const badgeLabel = { new: 'New', sale: 'Sale', hot: 'Hot', best: 'Best Seller' };
-  const badge = product.badge ? `<span class="badge-tag ${badgeMap[product.badge]}">${badgeLabel[product.badge]}</span>` : '';
+  const badgeMap = { new: 'badge-new', sale: 'badge-sale', hot: 'badge-hot', best: 'badge-best', soldout: 'badge-soldout' };
+  const badgeLabel = { new: 'New', sale: 'Sale', hot: 'Hot', best: 'Best Seller', soldout: 'Sold Out' };
+  const badge = (product.badge && localStorage.getItem('obv_badges') === 'on') ? `<span class="badge-tag ${badgeMap[product.badge]}">${badgeLabel[product.badge]}</span>` : '';
   const stars = Array.from({ length: 5 }, (_, i) =>
     i < Math.floor(product.rating) ? '<i class="fas fa-star"></i>' :
     (i === Math.floor(product.rating) && product.rating % 1 >= 0.5 ? '<i class="fas fa-star-half-alt"></i>' : '<i class="far fa-star"></i>')
@@ -248,13 +262,18 @@ function openLightbox(src, name) {
 function renderCategories() {
   const grid = document.getElementById('categoriesGrid');
   if (!grid) return;
-  grid.innerHTML = CATEGORIES.map((c, i) => `
+  const countMap = {};
+  PRODUCTS.forEach(p => { countMap[p.category] = (countMap[p.category] || 0) + 1; });
+  grid.innerHTML = CATEGORIES.map((c, i) => {
+    const count = countMap[c.id] || 0;
+    if (!count) return '';
+    return `
     <div class="category-card reveal delay-${Math.min(i * 100, 500)}" onclick="window.location='shop.html?cat=${c.id}'">
       <div class="cat-icon" style="background:${c.bg};color:${c.color}"><i class="${c.icon}"></i></div>
       <div class="cat-name">${c.name}</div>
-      <div class="cat-count">${c.count} Products</div>
-    </div>
-  `).join('');
+      <div class="cat-count">${count} Products</div>
+    </div>`;
+  }).join('');
   triggerReveal();
 }
 

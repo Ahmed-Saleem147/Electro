@@ -321,7 +321,6 @@ textarea{resize:vertical;min-height:70px}
           <option value="">All Brands</option>
           <option value="samsung">Samsung</option><option value="tcl">TCL</option>
           <option value="midea">Midea</option><option value="nasco">NASCO</option>
-          <option value="alcatel">Alcatel</option>
         </select>
         <select class="filter-sel" id="filterImg" onchange="filterProducts()">
           <option value="">All Products</option>
@@ -367,6 +366,29 @@ textarea{resize:vertical;min-height:70px}
           <div class="form-group"><label>Currency Symbol</label><input type="text" id="s_currency" placeholder="GH₵"></div>
         </div>
         <div style="margin-top:16px"><button class="btn btn-primary" onclick="saveSettings()"><i class="fas fa-save"></i> Save Settings</button></div>
+      </div>
+      <div class="settings-section">
+        <h3><i class="fas fa-sliders-h" style="color:var(--primary)"></i> Promotions &amp; Display</h3>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)">
+          <div>
+            <div style="font-size:13px;font-weight:600">Flash Sale Section</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:3px">Show the flash sale countdown and deals on the home page</div>
+          </div>
+          <label class="toggle-wrap">
+            <input type="checkbox" id="t_flashSale" onchange="saveDisplaySettings()">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0">
+          <div>
+            <div style="font-size:13px;font-weight:600">Product Badges</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:3px">Show New, Sale, Hot, Best Seller badges on product cards</div>
+          </div>
+          <label class="toggle-wrap">
+            <input type="checkbox" id="t_badges" onchange="saveDisplaySettings()">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
       </div>
       <div class="settings-section">
         <h3><i class="fas fa-lock" style="color:var(--warn)"></i> Change Admin Password</h3>
@@ -430,7 +452,7 @@ textarea{resize:vertical;min-height:70px}
         <div class="form-group full"><label>Description</label><textarea id="f_description" placeholder="Brief product description..."></textarea></div>
         <div class="form-group">
           <label>Badge</label>
-          <select id="f_badge"><option value="">None</option><option value="new">New</option><option value="sale">Sale</option><option value="hot">Hot</option><option value="best">Best Seller</option></select>
+          <select id="f_badge"><option value="">None</option><option value="new">New</option><option value="sale">Sale</option><option value="hot">Hot</option><option value="best">Best Seller</option><option value="soldout">Sold Out</option></select>
         </div>
         <div class="form-group"><label>Rating (1–5)</label><input type="number" id="f_rating" min="1" max="5" step="0.1" value="4.5"></div>
         <div class="form-group full">
@@ -536,17 +558,24 @@ textarea{resize:vertical;min-height:70px}
 
 <div class="toast-wrap" id="toastWrap"></div>
 
+<script src="js/data.js"></script>
 <script>
 /* ── Constants ── */
-const ADMIN_PASS = 'orbiva2026';
+const ADMIN_PASS_KEY = 'obv_pass';
+const DEFAULT_PASS   = 'orbiva2026';
 const CAT_LABELS = {tv:'Televisions',ac:'Air Conditioners',fridge:'Refrigerators',laundry:'Washing Machines',kitchen:'Kitchen',small:'Small Appliances',phones:'Phones & Tablets',commercial:'Commercial'};
 const CAT_CLASS  = {tv:'cat-tv',ac:'cat-ac',fridge:'cat-fridge',laundry:'cat-laundry',kitchen:'cat-kitchen',small:'cat-small',phones:'cat-phones',commercial:'cat-commercial'};
 const fmt = n => 'GH₵ ' + Number(n||0).toLocaleString();
 
+/* ── Storage helpers ── */
+function lsGet(key, def) { try { const v=localStorage.getItem(key); return v===null?def:JSON.parse(v); } catch { return def; } }
+function lsSet(key, val) { localStorage.setItem(key, JSON.stringify(val)); }
+
 /* ── Auth ── */
 function doLogin() {
   const pass = document.getElementById('loginPass').value;
-  if (pass === ADMIN_PASS) {
+  const stored = localStorage.getItem(ADMIN_PASS_KEY) || DEFAULT_PASS;
+  if (pass === stored) {
     document.getElementById('loginScreen').style.display = 'none';
     document.getElementById('app').style.display = 'block';
     init();
@@ -555,28 +584,11 @@ function doLogin() {
     document.getElementById('loginPass').value = '';
   }
 }
-function logout() {
-  location.reload();
-}
+function logout() { location.reload(); }
 
 /* ── Publish ── */
-async function publishSite() {
-  const btn = document.getElementById('publishBtn');
-  const orig = btn.innerHTML;
-  btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publishing…';
-  try {
-    const r = await fetch('/api/publish', {method:'POST',headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({message:'Admin: update '+new Date().toISOString().slice(0,10)})});
-    const d = await r.json();
-    if (!r.ok) throw new Error(d.error||'Failed');
-    btn.innerHTML = '<i class="fas fa-check"></i> Published!'; btn.style.background='#15803d';
-    setTimeout(()=>{btn.innerHTML=orig;btn.style.background='';btn.disabled=false;},3000);
-    toast(d.message,'ok');
-  } catch(e) {
-    btn.innerHTML='<i class="fas fa-times"></i> Failed'; btn.style.background='#dc2626';
-    setTimeout(()=>{btn.innerHTML=orig;btn.style.background='';btn.disabled=false;},3000);
-    toast('Publish failed: '+e.message,'err');
-  }
+function publishSite() {
+  toast('All changes are saved to your browser automatically.','info');
 }
 
 /* ── Navigation ── */
@@ -594,27 +606,38 @@ function showPage(page) {
   if (page==='dashboard') renderDashboard();
   if (page==='orders')    { filteredOrders=[...ORDERS].reverse(); renderOrdersTable(); }
   if (page==='deals')     renderDeals();
-  if (page==='products')  { filtered=[...PRODUCTS]; renderTable(); }
+  if (page==='products')  { filtered=[...adminProds]; renderTable(); }
   if (page==='images')    loadImages();
   if (page==='settings')  loadSettings();
 }
 
 /* ── State ── */
-let PRODUCTS=[], ORDERS=[], DEALS=[];
+let adminProds=[], ORDERS=[], DEALS=[];
 let filtered=[], filteredOrders=[];
 let currentPage=1, orderPage=1;
 const PAGE_SIZE=25;
 let editingId=null, editingDealId=null;
 
-async function init() {
-  await Promise.all([loadProducts(), loadOrders(), loadDeals()]);
-  renderDashboard();
-  updatePendingBadge();
-  setInterval(async()=>{ await loadOrders(); updatePendingBadge(); },30000);
+function init() {
+  loadProducts(); loadOrders(); loadDeals();
+  renderDashboard(); updatePendingBadge();
+  setInterval(()=>{ loadOrders(); updatePendingBadge(); }, 30000);
 }
-async function loadProducts() { try{const r=await fetch('/api/products');PRODUCTS=await r.json();filtered=[...PRODUCTS];}catch{} }
-async function loadOrders()   { try{const r=await fetch('/api/orders');ORDERS=await r.json();filteredOrders=[...ORDERS].reverse();}catch{} }
-async function loadDeals()    { try{const r=await fetch('/api/deals');DEALS=await r.json();}catch{} }
+
+/* ── Products (localStorage-based overlay on data.js) ── */
+function getAdminProducts() {
+  const base  = (typeof PRODUCTS !== 'undefined' ? PRODUCTS : []);
+  const edits = lsGet('obv_prod_edits', {});
+  const adds  = lsGet('obv_prod_adds',  []);
+  const dels  = new Set(lsGet('obv_prod_dels', []));
+  return [
+    ...base.filter(p => !dels.has(p.id)).map(p => edits[p.id] ? Object.assign({}, p, edits[p.id]) : p),
+    ...adds
+  ];
+}
+function loadProducts() { adminProds = getAdminProducts(); filtered = [...adminProds]; }
+function loadOrders()   { ORDERS = lsGet('obv_orders', []); filteredOrders = [...ORDERS].reverse(); }
+function loadDeals()    { DEALS  = lsGet('obv_deals',  []); }
 
 function updatePendingBadge() {
   const n = ORDERS.filter(o=>o.status==='pending').length;
@@ -627,12 +650,12 @@ function renderDashboard() {
   const pending   = ORDERS.filter(o=>o.status==='pending').length;
   const revenue   = ORDERS.filter(o=>['confirmed','processing','delivered'].includes(o.status)).reduce((s,o)=>s+(o.total||0),0);
   const delivered = ORDERS.filter(o=>o.status==='delivered').length;
-  const noImg     = PRODUCTS.filter(p=>!p.image).length;
+  const noImg     = adminProds.filter(p=>!(p.images&&p.images[0])).length;
   document.getElementById('statsGrid').innerHTML = [
     {icon:'fas fa-shopping-bag',bg:'#dbeafe',ic:'#1d4ed8',val:ORDERS.length,label:'Total Orders',sub:pending?pending+' pending':'All clear'},
     {icon:'fas fa-truck',bg:'#dcfce7',ic:'#15803d',val:delivered,label:'Delivered',sub:'Completed orders'},
     {icon:'fas fa-coins',bg:'#fef3c7',ic:'#b45309',val:fmt(revenue),label:'Revenue (confirmed)',sub:'Pending & cancelled excluded'},
-    {icon:'fas fa-box',bg:'#f3e8ff',ic:'#7c3aed',val:PRODUCTS.length,label:'Products',sub:noImg+' missing images'},
+    {icon:'fas fa-box',bg:'#f3e8ff',ic:'#7c3aed',val:adminProds.length,label:'Products',sub:noImg+' missing images'},
   ].map(s=>`<div class="stat-card">
     <div class="stat-icon" style="background:${s.bg}"><i class="${s.icon}" style="color:${s.ic}"></i></div>
     <div class="stat-val">${s.val}</div><div class="stat-label">${s.label}</div>
@@ -649,12 +672,12 @@ function renderDashboard() {
       <span style="font-weight:700;min-width:80px;text-align:right">${fmt(o.total||0)}</span>
       <button class="btn btn-outline btn-xs" onclick="showPage('orders');setTimeout(()=>openOrderModal(${o.id}),100)">View</button>
     </div>`).join('')
-    : '<div class="empty-state"><i class="fas fa-inbox"></i><p>No orders yet. Orders from customers will appear here.</p></div>';
+    : '<div class="empty-state"><i class="fas fa-inbox"></i><p>No orders yet.</p></div>';
 
   const brands={};
-  PRODUCTS.forEach(p=>{brands[p.brandId]=(brands[p.brandId]||0)+1;});
+  adminProds.forEach(p=>{brands[p.brandId]=(brands[p.brandId]||0)+1;});
   const max=Math.max(1,...Object.values(brands));
-  const bc={samsung:'#1428a0',tcl:'#cc0000',midea:'#00a0e9',nasco:'#003087',alcatel:'#0082c8'};
+  const bc={samsung:'#1428a0',tcl:'#cc0000',midea:'#00a0e9',nasco:'#003087'};
   document.getElementById('brandBars').innerHTML = Object.entries(brands).sort((a,b)=>b[1]-a[1]).map(([id,count])=>`
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
       <div style="width:68px;font-size:12px;font-weight:700">${id.toUpperCase()}</div>
@@ -758,44 +781,40 @@ function openOrderModal(id) {
   document.getElementById('orderModal').classList.add('open');
 }
 
-async function updateOrderStatus(id,status) {
-  try {
-    const r=await fetch('/api/orders/'+id,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({status})});
-    const d=await r.json();
-    if(d.ok){toast('Order #'+id+' → '+statusLabel(status),'ok');await loadOrders();updatePendingBadge();renderOrdersTable();renderDashboard();openOrderModal(id);}
-    else toast(d.error||'Update failed','err');
-  } catch{toast('Server error','err');}
+function updateOrderStatus(id,status) {
+  const orders=lsGet('obv_orders',[]);
+  const o=orders.find(x=>x.id===id);
+  if(o){ o.status=status; lsSet('obv_orders',orders); }
+  toast('Order #'+id+' → '+statusLabel(status),'ok');
+  loadOrders(); updatePendingBadge(); renderOrdersTable(); renderDashboard(); openOrderModal(id);
 }
-async function addOrderNote(id) {
+function addOrderNote(id) {
   const note=document.getElementById('orderNoteInput').value.trim(); if(!note) return;
-  const o=ORDERS.find(x=>x.id===id); if(!o) return;
-  await fetch('/api/orders/'+id,{method:'PUT',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({notes:o.notes?o.notes+'\n'+note:note})});
-  await loadOrders(); toast('Note added','ok'); openOrderModal(id);
+  const orders=lsGet('obv_orders',[]);
+  const o=orders.find(x=>x.id===id);
+  if(o){ o.notes=o.notes?o.notes+'\n'+note:note; lsSet('obv_orders',orders); }
+  loadOrders(); toast('Note added','ok'); openOrderModal(id);
 }
-async function deleteOrder(id) {
-  const r=await fetch('/api/orders/'+id,{method:'DELETE'});
-  const d=await r.json();
-  if(d.ok){toast('Order deleted','ok');await loadOrders();filterOrders();updatePendingBadge();renderDashboard();}
-  else toast(d.error,'err');
+function deleteOrder(id) {
+  lsSet('obv_orders',lsGet('obv_orders',[]).filter(o=>o.id!==id));
+  toast('Order deleted','ok'); loadOrders(); filterOrders(); updatePendingBadge(); renderDashboard();
 }
 function openAddOrderModal(){document.getElementById('addOrderModal').classList.add('open');}
-async function saveManualOrder() {
+function saveManualOrder() {
   const name=document.getElementById('ao_name').value.trim();
   const phone=document.getElementById('ao_phone').value.trim();
   if(!name||!phone){toast('Name and phone required','err');return;}
   const rawItems=document.getElementById('ao_items').value.trim();
   const items=rawItems?rawItems.split('\n').map(line=>{const p=line.split(',').map(s=>s.trim());return{name:p[0]||line,qty:parseInt(p[1])||1,price:parseFloat(p[2])||0};}):'';
   const total=Array.isArray(items)?items.reduce((s,i)=>s+(i.price*(i.qty||1)),0):0;
-  try {
-    const r=await fetch('/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({customerName:name,phone,deliveryArea:document.getElementById('ao_area').value.trim(),items:items||[],total,notes:document.getElementById('ao_notes').value.trim()})});
-    const d=await r.json();
-    if(d.ok){toast('Order saved!','ok');closeModal('addOrderModal');
-      ['ao_name','ao_phone','ao_area','ao_items','ao_notes'].forEach(id=>document.getElementById(id).value='');
-      await loadOrders();filteredOrders=[...ORDERS].reverse();renderOrdersTable();updatePendingBadge();renderDashboard();}
-    else toast(d.error||'Save failed','err');
-  } catch{toast('Server error','err');}
+  const orders=lsGet('obv_orders',[]);
+  const maxId=orders.length?Math.max(...orders.map(o=>o.id)):1000;
+  orders.push({id:maxId+1,customerName:name,phone,deliveryArea:document.getElementById('ao_area').value.trim(),
+    items:items||[],total,notes:document.getElementById('ao_notes').value.trim(),status:'pending',createdAt:new Date().toISOString()});
+  lsSet('obv_orders',orders);
+  toast('Order saved!','ok'); closeModal('addOrderModal');
+  ['ao_name','ao_phone','ao_area','ao_items','ao_notes'].forEach(id=>document.getElementById(id).value='');
+  loadOrders(); filteredOrders=[...ORDERS].reverse(); renderOrdersTable(); updatePendingBadge(); renderDashboard();
 }
 
 /* ── Deals ── */
@@ -825,7 +844,14 @@ function renderDeals() {
       </div>
     </div>`).join('');
 }
-function openAddDealModal(){editingDealId=null;document.getElementById('dealModalTitle').textContent='New Deal';document.getElementById('dealModal').classList.add('open');}
+function openAddDealModal(){
+  editingDealId=null;
+  document.getElementById('dealModalTitle').textContent='New Deal';
+  ['d_label','d_desc'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('d_type').value='flash_sale';document.getElementById('d_category').value='all';
+  document.getElementById('d_discount').value=0;document.getElementById('d_start').value='';document.getElementById('d_end').value='';
+  document.getElementById('dealModal').classList.add('open');
+}
 function openEditDealModal(id){
   const d=DEALS.find(x=>x.id===id);if(!d)return;
   editingDealId=id;
@@ -836,26 +862,32 @@ function openEditDealModal(id){
   document.getElementById('d_desc').value=d.description||'';
   document.getElementById('dealModal').classList.add('open');
 }
-async function saveDeal(){
+function saveDeal(){
   const label=document.getElementById('d_label').value.trim();if(!label){toast('Deal name required','err');return;}
   const deal={label,type:document.getElementById('d_type').value,category:document.getElementById('d_category').value,
     discount:parseInt(document.getElementById('d_discount').value)||0,
     startDate:document.getElementById('d_start').value,endDate:document.getElementById('d_end').value,
     description:document.getElementById('d_desc').value.trim()};
-  const url=editingDealId?'/api/deals/'+editingDealId:'/api/deals';
-  const method=editingDealId?'PUT':'POST';
-  try{const r=await fetch(url,{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(deal)});
-    const d=await r.json();
-    if(d.ok){toast(editingDealId?'Deal updated!':'Deal created!','ok');closeModal('dealModal');await loadDeals();renderDeals();}
-    else toast(d.error||'Save failed','err');}catch{toast('Server error','err');}
+  const deals=lsGet('obv_deals',[]);
+  if(editingDealId){
+    const i=deals.findIndex(x=>x.id===editingDealId);
+    if(i>=0) deals[i]=Object.assign({},deals[i],deal);
+    toast('Deal updated!','ok');
+  } else {
+    const maxId=deals.length?Math.max(...deals.map(d=>d.id)):0;
+    deals.push(Object.assign({},deal,{id:maxId+1,active:true,createdAt:new Date().toISOString()}));
+    toast('Deal created!','ok');
+  }
+  lsSet('obv_deals',deals); closeModal('dealModal'); loadDeals(); renderDeals();
 }
-async function toggleDeal(id,active){
-  await fetch('/api/deals/'+id,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({active})});
-  await loadDeals();renderDeals();
+function toggleDeal(id,active){
+  const deals=lsGet('obv_deals',[]);const d=deals.find(x=>x.id===id);
+  if(d){d.active=active;lsSet('obv_deals',deals);}
+  loadDeals();renderDeals();
 }
-async function deleteDeal(id){
-  const r=await fetch('/api/deals/'+id,{method:'DELETE'});const d=await r.json();
-  if(d.ok){toast('Deleted','ok');await loadDeals();renderDeals();}else toast(d.error,'err');
+function deleteDeal(id){
+  lsSet('obv_deals',lsGet('obv_deals',[]).filter(x=>x.id!==id));
+  toast('Deleted','ok');loadDeals();renderDeals();
 }
 
 /* ── Products ── */
@@ -864,12 +896,13 @@ function filterProducts(){
   const cat=document.getElementById('filterCat').value;
   const br=document.getElementById('filterBrand').value;
   const img=document.getElementById('filterImg').value;
-  filtered=PRODUCTS.filter(p=>{
+  filtered=adminProds.filter(p=>{
     if(q&&!p.name.toLowerCase().includes(q)&&!(p.model||'').toLowerCase().includes(q)) return false;
     if(cat&&p.category!==cat) return false;
     if(br&&p.brandId!==br) return false;
-    if(img==='noimg'&&p.image) return false;
-    if(img==='hasimg'&&!p.image) return false;
+    const hasImg=p.images&&p.images[0];
+    if(img==='noimg'&&hasImg) return false;
+    if(img==='hasimg'&&!hasImg) return false;
     return true;
   });
   currentPage=1;renderTable();
@@ -877,22 +910,24 @@ function filterProducts(){
 function renderTable(){
   const start=(currentPage-1)*PAGE_SIZE,page=filtered.slice(start,start+PAGE_SIZE);
   document.getElementById('countLabel').textContent=filtered.length+' products';
-  document.getElementById('productsTable').innerHTML=page.map(p=>`
-    <tr>
-      <td>${p.image?`<img class="prod-thumb" src="${p.image}" onerror="this.style.display='none'">`:`<div class="prod-thumb-icon">${p.icon||'📦'}</div>`}</td>
-      <td><div class="prod-name" title="${p.name}">${p.name}</div><div class="prod-model">${p.model||''} · ID ${p.id}</div></td>
+  document.getElementById('productsTable').innerHTML=page.length?page.map(p=>{
+    const img=p.images&&p.images[0];
+    return `<tr>
+      <td>${img?`<img class="prod-thumb" src="${img}" onerror="this.style.display='none'">`:`<div class="prod-thumb-icon">${p.icon||'📦'}</div>`}</td>
+      <td><div class="prod-name" title="${escHtml(p.name)}">${escHtml(p.name)}</div><div class="prod-model">${escHtml(p.model||'')} · ID ${p.id}</div></td>
       <td><span class="cat-pill ${CAT_CLASS[p.category]||''}">${CAT_LABELS[p.category]||p.category}</span></td>
-      <td><span class="brand-badge" style="background:${brandBg(p.brandId)}">${p.brand}</span></td>
+      <td><span class="brand-badge" style="background:${brandBg(p.brandId)}">${escHtml(p.brand)}</span></td>
       <td><div class="price-main">${fmt(p.price)}</div>${p.oldPrice?`<div class="price-old">${fmt(p.oldPrice)}</div>`:''}</td>
-      <td>${p.image?'<span style="color:var(--success);font-size:12px"><i class="fas fa-check-circle"></i></span>':'<span style="color:var(--muted);font-size:12px">—</span>'}</td>
+      <td>${img?'<span style="color:var(--success);font-size:12px"><i class="fas fa-check-circle"></i></span>':'<span style="color:var(--muted);font-size:12px">—</span>'}</td>
       <td><div class="actions-cell">
         <button class="btn btn-outline btn-sm" onclick="openEditModal(${p.id})"><i class="fas fa-edit"></i></button>
         <button class="btn btn-danger btn-sm" onclick="confirmAction('Delete product?','Cannot be undone.',()=>deleteProduct(${p.id}))"><i class="fas fa-trash"></i></button>
       </div></td>
-    </tr>`).join('');
+    </tr>`;}).join('')
+    :'<tr><td colspan="7" style="text-align:center;padding:40px;color:var(--muted)">No products found</td></tr>';
   renderPagination();
 }
-function brandBg(id){return{samsung:'#1428a0',tcl:'#cc0000',midea:'#00a0e9',nasco:'#003087',alcatel:'#0082c8'}[id]||'#64748b';}
+function brandBg(id){return{samsung:'#1428a0',tcl:'#cc0000',midea:'#00a0e9',nasco:'#003087'}[id]||'#64748b';}
 function renderPagination(){
   const total=Math.ceil(filtered.length/PAGE_SIZE);
   document.getElementById('pageInfo').textContent=filtered.length?`Showing ${Math.min((currentPage-1)*PAGE_SIZE+1,filtered.length)}–${Math.min(currentPage*PAGE_SIZE,filtered.length)} of ${filtered.length}`:'';
@@ -903,36 +938,45 @@ function renderPagination(){
   document.getElementById('pageBtns').innerHTML=b;
 }
 function goPage(n){currentPage=n;renderTable();}
+function populateBrandSelect(selected=''){
+  const sel=document.getElementById('f_brand');
+  const brands=(typeof BRANDS!=='undefined'?BRANDS:[]).map(b=>b.name);
+  if(!brands.includes('Other'))brands.push('Other');
+  sel.innerHTML=brands.map(b=>`<option${b===selected?' selected':''}>${escHtml(b)}</option>`).join('');
+}
 function openAddModal(){
   editingId=null;
   document.getElementById('modalTitle').textContent='Add Product';
   ['f_name','f_model','f_price','f_oldPrice','f_description','f_image'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('f_badge').value='';document.getElementById('f_rating').value=4.5;
   document.getElementById('specsContainer').innerHTML='';document.getElementById('imgPreview').style.display='none';
+  populateBrandSelect();
   document.getElementById('productModal').classList.add('open');
 }
 function openEditModal(id){
-  const p=PRODUCTS.find(x=>x.id===id);if(!p)return;
+  const p=adminProds.find(x=>x.id===id);if(!p)return;
   editingId=id;
   document.getElementById('modalTitle').textContent='Edit: '+p.name;
-  document.getElementById('f_name').value=p.name;document.getElementById('f_brand').value=p.brand;
   document.getElementById('f_model').value=p.model||'';document.getElementById('f_category').value=p.category;
   document.getElementById('f_price').value=p.price;document.getElementById('f_oldPrice').value=p.oldPrice||'';
   document.getElementById('f_description').value=p.description||'';document.getElementById('f_badge').value=p.badge||'';
-  document.getElementById('f_rating').value=p.rating||4.5;document.getElementById('f_image').value=p.image||'';
+  document.getElementById('f_rating').value=p.rating||4.5;
+  const imgVal=(p.images&&p.images[0])||'';
+  document.getElementById('f_image').value=imgVal;
+  document.getElementById('f_name').value=p.name;
   const prev=document.getElementById('imgPreview');
-  if(p.image){prev.src=p.image;prev.style.display='block';}else prev.style.display='none';
+  if(imgVal){prev.src=imgVal;prev.style.display='block';}else prev.style.display='none';
   document.getElementById('specsContainer').innerHTML='';
   if(p.specs)Object.entries(p.specs).forEach(([k,v])=>addSpecRow(k,v));
+  populateBrandSelect(p.brand);
   document.getElementById('productModal').classList.add('open');
 }
 function previewUrl(url){const p=document.getElementById('imgPreview');if(url){p.src=url;p.style.display='block';}else p.style.display='none';}
-async function handleImgUpload(input){
+function handleImgUpload(input){
   const file=input.files[0];if(!file)return;
-  const fd=new FormData();fd.append('image',file);toast('Uploading…','info');
-  try{const r=await fetch('/api/upload',{method:'POST',body:fd});const d=await r.json();
-    if(d.url){document.getElementById('f_image').value=d.url;previewUrl(d.url);toast('Uploaded!','ok');}}
-  catch{toast('Upload failed','err');}
+  const reader=new FileReader();
+  reader.onload=e=>{document.getElementById('f_image').value=e.target.result;previewUrl(e.target.result);toast('Image ready!','ok');};
+  reader.readAsDataURL(file);
 }
 function addSpecRow(key='',val=''){
   const c=document.getElementById('specsContainer'),row=document.createElement('div');
@@ -942,12 +986,11 @@ function addSpecRow(key='',val=''){
     <button type="button" class="del-spec" onclick="this.parentNode.remove()"><i class="fas fa-times"></i></button>`;
   c.appendChild(row);
 }
-async function saveProduct(){
+function saveProduct(){
   const name=document.getElementById('f_name').value.trim();
   const price=parseInt(document.getElementById('f_price').value);
   if(!name||!price){toast('Name and price required','err');return;}
   const brand=document.getElementById('f_brand').value;
-  const bMap={Samsung:'samsung',TCL:'tcl',Midea:'midea',NASCO:'nasco',Alcatel:'alcatel',Other:'other'};
   const cat=document.getElementById('f_category').value;
   const cIcons={tv:'📺',ac:'❄️',fridge:'🧊',laundry:'🫧',kitchen:'🍳',small:'⚡',phones:'📱',commercial:'🏭'};
   const op=parseInt(document.getElementById('f_oldPrice').value)||null;
@@ -957,81 +1000,116 @@ async function saveProduct(){
     const k=row.querySelector('.spec-key').value.trim(),v=row.querySelector('.spec-val').value.trim();
     if(k&&v)specs[k]=v;
   });
-  const product={name,brand,brandId:bMap[brand]||brand.toLowerCase(),
+  const imgVal=document.getElementById('f_image').value.trim();
+  const product={name,brand,brandId:brand.toLowerCase().replace(/\s+/g,''),
     model:document.getElementById('f_model').value.trim(),category:cat,
-    image:document.getElementById('f_image').value.trim()||null,
+    images:imgVal?[imgVal]:[],
     price,rating:parseFloat(document.getElementById('f_rating').value)||4.5,
-    reviews:editingId?(PRODUCTS.find(p=>p.id===editingId)?.reviews||100):Math.floor(Math.random()*200+50),
-    icon:cIcons[cat]||'📦',tags:[bMap[brand]||brand.toLowerCase(),cat],
+    icon:cIcons[cat]||'📦',tags:[brand.toLowerCase().replace(/\s+/g,''),cat],
     description:document.getElementById('f_description').value.trim(),
+    badge:document.getElementById('f_badge').value||'',
     specs:Object.keys(specs).length?specs:undefined};
   if(op){product.oldPrice=op;product.discount=disc;}
-  const badge=document.getElementById('f_badge').value;if(badge)product.badge=badge;
-  try{
-    const url=editingId?'/api/products/'+editingId:'/api/products';
-    const method=editingId?'PUT':'POST';
-    const r=await fetch(url,{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(product)});
-    const d=await r.json();
-    if(d.ok){toast(editingId?'Updated!':'Added!','ok');closeModal('productModal');await loadProducts();filtered=[...PRODUCTS];renderTable();renderDashboard();}
-    else toast(d.error||'Save failed','err');
-  }catch{toast('Server error','err');}
+  if(editingId){
+    const orig=adminProds.find(p=>p.id===editingId);
+    if(orig){product.reviews=orig.reviews;product.id=orig.id;}
+    const edits=lsGet('obv_prod_edits',{});edits[editingId]=product;lsSet('obv_prod_edits',edits);
+    toast('Updated!','ok');
+  } else {
+    const adds=lsGet('obv_prod_adds',[]);
+    product.id=Date.now();product.reviews=Math.floor(Math.random()*200+50);
+    adds.push(product);lsSet('obv_prod_adds',adds);
+    toast('Product added!','ok');
+  }
+  closeModal('productModal');loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
 }
-async function deleteProduct(id){
-  const r=await fetch('/api/products/'+id,{method:'DELETE'});const d=await r.json();
-  if(d.ok){toast('Deleted','ok');await loadProducts();filterProducts();renderDashboard();}else toast(d.error,'err');
+function deleteProduct(id){
+  const adds=lsGet('obv_prod_adds',[]);
+  const newAdds=adds.filter(p=>p.id!==id);
+  if(newAdds.length<adds.length){
+    lsSet('obv_prod_adds',newAdds);
+  } else {
+    const dels=lsGet('obv_prod_dels',[]);if(!dels.includes(id))dels.push(id);lsSet('obv_prod_dels',dels);
+  }
+  toast('Deleted','ok');loadProducts();filterProducts();renderDashboard();
 }
 
 /* ── Images ── */
-async function loadImages(){
-  const r=await fetch('/api/images');const imgs=await r.json();
+function loadImages(){
+  const imgs=lsGet('obv_images',[]);
   const g=document.getElementById('imageGrid');
-  if(!imgs.length){g.innerHTML='<div style="color:var(--muted);font-size:13px">No images yet. Upload some above.</div>';return;}
-  g.innerHTML=imgs.map(url=>`
+  if(!imgs.length){g.innerHTML='<div style="color:var(--muted);font-size:13px;padding:20px 0">No images uploaded yet.</div>';return;}
+  g.innerHTML=imgs.map((img,i)=>`
     <div style="background:#fff;border-radius:10px;border:1px solid var(--border);overflow:hidden">
-      <img src="${url}" style="width:100%;height:130px;object-fit:contain;background:#f8fafc;padding:8px">
+      <img src="${img.dataUrl}" style="width:100%;height:130px;object-fit:contain;background:#f8fafc;padding:8px">
       <div style="padding:8px">
-        <div style="font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${url.split('/').pop()}</div>
-        <button class="btn btn-outline btn-sm" style="margin-top:6px;width:100%" onclick="copyUrl('${url}')"><i class="fas fa-copy"></i> Copy URL</button>
+        <div style="font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${escHtml(img.name)}">${escHtml(img.name)}</div>
+        <div style="display:flex;gap:4px;margin-top:6px">
+          <button class="btn btn-outline btn-sm" style="flex:1" onclick="copyImgUrl(${i})"><i class="fas fa-copy"></i> Copy</button>
+          <button class="btn btn-danger btn-sm" onclick="confirmAction('Remove image?','',()=>deleteImage(${i}))"><i class="fas fa-trash"></i></button>
+        </div>
       </div>
     </div>`).join('');
 }
-async function uploadImages(input){
-  for(const file of Array.from(input.files)){
-    const fd=new FormData();fd.append('image',file);
-    try{const r=await fetch('/api/upload',{method:'POST',body:fd});const d=await r.json();if(d.url)toast('Uploaded: '+file.name,'ok');}
-    catch{toast('Failed: '+file.name,'err');}
-  }
-  loadImages();input.value='';
+function uploadImages(input){
+  Array.from(input.files).forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=e=>{
+      const imgs=lsGet('obv_images',[]);
+      imgs.push({name:file.name,dataUrl:e.target.result});
+      lsSet('obv_images',imgs);toast('Uploaded: '+file.name,'ok');loadImages();
+    };
+    reader.readAsDataURL(file);
+  });
+  input.value='';
 }
-function copyUrl(url){navigator.clipboard.writeText(window.location.origin+url).then(()=>toast('URL copied!','ok'));}
+function deleteImage(index){
+  const imgs=lsGet('obv_images',[]);imgs.splice(index,1);lsSet('obv_images',imgs);loadImages();
+}
+function copyImgUrl(index){
+  const imgs=lsGet('obv_images',[]);
+  if(imgs[index])navigator.clipboard.writeText(imgs[index].dataUrl).then(()=>toast('Copied!','ok'));
+}
 
 /* ── Settings ── */
-async function loadSettings(){
-  try{const r=await fetch('/api/settings');const s=await r.json();
-    document.getElementById('s_name').value=s.storeName||'';
-    document.getElementById('s_phone').value=s.storePhone||'';
-    document.getElementById('s_email').value=s.storeEmail||'';
-    document.getElementById('s_currency').value=s.currency||'GH₵';}catch{}
+function loadSettings(){
+  const s=lsGet('obv_settings',{});
+  document.getElementById('s_name').value=s.storeName||'';
+  document.getElementById('s_phone').value=s.storePhone||'';
+  document.getElementById('s_email').value=s.storeEmail||'';
+  document.getElementById('s_currency').value=s.currency||'GH₵';
+  loadDisplaySettings();
 }
-async function saveSettings(){
-  try{const r=await fetch('/api/settings',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({
-    storeName:document.getElementById('s_name').value.trim(),storePhone:document.getElementById('s_phone').value.trim(),
-    storeEmail:document.getElementById('s_email').value.trim(),currency:document.getElementById('s_currency').value.trim()
-  })});const d=await r.json();if(d.ok)toast('Settings saved!','ok');else toast('Save failed','err');}
-  catch{toast('Server error','err');}
+function loadDisplaySettings(){
+  document.getElementById('t_flashSale').checked=localStorage.getItem('obv_flashSale')==='on';
+  document.getElementById('t_badges').checked=localStorage.getItem('obv_badges')==='on';
 }
-async function changePassword(){
+function saveDisplaySettings(){
+  localStorage.setItem('obv_flashSale',document.getElementById('t_flashSale').checked?'on':'off');
+  localStorage.setItem('obv_badges',document.getElementById('t_badges').checked?'on':'off');
+  toast('Display settings saved!','ok');
+}
+function saveSettings(){
+  lsSet('obv_settings',{
+    storeName:document.getElementById('s_name').value.trim(),
+    storePhone:document.getElementById('s_phone').value.trim(),
+    storeEmail:document.getElementById('s_email').value.trim(),
+    currency:document.getElementById('s_currency').value.trim()
+  });
+  toast('Settings saved!','ok');
+}
+function changePassword(){
   const cur=document.getElementById('s_curPass').value;
   const np=document.getElementById('s_newPass').value;
   const cp=document.getElementById('s_confPass').value;
   if(!cur||!np||!cp){toast('All fields required','err');return;}
   if(np!==cp){toast('Passwords do not match','err');return;}
   if(np.length<6){toast('Minimum 6 characters','err');return;}
-  try{const r=await fetch('/api/settings/password',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({current:cur,newPass:np})});
-    const d=await r.json();
-    if(d.ok){toast('Password updated!','ok');['s_curPass','s_newPass','s_confPass'].forEach(id=>document.getElementById(id).value='');}
-    else toast(d.error||'Incorrect current password','err');}
-  catch{toast('Server error','err');}
+  const stored=localStorage.getItem(ADMIN_PASS_KEY)||DEFAULT_PASS;
+  if(cur!==stored){toast('Incorrect current password','err');return;}
+  localStorage.setItem(ADMIN_PASS_KEY,np);
+  toast('Password updated!','ok');
+  ['s_curPass','s_newPass','s_confPass'].forEach(id=>document.getElementById(id).value='');
 }
 
 /* ── Helpers ── */

@@ -24,7 +24,7 @@ function addToCart(productId, quantity = 1) {
   if (existing) {
     existing.qty = Math.min(existing.qty + quantity, 10);
   } else {
-    cart.push({ id: product.id, name: product.name, brand: product.brand, icon: product.icon, image: product.image || null, price: product.price, qty: quantity });
+    cart.push({ id: product.id, name: product.name, brand: product.brand, icon: product.icon, image: (product.images && product.images[0]) || null, price: product.price, qty: quantity });
   }
   saveCart();
   updateCartUI();
@@ -139,7 +139,7 @@ function toggleWishlist(productId) {
     wishlist.splice(idx, 1);
     showToast('warning', 'Removed from Wishlist', `${product.name} removed.`, 'fas fa-heart-broken');
   } else {
-    wishlist.push({ id: product.id, name: product.name, brand: product.brand, icon: product.icon, image: product.image || null, price: product.price, oldPrice: product.oldPrice });
+    wishlist.push({ id: product.id, name: product.name, brand: product.brand, icon: product.icon, image: (product.images && product.images[0]) || null, price: product.price, oldPrice: product.oldPrice });
     showToast('success', 'Added to Wishlist', `${product.name} saved to your wishlist.`, 'fas fa-heart');
   }
   saveWishlist();

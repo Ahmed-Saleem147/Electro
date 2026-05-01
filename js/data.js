@@ -137,7 +137,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/1NASCO-32-LED-FHD-SATELLITE-SMART-TV-1.jpg",
-    images: ["/img/products/1NASCO-32-LED-FHD-SATELLITE-SMART-TV-1.jpg"],
+    images: [
+      "/img/products/1NASCO-32-LED-FHD-SATELLITE-SMART-TV-1.jpg"
+    ],
     price: 2099,
     oldPrice: null,
     discount: 0,
@@ -146,15 +148,15 @@ const PRODUCTS = [
     icon: "📺",
     color: "#003087",
     tags: [
-      "new-arrivals",
-      "trending"
+      "nasco",
+      "tv"
     ],
-    badge: "new",
+    badge: "",
     description: "32\" Smart LED TV with Android OS, built-in Wi-Fi, Google Play Store, and digital satellite tuner.",
     specs: {
       Size: "32\"",
       Resolution: "Full HD",
-      "Smart OS": "Android",
+      Smart OS: "Android",
       WiFi: "Yes",
       Tuner: "Digital Satellite"
     }
@@ -167,7 +169,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/NASCO-32UHD-SMART-FLAT-VIDAA-NAS-J32FBFL-VID-FRONT-jpg-768x768.webp",
-    images: ["/img/products/NASCO-32UHD-SMART-FLAT-VIDAA-NAS-J32FBFL-VID-FRONT-jpg-768x768.webp"],
+    images: [
+      "/img/products/NASCO-32UHD-SMART-FLAT-VIDAA-NAS-J32FBFL-VID-FRONT-jpg-768x768.webp"
+    ],
     price: 2299,
     oldPrice: null,
     discount: 0,
@@ -179,12 +183,12 @@ const PRODUCTS = [
       "new-arrivals",
       "trending"
     ],
-    badge: "new",
+    badge: "",
     description: "32\" UHD Smart TV with VIDAA OS, stunning picture clarity, and seamless streaming apps.",
     specs: {
       Size: "32\"",
       Resolution: "UHD 4K",
-      "Smart OS": "VIDAA",
+      Smart OS: "VIDAA",
       WiFi: "Yes"
     }
   },
@@ -196,7 +200,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/NAS-J40FBFL-768x768.png",
-    images: ["/img/products/NAS-J40FBFL-768x768.png"],
+    images: [
+      "/img/products/NAS-J40FBFL-768x768.png"
+    ],
     price: 2099,
     oldPrice: null,
     discount: 0,
@@ -223,7 +229,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/NAS-J43FBF-jpg-768x768.webp",
-    images: ["/img/products/NAS-J43FBF-jpg-768x768.webp"],
+    images: [
+      "/img/products/NAS-J43FBF-jpg-768x768.webp"
+    ],
     price: 1999,
     oldPrice: 2699,
     discount: 26,
@@ -235,7 +243,7 @@ const PRODUCTS = [
       "top-deals",
       "best-sellers"
     ],
-    badge: "sale",
+    badge: "",
     flashSale: true,
     featured: true,
     description: "43\" Full HD LED Digital Satellite TV with wide-angle display and multiple connectivity options.",
@@ -256,7 +264,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/NAS-J43FBFL-AND-768x768.jpg",
-    images: ["/img/products/NAS-J43FBFL-AND-768x768.jpg"],
+    images: [
+      "/img/products/NAS-J43FBFL-AND-768x768.jpg"
+    ],
     price: 3499,
     oldPrice: null,
     discount: 0,
@@ -268,13 +278,13 @@ const PRODUCTS = [
       "new-arrivals",
       "trending"
     ],
-    badge: "new",
+    badge: "",
     featured: true,
     description: "43\" Android Smart TV with satellite decoder, Google Play Store, YouTube, Netflix & Wi-Fi built in.",
     specs: {
       Size: "43\"",
       Resolution: "Full HD",
-      "Smart OS": "Android",
+      Smart OS: "Android",
       WiFi: "Yes",
       Tuner: "Satellite"
     }
@@ -287,7 +297,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/1NASCO-50-LED-DIGITAL-SATELLITE-TV.jpg",
-    images: ["/img/products/1NASCO-50-LED-DIGITAL-SATELLITE-TV.jpg"],
+    images: [
+      "/img/products/1NASCO-50-LED-DIGITAL-SATELLITE-TV.jpg"
+    ],
     price: 3899,
     oldPrice: null,
     discount: 0,
@@ -315,7 +327,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/NAS-J50FUS-AND-CI-1-scaled-1-768x768.jpg",
-    images: ["/img/products/NAS-J50FUS-AND-CI-1-scaled-1-768x768.jpg"],
+    images: [
+      "/img/products/NAS-J50FUS-AND-CI-1-scaled-1-768x768.jpg"
+    ],
     price: 4999,
     oldPrice: null,
     discount: 0,
@@ -328,13 +342,13 @@ const PRODUCTS = [
       "trending",
       "best-sellers"
     ],
-    badge: "new",
+    badge: "",
     featured: true,
     description: "50\" 4K UHD Android Smart TV with satellite decoder, Dolby Audio, and seamless smart home integration.",
     specs: {
       Size: "50\"",
       Resolution: "4K UHD",
-      "Smart OS": "Android",
+      Smart OS: "Android",
       WiFi: "Yes",
       Tuner: "Satellite",
       HDR: "Yes"
@@ -348,7 +362,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/1drfv-jpg-768x768.webp",
-    images: ["/img/products/1drfv-jpg-768x768.webp"],
+    images: [
+      "/img/products/1drfv-jpg-768x768.webp"
+    ],
     price: 6249,
     oldPrice: null,
     discount: 0,
@@ -360,7 +376,7 @@ const PRODUCTS = [
       "new-arrivals",
       "trending"
     ],
-    badge: "new",
+    badge: "",
     featured: true,
     description: "55\" UHD Smart Flat TV delivering breathtaking 4K clarity with smart streaming capabilities.",
     specs: {
@@ -378,7 +394,9 @@ const PRODUCTS = [
     model: "",
     category: "ac",
     image: "/img/products/MIDEA-1.5HP-R410-SPLIT-AIR-CONDITIONER1.jpg",
-    images: ["/img/products/MIDEA-1.5HP-R410-SPLIT-AIR-CONDITIONER1.jpg"],
+    images: [
+      "/img/products/MIDEA-1.5HP-R410-SPLIT-AIR-CONDITIONER1.jpg"
+    ],
     price: 8999,
     oldPrice: 5299,
     discount: 25,
@@ -390,7 +408,7 @@ const PRODUCTS = [
       "top-deals",
       "best-sellers"
     ],
-    badge: "sale",
+    badge: "",
     flashSale: true,
     featured: true,
     description: "1.5HP split AC with R410 refrigerant, fast cooling, auto-restart, and energy-saving operation.",
@@ -410,7 +428,9 @@ const PRODUCTS = [
     model: "",
     category: "ac",
     image: "/img/products/1-1-768x768.png",
-    images: ["/img/products/1-1-768x768.png"],
+    images: [
+      "/img/products/1-1-768x768.png"
+    ],
     price: 1499,
     oldPrice: 2099,
     discount: 29,
@@ -422,7 +442,7 @@ const PRODUCTS = [
       "top-deals",
       "trending"
     ],
-    badge: "sale",
+    badge: "",
     description: "15-litre portable air cooler with 3-speed fan, humidifier function, and remote control.",
     specs: {
       Tank: "15 Litres",
@@ -439,7 +459,9 @@ const PRODUCTS = [
     model: "",
     category: "ac",
     image: "/img/products/Midea-1.0hp-Ac-R32-Inverter-MSEP-5-Stars-MSEP-09CRFN8-768x768.jpg",
-    images: ["/img/products/Midea-1.0hp-Ac-R32-Inverter-MSEP-5-Stars-MSEP-09CRFN8-768x768.jpg"],
+    images: [
+      "/img/products/Midea-1.0hp-Ac-R32-Inverter-MSEP-5-Stars-MSEP-09CRFN8-768x768.jpg"
+    ],
     price: 6999,
     oldPrice: null,
     discount: 0,
@@ -451,13 +473,13 @@ const PRODUCTS = [
       "new-arrivals",
       "best-sellers"
     ],
-    badge: "new",
+    badge: "",
     featured: true,
     description: "1.0HP 5-star inverter split AC with R32 refrigerant for superior energy efficiency and quiet operation.",
     specs: {
       Capacity: "1.0HP",
       Refrigerant: "R32",
-      "Energy Stars": "5",
+      Energy Stars: "5",
       Type: "Inverter Split",
       Coverage: "Up to 15 m²"
     }
@@ -470,7 +492,9 @@ const PRODUCTS = [
     model: "",
     category: "ac",
     image: "/img/products/MIDEA-1.5HP-SPLIT-AC-R32-INVERTER-MSEP-5-STARS-MSEP-12CRFN8-FRONT-768x768.jpg",
-    images: ["/img/products/MIDEA-1.5HP-SPLIT-AC-R32-INVERTER-MSEP-5-STARS-MSEP-12CRFN8-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/MIDEA-1.5HP-SPLIT-AC-R32-INVERTER-MSEP-5-STARS-MSEP-12CRFN8-FRONT-768x768.jpg"
+    ],
     price: 7299,
     oldPrice: null,
     discount: 0,
@@ -482,13 +506,13 @@ const PRODUCTS = [
       "new-arrivals",
       "best-sellers"
     ],
-    badge: "new",
+    badge: "",
     featured: true,
     description: "1.5HP 5-star R32 inverter AC with ultra-quiet mode, WiFi control, and self-cleaning filter.",
     specs: {
       Capacity: "1.5HP",
       Refrigerant: "R32",
-      "Energy Stars": "5",
+      Energy Stars: "5",
       Type: "Inverter Split",
       Coverage: "Up to 25 m²",
       WiFi: "Yes"
@@ -502,7 +526,9 @@ const PRODUCTS = [
     model: "",
     category: "ac",
     image: "/img/products/MIDEA-1.5HP-R410-SPLIT-AIR-CONDITIONER1.jpg",
-    images: ["/img/products/MIDEA-1.5HP-R410-SPLIT-AIR-CONDITIONER1.jpg"],
+    images: [
+      "/img/products/MIDEA-1.5HP-R410-SPLIT-AIR-CONDITIONER1.jpg"
+    ],
     price: 6499,
     oldPrice: 7899,
     discount: 18,
@@ -513,7 +539,7 @@ const PRODUCTS = [
     tags: [
       "top-deals"
     ],
-    badge: "sale",
+    badge: "",
     description: "2.0HP split air conditioner with R410 refrigerant, rapid cooling, and auto-restart after power outage.",
     specs: {
       Capacity: "2.0HP",
@@ -531,7 +557,9 @@ const PRODUCTS = [
     model: "",
     category: "ac",
     image: "/img/products/MIDEA-2.0HP-SPLIT-AC-R32-INVERTER-MSEP-5-STARS-MSEP-18HRFN8-FRONT-768x768.jpg",
-    images: ["/img/products/MIDEA-2.0HP-SPLIT-AC-R32-INVERTER-MSEP-5-STARS-MSEP-18HRFN8-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/MIDEA-2.0HP-SPLIT-AC-R32-INVERTER-MSEP-5-STARS-MSEP-18HRFN8-FRONT-768x768.jpg"
+    ],
     price: 9999,
     oldPrice: null,
     discount: 0,
@@ -543,12 +571,12 @@ const PRODUCTS = [
       "new-arrivals",
       "trending"
     ],
-    badge: "new",
+    badge: "",
     description: "2.0HP 5-star R32 inverter split AC — the ultimate in energy efficiency and powerful cooling performance.",
     specs: {
       Capacity: "2.0HP",
       Refrigerant: "R32",
-      "Energy Stars": "5",
+      Energy Stars: "5",
       Type: "Inverter Split",
       Coverage: "Up to 35 m²"
     }
@@ -561,7 +589,9 @@ const PRODUCTS = [
     model: "",
     category: "ac",
     image: "/img/products/MIDEA-3.0HP-FLOOR-STANDING-AIR-CONDITIONER-1.jpg",
-    images: ["/img/products/MIDEA-3.0HP-FLOOR-STANDING-AIR-CONDITIONER-1.jpg"],
+    images: [
+      "/img/products/MIDEA-3.0HP-FLOOR-STANDING-AIR-CONDITIONER-1.jpg"
+    ],
     price: 13999,
     oldPrice: null,
     discount: 0,
@@ -588,7 +618,9 @@ const PRODUCTS = [
     model: "",
     category: "ac",
     image: "/img/products/MIDEA-2.5HP-INVERTER-R410-CASSETTE-UNIT.jpg",
-    images: ["/img/products/MIDEA-2.5HP-INVERTER-R410-CASSETTE-UNIT.jpg"],
+    images: [
+      "/img/products/MIDEA-2.5HP-INVERTER-R410-CASSETTE-UNIT.jpg"
+    ],
     price: 23999,
     oldPrice: 18499,
     discount: 14,
@@ -599,7 +631,7 @@ const PRODUCTS = [
     tags: [
       "top-deals"
     ],
-    badge: "sale",
+    badge: "",
     description: "2.5HP ceiling cassette inverter unit for commercial and large residential spaces with 360° air distribution.",
     specs: {
       Capacity: "2.5HP",
@@ -617,7 +649,9 @@ const PRODUCTS = [
     model: "",
     category: "fridge",
     image: "/img/products/MDRT197FGG28-FRONT-768x768.png",
-    images: ["/img/products/MDRT197FGG28-FRONT-768x768.png"],
+    images: [
+      "/img/products/MDRT197FGG28-FRONT-768x768.png"
+    ],
     price: 2499,
     oldPrice: 3599,
     discount: 31,
@@ -629,7 +663,7 @@ const PRODUCTS = [
       "top-deals",
       "best-sellers"
     ],
-    badge: "sale",
+    badge: "",
     flashSale: true,
     featured: true,
     description: "128-litre double door fridge with top-mount freezer, fast freeze, and LED interior lighting.",
@@ -649,7 +683,9 @@ const PRODUCTS = [
     model: "",
     category: "fridge",
     image: "/img/products/3V7A0191-1.png",
-    images: ["/img/products/3V7A0191-1.png"],
+    images: [
+      "/img/products/3V7A0191-1.png"
+    ],
     price: 3599,
     oldPrice: 3599,
     discount: 33,
@@ -661,13 +697,13 @@ const PRODUCTS = [
       "top-deals",
       "best-sellers"
     ],
-    badge: "sale",
+    badge: "",
     featured: true,
     description: "142-litre chest freezer with fast freeze function, durable interior, and low energy consumption.",
     specs: {
       Capacity: "142 Litres",
       Type: "Chest Freezer",
-      "Fast Freeze": "Yes",
+      Fast Freeze: "Yes",
       Energy: "A+"
     }
   },
@@ -679,7 +715,9 @@ const PRODUCTS = [
     model: "",
     category: "fridge",
     image: "/img/products/MDRT237FGG28-1-768x768.jpg",
-    images: ["/img/products/MDRT237FGG28-1-768x768.jpg"],
+    images: [
+      "/img/products/MDRT237FGG28-1-768x768.jpg"
+    ],
     price: 4499,
     oldPrice: null,
     discount: 0,
@@ -691,7 +729,7 @@ const PRODUCTS = [
       "new-arrivals",
       "trending"
     ],
-    badge: "new",
+    badge: "",
     description: "173-litre double door fridge with separate freezer, multi-airflow cooling, and adjustable shelves.",
     specs: {
       Capacity: "173 Litres",
@@ -708,7 +746,9 @@ const PRODUCTS = [
     model: "",
     category: "fridge",
     image: "/img/products/MIDEA-198LTRS-CHEST-FREEZER-MDRC280FZN43-FRONT-768x768.jpg",
-    images: ["/img/products/MIDEA-198LTRS-CHEST-FREEZER-MDRC280FZN43-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/MIDEA-198LTRS-CHEST-FREEZER-MDRC280FZN43-FRONT-768x768.jpg"
+    ],
     price: 2899,
     oldPrice: 4499,
     discount: 36,
@@ -720,14 +760,14 @@ const PRODUCTS = [
       "top-deals",
       "best-sellers"
     ],
-    badge: "sale",
+    badge: "",
     flashSale: true,
     featured: true,
     description: "198-litre chest freezer ideal for bulk storage with quick-freeze capability and strong insulation.",
     specs: {
       Capacity: "198 Litres",
       Type: "Chest Freezer",
-      "Fast Freeze": "Yes",
+      Fast Freeze: "Yes",
       Energy: "A+"
     }
   },
@@ -739,7 +779,9 @@ const PRODUCTS = [
     model: "",
     category: "fridge",
     image: "/img/products/MIDEA-281LTR-DISPLAY-FRIDGE1-1.jpg",
-    images: ["/img/products/MIDEA-281LTR-DISPLAY-FRIDGE1-1.jpg"],
+    images: [
+      "/img/products/MIDEA-281LTR-DISPLAY-FRIDGE1-1.jpg"
+    ],
     price: 4999,
     oldPrice: 7099,
     discount: 30,
@@ -750,7 +792,7 @@ const PRODUCTS = [
     tags: [
       "top-deals"
     ],
-    badge: "sale",
+    badge: "",
     description: "211-litre glass-door display fridge — perfect for businesses, cafes, and homes for visible cold storage.",
     specs: {
       Capacity: "211 Litres",
@@ -767,7 +809,9 @@ const PRODUCTS = [
     model: "",
     category: "fridge",
     image: "/img/products/MIDEA-198LTR-CHEST-FREEZER1-1.jpg",
-    images: ["/img/products/MIDEA-198LTR-CHEST-FREEZER1-1.jpg"],
+    images: [
+      "/img/products/MIDEA-198LTR-CHEST-FREEZER1-1.jpg"
+    ],
     price: 3999,
     oldPrice: 5299,
     discount: 25,
@@ -778,7 +822,7 @@ const PRODUCTS = [
     tags: [
       "top-deals"
     ],
-    badge: "sale",
+    badge: "",
     description: "249-litre large chest freezer with wire baskets, lockable lid, and eco-friendly compressor.",
     specs: {
       Capacity: "249 Litres",
@@ -795,7 +839,9 @@ const PRODUCTS = [
     model: "",
     category: "fridge",
     image: "/img/products/MIDEA-302LTR-DOUBLE-DOOR-BOTTOM-FREEZER-MDRB424FGF02-FRONT-768x768.jpg",
-    images: ["/img/products/MIDEA-302LTR-DOUBLE-DOOR-BOTTOM-FREEZER-MDRB424FGF02-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/MIDEA-302LTR-DOUBLE-DOOR-BOTTOM-FREEZER-MDRB424FGF02-FRONT-768x768.jpg"
+    ],
     price: 10799,
     oldPrice: null,
     discount: 0,
@@ -807,12 +853,12 @@ const PRODUCTS = [
       "new-arrivals",
       "trending"
     ],
-    badge: "new",
+    badge: "",
     description: "302-litre 4-star double door fridge with bottom freezer, inverter compressor, and water dispenser.",
     specs: {
       Capacity: "302 Litres",
       Type: "Bottom Freezer",
-      "Energy Stars": "4",
+      Energy Stars: "4",
       Inverter: "Yes"
     }
   },
@@ -824,7 +870,9 @@ const PRODUCTS = [
     model: "",
     category: "fridge",
     image: "/img/products/MIDEA-418LTRS-CHEST-FREEZER-MDRC564FZF01-FRONT-768x768.jpg",
-    images: ["/img/products/MIDEA-418LTRS-CHEST-FREEZER-MDRC564FZF01-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/MIDEA-418LTRS-CHEST-FREEZER-MDRC564FZF01-FRONT-768x768.jpg"
+    ],
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -851,7 +899,9 @@ const PRODUCTS = [
     model: "",
     category: "laundry",
     image: "/img/products/MT100W70W-GH-5-768x768.jpg",
-    images: ["/img/products/MT100W70W-GH-5-768x768.jpg"],
+    images: [
+      "/img/products/MT100W70W-GH-5-768x768.jpg"
+    ],
     price: 1999,
     oldPrice: 2199,
     discount: 9,
@@ -863,12 +913,12 @@ const PRODUCTS = [
       "top-deals",
       "best-sellers"
     ],
-    badge: "sale",
+    badge: "",
     description: "7kg twin-tub washing machine with separate wash and spin tubs for fast, efficient laundry.",
     specs: {
       Capacity: "7 kg",
       Type: "Twin Top",
-      "Spin Speed": "1300 RPM",
+      Spin Speed: "1300 RPM",
       Programs: "5"
     }
   },
@@ -880,7 +930,9 @@ const PRODUCTS = [
     model: "",
     category: "laundry",
     image: "/img/products/MIDEA-8KG-TOP-LOAD-FULL-AUTO-WASHING-MACHINE-MA200W80G-FRONT-768x768.jpg",
-    images: ["/img/products/MIDEA-8KG-TOP-LOAD-FULL-AUTO-WASHING-MACHINE-MA200W80G-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/MIDEA-8KG-TOP-LOAD-FULL-AUTO-WASHING-MACHINE-MA200W80G-FRONT-768x768.jpg"
+    ],
     price: 4499,
     oldPrice: null,
     discount: 0,
@@ -892,14 +944,14 @@ const PRODUCTS = [
       "new-arrivals",
       "best-sellers"
     ],
-    badge: "new",
+    badge: "",
     featured: true,
     description: "8kg fully automatic top load washer with smart fuzzy logic control and multiple wash programs.",
     specs: {
       Capacity: "8 kg",
       Type: "Top Load Full Auto",
       Programs: "8",
-      "Spin Speed": "800 RPM"
+      Spin Speed: "800 RPM"
     }
   },
   {
@@ -910,7 +962,9 @@ const PRODUCTS = [
     model: "",
     category: "laundry",
     image: "/img/products/4-5-768x768.jpg",
-    images: ["/img/products/4-5-768x768.jpg"],
+    images: [
+      "/img/products/4-5-768x768.jpg"
+    ],
     price: 5299,
     oldPrice: null,
     discount: 0,
@@ -922,13 +976,13 @@ const PRODUCTS = [
       "new-arrivals",
       "trending"
     ],
-    badge: "new",
+    badge: "",
     description: "10.5kg large capacity top load washer — ideal for big families, with 10 wash programs and child lock.",
     specs: {
       Capacity: "10.5 kg",
       Type: "Top Load",
       Programs: "10",
-      "Child Lock": "Yes"
+      Child Lock: "Yes"
     }
   },
   {
@@ -939,7 +993,9 @@ const PRODUCTS = [
     model: "",
     category: "laundry",
     image: "/img/products/MIDEA-FRONT-LOAD-12K-WASHING-MACHINE-MF200W120WBT-FRONT-768x768.jpg",
-    images: ["/img/products/MIDEA-FRONT-LOAD-12K-WASHING-MACHINE-MF200W120WBT-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/MIDEA-FRONT-LOAD-12K-WASHING-MACHINE-MF200W120WBT-FRONT-768x768.jpg"
+    ],
     price: 6999,
     oldPrice: 8799,
     discount: 20,
@@ -951,7 +1007,7 @@ const PRODUCTS = [
       "top-deals",
       "best-sellers"
     ],
-    badge: "sale",
+    badge: "",
     featured: true,
     description: "12kg front load washer with inverter motor, steam refresh, allergy care cycle, and app control.",
     specs: {
@@ -970,7 +1026,9 @@ const PRODUCTS = [
     model: "",
     category: "laundry",
     image: "/img/products/mf200d-768x768.jpg",
-    images: ["/img/products/mf200d-768x768.jpg"],
+    images: [
+      "/img/products/mf200d-768x768.jpg"
+    ],
     price: 8299,
     oldPrice: null,
     discount: 0,
@@ -982,11 +1040,11 @@ const PRODUCTS = [
       "new-arrivals",
       "trending"
     ],
-    badge: "new",
+    badge: "",
     description: "8kg wash + 6kg dry combo washer-dryer — wash and dry in one machine, no separate dryer needed.",
     specs: {
-      "Wash Capacity": "8 kg",
-      "Dry Capacity": "6 kg",
+      Wash Capacity: "8 kg",
+      Dry Capacity: "6 kg",
       Type: "Washer-Dryer Combo",
       Motor: "Inverter"
     }
@@ -999,7 +1057,9 @@ const PRODUCTS = [
     model: "",
     category: "laundry",
     image: "/img/products/NASFL-JS10KG-S-FRONT-768x768.png",
-    images: ["/img/products/NASFL-JS10KG-S-FRONT-768x768.png"],
+    images: [
+      "/img/products/NASFL-JS10KG-S-FRONT-768x768.png"
+    ],
     price: 4299,
     oldPrice: 5049,
     discount: 15,
@@ -1010,14 +1070,14 @@ const PRODUCTS = [
     tags: [
       "top-deals"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 10kg front loader with multiple wash cycles, child lock, and energy-efficient inverter motor.",
     specs: {
       Capacity: "10 kg",
       Type: "Front Load",
       Motor: "Inverter",
       Programs: "15",
-      "Child Lock": "Yes"
+      Child Lock: "Yes"
     }
   },
   {
@@ -1028,7 +1088,9 @@ const PRODUCTS = [
     model: "",
     category: "laundry",
     image: "/img/products/NASCO-11KG-FRONT-LOAD-WASHER-MFC110-U1401B-FRONT-768x768.jpg",
-    images: ["/img/products/NASCO-11KG-FRONT-LOAD-WASHER-MFC110-U1401B-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/NASCO-11KG-FRONT-LOAD-WASHER-MFC110-U1401B-FRONT-768x768.jpg"
+    ],
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -1039,12 +1101,12 @@ const PRODUCTS = [
     tags: [
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "NASCO 11kg front load washer with high spin speed, steam hygiene, and smart delay start function.",
     specs: {
       Capacity: "11 kg",
       Type: "Front Load",
-      "Spin Speed": "1400 RPM",
+      Spin Speed: "1400 RPM",
       Steam: "Yes"
     }
   },
@@ -1056,7 +1118,9 @@ const PRODUCTS = [
     model: "",
     category: "laundry",
     image: "/img/products/MIDEA-12KG-WASH-8KG-DRY-COMBO-WASHING-MACHINE-MF200D120WB-T-FRONT-768x768.jpg",
-    images: ["/img/products/MIDEA-12KG-WASH-8KG-DRY-COMBO-WASHING-MACHINE-MF200D120WB-T-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/MIDEA-12KG-WASH-8KG-DRY-COMBO-WASHING-MACHINE-MF200D120WB-T-FRONT-768x768.jpg"
+    ],
     price: 10099,
     oldPrice: null,
     discount: 0,
@@ -1069,8 +1133,8 @@ const PRODUCTS = [
     ],
     description: "Premium 12kg wash + 8kg dry all-in-one machine with inverter motor and smart cycle selection.",
     specs: {
-      "Wash Capacity": "12 kg",
-      "Dry Capacity": "8 kg",
+      Wash Capacity: "12 kg",
+      Dry Capacity: "8 kg",
       Type: "Combo",
       Motor: "Inverter"
     }
@@ -1083,7 +1147,9 @@ const PRODUCTS = [
     model: "",
     category: "kitchen",
     image: "/img/products/1-24.jpg",
-    images: ["/img/products/1-24.jpg"],
+    images: [
+      "/img/products/1-24.jpg"
+    ],
     price: 1299,
     oldPrice: null,
     discount: 0,
@@ -1094,7 +1160,7 @@ const PRODUCTS = [
     tags: [
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "20-litre grill microwave with combined microwave and grill cooking for crispy, browned results.",
     specs: {
       Capacity: "20 Litres",
@@ -1111,7 +1177,9 @@ const PRODUCTS = [
     model: "",
     category: "kitchen",
     image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT-768x768.jpg",
-    images: ["/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT-768x768.jpg"],
+    images: [
+      "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT-768x768.jpg"
+    ],
     price: 2799,
     oldPrice: 2699,
     discount: 37,
@@ -1123,14 +1191,14 @@ const PRODUCTS = [
       "top-deals",
       "best-sellers"
     ],
-    badge: "sale",
+    badge: "",
     featured: true,
     description: "4-burner black mirror gas cooker with automatic ignition, cast iron pan supports, and glass lid.",
     specs: {
       Burners: "4",
       Type: "Gas Cooker",
       Ignition: "Automatic",
-      "Pan Support": "Cast Iron",
+      Pan Support: "Cast Iron",
       Finish: "Black Mirror"
     }
   },
@@ -1142,7 +1210,9 @@ const PRODUCTS = [
     model: "",
     category: "kitchen",
     image: "/img/products/MIDEA-25LTR-GRILL-MICROWAVE.jpg",
-    images: ["/img/products/MIDEA-25LTR-GRILL-MICROWAVE.jpg"],
+    images: [
+      "/img/products/MIDEA-25LTR-GRILL-MICROWAVE.jpg"
+    ],
     price: 1999,
     oldPrice: null,
     discount: 0,
@@ -1157,7 +1227,7 @@ const PRODUCTS = [
     specs: {
       Capacity: "25 Litres",
       Functions: "Microwave + Grill",
-      "Grill Power": "800W"
+      Grill Power: "800W"
     }
   },
   {
@@ -1168,7 +1238,9 @@ const PRODUCTS = [
     model: "",
     category: "kitchen",
     image: "/img/products/BMG6060-WD-side-768x768.png",
-    images: ["/img/products/BMG6060-WD-side-768x768.png"],
+    images: [
+      "/img/products/BMG6060-WD-side-768x768.png"
+    ],
     price: 4499,
     oldPrice: null,
     discount: 0,
@@ -1179,7 +1251,7 @@ const PRODUCTS = [
     tags: [
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "4-burner freestanding gas cooker with full oven, integrated grill, and stainless steel finish.",
     specs: {
       Burners: "4",
@@ -1197,7 +1269,9 @@ const PRODUCTS = [
     model: "",
     category: "kitchen",
     image: "/img/products/WQP10-W7704L-1-768x768.png",
-    images: ["/img/products/WQP10-W7704L-1-768x768.png"],
+    images: [
+      "/img/products/WQP10-W7704L-1-768x768.png"
+    ],
     price: 6499,
     oldPrice: null,
     discount: 0,
@@ -1210,10 +1284,10 @@ const PRODUCTS = [
     ],
     description: "10-place setting dishwasher with 5 wash programs, half-load option, and delay start function.",
     specs: {
-      "Place Settings": "10",
+      Place Settings: "10",
       Programs: "5",
-      "Half Load": "Yes",
-      "Delay Start": "Yes",
+      Half Load: "Yes",
+      Delay Start: "Yes",
       Energy: "A+"
     }
   },
@@ -1225,7 +1299,9 @@ const PRODUCTS = [
     model: "",
     category: "kitchen",
     image: "/img/products/MIDEA-12-PLATES-DISHWASHER-WQP12-7713E1-1.jpg",
-    images: ["/img/products/MIDEA-12-PLATES-DISHWASHER-WQP12-7713E1-1.jpg"],
+    images: [
+      "/img/products/MIDEA-12-PLATES-DISHWASHER-WQP12-7713E1-1.jpg"
+    ],
     price: 6599,
     oldPrice: null,
     discount: 0,
@@ -1236,12 +1312,12 @@ const PRODUCTS = [
     tags: [
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "12-place setting freestanding dishwasher with intensive, eco, and quick-wash programs.",
     specs: {
-      "Place Settings": "12",
+      Place Settings: "12",
       Programs: "6",
-      "Noise Level": "47dB",
+      Noise Level: "47dB",
       Energy: "A+"
     }
   },
@@ -1253,7 +1329,9 @@ const PRODUCTS = [
     model: "",
     category: "small",
     image: "/img/products/MIDEA-16-MIST-FAN.jpg",
-    images: ["/img/products/MIDEA-16-MIST-FAN.jpg"],
+    images: [
+      "/img/products/MIDEA-16-MIST-FAN.jpg"
+    ],
     price: 1099,
     oldPrice: 1299,
     discount: 15,
@@ -1265,7 +1343,7 @@ const PRODUCTS = [
       "top-deals",
       "trending"
     ],
-    badge: "sale",
+    badge: "",
     description: "16-inch mist fan with built-in water tank, 3 speeds, 70° oscillation, and cool mist spray for hot days.",
     specs: {
       Blade: "16\"",
@@ -1282,7 +1360,9 @@ const PRODUCTS = [
     model: "",
     category: "small",
     image: "/img/products/UYKKR-768x768.jpg",
-    images: ["/img/products/UYKKR-768x768.jpg"],
+    images: [
+      "/img/products/UYKKR-768x768.jpg"
+    ],
     price: 1199,
     oldPrice: null,
     discount: 0,
@@ -1297,7 +1377,7 @@ const PRODUCTS = [
     specs: {
       Capacity: "10 Litres",
       Type: "Storage Electric",
-      "Safety Valve": "Yes",
+      Safety Valve: "Yes",
       Thermostat: "Yes"
     }
   },
@@ -1309,7 +1389,9 @@ const PRODUCTS = [
     model: "",
     category: "small",
     image: "/img/products/WATER-HEATER-768x768.png",
-    images: ["/img/products/WATER-HEATER-768x768.png"],
+    images: [
+      "/img/products/WATER-HEATER-768x768.png"
+    ],
     price: 1299,
     oldPrice: null,
     discount: 0,
@@ -1336,7 +1418,9 @@ const PRODUCTS = [
     model: "",
     category: "small",
     image: "/img/products/1-1-768x768.png",
-    images: ["/img/products/1-1-768x768.png"],
+    images: [
+      "/img/products/1-1-768x768.png"
+    ],
     price: 1499,
     oldPrice: 2099,
     discount: 29,
@@ -1347,7 +1431,7 @@ const PRODUCTS = [
     tags: [
       "top-deals"
     ],
-    badge: "sale",
+    badge: "",
     description: "15-litre portable evaporative air cooler with 3 speeds, remote control, and 8-hour timer.",
     specs: {
       Tank: "15 Litres",
@@ -1364,7 +1448,9 @@ const PRODUCTS = [
     model: "",
     category: "small",
     image: "/img/products/MIDEA-16-LTRS-3-TAPS-STORAGE-CABINET-WHITE-YL2037S-FRONT-OPEN-768x768.png",
-    images: ["/img/products/MIDEA-16-LTRS-3-TAPS-STORAGE-CABINET-WHITE-YL2037S-FRONT-OPEN-768x768.png"],
+    images: [
+      "/img/products/MIDEA-16-LTRS-3-TAPS-STORAGE-CABINET-WHITE-YL2037S-FRONT-OPEN-768x768.png"
+    ],
     price: 2599,
     oldPrice: null,
     discount: 0,
@@ -1376,7 +1462,7 @@ const PRODUCTS = [
       "new-arrivals",
       "trending"
     ],
-    badge: "new",
+    badge: "",
     description: "16-litre 3-tap water dispenser with storage cabinet — hot, warm & cold water at the push of a button.",
     specs: {
       Capacity: "16 Litres",
@@ -1393,7 +1479,9 @@ const PRODUCTS = [
     model: "",
     category: "small",
     image: "/img/products/D50-15FN-150x150.png",
-    images: ["/img/products/D50-15FN-150x150.png"],
+    images: [
+      "/img/products/D50-15FN-150x150.png"
+    ],
     price: 1499,
     oldPrice: null,
     discount: 0,
@@ -1420,7 +1508,9 @@ const PRODUCTS = [
     model: "UA32H5000FUXGH",
     category: "tv",
     image: "/img/products/UA43CU7000UXGH-1-jpg.webp",
-    images: ["/img/products/UA43CU7000UXGH-1-jpg.webp"],
+    images: [
+      "/img/products/UA43CU7000UXGH-1-jpg.webp"
+    ],
     price: 3399,
     oldPrice: null,
     discount: 0,
@@ -1436,9 +1526,9 @@ const PRODUCTS = [
     featured: true,
     description: "Samsung 32\" LED FHD SMART. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "32\"",
+      Screen Size: "32\"",
       Resolution: "Full HD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA32H5000FUXGH"
     }
   },
@@ -1450,7 +1540,9 @@ const PRODUCTS = [
     model: "UA32T5300",
     category: "tv",
     image: "/img/products/SAMSUNG-32-INCH-LED-FHD-SMART-TELEVISION1-1.jpg",
-    images: ["/img/products/SAMSUNG-32-INCH-LED-FHD-SMART-TELEVISION1-1.jpg"],
+    images: [
+      "/img/products/SAMSUNG-32-INCH-LED-FHD-SMART-TELEVISION1-1.jpg"
+    ],
     price: 3399,
     oldPrice: null,
     discount: 0,
@@ -1466,9 +1558,9 @@ const PRODUCTS = [
     featured: true,
     description: "Samsung 32\" LED FHD SMART. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "32\"",
+      Screen Size: "32\"",
       Resolution: "Full HD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA32T5300"
     }
   },
@@ -1480,7 +1572,9 @@ const PRODUCTS = [
     model: "UA43F6000FUXGH",
     category: "tv",
     image: "/img/products/SAMSUNG-43-INCH-DIGITAL-SATELLITE-LED-FULL-HD-TV.jpg",
-    images: ["/img/products/SAMSUNG-43-INCH-DIGITAL-SATELLITE-LED-FULL-HD-TV.jpg"],
+    images: [
+      "/img/products/SAMSUNG-43-INCH-DIGITAL-SATELLITE-LED-FULL-HD-TV.jpg"
+    ],
     price: 5299,
     oldPrice: null,
     discount: 0,
@@ -1493,13 +1587,13 @@ const PRODUCTS = [
       "tv",
       "smart"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 43'' LED FHD SMART. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "43''",
+      Screen Size: "43''",
       Resolution: "Full HD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA43F6000FUXGH"
     }
   },
@@ -1511,7 +1605,9 @@ const PRODUCTS = [
     model: "UA43U8000FUXGH",
     category: "tv",
     image: "/img/products/africa-en-oled-tv-qa65s90dauxke-front-black-542481692.png",
-    images: ["/img/products/africa-en-oled-tv-qa65s90dauxke-front-black-542481692.png"],
+    images: [
+      "/img/products/africa-en-oled-tv-qa65s90dauxke-front-black-542481692.png"
+    ],
     price: 6599,
     oldPrice: null,
     discount: 0,
@@ -1525,13 +1621,13 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 43'' UHD SMART 4K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "43''",
+      Screen Size: "43''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA43U8000FUXGH"
     }
   },
@@ -1543,7 +1639,9 @@ const PRODUCTS = [
     model: "UA50U8000FUXGH",
     category: "tv",
     image: "/img/products/ua50u8000fuxgh_brandpng",
-    images: ["/img/products/ua50u8000fuxgh_brandpng"],
+    images: [
+      "/img/products/ua50u8000fuxgh_brandpng"
+    ],
     price: 9199,
     oldPrice: null,
     discount: 0,
@@ -1557,13 +1655,13 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 50\" UHD SMART 4K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "50\"",
+      Screen Size: "50\"",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA50U8000FUXGH"
     }
   },
@@ -1575,7 +1673,9 @@ const PRODUCTS = [
     model: "UA55U8000FUXGH",
     category: "tv",
     image: "/img/products/ua55u8000fuxgh_brandpng",
-    images: ["/img/products/ua55u8000fuxgh_brandpng"],
+    images: [
+      "/img/products/ua55u8000fuxgh_brandpng"
+    ],
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -1589,13 +1689,13 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 55'' UHD SMART 4K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "55''",
+      Screen Size: "55''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA55U8000FUXGH"
     }
   },
@@ -1607,7 +1707,9 @@ const PRODUCTS = [
     model: "UA65U8000FUXGH",
     category: "tv",
     image: "/img/products/ua65u8000fuxgh_brandpng",
-    images: ["/img/products/ua65u8000fuxgh_brandpng"],
+    images: [
+      "/img/products/ua65u8000fuxgh_brandpng"
+    ],
     price: 13099,
     oldPrice: null,
     discount: 0,
@@ -1621,13 +1723,13 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 65'' UHD SMART 4K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "65''",
+      Screen Size: "65''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA65U8000FUXGH"
     }
   },
@@ -1639,7 +1741,9 @@ const PRODUCTS = [
     model: "UA75U8000FUXGH",
     category: "tv",
     image: "/img/products/ua75u8000fuxgh_brandpng",
-    images: ["/img/products/ua75u8000fuxgh_brandpng"],
+    images: [
+      "/img/products/ua75u8000fuxgh_brandpng"
+    ],
     price: 21799,
     oldPrice: null,
     discount: 0,
@@ -1653,13 +1757,13 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 75'' UHD SMART 4K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "75''",
+      Screen Size: "75''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA75U8000FUXGH"
     }
   },
@@ -1671,7 +1775,9 @@ const PRODUCTS = [
     model: "UA85U8000FUXGH",
     category: "tv",
     image: "/img/products/ua85u8000fuxgh_brandpng",
-    images: ["/img/products/ua85u8000fuxgh_brandpng"],
+    images: [
+      "/img/products/ua85u8000fuxgh_brandpng"
+    ],
     price: 34899,
     oldPrice: null,
     discount: 0,
@@ -1685,14 +1791,14 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     flashSale: true,
     featured: true,
     description: "Samsung 85'' UHD SMART 4K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "85''",
+      Screen Size: "85''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA85U8000FUXGH"
     }
   },
@@ -1704,7 +1810,9 @@ const PRODUCTS = [
     model: "UA98DU9000UXGH",
     category: "tv",
     image: "/img/products/ua98du9000uxgh_brandpng",
-    images: ["/img/products/ua98du9000uxgh_brandpng"],
+    images: [
+      "/img/products/ua98du9000uxgh_brandpng"
+    ],
     price: 86999,
     oldPrice: null,
     discount: 0,
@@ -1718,14 +1826,14 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "sale",
+    badge: "",
     flashSale: true,
     featured: true,
     description: "Samsung 98'' UHD SMART 4K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "98''",
+      Screen Size: "98''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "UA98DU9000UXGH"
     }
   },
@@ -1737,7 +1845,9 @@ const PRODUCTS = [
     model: "QA55Q7FAAUXGH",
     category: "small",
     image: "/img/products/qa55q7faauxgh_brandpng",
-    images: ["/img/products/qa55q7faauxgh_brandpng"],
+    images: [
+      "/img/products/qa55q7faauxgh_brandpng"
+    ],
     price: 13999,
     oldPrice: null,
     discount: 0,
@@ -1750,11 +1860,11 @@ const PRODUCTS = [
       "small",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 55\" Q-LED  4K. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "55\"",
+      Size/Capacity: "55\"",
       Model: "QA55Q7FAAUXGH"
     }
   },
@@ -1766,7 +1876,9 @@ const PRODUCTS = [
     model: "QA65Q7FAAUXGH",
     category: "small",
     image: "/img/products/qa65q7faauxgh_brandpng",
-    images: ["/img/products/qa65q7faauxgh_brandpng"],
+    images: [
+      "/img/products/qa65q7faauxgh_brandpng"
+    ],
     price: 17499,
     oldPrice: null,
     discount: 0,
@@ -1779,11 +1891,11 @@ const PRODUCTS = [
       "small",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 65\" Q-LED  4K. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "65\"",
+      Size/Capacity: "65\"",
       Model: "QA65Q7FAAUXGH"
     }
   },
@@ -1795,7 +1907,9 @@ const PRODUCTS = [
     model: "QA75Q7FAAUXGH",
     category: "small",
     image: "/img/products/qa75q7faauxgh_brandpng",
-    images: ["/img/products/qa75q7faauxgh_brandpng"],
+    images: [
+      "/img/products/qa75q7faauxgh_brandpng"
+    ],
     price: 30599,
     oldPrice: null,
     discount: 0,
@@ -1808,11 +1922,11 @@ const PRODUCTS = [
       "small",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 75\" Q-LED  4K. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "75\"",
+      Size/Capacity: "75\"",
       Model: "QA75Q7FAAUXGH"
     }
   },
@@ -1824,7 +1938,9 @@ const PRODUCTS = [
     model: "QA85Q7FAAUXGH",
     category: "small",
     image: "/img/products/qa85q7faauxgh_brandpng",
-    images: ["/img/products/qa85q7faauxgh_brandpng"],
+    images: [
+      "/img/products/qa85q7faauxgh_brandpng"
+    ],
     price: 44999,
     oldPrice: null,
     discount: 0,
@@ -1837,11 +1953,11 @@ const PRODUCTS = [
       "small",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 85\" Q-LED  4K. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "85\"",
+      Size/Capacity: "85\"",
       Model: "QA85Q7FAAUXGH"
     }
   },
@@ -1853,7 +1969,9 @@ const PRODUCTS = [
     model: "RT20HAR2DSA",
     category: "fridge",
     image: "/img/products/SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1.jpg",
-    images: ["/img/products/SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1.jpg"],
+    images: [
+      "/img/products/SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1.jpg"
+    ],
     price: 6899,
     oldPrice: null,
     discount: 0,
@@ -1865,7 +1983,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 203 L REGRIGERATORS - DURACOOL TOP MOUNTED FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
@@ -1882,7 +2000,9 @@ const PRODUCTS = [
     model: "RT26HAR2DSA",
     category: "fridge",
     image: "/img/products/rt26har2dsa_brandpng",
-    images: ["/img/products/rt26har2dsa_brandpng"],
+    images: [
+      "/img/products/rt26har2dsa_brandpng"
+    ],
     price: 6899,
     oldPrice: null,
     discount: 0,
@@ -1894,7 +2014,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 203 L REGRIGERATORS - DURACOOL TOP MOUNTED FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
@@ -1911,7 +2031,9 @@ const PRODUCTS = [
     model: "RT22HAR4DSA/GH",
     category: "fridge",
     image: "/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg",
-    images: ["/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg"],
+    images: [
+      "/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg"
+    ],
     price: 7299,
     oldPrice: null,
     discount: 0,
@@ -1923,7 +2045,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 234 L REGRIGERATORS - DURACOOL TOP MOUNTED FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
@@ -1940,7 +2062,9 @@ const PRODUCTS = [
     model: "RT28HAR4DSA",
     category: "fridge",
     image: "/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg",
-    images: ["/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg"],
+    images: [
+      "/img/products/africa-en-top-mount-freezer-rt28har4dsa-rt22har4dsa-gh-462839667-1.jpg"
+    ],
     price: 7299,
     oldPrice: null,
     discount: 0,
@@ -1952,7 +2076,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 234 L REGRIGERATORS - DURACOOL TOP MOUNTED FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
@@ -1969,7 +2093,9 @@ const PRODUCTS = [
     model: "RT25HAR4DSA/GH",
     category: "fridge",
     image: "/img/products/rt25har4dsa_gh_brandpng",
-    images: ["/img/products/rt25har4dsa_gh_brandpng"],
+    images: [
+      "/img/products/rt25har4dsa_gh_brandpng"
+    ],
     price: 8299,
     oldPrice: null,
     discount: 0,
@@ -1981,7 +2107,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 255 L REGRIGERATORS - DURACOOL TOP MOUNTED FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
@@ -1998,7 +2124,9 @@ const PRODUCTS = [
     model: "RT31HAR4DSA",
     category: "fridge",
     image: "/img/products/rt31har4dsa_brandpng",
-    images: ["/img/products/rt31har4dsa_brandpng"],
+    images: [
+      "/img/products/rt31har4dsa_brandpng"
+    ],
     price: 8299,
     oldPrice: null,
     discount: 0,
@@ -2010,7 +2138,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     featured: true,
     description: "Samsung 255 L REGRIGERATORS - DURACOOL TOP MOUNTED FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
@@ -2027,7 +2155,9 @@ const PRODUCTS = [
     model: "RT31CG5421S9GH",
     category: "fridge",
     image: "/img/products/RT31CG5421S9GH-3-jpg.webp",
-    images: ["/img/products/RT31CG5421S9GH-3-jpg.webp"],
+    images: [
+      "/img/products/RT31CG5421S9GH-3-jpg.webp"
+    ],
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -2039,7 +2169,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 301 L REGRIGERATORS - DURACOOL TWIN COOLING PLUS - NEW. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "301 L",
@@ -2054,7 +2184,9 @@ const PRODUCTS = [
     model: "RT35CG5421S9GH",
     category: "fridge",
     image: "/img/products/rt35cg5421s9gh_brandpng",
-    images: ["/img/products/rt35cg5421s9gh_brandpng"],
+    images: [
+      "/img/products/rt35cg5421s9gh_brandpng"
+    ],
     price: 10899,
     oldPrice: null,
     discount: 0,
@@ -2066,7 +2198,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 345 L REGRIGERATORS - DURACOOL TWIN COOLING PLUS - NEW. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "345 L",
@@ -2081,7 +2213,9 @@ const PRODUCTS = [
     model: "RT42CG6621S9GH",
     category: "fridge",
     image: "/img/products/rt42cg6621s9gh_brandpng",
-    images: ["/img/products/rt42cg6621s9gh_brandpng"],
+    images: [
+      "/img/products/rt42cg6621s9gh_brandpng"
+    ],
     price: 13499,
     oldPrice: null,
     discount: 0,
@@ -2093,7 +2227,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 411 L REGRIGERATORS - DURACOOL TWIN COOLING PLUS - NEW. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "411 L",
@@ -2108,7 +2242,9 @@ const PRODUCTS = [
     model: "RT47CG6631B1UT",
     category: "fridge",
     image: "/img/products/q-1.jpg",
-    images: ["/img/products/q-1.jpg"],
+    images: [
+      "/img/products/q-1.jpg"
+    ],
     price: 14999,
     oldPrice: null,
     discount: 0,
@@ -2120,7 +2256,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 460 L REGRIGERATORS - DURACOOL TWIN COOLING PLUS - NEW. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "460 L",
@@ -2135,7 +2271,9 @@ const PRODUCTS = [
     model: "RT53DG7B60B1UT",
     category: "fridge",
     image: "/img/products/RT53DG7B60B1UT-1.png",
-    images: ["/img/products/RT53DG7B60B1UT-1.png"],
+    images: [
+      "/img/products/RT53DG7B60B1UT-1.png"
+    ],
     price: 17499,
     oldPrice: null,
     discount: 0,
@@ -2147,7 +2285,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 525 L REGRIGERATORS - DURACOOL TWIN COOLING PLUS - NEW. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "525 L",
@@ -2162,7 +2300,9 @@ const PRODUCTS = [
     model: "RS57DG4000B4GH",
     category: "fridge",
     image: "/img/products/br-rs4000dc-side-by-side-with-large-capacity-rs57dg4100m9bz-544181303-300x300-1.jpg",
-    images: ["/img/products/br-rs4000dc-side-by-side-with-large-capacity-rs57dg4100m9bz-544181303-300x300-1.jpg"],
+    images: [
+      "/img/products/br-rs4000dc-side-by-side-with-large-capacity-rs57dg4100m9bz-544181303-300x300-1.jpg"
+    ],
     price: 16599,
     oldPrice: null,
     discount: 0,
@@ -2190,7 +2330,9 @@ const PRODUCTS = [
     model: "RS57DG4100B4GH",
     category: "fridge",
     image: "/img/products/br-rs4000dc-side-by-side-with-large-capacity-rs57dg4100m9bz-544181303-300x300-1.jpg",
-    images: ["/img/products/br-rs4000dc-side-by-side-with-large-capacity-rs57dg4100m9bz-544181303-300x300-1.jpg"],
+    images: [
+      "/img/products/br-rs4000dc-side-by-side-with-large-capacity-rs57dg4100m9bz-544181303-300x300-1.jpg"
+    ],
     price: 18299,
     oldPrice: null,
     discount: 0,
@@ -2218,7 +2360,9 @@ const PRODUCTS = [
     model: "RF65DB970E22",
     category: "fridge",
     image: "/img/products/uk-t-style-french-door-see-thru-door-rf65db970e22eu-540378321-1.jpg",
-    images: ["/img/products/uk-t-style-french-door-see-thru-door-rf65db970e22eu-540378321-1.jpg"],
+    images: [
+      "/img/products/uk-t-style-french-door-see-thru-door-rf65db970e22eu-540378321-1.jpg"
+    ],
     price: 52199,
     oldPrice: null,
     discount: 0,
@@ -2230,7 +2374,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 650 L REFRIGERATORS- 4 DOORS BESPOKE. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "650 L",
@@ -2245,7 +2389,9 @@ const PRODUCTS = [
     model: "RF65DB960E22EF",
     category: "fridge",
     image: "/img/products/uk-4-door-beverage-center-rf65db960e22eu-540091199.jpg",
-    images: ["/img/products/uk-4-door-beverage-center-rf65db960e22eu-540091199.jpg"],
+    images: [
+      "/img/products/uk-4-door-beverage-center-rf65db960e22eu-540091199.jpg"
+    ],
     price: 52199,
     oldPrice: null,
     discount: 0,
@@ -2257,7 +2403,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 650 L REFRIGERATORS- 4 DOORS BESPOKE. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "650 L",
@@ -2272,7 +2418,9 @@ const PRODUCTS = [
     model: "RF65DG9H0EB1EU",
     category: "fridge",
     image: "/img/products/RF65DG9H0EB1EU-1.png",
-    images: ["/img/products/RF65DG9H0EB1EU-1.png"],
+    images: [
+      "/img/products/RF65DG9H0EB1EU-1.png"
+    ],
     price: 59999,
     oldPrice: null,
     discount: 0,
@@ -2298,7 +2446,9 @@ const PRODUCTS = [
     model: "RI70F20V1GAGH",
     category: "fridge",
     image: "/img/products/RI70F20V1GAGH-FRONT-1.png",
-    images: ["/img/products/RI70F20V1GAGH-FRONT-1.png"],
+    images: [
+      "/img/products/RI70F20V1GAGH-FRONT-1.png"
+    ],
     price: 6499,
     oldPrice: null,
     discount: 0,
@@ -2310,7 +2460,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 198L- GRAY CHEST FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "198L- GRAY",
@@ -2326,7 +2476,9 @@ const PRODUCTS = [
     model: "RI70F29V1GAGH",
     category: "fridge",
     image: "/img/products/ri70f29v1gagh_brandpng",
-    images: ["/img/products/ri70f29v1gagh_brandpng"],
+    images: [
+      "/img/products/ri70f29v1gagh_brandpng"
+    ],
     price: 7999,
     oldPrice: null,
     discount: 0,
@@ -2338,7 +2490,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 287L- GRAY CHEST FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "287L- GRAY",
@@ -2354,7 +2506,9 @@ const PRODUCTS = [
     model: "RI70F37V1GAGH",
     category: "fridge",
     image: "/img/products/ri70f37v1gagh_brandpng",
-    images: ["/img/products/ri70f37v1gagh_brandpng"],
+    images: [
+      "/img/products/ri70f37v1gagh_brandpng"
+    ],
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -2366,7 +2520,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 371L- GRAY CHEST FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "371L- GRAY",
@@ -2382,7 +2536,9 @@ const PRODUCTS = [
     model: "AR09CRHGAWK/AF",
     category: "ac",
     image: "/img/products/SAMSUNG-1.5HP-SPLIT-ACS-INVERTER-R410.jpg",
-    images: ["/img/products/SAMSUNG-1.5HP-SPLIT-ACS-INVERTER-R410.jpg"],
+    images: [
+      "/img/products/SAMSUNG-1.5HP-SPLIT-ACS-INVERTER-R410.jpg"
+    ],
     price: 5299,
     oldPrice: null,
     discount: 0,
@@ -2394,7 +2550,7 @@ const PRODUCTS = [
       "samsung",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 1.0 HP SPLIT ACS - R410. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.0 HP",
@@ -2410,7 +2566,9 @@ const PRODUCTS = [
     model: "AR12CRHGAWK/AF",
     category: "ac",
     image: "/img/products/ar12crhgawk_af_brandpng",
-    images: ["/img/products/ar12crhgawk_af_brandpng"],
+    images: [
+      "/img/products/ar12crhgawk_af_brandpng"
+    ],
     price: 6599,
     oldPrice: null,
     discount: 0,
@@ -2422,7 +2580,7 @@ const PRODUCTS = [
       "samsung",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 1.5 HP SPLIT ACS - R410. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.5 HP",
@@ -2438,7 +2596,9 @@ const PRODUCTS = [
     model: "AR18CRHGAWK/AF",
     category: "ac",
     image: "/img/products/ar18crhgawk_af_brandpng",
-    images: ["/img/products/ar18crhgawk_af_brandpng"],
+    images: [
+      "/img/products/ar18crhgawk_af_brandpng"
+    ],
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -2465,7 +2625,9 @@ const PRODUCTS = [
     model: "AR24CRHGAWK/AF",
     category: "ac",
     image: "/img/products/ar24crhgawk_af_brandpng",
-    images: ["/img/products/ar24crhgawk_af_brandpng"],
+    images: [
+      "/img/products/ar24crhgawk_af_brandpng"
+    ],
     price: 12299,
     oldPrice: null,
     discount: 0,
@@ -2477,7 +2639,7 @@ const PRODUCTS = [
       "samsung",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 2.5 HP SPLIT ACS - R410. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.5 HP",
@@ -2493,7 +2655,9 @@ const PRODUCTS = [
     model: "AR40F12D0AG/AF",
     category: "ac",
     image: "/img/products/AR40F12D0AGAF-FRONT.png",
-    images: ["/img/products/AR40F12D0AGAF-FRONT.png"],
+    images: [
+      "/img/products/AR40F12D0AGAF-FRONT.png"
+    ],
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -2506,7 +2670,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 1.5 HP SPLIT ACS - INVERTER R32. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.5 HP",
@@ -2523,7 +2687,9 @@ const PRODUCTS = [
     model: "AR40F18D0AG/AF",
     category: "ac",
     image: "/img/products/AR40F18D0AGAF-FRONT.png",
-    images: ["/img/products/AR40F18D0AGAF-FRONT.png"],
+    images: [
+      "/img/products/AR40F18D0AGAF-FRONT.png"
+    ],
     price: 14999,
     oldPrice: null,
     discount: 0,
@@ -2536,7 +2702,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "sale",
+    badge: "",
     description: "Samsung 2.0 HP SPLIT ACS - INVERTER R32. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.0 HP",
@@ -2553,7 +2719,9 @@ const PRODUCTS = [
     model: "AR40F24D0AG/AF",
     category: "ac",
     image: "/img/products/ar40f24d0ag_af_brandpng",
-    images: ["/img/products/ar40f24d0ag_af_brandpng"],
+    images: [
+      "/img/products/ar40f24d0ag_af_brandpng"
+    ],
     price: 17499,
     oldPrice: null,
     discount: 0,
@@ -2566,7 +2734,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "sale",
+    badge: "",
     description: "Samsung 2.5 HP SPLIT ACS - INVERTER R32. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.5 HP",
@@ -2583,7 +2751,9 @@ const PRODUCTS = [
     model: "AC036TNPPEH/AC036TXQREH",
     category: "ac",
     image: "/img/products/ac036tnppeh_ac036txqreh_brandpng",
-    images: ["/img/products/ac036tnppeh_ac036txqreh_brandpng"],
+    images: [
+      "/img/products/ac036tnppeh_ac036txqreh_brandpng"
+    ],
     price: 32299,
     oldPrice: null,
     discount: 0,
@@ -2609,7 +2779,9 @@ const PRODUCTS = [
     model: "AC048TNPPEH/AC048TXQREH",
     category: "ac",
     image: "/img/products/AC048TNPPEH-FRONT.png",
-    images: ["/img/products/AC048TNPPEH-FRONT.png"],
+    images: [
+      "/img/products/AC048TNPPEH-FRONT.png"
+    ],
     price: 42999,
     oldPrice: null,
     discount: 0,
@@ -2635,7 +2807,9 @@ const PRODUCTS = [
     model: "WT60H2500",
     category: "laundry",
     image: "/img/products/1SAMSUNG-6KG-TWIN-TOP-SEMI-AUTO-WASHER-WASHING-MACHINE.jpg",
-    images: ["/img/products/1SAMSUNG-6KG-TWIN-TOP-SEMI-AUTO-WASHER-WASHING-MACHINE.jpg"],
+    images: [
+      "/img/products/1SAMSUNG-6KG-TWIN-TOP-SEMI-AUTO-WASHER-WASHING-MACHINE.jpg"
+    ],
     price: 6399,
     oldPrice: null,
     discount: 0,
@@ -2662,7 +2836,9 @@ const PRODUCTS = [
     model: "WA80F19S8BNQ",
     category: "laundry",
     image: "/img/products/WA13CG5441BYNQ-3-jpg.webp",
-    images: ["/img/products/WA13CG5441BYNQ-3-jpg.webp"],
+    images: [
+      "/img/products/WA13CG5441BYNQ-3-jpg.webp"
+    ],
     price: 13399,
     oldPrice: null,
     discount: 0,
@@ -2674,7 +2850,7 @@ const PRODUCTS = [
       "samsung",
       "laundry"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 19 KG WASHING MACHINES - TOP LOAD ACTIVE WASH. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "19 KG",
@@ -2690,7 +2866,9 @@ const PRODUCTS = [
     model: "WA80F17S8CNQ",
     category: "laundry",
     image: "/img/products/WA80F17S8CNQ.png",
-    images: ["/img/products/WA80F17S8CNQ.png"],
+    images: [
+      "/img/products/WA80F17S8CNQ.png"
+    ],
     price: 10799,
     oldPrice: null,
     discount: 0,
@@ -2717,7 +2895,9 @@ const PRODUCTS = [
     model: "WA16CG6745BDNQ",
     category: "laundry",
     image: "/img/products/WA16CG6745BDNQ-jpg.webp",
-    images: ["/img/products/WA16CG6745BDNQ-jpg.webp"],
+    images: [
+      "/img/products/WA16CG6745BDNQ-jpg.webp"
+    ],
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -2744,7 +2924,9 @@ const PRODUCTS = [
     model: "WA13CG5441BYNQ",
     category: "laundry",
     image: "/img/products/WA13CG5441BYNQ-3-jpg.webp",
-    images: ["/img/products/WA13CG5441BYNQ-3-jpg.webp"],
+    images: [
+      "/img/products/WA13CG5441BYNQ-3-jpg.webp"
+    ],
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -2771,7 +2953,9 @@ const PRODUCTS = [
     model: "WA80F13S5CNQ",
     category: "laundry",
     image: "/img/products/WA80F13S5CNQ.png",
-    images: ["/img/products/WA80F13S5CNQ.png"],
+    images: [
+      "/img/products/WA80F13S5CNQ.png"
+    ],
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -2783,7 +2967,7 @@ const PRODUCTS = [
       "samsung",
       "laundry"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 13 KG WASHING MACHINES - TOP LOAD ACTIVE WASH. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "13 KG",
@@ -2799,7 +2983,9 @@ const PRODUCTS = [
     model: "WA80CG4240BWNQ",
     category: "laundry",
     image: "/img/products/WA80CG4240BWNQ-jpg.webp",
-    images: ["/img/products/WA80CG4240BWNQ-jpg.webp"],
+    images: [
+      "/img/products/WA80CG4240BWNQ-jpg.webp"
+    ],
     price: 5699,
     oldPrice: null,
     discount: 0,
@@ -2811,7 +2997,7 @@ const PRODUCTS = [
       "samsung",
       "laundry"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 8 KG WASHING MACHINES - TOP LOAD ACTIVE WASH. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "8 KG",
@@ -2827,7 +3013,9 @@ const PRODUCTS = [
     model: "WW11CGC04DABSG",
     category: "laundry",
     image: "/img/products/Artboard-3-2.jpg",
-    images: ["/img/products/Artboard-3-2.jpg"],
+    images: [
+      "/img/products/Artboard-3-2.jpg"
+    ],
     price: 13999,
     oldPrice: null,
     discount: 0,
@@ -2840,7 +3028,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "sale",
+    badge: "",
     description: "Samsung 11 KG WASHING MACHINES - FRONT LOAD FULL AUTO WASHER. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "11 KG",
@@ -2856,7 +3044,9 @@ const PRODUCTS = [
     model: "WW10DG6U94LBNQ",
     category: "laundry",
     image: "/img/products/WW10DG6U94LBNQ-FRONT.png",
-    images: ["/img/products/WW10DG6U94LBNQ-FRONT.png"],
+    images: [
+      "/img/products/WW10DG6U94LBNQ-FRONT.png"
+    ],
     price: 12999,
     oldPrice: null,
     discount: 0,
@@ -2869,7 +3059,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "sale",
+    badge: "",
     description: "Samsung 10.1 KG WASHING MACHINES - FRONT LOAD FULL AUTO WASHER. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "10.1 KG",
@@ -2885,7 +3075,9 @@ const PRODUCTS = [
     model: "WW80FG3M05AWNQ",
     category: "laundry",
     image: "/img/products/ww80fg3m05awnq_brandpng",
-    images: ["/img/products/ww80fg3m05awnq_brandpng"],
+    images: [
+      "/img/products/ww80fg3m05awnq_brandpng"
+    ],
     price: 6499,
     oldPrice: null,
     discount: 0,
@@ -2912,7 +3104,9 @@ const PRODUCTS = [
     model: "WW80T3040BS/NQ",
     category: "laundry",
     image: "/img/products/ww80t3040bs_nq_brandpng",
-    images: ["/img/products/ww80t3040bs_nq_brandpng"],
+    images: [
+      "/img/products/ww80t3040bs_nq_brandpng"
+    ],
     price: 9199,
     oldPrice: null,
     discount: 0,
@@ -2925,7 +3119,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung WASHING MACHINES - FRONT LOAD FULL AUTO WASHER. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Type: "Front Load",
@@ -2940,7 +3134,9 @@ const PRODUCTS = [
     model: "WW70T3010BS/NQ",
     category: "laundry",
     image: "/img/products/africa-en-front-loading-washer-ww70t301mbwle-ww70t3010bs-nq-462165959.webp",
-    images: ["/img/products/africa-en-front-loading-washer-ww70t301mbwle-ww70t3010bs-nq-462165959.webp"],
+    images: [
+      "/img/products/africa-en-front-loading-washer-ww70t301mbwle-ww70t3010bs-nq-462165959.webp"
+    ],
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -2953,7 +3149,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 7 KG WASHING MACHINES - FRONT LOAD FULL AUTO WASHER. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "7 KG",
@@ -2969,7 +3165,9 @@ const PRODUCTS = [
     model: "WW70FG3M05AWNQ",
     category: "laundry",
     image: "/img/products/ww70fg3m05awnq_brandpng",
-    images: ["/img/products/ww70fg3m05awnq_brandpng"],
+    images: [
+      "/img/products/ww70fg3m05awnq_brandpng"
+    ],
     price: 5999,
     oldPrice: null,
     discount: 0,
@@ -2982,7 +3180,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung WASHING MACHINES - FRONT LOAD FULL AUTO WASHER. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Type: "Front Load",
@@ -2997,7 +3195,9 @@ const PRODUCTS = [
     model: "WD90F22BCSNQ",
     category: "laundry",
     image: "/img/products/africa-en-wd6000t-wd22t6500gvco-wd21t6300gv-nq-400244833.webp.webp",
-    images: ["/img/products/africa-en-wd6000t-wd22t6500gvco-wd21t6300gv-nq-400244833.webp.webp"],
+    images: [
+      "/img/products/africa-en-wd6000t-wd22t6500gvco-wd21t6300gv-nq-400244833.webp.webp"
+    ],
     price: 26999,
     oldPrice: null,
     discount: 0,
@@ -3023,7 +3223,9 @@ const PRODUCTS = [
     model: "WD21T6300GV/NQ",
     category: "laundry",
     image: "/img/products/africa-en-wd6000t-wd22t6500gvco-wd21t6300gv-nq-400244833.webp.webp",
-    images: ["/img/products/africa-en-wd6000t-wd22t6500gvco-wd21t6300gv-nq-400244833.webp.webp"],
+    images: [
+      "/img/products/africa-en-wd6000t-wd22t6500gvco-wd21t6300gv-nq-400244833.webp.webp"
+    ],
     price: 25299,
     oldPrice: null,
     discount: 0,
@@ -3035,7 +3237,7 @@ const PRODUCTS = [
       "samsung",
       "laundry"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 21 KG WASH / 12 KG DRY WASHING MACHINES - WASHER & DRYER. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "21 KG WASH / 12 KG DRY",
@@ -3050,7 +3252,9 @@ const PRODUCTS = [
     model: "WD17T6300GP/SP",
     category: "laundry",
     image: "/img/products/my-wd6000t-wd22t6500gvco-431584-wd17t6300gp-sp-533231073.jpg",
-    images: ["/img/products/my-wd6000t-wd22t6500gvco-431584-wd17t6300gp-sp-533231073.jpg"],
+    images: [
+      "/img/products/my-wd6000t-wd22t6500gvco-431584-wd17t6300gp-sp-533231073.jpg"
+    ],
     price: 21799,
     oldPrice: null,
     discount: 0,
@@ -3062,7 +3266,7 @@ const PRODUCTS = [
       "samsung",
       "laundry"
     ],
-    badge: "hot",
+    badge: "",
     description: "Samsung 17 KGS WASH / 10 KGS DRY WASHING MACHINES - WASHER & DRYER. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "17 KGS WASH / 10 KGS DRY",
@@ -3077,7 +3281,9 @@ const PRODUCTS = [
     model: "WD12T504DBN/NQ",
     category: "laundry",
     image: "/img/products/AE7XSamsung-WASHER-DRYER-WD70J5410AX-NQ-7-KG-WASH-5-KG-DRY.png",
-    images: ["/img/products/AE7XSamsung-WASHER-DRYER-WD70J5410AX-NQ-7-KG-WASH-5-KG-DRY.png"],
+    images: [
+      "/img/products/AE7XSamsung-WASHER-DRYER-WD70J5410AX-NQ-7-KG-WASH-5-KG-DRY.png"
+    ],
     price: 20899,
     oldPrice: null,
     discount: 0,
@@ -3103,7 +3309,9 @@ const PRODUCTS = [
     model: "WD11DB7B85GBNQ",
     category: "laundry",
     image: "/img/products/wasl.jpg",
-    images: ["/img/products/wasl.jpg"],
+    images: [
+      "/img/products/wasl.jpg"
+    ],
     price: 15799,
     oldPrice: null,
     discount: 0,
@@ -3129,7 +3337,9 @@ const PRODUCTS = [
     model: "WW12BB944DGMNQ",
     category: "fridge",
     image: "/img/products/2-16-jpg.webp",
-    images: ["/img/products/2-16-jpg.webp"],
+    images: [
+      "/img/products/2-16-jpg.webp"
+    ],
     price: 17499,
     oldPrice: null,
     discount: 0,
@@ -3141,7 +3351,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 12 KG BESPOKE - WASHING MACHINES. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "12 KG",
@@ -3156,7 +3366,9 @@ const PRODUCTS = [
     model: "WD12BB944DGBNQ",
     category: "fridge",
     image: "/img/products/11.jpg",
-    images: ["/img/products/11.jpg"],
+    images: [
+      "/img/products/11.jpg"
+    ],
     price: 20099,
     oldPrice: null,
     discount: 0,
@@ -3168,7 +3380,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 12KG WASH/ 7KG DRY BESPOKE - WASHING MACHINES. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "12KG WASH/ 7KG DRY",
@@ -3183,7 +3395,9 @@ const PRODUCTS = [
     model: "WD25DB8995BZNQ",
     category: "fridge",
     image: "/img/products/WD25DB8995BZNQ.png",
-    images: ["/img/products/WD25DB8995BZNQ.png"],
+    images: [
+      "/img/products/WD25DB8995BZNQ.png"
+    ],
     price: 49699,
     oldPrice: null,
     discount: 0,
@@ -3195,7 +3409,7 @@ const PRODUCTS = [
       "samsung",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "Samsung 25KG WASH / 15KGS DRY BESPOKE - WASHING MACHINES. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "25KG WASH / 15KGS DRY",
@@ -3210,7 +3424,9 @@ const PRODUCTS = [
     model: "MG30T5018AK/EF",
     category: "kitchen",
     image: "/img/products/MG30T5018AKEF-FRONT-2.png",
-    images: ["/img/products/MG30T5018AKEF-FRONT-2.png"],
+    images: [
+      "/img/products/MG30T5018AKEF-FRONT-2.png"
+    ],
     price: 3299,
     oldPrice: null,
     discount: 0,
@@ -3224,7 +3440,7 @@ const PRODUCTS = [
     ],
     description: "Samsung MG30T5018AK/EF MICROWAVES - GRILL. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "MG30T5018AK/EF",
+      Size/Capacity: "MG30T5018AK/EF",
       Model: "MG30T5018AK/EF"
     }
   },
@@ -3236,7 +3452,9 @@ const PRODUCTS = [
     model: "MG32DG4524AGSG",
     category: "kitchen",
     image: "/img/products/MG32DG4524AGSG.png",
-    images: ["/img/products/MG32DG4524AGSG.png"],
+    images: [
+      "/img/products/MG32DG4524AGSG.png"
+    ],
     price: 3499,
     oldPrice: null,
     discount: 0,
@@ -3261,7 +3479,9 @@ const PRODUCTS = [
     model: "32S5K",
     category: "tv",
     image: "/img/products/32s5k_brandjpg",
-    images: ["/img/products/32s5k_brandjpg"],
+    images: [
+      "/img/products/32s5k_brandjpg"
+    ],
     price: 2799,
     oldPrice: null,
     discount: 0,
@@ -3274,10 +3494,10 @@ const PRODUCTS = [
       "tv",
       "qled"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 32\" QLED 2K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "32\"",
+      Screen Size: "32\"",
       Resolution: "QLED 4K",
       Model: "32S5K"
     }
@@ -3290,7 +3510,9 @@ const PRODUCTS = [
     model: "43S5K",
     category: "tv",
     image: "/img/products/43s5k_brandjpg",
-    images: ["/img/products/43s5k_brandjpg"],
+    images: [
+      "/img/products/43s5k_brandjpg"
+    ],
     price: 4199,
     oldPrice: null,
     discount: 0,
@@ -3303,10 +3525,10 @@ const PRODUCTS = [
       "tv",
       "qled"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 43\" QLED 2K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "43\"",
+      Screen Size: "43\"",
       Resolution: "QLED 4K",
       Model: "43S5K"
     }
@@ -3319,7 +3541,9 @@ const PRODUCTS = [
     model: "50S5K",
     category: "tv",
     image: "/img/products/50s5k_brandjpg",
-    images: ["/img/products/50s5k_brandjpg"],
+    images: [
+      "/img/products/50s5k_brandjpg"
+    ],
     price: 4499,
     oldPrice: null,
     discount: 0,
@@ -3334,7 +3558,7 @@ const PRODUCTS = [
     ],
     description: "TCL 50'' QLED 2K. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "50''",
+      Screen Size: "50''",
       Resolution: "QLED 4K",
       Model: "50S5K"
     }
@@ -3347,7 +3571,9 @@ const PRODUCTS = [
     model: "55P6K",
     category: "tv",
     image: "/img/products/Tcl-75″-UHD-4K-Smart-Andriod-Television-75P6K-FRONT.png",
-    images: ["/img/products/Tcl-75″-UHD-4K-Smart-Andriod-Television-75P6K-FRONT.png"],
+    images: [
+      "/img/products/Tcl-75″-UHD-4K-Smart-Andriod-Television-75P6K-FRONT.png"
+    ],
     price: 7099,
     oldPrice: null,
     discount: 0,
@@ -3361,12 +3587,12 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 55\" UHD SMART TVS. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "55\"",
+      Screen Size: "55\"",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "55P6K"
     }
   },
@@ -3378,7 +3604,9 @@ const PRODUCTS = [
     model: "55P755",
     category: "tv",
     image: "/img/products/TCL-65P635-1-jpg.webp",
-    images: ["/img/products/TCL-65P635-1-jpg.webp"],
+    images: [
+      "/img/products/TCL-65P635-1-jpg.webp"
+    ],
     price: 8299,
     oldPrice: null,
     discount: 0,
@@ -3392,12 +3620,12 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 55'' UHD SMART TVS. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "55''",
+      Screen Size: "55''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "55P755"
     }
   },
@@ -3409,7 +3637,9 @@ const PRODUCTS = [
     model: "65P755",
     category: "tv",
     image: "/img/products/65p755_brandjpg",
-    images: ["/img/products/65p755_brandjpg"],
+    images: [
+      "/img/products/65p755_brandjpg"
+    ],
     price: 10499,
     oldPrice: null,
     discount: 0,
@@ -3423,12 +3653,12 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 65'' UHD SMART TVS. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "65''",
+      Screen Size: "65''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "65P755"
     }
   },
@@ -3440,7 +3670,9 @@ const PRODUCTS = [
     model: "75P6K",
     category: "tv",
     image: "/img/products/Tcl-75″-UHD-4K-Smart-Andriod-Television-75P6K-FRONT.png",
-    images: ["/img/products/Tcl-75″-UHD-4K-Smart-Andriod-Television-75P6K-FRONT.png"],
+    images: [
+      "/img/products/Tcl-75″-UHD-4K-Smart-Andriod-Television-75P6K-FRONT.png"
+    ],
     price: 16599,
     oldPrice: null,
     discount: 0,
@@ -3454,12 +3686,12 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 75'' UHD SMART TVS. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "75''",
+      Screen Size: "75''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "75P6K"
     }
   },
@@ -3471,7 +3703,9 @@ const PRODUCTS = [
     model: "75P755",
     category: "tv",
     image: "/img/products/75p755_brandjpg",
-    images: ["/img/products/75p755_brandjpg"],
+    images: [
+      "/img/products/75p755_brandjpg"
+    ],
     price: 16599,
     oldPrice: null,
     discount: 0,
@@ -3485,12 +3719,12 @@ const PRODUCTS = [
       "smart",
       "4k"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 75'' UHD SMART TVS. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "75''",
+      Screen Size: "75''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "75P755"
     }
   },
@@ -3502,7 +3736,9 @@ const PRODUCTS = [
     model: "50P7K",
     category: "tv",
     image: "/img/products/121-jpg.webp",
-    images: ["/img/products/121-jpg.webp"],
+    images: [
+      "/img/products/121-jpg.webp"
+    ],
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -3517,12 +3753,12 @@ const PRODUCTS = [
       "4k",
       "qled"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 50\" QLED PRO 4K SMART ANDROID. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "50\"",
+      Screen Size: "50\"",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "50P7K"
     }
   },
@@ -3534,7 +3770,9 @@ const PRODUCTS = [
     model: "55P7K",
     category: "tv",
     image: "/img/products/55P7K-SIDE-1.png",
-    images: ["/img/products/55P7K-SIDE-1.png"],
+    images: [
+      "/img/products/55P7K-SIDE-1.png"
+    ],
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -3549,12 +3787,12 @@ const PRODUCTS = [
       "4k",
       "qled"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 55'' QLED PRO 4K SMART ANDROID. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "55''",
+      Screen Size: "55''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "55P7K"
     }
   },
@@ -3566,7 +3804,9 @@ const PRODUCTS = [
     model: "65P7K",
     category: "tv",
     image: "/img/products/TCL-TV-QLED-GOOGLE-65-AIPQ-PROCESSOR-65P7K-FRONT.png",
-    images: ["/img/products/TCL-TV-QLED-GOOGLE-65-AIPQ-PROCESSOR-65P7K-FRONT.png"],
+    images: [
+      "/img/products/TCL-TV-QLED-GOOGLE-65-AIPQ-PROCESSOR-65P7K-FRONT.png"
+    ],
     price: 12299,
     oldPrice: null,
     discount: 0,
@@ -3581,12 +3821,12 @@ const PRODUCTS = [
       "4k",
       "qled"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 65'' QLED PRO 4K SMART ANDROID. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "65''",
+      Screen Size: "65''",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "65P7K"
     }
   },
@@ -3598,7 +3838,9 @@ const PRODUCTS = [
     model: "75P7K",
     category: "tv",
     image: "/img/products/75p7k_brandjpg",
-    images: ["/img/products/75p7k_brandjpg"],
+    images: [
+      "/img/products/75p7k_brandjpg"
+    ],
     price: 19199,
     oldPrice: null,
     discount: 0,
@@ -3613,11 +3855,11 @@ const PRODUCTS = [
       "4k",
       "qled"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL QLED PRO 4K SMART ANDROID. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "75P7K"
     }
   },
@@ -3629,7 +3871,9 @@ const PRODUCTS = [
     model: "85P8K",
     category: "tv",
     image: "/img/products/85p8k_brandjpg",
-    images: ["/img/products/85p8k_brandjpg"],
+    images: [
+      "/img/products/85p8k_brandjpg"
+    ],
     price: 28799,
     oldPrice: null,
     discount: 0,
@@ -3644,12 +3888,12 @@ const PRODUCTS = [
       "4k",
       "qled"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 85\" QLED PRO 4K SMART ANDROID. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "85\"",
+      Screen Size: "85\"",
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "85P8K"
     }
   },
@@ -3661,7 +3905,9 @@ const PRODUCTS = [
     model: "98P8k",
     category: "tv",
     image: "/img/products/98P8K.png",
-    images: ["/img/products/98P8K.png"],
+    images: [
+      "/img/products/98P8K.png"
+    ],
     price: 49999,
     oldPrice: null,
     discount: 0,
@@ -3676,11 +3922,11 @@ const PRODUCTS = [
       "4k",
       "qled"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL QLED PRO 4K SMART ANDROID. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
       Resolution: "4K UHD",
-      "Smart TV": "Yes",
+      Smart TV: "Yes",
       Model: "98P8k"
     }
   },
@@ -3692,7 +3938,9 @@ const PRODUCTS = [
     model: "65C6K",
     category: "tv",
     image: "/img/products/75C755-front-jpg.webp",
-    images: ["/img/products/75C755-front-jpg.webp"],
+    images: [
+      "/img/products/75C755-front-jpg.webp"
+    ],
     price: 15799,
     oldPrice: null,
     discount: 0,
@@ -3705,10 +3953,10 @@ const PRODUCTS = [
       "tv",
       "4k"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 65\" QD-Mini LED 4K TV. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "65\"",
+      Screen Size: "65\"",
       Resolution: "4K UHD",
       Model: "65C6K"
     }
@@ -3721,7 +3969,9 @@ const PRODUCTS = [
     model: "75C6K",
     category: "tv",
     image: "/img/products/TCL-TV-QLED-75-QD-MINI-LED-ONKYO-75C6K-FRONT.png",
-    images: ["/img/products/TCL-TV-QLED-75-QD-MINI-LED-ONKYO-75C6K-FRONT.png"],
+    images: [
+      "/img/products/TCL-TV-QLED-75-QD-MINI-LED-ONKYO-75C6K-FRONT.png"
+    ],
     price: 27899,
     oldPrice: null,
     discount: 0,
@@ -3734,10 +3984,10 @@ const PRODUCTS = [
       "tv",
       "4k"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 75\" QD-Mini LED 4K TV. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "75\"",
+      Screen Size: "75\"",
       Resolution: "4K UHD",
       Model: "75C6K"
     }
@@ -3750,7 +4000,9 @@ const PRODUCTS = [
     model: "85C6K",
     category: "tv",
     image: "/img/products/85c6k_brandjpg",
-    images: ["/img/products/85c6k_brandjpg"],
+    images: [
+      "/img/products/85c6k_brandjpg"
+    ],
     price: 37499,
     oldPrice: null,
     discount: 0,
@@ -3763,10 +4015,10 @@ const PRODUCTS = [
       "tv",
       "4k"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 85\" QD-Mini LED 4K TV. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "85\"",
+      Screen Size: "85\"",
       Resolution: "4K UHD",
       Model: "85C6K"
     }
@@ -3779,7 +4031,9 @@ const PRODUCTS = [
     model: "98C6K",
     category: "tv",
     image: "/img/products/98c6k_brandjpg",
-    images: ["/img/products/98c6k_brandjpg"],
+    images: [
+      "/img/products/98c6k_brandjpg"
+    ],
     price: 78299,
     oldPrice: null,
     discount: 0,
@@ -3792,10 +4046,10 @@ const PRODUCTS = [
       "tv",
       "4k"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 98\" QD-Mini LED 4K TV. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "98\"",
+      Screen Size: "98\"",
       Resolution: "4K UHD",
       Model: "98C6K"
     }
@@ -3808,7 +4062,9 @@ const PRODUCTS = [
     model: "115X955",
     category: "tv",
     image: "/img/products/115X955.jpg.jpeg",
-    images: ["/img/products/115X955.jpg.jpeg"],
+    images: [
+      "/img/products/115X955.jpg.jpeg"
+    ],
     price: 434699,
     oldPrice: null,
     discount: 0,
@@ -3821,10 +4077,10 @@ const PRODUCTS = [
       "tv",
       "4k"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 115'' QD-Mini LED 4K TV. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "115''",
+      Screen Size: "115''",
       Resolution: "4K UHD",
       Model: "115X955"
     }
@@ -3837,7 +4093,9 @@ const PRODUCTS = [
     model: "115C7K",
     category: "tv",
     image: "/img/products/115C7K.png",
-    images: ["/img/products/115C7K.png"],
+    images: [
+      "/img/products/115C7K.png"
+    ],
     price: 299999,
     oldPrice: null,
     discount: 0,
@@ -3850,10 +4108,10 @@ const PRODUCTS = [
       "tv",
       "4k"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 115'' QD-Mini LED 4K TV. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "115''",
+      Screen Size: "115''",
       Resolution: "4K UHD",
       Model: "115C7K"
     }
@@ -3866,7 +4124,9 @@ const PRODUCTS = [
     model: "27R73Q",
     category: "tv",
     image: "/img/products/TCL-27_-HDR-PROFESSIONAL-MONITOR-27R73Q-SIDE.png",
-    images: ["/img/products/TCL-27_-HDR-PROFESSIONAL-MONITOR-27R73Q-SIDE.png"],
+    images: [
+      "/img/products/TCL-27_-HDR-PROFESSIONAL-MONITOR-27R73Q-SIDE.png"
+    ],
     price: 11699,
     oldPrice: null,
     discount: 0,
@@ -3878,10 +4138,10 @@ const PRODUCTS = [
       "tcl",
       "tv"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 27'' CURVED -GAMING MONITORS. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "27''",
+      Screen Size: "27''",
       Model: "27R73Q"
     }
   },
@@ -3893,7 +4153,9 @@ const PRODUCTS = [
     model: "34R83Q",
     category: "tv",
     image: "/img/products/TCL-34__-HDR-PROFESSIONAL-MONITOR-34R83Q-FRONT.png",
-    images: ["/img/products/TCL-34__-HDR-PROFESSIONAL-MONITOR-34R83Q-FRONT.png"],
+    images: [
+      "/img/products/TCL-34__-HDR-PROFESSIONAL-MONITOR-34R83Q-FRONT.png"
+    ],
     price: 16599,
     oldPrice: null,
     discount: 0,
@@ -3905,10 +4167,10 @@ const PRODUCTS = [
       "tcl",
       "tv"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 34'' CURVED -GAMING MONITORS. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
-      "Screen Size": "34''",
+      Screen Size: "34''",
       Model: "34R83Q"
     }
   },
@@ -3920,7 +4182,9 @@ const PRODUCTS = [
     model: "S45H",
     category: "tv",
     image: "/img/products/TS8111-GHA-1-jpg.webp",
-    images: ["/img/products/TS8111-GHA-1-jpg.webp"],
+    images: [
+      "/img/products/TS8111-GHA-1-jpg.webp"
+    ],
     price: 1799,
     oldPrice: null,
     discount: 0,
@@ -3932,7 +4196,7 @@ const PRODUCTS = [
       "tcl",
       "tv"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 100W SOUND BAR. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
       Model: "S45H"
@@ -3946,7 +4210,9 @@ const PRODUCTS = [
     model: "S55H",
     category: "tv",
     image: "/img/products/s55h_brandjpg",
-    images: ["/img/products/s55h_brandjpg"],
+    images: [
+      "/img/products/s55h_brandjpg"
+    ],
     price: 2699,
     oldPrice: null,
     discount: 0,
@@ -3958,7 +4224,7 @@ const PRODUCTS = [
       "tcl",
       "tv"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 220W SOUND BAR. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
       Model: "S55H"
@@ -3972,7 +4238,9 @@ const PRODUCTS = [
     model: "Q65H",
     category: "tv",
     image: "/img/products/q65h_brandjpg",
-    images: ["/img/products/q65h_brandjpg"],
+    images: [
+      "/img/products/q65h_brandjpg"
+    ],
     price: 5399,
     oldPrice: null,
     discount: 0,
@@ -3984,7 +4252,7 @@ const PRODUCTS = [
       "tcl",
       "tv"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 580 W SOUND BAR. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
       Model: "Q65H"
@@ -3998,7 +4266,9 @@ const PRODUCTS = [
     model: "Q75H",
     category: "tv",
     image: "/img/products/q75h_brandjpg",
-    images: ["/img/products/q75h_brandjpg"],
+    images: [
+      "/img/products/q75h_brandjpg"
+    ],
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -4010,7 +4280,7 @@ const PRODUCTS = [
       "tcl",
       "tv"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 620 W SOUND BAR. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
       Model: "Q75H"
@@ -4024,7 +4294,9 @@ const PRODUCTS = [
     model: "Q85H",
     category: "tv",
     image: "/img/products/q85h_brandjpg",
-    images: ["/img/products/q85h_brandjpg"],
+    images: [
+      "/img/products/q85h_brandjpg"
+    ],
     price: 10799,
     oldPrice: null,
     discount: 0,
@@ -4036,7 +4308,7 @@ const PRODUCTS = [
       "tcl",
       "tv"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 860 W SOUND BAR. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
       Model: "Q85H"
@@ -4050,7 +4322,9 @@ const PRODUCTS = [
     model: "TP200K",
     category: "tv",
     image: "/img/products/TP200K.png",
-    images: ["/img/products/TP200K.png"],
+    images: [
+      "/img/products/TP200K.png"
+    ],
     price: 4499,
     oldPrice: null,
     discount: 0,
@@ -4062,7 +4336,7 @@ const PRODUCTS = [
       "tcl",
       "tv"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 220 W SOUND TOWER. Smart TV with digital satellite receiver, vibrant display and built-in streaming apps.",
     specs: {
       Model: "TP200K"
@@ -4076,7 +4350,9 @@ const PRODUCTS = [
     model: "TP300K",
     category: "tv",
     image: "/img/products/TP300K.png",
-    images: ["/img/products/TP300K.png"],
+    images: [
+      "/img/products/TP300K.png"
+    ],
     price: 6299,
     oldPrice: null,
     discount: 0,
@@ -4101,7 +4377,9 @@ const PRODUCTS = [
     model: "TY-LYR47W",
     category: "small",
     image: "/img/products/ty-lyr47w_brandjpg",
-    images: ["/img/products/ty-lyr47w_brandjpg"],
+    images: [
+      "/img/products/ty-lyr47w_brandjpg"
+    ],
     price: 1899,
     oldPrice: null,
     discount: 0,
@@ -4113,10 +4391,10 @@ const PRODUCTS = [
       "tcl",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 2 TAP COMPRESSOR COOLING. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "2 TAP",
+      Size/Capacity: "2 TAP",
       Model: "TY-LYR47W"
     }
   },
@@ -4128,7 +4406,9 @@ const PRODUCTS = [
     model: "TY-LWYR109W",
     category: "small",
     image: "/img/products/ty-lwyr109w_brandjpg",
-    images: ["/img/products/ty-lwyr109w_brandjpg"],
+    images: [
+      "/img/products/ty-lwyr109w_brandjpg"
+    ],
     price: 2099,
     oldPrice: null,
     discount: 0,
@@ -4140,10 +4420,10 @@ const PRODUCTS = [
       "tcl",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 3 TAPS COMPRESSOR COOLING. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "3 TAPS",
+      Size/Capacity: "3 TAPS",
       Model: "TY-LWYR109W"
     }
   },
@@ -4155,7 +4435,9 @@ const PRODUCTS = [
     model: "TY-LWYR107T",
     category: "small",
     image: "/img/products/ty-lwyr107t_brandjpg",
-    images: ["/img/products/ty-lwyr107t_brandjpg"],
+    images: [
+      "/img/products/ty-lwyr107t_brandjpg"
+    ],
     price: 2699,
     oldPrice: null,
     discount: 0,
@@ -4167,10 +4449,10 @@ const PRODUCTS = [
       "tcl",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 3 TAPS COMPRESSOR COOLING. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "3 TAPS",
+      Size/Capacity: "3 TAPS",
       Model: "TY-LWYR107T"
     }
   },
@@ -4182,7 +4464,9 @@ const PRODUCTS = [
     model: "TAC-12CSD/ZG11",
     category: "ac",
     image: "/img/products/tac-12csd_zg11_brandjpg",
-    images: ["/img/products/tac-12csd_zg11_brandjpg"],
+    images: [
+      "/img/products/tac-12csd_zg11_brandjpg"
+    ],
     price: 3999,
     oldPrice: null,
     discount: 0,
@@ -4209,7 +4493,9 @@ const PRODUCTS = [
     model: "TAC-18CSD/ZG11",
     category: "ac",
     image: "/img/products/tac-18csd_zg11_brandjpg",
-    images: ["/img/products/tac-18csd_zg11_brandjpg"],
+    images: [
+      "/img/products/tac-18csd_zg11_brandjpg"
+    ],
     price: 5999,
     oldPrice: null,
     discount: 0,
@@ -4236,7 +4522,9 @@ const PRODUCTS = [
     model: "TAC-12CSD/XA73I",
     category: "ac",
     image: "/img/products/TCL-FreshIN-3.0-TAC-18CSD_FCI-FRONT.png",
-    images: ["/img/products/TCL-FreshIN-3.0-TAC-18CSD_FCI-FRONT.png"],
+    images: [
+      "/img/products/TCL-FreshIN-3.0-TAC-18CSD_FCI-FRONT.png"
+    ],
     price: 5499,
     oldPrice: null,
     discount: 0,
@@ -4249,7 +4537,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 1.5 HP SPLIT INVERTER R32 GAS. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.5 HP",
@@ -4266,7 +4554,9 @@ const PRODUCTS = [
     model: "TAC-12CSA/XA82I",
     category: "ac",
     image: "/img/products/TCL-SPLIT-INVERTER-R410-AIR-CONDITIONER-2.0HP-TAC-18CSAXA821-FRONT-jpg.webp",
-    images: ["/img/products/TCL-SPLIT-INVERTER-R410-AIR-CONDITIONER-2.0HP-TAC-18CSAXA821-FRONT-jpg.webp"],
+    images: [
+      "/img/products/TCL-SPLIT-INVERTER-R410-AIR-CONDITIONER-2.0HP-TAC-18CSAXA821-FRONT-jpg.webp"
+    ],
     price: 7099,
     oldPrice: null,
     discount: 0,
@@ -4279,7 +4569,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 1.5 HP SPLIT INVERTER R410 GAS- Black MIRROR. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.5 HP",
@@ -4296,7 +4586,9 @@ const PRODUCTS = [
     model: "TAC-18CSA/XA82I",
     category: "ac",
     image: "/img/products/tac-18csa_xa82i_brandjpg",
-    images: ["/img/products/tac-18csa_xa82i_brandjpg"],
+    images: [
+      "/img/products/tac-18csa_xa82i_brandjpg"
+    ],
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -4309,7 +4601,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 2.0 HP SPLIT INVERTER R410 GAS- Black MIRROR. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.0 HP",
@@ -4326,7 +4618,9 @@ const PRODUCTS = [
     model: "TAC-24CSA/XA82I",
     category: "ac",
     image: "/img/products/tac-24csa_xa82i_brandjpg",
-    images: ["/img/products/tac-24csa_xa82i_brandjpg"],
+    images: [
+      "/img/products/tac-24csa_xa82i_brandjpg"
+    ],
     price: 11799,
     oldPrice: null,
     discount: 0,
@@ -4339,7 +4633,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 2.5 HP SPLIT INVERTER R410 GAS- Black MIRROR. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.5 HP",
@@ -4356,7 +4650,9 @@ const PRODUCTS = [
     model: "TAC-12CSD/FCI",
     category: "ac",
     image: "/img/products/tac-12csd_fci_brandjpg",
-    images: ["/img/products/tac-12csd_fci_brandjpg"],
+    images: [
+      "/img/products/tac-12csd_fci_brandjpg"
+    ],
     price: 7299,
     oldPrice: null,
     discount: 0,
@@ -4385,7 +4681,9 @@ const PRODUCTS = [
     model: "TAC-18CSD/FCI",
     category: "ac",
     image: "/img/products/tac-18csd_fci_brandjpg",
-    images: ["/img/products/tac-18csd_fci_brandjpg"],
+    images: [
+      "/img/products/tac-18csd_fci_brandjpg"
+    ],
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -4414,7 +4712,9 @@ const PRODUCTS = [
     model: "TAC-12CSA/TPH11I",
     category: "ac",
     image: "/img/products/tac-12csa_tph11i_brandjpg",
-    images: ["/img/products/tac-12csa_tph11i_brandjpg"],
+    images: [
+      "/img/products/tac-12csa_tph11i_brandjpg"
+    ],
     price: 5499,
     oldPrice: null,
     discount: 0,
@@ -4427,7 +4727,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 1.5 HP SPLIT INVERTER R410 GAS- BREEZE IN WHITE. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.5 HP",
@@ -4444,7 +4744,9 @@ const PRODUCTS = [
     model: "TAC-18CSA/TPH11I",
     category: "ac",
     image: "/img/products/tac-18csa_tph11i_brandjpg",
-    images: ["/img/products/tac-18csa_tph11i_brandjpg"],
+    images: [
+      "/img/products/tac-18csa_tph11i_brandjpg"
+    ],
     price: 8299,
     oldPrice: null,
     discount: 0,
@@ -4457,7 +4759,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 2.0 HP SPLIT INVERTER R410 GAS- BREEZE IN WHITE. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.0 HP",
@@ -4474,7 +4776,9 @@ const PRODUCTS = [
     model: "TAC-24CSA/TPH11I",
     category: "ac",
     image: "/img/products/tac-24csa_tph11i_brandjpg",
-    images: ["/img/products/tac-24csa_tph11i_brandjpg"],
+    images: [
+      "/img/products/tac-24csa_tph11i_brandjpg"
+    ],
     price: 11399,
     oldPrice: null,
     discount: 0,
@@ -4487,7 +4791,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 2.5 HP SPLIT INVERTER R410 GAS- BREEZE IN WHITE. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.5 HP",
@@ -4504,7 +4808,9 @@ const PRODUCTS = [
     model: "TAC-18CFD/MCI",
     category: "ac",
     image: "/img/products/TCL-ROUND-FLOOR-STANDING-AC-R32-2.5-TAC-24CFD-MCI-FRONT-jpg.webp",
-    images: ["/img/products/TCL-ROUND-FLOOR-STANDING-AC-R32-2.5-TAC-24CFD-MCI-FRONT-jpg.webp"],
+    images: [
+      "/img/products/TCL-ROUND-FLOOR-STANDING-AC-R32-2.5-TAC-24CFD-MCI-FRONT-jpg.webp"
+    ],
     price: 12699,
     oldPrice: null,
     discount: 0,
@@ -4517,7 +4823,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 2.0 HP ROUND FLOOR STANDING INVERTER - R32 GAS. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.0 HP",
@@ -4534,7 +4840,9 @@ const PRODUCTS = [
     model: "TAC-24CFD/V7I",
     category: "small",
     image: "/img/products/tac-24cfd_v7i_brandjpg",
-    images: ["/img/products/tac-24cfd_v7i_brandjpg"],
+    images: [
+      "/img/products/tac-24cfd_v7i_brandjpg"
+    ],
     price: 12999,
     oldPrice: null,
     discount: 0,
@@ -4549,7 +4857,7 @@ const PRODUCTS = [
     ],
     description: "TCL 2.5 HP FLOOR STANDING INVERTER  R32 GAS. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "2.5 HP",
+      Size/Capacity: "2.5 HP",
       Model: "TAC-24CFD/V7I"
     }
   },
@@ -4561,7 +4869,9 @@ const PRODUCTS = [
     model: "TCC-24CHRA/DV(02)",
     category: "ac",
     image: "/img/products/tcc-24chra_dv_02__brandjpg",
-    images: ["/img/products/tcc-24chra_dv_02__brandjpg"],
+    images: [
+      "/img/products/tcc-24chra_dv_02__brandjpg"
+    ],
     price: 14999,
     oldPrice: null,
     discount: 0,
@@ -4590,7 +4900,9 @@ const PRODUCTS = [
     model: "TCC-36CHRA/DV(02)",
     category: "ac",
     image: "/img/products/tcc-36chra_dv_02__brandjpg",
-    images: ["/img/products/tcc-36chra_dv_02__brandjpg"],
+    images: [
+      "/img/products/tcc-36chra_dv_02__brandjpg"
+    ],
     price: 16999,
     oldPrice: null,
     discount: 0,
@@ -4619,7 +4931,9 @@ const PRODUCTS = [
     model: "TCC-48CHRA/DV7(02)",
     category: "ac",
     image: "/img/products/tcc-48chra_dv7_02__brandjpg",
-    images: ["/img/products/tcc-48chra_dv7_02__brandjpg"],
+    images: [
+      "/img/products/tcc-48chra_dv7_02__brandjpg"
+    ],
     price: 24999,
     oldPrice: null,
     discount: 0,
@@ -4648,7 +4962,9 @@ const PRODUCTS = [
     model: "TCC-60CHRA/DV7(02)",
     category: "ac",
     image: "/img/products/tcc-60chra_dv7_02__brandjpg",
-    images: ["/img/products/tcc-60chra_dv7_02__brandjpg"],
+    images: [
+      "/img/products/tcc-60chra_dv7_02__brandjpg"
+    ],
     price: 29999,
     oldPrice: null,
     discount: 0,
@@ -4677,7 +4993,9 @@ const PRODUCTS = [
     model: "TCC-36ZHRA/DV(02)",
     category: "ac",
     image: "/img/products/tcc-36zhra_dv_02__brandjpg",
-    images: ["/img/products/tcc-36zhra_dv_02__brandjpg"],
+    images: [
+      "/img/products/tcc-36zhra_dv_02__brandjpg"
+    ],
     price: 15999,
     oldPrice: null,
     discount: 0,
@@ -4704,7 +5022,9 @@ const PRODUCTS = [
     model: "F117SDS",
     category: "fridge",
     image: "/img/products/TCL-SINGLE-DOOR-REFRIGERATOR-F117SDS-FRONT.png",
-    images: ["/img/products/TCL-SINGLE-DOOR-REFRIGERATOR-F117SDS-FRONT.png"],
+    images: [
+      "/img/products/TCL-SINGLE-DOOR-REFRIGERATOR-F117SDS-FRONT.png"
+    ],
     price: 2199,
     oldPrice: null,
     discount: 0,
@@ -4730,7 +5050,9 @@ const PRODUCTS = [
     model: "F152TMS",
     category: "fridge",
     image: "/img/products/f152tms_brandjpg",
-    images: ["/img/products/f152tms_brandjpg"],
+    images: [
+      "/img/products/f152tms_brandjpg"
+    ],
     price: 2999,
     oldPrice: null,
     discount: 0,
@@ -4742,7 +5064,7 @@ const PRODUCTS = [
       "tcl",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 117 L SINGLE DOOR. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "117 L",
@@ -4757,7 +5079,9 @@ const PRODUCTS = [
     model: "F216TMS",
     category: "fridge",
     image: "/img/products/f216tms_brandjpg",
-    images: ["/img/products/f216tms_brandjpg"],
+    images: [
+      "/img/products/f216tms_brandjpg"
+    ],
     price: 3999,
     oldPrice: null,
     discount: 0,
@@ -4769,7 +5093,7 @@ const PRODUCTS = [
       "tcl",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 165 L SINGLE DOOR. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "165 L",
@@ -4784,7 +5108,9 @@ const PRODUCTS = [
     model: "P540TMGWD",
     category: "fridge",
     image: "/img/products/P540TMGWD-FRONT.png",
-    images: ["/img/products/P540TMGWD-FRONT.png"],
+    images: [
+      "/img/products/P540TMGWD-FRONT.png"
+    ],
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -4810,7 +5136,9 @@ const PRODUCTS = [
     model: "P826TMN",
     category: "fridge",
     image: "/img/products/p826tmn_brandjpg",
-    images: ["/img/products/p826tmn_brandjpg"],
+    images: [
+      "/img/products/p826tmn_brandjpg"
+    ],
     price: 11999,
     oldPrice: null,
     discount: 0,
@@ -4836,7 +5164,9 @@ const PRODUCTS = [
     model: "F141BFS",
     category: "fridge",
     image: "/img/products/2-8-jpg.webp",
-    images: ["/img/products/2-8-jpg.webp"],
+    images: [
+      "/img/products/2-8-jpg.webp"
+    ],
     price: 2799,
     oldPrice: null,
     discount: 0,
@@ -4863,7 +5193,9 @@ const PRODUCTS = [
     model: "F185BFS",
     category: "fridge",
     image: "/img/products/f185bfs_brandjpg",
-    images: ["/img/products/f185bfs_brandjpg"],
+    images: [
+      "/img/products/f185bfs_brandjpg"
+    ],
     price: 3299,
     oldPrice: null,
     discount: 0,
@@ -4890,7 +5222,9 @@ const PRODUCTS = [
     model: "F410BFS",
     category: "fridge",
     image: "/img/products/TCL-309L-Bottom-Mount-Fridge-F410BFS-Front.png",
-    images: ["/img/products/TCL-309L-Bottom-Mount-Fridge-F410BFS-Front.png"],
+    images: [
+      "/img/products/TCL-309L-Bottom-Mount-Fridge-F410BFS-Front.png"
+    ],
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -4902,7 +5236,7 @@ const PRODUCTS = [
       "tcl",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 309 L BOTTOM MOUNT. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "309 L",
@@ -4918,7 +5252,9 @@ const PRODUCTS = [
     model: "P575SBGWD",
     category: "fridge",
     image: "/img/products/187bbdf3-3150-441f-9264-51d8b166669e-jpg.webp",
-    images: ["/img/products/187bbdf3-3150-441f-9264-51d8b166669e-jpg.webp"],
+    images: [
+      "/img/products/187bbdf3-3150-441f-9264-51d8b166669e-jpg.webp"
+    ],
     price: 11499,
     oldPrice: null,
     discount: 0,
@@ -4946,7 +5282,9 @@ const PRODUCTS = [
     model: "P692SBNWD",
     category: "fridge",
     image: "/img/products/TCL-Side-By-Side-Refrigerator-P692SBNWD-FRONT.png",
-    images: ["/img/products/TCL-Side-By-Side-Refrigerator-P692SBNWD-FRONT.png"],
+    images: [
+      "/img/products/TCL-Side-By-Side-Refrigerator-P692SBNWD-FRONT.png"
+    ],
     price: 11999,
     oldPrice: null,
     discount: 0,
@@ -4959,7 +5297,7 @@ const PRODUCTS = [
       "fridge",
       "side-by-side"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 529  L SIDE BY SIDE. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "529  L",
@@ -4975,7 +5313,9 @@ const PRODUCTS = [
     model: "P692SBBG",
     category: "fridge",
     image: "/img/products/TCL-Side-By-Side-Refrigerator-P692SBBG-FRONT.png",
-    images: ["/img/products/TCL-Side-By-Side-Refrigerator-P692SBBG-FRONT.png"],
+    images: [
+      "/img/products/TCL-Side-By-Side-Refrigerator-P692SBBG-FRONT.png"
+    ],
     price: 11999,
     oldPrice: null,
     discount: 0,
@@ -5003,7 +5343,9 @@ const PRODUCTS = [
     model: "F208SDS",
     category: "small",
     image: "/img/products/F293SDS-FRONT.png",
-    images: ["/img/products/F293SDS-FRONT.png"],
+    images: [
+      "/img/products/F293SDS-FRONT.png"
+    ],
     price: 3999,
     oldPrice: null,
     discount: 0,
@@ -5017,7 +5359,7 @@ const PRODUCTS = [
     ],
     description: "TCL 168 L STANDING. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "168 L",
+      Size/Capacity: "168 L",
       Model: "F208SDS"
     }
   },
@@ -5029,7 +5371,9 @@ const PRODUCTS = [
     model: "F188CFSL",
     category: "fridge",
     image: "/img/products/TCL-Chest-Freezer-200Ltrs-Front.png",
-    images: ["/img/products/TCL-Chest-Freezer-200Ltrs-Front.png"],
+    images: [
+      "/img/products/TCL-Chest-Freezer-200Ltrs-Front.png"
+    ],
     price: 2999,
     oldPrice: null,
     discount: 0,
@@ -5041,7 +5385,7 @@ const PRODUCTS = [
       "tcl",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 145 L CHEST. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "145 L",
@@ -5057,7 +5401,9 @@ const PRODUCTS = [
     model: "F257CFSL",
     category: "fridge",
     image: "/img/products/f257cfsl_brandjpg",
-    images: ["/img/products/f257cfsl_brandjpg"],
+    images: [
+      "/img/products/f257cfsl_brandjpg"
+    ],
     price: 3399,
     oldPrice: null,
     discount: 0,
@@ -5084,7 +5430,9 @@ const PRODUCTS = [
     model: "F494CFSL",
     category: "fridge",
     image: "/img/products/TCL-308-Chest-Freezer-F494CFSL-SPECS-1.png",
-    images: ["/img/products/TCL-308-Chest-Freezer-F494CFSL-SPECS-1.png"],
+    images: [
+      "/img/products/TCL-308-Chest-Freezer-F494CFSL-SPECS-1.png"
+    ],
     price: 5499,
     oldPrice: null,
     discount: 0,
@@ -5111,7 +5459,9 @@ const PRODUCTS = [
     model: "F660CFSL",
     category: "fridge",
     image: "/img/products/f660cfsl_brandjpg",
-    images: ["/img/products/f660cfsl_brandjpg"],
+    images: [
+      "/img/products/f660cfsl_brandjpg"
+    ],
     price: 7999,
     oldPrice: null,
     discount: 0,
@@ -5138,7 +5488,9 @@ const PRODUCTS = [
     model: "F207TT",
     category: "laundry",
     image: "/img/products/3-13-jpg.webp",
-    images: ["/img/products/3-13-jpg.webp"],
+    images: [
+      "/img/products/3-13-jpg.webp"
+    ],
     price: 2299,
     oldPrice: null,
     discount: 0,
@@ -5150,7 +5502,7 @@ const PRODUCTS = [
       "tcl",
       "laundry"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 7 KG TWIN TOP. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "7 KG",
@@ -5166,7 +5518,9 @@ const PRODUCTS = [
     model: "F211TT",
     category: "laundry",
     image: "/img/products/F211TT_front.png",
-    images: ["/img/products/F211TT_front.png"],
+    images: [
+      "/img/products/F211TT_front.png"
+    ],
     price: 2999,
     oldPrice: null,
     discount: 0,
@@ -5178,7 +5532,7 @@ const PRODUCTS = [
       "tcl",
       "laundry"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 10.1 KG TWIN TOP. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "10.1 KG",
@@ -5194,7 +5548,9 @@ const PRODUCTS = [
     model: "F709TL",
     category: "laundry",
     image: "/img/products/C-front-1-jpg.webp",
-    images: ["/img/products/C-front-1-jpg.webp"],
+    images: [
+      "/img/products/C-front-1-jpg.webp"
+    ],
     price: 4899,
     oldPrice: null,
     discount: 0,
@@ -5206,7 +5562,7 @@ const PRODUCTS = [
       "tcl",
       "laundry"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 9 KG TOP LOAD. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "9 KG",
@@ -5222,7 +5578,9 @@ const PRODUCTS = [
     model: "F711TL",
     category: "laundry",
     image: "/img/products/f711tl_brandjpg",
-    images: ["/img/products/f711tl_brandjpg"],
+    images: [
+      "/img/products/f711tl_brandjpg"
+    ],
     price: 5699,
     oldPrice: null,
     discount: 0,
@@ -5234,7 +5592,7 @@ const PRODUCTS = [
       "tcl",
       "laundry"
     ],
-    badge: "sale",
+    badge: "",
     description: "TCL 10.5 KG TOP LOAD. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "10.5 KG",
@@ -5250,7 +5608,9 @@ const PRODUCTS = [
     model: "P607FL",
     category: "laundry",
     image: "/img/products/1-16-jpg.webp",
-    images: ["/img/products/1-16-jpg.webp"],
+    images: [
+      "/img/products/1-16-jpg.webp"
+    ],
     price: 4999,
     oldPrice: null,
     discount: 0,
@@ -5263,7 +5623,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 7KGS FRONT LOAD. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "7KGS",
@@ -5279,7 +5639,9 @@ const PRODUCTS = [
     model: "P1108FLG",
     category: "laundry",
     image: "/img/products/TCL-FRONT-LOAD-INVERTER-8KG-WASHING-MACHINE-P1108FLG-FRONT.jpg",
-    images: ["/img/products/TCL-FRONT-LOAD-INVERTER-8KG-WASHING-MACHINE-P1108FLG-FRONT.jpg"],
+    images: [
+      "/img/products/TCL-FRONT-LOAD-INVERTER-8KG-WASHING-MACHINE-P1108FLG-FRONT.jpg"
+    ],
     price: 6999,
     oldPrice: null,
     discount: 0,
@@ -5293,7 +5655,7 @@ const PRODUCTS = [
       "inverter",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 8 KG FRONT LOAD- INVERTER. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "8 KG",
@@ -5310,7 +5672,9 @@ const PRODUCTS = [
     model: "P1109FLG",
     category: "laundry",
     image: "/img/products/TCL-FRONT-LOAD-INVERTER-9KG-WASHING-MACHINE-P1109FLG-FRONT.jpg",
-    images: ["/img/products/TCL-FRONT-LOAD-INVERTER-9KG-WASHING-MACHINE-P1109FLG-FRONT.jpg"],
+    images: [
+      "/img/products/TCL-FRONT-LOAD-INVERTER-9KG-WASHING-MACHINE-P1109FLG-FRONT.jpg"
+    ],
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -5340,7 +5704,9 @@ const PRODUCTS = [
     model: "P211FLG",
     category: "laundry",
     image: "/img/products/TCL-FRONT-LOAD-INVERTER-10.5KG-WASHING-MACHINE-P211FLG-FRONT.jpg",
-    images: ["/img/products/TCL-FRONT-LOAD-INVERTER-10.5KG-WASHING-MACHINE-P211FLG-FRONT.jpg"],
+    images: [
+      "/img/products/TCL-FRONT-LOAD-INVERTER-10.5KG-WASHING-MACHINE-P211FLG-FRONT.jpg"
+    ],
     price: 8299,
     oldPrice: null,
     discount: 0,
@@ -5354,7 +5720,7 @@ const PRODUCTS = [
       "inverter",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 10.5 KG FRONT LOAD- INVERTER. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "10.5 KG",
@@ -5371,7 +5737,9 @@ const PRODUCTS = [
     model: "C211WDG",
     category: "laundry",
     image: "/img/products/TCL-COMBO-10.5-KG-6-KGS-WASHING-MACHINE-C211WDG-FRONT.jpg",
-    images: ["/img/products/TCL-COMBO-10.5-KG-6-KGS-WASHING-MACHINE-C211WDG-FRONT.jpg"],
+    images: [
+      "/img/products/TCL-COMBO-10.5-KG-6-KGS-WASHING-MACHINE-C211WDG-FRONT.jpg"
+    ],
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -5383,7 +5751,7 @@ const PRODUCTS = [
       "tcl",
       "laundry"
     ],
-    badge: "hot",
+    badge: "",
     description: "TCL 10.5 KG 6 KGS COMBO. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "10.5 KG\\ 6 KGS",
@@ -5398,7 +5766,9 @@ const PRODUCTS = [
     model: "MSAF24B-12CRDN1",
     category: "ac",
     image: "/img/products/MIDEA-SPLIT-INVERTER-R410-UNICOOL-1.5HP-AC-MSAF24B-12CRDN1-FRONT.jpg",
-    images: ["/img/products/MIDEA-SPLIT-INVERTER-R410-UNICOOL-1.5HP-AC-MSAF24B-12CRDN1-FRONT.jpg"],
+    images: [
+      "/img/products/MIDEA-SPLIT-INVERTER-R410-UNICOOL-1.5HP-AC-MSAF24B-12CRDN1-FRONT.jpg"
+    ],
     price: 6399,
     oldPrice: null,
     discount: 0,
@@ -5411,7 +5781,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 1.5 HP SPLIT  ACS  INVERTER R410-UNICOOL. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.5 HP",
@@ -5428,7 +5798,9 @@ const PRODUCTS = [
     model: "MSAF24B-12CRDN1-R32",
     category: "ac",
     image: "/img/products/msaf24b-12crdn1-r32_brandpng",
-    images: ["/img/products/msaf24b-12crdn1-r32_brandpng"],
+    images: [
+      "/img/products/msaf24b-12crdn1-r32_brandpng"
+    ],
     price: 6399,
     oldPrice: null,
     discount: 0,
@@ -5441,7 +5813,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 1.5 HP SPLIT  ACS  INVERTER R32 GAS-UNICOOL +. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.5 HP",
@@ -5458,7 +5830,9 @@ const PRODUCTS = [
     model: "MSAF24C-18CRDN1-R32",
     category: "ac",
     image: "/img/products/msaf24c-18crdn1-r32_brandpng",
-    images: ["/img/products/msaf24c-18crdn1-r32_brandpng"],
+    images: [
+      "/img/products/msaf24c-18crdn1-r32_brandpng"
+    ],
     price: 8299,
     oldPrice: null,
     discount: 0,
@@ -5471,7 +5845,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 2.0 HP SPLIT  ACS  INVERTER R32 GAS-UNICOOL +. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.0 HP",
@@ -5488,7 +5862,9 @@ const PRODUCTS = [
     model: "MSAF-24CRDN1-R32",
     category: "ac",
     image: "/img/products/msaf-24crdn1-r32_brandpng",
-    images: ["/img/products/msaf-24crdn1-r32_brandpng"],
+    images: [
+      "/img/products/msaf-24crdn1-r32_brandpng"
+    ],
     price: 12999,
     oldPrice: null,
     discount: 0,
@@ -5501,7 +5877,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 2.5 HP SPLIT  ACS  INVERTER R32 GAS-UNICOOL +. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.5 HP",
@@ -5518,7 +5894,9 @@ const PRODUCTS = [
     model: "MSAGBU-12HRFN7",
     category: "ac",
     image: "/img/products/MSAFD-22CRFN8-MOX330-22CFN8-Q-1.png",
-    images: ["/img/products/MSAFD-22CRFN8-MOX330-22CFN8-Q-1.png"],
+    images: [
+      "/img/products/MSAFD-22CRFN8-MOX330-22CFN8-Q-1.png"
+    ],
     price: 8499,
     oldPrice: null,
     discount: 0,
@@ -5531,7 +5909,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 1.5 HP SPLIT INVERTER - R290. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.5 HP",
@@ -5547,7 +5925,9 @@ const PRODUCTS = [
     model: "MSAFB-12CRDN8-QD2",
     category: "ac",
     image: "/img/products/msafb-12crdn8-qd2_brandpng",
-    images: ["/img/products/msafb-12crdn8-qd2_brandpng"],
+    images: [
+      "/img/products/msafb-12crdn8-qd2_brandpng"
+    ],
     price: 6199,
     oldPrice: null,
     discount: 0,
@@ -5576,7 +5956,9 @@ const PRODUCTS = [
     model: "MSAFC-17CRDN8/MOX230-18CDN8-Q",
     category: "ac",
     image: "/img/products/msafc-17crdn8_mox230-18cdn8-q_brandpng",
-    images: ["/img/products/msafc-17crdn8_mox230-18cdn8-q_brandpng"],
+    images: [
+      "/img/products/msafc-17crdn8_mox230-18cdn8-q_brandpng"
+    ],
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -5605,7 +5987,9 @@ const PRODUCTS = [
     model: "MSAFD-22CRFN8/MOX330-22CFN8-Q",
     category: "ac",
     image: "/img/products/msafd-22crfn8_mox330-22cfn8-q_brandpng",
-    images: ["/img/products/msafd-22crfn8_mox330-22cfn8-q_brandpng"],
+    images: [
+      "/img/products/msafd-22crfn8_mox330-22cfn8-q_brandpng"
+    ],
     price: 12799,
     oldPrice: null,
     discount: 0,
@@ -5634,7 +6018,9 @@ const PRODUCTS = [
     model: "MSCB1B-12CRFN8",
     category: "ac",
     image: "/img/products/mscb1b-12crfn8_brandpng",
-    images: ["/img/products/mscb1b-12crfn8_brandpng"],
+    images: [
+      "/img/products/mscb1b-12crfn8_brandpng"
+    ],
     price: 6699,
     oldPrice: null,
     discount: 0,
@@ -5663,7 +6049,9 @@ const PRODUCTS = [
     model: "MSCB1CU-18HRFN8",
     category: "ac",
     image: "/img/products/mscb1cu-18hrfn8_brandpng",
-    images: ["/img/products/mscb1cu-18hrfn8_brandpng"],
+    images: [
+      "/img/products/mscb1cu-18hrfn8_brandpng"
+    ],
     price: 9999,
     oldPrice: null,
     discount: 0,
@@ -5692,7 +6080,9 @@ const PRODUCTS = [
     model: "MSCB1DU-24HRFN8",
     category: "ac",
     image: "/img/products/mscb1du-24hrfn8_brandpng",
-    images: ["/img/products/mscb1du-24hrfn8_brandpng"],
+    images: [
+      "/img/products/mscb1du-24hrfn8_brandpng"
+    ],
     price: 14199,
     oldPrice: null,
     discount: 0,
@@ -5705,7 +6095,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 2.5 HP SPLIT  ACS  INVERTER -BREEZELESS-R32. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.5 HP",
@@ -5722,7 +6112,9 @@ const PRODUCTS = [
     model: "MSAF-12CRN1",
     category: "ac",
     image: "/img/products/msaf-12crn1_brandpng",
-    images: ["/img/products/msaf-12crn1_brandpng"],
+    images: [
+      "/img/products/msaf-12crn1_brandpng"
+    ],
     price: 5299,
     oldPrice: null,
     discount: 0,
@@ -5734,7 +6126,7 @@ const PRODUCTS = [
       "midea",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 1.5 HP SPLIT ACS R410. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "1.5 HP",
@@ -5750,7 +6142,9 @@ const PRODUCTS = [
     model: "MSAF-18CRN1",
     category: "ac",
     image: "/img/products/msaf-18crn1_brandpng",
-    images: ["/img/products/msaf-18crn1_brandpng"],
+    images: [
+      "/img/products/msaf-18crn1_brandpng"
+    ],
     price: 7899,
     oldPrice: null,
     discount: 0,
@@ -5762,7 +6156,7 @@ const PRODUCTS = [
       "midea",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 2.0 HP SPLIT ACS R410. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.0 HP",
@@ -5778,7 +6172,9 @@ const PRODUCTS = [
     model: "MSAF-24CRN1",
     category: "ac",
     image: "/img/products/msaf-24crn1_brandpng",
-    images: ["/img/products/msaf-24crn1_brandpng"],
+    images: [
+      "/img/products/msaf-24crn1_brandpng"
+    ],
     price: 11399,
     oldPrice: null,
     discount: 0,
@@ -5790,7 +6186,7 @@ const PRODUCTS = [
       "midea",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 2.5 HP SPLIT ACS R410. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       Capacity: "2.5 HP",
@@ -5806,7 +6202,9 @@ const PRODUCTS = [
     model: "MJ2-48CRN1",
     category: "ac",
     image: "/img/products/mj2-48crn1_brandpng",
-    images: ["/img/products/mj2-48crn1_brandpng"],
+    images: [
+      "/img/products/mj2-48crn1_brandpng"
+    ],
     price: 27899,
     oldPrice: null,
     discount: 0,
@@ -5818,7 +6216,7 @@ const PRODUCTS = [
       "midea",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 48000 BTU FLOOR STANDING - R410. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "48000 BTU",
@@ -5834,7 +6232,9 @@ const PRODUCTS = [
     model: "MFYA400-24ARFN1",
     category: "small",
     image: "/img/products/mfya400-24arfn1_brandpng",
-    images: ["/img/products/mfya400-24arfn1_brandpng"],
+    images: [
+      "/img/products/mfya400-24arfn1_brandpng"
+    ],
     price: 18299,
     oldPrice: null,
     discount: 0,
@@ -5847,10 +6247,10 @@ const PRODUCTS = [
       "small",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 24000 BTU/H FLOOR STANDING - INVERTER R410. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "24000 BTU/H",
+      Size/Capacity: "24000 BTU/H",
       Model: "MFYA400-24ARFN1"
     }
   },
@@ -5862,7 +6262,9 @@ const PRODUCTS = [
     model: "MFPA400-48HRFN1",
     category: "small",
     image: "/img/products/AC036BXPDKC-AC036BNPDKC-GH-300x300-1.png",
-    images: ["/img/products/AC036BXPDKC-AC036BNPDKC-GH-300x300-1.png"],
+    images: [
+      "/img/products/AC036BXPDKC-AC036BNPDKC-GH-300x300-1.png"
+    ],
     price: 36499,
     oldPrice: null,
     discount: 0,
@@ -5875,10 +6277,10 @@ const PRODUCTS = [
       "small",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 48000 BTU/H FLOOR STANDING - INVERTER R410. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "48000 BTU/H",
+      Size/Capacity: "48000 BTU/H",
       Model: "MFPA400-48HRFN1"
     }
   },
@@ -5890,7 +6292,9 @@ const PRODUCTS = [
     model: "MPA-24CRDN1",
     category: "small",
     image: "/img/products/mpa-24crdn1_brandpng",
-    images: ["/img/products/mpa-24crdn1_brandpng"],
+    images: [
+      "/img/products/mpa-24crdn1_brandpng"
+    ],
     price: 14499,
     oldPrice: null,
     discount: 0,
@@ -5903,10 +6307,10 @@ const PRODUCTS = [
       "small",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 24000 BTU/H FLOOR STANDING - INVERTER R410. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "24000 BTU/H",
+      Size/Capacity: "24000 BTU/H",
       Model: "MPA-24CRDN1"
     }
   },
@@ -5918,7 +6322,9 @@ const PRODUCTS = [
     model: "MFPA-18CRDN1",
     category: "small",
     image: "/img/products/mfpa-18crdn1_brandpng",
-    images: ["/img/products/mfpa-18crdn1_brandpng"],
+    images: [
+      "/img/products/mfpa-18crdn1_brandpng"
+    ],
     price: 13999,
     oldPrice: null,
     discount: 0,
@@ -5931,10 +6337,10 @@ const PRODUCTS = [
       "small",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 18000 btu FLOOR STANDING - INVERTER R410. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "18000 btu",
+      Size/Capacity: "18000 btu",
       Model: "MFPA-18CRDN1"
     }
   },
@@ -5946,7 +6352,9 @@ const PRODUCTS = [
     model: "MCD-24HRND1",
     category: "ac",
     image: "/img/products/mcd-24hrnd1_brandpng",
-    images: ["/img/products/mcd-24hrnd1_brandpng"],
+    images: [
+      "/img/products/mcd-24hrnd1_brandpng"
+    ],
     price: 18499,
     oldPrice: null,
     discount: 0,
@@ -5975,7 +6383,9 @@ const PRODUCTS = [
     model: "MCD-36HRDN1",
     category: "ac",
     image: "/img/products/mcd-36hrdn1_brandpng",
-    images: ["/img/products/mcd-36hrdn1_brandpng"],
+    images: [
+      "/img/products/mcd-36hrdn1_brandpng"
+    ],
     price: 26999,
     oldPrice: null,
     discount: 0,
@@ -6004,7 +6414,9 @@ const PRODUCTS = [
     model: "MCD-48HRDN1",
     category: "ac",
     image: "/img/products/mcd-48hrdn1_brandpng",
-    images: ["/img/products/mcd-48hrdn1_brandpng"],
+    images: [
+      "/img/products/mcd-48hrdn1_brandpng"
+    ],
     price: 31999,
     oldPrice: null,
     discount: 0,
@@ -6033,7 +6445,9 @@ const PRODUCTS = [
     model: "KJ200G-D41",
     category: "small",
     image: "/img/products/BHFGHB.jpg",
-    images: ["/img/products/BHFGHB.jpg"],
+    images: [
+      "/img/products/BHFGHB.jpg"
+    ],
     price: 1599,
     oldPrice: null,
     discount: 0,
@@ -6045,10 +6459,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 220 M³/hr Air Purifier. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "220 M³/hr",
+      Size/Capacity: "220 M³/hr",
       Model: "KJ200G-D41"
     }
   },
@@ -6060,7 +6474,9 @@ const PRODUCTS = [
     model: "AC120-15F",
     category: "small",
     image: "/img/products/AIR-COOLER.jpeg",
-    images: ["/img/products/AIR-COOLER.jpeg"],
+    images: [
+      "/img/products/AIR-COOLER.jpeg"
+    ],
     price: 2099,
     oldPrice: null,
     discount: 0,
@@ -6072,10 +6488,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 60W STANDING AIR COOLER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "60W",
+      Size/Capacity: "60W",
       Model: "AC120-15F"
     }
   },
@@ -6087,7 +6503,9 @@ const PRODUCTS = [
     model: "AC100-18B",
     category: "small",
     image: "/img/products/ac100-18b_brandpng",
-    images: ["/img/products/ac100-18b_brandpng"],
+    images: [
+      "/img/products/ac100-18b_brandpng"
+    ],
     price: 1799,
     oldPrice: null,
     discount: 0,
@@ -6099,10 +6517,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 50W STANDING AIR COOLER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "50W",
+      Size/Capacity: "50W",
       Model: "AC100-18B"
     }
   },
@@ -6114,7 +6532,9 @@ const PRODUCTS = [
     model: "FS40-13QRA",
     category: "small",
     image: "/img/products/fs40-13qra_brandpng",
-    images: ["/img/products/fs40-13qra_brandpng"],
+    images: [
+      "/img/products/fs40-13qra_brandpng"
+    ],
     price: 1299,
     oldPrice: null,
     discount: 0,
@@ -6126,10 +6546,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 16\" STANDING FAN. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "16\"",
+      Size/Capacity: "16\"",
       Model: "FS40-13QRA"
     }
   },
@@ -6141,7 +6561,9 @@ const PRODUCTS = [
     model: "FS45-23MRD",
     category: "small",
     image: "/img/products/fs45-23mrd_brandpng",
-    images: ["/img/products/fs45-23mrd_brandpng"],
+    images: [
+      "/img/products/fs45-23mrd_brandpng"
+    ],
     price: 1099,
     oldPrice: null,
     discount: 0,
@@ -6155,7 +6577,7 @@ const PRODUCTS = [
     ],
     description: "Midea 18'' RECHARGHABLE FAN. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "18''",
+      Size/Capacity: "18''",
       Model: "FS45-23MRD"
     }
   },
@@ -6167,7 +6589,9 @@ const PRODUCTS = [
     model: "MDDP-30DEN7",
     category: "small",
     image: "/img/products/DFHBDFH.jpg",
-    images: ["/img/products/DFHBDFH.jpg"],
+    images: [
+      "/img/products/DFHBDFH.jpg"
+    ],
     price: 3599,
     oldPrice: null,
     discount: 0,
@@ -6179,10 +6603,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 30 L DEHUMIDIFIER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "30 L",
+      Size/Capacity: "30 L",
       Model: "MDDP-30DEN7"
     }
   },
@@ -6194,7 +6618,9 @@ const PRODUCTS = [
     model: "MDRD142FGN50",
     category: "fridge",
     image: "/img/products/AA.jpg",
-    images: ["/img/products/AA.jpg"],
+    images: [
+      "/img/products/AA.jpg"
+    ],
     price: 2899,
     oldPrice: null,
     discount: 0,
@@ -6206,7 +6632,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 93 L TABLE TOP. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "93 L",
@@ -6222,7 +6648,9 @@ const PRODUCTS = [
     model: "MDRT134FGN50",
     category: "fridge",
     image: "/img/products/MDRT134FGN50-2.png",
-    images: ["/img/products/MDRT134FGN50-2.png"],
+    images: [
+      "/img/products/MDRT134FGN50-2.png"
+    ],
     price: 3499,
     oldPrice: null,
     discount: 0,
@@ -6234,7 +6662,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 87 L DD TABLE TOP. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "87 L",
@@ -6250,7 +6678,9 @@ const PRODUCTS = [
     model: "MDRT645MTN46D",
     category: "fridge",
     image: "/img/products/MIDEA-463LTR-DEFROST-TOP-FREEZER-FRIDGE-MDRT645MTN46D-FRONT.jpg",
-    images: ["/img/products/MIDEA-463LTR-DEFROST-TOP-FREEZER-FRIDGE-MDRT645MTN46D-FRONT.jpg"],
+    images: [
+      "/img/products/MIDEA-463LTR-DEFROST-TOP-FREEZER-FRIDGE-MDRT645MTN46D-FRONT.jpg"
+    ],
     price: 11399,
     oldPrice: null,
     discount: 0,
@@ -6262,7 +6692,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 463 L DEFROST- TOP FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "463 L",
@@ -6278,7 +6708,9 @@ const PRODUCTS = [
     model: "MDRT489MTN46",
     category: "fridge",
     image: "/img/products/MDRT489MTN46-2.png",
-    images: ["/img/products/MDRT489MTN46-2.png"],
+    images: [
+      "/img/products/MDRT489MTN46-2.png"
+    ],
     price: 9199,
     oldPrice: null,
     discount: 0,
@@ -6290,7 +6722,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 360 L DEFROST- TOP FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "360 L",
@@ -6306,7 +6738,9 @@ const PRODUCTS = [
     model: "MDRT294FGN28",
     category: "fridge",
     image: "/img/products/mdrt294fgn28_brandpng",
-    images: ["/img/products/mdrt294fgn28_brandpng"],
+    images: [
+      "/img/products/mdrt294fgn28_brandpng"
+    ],
     price: 4599,
     oldPrice: null,
     discount: 0,
@@ -6318,7 +6752,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 207 L DEFROST- TOP FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "207 L",
@@ -6334,7 +6768,9 @@ const PRODUCTS = [
     model: "MDRT187FGG28",
     category: "fridge",
     image: "/img/products/mdrt187fgg28_brandpng",
-    images: ["/img/products/mdrt187fgg28_brandpng"],
+    images: [
+      "/img/products/mdrt187fgg28_brandpng"
+    ],
     price: 3599,
     oldPrice: null,
     discount: 0,
@@ -6346,7 +6782,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 128 L DEFROST- TOP FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "128 L",
@@ -6362,7 +6798,9 @@ const PRODUCTS = [
     model: "MDRZ302FZG21",
     category: "fridge",
     image: "/img/products/MIDEA-400LTR-SINGLE-DOOR-DISPLAY-FRIDGE1-1.jpg",
-    images: ["/img/products/MIDEA-400LTR-SINGLE-DOOR-DISPLAY-FRIDGE1-1.jpg"],
+    images: [
+      "/img/products/MIDEA-400LTR-SINGLE-DOOR-DISPLAY-FRIDGE1-1.jpg"
+    ],
     price: 7099,
     oldPrice: null,
     discount: 0,
@@ -6374,7 +6812,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 211 L SINGLE DOOR DISPLAY. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "211 L",
@@ -6389,7 +6827,9 @@ const PRODUCTS = [
     model: "MDRC207FZN43",
     category: "fridge",
     image: "/img/products/5-3.jpg",
-    images: ["/img/products/5-3.jpg"],
+    images: [
+      "/img/products/5-3.jpg"
+    ],
     price: 3599,
     oldPrice: null,
     discount: 0,
@@ -6402,7 +6842,7 @@ const PRODUCTS = [
       "fridge",
       "side-by-side"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea SIDE BY SIDE. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Type: "Side by Side",
@@ -6417,7 +6857,9 @@ const PRODUCTS = [
     model: "MDRC280FZN43",
     category: "fridge",
     image: "/img/products/MIDEA-198LTRS-CHEST-FREEZER-MDRC280FZN43-FRONT.jpg",
-    images: ["/img/products/MIDEA-198LTRS-CHEST-FREEZER-MDRC280FZN43-FRONT.jpg"],
+    images: [
+      "/img/products/MIDEA-198LTRS-CHEST-FREEZER-MDRC280FZN43-FRONT.jpg"
+    ],
     price: 4499,
     oldPrice: null,
     discount: 0,
@@ -6430,7 +6872,7 @@ const PRODUCTS = [
       "fridge",
       "side-by-side"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 198 L SIDE BY SIDE. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "198 L",
@@ -6446,7 +6888,9 @@ const PRODUCTS = [
     model: "MDRC345FZG43",
     category: "fridge",
     image: "/img/products/mdrc345fzg43_brandpng",
-    images: ["/img/products/mdrc345fzg43_brandpng"],
+    images: [
+      "/img/products/mdrc345fzg43_brandpng"
+    ],
     price: 5299,
     oldPrice: null,
     discount: 0,
@@ -6458,7 +6902,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 249 L CHEST FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "249 L",
@@ -6474,7 +6918,9 @@ const PRODUCTS = [
     model: "MDRC564FZN01",
     category: "fridge",
     image: "/img/products/MDRC564FZN01-2.png",
-    images: ["/img/products/MDRC564FZN01-2.png"],
+    images: [
+      "/img/products/MDRC564FZN01-2.png"
+    ],
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -6486,7 +6932,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 418 L CHEST FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "418 L",
@@ -6502,7 +6948,9 @@ const PRODUCTS = [
     model: "MDRC698FZN01",
     category: "fridge",
     image: "/img/products/MIDEA-508LTRS-CHEST-FREEZER-MDRC698FZN01-FRONT.jpg",
-    images: ["/img/products/MIDEA-508LTRS-CHEST-FREEZER-MDRC698FZN01-FRONT.jpg"],
+    images: [
+      "/img/products/MIDEA-508LTRS-CHEST-FREEZER-MDRC698FZN01-FRONT.jpg"
+    ],
     price: 9699,
     oldPrice: null,
     discount: 0,
@@ -6514,7 +6962,7 @@ const PRODUCTS = [
       "midea",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 508 L DD-CHEST FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "508 L",
@@ -6530,7 +6978,9 @@ const PRODUCTS = [
     model: "MDRC193FZG43D",
     category: "small",
     image: "/img/products/MDRC193FZG43D-3.png",
-    images: ["/img/products/MDRC193FZG43D-3.png"],
+    images: [
+      "/img/products/MDRC193FZG43D-3.png"
+    ],
     price: 2499,
     oldPrice: null,
     discount: 0,
@@ -6543,10 +6993,10 @@ const PRODUCTS = [
       "small",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 99 L INVERTER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "99 L",
+      Size/Capacity: "99 L",
       Model: "MDRC193FZG43D"
     }
   },
@@ -6558,7 +7008,9 @@ const PRODUCTS = [
     model: "MDRC265FZG43D",
     category: "small",
     image: "/img/products/mdrc265fzg43d_brandpng",
-    images: ["/img/products/mdrc265fzg43d_brandpng"],
+    images: [
+      "/img/products/mdrc265fzg43d_brandpng"
+    ],
     price: 2899,
     oldPrice: null,
     discount: 0,
@@ -6573,7 +7025,7 @@ const PRODUCTS = [
     ],
     description: "Midea 143 L INVERTER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "143 L",
+      Size/Capacity: "143 L",
       Model: "MDRC265FZG43D"
     }
   },
@@ -6585,7 +7037,9 @@ const PRODUCTS = [
     model: "MDRC362FZG43D",
     category: "small",
     image: "/img/products/mdrc362fzg43d_brandpng",
-    images: ["/img/products/mdrc362fzg43d_brandpng"],
+    images: [
+      "/img/products/mdrc362fzg43d_brandpng"
+    ],
     price: 3499,
     oldPrice: null,
     discount: 0,
@@ -6600,7 +7054,7 @@ const PRODUCTS = [
     ],
     description: "Midea 198 L INVERTER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "198 L",
+      Size/Capacity: "198 L",
       Model: "MDRC362FZG43D"
     }
   },
@@ -6612,7 +7066,9 @@ const PRODUCTS = [
     model: "MF200W120WB/T",
     category: "laundry",
     image: "/img/products/MF110W70-OPENED.png",
-    images: ["/img/products/MF110W70-OPENED.png"],
+    images: [
+      "/img/products/MF110W70-OPENED.png"
+    ],
     price: 8799,
     oldPrice: null,
     discount: 0,
@@ -6625,7 +7081,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 12 KG FRONT LOAD. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "12 KG",
@@ -6641,7 +7097,9 @@ const PRODUCTS = [
     model: "MF110W80B/T",
     category: "laundry",
     image: "/img/products/mf110w80b_t_brandpng",
-    images: ["/img/products/mf110w80b_t_brandpng"],
+    images: [
+      "/img/products/mf110w80b_t_brandpng"
+    ],
     price: 6399,
     oldPrice: null,
     discount: 0,
@@ -6654,7 +7112,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 8 KG FRONT LOAD. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "8 KG",
@@ -6670,7 +7128,9 @@ const PRODUCTS = [
     model: "MF110W70/T",
     category: "laundry",
     image: "/img/products/MF110W70-OPENED.png",
-    images: ["/img/products/MF110W70-OPENED.png"],
+    images: [
+      "/img/products/MF110W70-OPENED.png"
+    ],
     price: 5499,
     oldPrice: null,
     discount: 0,
@@ -6683,7 +7143,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 7 KG FRONT LOAD. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "7 KG",
@@ -6699,7 +7159,9 @@ const PRODUCTS = [
     model: "MT100W120/WG",
     category: "laundry",
     image: "/img/products/mt100w120_wg_brandpng",
-    images: ["/img/products/mt100w120_wg_brandpng"],
+    images: [
+      "/img/products/mt100w120_wg_brandpng"
+    ],
     price: 3399,
     oldPrice: null,
     discount: 0,
@@ -6726,7 +7188,9 @@ const PRODUCTS = [
     model: "MT100W70/WG",
     category: "laundry",
     image: "/img/products/MT100W70W-GH-3.jpg",
-    images: ["/img/products/MT100W70W-GH-3.jpg"],
+    images: [
+      "/img/products/MT100W70W-GH-3.jpg"
+    ],
     price: 2199,
     oldPrice: null,
     discount: 0,
@@ -6753,7 +7217,9 @@ const PRODUCTS = [
     model: "SP5055T082-B",
     category: "small",
     image: "/img/products/136LMG5G027-C.15.png",
-    images: ["/img/products/136LMG5G027-C.15.png"],
+    images: [
+      "/img/products/136LMG5G027-C.15.png"
+    ],
     price: 2599,
     oldPrice: null,
     discount: 0,
@@ -6765,10 +7231,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 4 BURNERS 4 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "4 BURNERS",
+      Size/Capacity: "4 BURNERS",
       Model: "SP5055T082-B"
     }
   },
@@ -6780,7 +7246,9 @@ const PRODUCTS = [
     model: "SP5055T082-S",
     category: "small",
     image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg",
-    images: ["/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg"],
+    images: [
+      "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg"
+    ],
     price: 2699,
     oldPrice: null,
     discount: 0,
@@ -6792,7 +7260,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 4 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "SP5055T082-S"
@@ -6806,7 +7274,9 @@ const PRODUCTS = [
     model: "SP5055T082-BG",
     category: "small",
     image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg",
-    images: ["/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg"],
+    images: [
+      "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg"
+    ],
     price: 2699,
     oldPrice: null,
     discount: 0,
@@ -6818,7 +7288,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 4 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "SP5055T082-BG"
@@ -6832,7 +7302,9 @@ const PRODUCTS = [
     model: "SP5055T082-SGH",
     category: "small",
     image: "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg",
-    images: ["/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg"],
+    images: [
+      "/img/products/MIDEA-4-BURNER-GAS-COOKER-BLACK-MIRROR-GRILL-SP5055T082-BG-FRONT.jpg"
+    ],
     price: 2699,
     oldPrice: null,
     discount: 0,
@@ -6844,7 +7316,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 4 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "SP5055T082-SGH"
@@ -6858,7 +7330,9 @@ const PRODUCTS = [
     model: "24TMG4G081-S",
     category: "small",
     image: "/img/products/24TMG4G081-B-1.png",
-    images: ["/img/products/24TMG4G081-B-1.png"],
+    images: [
+      "/img/products/24TMG4G081-B-1.png"
+    ],
     price: 3799,
     oldPrice: null,
     discount: 0,
@@ -6870,7 +7344,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 4 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "24TMG4G081-S"
@@ -6884,7 +7358,9 @@ const PRODUCTS = [
     model: "24TMG4G081-B",
     category: "small",
     image: "/img/products/24TMG4G081-B-1.png",
-    images: ["/img/products/24TMG4G081-B-1.png"],
+    images: [
+      "/img/products/24TMG4G081-B-1.png"
+    ],
     price: 3899,
     oldPrice: null,
     discount: 0,
@@ -6896,7 +7372,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 4 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "24TMG4G081-B"
@@ -6910,7 +7386,9 @@ const PRODUCTS = [
     model: "24TMG4G081-WD",
     category: "small",
     image: "/img/products/24TMG4G081-B-1.png",
-    images: ["/img/products/24TMG4G081-B-1.png"],
+    images: [
+      "/img/products/24TMG4G081-B-1.png"
+    ],
     price: 3999,
     oldPrice: null,
     discount: 0,
@@ -6922,7 +7400,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 4 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "24TMG4G081-WD"
@@ -6936,7 +7414,9 @@ const PRODUCTS = [
     model: "24LMG4G027",
     category: "small",
     image: "/img/products/24lmg4g027_brandpng",
-    images: ["/img/products/24lmg4g027_brandpng"],
+    images: [
+      "/img/products/24lmg4g027_brandpng"
+    ],
     price: 5699,
     oldPrice: null,
     discount: 0,
@@ -6948,7 +7428,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 4 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "24LMG4G027"
@@ -6962,7 +7442,9 @@ const PRODUCTS = [
     model: "30AMG5G027-SILVER",
     category: "small",
     image: "/img/products/30AMG5G027-SILVER.jpg",
-    images: ["/img/products/30AMG5G027-SILVER.jpg"],
+    images: [
+      "/img/products/30AMG5G027-SILVER.jpg"
+    ],
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -6974,10 +7456,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 5 BURNERS 5 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "5 BURNERS",
+      Size/Capacity: "5 BURNERS",
       Model: "30AMG5G027-SILVER"
     }
   },
@@ -6989,7 +7471,9 @@ const PRODUCTS = [
     model: "36LMG5G080V",
     category: "small",
     image: "/img/products/36LMG5G080V.png",
-    images: ["/img/products/36LMG5G080V.png"],
+    images: [
+      "/img/products/36LMG5G080V.png"
+    ],
     price: 9199,
     oldPrice: null,
     discount: 0,
@@ -7001,7 +7485,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 5 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "36LMG5G080V"
@@ -7015,7 +7499,9 @@ const PRODUCTS = [
     model: "36LMG5G027-C",
     category: "small",
     image: "/img/products/136LMG5G027-C.15.png",
-    images: ["/img/products/136LMG5G027-C.15.png"],
+    images: [
+      "/img/products/136LMG5G027-C.15.png"
+    ],
     price: 9199,
     oldPrice: null,
     discount: 0,
@@ -7027,7 +7513,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 5 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "36LMG5G027-C"
@@ -7041,7 +7527,9 @@ const PRODUCTS = [
     model: "LMG90030",
     category: "small",
     image: "/img/products/LMG90030-3-1.png",
-    images: ["/img/products/LMG90030-3-1.png"],
+    images: [
+      "/img/products/LMG90030-3-1.png"
+    ],
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -7053,7 +7541,7 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 5 BURNER. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "LMG90030"
@@ -7067,7 +7555,9 @@ const PRODUCTS = [
     model: "VESTA-P48C",
     category: "small",
     image: "/img/products/vesta-p48c_brandpng",
-    images: ["/img/products/vesta-p48c_brandpng"],
+    images: [
+      "/img/products/vesta-p48c_brandpng"
+    ],
     price: 11399,
     oldPrice: null,
     discount: 0,
@@ -7092,7 +7582,9 @@ const PRODUCTS = [
     model: "EM9P032MO-B",
     category: "small",
     image: "/img/products/EM9P032MO-B-1.png",
-    images: ["/img/products/EM9P032MO-B-1.png"],
+    images: [
+      "/img/products/EM9P032MO-B-1.png"
+    ],
     price: 1699,
     oldPrice: null,
     discount: 0,
@@ -7106,7 +7598,7 @@ const PRODUCTS = [
     ],
     description: "Midea 30 LTRS SOLO. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "30 LTRS",
+      Size/Capacity: "30 LTRS",
       Model: "EM9P032MO-B"
     }
   },
@@ -7118,7 +7610,9 @@ const PRODUCTS = [
     model: "MM7P012MZ-B",
     category: "small",
     image: "/img/products/MM7P012MZ-B-2-jpg.webp",
-    images: ["/img/products/MM7P012MZ-B-2-jpg.webp"],
+    images: [
+      "/img/products/MM7P012MZ-B-2-jpg.webp"
+    ],
     price: 1199,
     oldPrice: null,
     discount: 0,
@@ -7130,10 +7624,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 20 LTRS SOLO. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "20 LTRS",
+      Size/Capacity: "20 LTRS",
       Model: "MM7P012MZ-B"
     }
   },
@@ -7145,7 +7639,9 @@ const PRODUCTS = [
     model: "AM717BS7",
     category: "kitchen",
     image: "/img/products/AM925BVE-B.png",
-    images: ["/img/products/AM925BVE-B.png"],
+    images: [
+      "/img/products/AM925BVE-B.png"
+    ],
     price: 3599,
     oldPrice: null,
     discount: 0,
@@ -7157,10 +7653,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 17 LTRS MICROWAVE. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "17 LTRS",
+      Size/Capacity: "17 LTRS",
       Model: "AM717BS7"
     }
   },
@@ -7172,7 +7668,9 @@ const PRODUCTS = [
     model: "AM925BVE",
     category: "kitchen",
     image: "/img/products/AM925BVE-B.png",
-    images: ["/img/products/AM925BVE-B.png"],
+    images: [
+      "/img/products/AM925BVE-B.png"
+    ],
     price: 4899,
     oldPrice: null,
     discount: 0,
@@ -7184,10 +7682,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 25 LTRS MICROWAVE. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "25 LTRS",
+      Size/Capacity: "25 LTRS",
       Model: "AM925BVE"
     }
   },
@@ -7199,7 +7697,9 @@ const PRODUCTS = [
     model: "65M80M1-012",
     category: "kitchen",
     image: "/img/products/65m80m1-012_brandpng",
-    images: ["/img/products/65m80m1-012_brandpng"],
+    images: [
+      "/img/products/65m80m1-012_brandpng"
+    ],
     price: 5699,
     oldPrice: null,
     discount: 0,
@@ -7211,10 +7711,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 60 CM ELECTRIC OVEN. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "60 CM",
+      Size/Capacity: "60 CM",
       Model: "65M80M1-012"
     }
   },
@@ -7226,7 +7726,9 @@ const PRODUCTS = [
     model: "65M80M1-004BK",
     category: "kitchen",
     image: "/img/products/65m80m1-004bk_brandpng",
-    images: ["/img/products/65m80m1-004bk_brandpng"],
+    images: [
+      "/img/products/65m80m1-004bk_brandpng"
+    ],
     price: 5999,
     oldPrice: null,
     discount: 0,
@@ -7238,10 +7740,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 60 CM ELECTRIC OVEN. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "60 CM",
+      Size/Capacity: "60 CM",
       Model: "65M80M1-004BK"
     }
   },
@@ -7253,7 +7755,9 @@ const PRODUCTS = [
     model: "60G40ME",
     category: "kitchen",
     image: "/img/products/1-34.jpg",
-    images: ["/img/products/1-34.jpg"],
+    images: [
+      "/img/products/1-34.jpg"
+    ],
     price: 3099,
     oldPrice: null,
     discount: 0,
@@ -7265,10 +7769,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 4 BURNER - 60CM GAS HOB. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "4 BURNER - 60CM",
+      Size/Capacity: "4 BURNER - 60CM",
       Model: "60G40ME"
     }
   },
@@ -7280,7 +7784,9 @@ const PRODUCTS = [
     model: "90G50ME",
     category: "kitchen",
     image: "/img/products/60GJ084-3.png",
-    images: ["/img/products/60GJ084-3.png"],
+    images: [
+      "/img/products/60GJ084-3.png"
+    ],
     price: 3299,
     oldPrice: null,
     discount: 0,
@@ -7292,7 +7798,7 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea GAS HOB. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
       Model: "90G50ME"
@@ -7306,7 +7812,9 @@ const PRODUCTS = [
     model: "MC-HD301",
     category: "kitchen",
     image: "/img/products/MIDEA-4-BURNER-ELECTRIC-HOB1.jpg",
-    images: ["/img/products/MIDEA-4-BURNER-ELECTRIC-HOB1.jpg"],
+    images: [
+      "/img/products/MIDEA-4-BURNER-ELECTRIC-HOB1.jpg"
+    ],
     price: 3799,
     oldPrice: null,
     discount: 0,
@@ -7318,10 +7826,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 2 HOBS ELECTRIC HOB. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "2 HOBS",
+      Size/Capacity: "2 HOBS",
       Model: "MC-HD301"
     }
   },
@@ -7333,7 +7841,9 @@ const PRODUCTS = [
     model: "MC-HF605",
     category: "kitchen",
     image: "/img/products/mc-hf605_brandpng",
-    images: ["/img/products/mc-hf605_brandpng"],
+    images: [
+      "/img/products/mc-hf605_brandpng"
+    ],
     price: 5099,
     oldPrice: null,
     discount: 0,
@@ -7347,7 +7857,7 @@ const PRODUCTS = [
     ],
     description: "Midea 4 HOBS ELECTRIC HOB. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "4 HOBS",
+      Size/Capacity: "4 HOBS",
       Model: "MC-HF605"
     }
   },
@@ -7359,7 +7869,9 @@ const PRODUCTS = [
     model: "MC-HV848",
     category: "kitchen",
     image: "/img/products/mc-hv848_brandpng",
-    images: ["/img/products/mc-hv848_brandpng"],
+    images: [
+      "/img/products/mc-hv848_brandpng"
+    ],
     price: 7099,
     oldPrice: null,
     discount: 0,
@@ -7371,10 +7883,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 5 HOBS ELECTRIC HOB. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "5 HOBS",
+      Size/Capacity: "5 HOBS",
       Model: "MC-HV848"
     }
   },
@@ -7386,7 +7898,9 @@ const PRODUCTS = [
     model: "60M21-S",
     category: "kitchen",
     image: "/img/products/60m21-s_brandpng",
-    images: ["/img/products/60m21-s_brandpng"],
+    images: [
+      "/img/products/60m21-s_brandpng"
+    ],
     price: 2899,
     oldPrice: null,
     discount: 0,
@@ -7398,10 +7912,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 60 CM ELECTRIC HOB. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "60 CM",
+      Size/Capacity: "60 CM",
       Model: "60M21-S"
     }
   },
@@ -7413,7 +7927,9 @@ const PRODUCTS = [
     model: "90M21",
     category: "kitchen",
     image: "/img/products/90M21-S-1.png",
-    images: ["/img/products/90M21-S-1.png"],
+    images: [
+      "/img/products/90M21-S-1.png"
+    ],
     price: 3799,
     oldPrice: null,
     discount: 0,
@@ -7425,10 +7941,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 90 CM ELECTRIC HOB. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "90 CM",
+      Size/Capacity: "90 CM",
       Model: "90M21"
     }
   },
@@ -7440,7 +7956,9 @@ const PRODUCTS = [
     model: "90M21-S",
     category: "kitchen",
     image: "/img/products/90m21-s_brandpng",
-    images: ["/img/products/90m21-s_brandpng"],
+    images: [
+      "/img/products/90m21-s_brandpng"
+    ],
     price: 3799,
     oldPrice: null,
     discount: 0,
@@ -7452,10 +7970,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 90 CM ELECTRIC HOB. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "90 CM",
+      Size/Capacity: "90 CM",
       Model: "90M21-S"
     }
   },
@@ -7467,7 +7985,9 @@ const PRODUCTS = [
     model: "60L03-B",
     category: "kitchen",
     image: "/img/products/60l03-b_brandpng",
-    images: ["/img/products/60l03-b_brandpng"],
+    images: [
+      "/img/products/60l03-b_brandpng"
+    ],
     price: 2799,
     oldPrice: null,
     discount: 0,
@@ -7479,10 +7999,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 60 CM - BLACK ELECTRIC HOB. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "60 CM - BLACK",
+      Size/Capacity: "60 CM - BLACK",
       Model: "60L03-B"
     }
   },
@@ -7494,7 +8014,9 @@ const PRODUCTS = [
     model: "WQP14-7713F",
     category: "small",
     image: "/img/products/wqp14-7713f_brandpng",
-    images: ["/img/products/wqp14-7713f_brandpng"],
+    images: [
+      "/img/products/wqp14-7713f_brandpng"
+    ],
     price: 6999,
     oldPrice: null,
     discount: 0,
@@ -7508,7 +8030,7 @@ const PRODUCTS = [
     ],
     description: "Midea 14 PLATES- SILVER CONTROL BOARD DISHWAHSHER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "14 PLATES- SILVER CONTROL BOARD",
+      Size/Capacity: "14 PLATES- SILVER CONTROL BOARD",
       Model: "WQP14-7713F"
     }
   },
@@ -7520,7 +8042,9 @@ const PRODUCTS = [
     model: "WQP14-W7703L(B)",
     category: "small",
     image: "/img/products/wqp14-w7703l_b__brandpng",
-    images: ["/img/products/wqp14-w7703l_b__brandpng"],
+    images: [
+      "/img/products/wqp14-w7703l_b__brandpng"
+    ],
     price: 7499,
     oldPrice: null,
     discount: 0,
@@ -7534,7 +8058,7 @@ const PRODUCTS = [
     ],
     description: "Midea 14 PLATES-BLACK CONTROL BOARD DISHWAHSHER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "14 PLATES-BLACK CONTROL BOARD",
+      Size/Capacity: "14 PLATES-BLACK CONTROL BOARD",
       Model: "WQP14-W7703L(B)"
     }
   },
@@ -7546,7 +8070,9 @@ const PRODUCTS = [
     model: "WQP12-5201G(S)",
     category: "small",
     image: "/img/products/wqp12-5201g_s__brandpng",
-    images: ["/img/products/wqp12-5201g_s__brandpng"],
+    images: [
+      "/img/products/wqp12-5201g_s__brandpng"
+    ],
     price: 5999,
     oldPrice: null,
     discount: 0,
@@ -7558,10 +8084,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 12 PLATES- SILVER BODY DISHWAHSHER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "12 PLATES- SILVER BODY",
+      Size/Capacity: "12 PLATES- SILVER BODY",
       Model: "WQP12-5201G(S)"
     }
   },
@@ -7573,7 +8099,9 @@ const PRODUCTS = [
     model: "MFA06D80B/W",
     category: "laundry",
     image: "/img/products/mf200d.jpg",
-    images: ["/img/products/mf200d.jpg"],
+    images: [
+      "/img/products/mf200d.jpg"
+    ],
     price: 8299,
     oldPrice: null,
     discount: 0,
@@ -7585,7 +8113,7 @@ const PRODUCTS = [
       "midea",
       "laundry"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 8 KG/ 6KG WASHER/DRYER BUILT-IN. Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "8 KG/ 6KG",
@@ -7600,7 +8128,9 @@ const PRODUCTS = [
     model: "MC68ABA",
     category: "kitchen",
     image: "/img/products/65M80M1-004BK-3.png",
-    images: ["/img/products/65M80M1-004BK-3.png"],
+    images: [
+      "/img/products/65M80M1-004BK-3.png"
+    ],
     price: 2199,
     oldPrice: null,
     discount: 0,
@@ -7612,10 +8142,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 68 LTR ELECTRIC OVEN. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "68 LTR",
+      Size/Capacity: "68 LTR",
       Model: "MC68ABA"
     }
   },
@@ -7627,7 +8157,9 @@ const PRODUCTS = [
     model: "MF-CY55WK",
     category: "small",
     image: "/img/products/mf-cy55wk_brandpng",
-    images: ["/img/products/mf-cy55wk_brandpng"],
+    images: [
+      "/img/products/mf-cy55wk_brandpng"
+    ],
     price: 1199,
     oldPrice: null,
     discount: 0,
@@ -7639,10 +8171,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "Midea 6 LTR - BLACK AIR FRYER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "6 LTR - BLACK",
+      Size/Capacity: "6 LTR - BLACK",
       Model: "MF-CY55WK"
     }
   },
@@ -7654,7 +8186,9 @@ const PRODUCTS = [
     model: "MF-CY70K",
     category: "small",
     image: "/img/products/mf-cy70k_brandpng",
-    images: ["/img/products/mf-cy70k_brandpng"],
+    images: [
+      "/img/products/mf-cy70k_brandpng"
+    ],
     price: 1499,
     oldPrice: null,
     discount: 0,
@@ -7666,10 +8200,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 7 LTR - BLACK AIR FRYER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "7 LTR - BLACK",
+      Size/Capacity: "7 LTR - BLACK",
       Model: "MF-CY70K"
     }
   },
@@ -7681,7 +8215,9 @@ const PRODUCTS = [
     model: "MF-CY85WK",
     category: "small",
     image: "/img/products/mf-cy85wk_brandpng",
-    images: ["/img/products/mf-cy85wk_brandpng"],
+    images: [
+      "/img/products/mf-cy85wk_brandpng"
+    ],
     price: 1599,
     oldPrice: null,
     discount: 0,
@@ -7693,10 +8229,10 @@ const PRODUCTS = [
       "midea",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 7 LTR - BLACK AIR FRYER. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "7 LTR - BLACK",
+      Size/Capacity: "7 LTR - BLACK",
       Model: "MF-CY85WK"
     }
   },
@@ -7708,7 +8244,9 @@ const PRODUCTS = [
     model: "MY-CS8037WP2",
     category: "kitchen",
     image: "/img/products/my-cs8037wp2_brandpng",
-    images: ["/img/products/my-cs8037wp2_brandpng"],
+    images: [
+      "/img/products/my-cs8037wp2_brandpng"
+    ],
     price: 1199,
     oldPrice: null,
     discount: 0,
@@ -7720,10 +8258,10 @@ const PRODUCTS = [
       "midea",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "Midea 1000W ELECTRIC PRESSURE COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "1000W",
+      Size/Capacity: "1000W",
       Model: "MY-CS8037WP2"
     }
   },
@@ -7735,7 +8273,9 @@ const PRODUCTS = [
     model: "NAS-J24FB",
     category: "small",
     image: "/img/products/NAS-B43FBFL-G.png",
-    images: ["/img/products/NAS-B43FBFL-G.png"],
+    images: [
+      "/img/products/NAS-B43FBFL-G.png"
+    ],
     price: 1099,
     oldPrice: null,
     discount: 0,
@@ -7747,10 +8287,10 @@ const PRODUCTS = [
       "nasco",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 24'' LED  FLAT. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "24''",
+      Size/Capacity: "24''",
       Model: "NAS-J24FB"
     }
   },
@@ -7762,7 +8302,12 @@ const PRODUCTS = [
     model: "NAS-B24FB-A",
     category: "small",
     image: null,
-    images: ["/img/products/NASCO-32″-LED-FHD-DIGITAL-SATELLITE-NAS-B32FBFL-FRONT.jpg", "/img/products/NASCO-100-WATTS-STEAM-IRON-NAS-2203-DI-FRONT.png", "/img/products/NASCO-100LTR-CHEST-FREEZER-NAS-150FL-FRONT.jpg", "/img/products/NASCO-200-LTRS-CHEST-FREEZER-NAS-210-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-32″-LED-FHD-DIGITAL-SATELLITE-NAS-B32FBFL-FRONT.jpg",
+      "/img/products/NASCO-100-WATTS-STEAM-IRON-NAS-2203-DI-FRONT.png",
+      "/img/products/NASCO-100LTR-CHEST-FREEZER-NAS-150FL-FRONT.jpg",
+      "/img/products/NASCO-200-LTRS-CHEST-FREEZER-NAS-210-FRONT.jpg"
+    ],
     price: 1099,
     oldPrice: null,
     discount: 0,
@@ -7774,7 +8319,7 @@ const PRODUCTS = [
       "nasco",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO LED  FLAT. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "NAS-B24FB-A"
@@ -7788,7 +8333,9 @@ const PRODUCTS = [
     model: "NAS-J32FBFL",
     category: "small",
     image: null,
-    images: ["/img/products/nasco-wine.jpg"],
+    images: [
+      "/img/products/nasco-wine.jpg"
+    ],
     price: 1499,
     oldPrice: null,
     discount: 0,
@@ -7800,10 +8347,10 @@ const PRODUCTS = [
       "nasco",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 32\" LED  FLAT. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "32\"",
+      Size/Capacity: "32\"",
       Model: "NAS-J32FBFL"
     }
   },
@@ -7815,7 +8362,12 @@ const PRODUCTS = [
     model: "NAS-B32FBFL",
     category: "small",
     image: null,
-    images: ["/img/products/NASCO-32″-LED-FHD-DIGITAL-SATELLITE-NAS-B32FBFL-FRONT.jpg", "/img/products/NASCO-100-WATTS-STEAM-IRON-NAS-2203-DI-FRONT.png", "/img/products/NASCO-100LTR-CHEST-FREEZER-NAS-150FL-FRONT.jpg", "/img/products/NASCO-200-LTRS-CHEST-FREEZER-NAS-210-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-32″-LED-FHD-DIGITAL-SATELLITE-NAS-B32FBFL-FRONT.jpg",
+      "/img/products/NASCO-100-WATTS-STEAM-IRON-NAS-2203-DI-FRONT.png",
+      "/img/products/NASCO-100LTR-CHEST-FREEZER-NAS-150FL-FRONT.jpg",
+      "/img/products/NASCO-200-LTRS-CHEST-FREEZER-NAS-210-FRONT.jpg"
+    ],
     price: 1499,
     oldPrice: null,
     discount: 0,
@@ -7827,7 +8379,7 @@ const PRODUCTS = [
       "nasco",
       "small"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO LED  FLAT. Compact and efficient appliance for everyday household needs.",
     specs: {
       Model: "NAS-B32FBFL"
@@ -7853,10 +8405,10 @@ const PRODUCTS = [
       "nasco",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 43 '' LED  FLAT. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "43 ''",
+      Size/Capacity: "43 ''",
       Model: "NAS-B43FBFL"
     }
   },
@@ -7880,10 +8432,10 @@ const PRODUCTS = [
       "nasco",
       "small"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 43 '' LED  FLAT. Compact and efficient appliance for everyday household needs.",
     specs: {
-      "Size/Capacity": "43 ''",
+      Size/Capacity: "43 ''",
       Model: "NAS-J43FBFL"
     }
   },
@@ -7907,7 +8459,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 12000 Btu/h SPLIT AC - R410 GAS-ECO. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "12000 Btu/h",
@@ -7935,7 +8487,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 12000 Btu/h SPLIT AC - R32 GAS. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "12000 Btu/h",
@@ -7963,7 +8515,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 12000 Btu/h SPLIT AC - R32  MIRROR. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "12000 Btu/h",
@@ -7991,7 +8543,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 18000 Btu/h SPLIT AC - R32  MIRROR. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "18000 Btu/h",
@@ -8019,7 +8571,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 24000 Btu/h SPLIT AC - R32  MIRROR. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "24000 Btu/h",
@@ -8035,7 +8587,9 @@ const PRODUCTS = [
     model: "NAS-T12N1",
     category: "ac",
     image: "/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg",
-    images: ["/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg"
+    ],
     price: 3949,
     oldPrice: null,
     discount: 0,
@@ -8047,7 +8601,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 12000 Btu/h SPLIT AC- R410 GAS WHITE. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "12000 Btu/h",
@@ -8075,7 +8629,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 18000 Btu/h SPLIT AC- R410 GAS WHITE. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "18000 Btu/h",
@@ -8103,7 +8657,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 24000 Btu/h SPLIT AC- R410 GAS WHITE. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "24000 Btu/h",
@@ -8131,7 +8685,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 18000 Btu/h SPLIT AC- R410- BLACK. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "18000 Btu/h",
@@ -8147,7 +8701,9 @@ const PRODUCTS = [
     model: "NAS-J18-V1",
     category: "ac",
     image: "/img/products/FRONT.jpg",
-    images: ["/img/products/FRONT.jpg"],
+    images: [
+      "/img/products/FRONT.jpg"
+    ],
     price: 6499,
     oldPrice: null,
     discount: 0,
@@ -8160,7 +8716,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 18000 Btu/h SPLIT AC- R410 DUAL INVERTER. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "18000 Btu/h",
@@ -8190,7 +8746,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 12000 Btu/h SPLIT AC- R32 INVERTER. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "12000 Btu/h",
@@ -8220,7 +8776,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 18000 Btu/h SPLIT AC- R32 INVERTER. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "18000 Btu/h",
@@ -8250,7 +8806,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 24000 Btu/h SPLIT AC- R32 INVERTER. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "24000 Btu/h",
@@ -8267,7 +8823,9 @@ const PRODUCTS = [
     model: "NAS-JFS-18N1",
     category: "ac",
     image: null,
-    images: ["/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg"],
+    images: [
+      "/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg"
+    ],
     price: 9899,
     oldPrice: null,
     discount: 0,
@@ -8279,7 +8837,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 18000 Btu/h FLOOR STANDING ACS. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "18000 Btu/h",
@@ -8294,7 +8852,9 @@ const PRODUCTS = [
     model: "NAS-JFS-24N1",
     category: "ac",
     image: null,
-    images: ["/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg"],
+    images: [
+      "/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg"
+    ],
     price: 12449,
     oldPrice: null,
     discount: 0,
@@ -8306,7 +8866,7 @@ const PRODUCTS = [
       "nasco",
       "ac"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 24000 BTU/H FLOOR STANDING ACS. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "24000 BTU/H",
@@ -8334,7 +8894,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 18000 Btu/h ROUND FLOOR STANDING ACS - INVERTER. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "18000 Btu/h",
@@ -8363,7 +8923,7 @@ const PRODUCTS = [
       "ac",
       "inverter"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 24000 Btu/h ROUND FLOOR STANDING ACS - INVERTER. Energy-efficient air conditioner with fast cooling and quiet operation.",
     specs: {
       BTU: "24000 Btu/h",
@@ -8379,7 +8939,9 @@ const PRODUCTS = [
     model: "NASF2-68FDR",
     category: "fridge",
     image: "/img/products/NASCO-522LTR-FRENCH-DOOR-REFRIGERATOR-NASFDR-62S-FRONT-scaled-1.jpg",
-    images: ["/img/products/NASCO-522LTR-FRENCH-DOOR-REFRIGERATOR-NASFDR-62S-FRONT-scaled-1.jpg"],
+    images: [
+      "/img/products/NASCO-522LTR-FRENCH-DOOR-REFRIGERATOR-NASFDR-62S-FRONT-scaled-1.jpg"
+    ],
     price: 10999,
     oldPrice: null,
     discount: 0,
@@ -8391,7 +8953,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 421 L REFRIGERATORS-FRENCH DOOR. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "421 L",
@@ -8434,7 +8996,9 @@ const PRODUCTS = [
     model: "NASF2-55SK",
     category: "fridge",
     image: "/img/products/NASF2-66.1-FRONT.png",
-    images: ["/img/products/NASF2-66.1-FRONT.png"],
+    images: [
+      "/img/products/NASF2-66.1-FRONT.png"
+    ],
     price: 10799,
     oldPrice: null,
     discount: 0,
@@ -8447,7 +9011,7 @@ const PRODUCTS = [
       "fridge",
       "side-by-side"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 425 L REFRIGERATORS-SIDE BY SIDE. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "425 L",
@@ -8463,7 +9027,10 @@ const PRODUCTS = [
     model: "NASF2-66.1FF",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-400WATTS-BLENDER1.jpg", "/img/products/nasco-wine.jpg"],
+    images: [
+      "/img/products/NASCO-400WATTS-BLENDER1.jpg",
+      "/img/products/nasco-wine.jpg"
+    ],
     price: 9999,
     oldPrice: null,
     discount: 0,
@@ -8476,7 +9043,7 @@ const PRODUCTS = [
       "fridge",
       "side-by-side"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 400 L REFRIGERATORS-SIDE BY SIDE. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "400 L",
@@ -8492,7 +9059,9 @@ const PRODUCTS = [
     model: "NASF2-500WD",
     category: "fridge",
     image: "/img/products/NASCO-440-LTR-TOP-MOUNT-NO-FROST-REFRIGERATOR-NASF2-660TM-FRONT.jpg",
-    images: ["/img/products/NASCO-440-LTR-TOP-MOUNT-NO-FROST-REFRIGERATOR-NASF2-660TM-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-440-LTR-TOP-MOUNT-NO-FROST-REFRIGERATOR-NASF2-660TM-FRONT.jpg"
+    ],
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -8519,7 +9088,9 @@ const PRODUCTS = [
     model: "NASF2-45",
     category: "fridge",
     image: "/img/products/NASCO-200LTR-TOP-MOUNT-REFRIGERATOR.jpg",
-    images: ["/img/products/NASCO-200LTR-TOP-MOUNT-REFRIGERATOR.jpg"],
+    images: [
+      "/img/products/NASCO-200LTR-TOP-MOUNT-REFRIGERATOR.jpg"
+    ],
     price: 6599,
     oldPrice: null,
     discount: 0,
@@ -8531,7 +9102,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 320 L REFREGERATOR- TOP MOUNT. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "320 L",
@@ -8559,7 +9130,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 280 L REFREGERATOR- TOP MOUNT. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "280 L",
@@ -8587,7 +9158,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 210 L REFREGERATOR- TOP MOUNT. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "210 L",
@@ -8642,7 +9213,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 166 L REFREGERATOR- TOP MOUNT. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "166 L",
@@ -8658,7 +9229,9 @@ const PRODUCTS = [
     model: "NASF2-24",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-NASF2-250FLD-FRONT-VIEW.jpg"],
+    images: [
+      "/img/products/NASCO-NASF2-250FLD-FRONT-VIEW.jpg"
+    ],
     price: 2999,
     oldPrice: null,
     discount: 0,
@@ -8670,7 +9243,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 166 L REFREGERATOR- TOP MOUNT. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "166 L",
@@ -8686,7 +9259,9 @@ const PRODUCTS = [
     model: "NASF2-15S",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-118LTRS-TOP-FREEZER-NASF2-15S-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-118LTRS-TOP-FREEZER-NASF2-15S-FRONT.jpg"
+    ],
     price: 2899,
     oldPrice: null,
     discount: 0,
@@ -8698,7 +9273,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 118 L REFREGERATOR- TOP MOUNT. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "118 L",
@@ -8714,7 +9289,9 @@ const PRODUCTS = [
     model: "NASF2-12S",
     category: "fridge",
     image: "/img/products/NASF2-600WD-FRONT.png",
-    images: ["/img/products/NASF2-600WD-FRONT.png"],
+    images: [
+      "/img/products/NASF2-600WD-FRONT.png"
+    ],
     price: 2349,
     oldPrice: null,
     discount: 0,
@@ -8726,7 +9303,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 95 L REFREGERATOR- TOP MOUNT. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "95 L",
@@ -8742,7 +9319,9 @@ const PRODUCTS = [
     model: "DD2-20",
     category: "fridge",
     image: "/img/products/GCHK.jpg",
-    images: ["/img/products/GCHK.jpg"],
+    images: [
+      "/img/products/GCHK.jpg"
+    ],
     price: 3799,
     oldPrice: null,
     discount: 0,
@@ -8754,7 +9333,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 147 L REFRIGERATORS-BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "147 L",
@@ -8809,7 +9388,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 287 L REFRIGERATORS-BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "287 L",
@@ -8837,7 +9416,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 307 L REFRIGERATORS-BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "307 L",
@@ -8853,7 +9432,9 @@ const PRODUCTS = [
     model: "NASF1-06",
     category: "fridge",
     image: "/img/products/NASF1-06-FRONT.png",
-    images: ["/img/products/NASF1-06-FRONT.png"],
+    images: [
+      "/img/products/NASF1-06-FRONT.png"
+    ],
     price: 1299,
     oldPrice: null,
     discount: 0,
@@ -8865,7 +9446,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 41 L BED SIDE FRIDGE. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "41 L",
@@ -8880,7 +9461,9 @@ const PRODUCTS = [
     model: "NASF1-09S",
     category: "fridge",
     image: "/img/products/NASF1-10S-FRONT.jpg",
-    images: ["/img/products/NASF1-10S-FRONT.jpg"],
+    images: [
+      "/img/products/NASF1-10S-FRONT.jpg"
+    ],
     price: 1749,
     oldPrice: null,
     discount: 0,
@@ -8892,7 +9475,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 70 L REFRIGERATOR-TABLE TOP. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "70 L",
@@ -8920,7 +9503,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 76 L REFRIGERATOR-TABLE TOP. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "76 L",
@@ -8948,7 +9531,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 92 L REFRIGERATOR-TABLE TOP. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "92 L",
@@ -8976,7 +9559,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 91 L REFRIGERATOR-TABLE TOP. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "91 L",
@@ -8992,7 +9575,9 @@ const PRODUCTS = [
     model: "NASF2-11FL-B-MIRROR",
     category: "fridge",
     image: "/img/products/2-1-2.jpg",
-    images: ["/img/products/2-1-2.jpg"],
+    images: [
+      "/img/products/2-1-2.jpg"
+    ],
     price: 2199,
     oldPrice: null,
     discount: 0,
@@ -9004,7 +9589,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "NASCO 86 L REFRIGERATOR NEW MODELS - TOP FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "86 L",
@@ -9032,7 +9617,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "NASCO 102 L REFRIGERATOR NEW MODELS - TOP FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "102 L",
@@ -9048,7 +9633,9 @@ const PRODUCTS = [
     model: "NASF2-110RT",
     category: "fridge",
     image: "/img/products/110RT-jpg.webp",
-    images: ["/img/products/110RT-jpg.webp"],
+    images: [
+      "/img/products/110RT-jpg.webp"
+    ],
     price: 2349,
     oldPrice: null,
     discount: 0,
@@ -9060,7 +9647,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "NASCO 86 L RETRO NEW MODELS - TABLE TOP. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "86 L",
@@ -9088,7 +9675,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 112 L REFRIGERATOR NEW MODELS - TOP FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "112 L",
@@ -9116,7 +9703,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 138 L REFRIGERATOR NEW MODELS - TOP FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "138 L",
@@ -9144,7 +9731,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 158 L REFRIGERATOR NEW MODELS - TOP FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "158 L",
@@ -9172,7 +9759,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 106 L REFRIGERATOR NEW MODELS - BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "106 L",
@@ -9200,7 +9787,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 106 L REFRIGERATOR NEW MODELS - BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "106 L",
@@ -9216,7 +9803,9 @@ const PRODUCTS = [
     model: "NASD2-14FL",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-116LTR-BOTTOM-FREEZER-REFRIGERATOR-NASD2-14FL-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-116LTR-BOTTOM-FREEZER-REFRIGERATOR-NASD2-14FL-FRONT.jpg"
+    ],
     price: 2799,
     oldPrice: null,
     discount: 0,
@@ -9228,7 +9817,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "NASCO 116 L REFRIGERATOR NEW MODELS - BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "116 L",
@@ -9256,7 +9845,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "NASCO 136 L REFRIGERATOR NEW MODELS - BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "136 L",
@@ -9284,7 +9873,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "NASCO 136 L REFRIGERATOR NEW MODELS - BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "136 L",
@@ -9312,7 +9901,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "NASCO 158 L REFRIGERATOR NEW MODELS - BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "158 L",
@@ -9340,7 +9929,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "new",
+    badge: "",
     description: "NASCO 196 L REFRIGERATOR NEW MODELS - BOTTOM FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "196 L",
@@ -9356,7 +9945,9 @@ const PRODUCTS = [
     model: "NASD1-225FL",
     category: "fridge",
     image: "/img/products/NASCO-260LTR-STANDING-FREEZER1.jpg",
-    images: ["/img/products/NASCO-260LTR-STANDING-FREEZER1.jpg"],
+    images: [
+      "/img/products/NASCO-260LTR-STANDING-FREEZER1.jpg"
+    ],
     price: 3599,
     oldPrice: null,
     discount: 0,
@@ -9368,7 +9959,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 150 L STANDING FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "150 L",
@@ -9383,7 +9974,9 @@ const PRODUCTS = [
     model: "NASD1-200SK",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg"],
+    images: [
+      "/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg"
+    ],
     price: 3599,
     oldPrice: null,
     discount: 0,
@@ -9409,7 +10002,9 @@ const PRODUCTS = [
     model: "DD1-33",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg"],
+    images: [
+      "/img/products/NASCO-16inches-METAL-STANDING-FAN.jpg"
+    ],
     price: 6849,
     oldPrice: null,
     discount: 0,
@@ -9421,7 +10016,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 225 L STANDING FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "225 L",
@@ -9448,7 +10043,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 110 L DISPLAY FRIDGES. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "110 L",
@@ -9489,7 +10084,9 @@ const PRODUCTS = [
     model: "NAS-FL350-1DR",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-288-LTRS-DISPLAY-FRIDGE-NAS-FL350-1DR-FRONT-OPEN.jpg"],
+    images: [
+      "/img/products/NASCO-288-LTRS-DISPLAY-FRIDGE-NAS-FL350-1DR-FRONT-OPEN.jpg"
+    ],
     price: 6149,
     oldPrice: null,
     discount: 0,
@@ -9501,7 +10098,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 288L DISPLAY FRIDGES. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "288L",
@@ -9528,7 +10125,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 298L DISPLAY FRIDGES. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "298L",
@@ -9555,7 +10152,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 358L DISPLAY FRIDGES. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "358L",
@@ -9582,7 +10179,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 350 L DISPLAY FRIDGES. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "350 L",
@@ -9597,7 +10194,9 @@ const PRODUCTS = [
     model: "NAS-FL850-2DR",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-728LTR-DISPLAY-FRIDGE-NAS-850-2DR-FRONT.png"],
+    images: [
+      "/img/products/NASCO-728LTR-DISPLAY-FRIDGE-NAS-850-2DR-FRONT.png"
+    ],
     price: 14999,
     oldPrice: null,
     discount: 0,
@@ -9609,7 +10208,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 728 L DISPLAY FRIDGES. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "728 L",
@@ -9676,7 +10275,9 @@ const PRODUCTS = [
     model: "NAS-200FL-G",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-150LTR-CHEST-FREEZER1.jpg"],
+    images: [
+      "/img/products/NASCO-150LTR-CHEST-FREEZER1.jpg"
+    ],
     price: 3149,
     oldPrice: null,
     discount: 0,
@@ -9688,7 +10289,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 150L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "150L",
@@ -9716,7 +10317,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 145 L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "145 L",
@@ -9732,7 +10333,9 @@ const PRODUCTS = [
     model: "NAS-210",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-200-LTRS-CHEST-FREEZER-NAS-210-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-200-LTRS-CHEST-FREEZER-NAS-210-FRONT.jpg"
+    ],
     price: 3899,
     oldPrice: null,
     discount: 0,
@@ -9744,7 +10347,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 200 L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "200 L",
@@ -9760,7 +10363,9 @@ const PRODUCTS = [
     model: "NAS-250FL",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-200-LTRS-CHEST-FREEZER-NAS-210-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-200-LTRS-CHEST-FREEZER-NAS-210-FRONT.jpg"
+    ],
     price: 3549,
     oldPrice: null,
     discount: 0,
@@ -9772,7 +10377,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 200 L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "200 L",
@@ -9800,7 +10405,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 250 L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "250 L",
@@ -9816,7 +10421,10 @@ const PRODUCTS = [
     model: "NAS-300",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-251-LTRS-CHEST-FREEZER-NAS-300-FRONT.jpg", "/img/products/NASCO-251LTRS-BOTTOM-FREEZER-NASD2-29SK-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-251-LTRS-CHEST-FREEZER-NAS-300-FRONT.jpg",
+      "/img/products/NASCO-251LTRS-BOTTOM-FREEZER-NASD2-29SK-FRONT.jpg"
+    ],
     price: 4799,
     oldPrice: null,
     discount: 0,
@@ -9828,7 +10436,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 251 L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "251 L",
@@ -9856,7 +10464,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 288L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "288L",
@@ -9884,7 +10492,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 290 L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "290 L",
@@ -9900,7 +10508,10 @@ const PRODUCTS = [
     model: "NAS-425FL-G",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-318LTR-CHEST-FREEZER-NAS-425FL-G-FRONT.jpg", "/img/products/NASCO-318-LTRS-CHEST-FREEZER-NAS-425FL-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-318LTR-CHEST-FREEZER-NAS-425FL-G-FRONT.jpg",
+      "/img/products/NASCO-318-LTRS-CHEST-FREEZER-NAS-425FL-FRONT.jpg"
+    ],
     price: 5399,
     oldPrice: null,
     discount: 0,
@@ -9912,7 +10523,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 318 L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "318 L",
@@ -9928,7 +10539,9 @@ const PRODUCTS = [
     model: "NAS-420",
     category: "fridge",
     image: null,
-    images: ["/img/products/NASCO-380LTRS-CHEST-FREEZER1.jpg"],
+    images: [
+      "/img/products/NASCO-380LTRS-CHEST-FREEZER1.jpg"
+    ],
     price: 6249,
     oldPrice: null,
     discount: 0,
@@ -9940,7 +10553,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 380 L CHEST FREEZERS. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "380 L",
@@ -9983,7 +10596,9 @@ const PRODUCTS = [
     model: "NAS-FS305FL",
     category: "fridge",
     image: "/img/products/NASCO-320LTRS-CHEST-FREEZER1.jpg",
-    images: ["/img/products/NASCO-320LTRS-CHEST-FREEZER1.jpg"],
+    images: [
+      "/img/products/NASCO-320LTRS-CHEST-FREEZER1.jpg"
+    ],
     price: 6699,
     oldPrice: null,
     discount: 0,
@@ -9995,7 +10610,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 239L DISPLAY CHEST FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "239L",
@@ -10023,7 +10638,7 @@ const PRODUCTS = [
       "nasco",
       "fridge"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 360L DISPLAY CHEST FREEZER. High-capacity refrigerator with efficient cooling and spacious storage.",
     specs: {
       Capacity: "360L",
@@ -10039,7 +10654,9 @@ const PRODUCTS = [
     model: "EG925EFF",
     category: "kitchen",
     image: null,
-    images: ["/img/products/NASCO-25LTR-MICROWAVE-WITH-GRILL.jpg"],
+    images: [
+      "/img/products/NASCO-25LTR-MICROWAVE-WITH-GRILL.jpg"
+    ],
     price: 1999,
     oldPrice: null,
     discount: 0,
@@ -10051,10 +10668,10 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 25 LTRS MICROWAVES - GRILL. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "25 LTRS",
+      Size/Capacity: "25 LTRS",
       Model: "EG925EFF"
     }
   },
@@ -10080,7 +10697,7 @@ const PRODUCTS = [
     ],
     description: "NASCO 36 LTRS MICROWAVES - GRILL. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "36 LTRS",
+      Size/Capacity: "36 LTRS",
       Model: "AG036AFK"
     }
   },
@@ -10092,7 +10709,9 @@ const PRODUCTS = [
     model: "NAS-05-TW",
     category: "laundry",
     image: "/img/products/1NASCO-14KG-TWIN-TUB-WASHING-MACHINE.jpg",
-    images: ["/img/products/1NASCO-14KG-TWIN-TUB-WASHING-MACHINE.jpg"],
+    images: [
+      "/img/products/1NASCO-14KG-TWIN-TUB-WASHING-MACHINE.jpg"
+    ],
     price: 1649,
     oldPrice: null,
     discount: 0,
@@ -10104,7 +10723,7 @@ const PRODUCTS = [
       "nasco",
       "laundry"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 5 KGS WASHING MACHINES ( TWIN TOP ). Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "5 KGS",
@@ -10147,7 +10766,9 @@ const PRODUCTS = [
     model: "NASTL-B120FL",
     category: "laundry",
     image: "/img/products/NASCO-18KG-TOP-LOAD-WASHING-MACHINE-NAS-18TLS.png",
-    images: ["/img/products/NASCO-18KG-TOP-LOAD-WASHING-MACHINE-NAS-18TLS.png"],
+    images: [
+      "/img/products/NASCO-18KG-TOP-LOAD-WASHING-MACHINE-NAS-18TLS.png"
+    ],
     price: 3999,
     oldPrice: null,
     discount: 0,
@@ -10174,7 +10795,10 @@ const PRODUCTS = [
     model: "NASTL-B80",
     category: "laundry",
     image: null,
-    images: ["/img/products/NASCO-8KG-FRONT-LOAD-WASHING-MACHINE-NASFL-J8KG-S-FRONT.png", "/img/products/NASCO-8KG-TWIN-TUB-WASHING-MACHINE-NAS-08-TW-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-8KG-FRONT-LOAD-WASHING-MACHINE-NASFL-J8KG-S-FRONT.png",
+      "/img/products/NASCO-8KG-TWIN-TUB-WASHING-MACHINE-NAS-08-TW-FRONT.jpg"
+    ],
     price: 2999,
     oldPrice: null,
     discount: 0,
@@ -10242,7 +10866,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 10 KGS WASHING MACHINES (FRONT LOAD). Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "10 KGS",
@@ -10258,7 +10882,10 @@ const PRODUCTS = [
     model: "NASFL-J8KG-S",
     category: "laundry",
     image: null,
-    images: ["/img/products/NASCO-8KG-FRONT-LOAD-WASHING-MACHINE-NASFL-J8KG-S-FRONT.png", "/img/products/NASCO-8KG-TWIN-TUB-WASHING-MACHINE-NAS-08-TW-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-8KG-FRONT-LOAD-WASHING-MACHINE-NASFL-J8KG-S-FRONT.png",
+      "/img/products/NASCO-8KG-TWIN-TUB-WASHING-MACHINE-NAS-08-TW-FRONT.jpg"
+    ],
     price: 4599,
     oldPrice: null,
     discount: 0,
@@ -10271,7 +10898,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 8 KGS WASHING MACHINES (FRONT LOAD). Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "8 KGS",
@@ -10300,7 +10927,7 @@ const PRODUCTS = [
       "laundry",
       "front-load"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 6 KGS WASHING MACHINES (FRONT LOAD). Powerful washing machine with multiple wash programs and energy-saving motor.",
     specs: {
       Capacity: "6 KGS",
@@ -10316,7 +10943,9 @@ const PRODUCTS = [
     model: "NASGC-50X50S-CTZ",
     category: "kitchen",
     image: "/img/products/1-75.jpg",
-    images: ["/img/products/1-75.jpg"],
+    images: [
+      "/img/products/1-75.jpg"
+    ],
     price: 1699,
     oldPrice: null,
     discount: 0,
@@ -10328,10 +10957,10 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 4 BURNER GAS COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "4 BURNER",
+      Size/Capacity: "4 BURNER",
       Model: "NASGC-50X50S-CTZ"
     }
   },
@@ -10343,7 +10972,10 @@ const PRODUCTS = [
     model: "NASGC-50MO+ST-CTZ",
     category: "kitchen",
     image: null,
-    images: ["/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg", "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg",
+      "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"
+    ],
     price: 1749,
     oldPrice: null,
     discount: 0,
@@ -10355,7 +10987,7 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO GAS COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
       Model: "NASGC-50MO+ST-CTZ"
@@ -10369,7 +11001,10 @@ const PRODUCTS = [
     model: "NASGC-50MO-CTZ",
     category: "kitchen",
     image: null,
-    images: ["/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg", "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg",
+      "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"
+    ],
     price: 1649,
     oldPrice: null,
     discount: 0,
@@ -10381,7 +11016,7 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO GAS COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
       Model: "NASGC-50MO-CTZ"
@@ -10395,7 +11030,12 @@ const PRODUCTS = [
     model: "NASGC-SNIPER50TB",
     category: "kitchen",
     image: null,
-    images: ["/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg", "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg", "/img/products/NASCO-1-BURNER-GAS-STOVE.jpg", "/img/products/NASCO-3-BURNER-GAS-STOVE-WHITE.jpg"],
+    images: [
+      "/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg",
+      "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg",
+      "/img/products/NASCO-1-BURNER-GAS-STOVE.jpg",
+      "/img/products/NASCO-3-BURNER-GAS-STOVE-WHITE.jpg"
+    ],
     price: 2099,
     oldPrice: null,
     discount: 0,
@@ -10407,7 +11047,7 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO GAS COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
       Model: "NASGC-SNIPER50TB"
@@ -10421,7 +11061,12 @@ const PRODUCTS = [
     model: "NASGC-SNIPER50TS-G",
     category: "kitchen",
     image: null,
-    images: ["/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg", "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg", "/img/products/NASCO-1-BURNER-GAS-STOVE.jpg", "/img/products/NASCO-3-BURNER-GAS-STOVE-WHITE.jpg"],
+    images: [
+      "/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg",
+      "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg",
+      "/img/products/NASCO-1-BURNER-GAS-STOVE.jpg",
+      "/img/products/NASCO-3-BURNER-GAS-STOVE-WHITE.jpg"
+    ],
     price: 2499,
     oldPrice: null,
     discount: 0,
@@ -10433,7 +11078,7 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO GAS COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
       Model: "NASGC-SNIPER50TS-G"
@@ -10447,7 +11092,12 @@ const PRODUCTS = [
     model: "NASGC-LME60I",
     category: "kitchen",
     image: null,
-    images: ["/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg", "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg", "/img/products/NASCO-1-BURNER-GAS-STOVE.jpg", "/img/products/NASCO-3-BURNER-GAS-STOVE-WHITE.jpg"],
+    images: [
+      "/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg",
+      "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg",
+      "/img/products/NASCO-1-BURNER-GAS-STOVE.jpg",
+      "/img/products/NASCO-3-BURNER-GAS-STOVE-WHITE.jpg"
+    ],
     price: 4499,
     oldPrice: null,
     discount: 0,
@@ -10459,7 +11109,7 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO GAS COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
       Model: "NASGC-LME60I"
@@ -10473,7 +11123,9 @@ const PRODUCTS = [
     model: "NASGC-LME90I",
     category: "kitchen",
     image: null,
-    images: ["/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"
+    ],
     price: 8199,
     oldPrice: null,
     discount: 0,
@@ -10485,10 +11137,10 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 5 BURNERS GAS COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "5 BURNERS",
+      Size/Capacity: "5 BURNERS",
       Model: "NASGC-LME90I"
     }
   },
@@ -10500,7 +11152,12 @@ const PRODUCTS = [
     model: "NASGC-LME90B",
     category: "kitchen",
     image: null,
-    images: ["/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg", "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg", "/img/products/NASCO-1-BURNER-GAS-STOVE.jpg", "/img/products/NASCO-3-BURNER-GAS-STOVE-WHITE.jpg"],
+    images: [
+      "/img/products/NASCO-4-BURNER-GAS-COOKER-WITH-GRILL-NASGC-SNIPER50TB-G-FRONT-1.jpg",
+      "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg",
+      "/img/products/NASCO-1-BURNER-GAS-STOVE.jpg",
+      "/img/products/NASCO-3-BURNER-GAS-STOVE-WHITE.jpg"
+    ],
     price: 7849,
     oldPrice: null,
     discount: 0,
@@ -10512,7 +11169,7 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO GAS COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
       Model: "NASGC-LME90B"
@@ -10526,7 +11183,9 @@ const PRODUCTS = [
     model: "NASGC-AMG80S",
     category: "kitchen",
     image: null,
-    images: ["/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"
+    ],
     price: 5249,
     oldPrice: null,
     discount: 0,
@@ -10538,10 +11197,10 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 5 BURNERS GAS COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "5 BURNERS",
+      Size/Capacity: "5 BURNERS",
       Model: "NASGC-AMG80S"
     }
   },
@@ -10565,10 +11224,10 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "sale",
+    badge: "",
     description: "NASCO 4 HOBS ELECTRIC COOKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "4 HOBS",
+      Size/Capacity: "4 HOBS",
       Model: "NAS-DM4H109"
     }
   },
@@ -10580,7 +11239,9 @@ const PRODUCTS = [
     model: "IMB1008-GS",
     category: "kitchen",
     image: "/img/products/NASCO-1.25LTR-NASCO-COFFEE-MAKER1.jpg",
-    images: ["/img/products/NASCO-1.25LTR-NASCO-COFFEE-MAKER1.jpg"],
+    images: [
+      "/img/products/NASCO-1.25LTR-NASCO-COFFEE-MAKER1.jpg"
+    ],
     price: 1299,
     oldPrice: null,
     discount: 0,
@@ -10592,10 +11253,10 @@ const PRODUCTS = [
       "nasco",
       "kitchen"
     ],
-    badge: "hot",
+    badge: "",
     description: "NASCO 26 LB - BLACK ICE MAKER. Reliable kitchen appliance built for everyday use with easy controls.",
     specs: {
-      "Size/Capacity": "26 LB - BLACK",
+      Size/Capacity: "26 LB - BLACK",
       Model: "IMB1008-GS"
     }
   },
@@ -10607,7 +11268,9 @@ const PRODUCTS = [
     model: "SM-X736BZAEAFA",
     category: "phones",
     image: "/img/products/1.png",
-    images: ["/img/products/1.png"],
+    images: [
+      "/img/products/1.png"
+    ],
     price: 12299,
     oldPrice: null,
     discount: 0,
@@ -10620,7 +11283,7 @@ const PRODUCTS = [
       "tablet",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "11\" Galaxy Tab S11 with 4MP+13MP cameras, 256GB storage, 12GB RAM, Li-Ion 8400mAh battery.",
     specs: {
       Screen: "11\"",
@@ -10638,7 +11301,9 @@ const PRODUCTS = [
     model: "SM-X936BZAAAFA",
     category: "phones",
     image: "/img/products/1-1.png",
-    images: ["/img/products/1-1.png"],
+    images: [
+      "/img/products/1-1.png"
+    ],
     price: 16299,
     oldPrice: null,
     discount: 0,
@@ -10651,7 +11316,7 @@ const PRODUCTS = [
       "tablet",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "14.6\" Galaxy Tab S11 Ultra with 8+2MP/13MP cameras, 256GB+12GB, Li-Ion 11600mAh.",
     specs: {
       Screen: "14.6\"",
@@ -10669,7 +11334,9 @@ const PRODUCTS = [
     model: "SM-X936BZADAFA",
     category: "phones",
     image: "/img/products/sm-x936bzadafa_brandpng",
-    images: ["/img/products/sm-x936bzadafa_brandpng"],
+    images: [
+      "/img/products/sm-x936bzadafa_brandpng"
+    ],
     price: 17999,
     oldPrice: null,
     discount: 0,
@@ -10682,7 +11349,7 @@ const PRODUCTS = [
       "tablet",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "14.6\" Galaxy Tab S11 Ultra with keyboard cover bundle, 256GB+12GB, Li-Ion 11600mAh.",
     specs: {
       Screen: "14.6\"",
@@ -10700,7 +11367,9 @@ const PRODUCTS = [
     model: "SM-X626BZAEAFA",
     category: "phones",
     image: "/img/products/africa-en-galaxy-tab-s10-plus-sm-x820-sm-x826bzsdafa-543688611-1.jpg",
-    images: ["/img/products/africa-en-galaxy-tab-s10-plus-sm-x820-sm-x826bzsdafa-543688611-1.jpg"],
+    images: [
+      "/img/products/africa-en-galaxy-tab-s10-plus-sm-x820-sm-x826bzsdafa-543688611-1.jpg"
+    ],
     price: 10499,
     oldPrice: null,
     discount: 0,
@@ -10729,7 +11398,9 @@ const PRODUCTS = [
     model: "SM-X526BZAEAFA",
     category: "phones",
     image: "/img/products/sm-x526bzaeafa_brandpng",
-    images: ["/img/products/sm-x526bzaeafa_brandpng"],
+    images: [
+      "/img/products/sm-x526bzaeafa_brandpng"
+    ],
     price: 8499,
     oldPrice: null,
     discount: 0,
@@ -10758,7 +11429,9 @@ const PRODUCTS = [
     model: "SM-X406BZAEAFA",
     category: "phones",
     image: "/img/products/SM-X406BZAEAFA-1.png",
-    images: ["/img/products/SM-X406BZAEAFA-1.png"],
+    images: [
+      "/img/products/SM-X406BZAEAFA-1.png"
+    ],
     price: 5999,
     oldPrice: null,
     discount: 0,
@@ -10787,7 +11460,9 @@ const PRODUCTS = [
     model: "SM-X826BZADAFA",
     category: "phones",
     image: "/img/products/sm-x826bzadafa_brandpng",
-    images: ["/img/products/sm-x826bzadafa_brandpng"],
+    images: [
+      "/img/products/sm-x826bzadafa_brandpng"
+    ],
     price: 17999,
     oldPrice: null,
     discount: 0,
@@ -10816,7 +11491,9 @@ const PRODUCTS = [
     model: "SM-X926BZADAFA",
     category: "phones",
     image: "/img/products/africa-en-galaxy-tab-s10-ultra-sm-x920-sm-x926bzadafa-543688846.jpg",
-    images: ["/img/products/africa-en-galaxy-tab-s10-ultra-sm-x920-sm-x926bzadafa-543688846.jpg"],
+    images: [
+      "/img/products/africa-en-galaxy-tab-s10-ultra-sm-x920-sm-x926bzadafa-543688846.jpg"
+    ],
     price: 21999,
     oldPrice: null,
     discount: 0,
@@ -10845,7 +11522,9 @@ const PRODUCTS = [
     model: "SM-X236BZAEACR",
     category: "phones",
     image: "/img/products/SM-X236BZSAACR-1.png",
-    images: ["/img/products/SM-X236BZSAACR-1.png"],
+    images: [
+      "/img/products/SM-X236BZSAACR-1.png"
+    ],
     price: 3699,
     oldPrice: null,
     discount: 0,
@@ -10857,7 +11536,7 @@ const PRODUCTS = [
       "samsung",
       "tablet"
     ],
-    badge: "new",
+    badge: "",
     description: "11\" Galaxy Tab A11+ with 8MP/5MP cameras, 256GB+8GB, Li-Po 7040mAh.",
     specs: {
       Screen: "11\"",
@@ -10875,7 +11554,9 @@ const PRODUCTS = [
     model: "SM-X236BZSAACR",
     category: "phones",
     image: "/img/products/sm-x236bzsaacr_brandpng",
-    images: ["/img/products/sm-x236bzsaacr_brandpng"],
+    images: [
+      "/img/products/sm-x236bzsaacr_brandpng"
+    ],
     price: 3149,
     oldPrice: null,
     discount: 0,
@@ -10887,7 +11568,7 @@ const PRODUCTS = [
       "samsung",
       "tablet"
     ],
-    badge: "new",
+    badge: "",
     description: "11\" Galaxy Tab A11+ with 8MP/5MP cameras, 128GB+6GB, Li-Po 7040mAh.",
     specs: {
       Screen: "11\"",
@@ -10905,7 +11586,9 @@ const PRODUCTS = [
     model: "SM-X135GZAAACR",
     category: "phones",
     image: "/img/products/sm-x135gzaaacr_brandpng",
-    images: ["/img/products/sm-x135gzaaacr_brandpng"],
+    images: [
+      "/img/products/sm-x135gzaaacr_brandpng"
+    ],
     price: 1599,
     oldPrice: null,
     discount: 0,
@@ -10917,7 +11600,7 @@ const PRODUCTS = [
       "samsung",
       "tablet"
     ],
-    badge: "new",
+    badge: "",
     description: "8.7\" Galaxy Tab A11 with 8MP/5MP cameras, 64GB+4GB, Li-Po 5100mAh.",
     specs: {
       Screen: "8.7\"",
@@ -10935,7 +11618,9 @@ const PRODUCTS = [
     model: "SM-F966BDBDAFB",
     category: "phones",
     image: "/img/products/sm-f966bdbdafb_brandpng",
-    images: ["/img/products/sm-f966bdbdafb_brandpng"],
+    images: [
+      "/img/products/sm-f966bdbdafb_brandpng"
+    ],
     price: 22499,
     oldPrice: null,
     discount: 0,
@@ -10949,7 +11634,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "8.0\" foldable Galaxy Fold 7 with 10+200MP/10MP/12MP cameras, 256GB+12GB, 4400mAh.",
     specs: {
       Screen: "8.0\" Foldable",
@@ -10967,7 +11652,9 @@ const PRODUCTS = [
     model: "SM-F966BDBGAFB",
     category: "phones",
     image: "/img/products/sm-f966bdbgafb_brandpng",
-    images: ["/img/products/sm-f966bdbgafb_brandpng"],
+    images: [
+      "/img/products/sm-f966bdbgafb_brandpng"
+    ],
     price: 23999,
     oldPrice: null,
     discount: 0,
@@ -10981,7 +11668,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "8.0\" foldable Galaxy Fold 7 with 10+200MP/10MP/12MP cameras, 512GB+12GB, 4400mAh.",
     specs: {
       Screen: "8.0\" Foldable",
@@ -10999,7 +11686,9 @@ const PRODUCTS = [
     model: "SM-F966BDBHAFB",
     category: "phones",
     image: "/img/products/sm-f966bdbhafb_brandpng",
-    images: ["/img/products/sm-f966bdbhafb_brandpng"],
+    images: [
+      "/img/products/sm-f966bdbhafb_brandpng"
+    ],
     price: 27499,
     oldPrice: null,
     discount: 0,
@@ -11013,7 +11702,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "8.0\" foldable Galaxy Fold 7 with 10+200MP/10MP/12MP cameras, 1TB+16GB, 4400mAh.",
     specs: {
       Screen: "8.0\" Foldable",
@@ -11031,7 +11720,9 @@ const PRODUCTS = [
     model: "SM-F761BZKEAFB",
     category: "phones",
     image: "/img/products/sm-f761bzkeafb_brandpng",
-    images: ["/img/products/sm-f761bzkeafb_brandpng"],
+    images: [
+      "/img/products/sm-f761bzkeafb_brandpng"
+    ],
     price: 10999,
     oldPrice: null,
     discount: 0,
@@ -11044,7 +11735,7 @@ const PRODUCTS = [
       "phones",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.7\" flip-style Galaxy Flip 7 FE with 12+50MP/10MP cameras, 256GB+8GB, 4000mAh.",
     specs: {
       Screen: "6.7\" Flip",
@@ -11062,7 +11753,9 @@ const PRODUCTS = [
     model: "SM-F766BDBAAFB",
     category: "phones",
     image: "/img/products/sm-f766bdbaafb_brandpng",
-    images: ["/img/products/sm-f766bdbaafb_brandpng"],
+    images: [
+      "/img/products/sm-f766bdbaafb_brandpng"
+    ],
     price: 12599,
     oldPrice: null,
     discount: 0,
@@ -11076,7 +11769,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.7\" flip Galaxy Flip 7 with 12+50MP/10MP cameras, 256GB+12GB, 4300mAh.",
     specs: {
       Screen: "6.7\" Flip",
@@ -11094,7 +11787,9 @@ const PRODUCTS = [
     model: "SM-F766BDBEAFB",
     category: "phones",
     image: "/img/products/sm-f766bdbeafb_brandpng",
-    images: ["/img/products/sm-f766bdbeafb_brandpng"],
+    images: [
+      "/img/products/sm-f766bdbeafb_brandpng"
+    ],
     price: 13999,
     oldPrice: null,
     discount: 0,
@@ -11108,7 +11803,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.7\" flip Galaxy Flip 7 with 12+50MP/10MP cameras, 512GB+12GB, 4300mAh.",
     specs: {
       Screen: "6.7\" Flip",
@@ -11126,7 +11821,9 @@ const PRODUCTS = [
     model: "SM-S731BDBVAFB",
     category: "phones",
     image: "/img/products/sm-s731bdbvafb_brandpng",
-    images: ["/img/products/sm-s731bdbvafb_brandpng"],
+    images: [
+      "/img/products/sm-s731bdbvafb_brandpng"
+    ],
     price: 8599,
     oldPrice: null,
     discount: 0,
@@ -11139,7 +11836,7 @@ const PRODUCTS = [
       "phones",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.7\" Galaxy S25 FE with 50+8+12MP cameras, 256GB+8GB, 4900mAh battery.",
     specs: {
       Screen: "6.7\"",
@@ -11157,7 +11854,9 @@ const PRODUCTS = [
     model: "SM-S942BLBOAFB",
     category: "phones",
     image: "/img/products/sm-s942blboafb_brandpng",
-    images: ["/img/products/sm-s942blboafb_brandpng"],
+    images: [
+      "/img/products/sm-s942blboafb_brandpng"
+    ],
     price: 11099,
     oldPrice: null,
     discount: 0,
@@ -11171,7 +11870,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.3\" Galaxy S26 with 50+10+12MP/12MP cameras, 256GB+12GB, 4300mAh.",
     specs: {
       Screen: "6.3\"",
@@ -11189,7 +11888,9 @@ const PRODUCTS = [
     model: "SM-S947BLBIAFB",
     category: "phones",
     image: "/img/products/sm-s947blbiafb_brandpng",
-    images: ["/img/products/sm-s947blbiafb_brandpng"],
+    images: [
+      "/img/products/sm-s947blbiafb_brandpng"
+    ],
     price: 13099,
     oldPrice: null,
     discount: 0,
@@ -11203,7 +11904,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.7\" Galaxy S26+ with 50+10+12MP/12MP cameras, 256GB+12GB, 4900mAh.",
     specs: {
       Screen: "6.7\"",
@@ -11221,7 +11922,9 @@ const PRODUCTS = [
     model: "SM-S947BLBOAFB",
     category: "phones",
     image: "/img/products/sm-s947blboafb_brandpng",
-    images: ["/img/products/sm-s947blboafb_brandpng"],
+    images: [
+      "/img/products/sm-s947blboafb_brandpng"
+    ],
     price: 15599,
     oldPrice: null,
     discount: 0,
@@ -11235,7 +11938,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.7\" Galaxy S26+ with 50+10+12MP/12MP cameras, 512GB+12GB, 4900mAh.",
     specs: {
       Screen: "6.7\"",
@@ -11253,7 +11956,9 @@ const PRODUCTS = [
     model: "SM-S948BLBIAFB",
     category: "phones",
     image: "/img/products/sm-s948blbiafb_brandpng",
-    images: ["/img/products/sm-s948blbiafb_brandpng"],
+    images: [
+      "/img/products/sm-s948blbiafb_brandpng"
+    ],
     price: 15599,
     oldPrice: null,
     discount: 0,
@@ -11267,7 +11972,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.9\" Galaxy S26 Ultra with 200+10+50+50MP/12MP cameras, 256GB+12GB, 5000mAh.",
     specs: {
       Screen: "6.9\"",
@@ -11285,7 +11990,9 @@ const PRODUCTS = [
     model: "SM-S948BLBOAFB",
     category: "phones",
     image: "/img/products/sm-s948blboafb_brandpng",
-    images: ["/img/products/sm-s948blboafb_brandpng"],
+    images: [
+      "/img/products/sm-s948blboafb_brandpng"
+    ],
     price: 18199,
     oldPrice: null,
     discount: 0,
@@ -11299,7 +12006,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.9\" Galaxy S26 Ultra with 200+10+50+50MP/12MP cameras, 512GB+12GB, 5000mAh.",
     specs: {
       Screen: "6.9\"",
@@ -11317,7 +12024,9 @@ const PRODUCTS = [
     model: "SM-S948BLBPAFB",
     category: "phones",
     image: "/img/products/sm-s948blbpafb_brandpng",
-    images: ["/img/products/sm-s948blbpafb_brandpng"],
+    images: [
+      "/img/products/sm-s948blbpafb_brandpng"
+    ],
     price: 21999,
     oldPrice: null,
     discount: 0,
@@ -11331,7 +12040,7 @@ const PRODUCTS = [
       "flagship",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.9\" Galaxy S26 Ultra with 200+10+50+50MP/12MP cameras, 1TB+12GB, 5000mAh.",
     specs: {
       Screen: "6.9\"",
@@ -11349,7 +12058,9 @@ const PRODUCTS = [
     model: "SM-S938BZBIAFB",
     category: "phones",
     image: "/img/products/s25-ultra.jpg",
-    images: ["/img/products/s25-ultra.jpg"],
+    images: [
+      "/img/products/s25-ultra.jpg"
+    ],
     price: 14999,
     oldPrice: null,
     discount: 0,
@@ -11379,7 +12090,9 @@ const PRODUCTS = [
     model: "SM-S938BZBOAFB",
     category: "phones",
     image: "/img/products/sm-s938bzboafb_brandpng",
-    images: ["/img/products/sm-s938bzboafb_brandpng"],
+    images: [
+      "/img/products/sm-s938bzboafb_brandpng"
+    ],
     price: 16499,
     oldPrice: null,
     discount: 0,
@@ -11409,7 +12122,9 @@ const PRODUCTS = [
     model: "SM-S938BZBPAFB",
     category: "phones",
     image: "/img/products/sm-s938bzbpafb_brandpng",
-    images: ["/img/products/sm-s938bzbpafb_brandpng"],
+    images: [
+      "/img/products/sm-s938bzbpafb_brandpng"
+    ],
     price: 18999,
     oldPrice: null,
     discount: 0,
@@ -11439,7 +12154,9 @@ const PRODUCTS = [
     model: "SM-S936BDBIAFB",
     category: "phones",
     image: "/img/products/sm-s936bdbiafb_brandpng",
-    images: ["/img/products/sm-s936bdbiafb_brandpng"],
+    images: [
+      "/img/products/sm-s936bdbiafb_brandpng"
+    ],
     price: 11499,
     oldPrice: null,
     discount: 0,
@@ -11469,7 +12186,9 @@ const PRODUCTS = [
     model: "SM-S936BDBOAFB",
     category: "phones",
     image: "/img/products/sm-s936bdboafb_brandpng",
-    images: ["/img/products/sm-s936bdboafb_brandpng"],
+    images: [
+      "/img/products/sm-s936bdboafb_brandpng"
+    ],
     price: 12999,
     oldPrice: null,
     discount: 0,
@@ -11499,7 +12218,9 @@ const PRODUCTS = [
     model: "SM-S931BDBIAFB",
     category: "phones",
     image: "/img/products/sm-s931bdbiafb_brandpng",
-    images: ["/img/products/sm-s931bdbiafb_brandpng"],
+    images: [
+      "/img/products/sm-s931bdbiafb_brandpng"
+    ],
     price: 9499,
     oldPrice: null,
     discount: 0,
@@ -11529,7 +12250,9 @@ const PRODUCTS = [
     model: "SM-S931BDBOAFB",
     category: "phones",
     image: "/img/products/sm-s931bdboafb_brandpng",
-    images: ["/img/products/sm-s931bdboafb_brandpng"],
+    images: [
+      "/img/products/sm-s931bdboafb_brandpng"
+    ],
     price: 10199,
     oldPrice: null,
     discount: 0,
@@ -11559,7 +12282,9 @@ const PRODUCTS = [
     model: "SM-A376BDGVAFB",
     category: "phones",
     image: "/img/products/sm-a376bdgvafb_brandpng",
-    images: ["/img/products/sm-a376bdgvafb_brandpng"],
+    images: [
+      "/img/products/sm-a376bdgvafb_brandpng"
+    ],
     price: 5399,
     oldPrice: null,
     discount: 0,
@@ -11572,7 +12297,7 @@ const PRODUCTS = [
       "phones",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.7\" Galaxy A37 with 50+8+5MP cameras, 256GB+8GB, 5000mAh battery.",
     specs: {
       Screen: "6.7\"",
@@ -11590,7 +12315,9 @@ const PRODUCTS = [
     model: "SM-A576BDBPAFB",
     category: "phones",
     image: "/img/products/sm-a576bdbpafb_brandpng",
-    images: ["/img/products/sm-a576bdbpafb_brandpng"],
+    images: [
+      "/img/products/sm-a576bdbpafb_brandpng"
+    ],
     price: 6199,
     oldPrice: null,
     discount: 0,
@@ -11603,7 +12330,7 @@ const PRODUCTS = [
       "phones",
       "new-arrivals"
     ],
-    badge: "new",
+    badge: "",
     description: "6.7\" Galaxy A57 with 50+12+5MP/32MP cameras, 256GB+8GB, 5000mAh.",
     specs: {
       Screen: "6.7\"",
@@ -11621,7 +12348,9 @@ const PRODUCTS = [
     model: "SM-A566BLIWAFB",
     category: "phones",
     image: "/img/products/sm-a566bliwafb_brandpng",
-    images: ["/img/products/sm-a566bliwafb_brandpng"],
+    images: [
+      "/img/products/sm-a566bliwafb_brandpng"
+    ],
     price: 5199,
     oldPrice: null,
     discount: 0,
@@ -11651,7 +12380,9 @@ const PRODUCTS = [
     model: "SM-A566BLIVAFB",
     category: "phones",
     image: "/img/products/sm-a566blivafb_brandpng",
-    images: ["/img/products/sm-a566blivafb_brandpng"],
+    images: [
+      "/img/products/sm-a566blivafb_brandpng"
+    ],
     price: 4899,
     oldPrice: null,
     discount: 0,
@@ -11681,7 +12412,9 @@ const PRODUCTS = [
     model: "SM-A366BLGVAFB",
     category: "phones",
     image: "/img/products/sm-a366blgvafb_brandpng",
-    images: ["/img/products/sm-a366blgvafb_brandpng"],
+    images: [
+      "/img/products/sm-a366blgvafb_brandpng"
+    ],
     price: 4499,
     oldPrice: null,
     discount: 0,
@@ -11711,7 +12444,9 @@ const PRODUCTS = [
     model: "SM-A266BLGJAFB",
     category: "phones",
     image: "/img/products/sm-a266blgjafb_brandpng",
-    images: ["/img/products/sm-a266blgjafb_brandpng"],
+    images: [
+      "/img/products/sm-a266blgjafb_brandpng"
+    ],
     price: 4199,
     oldPrice: null,
     discount: 0,
@@ -11741,7 +12476,9 @@ const PRODUCTS = [
     model: "SM-A266BLGIAFB",
     category: "phones",
     image: "/img/products/sm-a266blgiafb_brandpng",
-    images: ["/img/products/sm-a266blgiafb_brandpng"],
+    images: [
+      "/img/products/sm-a266blgiafb_brandpng"
+    ],
     price: 3199,
     oldPrice: null,
     discount: 0,
@@ -11771,7 +12508,9 @@ const PRODUCTS = [
     model: "SM-A175FLBNAFB",
     category: "phones",
     image: "/img/products/sm-a175flbnafb_brandpng",
-    images: ["/img/products/sm-a175flbnafb_brandpng"],
+    images: [
+      "/img/products/sm-a175flbnafb_brandpng"
+    ],
     price: 1959,
     oldPrice: null,
     discount: 0,
@@ -11800,7 +12539,9 @@ const PRODUCTS = [
     model: "SM-A175FZACAFB",
     category: "phones",
     image: "/img/products/sm-a175fzacafb_brandpng",
-    images: ["/img/products/sm-a175fzacafb_brandpng"],
+    images: [
+      "/img/products/sm-a175fzacafb_brandpng"
+    ],
     price: 2199,
     oldPrice: null,
     discount: 0,
@@ -11829,7 +12570,9 @@ const PRODUCTS = [
     model: "SM-A175FZAOAFB",
     category: "phones",
     image: "/img/products/sm-a175fzaoafb_brandpng",
-    images: ["/img/products/sm-a175fzaoafb_brandpng"],
+    images: [
+      "/img/products/sm-a175fzaoafb_brandpng"
+    ],
     price: 2999,
     oldPrice: null,
     discount: 0,
@@ -11858,7 +12601,9 @@ const PRODUCTS = [
     model: "SM-A165FZKDAFB",
     category: "phones",
     image: "/img/products/africa-en-galaxy-a16-sm-a165-sm-a165fzkiafb-544252058.jpg",
-    images: ["/img/products/africa-en-galaxy-a16-sm-a165-sm-a165fzkiafb-544252058.jpg"],
+    images: [
+      "/img/products/africa-en-galaxy-a16-sm-a165-sm-a165fzkiafb-544252058.jpg"
+    ],
     price: 1749,
     oldPrice: null,
     discount: 0,
@@ -11887,7 +12632,9 @@ const PRODUCTS = [
     model: "SM-A075FZKJAFB",
     category: "phones",
     image: "/img/products/sm-a075fzkjafb_brandpng",
-    images: ["/img/products/sm-a075fzkjafb_brandpng"],
+    images: [
+      "/img/products/sm-a075fzkjafb_brandpng"
+    ],
     price: 1229,
     oldPrice: null,
     discount: 0,
@@ -11916,7 +12663,9 @@ const PRODUCTS = [
     model: "SM-A075FZKDAFB",
     category: "phones",
     image: "/img/products/sm-a075fzkdafb_brandpng",
-    images: ["/img/products/sm-a075fzkdafb_brandpng"],
+    images: [
+      "/img/products/sm-a075fzkdafb_brandpng"
+    ],
     price: 1199,
     oldPrice: null,
     discount: 0,
@@ -11945,7 +12694,9 @@ const PRODUCTS = [
     model: "SM-A075FZKGAFB",
     category: "phones",
     image: "/img/products/sm-a075fzkgafb_brandpng",
-    images: ["/img/products/sm-a075fzkgafb_brandpng"],
+    images: [
+      "/img/products/sm-a075fzkgafb_brandpng"
+    ],
     price: 1429,
     oldPrice: null,
     discount: 0,
@@ -11974,7 +12725,9 @@ const PRODUCTS = [
     model: "SM-A075FZKHAFB",
     category: "phones",
     image: "/img/products/sm-a075fzkhafb_brandpng",
-    images: ["/img/products/sm-a075fzkhafb_brandpng"],
+    images: [
+      "/img/products/sm-a075fzkhafb_brandpng"
+    ],
     price: 1699,
     oldPrice: null,
     discount: 0,
@@ -12003,7 +12756,9 @@ const PRODUCTS = [
     model: "SM-A065FZKDAFB",
     category: "phones",
     image: "/img/products/sm-a065fzkdafb_brandpng",
-    images: ["/img/products/sm-a065fzkdafb_brandpng"],
+    images: [
+      "/img/products/sm-a065fzkdafb_brandpng"
+    ],
     price: 1059,
     oldPrice: null,
     discount: 0,
@@ -12032,7 +12787,9 @@ const PRODUCTS = [
     model: "SM-L320NDAAMEA",
     category: "phones",
     image: "/img/products/sm-l320ndaamea_brandpng",
-    images: ["/img/products/sm-l320ndaamea_brandpng"],
+    images: [
+      "/img/products/sm-l320ndaamea_brandpng"
+    ],
     price: 4699,
     oldPrice: null,
     discount: 0,
@@ -12060,7 +12817,9 @@ const PRODUCTS = [
     model: "SM-L330NDAAMEA",
     category: "phones",
     image: "/img/products/sm-l330ndaamea_brandpng",
-    images: ["/img/products/sm-l330ndaamea_brandpng"],
+    images: [
+      "/img/products/sm-l330ndaamea_brandpng"
+    ],
     price: 5199,
     oldPrice: null,
     discount: 0,
@@ -12088,7 +12847,9 @@ const PRODUCTS = [
     model: "SM-L500NZWAMEA",
     category: "phones",
     image: "/img/products/sm-l500nzwamea_brandpng",
-    images: ["/img/products/sm-l500nzwamea_brandpng"],
+    images: [
+      "/img/products/sm-l500nzwamea_brandpng"
+    ],
     price: 6899,
     oldPrice: null,
     discount: 0,
@@ -12117,7 +12878,9 @@ const PRODUCTS = [
     model: "SM-L705FZA1XFA",
     category: "phones",
     image: "/img/products/sm-l705fza1xfa_brandpng",
-    images: ["/img/products/sm-l705fza1xfa_brandpng"],
+    images: [
+      "/img/products/sm-l705fza1xfa_brandpng"
+    ],
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -12146,7 +12909,9 @@ const PRODUCTS = [
     model: "SM-L705FZTAXFA",
     category: "phones",
     image: "/img/products/za-galaxy-watch-ultra-l705-sm-l705fdaaxfa-542170189.jpg",
-    images: ["/img/products/za-galaxy-watch-ultra-l705-sm-l705fdaaxfa-542170189.jpg"],
+    images: [
+      "/img/products/za-galaxy-watch-ultra-l705-sm-l705fdaaxfa-542170189.jpg"
+    ],
     price: 8999,
     oldPrice: null,
     discount: 0,
@@ -12175,7 +12940,9 @@ const PRODUCTS = [
     model: "SM-R420NZAAMEA",
     category: "phones",
     image: "/img/products/SM-R530NZWAMEA.jpg",
-    images: ["/img/products/SM-R530NZWAMEA.jpg"],
+    images: [
+      "/img/products/SM-R530NZWAMEA.jpg"
+    ],
     price: 1399,
     oldPrice: null,
     discount: 0,
@@ -12190,8 +12957,8 @@ const PRODUCTS = [
     description: "Galaxy Buds 3 FE with ANC, up to 20 hours battery life (with case), IPX4 water resistance.",
     specs: {
       ANC: "Yes",
-      "Battery (case)": "20 hours",
-      "Water Resistance": "IPX4"
+      Battery (case): "20 hours",
+      Water Resistance: "IPX4"
     }
   },
   {
@@ -12202,7 +12969,9 @@ const PRODUCTS = [
     model: "SM-R530NZAAMEA",
     category: "phones",
     image: "/img/products/sm-r530nzaamea_brandpng",
-    images: ["/img/products/sm-r530nzaamea_brandpng"],
+    images: [
+      "/img/products/sm-r530nzaamea_brandpng"
+    ],
     price: 2029,
     oldPrice: null,
     discount: 0,
@@ -12217,7 +12986,7 @@ const PRODUCTS = [
     description: "Galaxy Buds 3 with 1-way speaker, BT 5.4, up to 24 hours playtime with case.",
     specs: {
       Bluetooth: "5.4",
-      "Total Playtime": "24 hours",
+      Total Playtime: "24 hours",
       Speaker: "1-way"
     }
   },
@@ -12229,7 +12998,9 @@ const PRODUCTS = [
     model: "SM-R630NZAAMEA",
     category: "phones",
     image: "/img/products/sm-r630nzaamea_brandpng",
-    images: ["/img/products/sm-r630nzaamea_brandpng"],
+    images: [
+      "/img/products/sm-r630nzaamea_brandpng"
+    ],
     price: 2899,
     oldPrice: null,
     discount: 0,
@@ -12245,7 +13016,7 @@ const PRODUCTS = [
     specs: {
       Bluetooth: "5.4",
       Battery: "6 hours",
-      "Water Resistance": "IP57"
+      Water Resistance: "IP57"
     }
   },
   {
@@ -12256,7 +13027,9 @@ const PRODUCTS = [
     model: "LH46VMBUBGBXUE",
     category: "commercial",
     image: "/img/products/lh46vmbubgbxue_brandpng",
-    images: ["/img/products/lh46vmbubgbxue_brandpng"],
+    images: [
+      "/img/products/lh46vmbubgbxue_brandpng"
+    ],
     price: 33299,
     oldPrice: null,
     discount: 0,
@@ -12285,7 +13058,9 @@ const PRODUCTS = [
     model: "LH55VMBUBGBXEN",
     category: "commercial",
     image: "/img/products/lh55vmbubgbxen_brandpng",
-    images: ["/img/products/lh55vmbubgbxen_brandpng"],
+    images: [
+      "/img/products/lh55vmbubgbxen_brandpng"
+    ],
     price: 37299,
     oldPrice: null,
     discount: 0,
@@ -12314,7 +13089,9 @@ const PRODUCTS = [
     model: "LH55UDEHLBB/NG",
     category: "commercial",
     image: "/img/products/lh55udehlbb_ng_brandpng",
-    images: ["/img/products/lh55udehlbb_ng_brandpng"],
+    images: [
+      "/img/products/lh55udehlbb_ng_brandpng"
+    ],
     price: 37299,
     oldPrice: null,
     discount: 0,
@@ -12343,7 +13120,9 @@ const PRODUCTS = [
     model: "LH55VMCEBGBXUE",
     category: "commercial",
     image: "/img/products/lh55vmcebgbxue_brandpng",
-    images: ["/img/products/lh55vmcebgbxue_brandpng"],
+    images: [
+      "/img/products/lh55vmcebgbxue_brandpng"
+    ],
     price: 39999,
     oldPrice: null,
     discount: 0,
@@ -12372,7 +13151,9 @@ const PRODUCTS = [
     model: "LH13QBRTBGCXEN",
     category: "commercial",
     image: "/img/products/lh13qbrtbgcxen_brandpng",
-    images: ["/img/products/lh13qbrtbgcxen_brandpng"],
+    images: [
+      "/img/products/lh13qbrtbgcxen_brandpng"
+    ],
     price: 13199,
     oldPrice: null,
     discount: 0,
@@ -12401,7 +13182,9 @@ const PRODUCTS = [
     model: "LH55QMRTBGCXEN",
     category: "commercial",
     image: "/img/products/lh55qmrtbgcxen_brandpng",
-    images: ["/img/products/lh55qmrtbgcxen_brandpng"],
+    images: [
+      "/img/products/lh55qmrtbgcxen_brandpng"
+    ],
     price: 33199,
     oldPrice: null,
     discount: 0,
@@ -12430,7 +13213,9 @@ const PRODUCTS = [
     model: "LH55WMBWBGCXUE",
     category: "commercial",
     image: "/img/products/lh55wmbwbgcxue_brandpng",
-    images: ["/img/products/lh55wmbwbgcxue_brandpng"],
+    images: [
+      "/img/products/lh55wmbwbgcxue_brandpng"
+    ],
     price: 26599,
     oldPrice: null,
     discount: 0,
@@ -12458,7 +13243,9 @@ const PRODUCTS = [
     model: "LH65WMBWBGCXUE",
     category: "commercial",
     image: "/img/products/lh65wmbwbgcxue_brandpng",
-    images: ["/img/products/lh65wmbwbgcxue_brandpng"],
+    images: [
+      "/img/products/lh65wmbwbgcxue_brandpng"
+    ],
     price: 33199,
     oldPrice: null,
     discount: 0,
@@ -12486,7 +13273,9 @@ const PRODUCTS = [
     model: "LH75WMAWLGCXUE",
     category: "commercial",
     image: "/img/products/lh75wmawlgcxue_brandpng",
-    images: ["/img/products/lh75wmawlgcxue_brandpng"],
+    images: [
+      "/img/products/lh75wmawlgcxue_brandpng"
+    ],
     price: 57999,
     oldPrice: null,
     discount: 0,
@@ -12514,7 +13303,9 @@ const PRODUCTS = [
     model: "LH85WMBWLGCXUE",
     category: "commercial",
     image: "/img/products/lh85wmbwlgcxue_brandpng",
-    images: ["/img/products/lh85wmbwlgcxue_brandpng"],
+    images: [
+      "/img/products/lh85wmbwlgcxue_brandpng"
+    ],
     price: 74599,
     oldPrice: null,
     discount: 0,
@@ -12542,7 +13333,9 @@ const PRODUCTS = [
     model: "LH13QBREBGCXEN",
     category: "commercial",
     image: "/img/products/lh13qbrebgcxen_brandpng",
-    images: ["/img/products/lh13qbrebgcxen_brandpng"],
+    images: [
+      "/img/products/lh13qbrebgcxen_brandpng"
+    ],
     price: 5399,
     oldPrice: null,
     discount: 0,
@@ -12571,7 +13364,9 @@ const PRODUCTS = [
     model: "LH43QMBEBGCXUE",
     category: "commercial",
     image: "/img/products/lh43qmbebgcxue_brandpng",
-    images: ["/img/products/lh43qmbebgcxue_brandpng"],
+    images: [
+      "/img/products/lh43qmbebgcxue_brandpng"
+    ],
     price: 13199,
     oldPrice: null,
     discount: 0,
@@ -12600,7 +13395,9 @@ const PRODUCTS = [
     model: "LH49QMREBGCXUE",
     category: "commercial",
     image: "/img/products/lh49qmrebgcxue_brandpng",
-    images: ["/img/products/lh49qmrebgcxue_brandpng"],
+    images: [
+      "/img/products/lh49qmrebgcxue_brandpng"
+    ],
     price: 11699,
     oldPrice: null,
     discount: 0,
@@ -12629,7 +13426,9 @@ const PRODUCTS = [
     model: "LH50QMBEBGCXUE",
     category: "commercial",
     image: "/img/products/lh50qmbebgcxue_brandpng",
-    images: ["/img/products/lh50qmbebgcxue_brandpng"],
+    images: [
+      "/img/products/lh50qmbebgcxue_brandpng"
+    ],
     price: 14199,
     oldPrice: null,
     discount: 0,
@@ -12658,7 +13457,9 @@ const PRODUCTS = [
     model: "LH55MEB",
     category: "commercial",
     image: "/img/products/lh55meb_brandpng",
-    images: ["/img/products/lh55meb_brandpng"],
+    images: [
+      "/img/products/lh55meb_brandpng"
+    ],
     price: 16599,
     oldPrice: null,
     discount: 0,
@@ -12687,7 +13488,9 @@ const PRODUCTS = [
     model: "LH55OHFPVBC/UE",
     category: "commercial",
     image: "/img/products/lh55ohfpvbc_ue_brandpng",
-    images: ["/img/products/lh55ohfpvbc_ue_brandpng"],
+    images: [
+      "/img/products/lh55ohfpvbc_ue_brandpng"
+    ],
     price: 66299,
     oldPrice: null,
     discount: 0,
@@ -12706,7 +13509,7 @@ const PRODUCTS = [
       Touch: "No",
       Type: "Digital Signage",
       Use: "Full Outdoor",
-      "IP Rating": "Yes"
+      IP Rating: "Yes"
     }
   },
   {
@@ -12717,7 +13520,9 @@ const PRODUCTS = [
     model: "LH65QBBEBGCXUE",
     category: "commercial",
     image: "/img/products/lh65qbbebgcxue_brandpng",
-    images: ["/img/products/lh65qbbebgcxue_brandpng"],
+    images: [
+      "/img/products/lh65qbbebgcxue_brandpng"
+    ],
     price: 30099,
     oldPrice: null,
     discount: 0,
@@ -12746,7 +13551,9 @@ const PRODUCTS = [
     model: "LH65MDCPLG",
     category: "commercial",
     image: "/img/products/lh65mdcplg_brandpng",
-    images: ["/img/products/lh65mdcplg_brandpng"],
+    images: [
+      "/img/products/lh65mdcplg_brandpng"
+    ],
     price: 52299,
     oldPrice: null,
     discount: 0,
@@ -12775,7 +13582,9 @@ const PRODUCTS = [
     model: "LH75QBBEBGCXUE",
     category: "commercial",
     image: "/img/products/lh75qbbebgcxue_brandpng",
-    images: ["/img/products/lh75qbbebgcxue_brandpng"],
+    images: [
+      "/img/products/lh75qbbebgcxue_brandpng"
+    ],
     price: 41899,
     oldPrice: null,
     discount: 0,
@@ -12804,7 +13613,9 @@ const PRODUCTS = [
     model: "LH75QMRABGCXUE",
     category: "commercial",
     image: "/img/products/lh75qmrabgcxue_brandpng",
-    images: ["/img/products/lh75qmrabgcxue_brandpng"],
+    images: [
+      "/img/products/lh75qmrabgcxue_brandpng"
+    ],
     price: 52299,
     oldPrice: null,
     discount: 0,
@@ -12833,7 +13644,9 @@ const PRODUCTS = [
     model: "LH75QMREBGCXUE",
     category: "commercial",
     image: "/img/products/lh75qmrebgcxue_brandpng",
-    images: ["/img/products/lh75qmrebgcxue_brandpng"],
+    images: [
+      "/img/products/lh75qmrebgcxue_brandpng"
+    ],
     price: 37299,
     oldPrice: null,
     discount: 0,
@@ -12862,7 +13675,9 @@ const PRODUCTS = [
     model: "LH85QBRBBGCXUE",
     category: "commercial",
     image: "/img/products/lh85qbrbbgcxue_brandpng",
-    images: ["/img/products/lh85qbrbbgcxue_brandpng"],
+    images: [
+      "/img/products/lh85qbrbbgcxue_brandpng"
+    ],
     price: 57999,
     oldPrice: null,
     discount: 0,
@@ -12891,7 +13706,9 @@ const PRODUCTS = [
     model: "LH85QMNEBGC/UE",
     category: "commercial",
     image: "/img/products/lh85qmnebgc_ue_brandpng",
-    images: ["/img/products/lh85qmnebgc_ue_brandpng"],
+    images: [
+      "/img/products/lh85qmnebgc_ue_brandpng"
+    ],
     price: 69999,
     oldPrice: null,
     discount: 0,
@@ -12920,7 +13737,9 @@ const PRODUCTS = [
     model: "HG43AU800EEXEN",
     category: "commercial",
     image: "/img/products/hg43au800eexen_brandpng",
-    images: ["/img/products/hg43au800eexen_brandpng"],
+    images: [
+      "/img/products/hg43au800eexen_brandpng"
+    ],
     price: 13399,
     oldPrice: null,
     discount: 0,
@@ -12949,7 +13768,9 @@ const PRODUCTS = [
     model: "HG50BU800AUXUE",
     category: "commercial",
     image: "/img/products/hg50bu800auxue_brandpng",
-    images: ["/img/products/hg50bu800auxue_brandpng"],
+    images: [
+      "/img/products/hg50bu800auxue_brandpng"
+    ],
     price: 14999,
     oldPrice: null,
     discount: 0,
@@ -12978,7 +13799,9 @@ const PRODUCTS = [
     model: "HG55AU800AUXUE",
     category: "commercial",
     image: "/img/products/hg55au800auxue_brandpng",
-    images: ["/img/products/hg55au800auxue_brandpng"],
+    images: [
+      "/img/products/hg55au800auxue_brandpng"
+    ],
     price: 15799,
     oldPrice: null,
     discount: 0,
@@ -13007,7 +13830,9 @@ const PRODUCTS = [
     model: "HG65AU800AUXUE",
     category: "commercial",
     image: "/img/products/hg65au800auxue_brandpng",
-    images: ["/img/products/hg65au800auxue_brandpng"],
+    images: [
+      "/img/products/hg65au800auxue_brandpng"
+    ],
     price: 19099,
     oldPrice: null,
     discount: 0,
@@ -13036,7 +13861,9 @@ const PRODUCTS = [
     model: "HG75BU800AUXUE",
     category: "commercial",
     image: null,
-    images: ["/img/products/SAMSUNG-75″-QN800A-NEO-QLED-8K-SMART-TV-2021.png"],
+    images: [
+      "/img/products/SAMSUNG-75″-QN800A-NEO-QLED-8K-SMART-TV-2021.png"
+    ],
     price: 20699,
     oldPrice: null,
     discount: 0,
@@ -13065,7 +13892,11 @@ const PRODUCTS = [
     model: "TCL-503",
     category: "phones",
     image: null,
-    images: ["/img/products/TCL-503-Front.png", "/img/products/TCL-43S5400A.webp", "/img/products/tcl-85c645.webp"],
+    images: [
+      "/img/products/TCL-503-Front.png",
+      "/img/products/TCL-43S5400A.webp",
+      "/img/products/tcl-85c645.webp"
+    ],
     price: 1199,
     oldPrice: null,
     discount: 0,
@@ -13092,7 +13923,10 @@ const PRODUCTS = [
     model: "TCL-605",
     category: "phones",
     image: null,
-    images: ["/img/products/TCL-43S5400A.webp", "/img/products/tcl-85c645.webp"],
+    images: [
+      "/img/products/TCL-43S5400A.webp",
+      "/img/products/tcl-85c645.webp"
+    ],
     price: 1599,
     oldPrice: null,
     discount: 0,
@@ -13354,7 +14188,9 @@ const PRODUCTS = [
     model: "TCL-SPLIT-ON_OFF-R32-GAS-SILVER-TAC-18CSD_ZG11-FRONT",
     category: "ac",
     image: null,
-    images: ["/img/products/MIDEA-1.5HP-R410-SPLIT-AIR-CONDITIONER1.jpg"],
+    images: [
+      "/img/products/MIDEA-1.5HP-R410-SPLIT-AIR-CONDITIONER1.jpg"
+    ],
     price: 3499,
     rating: 4.4,
     reviews: 74,
@@ -13364,7 +14200,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5HP · R32 Gas · Energy Saving · 220V/50HZ · Energy Saving · Gentle Breeze · Eco-friendly · QuadruPuri Filters",
-    badge: "new"
+    badge: ""
   },
   {
     id: 520,
@@ -13374,7 +14210,9 @@ const PRODUCTS = [
     model: "TCL-SPLIT-ON_OFF-R32-GAS-SILVER-TAC-18CSD_ZG11-FRONT",
     category: "ac",
     image: "/img/products/TCL-SPLIT-ON_OFF-R32-GAS-SILVER-TAC-18CSD_ZG11-FRONT.png",
-    images: ["/img/products/TCL-SPLIT-ON_OFF-R32-GAS-SILVER-TAC-18CSD_ZG11-FRONT.png"],
+    images: [
+      "/img/products/TCL-SPLIT-ON_OFF-R32-GAS-SILVER-TAC-18CSD_ZG11-FRONT.png"
+    ],
     price: 5499,
     rating: 4.4,
     reviews: 92,
@@ -13384,7 +14222,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0 HP · R32 Gas · R410A · 220V/50HZ · Energy Saving · Gentle Breeze · Eco-friendly",
-    badge: "new"
+    badge: ""
   },
   {
     id: 521,
@@ -13394,7 +14232,9 @@ const PRODUCTS = [
     model: "TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor",
     category: "ac",
     image: "/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png",
-    images: ["/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png"],
+    images: [
+      "/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png"
+    ],
     price: 27999,
     rating: 4.4,
     reviews: 73,
@@ -13404,7 +14244,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "6.0 HP · R410 Gas · High Efficiency A++ · Multi-Split Design · 85° Swing Angle · Full DC Inverter with Al · Easy to Clean Filter · Fresh Air Module",
-    badge: "new"
+    badge: ""
   },
   {
     id: 522,
@@ -13414,7 +14254,9 @@ const PRODUCTS = [
     model: "TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor",
     category: "ac",
     image: "/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png",
-    images: ["/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png"],
+    images: [
+      "/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 66,
@@ -13424,7 +14266,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "5.0 HP · R410 Gas · High Efficiency A++ · Multi-Split Design · 85° Swing Angle · Full DC Inverter with Al · Easy to Clean Filter · Fresh Air Module",
-    badge: "new"
+    badge: ""
   },
   {
     id: 523,
@@ -13434,7 +14276,9 @@ const PRODUCTS = [
     model: "TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor",
     category: "ac",
     image: "/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png",
-    images: ["/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png"],
+    images: [
+      "/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png"
+    ],
     price: 15999,
     rating: 4.4,
     reviews: 72,
@@ -13444,7 +14288,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "3.5 HP · R410 Gas · High Efficiency A++ · Multi-Split Design · 85° Swing Angle · Full DC Inverter with Al · Easy to Clean Filter · Fresh Air Module",
-    badge: "new"
+    badge: ""
   },
   {
     id: 524,
@@ -13454,7 +14298,9 @@ const PRODUCTS = [
     model: "TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor",
     category: "ac",
     image: "/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png",
-    images: ["/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png"],
+    images: [
+      "/img/products/TCL-CASSETTE-INVERTER_R410-GAS-TCC-24CHRA_DV-Indoor.png"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 94,
@@ -13464,7 +14310,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.5 HP · R410 Gas · High Efficiency A++ · Multi-Split Design · 85° Swing Angle · Full DC Inverter with Al · Easy to Clean Filter · Fresh Air Module",
-    badge: "new"
+    badge: ""
   },
   {
     id: 525,
@@ -13474,7 +14320,9 @@ const PRODUCTS = [
     model: "TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT",
     category: "ac",
     image: "/img/products/TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT.png",
-    images: ["/img/products/TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT.png"],
+    images: [
+      "/img/products/TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT.png"
+    ],
     price: 11399,
     rating: 4.4,
     reviews: 58,
@@ -13484,7 +14332,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.5HP · R32 Gas · T-Al Energy Saving · Fast Cooling &amp; Heating · Smart Wi-Fi Control · Healthy Filters · Coanda Airflow",
-    badge: "new"
+    badge: ""
   },
   {
     id: 526,
@@ -13494,7 +14342,9 @@ const PRODUCTS = [
     model: "TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT",
     category: "ac",
     image: "/img/products/TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT.png",
-    images: ["/img/products/TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT.png"],
+    images: [
+      "/img/products/TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT.png"
+    ],
     price: 8299,
     rating: 4.4,
     reviews: 28,
@@ -13504,7 +14354,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0HP · R32 Gas · T-Al Energy Saving · Fast Cooling &amp; Heating · Smart Wi-Fi Control · Healthy Filters · Coanda Airflow",
-    badge: "new"
+    badge: ""
   },
   {
     id: 527,
@@ -13514,7 +14364,9 @@ const PRODUCTS = [
     model: "TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT",
     category: "ac",
     image: "/img/products/TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT.png",
-    images: ["/img/products/TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT.png"],
+    images: [
+      "/img/products/TCL-SPLIT-INVERTER-R32-GAS-TAC-12CSD-ZG211-FRONT.png"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 35,
@@ -13524,7 +14376,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5HP · R32 Gas · T-Al Energy Saving · Fast Cooling &amp; Heating · Smart Wi-Fi Control · Healthy Filters · Coanda Airflow",
-    badge: "new"
+    badge: ""
   },
   {
     id: 529,
@@ -13534,7 +14386,9 @@ const PRODUCTS = [
     model: "HW-Q600F-KE-1",
     category: "small",
     image: "/img/products/HW-Q600F-KE-1.png",
-    images: ["/img/products/HW-Q600F-KE-1.png"],
+    images: [
+      "/img/products/HW-Q600F-KE-1.png"
+    ],
     price: 6599,
     rating: 4.4,
     reviews: 34,
@@ -13544,7 +14398,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "3.1.2ch Sound · Dolby Audio/DTS Virtual:X · Q-Symphony · Adaptive Sound · HDMI eARC · Bluetooth · Remote Control",
-    badge: "new"
+    badge: ""
   },
   {
     id: 530,
@@ -13554,7 +14408,9 @@ const PRODUCTS = [
     model: "HW-B450F-KE.-1png",
     category: "small",
     image: "/img/products/HW-B450F-KE.-1png.png",
-    images: ["/img/products/HW-B450F-KE.-1png.png"],
+    images: [
+      "/img/products/HW-B450F-KE.-1png.png"
+    ],
     price: 3599,
     rating: 4.4,
     reviews: 25,
@@ -13564,7 +14420,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "2.1ch Sound · Dolby Audio/DTS Virtual:X · Bass Boost · Adaptive Sound · HDMI ARC · Bluetooth · Remote Control",
-    badge: "new"
+    badge: ""
   },
   {
     id: 531,
@@ -13574,7 +14430,9 @@ const PRODUCTS = [
     model: "EM034A2MO-B-1",
     category: "kitchen",
     image: "/img/products/EM034A2MO-B-1.png",
-    images: ["/img/products/EM034A2MO-B-1.png"],
+    images: [
+      "/img/products/EM034A2MO-B-1.png"
+    ],
     price: 1899,
     rating: 4.4,
     reviews: 67,
@@ -13584,7 +14442,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "34 Liters · 900 Watt · 30s Express Start · 230V / 50Hz · Large Cavity · Observation Window · Safety Interlock System · Black · ECO Mode",
-    badge: "new"
+    badge: ""
   },
   {
     id: 532,
@@ -13594,7 +14452,9 @@ const PRODUCTS = [
     model: "NAS-A12INV-X-R32-FRONT",
     category: "ac",
     image: "/img/products/NAS-A12INV-X-R32-FRONT.png",
-    images: ["/img/products/NAS-A12INV-X-R32-FRONT.png"],
+    images: [
+      "/img/products/NAS-A12INV-X-R32-FRONT.png"
+    ],
     price: 6999,
     rating: 4.4,
     reviews: 43,
@@ -13604,7 +14464,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.5 HP · Refrigerant: R32 · Copper Condenser · White Panel Sleek Design · Inverter Compressor · 2 Stars",
-    badge: "new"
+    badge: ""
   },
   {
     id: 533,
@@ -13614,7 +14474,9 @@ const PRODUCTS = [
     model: "NAS-A12INV-X-R32-FRONT",
     category: "ac",
     image: "/img/products/NAS-A12INV-X-R32-FRONT.png",
-    images: ["/img/products/NAS-A12INV-X-R32-FRONT.png"],
+    images: [
+      "/img/products/NAS-A12INV-X-R32-FRONT.png"
+    ],
     price: 4999,
     rating: 4.4,
     reviews: 87,
@@ -13624,7 +14486,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0HP · Refrigerant: R32 · Copper Condenser · White Panel Sleek Design · Inverter Compressor · 2 Stars",
-    badge: "new"
+    badge: ""
   },
   {
     id: 534,
@@ -13634,7 +14496,9 @@ const PRODUCTS = [
     model: "NAS-A12INV-X-R32-FRONT",
     category: "ac",
     image: "/img/products/NAS-A12INV-X-R32-FRONT.png",
-    images: ["/img/products/NAS-A12INV-X-R32-FRONT.png"],
+    images: [
+      "/img/products/NAS-A12INV-X-R32-FRONT.png"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 65,
@@ -13644,7 +14508,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5 HP · Refrigerant: R32 · Copper Condenser · White Panel Sleek Design · Inverter Compressor · 2 Stars",
-    badge: "new"
+    badge: ""
   },
   {
     id: 535,
@@ -13654,7 +14518,9 @@ const PRODUCTS = [
     model: "MX-ST50F-ZN",
     category: "small",
     image: "/img/products/MX-ST50F-ZN.png",
-    images: ["/img/products/MX-ST50F-ZN.png"],
+    images: [
+      "/img/products/MX-ST50F-ZN.png"
+    ],
     price: 6299,
     rating: 4.4,
     reviews: 78,
@@ -13664,7 +14530,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "240WATT · Powerful Party Sound · Party Lights+ · Up 18 hours of playtime · Grip &amp; Roll · Splash-resistant IPX4 · Bluetooth · USB input",
-    badge: "new"
+    badge: ""
   },
   {
     id: 536,
@@ -13674,7 +14540,9 @@ const PRODUCTS = [
     model: "MX-ST40F-ZN",
     category: "small",
     image: "/img/products/MX-ST40F-ZN.png",
-    images: ["/img/products/MX-ST40F-ZN.png"],
+    images: [
+      "/img/products/MX-ST40F-ZN.png"
+    ],
     price: 5399,
     rating: 4.4,
     reviews: 92,
@@ -13684,7 +14552,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "160WATT · Powerful Party Sound · Party Lights+ · Up 18 hours of playtime · Grip &amp; Roll · Splash-resistant IPX4 · Bluetooth · USB input",
-    badge: "new"
+    badge: ""
   },
   {
     id: 537,
@@ -13694,7 +14562,9 @@ const PRODUCTS = [
     model: "NAS-FL1300-2DR-FRONT",
     category: "fridge",
     image: "/img/products/NAS-FL1300-2DR-FRONT.png",
-    images: ["/img/products/NAS-FL1300-2DR-FRONT.png"],
+    images: [
+      "/img/products/NAS-FL1300-2DR-FRONT.png"
+    ],
     price: 15999,
     rating: 4.4,
     reviews: 31,
@@ -13704,7 +14574,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "1080L · 2 Glass Door · 8 Shelves · Energy Saving · Child Lock · Interior Light · Frost Free · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 538,
@@ -13714,7 +14584,9 @@ const PRODUCTS = [
     model: "FL1400-3DR-FRONT",
     category: "fridge",
     image: "/img/products/FL1400-3DR-FRONT.png",
-    images: ["/img/products/FL1400-3DR-FRONT.png"],
+    images: [
+      "/img/products/FL1400-3DR-FRONT.png"
+    ],
     price: 17999,
     rating: 4.4,
     reviews: 32,
@@ -13724,7 +14596,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "1200L · 3 Glass Door · 12 Shelves · Energy Saving · Child Lock · Interior Light · Frost Free ·  · &nbsp; · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 539,
@@ -13734,7 +14606,9 @@ const PRODUCTS = [
     model: "TCL-Top-Mount-Fridge-415Ltrs-P540TMG-FRONT",
     category: "fridge",
     image: "/img/products/TCL-Top-Mount-Fridge-415Ltrs-P540TMG-FRONT.png",
-    images: ["/img/products/TCL-Top-Mount-Fridge-415Ltrs-P540TMG-FRONT.png"],
+    images: [
+      "/img/products/TCL-Top-Mount-Fridge-415Ltrs-P540TMG-FRONT.png"
+    ],
     price: 8999,
     rating: 4.4,
     reviews: 37,
@@ -13744,7 +14618,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "415L · No Frost · Fast Cooling · Silver Grey · Manual Temperature · Crisper Drawer with · Efficient Compressor · 8 Drawer Panels",
-    badge: "new"
+    badge: ""
   },
   {
     id: 540,
@@ -13754,7 +14628,9 @@ const PRODUCTS = [
     model: "TCL-Top-Mount-Fridge-528Ltrs-P687TMN-FRONT",
     category: "fridge",
     image: "/img/products/TCL-Top-Mount-Fridge-528Ltrs-P687TMN-FRONT.png",
-    images: ["/img/products/TCL-Top-Mount-Fridge-528Ltrs-P687TMN-FRONT.png"],
+    images: [
+      "/img/products/TCL-Top-Mount-Fridge-528Ltrs-P687TMN-FRONT.png"
+    ],
     price: 11999,
     rating: 4.4,
     reviews: 93,
@@ -13764,7 +14640,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "528L · Fast cooling · Manual Temperature · Silver Grey · Interior Led Light · Twin Eco Inverter",
-    badge: "new"
+    badge: ""
   },
   {
     id: 542,
@@ -13774,7 +14650,9 @@ const PRODUCTS = [
     model: "YPJ20A1W",
     category: "small",
     image: "/img/products/YPJ20A1W.png",
-    images: ["/img/products/YPJ20A1W.png"],
+    images: [
+      "/img/products/YPJ20A1W.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 78,
@@ -13784,7 +14662,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "330ML · Dry Burn · Variable Level Steaming · Overheat Protection · Fast Heating Up · Dry &amp; Wet Ironing ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 543,
@@ -13794,7 +14672,9 @@ const PRODUCTS = [
     model: "TCL-108L-Bottom-Mount-Fridge-F141BFS-Front",
     category: "fridge",
     image: "/img/products/TCL-108L-Bottom-Mount-Fridge-F141BFS-Front.png",
-    images: ["/img/products/TCL-108L-Bottom-Mount-Fridge-F141BFS-Front.png"],
+    images: [
+      "/img/products/TCL-108L-Bottom-Mount-Fridge-F141BFS-Front.png"
+    ],
     price: 2599,
     rating: 4.4,
     reviews: 72,
@@ -13804,7 +14684,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "108 Liters · Frost Free · Led Light · Silver · Electronic Control",
-    badge: "new"
+    badge: ""
   },
   {
     id: 544,
@@ -13814,7 +14694,9 @@ const PRODUCTS = [
     model: "NAS-MR12N1-MIRROR",
     category: "ac",
     image: "/img/products/NAS-MR12N1-MIRROR.png",
-    images: ["/img/products/NAS-MR12N1-MIRROR.png"],
+    images: [
+      "/img/products/NAS-MR12N1-MIRROR.png"
+    ],
     price: 6999,
     rating: 4.4,
     reviews: 35,
@@ -13824,7 +14706,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.5HP · Fast Cooling · Mirror · 3M Copper Pipes · Led Display Panel · R410 Gas · 1 Star Energy Rating",
-    badge: "new"
+    badge: ""
   },
   {
     id: 545,
@@ -13834,7 +14716,9 @@ const PRODUCTS = [
     model: "NAS-MR12N1-MIRROR",
     category: "ac",
     image: "/img/products/NAS-MR12N1-MIRROR.png",
-    images: ["/img/products/NAS-MR12N1-MIRROR.png"],
+    images: [
+      "/img/products/NAS-MR12N1-MIRROR.png"
+    ],
     price: 5199,
     rating: 4.4,
     reviews: 61,
@@ -13844,7 +14728,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0HP · Fast Cooling · Mirror · 3M Copper Pipes · Led Display Panel · R410 Gas · 1 Star Energy Rating",
-    badge: "new"
+    badge: ""
   },
   {
     id: 546,
@@ -13854,7 +14738,9 @@ const PRODUCTS = [
     model: "NAS-MR12N1-MIRROR",
     category: "ac",
     image: "/img/products/NAS-MR12N1-MIRROR.png",
-    images: ["/img/products/NAS-MR12N1-MIRROR.png"],
+    images: [
+      "/img/products/NAS-MR12N1-MIRROR.png"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 90,
@@ -13864,7 +14750,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5HP · Fast Cooling · Mirror · 3M Copper Pipes · Led Display Panel · R410 Gas · 1 Star Energy Rating",
-    badge: "new"
+    badge: ""
   },
   {
     id: 547,
@@ -13874,7 +14760,9 @@ const PRODUCTS = [
     model: "F378CFSL-Front",
     category: "fridge",
     image: "/img/products/F378CFSL-Front.png",
-    images: ["/img/products/F378CFSL-Front.png"],
+    images: [
+      "/img/products/F378CFSL-Front.png"
+    ],
     price: 4799,
     rating: 4.4,
     reviews: 98,
@@ -13884,7 +14772,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "290 Liters · Power Indicator · Storage Bucket · White · Mechanical Control · Led Light",
-    badge: "new"
+    badge: ""
   },
   {
     id: 548,
@@ -13894,7 +14782,9 @@ const PRODUCTS = [
     model: "MG22M8274AT-E3-1",
     category: "kitchen",
     image: "/img/products/MG22M8274AT-E3-1.png",
-    images: ["/img/products/MG22M8274AT-E3-1.png"],
+    images: [
+      "/img/products/MG22M8274AT-E3-1.png"
+    ],
     price: 6999,
     rating: 4.4,
     reviews: 97,
@@ -13904,7 +14794,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "22 Liters · Quick Defrost · Touch Control · Auto Cook · Eco Mode · Ceramic Enamel · Child lock · Stylish Black Design",
-    badge: "new"
+    badge: ""
   },
   {
     id: 549,
@@ -13914,7 +14804,9 @@ const PRODUCTS = [
     model: "MC32DG7646CKE1",
     category: "kitchen",
     image: "/img/products/MC32DG7646CKE1.png",
-    images: ["/img/products/MC32DG7646CKE1.png"],
+    images: [
+      "/img/products/MC32DG7646CKE1.png"
+    ],
     price: 5199,
     rating: 4.4,
     reviews: 39,
@@ -13924,7 +14816,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "32 Liters · Large Grill · Smart Control · All-in-one Microwave Oven · Air Fry · Auto Cook · Ceramic Enamel · Quick Defrost",
-    badge: "new"
+    badge: ""
   },
   {
     id: 550,
@@ -13934,7 +14826,9 @@ const PRODUCTS = [
     model: "F208SDS-Front",
     category: "fridge",
     image: "/img/products/F208SDS-Front.png",
-    images: ["/img/products/F208SDS-Front.png"],
+    images: [
+      "/img/products/F208SDS-Front.png"
+    ],
     price: 3699,
     rating: 4.4,
     reviews: 85,
@@ -13944,7 +14838,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "168 Liters · Upright Freezer · Frost Free · Electronic Temperature Control · Large capacity storage drawers · 7 Drawers · Silver · Fast Cooling",
-    badge: "new"
+    badge: ""
   },
   {
     id: 551,
@@ -13954,7 +14848,9 @@ const PRODUCTS = [
     model: "P642TMN-Front",
     category: "fridge",
     image: "/img/products/P642TMN-Front.png",
-    images: ["/img/products/P642TMN-Front.png"],
+    images: [
+      "/img/products/P642TMN-Front.png"
+    ],
     price: 10499,
     rating: 4.4,
     reviews: 91,
@@ -13964,7 +14860,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "480 Liters · Flexible Space · Adjustable Shelves · 2L Bottle Space · Tempered Shelves · 90° Accessible · Twin Eco Inverter · Power Cool · Total No Frost",
-    badge: "new"
+    badge: ""
   },
   {
     id: 552,
@@ -13974,7 +14870,9 @@ const PRODUCTS = [
     model: "90M21-S-1",
     category: "kitchen",
     image: "/img/products/90M21-S-1.png",
-    images: ["/img/products/90M21-S-1.png"],
+    images: [
+      "/img/products/90M21-S-1.png"
+    ],
     price: 2499,
     rating: 4.4,
     reviews: 29,
@@ -13984,7 +14882,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "90cm · Push Button Control · In Built Motor and Fan · 3 Speed Extracts · 2 LED bulbs · Stainless Steel",
-    badge: "new"
+    badge: ""
   },
   {
     id: 553,
@@ -13994,7 +14892,9 @@ const PRODUCTS = [
     model: "MS23K3513AK-EU",
     category: "kitchen",
     image: "/img/products/MS23K3513AK-EU.png",
-    images: ["/img/products/MS23K3513AK-EU.png"],
+    images: [
+      "/img/products/MS23K3513AK-EU.png"
+    ],
     price: 2099,
     rating: 4.4,
     reviews: 74,
@@ -14004,7 +14904,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "23 Liters · Quick Defrost · Child Safety Lock · Auto Cook · Stylish &amp; Durable · Deodorization · ECO Mode",
-    badge: "new"
+    badge: ""
   },
   {
     id: 554,
@@ -14014,7 +14914,9 @@ const PRODUCTS = [
     model: "MS23DG4504ATE3-1",
     category: "kitchen",
     image: "/img/products/MS23DG4504ATE3-1.png",
-    images: ["/img/products/MS23DG4504ATE3-1.png"],
+    images: [
+      "/img/products/MS23DG4504ATE3-1.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 75,
@@ -14024,7 +14926,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "23 Liters · Quick Defrost · Easy Control · Auto Cook · Stylish &amp; Durable · Ceramic Enamel · ECO Mode",
-    badge: "new"
+    badge: ""
   },
   {
     id: 555,
@@ -14034,7 +14936,9 @@ const PRODUCTS = [
     model: "MDRE353FGN01-3",
     category: "fridge",
     image: "/img/products/MDRE353FGN01-3.png",
-    images: ["/img/products/MDRE353FGN01-3.png"],
+    images: [
+      "/img/products/MDRE353FGN01-3.png"
+    ],
     price: 9999,
     rating: 4.4,
     reviews: 48,
@@ -14044,7 +14948,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "238 Liters · Super Freeze · Frost Free · Energy Saving · Eco- Friendly · Essay Control",
-    badge: "new"
+    badge: ""
   },
   {
     id: 556,
@@ -14054,7 +14958,9 @@ const PRODUCTS = [
     model: "RF48A401EB4-EU-1",
     category: "fridge",
     image: "/img/products/RF48A401EB4-EU-1.png",
-    images: ["/img/products/RF48A401EB4-EU-1.png"],
+    images: [
+      "/img/products/RF48A401EB4-EU-1.png"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 55,
@@ -14064,7 +14970,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "468 liters · Water Dispenser · WIFI Embedded · Digital Inverter Technology · Power Freezer · Twin Cooling Plus · Movable Ice Maker",
-    badge: "new"
+    badge: ""
   },
   {
     id: 557,
@@ -14074,7 +14980,9 @@ const PRODUCTS = [
     model: "MA-FACM1001",
     category: "kitchen",
     image: "/img/products/MA-FACM1001.png",
-    images: ["/img/products/MA-FACM1001.png"],
+    images: [
+      "/img/products/MA-FACM1001.png"
+    ],
     price: 5499,
     rating: 4.4,
     reviews: 56,
@@ -14084,7 +14992,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "2 Liters · Black · Easy Clean · Pureness and Freshness · 220 &#8211; 240V",
-    badge: "new"
+    badge: ""
   },
   {
     id: 558,
@@ -14094,7 +15002,9 @@ const PRODUCTS = [
     model: "60J72-B-FRONT",
     category: "kitchen",
     image: "/img/products/60J72-B-FRONT.png",
-    images: ["/img/products/60J72-B-FRONT.png"],
+    images: [
+      "/img/products/60J72-B-FRONT.png"
+    ],
     price: 3299,
     rating: 4.4,
     reviews: 44,
@@ -14104,7 +15014,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "60cm · Black · 3 Speed Settings · Low Noise Level · 5 Layer Aluminum · Senor Control · Black · Charcoal Filter · 210 Watts ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 559,
@@ -14114,7 +15024,9 @@ const PRODUCTS = [
     model: "OPENED-60L03-B",
     category: "kitchen",
     image: "/img/products/OPENED-60L03-B.png",
-    images: ["/img/products/OPENED-60L03-B.png"],
+    images: [
+      "/img/products/OPENED-60L03-B.png"
+    ],
     price: 1999,
     rating: 4.4,
     reviews: 64,
@@ -14124,7 +15036,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "60cm · Black · 3 Speed Settings · Low Noise Level · Senor Control · 240V · 210 Watts",
-    badge: "new"
+    badge: ""
   },
   {
     id: 562,
@@ -14134,7 +15046,9 @@ const PRODUCTS = [
     model: "TCL-Floor-Stand-Fixed-Speed-AC-FD-TAC-60CHF_FD-FRONT",
     category: "ac",
     image: "/img/products/TCL-Floor-Stand-Fixed-Speed-AC-FD-TAC-60CHF_FD-FRONT.png",
-    images: ["/img/products/TCL-Floor-Stand-Fixed-Speed-AC-FD-TAC-60CHF_FD-FRONT.png"],
+    images: [
+      "/img/products/TCL-Floor-Stand-Fixed-Speed-AC-FD-TAC-60CHF_FD-FRONT.png"
+    ],
     price: 39999,
     rating: 4.4,
     reviews: 22,
@@ -14144,7 +15058,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "6.0HP · Cooling and Heating · R410 Refrigerant · Rotary Compressor · Auto Restart",
-    badge: "new"
+    badge: ""
   },
   {
     id: 563,
@@ -14154,7 +15068,9 @@ const PRODUCTS = [
     model: "RT60CB66218AGH",
     category: "fridge",
     image: "/img/products/RT60CB66218AGH.png",
-    images: ["/img/products/RT60CB66218AGH.png"],
+    images: [
+      "/img/products/RT60CB66218AGH.png"
+    ],
     price: 15999,
     rating: 4.4,
     reviews: 62,
@@ -14164,7 +15080,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "441 Liters · Ice Maker · Energy Saving · Glass · Bespoke Design · Digital Inverter",
-    badge: "new"
+    badge: ""
   },
   {
     id: 564,
@@ -14174,7 +15090,9 @@ const PRODUCTS = [
     model: "MSAF24B-12CRDN1-R32-F",
     category: "ac",
     image: "/img/products/MSAF24B-12CRDN1-R32-F.png",
-    images: ["/img/products/MSAF24B-12CRDN1-R32-F.png"],
+    images: [
+      "/img/products/MSAF24B-12CRDN1-R32-F.png"
+    ],
     price: 4999,
     rating: 4.4,
     reviews: 98,
@@ -14184,7 +15102,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Fast Cooling · Smart Control · Air Purification System · Inverter · Low Energy Consumption · Self Cleaning",
-    badge: "new"
+    badge: ""
   },
   {
     id: 565,
@@ -14194,7 +15112,9 @@ const PRODUCTS = [
     model: "NASF2-28S-1",
     category: "fridge",
     image: "/img/products/NASF2-28S-1.png",
-    images: ["/img/products/NASF2-28S-1.png"],
+    images: [
+      "/img/products/NASF2-28S-1.png"
+    ],
     price: 4599,
     rating: 4.4,
     reviews: 33,
@@ -14204,7 +15124,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "204 Liters · Lock Security · Light · Dark Silver · Vegetable Box · Manual Defrost ·  · &nbsp; · &nbsp; · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 566,
@@ -14214,7 +15134,9 @@ const PRODUCTS = [
     model: "NASF2-24-1",
     category: "fridge",
     image: "/img/products/NASF2-24-1.png",
-    images: ["/img/products/NASF2-24-1.png"],
+    images: [
+      "/img/products/NASF2-24-1.png"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 85,
@@ -14224,7 +15146,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "166 Liters · Silver · Light · Vegetable Box · Energy Saving · Manual Defrost",
-    badge: "new"
+    badge: ""
   },
   {
     id: 567,
@@ -14234,7 +15156,9 @@ const PRODUCTS = [
     model: "NAS-AVR-3000WM-FRONT",
     category: "small",
     image: "/img/products/NAS-AVR-3000WM-FRONT.png",
-    images: ["/img/products/NAS-AVR-3000WM-FRONT.png"],
+    images: [
+      "/img/products/NAS-AVR-3000WM-FRONT.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 43,
@@ -14244,7 +15168,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Overload Protection · Controlled CPU · Over Voltage Protection · Fast Automatic Correction · Stable Output Voltage · Energy-efficient operation",
-    badge: "new"
+    badge: ""
   },
   {
     id: 569,
@@ -14254,7 +15178,9 @@ const PRODUCTS = [
     model: "HW-LS60DZN-FRONT",
     category: "small",
     image: "/img/products/HW-LS60DZN-FRONT.png",
-    images: ["/img/products/HW-LS60DZN-FRONT.png"],
+    images: [
+      "/img/products/HW-LS60DZN-FRONT.png"
+    ],
     price: 4999,
     rating: 4.4,
     reviews: 22,
@@ -14264,7 +15190,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Picture Frame Style · 2.0 Channel System · Bluetooth · 3 Way Speaker System · Dolby Atoms Digital Plus",
-    badge: "new"
+    badge: ""
   },
   {
     id: 570,
@@ -14274,7 +15200,9 @@ const PRODUCTS = [
     model: "QA55Q60CAUXGH-FRONT",
     category: "tv",
     image: "/img/products/QA55Q60CAUXGH-FRONT.png",
-    images: ["/img/products/QA55Q60CAUXGH-FRONT.png"],
+    images: [
+      "/img/products/QA55Q60CAUXGH-FRONT.png"
+    ],
     price: 13999,
     rating: 4.4,
     reviews: 77,
@@ -14284,7 +15212,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "55&#8243; · 4K · Tizen operating system · Ethernet LAN · 4 HDMI ports · Auto Game Mode · G-Symphony",
-    badge: "new"
+    badge: ""
   },
   {
     id: 571,
@@ -14294,7 +15222,9 @@ const PRODUCTS = [
     model: "AC048TNPPEH-FRONT",
     category: "ac",
     image: "/img/products/AC048TNPPEH-FRONT.png",
-    images: ["/img/products/AC048TNPPEH-FRONT.png"],
+    images: [
+      "/img/products/AC048TNPPEH-FRONT.png"
+    ],
     price: 39999,
     rating: 4.4,
     reviews: 65,
@@ -14304,7 +15234,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "5.0HP · Floor Standing · R410 Gas · Inverter Compressor · White · Energy Efficient",
-    badge: "new"
+    badge: ""
   },
   {
     id: 572,
@@ -14314,7 +15244,9 @@ const PRODUCTS = [
     model: "TCL-Side-By-Side-Refrigerator-P692SBNWD-FRONT",
     category: "fridge",
     image: "/img/products/TCL-Side-By-Side-Refrigerator-P692SBNWD-FRONT.png",
-    images: ["/img/products/TCL-Side-By-Side-Refrigerator-P692SBNWD-FRONT.png"],
+    images: [
+      "/img/products/TCL-Side-By-Side-Refrigerator-P692SBNWD-FRONT.png"
+    ],
     price: 9999,
     rating: 4.4,
     reviews: 26,
@@ -14324,7 +15256,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Twin ECO Inverter · Led Light · Total No Frost · Multi Door · Water Dispenser · Silver · 529 Liters",
-    badge: "new"
+    badge: ""
   },
   {
     id: 573,
@@ -14334,7 +15266,9 @@ const PRODUCTS = [
     model: "WW10DG6U94LBNQ-FRONT",
     category: "laundry",
     image: "/img/products/WW10DG6U94LBNQ-FRONT.png",
-    images: ["/img/products/WW10DG6U94LBNQ-FRONT.png"],
+    images: [
+      "/img/products/WW10DG6U94LBNQ-FRONT.png"
+    ],
     price: 8999,
     rating: 4.4,
     reviews: 52,
@@ -14344,7 +15278,7 @@ const PRODUCTS = [
       "laundry"
     ],
     description: "10.1KG · AI Control Panel · ECO Bubble Technology · Child Lock · Inverter Digital Technology",
-    badge: "new"
+    badge: ""
   },
   {
     id: 574,
@@ -14354,7 +15288,9 @@ const PRODUCTS = [
     model: "MG30T5018AKEF-FRONT-2",
     category: "kitchen",
     image: "/img/products/MG30T5018AKEF-FRONT-2.png",
-    images: ["/img/products/MG30T5018AKEF-FRONT-2.png"],
+    images: [
+      "/img/products/MG30T5018AKEF-FRONT-2.png"
+    ],
     price: 2999,
     rating: 4.4,
     reviews: 33,
@@ -14364,7 +15300,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "30 Liters · 1400 Watts · Plate Warming · Black · Grill · Repaid Defrost · Ceramic  Enamel Interior ·  · &nbsp; · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 575,
@@ -14374,7 +15310,9 @@ const PRODUCTS = [
     model: "NK24C7070WB-UR-4",
     category: "kitchen",
     image: "/img/products/NK24C7070WB-UR-4.png",
-    images: ["/img/products/NK24C7070WB-UR-4.png"],
+    images: [
+      "/img/products/NK24C7070WB-UR-4.png"
+    ],
     price: 9099,
     rating: 4.4,
     reviews: 40,
@@ -14384,7 +15322,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Efficient Ventilation System · Auto Connectivity · Aluminum Filter · Easy To Clean · LED Lighting · Built-In · 60CM",
-    badge: "new"
+    badge: ""
   },
   {
     id: 576,
@@ -14394,7 +15332,9 @@ const PRODUCTS = [
     model: "NK24M1030IB-UR-side",
     category: "kitchen",
     image: "/img/products/NK24M1030IB-UR-side.png",
-    images: ["/img/products/NK24M1030IB-UR-side.png"],
+    images: [
+      "/img/products/NK24M1030IB-UR-side.png"
+    ],
     price: 3599,
     rating: 4.4,
     reviews: 66,
@@ -14404,7 +15344,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "3 Power Levels · Control via Push Button · 3 Speed Extraction · Washable Aluminum Filter · Built-In ·  ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 577,
@@ -14414,7 +15354,9 @@ const PRODUCTS = [
     model: "NK36C7070WB-UR-1",
     category: "kitchen",
     image: "/img/products/NK36C7070WB-UR-1.png",
-    images: ["/img/products/NK36C7070WB-UR-1.png"],
+    images: [
+      "/img/products/NK36C7070WB-UR-1.png"
+    ],
     price: 10599,
     rating: 4.4,
     reviews: 86,
@@ -14424,7 +15366,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "90cm Capacity · Ventilation System Power · Premium  Design · LED Light · Bluetooth  Automatic Filter ·  · &nbsp; · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 578,
@@ -14434,7 +15376,9 @@ const PRODUCTS = [
     model: "C21RJANEU",
     category: "kitchen",
     image: "/img/products/C21RJANEU.jpeg",
-    images: ["/img/products/C21RJANEU.jpeg"],
+    images: [
+      "/img/products/C21RJANEU.jpeg"
+    ],
     price: 5099,
     rating: 4.4,
     reviews: 58,
@@ -14444,7 +15388,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "2 Burner · Smart Touch Control · 2 Burner · Easy Clean Up · Built-In · LED Display",
-    badge: "new"
+    badge: ""
   },
   {
     id: 579,
@@ -14454,7 +15398,9 @@ const PRODUCTS = [
     model: "C61R2AEEXEU-FRONT-2",
     category: "kitchen",
     image: "/img/products/C61R2AEEXEU-FRONT-2.png",
-    images: ["/img/products/C61R2AEEXEU-FRONT-2.png"],
+    images: [
+      "/img/products/C61R2AEEXEU-FRONT-2.png"
+    ],
     price: 6699,
     rating: 4.4,
     reviews: 75,
@@ -14464,7 +15410,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Touch Control · 8 Stage Power · Black Mirror Finish · Child Lock · Automatic Shut Off",
-    badge: "new"
+    badge: ""
   },
   {
     id: 580,
@@ -14474,7 +15420,9 @@ const PRODUCTS = [
     model: "NAS-08TLS-front",
     category: "laundry",
     image: "/img/products/NAS-08TLS-front.png",
-    images: ["/img/products/NAS-08TLS-front.png"],
+    images: [
+      "/img/products/NAS-08TLS-front.png"
+    ],
     price: 2999,
     rating: 4.4,
     reviews: 80,
@@ -14484,7 +15432,7 @@ const PRODUCTS = [
       "laundry"
     ],
     description: "LED Display · Fully Automatic · Fuzzy Control · Energy Saving · 7KG · 360% Water Flow",
-    badge: "new"
+    badge: ""
   },
   {
     id: 581,
@@ -14494,7 +15442,9 @@ const PRODUCTS = [
     model: "NA36R5310FS-AA",
     category: "kitchen",
     image: "/img/products/NA36R5310FS-AA.png",
-    images: ["/img/products/NA36R5310FS-AA.png"],
+    images: [
+      "/img/products/NA36R5310FS-AA.png"
+    ],
     price: 11399,
     rating: 4.4,
     reviews: 25,
@@ -14504,7 +15454,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Powerful Burners · Easy Cleanup · Front Controls · Stainless Steel · 5 Burners",
-    badge: "new"
+    badge: ""
   },
   {
     id: 582,
@@ -14514,7 +15464,9 @@ const PRODUCTS = [
     model: "NA64N7100AB-SG",
     category: "kitchen",
     image: "/img/products/NA64N7100AB-SG.png",
-    images: ["/img/products/NA64N7100AB-SG.png"],
+    images: [
+      "/img/products/NA64N7100AB-SG.png"
+    ],
     price: 4999,
     rating: 4.4,
     reviews: 71,
@@ -14524,7 +15476,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Powerful Heat · Black Glass · Built-In · Thermocouple · 4 Burner · Safe Operation",
-    badge: "new"
+    badge: ""
   },
   {
     id: 583,
@@ -14534,7 +15486,9 @@ const PRODUCTS = [
     model: "MS22M8254AK-E3",
     category: "kitchen",
     image: "/img/products/MS22M8254AK-E3.png",
-    images: ["/img/products/MS22M8254AK-E3.png"],
+    images: [
+      "/img/products/MS22M8254AK-E3.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 33,
@@ -14544,7 +15498,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Quick Defrost · ECO Mode · Easy Clean Interior · LED Display · Touch control Panel · 22 Liters",
-    badge: "new"
+    badge: ""
   },
   {
     id: 584,
@@ -14554,7 +15508,9 @@ const PRODUCTS = [
     model: "NQ5B4553FBS-U1",
     category: "kitchen",
     image: "/img/products/NQ5B4553FBS-U1.png",
-    images: ["/img/products/NQ5B4553FBS-U1.png"],
+    images: [
+      "/img/products/NQ5B4553FBS-U1.png"
+    ],
     price: 10999,
     rating: 4.4,
     reviews: 22,
@@ -14564,7 +15520,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Wi-Fi Connection · Vapour Cleaning · LED Display · Microwave Combi · 50L",
-    badge: "new"
+    badge: ""
   },
   {
     id: 585,
@@ -14574,7 +15530,9 @@ const PRODUCTS = [
     model: "NV68A1140BK-front",
     category: "kitchen",
     image: "/img/products/NV68A1140BK-front.png",
-    images: ["/img/products/NV68A1140BK-front.png"],
+    images: [
+      "/img/products/NV68A1140BK-front.png"
+    ],
     price: 7699,
     rating: 4.4,
     reviews: 95,
@@ -14584,7 +15542,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Catalytic Liner Interior · True Convection Cooking · LED Display · ActivEnamel Interior · Surge Protection",
-    badge: "new"
+    badge: ""
   },
   {
     id: 586,
@@ -14594,7 +15552,9 @@ const PRODUCTS = [
     model: "P540TMGWD-FRONT",
     category: "fridge",
     image: "/img/products/P540TMGWD-FRONT.png",
-    images: ["/img/products/P540TMGWD-FRONT.png"],
+    images: [
+      "/img/products/P540TMGWD-FRONT.png"
+    ],
     price: 7999,
     rating: 4.4,
     reviews: 25,
@@ -14604,7 +15564,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Fast Cooling · Manual Temperature · Adjustable glass shelves and crisper drawer · Built-in water dispenser · Energy-efficient design · 413 Liters ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 587,
@@ -14614,7 +15574,9 @@ const PRODUCTS = [
     model: "MJ-KM1201W-CLOSED",
     category: "kitchen",
     image: "/img/products/MJ-KM1201W-CLOSED.png",
-    images: ["/img/products/MJ-KM1201W-CLOSED.png"],
+    images: [
+      "/img/products/MJ-KM1201W-CLOSED.png"
+    ],
     price: 2499,
     rating: 4.4,
     reviews: 53,
@@ -14624,7 +15586,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Multi Function · 7 Speed Levels · ABS Plastic Housing · Processor 3.75 · 6.5 Liters ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 588,
@@ -14634,7 +15596,9 @@ const PRODUCTS = [
     model: "MJ-BL40G1-OPENED",
     category: "kitchen",
     image: "/img/products/MJ-BL40G1-OPENED.png",
-    images: ["/img/products/MJ-BL40G1-OPENED.png"],
+    images: [
+      "/img/products/MJ-BL40G1-OPENED.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 25,
@@ -14644,7 +15608,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Multi Function · Processor 3.75 · 3 Speed levels · Knob Control · Standard Accessories",
-    badge: "new"
+    badge: ""
   },
   {
     id: 589,
@@ -14654,7 +15618,9 @@ const PRODUCTS = [
     model: "TCL-TAB10L-GEN4-Front-Side-3",
     category: "phones",
     image: "/img/products/TCL-TAB10L-GEN4-Front-Side-3.png",
-    images: ["/img/products/TCL-TAB10L-GEN4-Front-Side-3.png"],
+    images: [
+      "/img/products/TCL-TAB10L-GEN4-Front-Side-3.png"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 41,
@@ -14664,7 +15630,7 @@ const PRODUCTS = [
       "phones"
     ],
     description: "4GB RAM &amp; 128GB ROM · WIFI · Android 15 · 6000mAh battery · Octa-core CPU",
-    badge: "new"
+    badge: ""
   },
   {
     id: 590,
@@ -14674,7 +15640,9 @@ const PRODUCTS = [
     model: "ALCATEL-A31-Green",
     category: "phones",
     image: "/img/products/ALCATEL-A31-Green.png",
-    images: ["/img/products/ALCATEL-A31-Green.png"],
+    images: [
+      "/img/products/ALCATEL-A31-Green.png"
+    ],
     price: 1099,
     rating: 4.4,
     reviews: 62,
@@ -14684,7 +15652,7 @@ const PRODUCTS = [
       "phones"
     ],
     description: "6.5&#8243; · MicroSD Card Support · Face Lock &amp; Finger Print · Android 15 · 64GB ROM ·  · &nbsp; · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 591,
@@ -14694,7 +15662,9 @@ const PRODUCTS = [
     model: "TCL-60SENXTPAPER-5G-Front-and-Back-Mint-Green",
     category: "phones",
     image: "/img/products/TCL-60SENXTPAPER-5G-Front-and-Back-Mint-Green.png",
-    images: ["/img/products/TCL-60SENXTPAPER-5G-Front-and-Back-Mint-Green.png"],
+    images: [
+      "/img/products/TCL-60SENXTPAPER-5G-Front-and-Back-Mint-Green.png"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 26,
@@ -14704,7 +15674,7 @@ const PRODUCTS = [
       "phones"
     ],
     description: "6.7&#8243; · Android 15 · Face Lock · 52000Mah Battery · MicroSD Card Support · Stylish Design · 5G Lite · 8GB+10GB RAM &amp; 256GB ROM",
-    badge: "new"
+    badge: ""
   },
   {
     id: 592,
@@ -14714,7 +15684,9 @@ const PRODUCTS = [
     model: "TCL-503-Front",
     category: "phones",
     image: "/img/products/TCL-503-Front.png",
-    images: ["/img/products/TCL-503-Front.png"],
+    images: [
+      "/img/products/TCL-503-Front.png"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 65,
@@ -14724,7 +15696,7 @@ const PRODUCTS = [
       "phones"
     ],
     description: "Android · Face Lock · 5000Mah Big Battery · MicroSD Card Support · Stylish Design",
-    badge: "new"
+    badge: ""
   },
   {
     id: 593,
@@ -14734,7 +15706,9 @@ const PRODUCTS = [
     model: "MSAGBU-12HRFN7-2",
     category: "ac",
     image: "/img/products/MSAGBU-12HRFN7-2.png",
-    images: ["/img/products/MSAGBU-12HRFN7-2.png"],
+    images: [
+      "/img/products/MSAGBU-12HRFN7-2.png"
+    ],
     price: 5499,
     rating: 4.4,
     reviews: 98,
@@ -14744,7 +15718,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Flash Cooling · Wifi Ready · Low Energy consumption · Inverter Quattro ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 594,
@@ -14754,7 +15728,9 @@ const PRODUCTS = [
     model: "NAS-FL110SC-FRONT",
     category: "fridge",
     image: "/img/products/NAS-FL110SC-FRONT.png",
-    images: ["/img/products/NAS-FL110SC-FRONT.png"],
+    images: [
+      "/img/products/NAS-FL110SC-FRONT.png"
+    ],
     price: 1899,
     rating: 4.4,
     reviews: 50,
@@ -14764,7 +15740,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Glass Door · Low Noise · Easy Cleaning Interior · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 595,
@@ -14774,7 +15750,9 @@ const PRODUCTS = [
     model: "RF65DG9H0EB1EU-1",
     category: "fridge",
     image: "/img/products/RF65DG9H0EB1EU-1.png",
-    images: ["/img/products/RF65DG9H0EB1EU-1.png"],
+    images: [
+      "/img/products/RF65DG9H0EB1EU-1.png"
+    ],
     price: 54999,
     rating: 4.4,
     reviews: 76,
@@ -14784,7 +15762,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "632 Ltrs · Smart Things · Energy Saving · Ice Maker · AI Vision · Black Colour · Family Hub",
-    badge: "new"
+    badge: ""
   },
   {
     id: 596,
@@ -14794,7 +15772,9 @@ const PRODUCTS = [
     model: "NAS-AVR-1500VA",
     category: "small",
     image: "/img/products/NAS-AVR-1500VA.png",
-    images: ["/img/products/NAS-AVR-1500VA.png"],
+    images: [
+      "/img/products/NAS-AVR-1500VA.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 36,
@@ -14804,7 +15784,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Overload Protection · 6/80 Sec Delay Time · Controlled CPU · Over Voltage Protection · Under Voltage Protection",
-    badge: "new"
+    badge: ""
   },
   {
     id: 597,
@@ -14814,7 +15794,9 @@ const PRODUCTS = [
     model: "NAS-SG10A-FRONT",
     category: "small",
     image: "/img/products/NAS-SG10A-FRONT.png",
-    images: ["/img/products/NAS-SG10A-FRONT.png"],
+    images: [
+      "/img/products/NAS-SG10A-FRONT.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 73,
@@ -14824,7 +15806,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Stabilising Output Voltage · 5 Minutes Delay Protection · 50 Amps Max Current · Over Voltage Protection · Under Voltage Protection · Protects Against Several Electrical Anomalies",
-    badge: "new"
+    badge: ""
   },
   {
     id: 598,
@@ -14834,7 +15816,9 @@ const PRODUCTS = [
     model: "AR60F12D1CW-AF",
     category: "ac",
     image: "/img/products/AR60F12D1CW-AF.png",
-    images: ["/img/products/AR60F12D1CW-AF.png"],
+    images: [
+      "/img/products/AR60F12D1CW-AF.png"
+    ],
     price: 6999,
     rating: 4.4,
     reviews: 90,
@@ -14844,7 +15828,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Tripple Protector Plus · R410 Wind Free · Volt Control · Inverter Compressor · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 599,
@@ -14854,7 +15838,9 @@ const PRODUCTS = [
     model: "",
     category: "fridge",
     image: "/img/products/F152TMS.jpg",
-    images: ["/img/products/F152TMS.jpg"],
+    images: [
+      "/img/products/F152TMS.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 64,
@@ -14864,7 +15850,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "The F112TMS Top Mount Refrigerator is designed for reliable cooling and everyday convenience. With a compact yet spacious interior, it offers efficient storage for fresh and frozen foods. The top-moun",
-    badge: "new"
+    badge: ""
   },
   {
     id: 600,
@@ -14874,7 +15860,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/TCL-UHD-HOTEL-TV-50G60K-4K-HDR-FRONT.png",
-    images: ["/img/products/TCL-UHD-HOTEL-TV-50G60K-4K-HDR-FRONT.png"],
+    images: [
+      "/img/products/TCL-UHD-HOTEL-TV-50G60K-4K-HDR-FRONT.png"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 93,
@@ -14884,7 +15872,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Hotel Enable · Ultra Low Power · Multiple Interfaces · 4K UHD+HDR 10 · AiPQ Procesor · Metallic Bezel-Less",
-    badge: "new"
+    badge: ""
   },
   {
     id: 601,
@@ -14894,7 +15882,9 @@ const PRODUCTS = [
     model: "MG23K3575AK-EU",
     category: "kitchen",
     image: "/img/products/MG23K3575AK-EU.png",
-    images: ["/img/products/MG23K3575AK-EU.png"],
+    images: [
+      "/img/products/MG23K3575AK-EU.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 34,
@@ -14904,7 +15894,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Grill · Heat Wave Grill · Rapid Defrost · Ceramic Enamel Interior",
-    badge: "new"
+    badge: ""
   },
   {
     id: 602,
@@ -14914,7 +15904,9 @@ const PRODUCTS = [
     model: "NAS-J12-V1B-FRONT",
     category: "ac",
     image: "/img/products/NAS-J12-V1B-FRONT.png",
-    images: ["/img/products/NAS-J12-V1B-FRONT.png"],
+    images: [
+      "/img/products/NAS-J12-V1B-FRONT.png"
+    ],
     price: 2999,
     rating: 4.4,
     reviews: 88,
@@ -14924,7 +15916,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Copper Condenser · Black Design · Energy Saving · R410 Refrigerant",
-    badge: "new"
+    badge: ""
   },
   {
     id: 603,
@@ -14934,7 +15926,9 @@ const PRODUCTS = [
     model: "TAC-24CSA-TPH11I",
     category: "ac",
     image: "/img/products/TAC-24CSA-TPH11I.png",
-    images: ["/img/products/TAC-24CSA-TPH11I.png"],
+    images: [
+      "/img/products/TAC-24CSA-TPH11I.png"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 98,
@@ -14944,7 +15938,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Fast Cooling · Smart Control · Fan Mode · Gentle Breeze · Inverter",
-    badge: "new"
+    badge: ""
   },
   {
     id: 604,
@@ -14954,7 +15948,9 @@ const PRODUCTS = [
     model: "",
     category: "kitchen",
     image: "/img/products/MS23K3515AK-EF.jpg",
-    images: ["/img/products/MS23K3515AK-EF.jpg"],
+    images: [
+      "/img/products/MS23K3515AK-EF.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 33,
@@ -14964,7 +15960,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "23 Liters · ECO Mode · Quick Defrost · Ceramic Enamel Interior · 1150 Watts",
-    badge: "new"
+    badge: ""
   },
   {
     id: 605,
@@ -14974,7 +15970,9 @@ const PRODUCTS = [
     model: "",
     category: "small",
     image: "/img/products/HW-B750D-XA-front.png",
-    images: ["/img/products/HW-B750D-XA-front.png"],
+    images: [
+      "/img/products/HW-B750D-XA-front.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 85,
@@ -14984,7 +15982,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Adaptive Sound · Subwoofer with Bass Boost · Bluetooth · HDMI · Built in Side Speakers · Remote Control",
-    badge: "new"
+    badge: ""
   },
   {
     id: 607,
@@ -14994,7 +15992,9 @@ const PRODUCTS = [
     model: "MSAF-24CRDN1-R32.2peg",
     category: "ac",
     image: "/img/products/MSAF-24CRDN1-R32.2peg.jpg",
-    images: ["/img/products/MSAF-24CRDN1-R32.2peg.jpg"],
+    images: [
+      "/img/products/MSAF-24CRDN1-R32.2peg.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 58,
@@ -15004,7 +16004,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "White · Fast Cooling · Air Purification · Low Energy Consumption · Auto Restart · Wifi · Remote Control",
-    badge: "new"
+    badge: ""
   },
   {
     id: 608,
@@ -15014,7 +16014,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/QA85Q7FAAUXGH.jpg",
-    images: ["/img/products/QA85Q7FAAUXGH.jpg"],
+    images: [
+      "/img/products/QA85Q7FAAUXGH.jpg"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 81,
@@ -15024,7 +16026,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Q-LED · 4K · HDR Brightness Optimiser · Q4 AI Processor · ScolarCell Remote · One UI Tizen · Q-Symphony",
-    badge: "new"
+    badge: ""
   },
   {
     id: 609,
@@ -15034,7 +16036,9 @@ const PRODUCTS = [
     model: "QA77S85FAEXGH-1-1",
     category: "tv",
     image: "/img/products/QA77S85FAEXGH-1-1.png",
-    images: ["/img/products/QA77S85FAEXGH-1-1.png"],
+    images: [
+      "/img/products/QA77S85FAEXGH-1-1.png"
+    ],
     price: 121799,
     rating: 4.4,
     reviews: 91,
@@ -15044,7 +16048,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "65&#8243; · NQ4 AI Gen2 Processor · OLED HDR · 4K AI Upscaling · A Energy Mode · Contour Design · Q-Symphony",
-    badge: "new"
+    badge: ""
   },
   {
     id: 610,
@@ -15054,7 +16058,9 @@ const PRODUCTS = [
     model: "F215SCB-OPENED",
     category: "fridge",
     image: "/img/products/F215SCB-OPENED.png",
-    images: ["/img/products/F215SCB-OPENED.png"],
+    images: [
+      "/img/products/F215SCB-OPENED.png"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 62,
@@ -15064,7 +16070,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "225 Ltrs · Shelf · Led Light · Glass Door · Temperature Control · Black",
-    badge: "new"
+    badge: ""
   },
   {
     id: 611,
@@ -15074,7 +16080,9 @@ const PRODUCTS = [
     model: "F305SCB-FRONT",
     category: "fridge",
     image: "/img/products/F305SCB-FRONT.png",
-    images: ["/img/products/F305SCB-FRONT.png"],
+    images: [
+      "/img/products/F305SCB-FRONT.png"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 28,
@@ -15084,7 +16092,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "325 Ltrs · Shelf · Led Light · Glass Door · Temperature Control · Black",
-    badge: "new"
+    badge: ""
   },
   {
     id: 612,
@@ -15094,7 +16102,9 @@ const PRODUCTS = [
     model: "us-qled-qn990f-qn85qn990ffxza-545961372",
     category: "tv",
     image: "/img/products/us-qled-qn990f-qn85qn990ffxza-545961372.png",
-    images: ["/img/products/us-qled-qn990f-qn85qn990ffxza-545961372.png"],
+    images: [
+      "/img/products/us-qled-qn990f-qn85qn990ffxza-545961372.png"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 65,
@@ -15104,7 +16114,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "4K Resolution · Gaming Mode · Samsung Vision · Dolby Atmos · AI Customisation Mode · NQ8 AI Processor · Generative Wallpaper",
-    badge: "new"
+    badge: ""
   },
   {
     id: 613,
@@ -15114,7 +16124,9 @@ const PRODUCTS = [
     model: "us-qled-qn990f-qn85qn990ffxza-545961372",
     category: "tv",
     image: "/img/products/us-qled-qn990f-qn85qn990ffxza-545961372.png",
-    images: ["/img/products/us-qled-qn990f-qn85qn990ffxza-545961372.png"],
+    images: [
+      "/img/products/us-qled-qn990f-qn85qn990ffxza-545961372.png"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 93,
@@ -15124,7 +16136,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "4K Resolution · Gaming Mode · Samsung Vision · Dolby Atmos · AI Customisation Mode · NQ8 AI Processor · Generative Wallpaper",
-    badge: "new"
+    badge: ""
   },
   {
     id: 614,
@@ -15134,7 +16146,9 @@ const PRODUCTS = [
     model: "NAS-375DFG-FRONT",
     category: "fridge",
     image: "/img/products/NAS-375DFG-FRONT.png",
-    images: ["/img/products/NAS-375DFG-FRONT.png"],
+    images: [
+      "/img/products/NAS-375DFG-FRONT.png"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 37,
@@ -15144,7 +16158,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "360 Ltrs · Glass Door · 5 Shelves · Child Lock · Interior Light",
-    badge: "new"
+    badge: ""
   },
   {
     id: 615,
@@ -15154,7 +16168,9 @@ const PRODUCTS = [
     model: "D15-20VT-FRONT-1",
     category: "small",
     image: "/img/products/D15-20VT-FRONT-1.png",
-    images: ["/img/products/D15-20VT-FRONT-1.png"],
+    images: [
+      "/img/products/D15-20VT-FRONT-1.png"
+    ],
     price: 1649,
     rating: 4.4,
     reviews: 85,
@@ -15164,7 +16180,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "30 Ltrs · Sealed Storage · 200 Watt · White · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 616,
@@ -15174,7 +16190,9 @@ const PRODUCTS = [
     model: "D15-20VT-FRONT-2",
     category: "small",
     image: "/img/products/D15-20VT-FRONT-2.png",
-    images: ["/img/products/D15-20VT-FRONT-2.png"],
+    images: [
+      "/img/products/D15-20VT-FRONT-2.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 42,
@@ -15184,7 +16202,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "10 Ltrs · Sealed Storage · 2000 Watt · White · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 617,
@@ -15194,7 +16212,9 @@ const PRODUCTS = [
     model: "D15-20VT-FRONT-2",
     category: "small",
     image: "/img/products/D15-20VT-FRONT-2.png",
-    images: ["/img/products/D15-20VT-FRONT-2.png"],
+    images: [
+      "/img/products/D15-20VT-FRONT-2.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 30,
@@ -15204,7 +16224,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "15 Ltrs · Sealed Storage · 200 Watt · White · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 618,
@@ -15214,7 +16234,9 @@ const PRODUCTS = [
     model: "F95SD.3",
     category: "fridge",
     image: "/img/products/F95SD.3.jpeg",
-    images: ["/img/products/F95SD.3.jpeg"],
+    images: [
+      "/img/products/F95SD.3.jpeg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 83,
@@ -15224,7 +16246,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "90Ltrs · Fast Cooling · Silver · Crisper Drawer · 5 Temperature Level",
-    badge: "new"
+    badge: ""
   },
   {
     id: 619,
@@ -15234,7 +16256,9 @@ const PRODUCTS = [
     model: "NAS-YL-1128BLM-FRONT",
     category: "small",
     image: "/img/products/NAS-YL-1128BLM-FRONT.png",
-    images: ["/img/products/NAS-YL-1128BLM-FRONT.png"],
+    images: [
+      "/img/products/NAS-YL-1128BLM-FRONT.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 72,
@@ -15244,7 +16268,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "16 Ltrs · 3 Taps · Black and Silver · Heating and Cooling Switch · Energy and Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 620,
@@ -15254,7 +16278,9 @@ const PRODUCTS = [
     model: "NAS-YL-1115BLM-FRONT",
     category: "small",
     image: "/img/products/NAS-YL-1115BLM-FRONT.png",
-    images: ["/img/products/NAS-YL-1115BLM-FRONT.png"],
+    images: [
+      "/img/products/NAS-YL-1115BLM-FRONT.png"
+    ],
     price: 1449,
     rating: 4.4,
     reviews: 47,
@@ -15264,7 +16290,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "16 Ltrs · 2 Taps · Black · Heating and Cooling Switch · Energy and Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 621,
@@ -15274,7 +16300,9 @@ const PRODUCTS = [
     model: "levant-sound-tower-mx-t70-mx-t70-zn-444983261",
     category: "small",
     image: "/img/products/levant-sound-tower-mx-t70-mx-t70-zn-444983261.png",
-    images: ["/img/products/levant-sound-tower-mx-t70-mx-t70-zn-444983261.png"],
+    images: [
+      "/img/products/levant-sound-tower-mx-t70-mx-t70-zn-444983261.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 58,
@@ -15284,7 +16312,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Tower Shape · Double Speaker · Sound Effect Lightening · Black · Built in Woofer",
-    badge: "new"
+    badge: ""
   },
   {
     id: 622,
@@ -15294,7 +16322,9 @@ const PRODUCTS = [
     model: "HW-C450XA-4",
     category: "small",
     image: "/img/products/HW-C450XA-4.png",
-    images: ["/img/products/HW-C450XA-4.png"],
+    images: [
+      "/img/products/HW-C450XA-4.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 26,
@@ -15304,7 +16334,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "2.1 channels · Wireless subwoofer · DTS Virtual:X &amp; Dolby Audio · Seamless connectivity · Energy efficient",
-    badge: "new"
+    badge: ""
   },
   {
     id: 623,
@@ -15314,7 +16344,9 @@ const PRODUCTS = [
     model: "ae-mw5500d-mg40dg5525ag-mg40dg5525agsg-541311049",
     category: "kitchen",
     image: "/img/products/ae-mw5500d-mg40dg5525ag-mg40dg5525agsg-541311049.png",
-    images: ["/img/products/ae-mw5500d-mg40dg5525ag-mg40dg5525agsg-541311049.png"],
+    images: [
+      "/img/products/ae-mw5500d-mg40dg5525ag-mg40dg5525agsg-541311049.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 24,
@@ -15324,7 +16356,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "40 Ltr · Grill · Triple Distribution System · Ceramic enamel interior · Energy-saving ECO Mode",
-    badge: "new"
+    badge: ""
   },
   {
     id: 624,
@@ -15334,7 +16366,9 @@ const PRODUCTS = [
     model: "AR09CRHGAWK-AF",
     category: "ac",
     image: "/img/products/AR09CRHGAWK-AF.png",
-    images: ["/img/products/AR09CRHGAWK-AF.png"],
+    images: [
+      "/img/products/AR09CRHGAWK-AF.png"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 78,
@@ -15344,7 +16378,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.0HP · Triple Protection · White · R410 Gas · Volt Control",
-    badge: "new"
+    badge: ""
   },
   {
     id: 625,
@@ -15354,7 +16388,9 @@ const PRODUCTS = [
     model: "NAS-JFS-24N1-FRONT",
     category: "ac",
     image: "/img/products/NAS-JFS-24N1-FRONT.png",
-    images: ["/img/products/NAS-JFS-24N1-FRONT.png"],
+    images: [
+      "/img/products/NAS-JFS-24N1-FRONT.png"
+    ],
     price: 22999,
     rating: 4.4,
     reviews: 50,
@@ -15364,7 +16400,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0HP · 6300 W · Digital Panel · White · Multi Level Wind Speed",
-    badge: "new"
+    badge: ""
   },
   {
     id: 626,
@@ -15374,7 +16410,9 @@ const PRODUCTS = [
     model: "NAS-JFS-24N1-FRONT",
     category: "ac",
     image: "/img/products/NAS-JFS-24N1-FRONT.png",
-    images: ["/img/products/NAS-JFS-24N1-FRONT.png"],
+    images: [
+      "/img/products/NAS-JFS-24N1-FRONT.png"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 71,
@@ -15384,7 +16422,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.5HP · 6300 W · Digital Panel · White · Multi Level Wind Speed ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 627,
@@ -15394,7 +16432,9 @@ const PRODUCTS = [
     model: "14-sets-of-dishwashers-Hygiene-Care-black-DW60CG550FSGSV-FRONT-OPEN-1",
     category: "kitchen",
     image: "/img/products/14-sets-of-dishwashers-Hygiene-Care-black-DW60CG550FSGSV-FRONT-OPEN-1.png",
-    images: ["/img/products/14-sets-of-dishwashers-Hygiene-Care-black-DW60CG550FSGSV-FRONT-OPEN-1.png"],
+    images: [
+      "/img/products/14-sets-of-dishwashers-Hygiene-Care-black-DW60CG550FSGSV-FRONT-OPEN-1.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 41,
@@ -15404,7 +16444,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "2000W · 120ML · SOLE PLATE · NONSTICK SOLE PLATE · POWER INDICATOR",
-    badge: "new"
+    badge: ""
   },
   {
     id: 628,
@@ -15414,7 +16454,9 @@ const PRODUCTS = [
     model: "Samsung-DW60CG550B00EU-Built-in-60cm-Dishwasher-with-Auto-Door-14-Place-Setting-FRONT-OPEN-2",
     category: "kitchen",
     image: "/img/products/Samsung-DW60CG550B00EU-Built-in-60cm-Dishwasher-with-Auto-Door-14-Place-Setting-FRONT-OPEN-2.png",
-    images: ["/img/products/Samsung-DW60CG550B00EU-Built-in-60cm-Dishwasher-with-Auto-Door-14-Place-Setting-FRONT-OPEN-2.png"],
+    images: [
+      "/img/products/Samsung-DW60CG550B00EU-Built-in-60cm-Dishwasher-with-Auto-Door-14-Place-Setting-FRONT-OPEN-2.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 86,
@@ -15424,7 +16466,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Built in 60cm · Dishwasher with Auto Door, · 14 Place Setting · Quick Wash · Energy-Efficient Operation",
-    badge: "new"
+    badge: ""
   },
   {
     id: 629,
@@ -15434,7 +16476,9 @@ const PRODUCTS = [
     model: "Samsung-Dryer-Black-Heat-Pump-_-Optimal-Dry-_-9kg-DV90DG52A0ABEF-Class-A-FRONT",
     category: "laundry",
     image: "/img/products/Samsung-Dryer-Black-Heat-Pump-_-Optimal-Dry-_-9kg-DV90DG52A0ABEF-Class-A-FRONT.png",
-    images: ["/img/products/Samsung-Dryer-Black-Heat-Pump-_-Optimal-Dry-_-9kg-DV90DG52A0ABEF-Class-A-FRONT.png"],
+    images: [
+      "/img/products/Samsung-Dryer-Black-Heat-Pump-_-Optimal-Dry-_-9kg-DV90DG52A0ABEF-Class-A-FRONT.png"
+    ],
     price: 8100,
     rating: 4.4,
     reviews: 77,
@@ -15444,7 +16488,7 @@ const PRODUCTS = [
       "laundry"
     ],
     description: "9KG · Diamond Drum · Full Automatic · Black · Spin Speed",
-    badge: "new"
+    badge: ""
   },
   {
     id: 630,
@@ -15454,7 +16498,9 @@ const PRODUCTS = [
     model: "NASCO-TWO-TAP-WATER-DISPENSER-WITH-STORAGE-CABINET-NAS-YD275-W-FRONT",
     category: "small",
     image: "/img/products/NASCO-TWO-TAP-WATER-DISPENSER-WITH-STORAGE-CABINET-NAS-YD275-W-FRONT.png",
-    images: ["/img/products/NASCO-TWO-TAP-WATER-DISPENSER-WITH-STORAGE-CABINET-NAS-YD275-W-FRONT.png"],
+    images: [
+      "/img/products/NASCO-TWO-TAP-WATER-DISPENSER-WITH-STORAGE-CABINET-NAS-YD275-W-FRONT.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 45,
@@ -15464,7 +16510,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "16Liters · 2 Taps · Silver · Heating and Cooling Switch · Fridge Cabinet",
-    badge: "new"
+    badge: ""
   },
   {
     id: 631,
@@ -15474,7 +16520,9 @@ const PRODUCTS = [
     model: "NASCO-TWO-TAP-WATER-DISPENSER-WHITE-NAS-YD200-W-SIDE",
     category: "small",
     image: "/img/products/NASCO-TWO-TAP-WATER-DISPENSER-WHITE-NAS-YD200-W-SIDE.png",
-    images: ["/img/products/NASCO-TWO-TAP-WATER-DISPENSER-WHITE-NAS-YD200-W-SIDE.png"],
+    images: [
+      "/img/products/NASCO-TWO-TAP-WATER-DISPENSER-WHITE-NAS-YD200-W-SIDE.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 82,
@@ -15484,7 +16532,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "16 LTRS · 2 TAPS · HEATING AND COOLING SWITCH · WHITE · FRIDGE CABINET · ENERGY SAVING",
-    badge: "new"
+    badge: ""
   },
   {
     id: 632,
@@ -15494,7 +16542,9 @@ const PRODUCTS = [
     model: "NASCO-16LTR-2-TAPS-WATER-DISPENSER-YL2233S-W-FRONT",
     category: "small",
     image: "/img/products/NASCO-16LTR-2-TAPS-WATER-DISPENSER-YL2233S-W-FRONT.png",
-    images: ["/img/products/NASCO-16LTR-2-TAPS-WATER-DISPENSER-YL2233S-W-FRONT.png"],
+    images: [
+      "/img/products/NASCO-16LTR-2-TAPS-WATER-DISPENSER-YL2233S-W-FRONT.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 93,
@@ -15504,7 +16554,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "16 Ltrs · 2 Taps · White · Heating and Cooling Switch · Fridge",
-    badge: "new"
+    badge: ""
   },
   {
     id: 633,
@@ -15514,7 +16564,9 @@ const PRODUCTS = [
     model: "TCL-16LTRS-2-TAPS-WATER-DISPENSER-TY-LYR47W-FRONT",
     category: "small",
     image: "/img/products/TCL-16LTRS-2-TAPS-WATER-DISPENSER-TY-LYR47W-FRONT.png",
-    images: ["/img/products/TCL-16LTRS-2-TAPS-WATER-DISPENSER-TY-LYR47W-FRONT.png"],
+    images: [
+      "/img/products/TCL-16LTRS-2-TAPS-WATER-DISPENSER-TY-LYR47W-FRONT.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 29,
@@ -15524,7 +16576,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Hot and Cold Water Dispenser · Top Loading Standing Model Compressor cooling · Black Color · 2 Taps · 16 Ltrs",
-    badge: "new"
+    badge: ""
   },
   {
     id: 634,
@@ -15534,7 +16586,9 @@ const PRODUCTS = [
     model: "TCL-16LTRS-3-TAPS-WATER-DISPENSER-TY-LWYR109W-FRONT",
     category: "small",
     image: "/img/products/TCL-16LTRS-3-TAPS-WATER-DISPENSER-TY-LWYR109W-FRONT.png",
-    images: ["/img/products/TCL-16LTRS-3-TAPS-WATER-DISPENSER-TY-LWYR109W-FRONT.png"],
+    images: [
+      "/img/products/TCL-16LTRS-3-TAPS-WATER-DISPENSER-TY-LWYR109W-FRONT.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 96,
@@ -15544,7 +16598,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "16 Ltrs · 3 Taps · Hot, Normal &amp; Cold · White · Compressor Cooling",
-    badge: "new"
+    badge: ""
   },
   {
     id: 635,
@@ -15554,7 +16608,9 @@ const PRODUCTS = [
     model: "TCL-WATER-DISPENSER-TY-LWYR107T-FRONT",
     category: "kitchen",
     image: "/img/products/TCL-WATER-DISPENSER-TY-LWYR107T-FRONT.png",
-    images: ["/img/products/TCL-WATER-DISPENSER-TY-LWYR107T-FRONT.png"],
+    images: [
+      "/img/products/TCL-WATER-DISPENSER-TY-LWYR107T-FRONT.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 29,
@@ -15564,7 +16620,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "3 Taps · 16 Ltrs · Hot, Normal and Cold · White ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 636,
@@ -15574,7 +16630,9 @@ const PRODUCTS = [
     model: "85V6B-FRONT",
     category: "tv",
     image: "/img/products/85V6B-FRONT.png",
-    images: ["/img/products/85V6B-FRONT.png"],
+    images: [
+      "/img/products/85V6B-FRONT.png"
+    ],
     price: 26099,
     rating: 4.4,
     reviews: 36,
@@ -15584,7 +16642,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "2K Android Smart TV · UHD · 4K",
-    badge: "new"
+    badge: ""
   },
   {
     id: 637,
@@ -15594,7 +16652,9 @@ const PRODUCTS = [
     model: "55P7K-SIDE",
     category: "tv",
     image: "/img/products/55P7K-SIDE.png",
-    images: ["/img/products/55P7K-SIDE.png"],
+    images: [
+      "/img/products/55P7K-SIDE.png"
+    ],
     price: 5499,
     rating: 4.4,
     reviews: 58,
@@ -15604,7 +16664,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "55&#8243; · HDMI · HDR · Dolby Atoms",
-    badge: "new"
+    badge: ""
   },
   {
     id: 638,
@@ -15614,7 +16674,9 @@ const PRODUCTS = [
     model: "TCL-FHD-SMART-ANDROID-TV-32″-32S4500A-FRONT",
     category: "tv",
     image: "/img/products/TCL-FHD-SMART-ANDROID-TV-32″-32S4500A-FRONT.png",
-    images: ["/img/products/TCL-FHD-SMART-ANDROID-TV-32″-32S4500A-FRONT.png"],
+    images: [
+      "/img/products/TCL-FHD-SMART-ANDROID-TV-32″-32S4500A-FRONT.png"
+    ],
     price: 2799,
     rating: 4.4,
     reviews: 77,
@@ -15624,7 +16686,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "32&#8243; · HDMI *2 · Android TV",
-    badge: "new"
+    badge: ""
   },
   {
     id: 639,
@@ -15634,7 +16696,9 @@ const PRODUCTS = [
     model: "TCL-FHD-SMART-ANDROID-TV-43″43S4500A-FRONT",
     category: "tv",
     image: "/img/products/TCL-FHD-SMART-ANDROID-TV-43″43S4500A-FRONT.png",
-    images: ["/img/products/TCL-FHD-SMART-ANDROID-TV-43″43S4500A-FRONT.png"],
+    images: [
+      "/img/products/TCL-FHD-SMART-ANDROID-TV-43″43S4500A-FRONT.png"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 22,
@@ -15644,7 +16708,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "43&#8243; · HDMIx2 · Dolby Atoms · USB · Wifi · Bluetooth",
-    badge: "new"
+    badge: ""
   },
   {
     id: 640,
@@ -15654,7 +16718,9 @@ const PRODUCTS = [
     model: "TCL-FHD-SATELLITE-4343D3400-FRONT",
     category: "tv",
     image: "/img/products/TCL-FHD-SATELLITE-4343D3400-FRONT.png",
-    images: ["/img/products/TCL-FHD-SATELLITE-4343D3400-FRONT.png"],
+    images: [
+      "/img/products/TCL-FHD-SATELLITE-4343D3400-FRONT.png"
+    ],
     price: 3499,
     rating: 4.4,
     reviews: 90,
@@ -15664,7 +16730,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "43&#8243; · HDMIx3 · USBx2 · Dolby Atoms · Sleep Timer",
-    badge: "new"
+    badge: ""
   },
   {
     id: 641,
@@ -15674,7 +16740,9 @@ const PRODUCTS = [
     model: "uk-t-style-french-door-see-thru-door-rf65db970e22eu-540378321-1",
     category: "fridge",
     image: "/img/products/uk-t-style-french-door-see-thru-door-rf65db970e22eu-540378321-1.jpg",
-    images: ["/img/products/uk-t-style-french-door-see-thru-door-rf65db970e22eu-540378321-1.jpg"],
+    images: [
+      "/img/products/uk-t-style-french-door-see-thru-door-rf65db970e22eu-540378321-1.jpg"
+    ],
     price: 49999,
     rating: 4.4,
     reviews: 59,
@@ -15684,7 +16752,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "650 Ltrs · 4 Doors Flex · Wifi Connectivity · Black · Dual Auto ice Maker",
-    badge: "new"
+    badge: ""
   },
   {
     id: 645,
@@ -15694,7 +16762,9 @@ const PRODUCTS = [
     model: "NASCO-2200WATT-STEAM-IRON-NAS-2205-DSS-SIDE1",
     category: "small",
     image: "/img/products/NASCO-2200WATT-STEAM-IRON-NAS-2205-DSS-SIDE1.png",
-    images: ["/img/products/NASCO-2200WATT-STEAM-IRON-NAS-2205-DSS-SIDE1.png"],
+    images: [
+      "/img/products/NASCO-2200WATT-STEAM-IRON-NAS-2205-DSS-SIDE1.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 42,
@@ -15704,7 +16774,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Burst of Steam · 22oo Watt · Spray Control · Self Clean · Ceramic Coating",
-    badge: "new"
+    badge: ""
   },
   {
     id: 646,
@@ -15714,7 +16784,9 @@ const PRODUCTS = [
     model: "NAS-220C-DS-3-300x300-1",
     category: "small",
     image: "/img/products/NAS-220C-DS-3-300x300-1.jpeg",
-    images: ["/img/products/NAS-220C-DS-3-300x300-1.jpeg"],
+    images: [
+      "/img/products/NAS-220C-DS-3-300x300-1.jpeg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 98,
@@ -15724,7 +16796,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Burst of Steam · Spray Control · Self Clean · Ceramic Coating",
-    badge: "new"
+    badge: ""
   },
   {
     id: 648,
@@ -15734,7 +16806,9 @@ const PRODUCTS = [
     model: "MIDEA-1.7LTR-GLASS-KETTLE-MK-17G02A2-1",
     category: "kitchen",
     image: "/img/products/MIDEA-1.7LTR-GLASS-KETTLE-MK-17G02A2-1.jpg",
-    images: ["/img/products/MIDEA-1.7LTR-GLASS-KETTLE-MK-17G02A2-1.jpg"],
+    images: [
+      "/img/products/MIDEA-1.7LTR-GLASS-KETTLE-MK-17G02A2-1.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 92,
@@ -15744,7 +16818,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "1.7 Liters · 1800 Watt · Led Back lighting · Auto Cut Off · Transparent",
-    badge: "new"
+    badge: ""
   },
   {
     id: 649,
@@ -15754,7 +16828,9 @@ const PRODUCTS = [
     model: "NASCO-98LTRS-TOP-FREEZER-NASF2-13S-FRONT",
     category: "fridge",
     image: "/img/products/NASCO-98LTRS-TOP-FREEZER-NASF2-13S-FRONT.jpg",
-    images: ["/img/products/NASCO-98LTRS-TOP-FREEZER-NASF2-13S-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-98LTRS-TOP-FREEZER-NASF2-13S-FRONT.jpg"
+    ],
     price: 2549,
     rating: 4.4,
     reviews: 56,
@@ -15764,7 +16840,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "98 Ltrs · Manual Defrost · Glass Shelves · Grey · Vegetable Box",
-    badge: "new"
+    badge: ""
   },
   {
     id: 651,
@@ -15774,7 +16850,9 @@ const PRODUCTS = [
     model: "uk-dv5000c-476541-dv80cgc0b0aeeu-538070127-300x300-1",
     category: "small",
     image: "/img/products/uk-dv5000c-476541-dv80cgc0b0aeeu-538070127-300x300-1.webp",
-    images: ["/img/products/uk-dv5000c-476541-dv80cgc0b0aeeu-538070127-300x300-1.webp"],
+    images: [
+      "/img/products/uk-dv5000c-476541-dv80cgc0b0aeeu-538070127-300x300-1.webp"
+    ],
     price: 13999,
     rating: 4.4,
     reviews: 56,
@@ -15784,7 +16862,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "8KG · Dryer · Heat Pump · Black · Child Lock",
-    badge: "new"
+    badge: ""
   },
   {
     id: 652,
@@ -15794,7 +16872,9 @@ const PRODUCTS = [
     model: "NASCO-728LTR-DISPLAY-FRIDGE-NAS-850-2DR-FRONT",
     category: "fridge",
     image: "/img/products/NASCO-728LTR-DISPLAY-FRIDGE-NAS-850-2DR-FRONT.png",
-    images: ["/img/products/NASCO-728LTR-DISPLAY-FRIDGE-NAS-850-2DR-FRONT.png"],
+    images: [
+      "/img/products/NASCO-728LTR-DISPLAY-FRIDGE-NAS-850-2DR-FRONT.png"
+    ],
     price: 11999,
     rating: 4.4,
     reviews: 26,
@@ -15804,7 +16884,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "728 Ltrs · Glass Door · 10 Shelves · Child Lock · Interior Light",
-    badge: "new"
+    badge: ""
   },
   {
     id: 653,
@@ -15814,7 +16894,9 @@ const PRODUCTS = [
     model: "QA55Q60DAUXKE-FRONT",
     category: "tv",
     image: "/img/products/QA55Q60DAUXKE-FRONT.jpg",
-    images: ["/img/products/QA55Q60DAUXKE-FRONT.jpg"],
+    images: [
+      "/img/products/QA55Q60DAUXKE-FRONT.jpg"
+    ],
     price: 13999,
     rating: 4.4,
     reviews: 95,
@@ -15824,7 +16906,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "55&#8243; · 4K · Wifi · USBx2 · Flat Panel · Auto Detection · Q Viewing Angle",
-    badge: "new"
+    badge: ""
   },
   {
     id: 654,
@@ -15834,7 +16916,9 @@ const PRODUCTS = [
     model: "GF",
     category: "tv",
     image: "/img/products/GF.jpg",
-    images: ["/img/products/GF.jpg"],
+    images: [
+      "/img/products/GF.jpg"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 22,
@@ -15844,7 +16928,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "65&#8243; · Android Tv · Bluetooth · Wi-Fi",
-    badge: "new"
+    badge: ""
   },
   {
     id: 655,
@@ -15854,7 +16938,9 @@ const PRODUCTS = [
     model: "GF",
     category: "tv",
     image: "/img/products/GF.jpg",
-    images: ["/img/products/GF.jpg"],
+    images: [
+      "/img/products/GF.jpg"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 67,
@@ -15864,7 +16950,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "55&#8243; · 4K · USB · Wifi · Bluetooth · Smart Android",
-    badge: "new"
+    badge: ""
   },
   {
     id: 656,
@@ -15874,7 +16960,9 @@ const PRODUCTS = [
     model: "GF",
     category: "tv",
     image: "/img/products/GF.jpg",
-    images: ["/img/products/GF.jpg"],
+    images: [
+      "/img/products/GF.jpg"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 53,
@@ -15884,7 +16972,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "50&#8243; · 4K · Smart Android · Bluetooth · Wifi Ethernet ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 657,
@@ -15894,7 +16982,9 @@ const PRODUCTS = [
     model: "TLC-FHD-SATELLITE-32-32D3400-FRONT",
     category: "tv",
     image: "/img/products/TLC-FHD-SATELLITE-32-32D3400-FRONT.png",
-    images: ["/img/products/TLC-FHD-SATELLITE-32-32D3400-FRONT.png"],
+    images: [
+      "/img/products/TLC-FHD-SATELLITE-32-32D3400-FRONT.png"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 29,
@@ -15904,7 +16994,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "32&#8243; · HDMI · USB · Sleep Timer · Dolby Audio",
-    badge: "new"
+    badge: ""
   },
   {
     id: 658,
@@ -15914,7 +17004,9 @@ const PRODUCTS = [
     model: "RB33J3700SAMU-3-jpg",
     category: "fridge",
     image: "/img/products/RB33J3700SAMU-3-jpg.webp",
-    images: ["/img/products/RB33J3700SAMU-3-jpg.webp"],
+    images: [
+      "/img/products/RB33J3700SAMU-3-jpg.webp"
+    ],
     price: 12699,
     rating: 4.4,
     reviews: 87,
@@ -15924,7 +17016,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "290 Ltrs · Digital Display · Digital Inverter · Silver · Water Dispenser",
-    badge: "new"
+    badge: ""
   },
   {
     id: 659,
@@ -15934,7 +17026,9 @@ const PRODUCTS = [
     model: "AR09TRHGAWK-GA-jpg",
     category: "ac",
     image: "/img/products/AR09TRHGAWK-GA-jpg.webp",
-    images: ["/img/products/AR09TRHGAWK-GA-jpg.webp"],
+    images: [
+      "/img/products/AR09TRHGAWK-GA-jpg.webp"
+    ],
     price: 7999,
     rating: 4.4,
     reviews: 67,
@@ -15944,7 +17038,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0HP · Tripple Protector · R410 Gas · Volt Control · Copper Condenser",
-    badge: "new"
+    badge: ""
   },
   {
     id: 660,
@@ -15954,7 +17048,9 @@ const PRODUCTS = [
     model: "AR09TRHGAWK-GA-jpg",
     category: "ac",
     image: "/img/products/AR09TRHGAWK-GA-jpg.webp",
-    images: ["/img/products/AR09TRHGAWK-GA-jpg.webp"],
+    images: [
+      "/img/products/AR09TRHGAWK-GA-jpg.webp"
+    ],
     price: 10499,
     rating: 4.4,
     reviews: 50,
@@ -15964,7 +17060,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.5HP · Triple Indicator · Copper Condenser · R410",
-    badge: "new"
+    badge: ""
   },
   {
     id: 661,
@@ -15974,7 +17070,9 @@ const PRODUCTS = [
     model: "AR09TRHGAWK-GA-jpg",
     category: "ac",
     image: "/img/products/AR09TRHGAWK-GA-jpg.webp",
-    images: ["/img/products/AR09TRHGAWK-GA-jpg.webp"],
+    images: [
+      "/img/products/AR09TRHGAWK-GA-jpg.webp"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 95,
@@ -15984,7 +17082,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5HP · Triple Indicator · Volt Control · R410 · Copper Condenser",
-    badge: "new"
+    badge: ""
   },
   {
     id: 662,
@@ -15994,7 +17092,9 @@ const PRODUCTS = [
     model: "SAMSUNG-ADD-WASH-WW80T554DAN_NQ-front-jpg",
     category: "laundry",
     image: "/img/products/SAMSUNG-ADD-WASH-WW80T554DAN_NQ-front-jpg.webp",
-    images: ["/img/products/SAMSUNG-ADD-WASH-WW80T554DAN_NQ-front-jpg.webp"],
+    images: [
+      "/img/products/SAMSUNG-ADD-WASH-WW80T554DAN_NQ-front-jpg.webp"
+    ],
     price: 9199,
     rating: 4.4,
     reviews: 23,
@@ -16004,7 +17104,7 @@ const PRODUCTS = [
       "laundry"
     ],
     description: "8KG · Add Wash · Eco Bubble · AI Control Panel · Silver",
-    badge: "new"
+    badge: ""
   },
   {
     id: 663,
@@ -16014,7 +17114,9 @@ const PRODUCTS = [
     model: "AR24BVHGAWK_AF-jpg",
     category: "ac",
     image: "/img/products/AR24BVHGAWK_AF-jpg.webp",
-    images: ["/img/products/AR24BVHGAWK_AF-jpg.webp"],
+    images: [
+      "/img/products/AR24BVHGAWK_AF-jpg.webp"
+    ],
     price: 13499,
     rating: 4.4,
     reviews: 30,
@@ -16024,7 +17126,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.5HP · Triple Indicator · Copper Condenser · R410 Gas · Inverter Compressor ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 664,
@@ -16034,7 +17136,9 @@ const PRODUCTS = [
     model: "TCL-FLOOR-STANDING-R410-3.5HP-TAC-36CFAC-FRONT-jpg",
     category: "ac",
     image: "/img/products/TCL-FLOOR-STANDING-R410-3.5HP-TAC-36CFAC-FRONT-jpg.webp",
-    images: ["/img/products/TCL-FLOOR-STANDING-R410-3.5HP-TAC-36CFAC-FRONT-jpg.webp"],
+    images: [
+      "/img/products/TCL-FLOOR-STANDING-R410-3.5HP-TAC-36CFAC-FRONT-jpg.webp"
+    ],
     price: 11999,
     rating: 4.4,
     reviews: 86,
@@ -16044,7 +17148,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "3.5HP · Floor Standing Type Air Conditioner · T1 Condition · R410A · Cooling Only ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 665,
@@ -16054,7 +17158,9 @@ const PRODUCTS = [
     model: "C-front-jpg",
     category: "ac",
     image: "/img/products/C-front-jpg.webp",
-    images: ["/img/products/C-front-jpg.webp"],
+    images: [
+      "/img/products/C-front-jpg.webp"
+    ],
     price: 54999,
     rating: 4.4,
     reviews: 51,
@@ -16064,7 +17170,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "5.0HP · Low Noise · Touch Control · Side Air Inlet · 5M Copper Pippes ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 666,
@@ -16074,7 +17180,9 @@ const PRODUCTS = [
     model: "TCL-SPLIT-R410-AIR-CONDITIONER-2.0HP-TAC-18CSA-XA51-FRONT-jpg",
     category: "ac",
     image: "/img/products/TCL-SPLIT-R410-AIR-CONDITIONER-2.0HP-TAC-18CSA-XA51-FRONT-jpg.webp",
-    images: ["/img/products/TCL-SPLIT-R410-AIR-CONDITIONER-2.0HP-TAC-18CSA-XA51-FRONT-jpg.webp"],
+    images: [
+      "/img/products/TCL-SPLIT-R410-AIR-CONDITIONER-2.0HP-TAC-18CSA-XA51-FRONT-jpg.webp"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 90,
@@ -16084,7 +17192,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0HP · Filter Cleaning Indicator · Low Noise · Automatic Restart · R410 Gas",
-    badge: "new"
+    badge: ""
   },
   {
     id: 667,
@@ -16094,7 +17202,9 @@ const PRODUCTS = [
     model: "TCL-SPLIT-R410-AIR-CONDITIONER-1.5HP-TAC-12CSA-XA51-FRONT-jpg",
     category: "ac",
     image: "/img/products/TCL-SPLIT-R410-AIR-CONDITIONER-1.5HP-TAC-12CSA-XA51-FRONT-jpg.webp",
-    images: ["/img/products/TCL-SPLIT-R410-AIR-CONDITIONER-1.5HP-TAC-12CSA-XA51-FRONT-jpg.webp"],
+    images: [
+      "/img/products/TCL-SPLIT-R410-AIR-CONDITIONER-1.5HP-TAC-12CSA-XA51-FRONT-jpg.webp"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 32,
@@ -16104,7 +17214,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5HP · Filer Cleaning Indicator · Low Noise · Smart Air Flow · Wifi Control",
-    badge: "new"
+    badge: ""
   },
   {
     id: 668,
@@ -16114,7 +17224,9 @@ const PRODUCTS = [
     model: "AR18BVHGAWKAF-front-jpg",
     category: "ac",
     image: "/img/products/AR18BVHGAWKAF-front-jpg.webp",
-    images: ["/img/products/AR18BVHGAWKAF-front-jpg.webp"],
+    images: [
+      "/img/products/AR18BVHGAWKAF-front-jpg.webp"
+    ],
     price: 11399,
     rating: 4.4,
     reviews: 28,
@@ -16124,7 +17236,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0HP · Triple Indicator · Inverter Compressor · R410 Gas · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 669,
@@ -16134,7 +17246,9 @@ const PRODUCTS = [
     model: "AR18BVHGAWKAF-front-jpg",
     category: "ac",
     image: "/img/products/AR18BVHGAWKAF-front-jpg.webp",
-    images: ["/img/products/AR18BVHGAWKAF-front-jpg.webp"],
+    images: [
+      "/img/products/AR18BVHGAWKAF-front-jpg.webp"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 41,
@@ -16144,7 +17258,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5HP · Triple Indicator · Copper Condenser · R410 Gas · Inverter Compressor",
-    badge: "new"
+    badge: ""
   },
   {
     id: 670,
@@ -16154,7 +17268,9 @@ const PRODUCTS = [
     model: "RF48A4000M9-GH-front-jpg",
     category: "fridge",
     image: "/img/products/RF48A4000M9-GH-front-jpg.webp",
-    images: ["/img/products/RF48A4000M9-GH-front-jpg.webp"],
+    images: [
+      "/img/products/RF48A4000M9-GH-front-jpg.webp"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 41,
@@ -16164,7 +17280,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "468 Ltrs · 4 Doors · Digital Inverter · Fresh Zone · Grey",
-    badge: "new"
+    badge: ""
   },
   {
     id: 671,
@@ -16174,7 +17290,9 @@ const PRODUCTS = [
     model: "SAMSUNG-2.5HP-SPLIT-ACS-INVERTER-R410-5",
     category: "ac",
     image: "/img/products/SAMSUNG-2.5HP-SPLIT-ACS-INVERTER-R410-5.jpg",
-    images: ["/img/products/SAMSUNG-2.5HP-SPLIT-ACS-INVERTER-R410-5.jpg"],
+    images: [
+      "/img/products/SAMSUNG-2.5HP-SPLIT-ACS-INVERTER-R410-5.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 40,
@@ -16184,7 +17302,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.5HP · Triple Indicator · Copper Condenser · R410 · Wind Free Cooling · Inverter Compressor ·  · &nbsp; · &nbsp; · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 672,
@@ -16194,7 +17312,9 @@ const PRODUCTS = [
     model: "SAMSUNG-2.0HP-R410-SPLIT-AC-1-3",
     category: "ac",
     image: "/img/products/SAMSUNG-2.0HP-R410-SPLIT-AC-1-3.jpg",
-    images: ["/img/products/SAMSUNG-2.0HP-R410-SPLIT-AC-1-3.jpg"],
+    images: [
+      "/img/products/SAMSUNG-2.0HP-R410-SPLIT-AC-1-3.jpg"
+    ],
     price: 14999,
     rating: 4.4,
     reviews: 29,
@@ -16204,7 +17324,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0HP · Triple Indicator · R410 Gas · Wind Free Cooling · Inverter Compressor ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 673,
@@ -16214,7 +17334,9 @@ const PRODUCTS = [
     model: "SAMSUNG-1.5HP-SPLIT-ACS-INVERTER-R410",
     category: "ac",
     image: "/img/products/SAMSUNG-1.5HP-SPLIT-ACS-INVERTER-R410.jpg",
-    images: ["/img/products/SAMSUNG-1.5HP-SPLIT-ACS-INVERTER-R410.jpg"],
+    images: [
+      "/img/products/SAMSUNG-1.5HP-SPLIT-ACS-INVERTER-R410.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 32,
@@ -16224,7 +17346,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5HP · Triple Indicator · Copper Condenser · R410 Gas · Inverter Compressor · Wind Free Cooling",
-    badge: "new"
+    badge: ""
   },
   {
     id: 674,
@@ -16234,7 +17356,9 @@ const PRODUCTS = [
     model: "RF71A967532-UT-jpg",
     category: "fridge",
     image: "/img/products/RF71A967532-UT-jpg.webp",
-    images: ["/img/products/RF71A967532-UT-jpg.webp"],
+    images: [
+      "/img/products/RF71A967532-UT-jpg.webp"
+    ],
     price: 52199,
     rating: 4.4,
     reviews: 94,
@@ -16244,7 +17368,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "820 Ltrs · 4 Doors · Ice Maker · Pink Colour · Wifi Connectivity",
-    badge: "new"
+    badge: ""
   },
   {
     id: 675,
@@ -16254,7 +17378,9 @@ const PRODUCTS = [
     model: "RB30J3700SA-MU-jpg",
     category: "fridge",
     image: "/img/products/RB30J3700SA-MU-jpg.webp",
-    images: ["/img/products/RB30J3700SA-MU-jpg.webp"],
+    images: [
+      "/img/products/RB30J3700SA-MU-jpg.webp"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 94,
@@ -16264,7 +17390,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "290 Ltrs · No Frost · Digital Inverter · Digital Display · Water Dispenser ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 676,
@@ -16274,7 +17400,9 @@ const PRODUCTS = [
     model: "RB29FERNDSA-MU-jpg",
     category: "fridge",
     image: "/img/products/RB29FERNDSA-MU-jpg.webp",
-    images: ["/img/products/RB29FERNDSA-MU-jpg.webp"],
+    images: [
+      "/img/products/RB29FERNDSA-MU-jpg.webp"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 21,
@@ -16284,7 +17412,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "290 Ltrs · Digital Display · No Frost · Silver",
-    badge: "new"
+    badge: ""
   },
   {
     id: 677,
@@ -16294,7 +17422,9 @@ const PRODUCTS = [
     model: "samsung-1-5-ton-3-star-ar18cy3amwk-inverter-split-ac-white-digital-o581110396-p599223040-0-202303110556",
     category: "ac",
     image: "/img/products/samsung-1-5-ton-3-star-ar18cy3amwk-inverter-split-ac-white-digital-o581110396-p599223040-0-202303110556.webp",
-    images: ["/img/products/samsung-1-5-ton-3-star-ar18cy3amwk-inverter-split-ac-white-digital-o581110396-p599223040-0-202303110556.webp"],
+    images: [
+      "/img/products/samsung-1-5-ton-3-star-ar18cy3amwk-inverter-split-ac-white-digital-o581110396-p599223040-0-202303110556.webp"
+    ],
     price: 14999,
     rating: 4.4,
     reviews: 36,
@@ -16304,7 +17434,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0 HP · Triple Protector · R410 Gas · Volt Control · Inverter Compressor · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 678,
@@ -16314,7 +17444,9 @@ const PRODUCTS = [
     model: "198ltr",
     category: "fridge",
     image: "/img/products/198ltr.jpg",
-    images: ["/img/products/198ltr.jpg"],
+    images: [
+      "/img/products/198ltr.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 46,
@@ -16324,7 +17456,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "142 Ltrs · Key Lock · White · Removable Storage Basket · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 679,
@@ -16334,7 +17466,9 @@ const PRODUCTS = [
     model: "MS405MADXBB-SG-jpg",
     category: "kitchen",
     image: "/img/products/MS405MADXBB-SG-jpg.webp",
-    images: ["/img/products/MS405MADXBB-SG-jpg.webp"],
+    images: [
+      "/img/products/MS405MADXBB-SG-jpg.webp"
+    ],
     price: 2899,
     rating: 4.4,
     reviews: 50,
@@ -16344,7 +17478,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "40 Ltrs · 1550 Watts · Energy Saving · LED Display · Stainless Steel",
-    badge: "new"
+    badge: ""
   },
   {
     id: 680,
@@ -16354,7 +17488,9 @@ const PRODUCTS = [
     model: "SAMSUNG-SOUNDBAR-WITH-GAME-MODE",
     category: "small",
     image: "/img/products/SAMSUNG-SOUNDBAR-WITH-GAME-MODE.jpg",
-    images: ["/img/products/SAMSUNG-SOUNDBAR-WITH-GAME-MODE.jpg"],
+    images: [
+      "/img/products/SAMSUNG-SOUNDBAR-WITH-GAME-MODE.jpg"
+    ],
     price: 4499,
     rating: 4.4,
     reviews: 56,
@@ -16364,7 +17500,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "430 Watt · Powerful Base · Bluetooth · HDMI | USB · Built-in Subwoofer · Remote Control · 3.1 Ch",
-    badge: "new"
+    badge: ""
   },
   {
     id: 681,
@@ -16374,7 +17510,9 @@ const PRODUCTS = [
     model: "SAMSUNG-300LTR-DOUBLE-DOOR-BOTTOM-FREEZER-REFRIGERATOR-with-Water-Dispenser1",
     category: "fridge",
     image: "/img/products/SAMSUNG-300LTR-DOUBLE-DOOR-BOTTOM-FREEZER-REFRIGERATOR-with-Water-Dispenser1.jpg",
-    images: ["/img/products/SAMSUNG-300LTR-DOUBLE-DOOR-BOTTOM-FREEZER-REFRIGERATOR-with-Water-Dispenser1.jpg"],
+    images: [
+      "/img/products/SAMSUNG-300LTR-DOUBLE-DOOR-BOTTOM-FREEZER-REFRIGERATOR-with-Water-Dispenser1.jpg"
+    ],
     price: 11799,
     rating: 4.4,
     reviews: 94,
@@ -16384,7 +17522,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "CORD STORAGE ·  LED INDICATOR ·  ADJUSTABLE TEMP ·  NON SLIP RUBBER",
-    badge: "new"
+    badge: ""
   },
   {
     id: 682,
@@ -16394,7 +17532,9 @@ const PRODUCTS = [
     model: "SAMSUNG-28LTR-GRILL-MICROWAVE-MG28J5255GS-1",
     category: "kitchen",
     image: "/img/products/SAMSUNG-28LTR-GRILL-MICROWAVE-MG28J5255GS-1.jpg",
-    images: ["/img/products/SAMSUNG-28LTR-GRILL-MICROWAVE-MG28J5255GS-1.jpg"],
+    images: [
+      "/img/products/SAMSUNG-28LTR-GRILL-MICROWAVE-MG28J5255GS-1.jpg"
+    ],
     price: 2699,
     rating: 4.4,
     reviews: 74,
@@ -16404,7 +17544,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "32L OVEN · SINGLE GLASS DOOR · WITH VDE PLUG · 1000W · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 683,
@@ -16414,7 +17554,9 @@ const PRODUCTS = [
     model: "15892141276891",
     category: "laundry",
     image: "/img/products/15892141276891.jpg",
-    images: ["/img/products/15892141276891.jpg"],
+    images: [
+      "/img/products/15892141276891.jpg"
+    ],
     price: 8100,
     rating: 4.4,
     reviews: 42,
@@ -16424,7 +17566,7 @@ const PRODUCTS = [
       "laundry"
     ],
     description: "9 KG · Add Wash · Bubble Soak · 1400 RPM",
-    badge: "new"
+    badge: ""
   },
   {
     id: 684,
@@ -16434,7 +17576,12 @@ const PRODUCTS = [
     model: "",
     category: "ac",
     image: null,
-    images: ["/img/products/SAMSUNG-2.0HP-R410-SPLIT-AC-1-3.jpg", "/img/products/SAMSUNG-2.5HP-R410-SPLIT-AC.jpg", "/img/products/SAMSUNG-1.5HP-SPLIT-ACS-INVERTER-R410.jpg", "/img/products/SAMSUNG-2.5HP-SPLIT-ACS-INVERTER-R410-5.jpg"],
+    images: [
+      "/img/products/SAMSUNG-2.0HP-R410-SPLIT-AC-1-3.jpg",
+      "/img/products/SAMSUNG-2.5HP-R410-SPLIT-AC.jpg",
+      "/img/products/SAMSUNG-1.5HP-SPLIT-ACS-INVERTER-R410.jpg",
+      "/img/products/SAMSUNG-2.5HP-SPLIT-ACS-INVERTER-R410-5.jpg"
+    ],
     price: 6599,
     rating: 4.4,
     reviews: 81,
@@ -16444,7 +17591,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "1.5HP · Triple Protection · Copper Condensation · Volt Control · R41o Gas · Energy Saving ·  · &nbsp;",
-    badge: "new"
+    badge: ""
   },
   {
     id: 685,
@@ -16454,7 +17601,9 @@ const PRODUCTS = [
     model: "SAMSUNG-54-W-2-CH-WIRELESS-REAR-SPEAKERS-KIT-SWA-8500S",
     category: "small",
     image: "/img/products/SAMSUNG-54-W-2-CH-WIRELESS-REAR-SPEAKERS-KIT-SWA-8500S.jpg",
-    images: ["/img/products/SAMSUNG-54-W-2-CH-WIRELESS-REAR-SPEAKERS-KIT-SWA-8500S.jpg"],
+    images: [
+      "/img/products/SAMSUNG-54-W-2-CH-WIRELESS-REAR-SPEAKERS-KIT-SWA-8500S.jpg"
+    ],
     price: 1799,
     rating: 4.4,
     reviews: 85,
@@ -16464,7 +17613,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "350 Watt · Powerful Base · Wireless Rear Speaker Kit · 2.0 Channel",
-    badge: "new"
+    badge: ""
   },
   {
     id: 686,
@@ -16474,7 +17623,9 @@ const PRODUCTS = [
     model: "SAMSUNG-3.1.2-CH-SOUNDBAR-FOR-QLED-HW-Q70T",
     category: "small",
     image: "/img/products/SAMSUNG-3.1.2-CH-SOUNDBAR-FOR-QLED-HW-Q70T.jpg",
-    images: ["/img/products/SAMSUNG-3.1.2-CH-SOUNDBAR-FOR-QLED-HW-Q70T.jpg"],
+    images: [
+      "/img/products/SAMSUNG-3.1.2-CH-SOUNDBAR-FOR-QLED-HW-Q70T.jpg"
+    ],
     price: 11399,
     rating: 4.4,
     reviews: 88,
@@ -16484,7 +17635,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Immersive 5.1 audio · Dolby Digital 5.1 &amp; DTS Virtual · Game Mode · Seamless setup · Slim, versatile design",
-    badge: "new"
+    badge: ""
   },
   {
     id: 687,
@@ -16494,7 +17645,9 @@ const PRODUCTS = [
     model: "SAMSUNG-5.1-CH-360WATT-SOUNDBAR-FOR-QLED-HW-Q60T",
     category: "small",
     image: "/img/products/SAMSUNG-5.1-CH-360WATT-SOUNDBAR-FOR-QLED-HW-Q60T.jpg",
-    images: ["/img/products/SAMSUNG-5.1-CH-360WATT-SOUNDBAR-FOR-QLED-HW-Q60T.jpg"],
+    images: [
+      "/img/products/SAMSUNG-5.1-CH-360WATT-SOUNDBAR-FOR-QLED-HW-Q60T.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 88,
@@ -16504,7 +17657,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "360 Watt · Powerful Base · Blutooth · HDMI | USB · Built-in Subwoofer · 5.1 Channel · 8 Speakers",
-    badge: "new"
+    badge: ""
   },
   {
     id: 688,
@@ -16514,7 +17667,9 @@ const PRODUCTS = [
     model: "SAMSUNG-500-WATT-POWER-AUDIO-MX-T50",
     category: "small",
     image: "/img/products/SAMSUNG-500-WATT-POWER-AUDIO-MX-T50.png",
-    images: ["/img/products/SAMSUNG-500-WATT-POWER-AUDIO-MX-T50.png"],
+    images: [
+      "/img/products/SAMSUNG-500-WATT-POWER-AUDIO-MX-T50.png"
+    ],
     price: 5299,
     rating: 4.4,
     reviews: 62,
@@ -16524,7 +17679,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Tower Shape ·  · Double Speaker ·  · Sound Effect Lightening ·  · Black ·  · Built in Woofer",
-    badge: "new"
+    badge: ""
   },
   {
     id: 689,
@@ -16534,7 +17689,9 @@ const PRODUCTS = [
     model: "15892141276891",
     category: "laundry",
     image: "/img/products/15892141276891.jpg",
-    images: ["/img/products/15892141276891.jpg"],
+    images: [
+      "/img/products/15892141276891.jpg"
+    ],
     price: 8100,
     rating: 4.4,
     reviews: 24,
@@ -16544,7 +17701,7 @@ const PRODUCTS = [
       "laundry"
     ],
     description: "ADDWASH · ECOBUBBLE · BUBBLE SOAK · PANEL DISPLAY LED · SUPERSPEED WASH · 9KG",
-    badge: "new"
+    badge: ""
   },
   {
     id: 690,
@@ -16554,7 +17711,9 @@ const PRODUCTS = [
     model: "SAMSUNG-2.0HP-SPLIT-ACS-INVERTER-R410-WIND-FREE-1",
     category: "ac",
     image: "/img/products/SAMSUNG-2.0HP-SPLIT-ACS-INVERTER-R410-WIND-FREE-1.jpg",
-    images: ["/img/products/SAMSUNG-2.0HP-SPLIT-ACS-INVERTER-R410-WIND-FREE-1.jpg"],
+    images: [
+      "/img/products/SAMSUNG-2.0HP-SPLIT-ACS-INVERTER-R410-WIND-FREE-1.jpg"
+    ],
     price: 12999,
     rating: 4.4,
     reviews: 33,
@@ -16564,7 +17723,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "TRIPLE PROTECTOR · WIFI · 2.0 HP · R410 GAS · INVERTER COMPRESSOR · ENERGY SAVING · WIND FREE COOLING",
-    badge: "new"
+    badge: ""
   },
   {
     id: 691,
@@ -16574,7 +17733,9 @@ const PRODUCTS = [
     model: "SAMSUNG-SPLIT-ACS-INVERTER-R410-WIND-FREE-1",
     category: "ac",
     image: "/img/products/SAMSUNG-SPLIT-ACS-INVERTER-R410-WIND-FREE-1.jpg",
-    images: ["/img/products/SAMSUNG-SPLIT-ACS-INVERTER-R410-WIND-FREE-1.jpg"],
+    images: [
+      "/img/products/SAMSUNG-SPLIT-ACS-INVERTER-R410-WIND-FREE-1.jpg"
+    ],
     price: 8999,
     rating: 4.4,
     reviews: 26,
@@ -16584,7 +17745,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "TRIPLE PROTECTOR · WIFI · 1.5 HP · R410 GAS · INVERTER COMPRESSOR · ENERGY SAVING · WIND FREE COOLING",
-    badge: "new"
+    badge: ""
   },
   {
     id: 692,
@@ -16594,7 +17755,9 @@ const PRODUCTS = [
     model: "1SAMSUNG-3.0-HP-FLOOR-STANDING-AC-with-R410-Gas-AF30HVFMAWK",
     category: "ac",
     image: "/img/products/1SAMSUNG-3.0-HP-FLOOR-STANDING-AC-with-R410-Gas-AF30HVFMAWK.jpg",
-    images: ["/img/products/1SAMSUNG-3.0-HP-FLOOR-STANDING-AC-with-R410-Gas-AF30HVFMAWK.jpg"],
+    images: [
+      "/img/products/1SAMSUNG-3.0-HP-FLOOR-STANDING-AC-with-R410-Gas-AF30HVFMAWK.jpg"
+    ],
     price: 29999,
     rating: 4.4,
     reviews: 68,
@@ -16604,7 +17767,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "FLOOR STANDING · INVERTER COMPRESSOR · 3.5HP · LARGE AIR FLOW · R410 REFRIGERANT · ENERGY SAVING · TOUCH CONTROL · WHITE",
-    badge: "new"
+    badge: ""
   },
   {
     id: 693,
@@ -16614,7 +17777,9 @@ const PRODUCTS = [
     model: "NAS-500FL-DD-FRONT",
     category: "fridge",
     image: "/img/products/NAS-500FL-DD-FRONT.jpg",
-    images: ["/img/products/NAS-500FL-DD-FRONT.jpg"],
+    images: [
+      "/img/products/NAS-500FL-DD-FRONT.jpg"
+    ],
     price: 7149,
     rating: 4.4,
     reviews: 91,
@@ -16624,7 +17789,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "400 Ltrs · Manual Defrost · Adjustable Thermostat · Low Noise · Direct Cooling · 100% Cfc Free · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 694,
@@ -16634,7 +17799,9 @@ const PRODUCTS = [
     model: "AF7009C-GS-FRONT",
     category: "kitchen",
     image: "/img/products/AF7009C-GS-FRONT.jpg",
-    images: ["/img/products/AF7009C-GS-FRONT.jpg"],
+    images: [
+      "/img/products/AF7009C-GS-FRONT.jpg"
+    ],
     price: 1299,
     rating: 4.4,
     reviews: 40,
@@ -16644,7 +17811,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "1.2 Ltrs · 1800 W · Black",
-    badge: "new"
+    badge: ""
   },
   {
     id: 696,
@@ -16654,7 +17821,9 @@ const PRODUCTS = [
     model: "1-10",
     category: "kitchen",
     image: "/img/products/1-10.jpg",
-    images: ["/img/products/1-10.jpg"],
+    images: [
+      "/img/products/1-10.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 96,
@@ -16664,7 +17833,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "40Ltrs · Solo · Ceramic Enamel · Led Display · Auto Nascook · Eco Mode · Child Safety Lock · Deodorization",
-    badge: "new"
+    badge: ""
   },
   {
     id: 697,
@@ -16674,7 +17843,9 @@ const PRODUCTS = [
     model: "CVF",
     category: "tv",
     image: "/img/products/CVF.jpg",
-    images: ["/img/products/CVF.jpg"],
+    images: [
+      "/img/products/CVF.jpg"
+    ],
     price: 79999,
     rating: 4.4,
     reviews: 59,
@@ -16684,7 +17855,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "65&#8243; · 8K · HDR+10 · Film Maker Mode · Dolby Atmos · Adaptive Sound · Q-Symphony · Ots+ · Bixby · Built-In Voice Assistant · Apple Airplay · Ambient Mode · Auto Game Mode · HDMI X4 · USB X3 · Blu",
-    badge: "new"
+    badge: ""
   },
   {
     id: 698,
@@ -16694,7 +17865,9 @@ const PRODUCTS = [
     model: "NAS-HT5.1-N6710-1",
     category: "small",
     image: "/img/products/NAS-HT5.1-N6710-1.png",
-    images: ["/img/products/NAS-HT5.1-N6710-1.png"],
+    images: [
+      "/img/products/NAS-HT5.1-N6710-1.png"
+    ],
     price: 1699,
     rating: 4.4,
     reviews: 65,
@@ -16704,7 +17877,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "95 Watt · Bluetooth · Mp3 · Fm · USB/Sd · Remote",
-    badge: "new"
+    badge: ""
   },
   {
     id: 699,
@@ -16714,7 +17887,9 @@ const PRODUCTS = [
     model: "NAS-HT5.1-N918-1",
     category: "small",
     image: "/img/products/NAS-HT5.1-N918-1.jpg",
-    images: ["/img/products/NAS-HT5.1-N918-1.jpg"],
+    images: [
+      "/img/products/NAS-HT5.1-N918-1.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 38,
@@ -16724,7 +17899,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "95 Watt · Bluetooth · Mp3 · Fm · USB/Sd · Remote",
-    badge: "new"
+    badge: ""
   },
   {
     id: 700,
@@ -16734,7 +17909,9 @@ const PRODUCTS = [
     model: "NAS-HT3.1-N940",
     category: "small",
     image: "/img/products/NAS-HT3.1-N940.jpg",
-    images: ["/img/products/NAS-HT3.1-N940.jpg"],
+    images: [
+      "/img/products/NAS-HT3.1-N940.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 42,
@@ -16744,7 +17921,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "90 Watt · Bluetooth · Mp3 · Fm · USB/Sd · Remote",
-    badge: "new"
+    badge: ""
   },
   {
     id: 701,
@@ -16754,7 +17931,9 @@ const PRODUCTS = [
     model: "NAS-HT3.1-N7110",
     category: "small",
     image: "/img/products/NAS-HT3.1-N7110.png",
-    images: ["/img/products/NAS-HT3.1-N7110.png"],
+    images: [
+      "/img/products/NAS-HT3.1-N7110.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 23,
@@ -16764,7 +17943,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "90 Watt · Bluetooth · Mp3 · Fm · USB/Sd · Remote",
-    badge: "new"
+    badge: ""
   },
   {
     id: 702,
@@ -16774,7 +17953,9 @@ const PRODUCTS = [
     model: "mi1",
     category: "kitchen",
     image: "/img/products/mi1.jpg",
-    images: ["/img/products/mi1.jpg"],
+    images: [
+      "/img/products/mi1.jpg"
+    ],
     price: 1899,
     rating: 4.4,
     reviews: 65,
@@ -16784,7 +17965,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "30 Ltrs · Glass Tray · 900 W · Control Panel · 5 Power Levels · Oven Cavity · Safety Interlock System · Oven",
-    badge: "new"
+    badge: ""
   },
   {
     id: 703,
@@ -16794,7 +17975,9 @@ const PRODUCTS = [
     model: "MDRF632FGN46D",
     category: "fridge",
     image: "/img/products/MDRF632FGN46D.jpg",
-    images: ["/img/products/MDRF632FGN46D.jpg"],
+    images: [
+      "/img/products/MDRF632FGN46D.jpg"
+    ],
     price: 13399,
     rating: 4.4,
     reviews: 62,
@@ -16804,7 +17987,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "474 Ltrs · Led Lighting · Door Tray · Glass Shelf · Big Drawer · Energy Saving · Smart Cooling · Dark Grey · Tripple Protector · Inverter",
-    badge: "new"
+    badge: ""
   },
   {
     id: 704,
@@ -16814,7 +17997,9 @@ const PRODUCTS = [
     model: "NAS-J50FUS-AND-CI-1-scaled-1",
     category: "tv",
     image: "/img/products/NAS-J50FUS-AND-CI-1-scaled-1.jpg",
-    images: ["/img/products/NAS-J50FUS-AND-CI-1-scaled-1.jpg"],
+    images: [
+      "/img/products/NAS-J50FUS-AND-CI-1-scaled-1.jpg"
+    ],
     price: 4999,
     rating: 4.4,
     reviews: 31,
@@ -16824,7 +18009,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "50 Inchines · HDMI X3 · USB X2 · VGA · Dvgt2 · Wifi · 4K · Ci+ Channels",
-    badge: "new"
+    badge: ""
   },
   {
     id: 705,
@@ -16834,7 +18019,9 @@ const PRODUCTS = [
     model: "NASCO-311LTR-TOP-MOUNT-FRIDGE-NASF2-45-FRONT",
     category: "fridge",
     image: "/img/products/NASCO-311LTR-TOP-MOUNT-FRIDGE-NASF2-45-FRONT.jpg",
-    images: ["/img/products/NASCO-311LTR-TOP-MOUNT-FRIDGE-NASF2-45-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-311LTR-TOP-MOUNT-FRIDGE-NASF2-45-FRONT.jpg"
+    ],
     price: 4499,
     rating: 4.4,
     reviews: 32,
@@ -16844,7 +18031,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "320 Ltr · Lock Security · Led Light · Glass Shelves · Vegetable Box · Ice Maker · Eco Friendly",
-    badge: "new"
+    badge: ""
   },
   {
     id: 706,
@@ -16854,7 +18041,9 @@ const PRODUCTS = [
     model: "HVCG",
     category: "tv",
     image: "/img/products/HVCG.jpg",
-    images: ["/img/products/HVCG.jpg"],
+    images: [
+      "/img/products/HVCG.jpg"
+    ],
     price: 28799,
     rating: 4.4,
     reviews: 74,
@@ -16864,7 +18053,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Qled Pro · · Aipq Pro Processor · · T-Screen Pro · Onkyo 2 · 1Ch · Slim &amp; Uni-Body · Dlg 120Hz · Dolby Vision•Atmos · HDR10+ · Multiple Eye Care · 32Gb",
-    badge: "new"
+    badge: ""
   },
   {
     id: 707,
@@ -16874,7 +18063,9 @@ const PRODUCTS = [
     model: "HVCG",
     category: "tv",
     image: "/img/products/HVCG.jpg",
-    images: ["/img/products/HVCG.jpg"],
+    images: [
+      "/img/products/HVCG.jpg"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 20,
@@ -16884,7 +18075,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Qled Pro · Aipq Pro Processor · T-Screen Pro · Onkyo 2 · 1Ch · Slim &amp; Uni Body · Dlg 120Hz · Dolby Vision•Atmos · HDR10+ · Multiple Eye Care · 32Gb",
-    badge: "new"
+    badge: ""
   },
   {
     id: 708,
@@ -16894,7 +18085,9 @@ const PRODUCTS = [
     model: "HVCG",
     category: "tv",
     image: "/img/products/HVCG.jpg",
-    images: ["/img/products/HVCG.jpg"],
+    images: [
+      "/img/products/HVCG.jpg"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 88,
@@ -16904,7 +18097,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Qled Pro · · Aipq Pro Processor · · T-Screen Pro · · Onkyo 2 · 0Ch · ·Slim &amp; Uni Body · · Dlg 120Hz · · Dolby Vision•Atmos · · HDR10+ · · Multiple Eye Care · · 32Gb",
-    badge: "new"
+    badge: ""
   },
   {
     id: 709,
@@ -16914,7 +18107,9 @@ const PRODUCTS = [
     model: "QA77S90DAEXGH",
     category: "tv",
     image: "/img/products/QA77S90DAEXGH.jpg",
-    images: ["/img/products/QA77S90DAEXGH.jpg"],
+    images: [
+      "/img/products/QA77S90DAEXGH.jpg"
+    ],
     price: 78299,
     rating: 4.4,
     reviews: 58,
@@ -16924,7 +18119,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "77″ · Oled · Q Viewing Angle · Smart Hub · Auto Detection · Wifi Built In · Ethernet Lan · HDMI 4 · USB 3 · One Remote · Flat Panel",
-    badge: "new"
+    badge: ""
   },
   {
     id: 710,
@@ -16934,7 +18129,9 @@ const PRODUCTS = [
     model: "uk-4-door-beverage-center-rf65db960e22eu-540091199",
     category: "fridge",
     image: "/img/products/uk-4-door-beverage-center-rf65db960e22eu-540091199.jpg",
-    images: ["/img/products/uk-4-door-beverage-center-rf65db960e22eu-540091199.jpg"],
+    images: [
+      "/img/products/uk-4-door-beverage-center-rf65db960e22eu-540091199.jpg"
+    ],
     price: 45999,
     rating: 4.4,
     reviews: 24,
@@ -16944,7 +18141,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Smart Things Ai Energy Mode · Ice Maker · Dispenser · Door Alarm · Interior Led Light",
-    badge: "new"
+    badge: ""
   },
   {
     id: 711,
@@ -16954,7 +18151,9 @@ const PRODUCTS = [
     model: "TCL-COMBO-10.5-KG-6-KGS-WASHING-MACHINE-C211WDG-FRONT",
     category: "laundry",
     image: "/img/products/TCL-COMBO-10.5-KG-6-KGS-WASHING-MACHINE-C211WDG-FRONT.jpg",
-    images: ["/img/products/TCL-COMBO-10.5-KG-6-KGS-WASHING-MACHINE-C211WDG-FRONT.jpg"],
+    images: [
+      "/img/products/TCL-COMBO-10.5-KG-6-KGS-WASHING-MACHINE-C211WDG-FRONT.jpg"
+    ],
     price: 7999,
     rating: 4.4,
     reviews: 49,
@@ -16964,7 +18163,7 @@ const PRODUCTS = [
       "laundry"
     ],
     description: "Digital Inverter · Add Garment · Drum Clean · Safety Lock · 25Hrs Delay · Heat Sterilization · Tcl Honeycumb Drum · Silver",
-    badge: "new"
+    badge: ""
   },
   {
     id: 714,
@@ -16974,7 +18173,9 @@ const PRODUCTS = [
     model: "NASCO-2.8LITER-RICE-COOKER-NASRC-2.8WM-FRONT",
     category: "kitchen",
     image: "/img/products/NASCO-2.8LITER-RICE-COOKER-NASRC-2.8WM-FRONT.jpg",
-    images: ["/img/products/NASCO-2.8LITER-RICE-COOKER-NASRC-2.8WM-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-2.8LITER-RICE-COOKER-NASRC-2.8WM-FRONT.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 64,
@@ -16984,7 +18185,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "2.8 Liter · 1000 Watt · Multi Cooking · Control Mechanism Thermostat · Nonstick Coating Inner Pot",
-    badge: "new"
+    badge: ""
   },
   {
     id: 715,
@@ -16994,7 +18195,9 @@ const PRODUCTS = [
     model: "NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WM-FRONT",
     category: "kitchen",
     image: "/img/products/NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WM-FRONT.jpg",
-    images: ["/img/products/NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WM-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WM-FRONT.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 25,
@@ -17004,7 +18207,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "8 Liters · 700 Watt · Multi Cooking · Control Mechanism Thermostat · Nonstick Coating Inner Pot",
-    badge: "new"
+    badge: ""
   },
   {
     id: 716,
@@ -17014,7 +18217,9 @@ const PRODUCTS = [
     model: "NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WB-FRONT",
     category: "kitchen",
     image: "/img/products/NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WB-FRONT.jpg",
-    images: ["/img/products/NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WB-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-1.8LITER-RICE-COOKER-NASRC-1.8WB-FRONT.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 52,
@@ -17024,7 +18229,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "8 Liter · 700 Watt · Multi Cooking · Control Mechanism Thermostat",
-    badge: "new"
+    badge: ""
   },
   {
     id: 717,
@@ -17034,7 +18239,9 @@ const PRODUCTS = [
     model: "au-oled-s90d-497351-qa77s90daexxy-541516765",
     category: "tv",
     image: "/img/products/au-oled-s90d-497351-qa77s90daexxy-541516765.jpg",
-    images: ["/img/products/au-oled-s90d-497351-qa77s90daexxy-541516765.jpg"],
+    images: [
+      "/img/products/au-oled-s90d-497351-qa77s90daexxy-541516765.jpg"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 49,
@@ -17044,7 +18251,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "83&#8243; · Dolby Atmos · HDR Oled+ · Ambient Mode · Built-In Voice Assistant · Ots Lite · Q-Symphony · Laser Slim Design",
-    badge: "new"
+    badge: ""
   },
   {
     id: 719,
@@ -17054,7 +18261,9 @@ const PRODUCTS = [
     model: "NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT",
     category: "kitchen",
     image: "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg",
-    images: ["/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-5-BURNER-GAS-COOKER-WITH-OVEN-GRILL-NASGC-AMG80S-FRONT.jpg"
+    ],
     price: 3799,
     rating: 4.4,
     reviews: 54,
@@ -17064,7 +18273,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "5 Burner · Gas · Grill · Silver · Oven",
-    badge: "new"
+    badge: ""
   },
   {
     id: 720,
@@ -17074,7 +18283,9 @@ const PRODUCTS = [
     model: "NASCO-NASF2-250FLD-FRONT-VIEW",
     category: "fridge",
     image: "/img/products/NASCO-NASF2-250FLD-FRONT-VIEW.jpg",
-    images: ["/img/products/NASCO-NASF2-250FLD-FRONT-VIEW.jpg"],
+    images: [
+      "/img/products/NASCO-NASF2-250FLD-FRONT-VIEW.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 71,
@@ -17084,7 +18295,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "210Ltrs · Manual Defrost · Adjustable Thermostat · Low Noise · Silver · Dispenser · 100% Cfc Free",
-    badge: "new"
+    badge: ""
   },
   {
     id: 721,
@@ -17094,7 +18305,9 @@ const PRODUCTS = [
     model: "RT47CB66318AGH-1-jpg-1",
     category: "fridge",
     image: "/img/products/RT47CB66318AGH-1-jpg-1.webp",
-    images: ["/img/products/RT47CB66318AGH-1-jpg-1.webp"],
+    images: [
+      "/img/products/RT47CB66318AGH-1-jpg-1.webp"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 70,
@@ -17104,7 +18317,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "460 Ltrs · Energy Saving · Auto Ice Maker · Glass · White And Navy Blue",
-    badge: "new"
+    badge: ""
   },
   {
     id: 722,
@@ -17114,7 +18327,9 @@ const PRODUCTS = [
     model: "Artboard-1-3",
     category: "fridge",
     image: "/img/products/Artboard-1-3.jpg",
-    images: ["/img/products/Artboard-1-3.jpg"],
+    images: [
+      "/img/products/Artboard-1-3.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 40,
@@ -17124,7 +18339,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "280Ltrs · Manual Defrost · Adjustable Thermostat · Low Noise · Silver · Dispenser · 100% Cfc Free",
-    badge: "new"
+    badge: ""
   },
   {
     id: 723,
@@ -17134,7 +18349,9 @@ const PRODUCTS = [
     model: "NAS-725FL-DD-FRONT",
     category: "fridge",
     image: "/img/products/NAS-725FL-DD-FRONT.jpg",
-    images: ["/img/products/NAS-725FL-DD-FRONT.jpg"],
+    images: [
+      "/img/products/NAS-725FL-DD-FRONT.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 78,
@@ -17144,7 +18361,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Adjustable Thermostat · Manual Defrost · 100% Cfc Free · Low Noise · Silver · Energy Saving · 100% Cfc Free · Double Door",
-    badge: "new"
+    badge: ""
   },
   {
     id: 724,
@@ -17154,7 +18371,9 @@ const PRODUCTS = [
     model: "sg-one-door-rz32m71157f-rz32m71157f-ss-frontsilver-67504426",
     category: "fridge",
     image: "/img/products/sg-one-door-rz32m71157f-rz32m71157f-ss-frontsilver-67504426.jpg",
-    images: ["/img/products/sg-one-door-rz32m71157f-rz32m71157f-ss-frontsilver-67504426.jpg"],
+    images: [
+      "/img/products/sg-one-door-rz32m71157f-rz32m71157f-ss-frontsilver-67504426.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 94,
@@ -17164,7 +18383,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "315 Ltrs · Frost Free · Door Alarm · Digital Inverter Compressor · Refined Steel Color · Energy Saving · All-Around Cooling · Smartthings App Support · Slim Ice Maker · Large Capacity",
-    badge: "new"
+    badge: ""
   },
   {
     id: 725,
@@ -17174,7 +18393,9 @@ const PRODUCTS = [
     model: "sg-one-door-rr39m71357f-rr39m71357f-ss-frontsilver-67092288",
     category: "fridge",
     image: "/img/products/sg-one-door-rr39m71357f-rr39m71357f-ss-frontsilver-67092288.jpg",
-    images: ["/img/products/sg-one-door-rr39m71357f-rr39m71357f-ss-frontsilver-67092288.jpg"],
+    images: [
+      "/img/products/sg-one-door-rr39m71357f-rr39m71357f-ss-frontsilver-67092288.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 58,
@@ -17184,7 +18405,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "385 Ltrs · Frost Free · Door Alarm · Digital Inverter Compressor · Refined Steel · Energy Saving · All-Around Cooling · Smartthings App Support",
-    badge: "new"
+    badge: ""
   },
   {
     id: 726,
@@ -17194,7 +18415,9 @@ const PRODUCTS = [
     model: "Artboard-3-1-1",
     category: "small",
     image: "/img/products/Artboard-3-1-1.jpg",
-    images: ["/img/products/Artboard-3-1-1.jpg"],
+    images: [
+      "/img/products/Artboard-3-1-1.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 80,
@@ -17204,7 +18427,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "75&#8243; · Smart Hub · Wifi Built-In · HDMI X 3 · USB X 2 · Dolby Digital Plus · Q Viewing Angle",
-    badge: "new"
+    badge: ""
   },
   {
     id: 727,
@@ -17214,7 +18437,9 @@ const PRODUCTS = [
     model: "NASCO-288-LTRS-DISPLAY-FRIDGE-NAS-FL350-1DR-FRONT-OPEN",
     category: "fridge",
     image: "/img/products/NASCO-288-LTRS-DISPLAY-FRIDGE-NAS-FL350-1DR-FRONT-OPEN.jpg",
-    images: ["/img/products/NASCO-288-LTRS-DISPLAY-FRIDGE-NAS-FL350-1DR-FRONT-OPEN.jpg"],
+    images: [
+      "/img/products/NASCO-288-LTRS-DISPLAY-FRIDGE-NAS-FL350-1DR-FRONT-OPEN.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 75,
@@ -17224,7 +18449,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "288 Ltrs · Adjustable Thermostat · Low Noise · Direct Cooling · Energy Saving · 100% Cfc  Free",
-    badge: "new"
+    badge: ""
   },
   {
     id: 728,
@@ -17234,7 +18459,9 @@ const PRODUCTS = [
     model: "ae-qled-qn800c-qa85qn800cuxzn-536108502",
     category: "tv",
     image: "/img/products/ae-qled-qn800c-qa85qn800cuxzn-536108502.webp",
-    images: ["/img/products/ae-qled-qn800c-qa85qn800cuxzn-536108502.webp"],
+    images: [
+      "/img/products/ae-qled-qn800c-qa85qn800cuxzn-536108502.webp"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 53,
@@ -17244,7 +18471,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "85 Inchines · 8K · G- Viewing Angle · Smart Hub · Wifi-Built-In · HDMIx4 · USBx3 · Dobly Digital Plus",
-    badge: "new"
+    badge: ""
   },
   {
     id: 729,
@@ -17254,7 +18481,9 @@ const PRODUCTS = [
     model: "1-3",
     category: "fridge",
     image: "/img/products/1-3.jpg",
-    images: ["/img/products/1-3.jpg"],
+    images: [
+      "/img/products/1-3.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 77,
@@ -17264,7 +18493,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Adjustable Thermostat · 100% Cfc Free · Low Noise · Direct Cooling · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 730,
@@ -17274,7 +18503,9 @@ const PRODUCTS = [
     model: "1-2-1",
     category: "fridge",
     image: "/img/products/1-2-1.jpg",
-    images: ["/img/products/1-2-1.jpg"],
+    images: [
+      "/img/products/1-2-1.jpg"
+    ],
     price: 5699,
     rating: 4.4,
     reviews: 72,
@@ -17284,7 +18515,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Adjustable Thermostat · 100% Cfc Free · Low Noise · Direct Cooling · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 731,
@@ -17294,7 +18525,9 @@ const PRODUCTS = [
     model: "CX",
     category: "tv",
     image: "/img/products/CX.jpg",
-    images: ["/img/products/CX.jpg"],
+    images: [
+      "/img/products/CX.jpg"
+    ],
     price: 116999,
     rating: 4.4,
     reviews: 89,
@@ -17304,7 +18537,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Q Viewing Angle · Smart Hub · Auto Detection · Wifi Built In · Ethernet Lan · HDMI 4 · USB 3 · Flat Panel",
-    badge: "new"
+    badge: ""
   },
   {
     id: 732,
@@ -17314,7 +18547,9 @@ const PRODUCTS = [
     model: "1-33",
     category: "kitchen",
     image: "/img/products/1-33.jpg",
-    images: ["/img/products/1-33.jpg"],
+    images: [
+      "/img/products/1-33.jpg"
+    ],
     price: 4499,
     rating: 4.4,
     reviews: 77,
@@ -17324,7 +18559,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Mechanical Control · Stainless Steel · Forced · Air Cooked System",
-    badge: "new"
+    badge: ""
   },
   {
     id: 733,
@@ -17334,7 +18569,9 @@ const PRODUCTS = [
     model: "QA65Q60DAUXGH",
     category: "small",
     image: "/img/products/QA65Q60DAUXGH.jpg",
-    images: ["/img/products/QA65Q60DAUXGH.jpg"],
+    images: [
+      "/img/products/QA65Q60DAUXGH.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 61,
@@ -17344,7 +18581,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Q Viewing Angle · Smart Hub · Auto Detection · Wifi Built In · Ethernet Lan · HDMI 4 · USB 3 · Flat Panel · 4K",
-    badge: "new"
+    badge: ""
   },
   {
     id: 734,
@@ -17354,7 +18591,9 @@ const PRODUCTS = [
     model: "QA65Q60DAUXGH",
     category: "tv",
     image: "/img/products/QA65Q60DAUXGH.jpg",
-    images: ["/img/products/QA65Q60DAUXGH.jpg"],
+    images: [
+      "/img/products/QA65Q60DAUXGH.jpg"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 38,
@@ -17364,7 +18603,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Q Viewing Angle · Smart Hub · Auto Detection · Wifi Built In · Ethernet Lan · HDMI 4 · USB 3 · Flat Panel · 4K",
-    badge: "new"
+    badge: ""
   },
   {
     id: 735,
@@ -17374,7 +18613,9 @@ const PRODUCTS = [
     model: "1-2",
     category: "fridge",
     image: "/img/products/1-2.jpg",
-    images: ["/img/products/1-2.jpg"],
+    images: [
+      "/img/products/1-2.jpg"
+    ],
     price: 11399,
     rating: 4.4,
     reviews: 31,
@@ -17384,7 +18625,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Flexible Space · Adjustable Shelves · 2L Bottle Space · Tempered Shelves · 90° Accessible · Twin Eco Inverter · Power Cool · Total No Frost",
-    badge: "new"
+    badge: ""
   },
   {
     id: 736,
@@ -17394,7 +18635,9 @@ const PRODUCTS = [
     model: "E",
     category: "laundry",
     image: "/img/products/E.jpg",
-    images: ["/img/products/E.jpg"],
+    images: [
+      "/img/products/E.jpg"
+    ],
     price: 7099,
     rating: 4.4,
     reviews: 66,
@@ -17404,7 +18647,7 @@ const PRODUCTS = [
       "laundry"
     ],
     description: "Eco Bubble · Digital Inverter Technology · Super Speed · Eco Tub Clean",
-    badge: "new"
+    badge: ""
   },
   {
     id: 737,
@@ -17414,7 +18657,9 @@ const PRODUCTS = [
     model: "521-TCL-fridge-1",
     category: "fridge",
     image: "/img/products/521-TCL-fridge-1.jpg",
-    images: ["/img/products/521-TCL-fridge-1.jpg"],
+    images: [
+      "/img/products/521-TCL-fridge-1.jpg"
+    ],
     price: 13999,
     rating: 4.4,
     reviews: 35,
@@ -17424,7 +18669,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "476L French Door Fridge · Inverter Compressor · Frost Free · Humidity Controlled Crisper Drawer · Fresh Food Zone Nascompartment · Adjustable Easy To Clean Glass Shelves · Super Freeze Mode · Touch Sc",
-    badge: "new"
+    badge: ""
   },
   {
     id: 738,
@@ -17434,7 +18679,9 @@ const PRODUCTS = [
     model: "TCL-FRENCH-DOOR-REFRIGERATOR-P460CD",
     category: "fridge",
     image: "/img/products/TCL-FRENCH-DOOR-REFRIGERATOR-P460CD.jpg",
-    images: ["/img/products/TCL-FRENCH-DOOR-REFRIGERATOR-P460CD.jpg"],
+    images: [
+      "/img/products/TCL-FRENCH-DOOR-REFRIGERATOR-P460CD.jpg"
+    ],
     price: 12699,
     rating: 4.4,
     reviews: 65,
@@ -17444,7 +18691,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Electronic Control · Precise Temperature Control · Led Light · Aat · Power Cool · Power Freeze · Eco Inverter",
-    badge: "new"
+    badge: ""
   },
   {
     id: 739,
@@ -17454,7 +18701,9 @@ const PRODUCTS = [
     model: "FQXT2A1-jpeg",
     category: "ac",
     image: "/img/products/FQXT2A1-jpeg.webp",
-    images: ["/img/products/FQXT2A1-jpeg.webp"],
+    images: [
+      "/img/products/FQXT2A1-jpeg.webp"
+    ],
     price: 1799,
     rating: 4.4,
     reviews: 67,
@@ -17464,7 +18713,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "220 &#8211; 240V · 3517W Maximum Capacity · 10 · 5A Max · Output Current · Ipx4 Resistance Class · Indoor Unit · Outdoor Unit",
-    badge: "new"
+    badge: ""
   },
   {
     id: 740,
@@ -17474,7 +18723,9 @@ const PRODUCTS = [
     model: "TDR-3000VA",
     category: "small",
     image: "/img/products/TDR-3000VA.jpeg",
-    images: ["/img/products/TDR-3000VA.jpeg"],
+    images: [
+      "/img/products/TDR-3000VA.jpeg"
+    ],
     price: 1549,
     rating: 4.4,
     reviews: 52,
@@ -17484,7 +18735,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "3000Va/1800W · Stabilizing Output Voltage · Wilder Regulation Voltage Range · Advanced Cpu-Controlled Circuit Desgin · Protect Against Several Electrical Anomalities",
-    badge: "new"
+    badge: ""
   },
   {
     id: 741,
@@ -17494,7 +18745,9 @@ const PRODUCTS = [
     model: "TCL-TV-GOOGLE-85-4K-ULTRA-HD-TCL_85P745-FRONT",
     category: "tv",
     image: "/img/products/TCL-TV-GOOGLE-85-4K-ULTRA-HD-TCL_85P745-FRONT.png",
-    images: ["/img/products/TCL-TV-GOOGLE-85-4K-ULTRA-HD-TCL_85P745-FRONT.png"],
+    images: [
+      "/img/products/TCL-TV-GOOGLE-85-4K-ULTRA-HD-TCL_85P745-FRONT.png"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 33,
@@ -17504,7 +18757,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "4K · Wifi · Dolby Atmos · Hands Free Voice Control · Frameless Metal Frame · Google",
-    badge: "new"
+    badge: ""
   },
   {
     id: 742,
@@ -17514,7 +18767,9 @@ const PRODUCTS = [
     model: "TCL-CHEST-FREZZER-397LTRS-F400CF-FRONT-OPEN-jpg",
     category: "fridge",
     image: "/img/products/TCL-CHEST-FREZZER-397LTRS-F400CF-FRONT-OPEN-jpg.webp",
-    images: ["/img/products/TCL-CHEST-FREZZER-397LTRS-F400CF-FRONT-OPEN-jpg.webp"],
+    images: [
+      "/img/products/TCL-CHEST-FREZZER-397LTRS-F400CF-FRONT-OPEN-jpg.webp"
+    ],
     price: 7899,
     rating: 4.4,
     reviews: 72,
@@ -17524,7 +18779,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Capacity-400Ltrs · Mechanical Control · Led Light · Power Indicator · Storage Basket · White",
-    badge: "new"
+    badge: ""
   },
   {
     id: 743,
@@ -17534,7 +18789,9 @@ const PRODUCTS = [
     model: "1-3-1-jpg",
     category: "ac",
     image: "/img/products/1-3-1-jpg.webp",
-    images: ["/img/products/1-3-1-jpg.webp"],
+    images: [
+      "/img/products/1-3-1-jpg.webp"
+    ],
     price: 6999,
     rating: 4.4,
     reviews: 54,
@@ -17544,7 +18801,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.5Hp · R32 Refrigerant · Low Noise · Smart Air Flow · White And Gold Design · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 744,
@@ -17554,7 +18811,9 @@ const PRODUCTS = [
     model: "AC-jpeg",
     category: "ac",
     image: "/img/products/AC-jpeg.webp",
-    images: ["/img/products/AC-jpeg.webp"],
+    images: [
+      "/img/products/AC-jpeg.webp"
+    ],
     price: 5999,
     rating: 4.4,
     reviews: 66,
@@ -17564,7 +18823,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "2.0Hp · R32 Refrigerant · Low Noise · Smart Air Flow · White And Gold Design · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 745,
@@ -17574,7 +18833,9 @@ const PRODUCTS = [
     model: "1-11-jpg",
     category: "fridge",
     image: "/img/products/1-11-jpg.webp",
-    images: ["/img/products/1-11-jpg.webp"],
+    images: [
+      "/img/products/1-11-jpg.webp"
+    ],
     price: 5999,
     rating: 4.4,
     reviews: 27,
@@ -17584,7 +18845,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "300Ltrs · Mechanical Control · Led Light · Power Indicator · Storage Basket · White",
-    badge: "new"
+    badge: ""
   },
   {
     id: 746,
@@ -17594,7 +18855,9 @@ const PRODUCTS = [
     model: "1-9-jpg",
     category: "fridge",
     image: "/img/products/1-9-jpg.webp",
-    images: ["/img/products/1-9-jpg.webp"],
+    images: [
+      "/img/products/1-9-jpg.webp"
+    ],
     price: 4899,
     rating: 4.4,
     reviews: 26,
@@ -17604,7 +18867,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "208Ltrs · Mechanical Control · Led Light · Power Indicator · Storage Basket · White",
-    badge: "new"
+    badge: ""
   },
   {
     id: 747,
@@ -17614,7 +18877,9 @@ const PRODUCTS = [
     model: "2-7-jpg",
     category: "fridge",
     image: "/img/products/2-7-jpg.webp",
-    images: ["/img/products/2-7-jpg.webp"],
+    images: [
+      "/img/products/2-7-jpg.webp"
+    ],
     price: 5299,
     rating: 4.4,
     reviews: 31,
@@ -17624,7 +18889,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "118Ltrs · Uniform Cooling · Led Light · Glass Shelves · Defrost · Dark Silver · Adjustable Feet",
-    badge: "new"
+    badge: ""
   },
   {
     id: 748,
@@ -17634,7 +18899,9 @@ const PRODUCTS = [
     model: "2-6-jpg",
     category: "fridge",
     image: "/img/products/2-6-jpg.webp",
-    images: ["/img/products/2-6-jpg.webp"],
+    images: [
+      "/img/products/2-6-jpg.webp"
+    ],
     price: 3599,
     rating: 4.4,
     reviews: 32,
@@ -17644,7 +18911,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "118Ltrs · Uniform Cooling · Led Light · Glass Shelves · Defrost · Dark Silver · Adjustable Feet",
-    badge: "new"
+    badge: ""
   },
   {
     id: 749,
@@ -17654,7 +18921,9 @@ const PRODUCTS = [
     model: "3-5-jpg",
     category: "fridge",
     image: "/img/products/3-5-jpg.webp",
-    images: ["/img/products/3-5-jpg.webp"],
+    images: [
+      "/img/products/3-5-jpg.webp"
+    ],
     price: 2199,
     rating: 4.4,
     reviews: 44,
@@ -17664,7 +18933,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "47Ltrs · Fast Cooling · Silver · 5 Temperature Level",
-    badge: "new"
+    badge: ""
   },
   {
     id: 750,
@@ -17674,7 +18943,9 @@ const PRODUCTS = [
     model: "ae-canister-sc4570-vcc4570s3k-xsg-538828663-jpg",
     category: "small",
     image: "/img/products/ae-canister-sc4570-vcc4570s3k-xsg-538828663-jpg.webp",
-    images: ["/img/products/ae-canister-sc4570-vcc4570s3k-xsg-538828663-jpg.webp"],
+    images: [
+      "/img/products/ae-canister-sc4570-vcc4570s3k-xsg-538828663-jpg.webp"
+    ],
     price: 1799,
     rating: 4.4,
     reviews: 84,
@@ -17684,7 +18955,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Bagless · 2 Chambers · Economic · Black",
-    badge: "new"
+    badge: ""
   },
   {
     id: 751,
@@ -17694,7 +18965,9 @@ const PRODUCTS = [
     model: "RT47CB66318AGH-1-jpg",
     category: "fridge",
     image: "/img/products/RT47CB66318AGH-1-jpg.webp",
-    images: ["/img/products/RT47CB66318AGH-1-jpg.webp"],
+    images: [
+      "/img/products/RT47CB66318AGH-1-jpg.webp"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 73,
@@ -17704,7 +18977,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "411Ltrs · Energy Saving · Auto Ice Maker · Glass · White And Navy Blue",
-    badge: "new"
+    badge: ""
   },
   {
     id: 752,
@@ -17714,7 +18987,9 @@ const PRODUCTS = [
     model: "RT47CB66318AGH-1-jpg",
     category: "fridge",
     image: "/img/products/RT47CB66318AGH-1-jpg.webp",
-    images: ["/img/products/RT47CB66318AGH-1-jpg.webp"],
+    images: [
+      "/img/products/RT47CB66318AGH-1-jpg.webp"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 91,
@@ -17724,7 +18999,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "388 Ltrs · Energy Saving · Auto Ice Maker · Glass · White And Navy Blue",
-    badge: "new"
+    badge: ""
   },
   {
     id: 753,
@@ -17734,7 +19009,9 @@ const PRODUCTS = [
     model: "",
     category: "tv",
     image: "/img/products/TCL-65P635-1-jpg.webp",
-    images: ["/img/products/TCL-65P635-1-jpg.webp"],
+    images: [
+      "/img/products/TCL-65P635-1-jpg.webp"
+    ],
     price: 23700,
     rating: 4.4,
     reviews: 38,
@@ -17744,7 +19021,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "4K Frameless Metal Frame · Google Tv · Resolution · 3840 X 2160 Pixels · Dynamic Contrast Ratio · 5000:1 ·  · Led · Backlight Technology ·  · Brightness · 300 Nits",
-    badge: "new"
+    badge: ""
   },
   {
     id: 754,
@@ -17754,7 +19031,9 @@ const PRODUCTS = [
     model: "KES4116-GS",
     category: "kitchen",
     image: "/img/products/KES4116-GS.png",
-    images: ["/img/products/KES4116-GS.png"],
+    images: [
+      "/img/products/KES4116-GS.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 65,
@@ -17764,7 +19043,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "1.7 Ltr · Stainless Steel · Cordless · 2200 Watt",
-    badge: "new"
+    badge: ""
   },
   {
     id: 755,
@@ -17774,7 +19053,9 @@ const PRODUCTS = [
     model: "NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT",
     category: "ac",
     image: "/img/products/NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT.jpg",
-    images: ["/img/products/NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 24,
@@ -17784,7 +19065,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Plain White Panel Design · Copper Condenser · Inverter Compressor · Refrigerant R32",
-    badge: "new"
+    badge: ""
   },
   {
     id: 756,
@@ -17794,7 +19075,9 @@ const PRODUCTS = [
     model: "WEBSITE",
     category: "small",
     image: "/img/products/WEBSITE.jpg",
-    images: ["/img/products/WEBSITE.jpg"],
+    images: [
+      "/img/products/WEBSITE.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 73,
@@ -17804,7 +19087,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Uhd · Wifi · 160Watts · Bluetooth · USB · Fm/Aux",
-    badge: "new"
+    badge: ""
   },
   {
     id: 757,
@@ -17814,7 +19097,9 @@ const PRODUCTS = [
     model: "NASCO-160WATT-BLUETOOTH-SOUND-TOWER",
     category: "small",
     image: "/img/products/NASCO-160WATT-BLUETOOTH-SOUND-TOWER.jpg",
-    images: ["/img/products/NASCO-160WATT-BLUETOOTH-SOUND-TOWER.jpg"],
+    images: [
+      "/img/products/NASCO-160WATT-BLUETOOTH-SOUND-TOWER.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 55,
@@ -17824,7 +19109,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Romote Controlwifi160Wattsbluetoothusbfm/Aux",
-    badge: "new"
+    badge: ""
   },
   {
     id: 758,
@@ -17834,7 +19119,9 @@ const PRODUCTS = [
     model: "grsdghtj",
     category: "small",
     image: "/img/products/grsdghtj.jpg",
-    images: ["/img/products/grsdghtj.jpg"],
+    images: [
+      "/img/products/grsdghtj.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 26,
@@ -17844,7 +19131,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Power: 1600W · Speed Control · Silencer / Hepa Filter · Dust Nascollector Volume: 3 Liters",
-    badge: "new"
+    badge: ""
   },
   {
     id: 759,
@@ -17854,7 +19141,9 @@ const PRODUCTS = [
     model: "C",
     category: "small",
     image: "/img/products/C.jpg",
-    images: ["/img/products/C.jpg"],
+    images: [
+      "/img/products/C.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 50,
@@ -17864,7 +19153,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Fashionable Design · 2 Speeds Available · Battery Indicator · Accessories: Small Brush, Crevice Tool, Wall Bracket",
-    badge: "new"
+    badge: ""
   },
   {
     id: 760,
@@ -17874,7 +19163,9 @@ const PRODUCTS = [
     model: "1-1",
     category: "small",
     image: "/img/products/1-1.jpg",
-    images: ["/img/products/1-1.jpg"],
+    images: [
+      "/img/products/1-1.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 88,
@@ -17884,7 +19175,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Portable Vacuum · Rechargeable · Humid-Dry · Washable Filter · 4L",
-    badge: "new"
+    badge: ""
   },
   {
     id: 761,
@@ -17894,7 +19185,9 @@ const PRODUCTS = [
     model: "jkljhjl",
     category: "small",
     image: "/img/products/jkljhjl.jpg",
-    images: ["/img/products/jkljhjl.jpg"],
+    images: [
+      "/img/products/jkljhjl.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 35,
@@ -17904,7 +19197,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "High Efficiency Engine With Aluminum Fan · Removable Battery · Hepa Cyclonic Filtration System · Power Control In 2 Steps",
-    badge: "new"
+    badge: ""
   },
   {
     id: 762,
@@ -17914,7 +19207,9 @@ const PRODUCTS = [
     model: "ertgdfh",
     category: "small",
     image: "/img/products/ertgdfh.jpg",
-    images: ["/img/products/ertgdfh.jpg"],
+    images: [
+      "/img/products/ertgdfh.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 63,
@@ -17924,7 +19219,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Power: 1600 W · Speed ​​Control Silent · Hepa Filter · Dusting Volume: 3 Liters",
-    badge: "new"
+    badge: ""
   },
   {
     id: 764,
@@ -17934,7 +19229,9 @@ const PRODUCTS = [
     model: "Artboard-1-copy-1-1",
     category: "ac",
     image: "/img/products/Artboard-1-copy-1-1.jpg",
-    images: ["/img/products/Artboard-1-copy-1-1.jpg"],
+    images: [
+      "/img/products/Artboard-1-copy-1-1.jpg"
+    ],
     price: 9149,
     rating: 4.4,
     reviews: 37,
@@ -17944,7 +19241,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Mirror Panel · Copper Condenser · R410 Gas · 2.5Hp · Auto Restart · Fast Cooling",
-    badge: "new"
+    badge: ""
   },
   {
     id: 766,
@@ -17954,7 +19251,9 @@ const PRODUCTS = [
     model: "FDTDFT",
     category: "fridge",
     image: "/img/products/FDTDFT.jpg",
-    images: ["/img/products/FDTDFT.jpg"],
+    images: [
+      "/img/products/FDTDFT.jpg"
+    ],
     price: 4899,
     rating: 4.4,
     reviews: 66,
@@ -17964,7 +19263,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Black · Glass Door · 2 Shelves · Interior Light",
-    badge: "new"
+    badge: ""
   },
   {
     id: 768,
@@ -17974,7 +19273,9 @@ const PRODUCTS = [
     model: "samsung-canister-vacuum-cleaner-vc18m2120.webp",
     category: "small",
     image: "/img/products/samsung-canister-vacuum-cleaner-vc18m2120.webp.webp",
-    images: ["/img/products/samsung-canister-vacuum-cleaner-vc18m2120.webp.webp"],
+    images: [
+      "/img/products/samsung-canister-vacuum-cleaner-vc18m2120.webp.webp"
+    ],
     price: 2199,
     rating: 4.4,
     reviews: 81,
@@ -17984,7 +19285,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Ez Clean Bin · 2In1 Vaccum · Airborne Copper · 180 Degree Steering · White",
-    badge: "new"
+    badge: ""
   },
   {
     id: 769,
@@ -17994,7 +19295,9 @@ const PRODUCTS = [
     model: "QA75QN85AAUXKE-2-jpg",
     category: "tv",
     image: "/img/products/QA75QN85AAUXKE-2-jpg.webp",
-    images: ["/img/products/QA75QN85AAUXKE-2-jpg.webp"],
+    images: [
+      "/img/products/QA75QN85AAUXKE-2-jpg.webp"
+    ],
     price: 39199,
     rating: 4.4,
     reviews: 62,
@@ -18004,7 +19307,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "65 Inchines · 4K · G- Viewing Angle · Smart Hub · Wifi-Built-In · HDMIx4 · USBx3 · Dobly Digital Plus",
-    badge: "new"
+    badge: ""
   },
   {
     id: 771,
@@ -18014,7 +19317,9 @@ const PRODUCTS = [
     model: "SDG-FHG",
     category: "kitchen",
     image: "/img/products/SDG-FHG.jpg",
-    images: ["/img/products/SDG-FHG.jpg"],
+    images: [
+      "/img/products/SDG-FHG.jpg"
+    ],
     price: 7899,
     rating: 4.4,
     reviews: 41,
@@ -18024,7 +19329,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Oven · Stainless Steel · 4 Burners · Grill",
-    badge: "new"
+    badge: ""
   },
   {
     id: 772,
@@ -18034,7 +19339,9 @@ const PRODUCTS = [
     model: "GFUJHFCTG",
     category: "fridge",
     image: "/img/products/GFUJHFCTG.jpg",
-    images: ["/img/products/GFUJHFCTG.jpg"],
+    images: [
+      "/img/products/GFUJHFCTG.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 44,
@@ -18044,7 +19351,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Black · Glass Door · 4 Shelves · Energy Saving · Interior Light",
-    badge: "new"
+    badge: ""
   },
   {
     id: 773,
@@ -18054,7 +19361,9 @@ const PRODUCTS = [
     model: "BL1197A-1",
     category: "kitchen",
     image: "/img/products/BL1197A-1.jpg",
-    images: ["/img/products/BL1197A-1.jpg"],
+    images: [
+      "/img/products/BL1197A-1.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 73,
@@ -18064,7 +19373,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "800 Ml Plastic Jar · Ss Blades · Ability To Blend Different Kinds Of Fruit",
-    badge: "new"
+    badge: ""
   },
   {
     id: 775,
@@ -18074,7 +19383,9 @@ const PRODUCTS = [
     model: "FGJDFD",
     category: "kitchen",
     image: "/img/products/FGJDFD.jpg",
-    images: ["/img/products/FGJDFD.jpg"],
+    images: [
+      "/img/products/FGJDFD.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 24,
@@ -18084,7 +19395,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Electric · Stainless Steel · 20Ltr",
-    badge: "new"
+    badge: ""
   },
   {
     id: 777,
@@ -18094,7 +19405,9 @@ const PRODUCTS = [
     model: "GDFDJGFJ",
     category: "kitchen",
     image: "/img/products/GDFDJGFJ.jpg",
-    images: ["/img/products/GDFDJGFJ.jpg"],
+    images: [
+      "/img/products/GDFDJGFJ.jpg"
+    ],
     price: 2999,
     rating: 4.4,
     reviews: 52,
@@ -18104,7 +19417,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "60 X 60 Cm · Silver · 4 Burners · Full Electric Cookers",
-    badge: "new"
+    badge: ""
   },
   {
     id: 779,
@@ -18114,7 +19427,9 @@ const PRODUCTS = [
     model: "FYUKGYUKGUY",
     category: "ac",
     image: "/img/products/FYUKGYUKGUY.jpg",
-    images: ["/img/products/FYUKGYUKGUY.jpg"],
+    images: [
+      "/img/products/FYUKGYUKGUY.jpg"
+    ],
     price: 25249,
     rating: 4.4,
     reviews: 24,
@@ -18124,7 +19439,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Stylish Design · Multi Level Wind Speed · 5 Meter Coil · Digital Panel · 5.0Hp · 0Hp",
-    badge: "new"
+    badge: ""
   },
   {
     id: 780,
@@ -18134,7 +19449,9 @@ const PRODUCTS = [
     model: "Artboard-3",
     category: "tv",
     image: "/img/products/Artboard-3.jpg",
-    images: ["/img/products/Artboard-3.jpg"],
+    images: [
+      "/img/products/Artboard-3.jpg"
+    ],
     price: 34899,
     rating: 4.4,
     reviews: 46,
@@ -18144,7 +19461,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Serif Design · NFC on TV · Ambient Mode+",
-    badge: "new"
+    badge: ""
   },
   {
     id: 781,
@@ -18154,7 +19471,9 @@ const PRODUCTS = [
     model: "DGBHSTHT",
     category: "kitchen",
     image: "/img/products/DGBHSTHT.jpg",
-    images: ["/img/products/DGBHSTHT.jpg"],
+    images: [
+      "/img/products/DGBHSTHT.jpg"
+    ],
     price: 8299,
     rating: 4.4,
     reviews: 45,
@@ -18164,7 +19483,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "60 X 60 Cm · Silver · 4 Burners · Full Electric Cookers",
-    badge: "new"
+    badge: ""
   },
   {
     id: 783,
@@ -18174,7 +19493,9 @@ const PRODUCTS = [
     model: "NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT",
     category: "ac",
     image: "/img/products/NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT.jpg",
-    images: ["/img/products/NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT.jpg"
+    ],
     price: 8249,
     rating: 4.4,
     reviews: 83,
@@ -18184,7 +19505,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "White Panel · Sleek Design · Inverter Compressor · Copper Condenser · R32",
-    badge: "new"
+    badge: ""
   },
   {
     id: 784,
@@ -18194,7 +19515,9 @@ const PRODUCTS = [
     model: "NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT",
     category: "ac",
     image: "/img/products/NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT.jpg",
-    images: ["/img/products/NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-1.5HP-R32-GAS-SPLIT-INVERTER-AIR-CONDITIONER-NAS-M12V1-R32-FRONT.jpg"
+    ],
     price: 5699,
     rating: 4.4,
     reviews: 79,
@@ -18204,7 +19527,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "White Panel · Sleek Design · Inverter Compressor · Copper Condenser · R32 · 5Hp",
-    badge: "new"
+    badge: ""
   },
   {
     id: 785,
@@ -18214,7 +19537,9 @@ const PRODUCTS = [
     model: "FGTGFDTS",
     category: "small",
     image: "/img/products/FGTGFDTS.jpg",
-    images: ["/img/products/FGTGFDTS.jpg"],
+    images: [
+      "/img/products/FGTGFDTS.jpg"
+    ],
     price: 2649,
     rating: 4.4,
     reviews: 46,
@@ -18224,7 +19549,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "16 Ltrs · 3 Taps · Fridge Cabinet · White · Heating And Cooling Switch · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 786,
@@ -18234,7 +19559,9 @@ const PRODUCTS = [
     model: "DGHSD",
     category: "small",
     image: "/img/products/DGHSD.jpg",
-    images: ["/img/products/DGHSD.jpg"],
+    images: [
+      "/img/products/DGHSD.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 54,
@@ -18244,7 +19571,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "16 Ltrs · 2 Taps · Cabinet · White · Heating And Cooling Switch",
-    badge: "new"
+    badge: ""
   },
   {
     id: 787,
@@ -18254,7 +19581,9 @@ const PRODUCTS = [
     model: "GSFGFG",
     category: "fridge",
     image: "/img/products/GSFGFG.jpg",
-    images: ["/img/products/GSFGFG.jpg"],
+    images: [
+      "/img/products/GSFGFG.jpg"
+    ],
     price: 3399,
     rating: 4.4,
     reviews: 33,
@@ -18264,7 +19593,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Lock &amp; Key · Fast Cooling · Silver · Top Mount Freezer · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 789,
@@ -18274,7 +19603,9 @@ const PRODUCTS = [
     model: "FHKUUKF",
     category: "small",
     image: "/img/products/FHKUUKF.jpg",
-    images: ["/img/products/FHKUUKF.jpg"],
+    images: [
+      "/img/products/FHKUUKF.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 24,
@@ -18284,7 +19615,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Steam Iron ·   170 Ml · ▪   2200 W",
-    badge: "new"
+    badge: ""
   },
   {
     id: 790,
@@ -18294,7 +19625,9 @@ const PRODUCTS = [
     model: "DFDSF",
     category: "small",
     image: "/img/products/DFDSF.jpg",
-    images: ["/img/products/DFDSF.jpg"],
+    images: [
+      "/img/products/DFDSF.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 88,
@@ -18304,7 +19637,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Steam Iron · 170 Ml · 1200 W · Nonstick Soleplate",
-    badge: "new"
+    badge: ""
   },
   {
     id: 791,
@@ -18314,7 +19647,9 @@ const PRODUCTS = [
     model: "NGFDJFGCJ",
     category: "small",
     image: "/img/products/NGFDJFGCJ.jpg",
-    images: ["/img/products/NGFDJFGCJ.jpg"],
+    images: [
+      "/img/products/NGFDJFGCJ.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 25,
@@ -18324,7 +19659,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Steam Iron ·   170 Ml · ▪   2200 W",
-    badge: "new"
+    badge: ""
   },
   {
     id: 792,
@@ -18334,7 +19669,9 @@ const PRODUCTS = [
     model: "MDRB197FGF30-3-jpeg",
     category: "fridge",
     image: "/img/products/MDRB197FGF30-3-jpeg.webp",
-    images: ["/img/products/MDRB197FGF30-3-jpeg.webp"],
+    images: [
+      "/img/products/MDRB197FGF30-3-jpeg.webp"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 98,
@@ -18344,7 +19681,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "129Liter · Efficient LED lighting · Mechanical Temperature Control · 3 shelves",
-    badge: "new"
+    badge: ""
   },
   {
     id: 793,
@@ -18354,7 +19691,9 @@ const PRODUCTS = [
     model: "Artboard-1-copy-1-1",
     category: "ac",
     image: "/img/products/Artboard-1-copy-1-1.jpg",
-    images: ["/img/products/Artboard-1-copy-1-1.jpg"],
+    images: [
+      "/img/products/Artboard-1-copy-1-1.jpg"
+    ],
     price: 3499,
     rating: 4.4,
     reviews: 61,
@@ -18364,7 +19703,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Mirror Panel · Copper Condenser · R410 Gas · 2.0 HP",
-    badge: "new"
+    badge: ""
   },
   {
     id: 794,
@@ -18374,7 +19713,9 @@ const PRODUCTS = [
     model: "Artboard-1-copy-1-1",
     category: "ac",
     image: "/img/products/Artboard-1-copy-1-1.jpg",
-    images: ["/img/products/Artboard-1-copy-1-1.jpg"],
+    images: [
+      "/img/products/Artboard-1-copy-1-1.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 66,
@@ -18384,7 +19725,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Mirror Panel · copper Condenser · 410 Gas · 1.5Hp · Fast Cooling · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 795,
@@ -18394,7 +19735,9 @@ const PRODUCTS = [
     model: "NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT",
     category: "ac",
     image: "/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg",
-    images: ["/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg"
+    ],
     price: 6999,
     rating: 4.4,
     reviews: 45,
@@ -18404,7 +19747,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Plain White Panel Design · Copper Condenser · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 796,
@@ -18414,7 +19757,9 @@ const PRODUCTS = [
     model: "6ec7e7f2-b9fd-4027-8801-3eea2d067c6a",
     category: "small",
     image: "/img/products/6ec7e7f2-b9fd-4027-8801-3eea2d067c6a.jpg",
-    images: ["/img/products/6ec7e7f2-b9fd-4027-8801-3eea2d067c6a.jpg"],
+    images: [
+      "/img/products/6ec7e7f2-b9fd-4027-8801-3eea2d067c6a.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 31,
@@ -18424,7 +19769,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "50 Ltrs · Horizontal Heater · White",
-    badge: "new"
+    badge: ""
   },
   {
     id: 797,
@@ -18434,7 +19779,9 @@ const PRODUCTS = [
     model: "DYTKDTYK",
     category: "small",
     image: "/img/products/DYTKDTYK.jpg",
-    images: ["/img/products/DYTKDTYK.jpg"],
+    images: [
+      "/img/products/DYTKDTYK.jpg"
+    ],
     price: 2649,
     rating: 4.4,
     reviews: 80,
@@ -18444,7 +19791,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Vertical Slead Storage · Electric Water Heater · White Color · Earth Protection · Overheat Protection · Temperature Indicator",
-    badge: "new"
+    badge: ""
   },
   {
     id: 798,
@@ -18454,7 +19801,9 @@ const PRODUCTS = [
     model: "DYTKDTYK",
     category: "small",
     image: "/img/products/DYTKDTYK.jpg",
-    images: ["/img/products/DYTKDTYK.jpg"],
+    images: [
+      "/img/products/DYTKDTYK.jpg"
+    ],
     price: 2249,
     rating: 4.4,
     reviews: 52,
@@ -18464,7 +19813,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Vertical Slead Storage · Electric Water Heater · White Color · Energy Saving · Earth Protection",
-    badge: "new"
+    badge: ""
   },
   {
     id: 799,
@@ -18474,7 +19823,9 @@ const PRODUCTS = [
     model: "DYTKDTYK",
     category: "small",
     image: "/img/products/DYTKDTYK.jpg",
-    images: ["/img/products/DYTKDTYK.jpg"],
+    images: [
+      "/img/products/DYTKDTYK.jpg"
+    ],
     price: 1999,
     rating: 4.4,
     reviews: 35,
@@ -18484,7 +19835,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Vertical Slead Storage · Electric Water Heater · White · Overheat Protection · Earth Protection · 50Ltr",
-    badge: "new"
+    badge: ""
   },
   {
     id: 800,
@@ -18494,7 +19845,9 @@ const PRODUCTS = [
     model: "HFFHFD",
     category: "small",
     image: "/img/products/HFFHFD.jpg",
-    images: ["/img/products/HFFHFD.jpg"],
+    images: [
+      "/img/products/HFFHFD.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 22,
@@ -18504,7 +19857,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Vertical Sealed Storage · Electric Water Heater · White Color · Overheat Protection · Teperature Indicator · Earth Protection",
-    badge: "new"
+    badge: ""
   },
   {
     id: 804,
@@ -18514,7 +19867,9 @@ const PRODUCTS = [
     model: "FDSHHFFFFFFFFH",
     category: "kitchen",
     image: "/img/products/FDSHHFFFFFFFFH.jpg",
-    images: ["/img/products/FDSHHFFFFFFFFH.jpg"],
+    images: [
+      "/img/products/FDSHHFFFFFFFFH.jpg"
+    ],
     price: 1199,
     rating: 4.4,
     reviews: 20,
@@ -18524,7 +19879,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "5 Speed · ▪  Red/5 Ltr · ▪   800W",
-    badge: "new"
+    badge: ""
   },
   {
     id: 810,
@@ -18534,7 +19889,9 @@ const PRODUCTS = [
     model: "nasco-wine",
     category: "fridge",
     image: "/img/products/nasco-wine.jpg",
-    images: ["/img/products/nasco-wine.jpg"],
+    images: [
+      "/img/products/nasco-wine.jpg"
+    ],
     price: 5049,
     rating: 4.4,
     reviews: 33,
@@ -18544,7 +19901,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Black · Glass Door · 6 Shelves · Easy Cleaning Interior · 95 Ltr",
-    badge: "new"
+    badge: ""
   },
   {
     id: 811,
@@ -18554,7 +19911,9 @@ const PRODUCTS = [
     model: "SP-LSP3BLAXZN-7-977x1000-1",
     category: "small",
     image: "/img/products/SP-LSP3BLAXZN-7-977x1000-1.jpg",
-    images: ["/img/products/SP-LSP3BLAXZN-7-977x1000-1.jpg"],
+    images: [
+      "/img/products/SP-LSP3BLAXZN-7-977x1000-1.jpg"
+    ],
     price: 17499,
     rating: 4.4,
     reviews: 93,
@@ -18564,7 +19923,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "HDR · Premium 360 Sound · Freestyle · Wifi · Bluetooth · Smart Tv Support · Dolby Digital Plus",
-    badge: "new"
+    badge: ""
   },
   {
     id: 812,
@@ -18574,7 +19933,9 @@ const PRODUCTS = [
     model: "SAMSUNG-55″-SHERIF-QLED-4K-TV-QA55LS01TAKXXA",
     category: "tv",
     image: "/img/products/SAMSUNG-55″-SHERIF-QLED-4K-TV-QA55LS01TAKXXA.jpg",
-    images: ["/img/products/SAMSUNG-55″-SHERIF-QLED-4K-TV-QA55LS01TAKXXA.jpg"],
+    images: [
+      "/img/products/SAMSUNG-55″-SHERIF-QLED-4K-TV-QA55LS01TAKXXA.jpg"
+    ],
     price: 23499,
     rating: 4.4,
     reviews: 55,
@@ -18584,7 +19945,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Serif Design · Nfc On Tv · Ambient Mode+ Design · Detachable Floor Stand · Nfc On Tv",
-    badge: "new"
+    badge: ""
   },
   {
     id: 813,
@@ -18594,7 +19955,9 @@ const PRODUCTS = [
     model: "GTSZHNXDFG",
     category: "small",
     image: "/img/products/GTSZHNXDFG.jpg",
-    images: ["/img/products/GTSZHNXDFG.jpg"],
+    images: [
+      "/img/products/GTSZHNXDFG.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 40,
@@ -18604,7 +19967,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Steam Iron ·   170 Ml · ▪   2200 W",
-    badge: "new"
+    badge: ""
   },
   {
     id: 814,
@@ -18614,7 +19977,9 @@ const PRODUCTS = [
     model: "GFDHGHGF",
     category: "small",
     image: "/img/products/GFDHGHGF.jpg",
-    images: ["/img/products/GFDHGHGF.jpg"],
+    images: [
+      "/img/products/GFDHGHGF.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 64,
@@ -18624,7 +19989,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Steam Iron ·   170 Ml ·   1600 W",
-    badge: "new"
+    badge: ""
   },
   {
     id: 815,
@@ -18634,7 +19999,9 @@ const PRODUCTS = [
     model: "dgjt",
     category: "small",
     image: "/img/products/dgjt.jpg",
-    images: ["/img/products/dgjt.jpg"],
+    images: [
+      "/img/products/dgjt.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 48,
@@ -18644,7 +20011,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Steam Iron ·   170 Ml ·   1600 W",
-    badge: "new"
+    badge: ""
   },
   {
     id: 817,
@@ -18654,7 +20021,9 @@ const PRODUCTS = [
     model: "HYRF",
     category: "small",
     image: "/img/products/HYRF.jpg",
-    images: ["/img/products/HYRF.jpg"],
+    images: [
+      "/img/products/HYRF.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 28,
@@ -18664,7 +20033,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Steam Iron ·   170 Ml ·   1600 W",
-    badge: "new"
+    badge: ""
   },
   {
     id: 818,
@@ -18674,7 +20043,9 @@ const PRODUCTS = [
     model: "NASCO-5.0HP-FLOOR-STANDING-AC-NAS-TFS-48N1-FRONT-OPEN",
     category: "ac",
     image: "/img/products/NASCO-5.0HP-FLOOR-STANDING-AC-NAS-TFS-48N1-FRONT-OPEN.jpg",
-    images: ["/img/products/NASCO-5.0HP-FLOOR-STANDING-AC-NAS-TFS-48N1-FRONT-OPEN.jpg"],
+    images: [
+      "/img/products/NASCO-5.0HP-FLOOR-STANDING-AC-NAS-TFS-48N1-FRONT-OPEN.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 62,
@@ -18684,7 +20055,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Stylish Design · Multi Level Wind Speed · Digital Panel · White · R410A Gas",
-    badge: "new"
+    badge: ""
   },
   {
     id: 819,
@@ -18694,7 +20065,9 @@ const PRODUCTS = [
     model: "XFYJDY",
     category: "ac",
     image: "/img/products/XFYJDY.jpg",
-    images: ["/img/products/XFYJDY.jpg"],
+    images: [
+      "/img/products/XFYJDY.jpg"
+    ],
     price: 17549,
     rating: 4.4,
     reviews: 62,
@@ -18704,7 +20077,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Stylish Design · Multi Level Wind Speed · 5 Meter Coil · White · Energy Saving · Digital Panel · 3.5Hp",
-    badge: "new"
+    badge: ""
   },
   {
     id: 820,
@@ -18714,7 +20087,9 @@ const PRODUCTS = [
     model: "jvjkhgl",
     category: "small",
     image: "/img/products/jvjkhgl.jpg",
-    images: ["/img/products/jvjkhgl.jpg"],
+    images: [
+      "/img/products/jvjkhgl.jpg"
+    ],
     price: 1449,
     rating: 4.4,
     reviews: 89,
@@ -18724,7 +20099,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "▪160 Watt · 3 Blades · 3 Modes",
-    badge: "new"
+    badge: ""
   },
   {
     id: 821,
@@ -18734,7 +20109,9 @@ const PRODUCTS = [
     model: "FS40-38B",
     category: "small",
     image: "/img/products/FS40-38B.jpg",
-    images: ["/img/products/FS40-38B.jpg"],
+    images: [
+      "/img/products/FS40-38B.jpg"
+    ],
     price: 1099,
     rating: 4.4,
     reviews: 29,
@@ -18744,7 +20121,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Stand Fan · 15-25W · 5 Plates · 3 Modes · Rechargeable",
-    badge: "new"
+    badge: ""
   },
   {
     id: 822,
@@ -18754,7 +20131,9 @@ const PRODUCTS = [
     model: "tyudtyi",
     category: "small",
     image: "/img/products/tyudtyi.jpg",
-    images: ["/img/products/tyudtyi.jpg"],
+    images: [
+      "/img/products/tyudtyi.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 87,
@@ -18764,7 +20143,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Stand Fan · 15-25W · 5 Plates · 3 Modes · Rechargeable",
-    badge: "new"
+    badge: ""
   },
   {
     id: 826,
@@ -18774,7 +20153,9 @@ const PRODUCTS = [
     model: "IMG_2694",
     category: "small",
     image: "/img/products/IMG_2694.png",
-    images: ["/img/products/IMG_2694.png"],
+    images: [
+      "/img/products/IMG_2694.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 99,
@@ -18784,7 +20165,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Stand Fan · High Volume Air Movement · Remote Control · 7.5 Timer · 5 Blades",
-    badge: "new"
+    badge: ""
   },
   {
     id: 827,
@@ -18794,7 +20175,9 @@ const PRODUCTS = [
     model: "SP-LSP7TUAXGH-1",
     category: "small",
     image: "/img/products/SP-LSP7TUAXGH-1.jpg",
-    images: ["/img/products/SP-LSP7TUAXGH-1.jpg"],
+    images: [
+      "/img/products/SP-LSP7TUAXGH-1.jpg"
+    ],
     price: 49999,
     rating: 4.4,
     reviews: 76,
@@ -18804,7 +20187,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "4K Hd · USBx1 · HDMIx3 · Wifi-Ethernet · Dobly Digital Plus · Samrt Tv",
-    badge: "new"
+    badge: ""
   },
   {
     id: 828,
@@ -18814,7 +20197,9 @@ const PRODUCTS = [
     model: "NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT",
     category: "ac",
     image: "/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg",
-    images: ["/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 88,
@@ -18824,7 +20209,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Plain White Panel Design · Copper Condenser · 2.5Hp · R410 Refrigerant · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 829,
@@ -18834,7 +20219,9 @@ const PRODUCTS = [
     model: "NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT",
     category: "ac",
     image: "/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg",
-    images: ["/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-1.5HP-R410-SPLIT-AIR-CONDITIONER-NAS-T12N1-FRONT.jpg"
+    ],
     price: 4899,
     rating: 4.4,
     reviews: 63,
@@ -18844,7 +20231,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Plain White Panel Design · Copper Condenser · Energy Saving · R410 Refrigerant · 2.0Hp",
-    badge: "new"
+    badge: ""
   },
   {
     id: 830,
@@ -18854,7 +20241,9 @@ const PRODUCTS = [
     model: "NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT",
     category: "ac",
     image: "/img/products/NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT.jpg",
-    images: ["/img/products/NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT.jpg"
+    ],
     price: 5449,
     rating: 4.4,
     reviews: 53,
@@ -18864,7 +20253,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "White Panel · Sleek Design · Inverter Compressor · Copper Condenser · R410",
-    badge: "new"
+    badge: ""
   },
   {
     id: 831,
@@ -18874,7 +20263,9 @@ const PRODUCTS = [
     model: "NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT-1",
     category: "ac",
     image: "/img/products/NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT-1.jpg",
-    images: ["/img/products/NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT-1.jpg"],
+    images: [
+      "/img/products/NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT-1.jpg"
+    ],
     price: 8249,
     rating: 4.4,
     reviews: 56,
@@ -18884,7 +20275,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Sleek Design · Inverter Compressor · Copper Condenser · R410 · White Control Panel",
-    badge: "new"
+    badge: ""
   },
   {
     id: 832,
@@ -18894,7 +20285,9 @@ const PRODUCTS = [
     model: "NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT",
     category: "ac",
     image: "/img/products/NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT.jpg",
-    images: ["/img/products/NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-2.0HP-SPLIT-INVERTER-AIR-CONDITIONER-NASHRN1-18-FRONT.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 38,
@@ -18904,7 +20297,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "White Panel · Sleek Design · Inverter Compressor · Copper Condenser · R410",
-    badge: "new"
+    badge: ""
   },
   {
     id: 835,
@@ -18914,7 +20307,9 @@ const PRODUCTS = [
     model: "PRM6090SS-DC-511-IDSC",
     category: "kitchen",
     image: "/img/products/PRM6090SS-DC-511-IDSC.jpeg",
-    images: ["/img/products/PRM6090SS-DC-511-IDSC.jpeg"],
+    images: [
+      "/img/products/PRM6090SS-DC-511-IDSC.jpeg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 42,
@@ -18924,7 +20319,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "60 x 90 cm · Black · 5 Burners · Grill",
-    badge: "new"
+    badge: ""
   },
   {
     id: 837,
@@ -18934,7 +20329,9 @@ const PRODUCTS = [
     model: "SAMSUNG-75″-QN800A-NEO-QLED-8K-SMART-TV-2021",
     category: "tv",
     image: "/img/products/SAMSUNG-75″-QN800A-NEO-QLED-8K-SMART-TV-2021.png",
-    images: ["/img/products/SAMSUNG-75″-QN800A-NEO-QLED-8K-SMART-TV-2021.png"],
+    images: [
+      "/img/products/SAMSUNG-75″-QN800A-NEO-QLED-8K-SMART-TV-2021.png"
+    ],
     price: 113099,
     rating: 4.4,
     reviews: 45,
@@ -18944,7 +20341,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "75 Inchines · 8K · G- Viewing Angle · Smart Hub · Wifi-Built-In · HDMIx4 · USBx3 · Dobly Digital Plus",
-    badge: "new"
+    badge: ""
   },
   {
     id: 838,
@@ -18954,7 +20351,9 @@ const PRODUCTS = [
     model: "SAMSUNG-55″-SHERIF-QLED-4K-TV-QA55LS01TAKXXA",
     category: "tv",
     image: "/img/products/SAMSUNG-55″-SHERIF-QLED-4K-TV-QA55LS01TAKXXA.jpg",
-    images: ["/img/products/SAMSUNG-55″-SHERIF-QLED-4K-TV-QA55LS01TAKXXA.jpg"],
+    images: [
+      "/img/products/SAMSUNG-55″-SHERIF-QLED-4K-TV-QA55LS01TAKXXA.jpg"
+    ],
     price: 26099,
     rating: 4.4,
     reviews: 38,
@@ -18964,7 +20363,7 @@ const PRODUCTS = [
       "tv"
     ],
     description: "Serif Design · NFC on TV · Ambient Mode+",
-    badge: "new"
+    badge: ""
   },
   {
     id: 839,
@@ -18974,7 +20373,9 @@ const PRODUCTS = [
     model: "SAMSUNG-32LTR-GRILL-MICROWAVE",
     category: "kitchen",
     image: "/img/products/SAMSUNG-32LTR-GRILL-MICROWAVE.jpg",
-    images: ["/img/products/SAMSUNG-32LTR-GRILL-MICROWAVE.jpg"],
+    images: [
+      "/img/products/SAMSUNG-32LTR-GRILL-MICROWAVE.jpg"
+    ],
     price: 5199,
     rating: 4.4,
     reviews: 91,
@@ -18984,7 +20385,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Rapid Defrost · Wide Grill · Hot Blast · Large Turntable · Slim Fry",
-    badge: "new"
+    badge: ""
   },
   {
     id: 841,
@@ -18994,7 +20395,9 @@ const PRODUCTS = [
     model: "NA-FS1615",
     category: "small",
     image: "/img/products/NA-FS1615.jpg",
-    images: ["/img/products/NA-FS1615.jpg"],
+    images: [
+      "/img/products/NA-FS1615.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 26,
@@ -19004,7 +20407,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Stand Fan · High Volume Air Movement · Remote Control · 7.5 Timer · 5 Blades",
-    badge: "new"
+    badge: ""
   },
   {
     id: 846,
@@ -19014,7 +20417,9 @@ const PRODUCTS = [
     model: "MG23F301TAK",
     category: "kitchen",
     image: "/img/products/MG23F301TAK.jpeg",
-    images: ["/img/products/MG23F301TAK.jpeg"],
+    images: [
+      "/img/products/MG23F301TAK.jpeg"
+    ],
     price: 2599,
     rating: 4.4,
     reviews: 37,
@@ -19024,7 +20429,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Rapid Defrost · Grill · Browning Plus · Heat Wave Grill",
-    badge: "new"
+    badge: ""
   },
   {
     id: 849,
@@ -19034,7 +20439,9 @@ const PRODUCTS = [
     model: "SAMSUNG-23LTR-SOLO-MICROWAVE-MS23F301TAK",
     category: "kitchen",
     image: "/img/products/SAMSUNG-23LTR-SOLO-MICROWAVE-MS23F301TAK.jpg",
-    images: ["/img/products/SAMSUNG-23LTR-SOLO-MICROWAVE-MS23F301TAK.jpg"],
+    images: [
+      "/img/products/SAMSUNG-23LTR-SOLO-MICROWAVE-MS23F301TAK.jpg"
+    ],
     price: 2099,
     rating: 4.4,
     reviews: 54,
@@ -19044,7 +20451,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Cooking From Fresh Ingredients Made Simple · Enhance Your Kitchen Look · Keep It Clean With Ceramic",
-    badge: "new"
+    badge: ""
   },
   {
     id: 851,
@@ -19054,7 +20461,9 @@ const PRODUCTS = [
     model: "Nasco-3-Legs-Standing-Fan-FF-450C-Black",
     category: "small",
     image: "/img/products/Nasco-3-Legs-Standing-Fan-FF-450C-Black.jpg",
-    images: ["/img/products/Nasco-3-Legs-Standing-Fan-FF-450C-Black.jpg"],
+    images: [
+      "/img/products/Nasco-3-Legs-Standing-Fan-FF-450C-Black.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 86,
@@ -19064,7 +20473,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "35 Watt · 25 Cm · Tripod · 3 Speeds · Wooden",
-    badge: "new"
+    badge: ""
   },
   {
     id: 852,
@@ -19074,7 +20483,9 @@ const PRODUCTS = [
     model: "NASCO-12inch-WOODEN-TRIPOD-FAN",
     category: "small",
     image: "/img/products/NASCO-12inch-WOODEN-TRIPOD-FAN.jpg",
-    images: ["/img/products/NASCO-12inch-WOODEN-TRIPOD-FAN.jpg"],
+    images: [
+      "/img/products/NASCO-12inch-WOODEN-TRIPOD-FAN.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 57,
@@ -19084,7 +20495,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "35 Watt · 25 Cm · Tripod · 3 Speeds · Wooden",
-    badge: "new"
+    badge: ""
   },
   {
     id: 853,
@@ -19094,7 +20505,9 @@ const PRODUCTS = [
     model: "NASCO-10inch-TRIPOD-FAN",
     category: "small",
     image: "/img/products/NASCO-10inch-TRIPOD-FAN.jpg",
-    images: ["/img/products/NASCO-10inch-TRIPOD-FAN.jpg"],
+    images: [
+      "/img/products/NASCO-10inch-TRIPOD-FAN.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 82,
@@ -19104,7 +20517,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Legs Stand Fan ·   Modes · 5 Blades",
-    badge: "new"
+    badge: ""
   },
   {
     id: 854,
@@ -19114,7 +20527,9 @@ const PRODUCTS = [
     model: "NASCO-38-COLONNE-FAN",
     category: "small",
     image: "/img/products/NASCO-38-COLONNE-FAN.jpg",
-    images: ["/img/products/NASCO-38-COLONNE-FAN.jpg"],
+    images: [
+      "/img/products/NASCO-38-COLONNE-FAN.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 24,
@@ -19124,7 +20539,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "51 Watt · Led Indicator · Timer · Remote Control · Wooden",
-    badge: "new"
+    badge: ""
   },
   {
     id: 855,
@@ -19134,7 +20549,9 @@ const PRODUCTS = [
     model: "NASCO-32-COLONNE-FAN",
     category: "small",
     image: "/img/products/NASCO-32-COLONNE-FAN.jpg",
-    images: ["/img/products/NASCO-32-COLONNE-FAN.jpg"],
+    images: [
+      "/img/products/NASCO-32-COLONNE-FAN.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 24,
@@ -19144,7 +20561,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "50 Watt · Led Indicator · Timer · Remote Control · Black &#038; Silver",
-    badge: "new"
+    badge: ""
   },
   {
     id: 856,
@@ -19154,7 +20571,9 @@ const PRODUCTS = [
     model: "NASCO-600-800WATT-MEAT-GRINDER-MG5849GS-SIDE-2",
     category: "kitchen",
     image: "/img/products/NASCO-600-800WATT-MEAT-GRINDER-MG5849GS-SIDE-2.jpg",
-    images: ["/img/products/NASCO-600-800WATT-MEAT-GRINDER-MG5849GS-SIDE-2.jpg"],
+    images: [
+      "/img/products/NASCO-600-800WATT-MEAT-GRINDER-MG5849GS-SIDE-2.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 45,
@@ -19164,7 +20583,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Material: Plastic · Power: 600 -800 W · Molded Hopper",
-    badge: "new"
+    badge: ""
   },
   {
     id: 857,
@@ -19174,7 +20593,9 @@ const PRODUCTS = [
     model: "NASCO-2400-WATTS-MULTI-FUNCTIONAL-IRON",
     category: "small",
     image: "/img/products/NASCO-2400-WATTS-MULTI-FUNCTIONAL-IRON.jpg",
-    images: ["/img/products/NASCO-2400-WATTS-MULTI-FUNCTIONAL-IRON.jpg"],
+    images: [
+      "/img/products/NASCO-2400-WATTS-MULTI-FUNCTIONAL-IRON.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 96,
@@ -19184,7 +20605,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "7 Lts ·   2400 Watt ·   4 · 5 Bar · Multi Functions",
-    badge: "new"
+    badge: ""
   },
   {
     id: 858,
@@ -19194,7 +20615,9 @@ const PRODUCTS = [
     model: "NASCO-1200-WATTS-DRY-IRON",
     category: "small",
     image: "/img/products/NASCO-1200-WATTS-DRY-IRON.jpg",
-    images: ["/img/products/NASCO-1200-WATTS-DRY-IRON.jpg"],
+    images: [
+      "/img/products/NASCO-1200-WATTS-DRY-IRON.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 52,
@@ -19204,7 +20627,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "1200 W · Auto Clean · Dry-Iron · Anti-Drop · Stainless Steel Sole Plate",
-    badge: "new"
+    badge: ""
   },
   {
     id: 859,
@@ -19214,7 +20637,9 @@ const PRODUCTS = [
     model: "1-92",
     category: "small",
     image: "/img/products/1-92.jpg",
-    images: ["/img/products/1-92.jpg"],
+    images: [
+      "/img/products/1-92.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 44,
@@ -19224,7 +20649,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Steam Iron · 350 Ml · 2000 W",
-    badge: "new"
+    badge: ""
   },
   {
     id: 860,
@@ -19234,7 +20659,9 @@ const PRODUCTS = [
     model: "NASCO-2000-WATTS-STEAM-IRON",
     category: "small",
     image: "/img/products/NASCO-2000-WATTS-STEAM-IRON.jpg",
-    images: ["/img/products/NASCO-2000-WATTS-STEAM-IRON.jpg"],
+    images: [
+      "/img/products/NASCO-2000-WATTS-STEAM-IRON.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 91,
@@ -19244,7 +20671,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "2000W · 120Ml · Sole Plate · Nonstick Sole Plate · Power Indicator",
-    badge: "new"
+    badge: ""
   },
   {
     id: 861,
@@ -19254,7 +20681,9 @@ const PRODUCTS = [
     model: "NASCO-1-BURNER-GAS-STOVE-2-SHELVE-STAND",
     category: "kitchen",
     image: "/img/products/NASCO-1-BURNER-GAS-STOVE-2-SHELVE-STAND.jpg",
-    images: ["/img/products/NASCO-1-BURNER-GAS-STOVE-2-SHELVE-STAND.jpg"],
+    images: [
+      "/img/products/NASCO-1-BURNER-GAS-STOVE-2-SHELVE-STAND.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 73,
@@ -19264,7 +20693,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "1Gas Burner · Iron Burner · 2 Shelves · Stainless Stand",
-    badge: "new"
+    badge: ""
   },
   {
     id: 862,
@@ -19274,7 +20703,9 @@ const PRODUCTS = [
     model: "SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1",
     category: "fridge",
     image: "/img/products/SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1.jpg",
-    images: ["/img/products/SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1.jpg"],
+    images: [
+      "/img/products/SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 80,
@@ -19284,7 +20715,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "234 Liters · No Frost · Digital Inventor · Compressor · Titanium Silver · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 863,
@@ -19294,7 +20725,9 @@ const PRODUCTS = [
     model: "NASCO-1-BURNER-GAS-STOVE-BLACK-CAP",
     category: "kitchen",
     image: "/img/products/NASCO-1-BURNER-GAS-STOVE-BLACK-CAP.png",
-    images: ["/img/products/NASCO-1-BURNER-GAS-STOVE-BLACK-CAP.png"],
+    images: [
+      "/img/products/NASCO-1-BURNER-GAS-STOVE-BLACK-CAP.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 53,
@@ -19304,7 +20737,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "1Gas Burner · Black Cap · White Color",
-    badge: "new"
+    badge: ""
   },
   {
     id: 864,
@@ -19314,7 +20747,9 @@ const PRODUCTS = [
     model: "NASCO-3-BURNER-GAS-STOVE-BLACK-CAP",
     category: "kitchen",
     image: "/img/products/NASCO-3-BURNER-GAS-STOVE-BLACK-CAP.jpg",
-    images: ["/img/products/NASCO-3-BURNER-GAS-STOVE-BLACK-CAP.jpg"],
+    images: [
+      "/img/products/NASCO-3-BURNER-GAS-STOVE-BLACK-CAP.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 48,
@@ -19324,7 +20759,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "3 Gas Burners · Black Cap · White Color",
-    badge: "new"
+    badge: ""
   },
   {
     id: 865,
@@ -19334,7 +20769,9 @@ const PRODUCTS = [
     model: "1-85",
     category: "kitchen",
     image: "/img/products/1-85.jpg",
-    images: ["/img/products/1-85.jpg"],
+    images: [
+      "/img/products/1-85.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 73,
@@ -19344,7 +20781,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "4 Gas Burners · Stainless Steel · Black Cap · 2 Shelves Stand · White Color",
-    badge: "new"
+    badge: ""
   },
   {
     id: 866,
@@ -19354,7 +20791,9 @@ const PRODUCTS = [
     model: "1-84",
     category: "kitchen",
     image: "/img/products/1-84.jpg",
-    images: ["/img/products/1-84.jpg"],
+    images: [
+      "/img/products/1-84.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 41,
@@ -19364,7 +20803,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "4 Gas Burners · Gold Cap · 2 Shelves Stand · White Color",
-    badge: "new"
+    badge: ""
   },
   {
     id: 867,
@@ -19374,7 +20813,9 @@ const PRODUCTS = [
     model: "1-31",
     category: "kitchen",
     image: "/img/products/1-31.png",
-    images: ["/img/products/1-31.png"],
+    images: [
+      "/img/products/1-31.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 59,
@@ -19384,7 +20825,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "5 Burners · Wine Color · 2 Shelves Stand",
-    badge: "new"
+    badge: ""
   },
   {
     id: 868,
@@ -19394,7 +20835,9 @@ const PRODUCTS = [
     model: "1-30",
     category: "kitchen",
     image: "/img/products/1-30.png",
-    images: ["/img/products/1-30.png"],
+    images: [
+      "/img/products/1-30.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 71,
@@ -19404,7 +20847,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "5 Burners · White · 2 Shelves Stand",
-    badge: "new"
+    badge: ""
   },
   {
     id: 869,
@@ -19414,7 +20857,9 @@ const PRODUCTS = [
     model: "1-73",
     category: "small",
     image: "/img/products/1-73.jpg",
-    images: ["/img/products/1-73.jpg"],
+    images: [
+      "/img/products/1-73.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 46,
@@ -19424,7 +20869,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Dry Heat Protection · Waterproof Grade · Overheat Protection · Wall Mount",
-    badge: "new"
+    badge: ""
   },
   {
     id: 870,
@@ -19434,7 +20879,9 @@ const PRODUCTS = [
     model: "1-29",
     category: "small",
     image: "/img/products/1-29.png",
-    images: ["/img/products/1-29.png"],
+    images: [
+      "/img/products/1-29.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 40,
@@ -19444,7 +20891,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Vertical Insant Water Heater · Dryheat Protection · Waterproof Grade · 4500 Watts · Wall Protection · Overheat Protection",
-    badge: "new"
+    badge: ""
   },
   {
     id: 871,
@@ -19454,7 +20901,9 @@ const PRODUCTS = [
     model: "NASCO-20LTR-SOLO-MICROWAVE",
     category: "kitchen",
     image: "/img/products/NASCO-20LTR-SOLO-MICROWAVE.jpg",
-    images: ["/img/products/NASCO-20LTR-SOLO-MICROWAVE.jpg"],
+    images: [
+      "/img/products/NASCO-20LTR-SOLO-MICROWAVE.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 84,
@@ -19464,7 +20913,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "20Ltr · Black · 700W · 5 Power Levels",
-    badge: "new"
+    badge: ""
   },
   {
     id: 872,
@@ -19474,7 +20923,9 @@ const PRODUCTS = [
     model: "1-65",
     category: "kitchen",
     image: "/img/products/1-65.jpg",
-    images: ["/img/products/1-65.jpg"],
+    images: [
+      "/img/products/1-65.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 43,
@@ -19484,7 +20935,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "36L · Grill · 1500W · Silver · Safety Lock",
-    badge: "new"
+    badge: ""
   },
   {
     id: 873,
@@ -19494,7 +20945,9 @@ const PRODUCTS = [
     model: "NASCO-25LTR-MICROWAVE-WITH-GRILL",
     category: "kitchen",
     image: "/img/products/NASCO-25LTR-MICROWAVE-WITH-GRILL.jpg",
-    images: ["/img/products/NASCO-25LTR-MICROWAVE-WITH-GRILL.jpg"],
+    images: [
+      "/img/products/NASCO-25LTR-MICROWAVE-WITH-GRILL.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 93,
@@ -19504,7 +20957,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "25 Ltr · Grill · 1450W · Silver · Lock",
-    badge: "new"
+    badge: ""
   },
   {
     id: 874,
@@ -19514,7 +20967,9 @@ const PRODUCTS = [
     model: "NASCO-16LTRS-2-TAPS-WATER-DISPENSER-YL1675S-W",
     category: "kitchen",
     image: "/img/products/NASCO-16LTRS-2-TAPS-WATER-DISPENSER-YL1675S-W.png",
-    images: ["/img/products/NASCO-16LTRS-2-TAPS-WATER-DISPENSER-YL1675S-W.png"],
+    images: [
+      "/img/products/NASCO-16LTRS-2-TAPS-WATER-DISPENSER-YL1675S-W.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 73,
@@ -19524,7 +20979,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "16 Ltrs · 2 Taps · White · Storage Cabinet",
-    badge: "new"
+    badge: ""
   },
   {
     id: 875,
@@ -19534,7 +20989,9 @@ const PRODUCTS = [
     model: "NASF2-66.1F-FRONT",
     category: "fridge",
     image: "/img/products/NASF2-66.1F-FRONT.jpg",
-    images: ["/img/products/NASF2-66.1F-FRONT.jpg"],
+    images: [
+      "/img/products/NASF2-66.1F-FRONT.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 28,
@@ -19544,7 +21001,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "400Ltrs · Manual Defrost · Adjustable Thermostat · Low Noise · 2 Doors · Digital Panel-Wd · Energy Saving · Two Freezer Box",
-    badge: "new"
+    badge: ""
   },
   {
     id: 876,
@@ -19554,7 +21011,9 @@ const PRODUCTS = [
     model: "1-22",
     category: "small",
     image: "/img/products/1-22.png",
-    images: ["/img/products/1-22.png"],
+    images: [
+      "/img/products/1-22.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 35,
@@ -19564,7 +21023,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Area Of ​​Use: 15-20M² · Water Tank: 2 · 2 L · Shutdown Timer · Duration Up To 24 Hours · 2 · 2 Ltrs",
-    badge: "new"
+    badge: ""
   },
   {
     id: 877,
@@ -19574,7 +21033,9 @@ const PRODUCTS = [
     model: "1-21",
     category: "small",
     image: "/img/products/1-21.png",
-    images: ["/img/products/1-21.png"],
+    images: [
+      "/img/products/1-21.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 73,
@@ -19584,7 +21045,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Area Of ​​Use: 15-20M² · Water Tank: 3 · 78 L · 360 Mist Output · 26 · 5 Watt · Electric Control Panel · Tank Capacity 3 · 78Ltrs · Shutdown Timer",
-    badge: "new"
+    badge: ""
   },
   {
     id: 878,
@@ -19594,7 +21055,9 @@ const PRODUCTS = [
     model: "NASCO-AIR-PURIFIER-AP2202A-GS-FRONT",
     category: "small",
     image: "/img/products/NASCO-AIR-PURIFIER-AP2202A-GS-FRONT.jpg",
-    images: ["/img/products/NASCO-AIR-PURIFIER-AP2202A-GS-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-AIR-PURIFIER-AP2202A-GS-FRONT.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 79,
@@ -19604,7 +21067,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "3 Speed Wind · 7 Square Meter Air Flow · Low Noise · 22 Watts · Usage Area 5-7",
-    badge: "new"
+    badge: ""
   },
   {
     id: 879,
@@ -19614,7 +21077,9 @@ const PRODUCTS = [
     model: "NASCO-AIR-PURIFIER-AP5109-CB-FRONT",
     category: "small",
     image: "/img/products/NASCO-AIR-PURIFIER-AP5109-CB-FRONT.jpg",
-    images: ["/img/products/NASCO-AIR-PURIFIER-AP5109-CB-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-AIR-PURIFIER-AP5109-CB-FRONT.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 69,
@@ -19624,7 +21089,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Uv-C &amp; Ionizer · Night Light · Ultrasonic-8 Hrs · 4 Programs · 4 Fan Speed Setting",
-    badge: "new"
+    badge: ""
   },
   {
     id: 880,
@@ -19634,7 +21099,9 @@ const PRODUCTS = [
     model: "1-18",
     category: "small",
     image: "/img/products/1-18.png",
-    images: ["/img/products/1-18.png"],
+    images: [
+      "/img/products/1-18.png"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 85,
@@ -19644,7 +21111,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "360 Air Inlet · Easy Touch Control · Night Light · Auto Mode &amp; Child Lock · 1O Watts · 3 Fan Speed Setting",
-    badge: "new"
+    badge: ""
   },
   {
     id: 881,
@@ -19654,7 +21121,9 @@ const PRODUCTS = [
     model: "NASCO-10WATT-SHORT-SPEAKERS-HOME-THEATER",
     category: "small",
     image: "/img/products/NASCO-10WATT-SHORT-SPEAKERS-HOME-THEATER.jpg",
-    images: ["/img/products/NASCO-10WATT-SHORT-SPEAKERS-HOME-THEATER.jpg"],
+    images: [
+      "/img/products/NASCO-10WATT-SHORT-SPEAKERS-HOME-THEATER.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 21,
@@ -19664,7 +21133,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "10W · Mp3 · USB · Cd Ripping · Divx · Fm · Bt",
-    badge: "new"
+    badge: ""
   },
   {
     id: 882,
@@ -19674,7 +21143,9 @@ const PRODUCTS = [
     model: "NASCO-120WATT-AUDIO-SOUNDBAR",
     category: "small",
     image: "/img/products/NASCO-120WATT-AUDIO-SOUNDBAR.jpg",
-    images: ["/img/products/NASCO-120WATT-AUDIO-SOUNDBAR.jpg"],
+    images: [
+      "/img/products/NASCO-120WATT-AUDIO-SOUNDBAR.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 75,
@@ -19684,7 +21155,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "110 Watt · Bluetooth · USB/HDMI · Fm/Radio · Dual Speakers · Led Lights · Ptical Connections",
-    badge: "new"
+    badge: ""
   },
   {
     id: 883,
@@ -19694,7 +21165,9 @@ const PRODUCTS = [
     model: "NASCO-160WATT-AUDIO-SOUNDBAR-SILVER",
     category: "small",
     image: "/img/products/NASCO-160WATT-AUDIO-SOUNDBAR-SILVER.jpg",
-    images: ["/img/products/NASCO-160WATT-AUDIO-SOUNDBAR-SILVER.jpg"],
+    images: [
+      "/img/products/NASCO-160WATT-AUDIO-SOUNDBAR-SILVER.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 33,
@@ -19704,7 +21177,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "120 Watt · Bluetooth · USB · Fm /Radio · HDMI · Led/Light · Optical Connection",
-    badge: "new"
+    badge: ""
   },
   {
     id: 884,
@@ -19714,7 +21187,9 @@ const PRODUCTS = [
     model: "NASCO-25WATTS-BLUETOOTH-PARTY-SPEAKER",
     category: "small",
     image: "/img/products/NASCO-25WATTS-BLUETOOTH-PARTY-SPEAKER.jpg",
-    images: ["/img/products/NASCO-25WATTS-BLUETOOTH-PARTY-SPEAKER.jpg"],
+    images: [
+      "/img/products/NASCO-25WATTS-BLUETOOTH-PARTY-SPEAKER.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 65,
@@ -19724,7 +21199,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Nasco Party Speaker · Multi Color · Bluetooth · 25W · Rms",
-    badge: "new"
+    badge: ""
   },
   {
     id: 885,
@@ -19734,7 +21209,9 @@ const PRODUCTS = [
     model: "1-52",
     category: "small",
     image: "/img/products/1-52.jpg",
-    images: ["/img/products/1-52.jpg"],
+    images: [
+      "/img/products/1-52.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 83,
@@ -19744,7 +21221,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "30 Watt · Bluetooth · USB · Fm · 4 Digital Light · Aux Playback · Bulit-In Battery",
-    badge: "new"
+    badge: ""
   },
   {
     id: 886,
@@ -19754,7 +21231,9 @@ const PRODUCTS = [
     model: "1-51",
     category: "small",
     image: "/img/products/1-51.jpg",
-    images: ["/img/products/1-51.jpg"],
+    images: [
+      "/img/products/1-51.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 97,
@@ -19764,7 +21243,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "20 Watt · Bluetooth · USB · Fm · 4 Digital Light · Aux Playback · Built-In Battery",
-    badge: "new"
+    badge: ""
   },
   {
     id: 887,
@@ -19774,7 +21253,9 @@ const PRODUCTS = [
     model: "NASCO-120-WATTS-AUDIO-BLUETOOTH-SPEAKER",
     category: "small",
     image: "/img/products/NASCO-120-WATTS-AUDIO-BLUETOOTH-SPEAKER.jpg",
-    images: ["/img/products/NASCO-120-WATTS-AUDIO-BLUETOOTH-SPEAKER.jpg"],
+    images: [
+      "/img/products/NASCO-120-WATTS-AUDIO-BLUETOOTH-SPEAKER.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 67,
@@ -19784,7 +21265,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Karoake Audio System · 100 Watt · USB",
-    badge: "new"
+    badge: ""
   },
   {
     id: 888,
@@ -19794,7 +21275,9 @@ const PRODUCTS = [
     model: "NASCO-100-WATTS-KAROAKE-AUDIO-SYSTEM",
     category: "small",
     image: "/img/products/NASCO-100-WATTS-KAROAKE-AUDIO-SYSTEM.jpg",
-    images: ["/img/products/NASCO-100-WATTS-KAROAKE-AUDIO-SYSTEM.jpg"],
+    images: [
+      "/img/products/NASCO-100-WATTS-KAROAKE-AUDIO-SYSTEM.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 52,
@@ -19804,7 +21287,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Karoake Audio System · 100 Watt · USB · Fm · 2 Microphones · Battery 2200 Mah · Aux Playback",
-    badge: "new"
+    badge: ""
   },
   {
     id: 889,
@@ -19814,7 +21297,9 @@ const PRODUCTS = [
     model: "NASCO-20-WATT-AUDIO-SOUND-TOWER",
     category: "small",
     image: "/img/products/NASCO-20-WATT-AUDIO-SOUND-TOWER.jpg",
-    images: ["/img/products/NASCO-20-WATT-AUDIO-SOUND-TOWER.jpg"],
+    images: [
+      "/img/products/NASCO-20-WATT-AUDIO-SOUND-TOWER.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 74,
@@ -19824,7 +21309,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "20 Watt · Bluetooth · USB · Fxx · Subwoofer · Tf Card Playback · Aux Playback",
-    badge: "new"
+    badge: ""
   },
   {
     id: 890,
@@ -19834,7 +21319,9 @@ const PRODUCTS = [
     model: "NASCO-120-WATT-AUDIO-SYSTEM",
     category: "small",
     image: "/img/products/NASCO-120-WATT-AUDIO-SYSTEM.jpg",
-    images: ["/img/products/NASCO-120-WATT-AUDIO-SYSTEM.jpg"],
+    images: [
+      "/img/products/NASCO-120-WATT-AUDIO-SYSTEM.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 44,
@@ -19844,7 +21331,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "130 Watt · Bluetooth · USB · Fm · 1 Microphone · Aux Playback · Bult-In Battery · 7200 Mah",
-    badge: "new"
+    badge: ""
   },
   {
     id: 891,
@@ -19854,7 +21341,9 @@ const PRODUCTS = [
     model: "NASCO-100-WATT-MINI-AUDIO-SYSTEM",
     category: "small",
     image: "/img/products/NASCO-100-WATT-MINI-AUDIO-SYSTEM.jpg",
-    images: ["/img/products/NASCO-100-WATT-MINI-AUDIO-SYSTEM.jpg"],
+    images: [
+      "/img/products/NASCO-100-WATT-MINI-AUDIO-SYSTEM.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 81,
@@ -19864,7 +21353,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Mini Audio System · 100 Watt · USB",
-    badge: "new"
+    badge: ""
   },
   {
     id: 892,
@@ -19874,7 +21363,9 @@ const PRODUCTS = [
     model: "1-45",
     category: "small",
     image: "/img/products/1-45.jpg",
-    images: ["/img/products/1-45.jpg"],
+    images: [
+      "/img/products/1-45.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 66,
@@ -19884,7 +21375,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "800 Watt · 5.0Hp · 1 Speaker System · Subwoofer · Fm/Radio · Remote Control",
-    badge: "new"
+    badge: ""
   },
   {
     id: 893,
@@ -19894,7 +21385,9 @@ const PRODUCTS = [
     model: "NASCO-120WATT-BLUETOOTH-SOUND-TOWER",
     category: "small",
     image: "/img/products/NASCO-120WATT-BLUETOOTH-SOUND-TOWER.jpg",
-    images: ["/img/products/NASCO-120WATT-BLUETOOTH-SOUND-TOWER.jpg"],
+    images: [
+      "/img/products/NASCO-120WATT-BLUETOOTH-SOUND-TOWER.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 93,
@@ -19904,7 +21397,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "120 Watts · Bluetooth · USB · FM/Aux · DVB-T2 · Smart Android",
-    badge: "new"
+    badge: ""
   },
   {
     id: 894,
@@ -19914,7 +21407,9 @@ const PRODUCTS = [
     model: "1-10",
     category: "kitchen",
     image: "/img/products/1-10.png",
-    images: ["/img/products/1-10.png"],
+    images: [
+      "/img/products/1-10.png"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 63,
@@ -19924,7 +21419,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "2 Speed Control · Plastic · Anti Slip Feet · Control-Pulp",
-    badge: "new"
+    badge: ""
   },
   {
     id: 895,
@@ -19934,7 +21429,9 @@ const PRODUCTS = [
     model: "1-39",
     category: "kitchen",
     image: "/img/products/1-39.jpg",
-    images: ["/img/products/1-39.jpg"],
+    images: [
+      "/img/products/1-39.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 82,
@@ -19944,7 +21441,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "3 Speeds · 40W Lamp · Aluminium Grease Filter · Charnascoal Filter",
-    badge: "new"
+    badge: ""
   },
   {
     id: 896,
@@ -19954,7 +21451,9 @@ const PRODUCTS = [
     model: "1-38",
     category: "kitchen",
     image: "/img/products/1-38.jpg",
-    images: ["/img/products/1-38.jpg"],
+    images: [
+      "/img/products/1-38.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 90,
@@ -19964,7 +21463,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "3 Speeds · 40W Lamp · Aluminium Grease Filter · Charnascoal Filter",
-    badge: "new"
+    badge: ""
   },
   {
     id: 897,
@@ -19974,7 +21473,9 @@ const PRODUCTS = [
     model: "Midea-90cm-T-Shape-Rangehood-90M21",
     category: "kitchen",
     image: "/img/products/Midea-90cm-T-Shape-Rangehood-90M21.jpg",
-    images: ["/img/products/Midea-90cm-T-Shape-Rangehood-90M21.jpg"],
+    images: [
+      "/img/products/Midea-90cm-T-Shape-Rangehood-90M21.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 51,
@@ -19984,7 +21485,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Stainless Steel · Push Button Control · In Built Motor &amp; Fan · 3 Speed Extracts",
-    badge: "new"
+    badge: ""
   },
   {
     id: 898,
@@ -19994,7 +21495,9 @@ const PRODUCTS = [
     model: "1-9",
     category: "kitchen",
     image: "/img/products/1-9.jpg",
-    images: ["/img/products/1-9.jpg"],
+    images: [
+      "/img/products/1-9.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 82,
@@ -20004,7 +21507,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Stainless Steel · Push Button Control · In Built Motor &amp; Fan · 3 Speed Extracts",
-    badge: "new"
+    badge: ""
   },
   {
     id: 899,
@@ -20014,7 +21517,9 @@ const PRODUCTS = [
     model: "2-15",
     category: "kitchen",
     image: "/img/products/2-15.jpg",
-    images: ["/img/products/2-15.jpg"],
+    images: [
+      "/img/products/2-15.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 20,
@@ -20024,7 +21529,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "4 Functions · Mechanical Control · Stainless Steel · Forced Air Cooking System",
-    badge: "new"
+    badge: ""
   },
   {
     id: 900,
@@ -20034,7 +21539,9 @@ const PRODUCTS = [
     model: "1-15",
     category: "kitchen",
     image: "/img/products/1-15.jpg",
-    images: ["/img/products/1-15.jpg"],
+    images: [
+      "/img/products/1-15.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 81,
@@ -20044,7 +21551,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "16Ltrs · 3 Taps · Storage Cabinet · Black &amp; Grey",
-    badge: "new"
+    badge: ""
   },
   {
     id: 901,
@@ -20054,7 +21561,9 @@ const PRODUCTS = [
     model: "1",
     category: "fridge",
     image: "/img/products/1.jpeg",
-    images: ["/img/products/1.jpeg"],
+    images: [
+      "/img/products/1.jpeg"
+    ],
     price: 1999,
     rating: 4.4,
     reviews: 82,
@@ -20064,7 +21573,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "93 Ltrs · Chiller Nascompartment · Mechanical Temperature Control · 220-240V · Energy Saver · White",
-    badge: "new"
+    badge: ""
   },
   {
     id: 902,
@@ -20074,7 +21583,9 @@ const PRODUCTS = [
     model: "1-6",
     category: "small",
     image: "/img/products/1-6.jpg",
-    images: ["/img/products/1-6.jpg"],
+    images: [
+      "/img/products/1-6.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 73,
@@ -20084,7 +21595,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "3 Speeds · Timer · 3 Blades · Remote · Energy Saver",
-    badge: "new"
+    badge: ""
   },
   {
     id: 904,
@@ -20094,7 +21605,9 @@ const PRODUCTS = [
     model: "NASCO-95LTRS-TOP-MOUNT-FREEZER-NASF2-12S-FRONT",
     category: "fridge",
     image: "/img/products/NASCO-95LTRS-TOP-MOUNT-FREEZER-NASF2-12S-FRONT.jpg",
-    images: ["/img/products/NASCO-95LTRS-TOP-MOUNT-FREEZER-NASF2-12S-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-95LTRS-TOP-MOUNT-FREEZER-NASF2-12S-FRONT.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 48,
@@ -20104,7 +21617,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Silver Vcm · Lock &amp; Key · Light · Stainless Steel · Top Mount Freezer",
-    badge: "new"
+    badge: ""
   },
   {
     id: 905,
@@ -20114,7 +21627,9 @@ const PRODUCTS = [
     model: "NASCO-527-LTR-SIDE-BY-SIDE-REFRIGERATOR-NASSB2-64S-FRONT",
     category: "fridge",
     image: "/img/products/NASCO-527-LTR-SIDE-BY-SIDE-REFRIGERATOR-NASSB2-64S-FRONT.jpg",
-    images: ["/img/products/NASCO-527-LTR-SIDE-BY-SIDE-REFRIGERATOR-NASSB2-64S-FRONT.jpg"],
+    images: [
+      "/img/products/NASCO-527-LTR-SIDE-BY-SIDE-REFRIGERATOR-NASSB2-64S-FRONT.jpg"
+    ],
     price: 9649,
     rating: 4.4,
     reviews: 40,
@@ -20124,7 +21639,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Side By Side · Black Mirror · Fast Cooling · Powerful Compressor · Display Controls · Water Dispenser",
-    badge: "new"
+    badge: ""
   },
   {
     id: 906,
@@ -20134,7 +21649,9 @@ const PRODUCTS = [
     model: "SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1",
     category: "fridge",
     image: "/img/products/SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1.jpg",
-    images: ["/img/products/SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1.jpg"],
+    images: [
+      "/img/products/SAMSUNG-DURACOOL-TWIN-COOLING-PLUS-REGRIGERATOR1.jpg"
+    ],
     price: 5499,
     rating: 4.4,
     reviews: 27,
@@ -20144,7 +21661,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "203Ltrs · No Frost · Digital Inventor · Compressor · Titanium Silver · Energy Saving",
-    badge: "new"
+    badge: ""
   },
   {
     id: 907,
@@ -20154,7 +21671,9 @@ const PRODUCTS = [
     model: "NAS-600-FRONT",
     category: "fridge",
     image: "/img/products/NAS-600-FRONT.jpg",
-    images: ["/img/products/NAS-600-FRONT.jpg"],
+    images: [
+      "/img/products/NAS-600-FRONT.jpg"
+    ],
     price: 7900,
     rating: 4.4,
     reviews: 64,
@@ -20164,7 +21683,7 @@ const PRODUCTS = [
       "fridge"
     ],
     description: "Double Door · Silver · Key Lock · Led Light",
-    badge: "new"
+    badge: ""
   },
   {
     id: 908,
@@ -20174,7 +21693,9 @@ const PRODUCTS = [
     model: "NASCO-300WATTS-HAND-MIXER1",
     category: "ac",
     image: "/img/products/NASCO-300WATTS-HAND-MIXER1.jpg",
-    images: ["/img/products/NASCO-300WATTS-HAND-MIXER1.jpg"],
+    images: [
+      "/img/products/NASCO-300WATTS-HAND-MIXER1.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 37,
@@ -20184,7 +21705,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Mixer · 2.5 Liters · Stainless Steel Bowl · Turbo Function",
-    badge: "new"
+    badge: ""
   },
   {
     id: 909,
@@ -20194,7 +21715,9 @@ const PRODUCTS = [
     model: "NASCO-1850-2200WATTS-KETTLE",
     category: "kitchen",
     image: "/img/products/NASCO-1850-2200WATTS-KETTLE.jpg",
-    images: ["/img/products/NASCO-1850-2200WATTS-KETTLE.jpg"],
+    images: [
+      "/img/products/NASCO-1850-2200WATTS-KETTLE.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 29,
@@ -20204,7 +21727,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Kettle · 7 Ltrs · Strix Control · Boil Dry Protection",
-    badge: "new"
+    badge: ""
   },
   {
     id: 910,
@@ -20214,7 +21737,9 @@ const PRODUCTS = [
     model: "NASCO-900WATT-COFFEE-MAKER1",
     category: "kitchen",
     image: "/img/products/NASCO-900WATT-COFFEE-MAKER1.jpg",
-    images: ["/img/products/NASCO-900WATT-COFFEE-MAKER1.jpg"],
+    images: [
+      "/img/products/NASCO-900WATT-COFFEE-MAKER1.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 94,
@@ -20224,7 +21749,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Coffee Machine · 1.5 Ltrs · Glass Carafe · Nylon Filter · Dishwasher Safe",
-    badge: "new"
+    badge: ""
   },
   {
     id: 912,
@@ -20234,7 +21759,9 @@ const PRODUCTS = [
     model: "NASCO-170-WATT-HAND-BLENDER1",
     category: "kitchen",
     image: "/img/products/NASCO-170-WATT-HAND-BLENDER1.jpg",
-    images: ["/img/products/NASCO-170-WATT-HAND-BLENDER1.jpg"],
+    images: [
+      "/img/products/NASCO-170-WATT-HAND-BLENDER1.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 72,
@@ -20244,7 +21771,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Detachable Plastic Blending Rod · Stainless Steel Blades",
-    badge: "new"
+    badge: ""
   },
   {
     id: 913,
@@ -20254,7 +21781,9 @@ const PRODUCTS = [
     model: "NASCO-1.7LTR-KETTLE-WITH-WOODEN-COATING1-1",
     category: "kitchen",
     image: "/img/products/NASCO-1.7LTR-KETTLE-WITH-WOODEN-COATING1-1.jpg",
-    images: ["/img/products/NASCO-1.7LTR-KETTLE-WITH-WOODEN-COATING1-1.jpg"],
+    images: [
+      "/img/products/NASCO-1.7LTR-KETTLE-WITH-WOODEN-COATING1-1.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 69,
@@ -20264,7 +21793,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Kettle · 7L · Boil Dry Protection · Stainless Steel · Rear Water Window",
-    badge: "new"
+    badge: ""
   },
   {
     id: 914,
@@ -20274,7 +21803,9 @@ const PRODUCTS = [
     model: "NASCO-500WATTS-BLENDER-WITH-WOODEN-COATING1-1",
     category: "kitchen",
     image: "/img/products/NASCO-500WATTS-BLENDER-WITH-WOODEN-COATING1-1.jpg",
-    images: ["/img/products/NASCO-500WATTS-BLENDER-WITH-WOODEN-COATING1-1.jpg"],
+    images: [
+      "/img/products/NASCO-500WATTS-BLENDER-WITH-WOODEN-COATING1-1.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 99,
@@ -20284,7 +21815,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Blender · 5L · Glass Jar · Plastic Body · Jug Lock · 2 Speeds",
-    badge: "new"
+    badge: ""
   },
   {
     id: 915,
@@ -20294,7 +21825,9 @@ const PRODUCTS = [
     model: "NASCO-600WATT-HAND-BLENDER1",
     category: "kitchen",
     image: "/img/products/NASCO-600WATT-HAND-BLENDER1.jpg",
-    images: ["/img/products/NASCO-600WATT-HAND-BLENDER1.jpg"],
+    images: [
+      "/img/products/NASCO-600WATT-HAND-BLENDER1.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 53,
@@ -20304,7 +21837,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Hand Blender · 700 Ml · 2 Speeds · Plastic Body · Ss Blending · Dc Motor",
-    badge: "new"
+    badge: ""
   },
   {
     id: 916,
@@ -20314,7 +21847,9 @@ const PRODUCTS = [
     model: "NASCO-800WATT-HAND-BLENDER-WITH-WOODEN-COATING1-1",
     category: "kitchen",
     image: "/img/products/NASCO-800WATT-HAND-BLENDER-WITH-WOODEN-COATING1-1.jpg",
-    images: ["/img/products/NASCO-800WATT-HAND-BLENDER-WITH-WOODEN-COATING1-1.jpg"],
+    images: [
+      "/img/products/NASCO-800WATT-HAND-BLENDER-WITH-WOODEN-COATING1-1.jpg"
+    ],
     price: 3200,
     rating: 4.4,
     reviews: 28,
@@ -20324,7 +21859,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Hand Blender · 700 Ml · Plastic Body · Full Accessories",
-    badge: "new"
+    badge: ""
   },
   {
     id: 920,
@@ -20334,7 +21869,9 @@ const PRODUCTS = [
     model: "MIDEA-4.5LTR-KITCHEN-MACHINE1-1",
     category: "kitchen",
     image: "/img/products/MIDEA-4.5LTR-KITCHEN-MACHINE1-1.jpg",
-    images: ["/img/products/MIDEA-4.5LTR-KITCHEN-MACHINE1-1.jpg"],
+    images: [
+      "/img/products/MIDEA-4.5LTR-KITCHEN-MACHINE1-1.jpg"
+    ],
     price: 1499,
     rating: 4.4,
     reviews: 30,
@@ -20344,7 +21881,7 @@ const PRODUCTS = [
       "kitchen"
     ],
     description: "Multi Function · Blender · 25Ltr · Processor · 25Ltrs · 7 Speed · Timer · Whisk · Hook · Beater",
-    badge: "new"
+    badge: ""
   },
   {
     id: 939,
@@ -20354,7 +21891,9 @@ const PRODUCTS = [
     model: "1NASCO-1500VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY-1",
     category: "small",
     image: "/img/products/1NASCO-1500VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY-1.jpg",
-    images: ["/img/products/1NASCO-1500VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY-1.jpg"],
+    images: [
+      "/img/products/1NASCO-1500VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY-1.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 79,
@@ -20364,7 +21903,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Digital Display · White Color · Input/Output :100V-260V/220Vac · Sockets2*S33 · Plug: P09",
-    badge: "new"
+    badge: ""
   },
   {
     id: 940,
@@ -20374,7 +21913,9 @@ const PRODUCTS = [
     model: "1NASCO-2000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY",
     category: "small",
     image: "/img/products/1NASCO-2000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg",
-    images: ["/img/products/1NASCO-2000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"],
+    images: [
+      "/img/products/1NASCO-2000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 76,
@@ -20384,7 +21925,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Digital Display · White Color · Input/Output :100V-260V/220Vac · Sockets2*S33 · Plug: P09",
-    badge: "new"
+    badge: ""
   },
   {
     id: 941,
@@ -20394,7 +21935,9 @@ const PRODUCTS = [
     model: "1NASCO-3000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE-1",
     category: "small",
     image: "/img/products/1NASCO-3000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE-1.jpg",
-    images: ["/img/products/1NASCO-3000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE-1.jpg"],
+    images: [
+      "/img/products/1NASCO-3000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE-1.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 76,
@@ -20404,7 +21947,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Digital Display · White Color · Input/Output :100V-260V/220Vac · Sockets2*S33 · Plug: P09",
-    badge: "new"
+    badge: ""
   },
   {
     id: 942,
@@ -20414,7 +21957,9 @@ const PRODUCTS = [
     model: "NASCO-5000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY",
     category: "small",
     image: "/img/products/NASCO-5000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg",
-    images: ["/img/products/NASCO-5000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"],
+    images: [
+      "/img/products/NASCO-5000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 76,
@@ -20424,7 +21969,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Digital Display · White Color · Input/Output :100V-260V/220Vac · Sockets2*S33 · Plug: P09",
-    badge: "new"
+    badge: ""
   },
   {
     id: 944,
@@ -20434,7 +21979,9 @@ const PRODUCTS = [
     model: "1NASCO-1500VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY",
     category: "small",
     image: "/img/products/1NASCO-1500VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg",
-    images: ["/img/products/1NASCO-1500VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"],
+    images: [
+      "/img/products/1NASCO-1500VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 65,
@@ -20444,7 +21991,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Wall Mount · Digital Display · Whitecolor · Input/Output:100V260V/220Vac · Sockets:2*S33 · Plug:",
-    badge: "new"
+    badge: ""
   },
   {
     id: 945,
@@ -20454,7 +22001,9 @@ const PRODUCTS = [
     model: "1NASCO-2000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY-1",
     category: "small",
     image: "/img/products/1NASCO-2000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY-1.jpg",
-    images: ["/img/products/1NASCO-2000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY-1.jpg"],
+    images: [
+      "/img/products/1NASCO-2000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY-1.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 77,
@@ -20464,7 +22013,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Wall Mount · Digital Display · Whitecolor · Input/Output:100V260V/220Vac · Sockets:2*S33 · Plug:",
-    badge: "new"
+    badge: ""
   },
   {
     id: 946,
@@ -20474,7 +22023,9 @@ const PRODUCTS = [
     model: "1NASCO-3000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY",
     category: "small",
     image: "/img/products/1NASCO-3000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg",
-    images: ["/img/products/1NASCO-3000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"],
+    images: [
+      "/img/products/1NASCO-3000VA-WALL-MOUNT-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 44,
@@ -20484,7 +22035,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Wall Mount · Digital Display · Whitecolor · Input/Output:100V260V/220Vac · Sockets:2*S33 · Plug:",
-    badge: "new"
+    badge: ""
   },
   {
     id: 947,
@@ -20494,7 +22045,9 @@ const PRODUCTS = [
     model: "1NASCO-1000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY",
     category: "small",
     image: "/img/products/1NASCO-1000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg",
-    images: ["/img/products/1NASCO-1000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"],
+    images: [
+      "/img/products/1NASCO-1000VA-VOLTAGE-REGULATOR-DIGITAL-DISPLAY.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 70,
@@ -20504,7 +22057,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Digital Display · White Color · Input/Output :100V-260V/220Vac · Sockets2*S33 · Plug: P09",
-    badge: "new"
+    badge: ""
   },
   {
     id: 949,
@@ -20514,7 +22067,9 @@ const PRODUCTS = [
     model: "1NASCO-2000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE",
     category: "small",
     image: "/img/products/1NASCO-2000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE.jpg",
-    images: ["/img/products/1NASCO-2000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE.jpg"],
+    images: [
+      "/img/products/1NASCO-2000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 55,
@@ -20524,7 +22079,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Meter Display · White Color · Input/Output :100V-260V/220Vac · Sockets:2*S33 · Plug: P09",
-    badge: "new"
+    badge: ""
   },
   {
     id: 950,
@@ -20534,7 +22089,9 @@ const PRODUCTS = [
     model: "1NASCO-1500VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE-1",
     category: "small",
     image: "/img/products/1NASCO-1500VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE-1.jpg",
-    images: ["/img/products/1NASCO-1500VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE-1.jpg"],
+    images: [
+      "/img/products/1NASCO-1500VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE-1.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 82,
@@ -20544,7 +22101,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Meter Display · White Color · Input/Output :100V-260V/220Vac · Sockets:2*S33 · Plug: P09",
-    badge: "new"
+    badge: ""
   },
   {
     id: 951,
@@ -20554,7 +22111,9 @@ const PRODUCTS = [
     model: "1NASCO-1000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE",
     category: "small",
     image: "/img/products/1NASCO-1000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE.jpg",
-    images: ["/img/products/1NASCO-1000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE.jpg"],
+    images: [
+      "/img/products/1NASCO-1000VA-VOLTAGE-REGULATOR-METER-DISPLAY-WHITE.jpg"
+    ],
     price: 4600,
     rating: 4.4,
     reviews: 62,
@@ -20564,7 +22123,7 @@ const PRODUCTS = [
       "small"
     ],
     description: "Meter Display · White Color · Input/Output :100V-260V/220Vac · Sockets:2*S33 · Plug: P09",
-    badge: "new"
+    badge: ""
   },
   {
     id: 952,
@@ -20574,7 +22133,9 @@ const PRODUCTS = [
     model: "ae-wall-mount-arxxtrhqkwkgu-ar18trhqkwk-gu-white-White-267963509",
     category: "ac",
     image: "/img/products/ae-wall-mount-arxxtrhqkwkgu-ar18trhqkwk-gu-white-White-267963509.jpg",
-    images: ["/img/products/ae-wall-mount-arxxtrhqkwkgu-ar18trhqkwk-gu-white-White-267963509.jpg"],
+    images: [
+      "/img/products/ae-wall-mount-arxxtrhqkwkgu-ar18trhqkwk-gu-white-White-267963509.jpg"
+    ],
     price: 11200,
     rating: 4.4,
     reviews: 75,
@@ -20584,7 +22145,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Triple Protector · White · Volt Control · R410 Gas",
-    badge: "new"
+    badge: ""
   },
   {
     id: 953,
@@ -20594,7 +22155,9 @@ const PRODUCTS = [
     model: "MIDEA-3.0HP-FLOOR-STANDING-AIR-CONDITIONER-1",
     category: "ac",
     image: "/img/products/MIDEA-3.0HP-FLOOR-STANDING-AIR-CONDITIONER-1.jpg",
-    images: ["/img/products/MIDEA-3.0HP-FLOOR-STANDING-AIR-CONDITIONER-1.jpg"],
+    images: [
+      "/img/products/MIDEA-3.0HP-FLOOR-STANDING-AIR-CONDITIONER-1.jpg"
+    ],
     price: 13999,
     rating: 4.4,
     reviews: 73,
@@ -20604,7 +22167,7 @@ const PRODUCTS = [
       "ac"
     ],
     description: "Active Carbon Silver · Low Noise · Fast Cooling · Auto Restart · R410 · 3 Hp",
-    badge: "new"
+    badge: ""
   }
 ];
 
@@ -20647,4 +22210,5 @@ const SEARCH_INDEX = [
   ...PRODUCTS.map(p => ({ type: 'product', id: p.id, text: p.name, sub: p.brand, icon: p.icon })),
   ...CATEGORIES.map(c => ({ type: 'category', id: c.id, text: c.name, sub: `${c.count} products`, icon: '📂' })),
   ...BRANDS.map(b => ({ type: 'brand', id: b.id, text: b.name, sub: `${b.products} products`, icon: '🏷️' })),
+];
 ];

@@ -532,7 +532,7 @@
 <!-- ============================================================
      FLASH SALE COUNTDOWN
 ============================================================ -->
-<section class="flash-sale-section">
+<section class="flash-sale-section" id="flashSaleSection" style="display:none">
   <div class="container">
     <div class="flash-sale-inner">
       <div class="flash-left">
@@ -923,6 +923,11 @@
 <script src="js/cart.js"></script>
 <script src="js/hero.js"></script>
 <script src="js/shop.js"></script>
+<script>
+  if (localStorage.getItem('obv_flashSale') === 'on') {
+    document.getElementById('flashSaleSection').style.display = '';
+  }
+</script>
 
 </body>
 </html>

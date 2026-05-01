@@ -33,6 +33,33 @@
       .pp-back-btn { font-size: 12px; padding: 6px 12px; }
     }
 
+    /* Floating close button */
+    .pp-close-float {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      z-index: 900;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      border: none;
+      color: var(--text-dark);
+      font-size: 18px;
+      transition: transform .15s, box-shadow .15s, background .15s;
+    }
+    .pp-close-float:hover {
+      background: #fee2e2;
+      color: #dc2626;
+      transform: scale(1.08);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+    }
+    @media (max-width: 768px) {
+      .pp-close-float { top: auto; bottom: 90px; right: 16px; width: 48px; height: 48px; font-size: 20px; }
+    }
+
     .product-page-wrap {
       display: grid;
       grid-template-columns: 1fr;
@@ -326,6 +353,11 @@
     </div>
   </div>
 </div>
+
+<!-- Floating close / back button -->
+<button class="pp-close-float" title="Go back" onclick="history.length > 1 ? history.back() : window.location='shop.html'">
+  <i class="fas fa-times"></i>
+</button>
 
 <!-- Hero breadcrumb bar -->
 <section class="product-page-hero">

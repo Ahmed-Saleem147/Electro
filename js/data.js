@@ -22211,3 +22211,4 @@ const SEARCH_INDEX = [
   ...CATEGORIES.map(c => ({ type: 'category', id: c.id, text: c.name, sub: `${c.count} products`, icon: '📂' })),
   ...BRANDS.map(b => ({ type: 'brand', id: b.id, text: b.name, sub: `${b.products} products`, icon: '🏷️' })),
 ];
+];

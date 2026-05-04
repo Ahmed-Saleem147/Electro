@@ -380,11 +380,14 @@
 <div class="toast-container" id="toastContainer"></div>
 <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
+<script src="js/supabase.js"></script>
 <script src="js/data.js"></script>
 <script src="js/app.js"></script>
 <script src="js/cart.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await (window.obvSyncPromise || Promise.resolve());
+  applyOverrides();
   // Populate nav dropdowns
   const catDd = document.getElementById('catDropdown');
   if (catDd) catDd.innerHTML = CATEGORIES.map(c => `<li><a href="shop.html?cat=${c.id}"><i class="${c.icon}" style="color:${c.color};margin-right:8px;width:16px"></i>${c.name}</a></li>`).join('');

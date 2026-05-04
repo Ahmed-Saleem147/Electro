@@ -27,7 +27,10 @@ function showToast(type, title, msg, icon) {
 }
 
 /* ── Apply admin product/brand edits from localStorage ── */
-(function() {
+let _overridesApplied = false;
+function applyOverrides() {
+  if (_overridesApplied) return;
+  _overridesApplied = true;
   try {
     const edits = JSON.parse(localStorage.getItem('obv_prod_edits') || '{}');
     const adds  = JSON.parse(localStorage.getItem('obv_prod_adds')  || '[]');
@@ -37,7 +40,6 @@ function showToast(type, title, msg, icon) {
       if (edits[PRODUCTS[i].id]) Object.assign(PRODUCTS[i], edits[PRODUCTS[i].id]);
     }
     adds.forEach(p => PRODUCTS.push(p));
-    // Sync brands
     const brandAdds = JSON.parse(localStorage.getItem('obv_brand_adds') || '[]');
     const brandDels = new Set(JSON.parse(localStorage.getItem('obv_brand_dels') || '[]'));
     for (let i = BRANDS.length - 1; i >= 0; i--) {
@@ -45,7 +47,7 @@ function showToast(type, title, msg, icon) {
     }
     brandAdds.forEach(b => { if (!BRANDS.some(x => x.id === b.id)) BRANDS.push(b); });
   } catch(e) {}
-})();
+}
 
 /* ── Product card renderer ── */
 const CAT_NAMES = { tv: 'Televisions', ac: 'Air Conditioners', fridge: 'Refrigerators', laundry: 'Washing Machines', kitchen: 'Kitchen Appliances', small: 'Small Appliances' };
@@ -720,7 +722,9 @@ function initMegaBackdrop() {
 /* ════════════════════════════════════════
    INIT ALL
 ════════════════════════════════════════ */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await (window.obvSyncPromise || Promise.resolve());
+  applyOverrides();
   renderCategories();
   renderFlashProducts();
   renderFeaturedProducts();

@@ -615,6 +615,7 @@ textarea{resize:vertical;min-height:70px}
 
 <div class="toast-wrap" id="toastWrap"></div>
 
+<script src="js/supabase.js"></script>
 <script src="js/data.js"></script>
 <script>
 /* ── Constants ── */
@@ -645,7 +646,7 @@ function logout() { location.reload(); }
 
 /* ── Publish ── */
 function publishSite() {
-  toast('All changes are saved to your browser automatically.','info');
+  toast('Changes sync to all visitors via Supabase automatically.','info');
 }
 
 /* ── Navigation ── */
@@ -677,7 +678,8 @@ let currentPage=1, orderPage=1;
 const PAGE_SIZE=25;
 let editingId=null, editingDealId=null;
 
-function init() {
+async function init() {
+  await (window.obvSyncPromise || Promise.resolve());
   loadProducts(); loadOrders(); loadDeals();
   renderDashboard(); updatePendingBadge();
   setInterval(()=>{ loadOrders(); updatePendingBadge(); }, 30000);
@@ -949,15 +951,16 @@ function saveDeal(){
     deals.push(Object.assign({},deal,{id:maxId+1,active:true,createdAt:new Date().toISOString()}));
     toast('Deal created!','ok');
   }
-  lsSet('obv_deals',deals); closeModal('dealModal'); loadDeals(); renderDeals();
+  lsSet('obv_deals',deals); sbPush('obv_deals'); closeModal('dealModal'); loadDeals(); renderDeals();
 }
 function toggleDeal(id,active){
   const deals=lsGet('obv_deals',[]);const d=deals.find(x=>x.id===id);
-  if(d){d.active=active;lsSet('obv_deals',deals);}
+  if(d){d.active=active;lsSet('obv_deals',deals);sbPush('obv_deals');}
   loadDeals();renderDeals();
 }
 function deleteDeal(id){
   lsSet('obv_deals',lsGet('obv_deals',[]).filter(x=>x.id!==id));
+  sbPush('obv_deals');
   toast('Deleted','ok');loadDeals();renderDeals();
 }
 
@@ -1092,13 +1095,13 @@ function saveProduct(){
     if(orig){product.reviews=orig.reviews;product.id=orig.id;}
     const edits=lsGet('obv_prod_edits',{});
     const prevEdit=edits[editingId]||null;
-    edits[editingId]=product;lsSet('obv_prod_edits',edits);
+    edits[editingId]=product;lsSet('obv_prod_edits',edits);sbPush('obv_prod_edits');
     logHistory({type:'edit',label:'Edited: '+product.name,undoData:{productId:editingId,prevEdit}});
     toast('Updated!','ok');
   } else {
     const adds=lsGet('obv_prod_adds',[]);
     product.id=Date.now();product.reviews=Math.floor(Math.random()*200+50);
-    adds.push(product);lsSet('obv_prod_adds',adds);
+    adds.push(product);lsSet('obv_prod_adds',adds);sbPush('obv_prod_adds');
     logHistory({type:'add',label:'Added: '+product.name,undoData:{productId:product.id}});
     toast('Product added!','ok');
   }
@@ -1109,10 +1112,10 @@ function deleteProduct(id){
   const adds=lsGet('obv_prod_adds',[]);
   const newAdds=adds.filter(x=>x.id!==id);
   if(newAdds.length<adds.length){
-    lsSet('obv_prod_adds',newAdds);
+    lsSet('obv_prod_adds',newAdds);sbPush('obv_prod_adds');
     logHistory({type:'add_delete',label:'Removed added product: '+(p?p.name:id),undoData:{productId:id,product:p}});
   } else {
-    const dels=lsGet('obv_prod_dels',[]);if(!dels.includes(id))dels.push(id);lsSet('obv_prod_dels',dels);
+    const dels=lsGet('obv_prod_dels',[]);if(!dels.includes(id))dels.push(id);lsSet('obv_prod_dels',dels);sbPush('obv_prod_dels');
     logHistory({type:'delete',label:'Deleted: '+(p?p.name:id),undoData:{productId:id}});
   }
   toast('Deleted','ok');loadProducts();filterProducts();renderDashboard();
@@ -1174,6 +1177,7 @@ function saveDisplaySettings(){
   localStorage.setItem('obv_flashSale',document.getElementById('t_flashSale').checked?'on':'off');
   localStorage.setItem('obv_badges',document.getElementById('t_badges').checked?'on':'off');
   localStorage.setItem('obv_freeDelivery',document.getElementById('t_freeDelivery').checked?'on':'off');
+  sbPush('obv_flashSale');sbPush('obv_badges');sbPush('obv_freeDelivery');
   logHistory({type:'display',label:'Display settings changed',undoData:prev});
   toast('Display settings saved!','ok');
 }
@@ -1239,7 +1243,7 @@ function saveBrand(){
   const id=name.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
   const brand={id,name,shortName:short,color,bg:color,products:0};
   const adds=lsGet('obv_brand_adds',[]);
-  adds.push(brand);lsSet('obv_brand_adds',adds);
+  adds.push(brand);lsSet('obv_brand_adds',adds);sbPush('obv_brand_adds');
   logHistory({type:'brand_add',label:'Added brand: '+name,undoData:{brandId:id}});
   toast('Brand added!','ok');closeModal('brandModal');renderBrands();
 }
@@ -1247,9 +1251,9 @@ function deleteBrand(id){
   const adds=lsGet('obv_brand_adds',[]);
   const newAdds=adds.filter(b=>b.id!==id);
   if(newAdds.length<adds.length){
-    lsSet('obv_brand_adds',newAdds);
+    lsSet('obv_brand_adds',newAdds);sbPush('obv_brand_adds');
   } else {
-    const dels=lsGet('obv_brand_dels',[]);if(!dels.includes(id))dels.push(id);lsSet('obv_brand_dels',dels);
+    const dels=lsGet('obv_brand_dels',[]);if(!dels.includes(id))dels.push(id);lsSet('obv_brand_dels',dels);sbPush('obv_brand_dels');
   }
   logHistory({type:'brand_delete',label:'Removed brand: '+id,undoData:{brandId:id}});
   toast('Brand removed','ok');renderBrands();
@@ -1287,21 +1291,21 @@ function undoHistory(id){
   if(entry.type==='edit'){
     const edits=lsGet('obv_prod_edits',{});
     if(u.prevEdit)edits[u.productId]=u.prevEdit;else delete edits[u.productId];
-    lsSet('obv_prod_edits',edits);
+    lsSet('obv_prod_edits',edits);sbPush('obv_prod_edits');
   } else if(entry.type==='add'){
-    lsSet('obv_prod_adds',lsGet('obv_prod_adds',[]).filter(p=>p.id!==u.productId));
+    lsSet('obv_prod_adds',lsGet('obv_prod_adds',[]).filter(p=>p.id!==u.productId));sbPush('obv_prod_adds');
   } else if(entry.type==='delete'){
-    lsSet('obv_prod_dels',lsGet('obv_prod_dels',[]).filter(id=>id!==u.productId));
+    lsSet('obv_prod_dels',lsGet('obv_prod_dels',[]).filter(id=>id!==u.productId));sbPush('obv_prod_dels');
   } else if(entry.type==='add_delete'&&u.product){
-    const adds=lsGet('obv_prod_adds',[]);adds.push(u.product);lsSet('obv_prod_adds',adds);
+    const adds=lsGet('obv_prod_adds',[]);adds.push(u.product);lsSet('obv_prod_adds',adds);sbPush('obv_prod_adds');
   } else if(entry.type==='display'){
-    if(u.flashSale!==null)localStorage.setItem('obv_flashSale',u.flashSale||'off');
-    if(u.badges!==null)localStorage.setItem('obv_badges',u.badges||'off');
-    if(u.freeDelivery!==null)localStorage.setItem('obv_freeDelivery',u.freeDelivery||'on');
+    if(u.flashSale!==null){localStorage.setItem('obv_flashSale',u.flashSale||'off');sbPush('obv_flashSale');}
+    if(u.badges!==null){localStorage.setItem('obv_badges',u.badges||'off');sbPush('obv_badges');}
+    if(u.freeDelivery!==null){localStorage.setItem('obv_freeDelivery',u.freeDelivery||'on');sbPush('obv_freeDelivery');}
   } else if(entry.type==='brand_add'){
-    lsSet('obv_brand_adds',lsGet('obv_brand_adds',[]).filter(b=>b.id!==u.brandId));
+    lsSet('obv_brand_adds',lsGet('obv_brand_adds',[]).filter(b=>b.id!==u.brandId));sbPush('obv_brand_adds');
   } else if(entry.type==='brand_delete'){
-    lsSet('obv_brand_dels',lsGet('obv_brand_dels',[]).filter(id=>id!==u.brandId));
+    lsSet('obv_brand_dels',lsGet('obv_brand_dels',[]).filter(id=>id!==u.brandId));sbPush('obv_brand_dels');
   }
   lsSet('obv_history',hist.filter(h=>h.id!==id));
   toast('Undone!','ok');

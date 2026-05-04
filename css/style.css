@@ -1405,7 +1405,7 @@ input, select, textarea { font-family: inherit; }
 ================================================================ */
 .shop-hero {
   background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  min-height: 120px; color: #fff; overflow: hidden;
+  min-height: 180px; color: #fff; overflow: hidden;
   display: flex; align-items: center;
 }
 .shop-hero .container { text-align: left; }
@@ -1878,7 +1878,7 @@ input, select, textarea { font-family: inherit; }
   .nav-promo i { font-size: 11px; }
 
   /* Shop hero — desktop */
-  .shop-hero { padding: 32px 0 28px; }
+  .shop-hero { min-height: 200px; padding: 0; }
   .shop-hero h1 { font-size: 32px; }
   .shop-hero p { font-size: 15px; }
 }

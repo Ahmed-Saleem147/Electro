@@ -26,7 +26,7 @@ function showToast(type, title, msg, icon) {
   }, 3500);
 }
 
-/* ── Apply admin product edits/adds/deletes from localStorage ── */
+/* ── Apply admin product/brand edits from localStorage ── */
 (function() {
   try {
     const edits = JSON.parse(localStorage.getItem('obv_prod_edits') || '{}');
@@ -37,6 +37,13 @@ function showToast(type, title, msg, icon) {
       if (edits[PRODUCTS[i].id]) Object.assign(PRODUCTS[i], edits[PRODUCTS[i].id]);
     }
     adds.forEach(p => PRODUCTS.push(p));
+    // Sync brands
+    const brandAdds = JSON.parse(localStorage.getItem('obv_brand_adds') || '[]');
+    const brandDels = new Set(JSON.parse(localStorage.getItem('obv_brand_dels') || '[]'));
+    for (let i = BRANDS.length - 1; i >= 0; i--) {
+      if (brandDels.has(BRANDS[i].id)) BRANDS.splice(i, 1);
+    }
+    brandAdds.forEach(b => { if (!BRANDS.some(x => x.id === b.id)) BRANDS.push(b); });
   } catch(e) {}
 })();
 

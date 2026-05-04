@@ -20,7 +20,7 @@
 <div class="top-bar">
   <div class="container top-bar-inner">
     <div class="top-bar-left">
-      <span><i class="fas fa-phone-alt"></i> 050 257 8905</span>
+      <a href="tel:0502578905" style="color:inherit;text-decoration:none"><i class="fas fa-phone-alt"></i> 050 257 8905</a>
       <span><i class="fas fa-envelope"></i> info@orbivagh.com</span>
     </div>
     <div class="top-bar-right">
@@ -204,7 +204,7 @@
       </ul>
 
       <!-- Nav Promo Strip -->
-      <div class="nav-promo">
+      <div class="nav-promo free-delivery-banner">
         <i class="fas fa-truck"></i>
         <span>Free delivery on orders above GH₵ 500</span>
       </div>
@@ -469,7 +469,7 @@
 ============================================================ -->
 <section class="trust-strip">
   <div class="container trust-inner">
-    <div class="trust-item">
+    <div class="trust-item free-delivery-banner">
       <div class="trust-icon"><i class="fas fa-truck"></i></div>
       <div class="trust-text">
         <strong>Free Delivery</strong>
@@ -926,6 +926,9 @@
 <script>
   if (localStorage.getItem('obv_flashSale') === 'on') {
     document.getElementById('flashSaleSection').style.display = '';
+  }
+  if (localStorage.getItem('obv_freeDelivery') === 'off') {
+    document.querySelectorAll('.free-delivery-banner').forEach(el => el.style.display = 'none');
   }
 </script>
 

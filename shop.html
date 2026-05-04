@@ -275,12 +275,16 @@
 <script src="js/shop.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  const _urlp = new URLSearchParams(window.location.search);
+  const _urlCat = _urlp.get('cat') || '';
+  const _urlBrand = _urlp.get('brand') || '';
+
   // Populate category filter
   const catList = document.getElementById('catFilterList');
   if (catList) {
     catList.innerHTML = CATEGORIES.map(c => `
       <label class="filter-item">
-        <input type="checkbox" class="cat-filter-check" value="${c.id}" />
+        <input type="checkbox" class="cat-filter-check" value="${c.id}" ${c.id === _urlCat ? 'checked' : ''} />
         <span>${c.name}</span>
         <span class="filter-count">${c.count}</span>
       </label>`).join('');
@@ -289,11 +293,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Populate brand filter
   const brandList = document.getElementById('brandFilterList');
   if (brandList) {
-    brandList.innerHTML = BRANDS.slice(0, 8).map(b => `
+    const allBrands = [...BRANDS, ...JSON.parse(localStorage.getItem('obv_brand_adds')||'[]')]
+      .filter(b => !JSON.parse(localStorage.getItem('obv_brand_dels')||'[]').includes(b.id));
+    brandList.innerHTML = allBrands.slice(0, 10).map(b => `
       <label class="filter-item">
-        <input type="checkbox" class="brand-filter-check" value="${b.id}" />
+        <input type="checkbox" class="brand-filter-check" value="${b.id}" ${b.id === _urlBrand ? 'checked' : ''} />
         <span>${b.name}</span>
-        <span class="filter-count">${b.products}</span>
+        <span class="filter-count">${b.products || 0}</span>
       </label>`).join('');
   }
 
@@ -311,6 +317,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initShopPage();
   initMegaBackdrop();
+
+  // Free delivery toggle
+  if (localStorage.getItem('obv_freeDelivery') === 'off') {
+    document.querySelectorAll('.free-delivery-banner').forEach(el => el.style.display = 'none');
+  }
 });
 
 function setView(type) {

@@ -231,7 +231,10 @@ textarea{resize:vertical;min-height:70px}
       <div class="nav-section" style="margin-top:8px">Catalog</div>
       <div class="nav-item" onclick="showPage('products')" id="nav-products"><i class="fas fa-box"></i> Products</div>
       <div class="nav-item" onclick="showPage('images')" id="nav-images"><i class="fas fa-images"></i> Image Library</div>
+      <div class="nav-section" style="margin-top:8px">Catalog</div>
+      <div class="nav-item" onclick="showPage('brands')" id="nav-brands"><i class="fas fa-copyright"></i> Brands</div>
       <div class="nav-section" style="margin-top:8px">Admin</div>
+      <div class="nav-item" onclick="showPage('history')" id="nav-history"><i class="fas fa-history"></i> Change History</div>
       <div class="nav-item" onclick="showPage('settings')" id="nav-settings"><i class="fas fa-cog"></i> Settings</div>
     </nav>
     <div class="sidebar-footer">
@@ -379,13 +382,23 @@ textarea{resize:vertical;min-height:70px}
             <span class="toggle-slider"></span>
           </label>
         </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)">
           <div>
             <div style="font-size:13px;font-weight:600">Product Badges</div>
             <div style="font-size:12px;color:var(--muted);margin-top:3px">Show New, Sale, Hot, Best Seller badges on product cards</div>
           </div>
           <label class="toggle-wrap">
             <input type="checkbox" id="t_badges" onchange="saveDisplaySettings()">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0">
+          <div>
+            <div style="font-size:13px;font-weight:600">Free Delivery Banner</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:3px">Show "Free delivery on orders above GH₵ 500" across the site</div>
+          </div>
+          <label class="toggle-wrap">
+            <input type="checkbox" id="t_freeDelivery" onchange="saveDisplaySettings()">
             <span class="toggle-slider"></span>
           </label>
         </div>
@@ -410,6 +423,25 @@ textarea{resize:vertical;min-height:70px}
         </div>
       </div>
     </div>
+
+    <!-- BRANDS -->
+    <div class="content" id="page-brands" style="display:none">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+        <div><h2 style="font-size:18px;font-weight:800">Brand Management</h2><p style="font-size:13px;color:var(--muted)">Add or remove brands available site-wide.</p></div>
+        <button class="btn btn-primary" onclick="openAddBrandModal()"><i class="fas fa-plus"></i> Add Brand</button>
+      </div>
+      <div id="brandsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px"></div>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="content" id="page-history" style="display:none">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+        <div><h2 style="font-size:18px;font-weight:800">Change History</h2><p style="font-size:13px;color:var(--muted)">A log of all changes made in this portal. Click Undo to reverse any action.</p></div>
+        <button class="btn btn-danger" onclick="confirmAction('Clear all history?','This cannot be undone.',clearHistory)"><i class="fas fa-trash"></i> Clear History</button>
+      </div>
+      <div id="historyList"></div>
+    </div>
+
   </div>
 </div>
 
@@ -507,6 +539,27 @@ textarea{resize:vertical;min-height:70px}
   </div>
 </div>
 
+<!-- Brand Modal -->
+<div class="modal-overlay" id="brandModal">
+  <div class="modal-box" style="max-width:420px">
+    <div class="modal-header">
+      <div class="modal-title" id="brandModalTitle">Add Brand</div>
+      <button class="modal-close" onclick="closeModal('brandModal')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-grid">
+        <div class="form-group full"><label>Brand Name</label><input type="text" id="b_name" placeholder="e.g. LG"></div>
+        <div class="form-group full"><label>Short Name</label><input type="text" id="b_short" placeholder="e.g. LG"></div>
+        <div class="form-group"><label>Primary Colour</label><input type="color" id="b_color" value="#1d4ed8"></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal('brandModal')">Cancel</button>
+      <button class="btn btn-primary" onclick="saveBrand()"><i class="fas fa-save"></i> Save Brand</button>
+    </div>
+  </div>
+</div>
+
 <!-- Deal Modal -->
 <div class="modal-overlay" id="dealModal">
   <div class="modal-box">
@@ -530,6 +583,10 @@ textarea{resize:vertical;min-height:70px}
             <option value="kitchen">Kitchen</option><option value="small">Small Appliances</option>
             <option value="phones">Phones & Tablets</option><option value="commercial">Commercial</option>
           </select>
+        </div>
+        <div class="form-group">
+          <label>Brand (optional)</label>
+          <select id="d_brand"><option value="">All Brands</option></select>
         </div>
         <div class="form-group"><label>Discount % (0 for none)</label><input type="number" id="d_discount" min="0" max="100" value="0"></div>
         <div class="form-group"><label>Start Date</label><input type="date" id="d_start"></div>
@@ -592,8 +649,8 @@ function publishSite() {
 }
 
 /* ── Navigation ── */
-const PAGES = ['dashboard','orders','deals','products','images','settings'];
-const PAGE_TITLES = {dashboard:'Dashboard',orders:'Orders',deals:'Deals & Promotions',products:'Products',images:'Image Library',settings:'Settings'};
+const PAGES = ['dashboard','orders','deals','products','images','brands','history','settings'];
+const PAGE_TITLES = {dashboard:'Dashboard',orders:'Orders',deals:'Deals & Promotions',products:'Products',images:'Image Library',brands:'Brands',history:'Change History',settings:'Settings'};
 function showPage(page) {
   PAGES.forEach(p => {
     document.getElementById('page-'+p).style.display = p===page?'block':'none';
@@ -605,9 +662,11 @@ function showPage(page) {
   document.getElementById('topAddDealBtn').style.display   = page==='deals'?'inline-flex':'none';
   if (page==='dashboard') renderDashboard();
   if (page==='orders')    { filteredOrders=[...ORDERS].reverse(); renderOrdersTable(); }
-  if (page==='deals')     renderDeals();
+  if (page==='deals')     { populateDealBrandSelect(); renderDeals(); }
   if (page==='products')  { filtered=[...adminProds]; renderTable(); }
   if (page==='images')    loadImages();
+  if (page==='brands')    renderBrands();
+  if (page==='history')   renderHistory();
   if (page==='settings')  loadSettings();
 }
 
@@ -820,6 +879,11 @@ function saveManualOrder() {
 /* ── Deals ── */
 const DTL={flash_sale:'Flash Sale',discount:'Category Discount',banner:'Promo Banner'};
 const DTC={flash_sale:'dt-flash',discount:'dt-discount',banner:'dt-banner'};
+function populateDealBrandSelect(selected=''){
+  const sel=document.getElementById('d_brand');if(!sel)return;
+  const allBrands=getAllBrands();
+  sel.innerHTML='<option value="">All Brands</option>'+allBrands.map(b=>`<option value="${b.id}"${b.id===selected?' selected':''}>${escHtml(b.name)}</option>`).join('');
+}
 function renderDeals() {
   const g=document.getElementById('dealsGrid');
   if(!DEALS.length){g.innerHTML='<div class="empty-state" style="grid-column:1/-1"><i class="fas fa-tags"></i><p>No deals yet. Click <strong>New Deal</strong> to create your first promotion.</p></div>';return;}
@@ -832,6 +896,7 @@ function renderDeals() {
       <div style="font-size:15px;font-weight:700;margin-bottom:4px;padding-right:50px">${escHtml(d.label)}</div>
       <div style="font-size:12px;color:var(--muted);margin-bottom:10px">
         ${d.discount?'<strong>'+d.discount+'% off</strong> · ':''}${CAT_LABELS[d.category]||'All Categories'}
+        ${d.brand?' · Brand: <strong>'+escHtml(d.brand)+'</strong>':''}
         ${d.startDate?' · '+d.startDate+(d.endDate?' → '+d.endDate:''):''}
       </div>
       ${d.description?`<div style="font-size:12px;color:var(--muted);margin-bottom:10px">${escHtml(d.description)}</div>`:''}
@@ -850,6 +915,7 @@ function openAddDealModal(){
   ['d_label','d_desc'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('d_type').value='flash_sale';document.getElementById('d_category').value='all';
   document.getElementById('d_discount').value=0;document.getElementById('d_start').value='';document.getElementById('d_end').value='';
+  populateDealBrandSelect();
   document.getElementById('dealModal').classList.add('open');
 }
 function openEditDealModal(id){
@@ -860,11 +926,16 @@ function openEditDealModal(id){
   document.getElementById('d_category').value=d.category||'all';document.getElementById('d_discount').value=d.discount||0;
   document.getElementById('d_start').value=d.startDate||'';document.getElementById('d_end').value=d.endDate||'';
   document.getElementById('d_desc').value=d.description||'';
+  populateDealBrandSelect(d.brandId||'');
   document.getElementById('dealModal').classList.add('open');
 }
 function saveDeal(){
   const label=document.getElementById('d_label').value.trim();if(!label){toast('Deal name required','err');return;}
+  const brandSel=document.getElementById('d_brand');
+  const brandId=brandSel?brandSel.value:'';
+  const brandName=brandId?(getAllBrands().find(b=>b.id===brandId)||{name:''}).name:'';
   const deal={label,type:document.getElementById('d_type').value,category:document.getElementById('d_category').value,
+    brandId,brand:brandName,
     discount:parseInt(document.getElementById('d_discount').value)||0,
     startDate:document.getElementById('d_start').value,endDate:document.getElementById('d_end').value,
     description:document.getElementById('d_desc').value.trim()};
@@ -938,9 +1009,15 @@ function renderPagination(){
   document.getElementById('pageBtns').innerHTML=b;
 }
 function goPage(n){currentPage=n;renderTable();}
+function getAllBrands(){
+  const base=typeof BRANDS!=='undefined'?BRANDS:[];
+  const adds=lsGet('obv_brand_adds',[]);
+  const dels=new Set(lsGet('obv_brand_dels',[]));
+  return [...base.filter(b=>!dels.has(b.id)),...adds];
+}
 function populateBrandSelect(selected=''){
   const sel=document.getElementById('f_brand');
-  const brands=(typeof BRANDS!=='undefined'?BRANDS:[]).map(b=>b.name);
+  const brands=getAllBrands().map(b=>b.name);
   if(!brands.includes('Other'))brands.push('Other');
   sel.innerHTML=brands.map(b=>`<option${b===selected?' selected':''}>${escHtml(b)}</option>`).join('');
 }
@@ -1013,23 +1090,30 @@ function saveProduct(){
   if(editingId){
     const orig=adminProds.find(p=>p.id===editingId);
     if(orig){product.reviews=orig.reviews;product.id=orig.id;}
-    const edits=lsGet('obv_prod_edits',{});edits[editingId]=product;lsSet('obv_prod_edits',edits);
+    const edits=lsGet('obv_prod_edits',{});
+    const prevEdit=edits[editingId]||null;
+    edits[editingId]=product;lsSet('obv_prod_edits',edits);
+    logHistory({type:'edit',label:'Edited: '+product.name,undoData:{productId:editingId,prevEdit}});
     toast('Updated!','ok');
   } else {
     const adds=lsGet('obv_prod_adds',[]);
     product.id=Date.now();product.reviews=Math.floor(Math.random()*200+50);
     adds.push(product);lsSet('obv_prod_adds',adds);
+    logHistory({type:'add',label:'Added: '+product.name,undoData:{productId:product.id}});
     toast('Product added!','ok');
   }
   closeModal('productModal');loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
 }
 function deleteProduct(id){
+  const p=adminProds.find(x=>x.id===id);
   const adds=lsGet('obv_prod_adds',[]);
-  const newAdds=adds.filter(p=>p.id!==id);
+  const newAdds=adds.filter(x=>x.id!==id);
   if(newAdds.length<adds.length){
     lsSet('obv_prod_adds',newAdds);
+    logHistory({type:'add_delete',label:'Removed added product: '+(p?p.name:id),undoData:{productId:id,product:p}});
   } else {
     const dels=lsGet('obv_prod_dels',[]);if(!dels.includes(id))dels.push(id);lsSet('obv_prod_dels',dels);
+    logHistory({type:'delete',label:'Deleted: '+(p?p.name:id),undoData:{productId:id}});
   }
   toast('Deleted','ok');loadProducts();filterProducts();renderDashboard();
 }
@@ -1083,10 +1167,14 @@ function loadSettings(){
 function loadDisplaySettings(){
   document.getElementById('t_flashSale').checked=localStorage.getItem('obv_flashSale')==='on';
   document.getElementById('t_badges').checked=localStorage.getItem('obv_badges')==='on';
+  document.getElementById('t_freeDelivery').checked=localStorage.getItem('obv_freeDelivery')!=='off';
 }
 function saveDisplaySettings(){
+  const prev={flashSale:localStorage.getItem('obv_flashSale'),badges:localStorage.getItem('obv_badges'),freeDelivery:localStorage.getItem('obv_freeDelivery')};
   localStorage.setItem('obv_flashSale',document.getElementById('t_flashSale').checked?'on':'off');
   localStorage.setItem('obv_badges',document.getElementById('t_badges').checked?'on':'off');
+  localStorage.setItem('obv_freeDelivery',document.getElementById('t_freeDelivery').checked?'on':'off');
+  logHistory({type:'display',label:'Display settings changed',undoData:prev});
   toast('Display settings saved!','ok');
 }
 function saveSettings(){
@@ -1111,6 +1199,116 @@ function changePassword(){
   toast('Password updated!','ok');
   ['s_curPass','s_newPass','s_confPass'].forEach(id=>document.getElementById(id).value='');
 }
+
+/* ── Brands ── */
+let editingBrandId=null;
+function renderBrands(){
+  const grid=document.getElementById('brandsGrid');
+  const brands=getAllBrands();
+  const adds=lsGet('obv_brand_adds',[]);
+  if(!brands.length){grid.innerHTML='<div class="empty-state"><i class="fas fa-copyright"></i><p>No brands yet.</p></div>';return;}
+  grid.innerHTML=brands.map(b=>{
+    const isCustom=adds.some(a=>a.id===b.id);
+    return `<div style="background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:18px;display:flex;align-items:center;gap:14px">
+      <div style="width:44px;height:44px;border-radius:10px;background:${b.bg||b.color||'#1d4ed8'};display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <span style="font-size:12px;font-weight:900;color:#fff;letter-spacing:.5px">${(b.shortName||b.name).substring(0,5)}</span>
+      </div>
+      <div style="flex:1;min-width:0">
+        <div style="font-weight:700;font-size:14px">${escHtml(b.name)}</div>
+        <div style="font-size:12px;color:var(--muted)">${b.products||0} products</div>
+      </div>
+      <div style="display:flex;gap:6px">
+        ${isCustom?`<button class="btn btn-danger btn-sm" onclick="deleteBrand('${b.id}')"><i class="fas fa-trash"></i></button>`
+          :`<button class="btn btn-outline btn-sm" onclick="confirmAction('Hide brand ${escHtml(b.name)}?','It will no longer appear site-wide.',()=>deleteBrand('${b.id}'))"><i class="fas fa-eye-slash"></i></button>`}
+      </div>
+    </div>`;
+  }).join('');
+}
+function openAddBrandModal(){
+  editingBrandId=null;
+  document.getElementById('brandModalTitle').textContent='Add Brand';
+  ['b_name','b_short'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('b_color').value='#1d4ed8';
+  document.getElementById('brandModal').classList.add('open');
+}
+function saveBrand(){
+  const name=document.getElementById('b_name').value.trim();
+  if(!name){toast('Brand name required','err');return;}
+  const short=document.getElementById('b_short').value.trim()||name;
+  const color=document.getElementById('b_color').value;
+  const id=name.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'');
+  const brand={id,name,shortName:short,color,bg:color,products:0};
+  const adds=lsGet('obv_brand_adds',[]);
+  adds.push(brand);lsSet('obv_brand_adds',adds);
+  logHistory({type:'brand_add',label:'Added brand: '+name,undoData:{brandId:id}});
+  toast('Brand added!','ok');closeModal('brandModal');renderBrands();
+}
+function deleteBrand(id){
+  const adds=lsGet('obv_brand_adds',[]);
+  const newAdds=adds.filter(b=>b.id!==id);
+  if(newAdds.length<adds.length){
+    lsSet('obv_brand_adds',newAdds);
+  } else {
+    const dels=lsGet('obv_brand_dels',[]);if(!dels.includes(id))dels.push(id);lsSet('obv_brand_dels',dels);
+  }
+  logHistory({type:'brand_delete',label:'Removed brand: '+id,undoData:{brandId:id}});
+  toast('Brand removed','ok');renderBrands();
+}
+
+/* ── Change History ── */
+function logHistory(entry){
+  const hist=lsGet('obv_history',[]);
+  hist.unshift({...entry,id:Date.now(),timestamp:new Date().toISOString()});
+  lsSet('obv_history',hist.slice(0,200));
+}
+function renderHistory(){
+  const list=document.getElementById('historyList');
+  const hist=lsGet('obv_history',[]);
+  if(!hist.length){list.innerHTML='<div class="empty-state"><i class="fas fa-history"></i><p>No changes recorded yet.</p></div>';return;}
+  const icons={edit:'fas fa-edit',add:'fas fa-plus-circle',delete:'fas fa-trash',add_delete:'fas fa-minus-circle',display:'fas fa-sliders-h',brand_add:'fas fa-copyright',brand_delete:'fas fa-copyright'};
+  const colors={edit:'#1d4ed8',add:'#15803d',delete:'#dc2626',add_delete:'#dc2626',display:'#7c3aed',brand_add:'#0ea5e9',brand_delete:'#f59e0b'};
+  list.innerHTML=hist.map(h=>`
+    <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;background:#fff;border:1.5px solid var(--border);border-radius:10px;margin-bottom:10px">
+      <div style="width:36px;height:36px;border-radius:50%;background:${colors[h.type]||'#64748b'}20;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <i class="${icons[h.type]||'fas fa-circle'}" style="color:${colors[h.type]||'#64748b'};font-size:14px"></i>
+      </div>
+      <div style="flex:1;min-width:0">
+        <div style="font-weight:600;font-size:13.5px">${escHtml(h.label)}</div>
+        <div style="font-size:12px;color:var(--muted)">${fmtDate(h.timestamp)}</div>
+      </div>
+      <button class="btn btn-outline btn-sm" onclick="undoHistory(${h.id})"><i class="fas fa-undo"></i> Undo</button>
+    </div>`).join('');
+}
+function undoHistory(id){
+  const hist=lsGet('obv_history',[]);
+  const entry=hist.find(h=>h.id===id);
+  if(!entry){toast('Entry not found','err');return;}
+  const u=entry.undoData||{};
+  if(entry.type==='edit'){
+    const edits=lsGet('obv_prod_edits',{});
+    if(u.prevEdit)edits[u.productId]=u.prevEdit;else delete edits[u.productId];
+    lsSet('obv_prod_edits',edits);
+  } else if(entry.type==='add'){
+    lsSet('obv_prod_adds',lsGet('obv_prod_adds',[]).filter(p=>p.id!==u.productId));
+  } else if(entry.type==='delete'){
+    lsSet('obv_prod_dels',lsGet('obv_prod_dels',[]).filter(id=>id!==u.productId));
+  } else if(entry.type==='add_delete'&&u.product){
+    const adds=lsGet('obv_prod_adds',[]);adds.push(u.product);lsSet('obv_prod_adds',adds);
+  } else if(entry.type==='display'){
+    if(u.flashSale!==null)localStorage.setItem('obv_flashSale',u.flashSale||'off');
+    if(u.badges!==null)localStorage.setItem('obv_badges',u.badges||'off');
+    if(u.freeDelivery!==null)localStorage.setItem('obv_freeDelivery',u.freeDelivery||'on');
+  } else if(entry.type==='brand_add'){
+    lsSet('obv_brand_adds',lsGet('obv_brand_adds',[]).filter(b=>b.id!==u.brandId));
+  } else if(entry.type==='brand_delete'){
+    lsSet('obv_brand_dels',lsGet('obv_brand_dels',[]).filter(id=>id!==u.brandId));
+  }
+  lsSet('obv_history',hist.filter(h=>h.id!==id));
+  toast('Undone!','ok');
+  loadProducts();filtered=[...adminProds];
+  renderHistory();renderDashboard();
+}
+function clearHistory(){lsSet('obv_history',[]);renderHistory();toast('History cleared','ok');}
 
 /* ── Helpers ── */
 function closeModal(id){document.getElementById(id).classList.remove('open');}

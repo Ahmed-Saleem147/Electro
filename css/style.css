@@ -1405,7 +1405,8 @@ input, select, textarea { font-family: inherit; }
 ================================================================ */
 .shop-hero {
   background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  padding: 24px 0 20px; color: #fff; overflow: hidden;
+  min-height: 120px; color: #fff; overflow: hidden;
+  display: flex; align-items: center;
 }
 .shop-hero .container { text-align: left; }
 .shop-hero h1 { font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.2; }

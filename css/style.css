@@ -1405,14 +1405,13 @@ input, select, textarea { font-family: inherit; }
 ================================================================ */
 .shop-hero {
   background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  min-height: 200px; color: #fff; overflow: hidden;
-  display: flex; align-items: center;
+  padding: 24px 0 20px; color: #fff; overflow: hidden;
 }
-.shop-hero .container { text-align: center; }
+.shop-hero .container { text-align: left; }
 .shop-hero h1 { font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.2; }
 .shop-hero p { font-size: 13.5px; color: rgba(255,255,255,0.88); margin-bottom: 2px; }
 .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; opacity: 0.75; margin-top: 6px; }
-.shop-hero .breadcrumb { justify-content: center; }
+.shop-hero .breadcrumb { justify-content: flex-start; }
 .breadcrumb a { color: rgba(255,255,255,0.85); }
 .breadcrumb span { opacity: 0.5; }
 
@@ -1878,7 +1877,7 @@ input, select, textarea { font-family: inherit; }
   .nav-promo i { font-size: 11px; }
 
   /* Shop hero — desktop */
-  .shop-hero { min-height: 240px; }
+  .shop-hero { padding: 32px 0 28px; }
   .shop-hero h1 { font-size: 32px; }
   .shop-hero p { font-size: 15px; }
 }

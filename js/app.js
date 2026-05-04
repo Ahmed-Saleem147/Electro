@@ -744,4 +744,11 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => el.classList.add('animated'), i * 120);
     });
   }, 300);
+
+  // Apply admin display settings
+  if (localStorage.getItem('obv_freeDelivery') === 'off') {
+    document.querySelectorAll('.free-delivery-banner').forEach(el => el.style.display = 'none');
+  }
+  const flashEl = document.getElementById('flashSaleSection');
+  if (flashEl) flashEl.style.display = localStorage.getItem('obv_flashSale') === 'on' ? '' : 'none';
 });

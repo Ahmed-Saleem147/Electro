@@ -729,7 +729,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderFlashProducts();
   renderFeaturedProducts();
   renderBrands();
-  renderBlog();
   renderRecentlyViewed();
   startCountdown();
   initSearch();

@@ -330,6 +330,11 @@ textarea{resize:vertical;min-height:70px}
           <option value="noimg">No Image</option><option value="hasimg">Has Image</option>
         </select>
         <span style="margin-left:auto;font-size:13px;color:var(--muted)" id="countLabel"></span>
+        <button class="btn btn-outline btn-sm" onclick="exportProductsCSV()" title="Download all products as CSV"><i class="fas fa-file-download"></i> Export CSV</button>
+        <label class="btn btn-outline btn-sm" style="cursor:pointer" title="Upload edited CSV to update prices">
+          <i class="fas fa-file-upload"></i> Import CSV
+          <input type="file" accept=".csv" style="display:none" onchange="importProductsCSV(this)">
+        </label>
       </div>
       <div class="table-wrap">
         <table>
@@ -1119,6 +1124,71 @@ function deleteProduct(id){
     logHistory({type:'delete',label:'Deleted: '+(p?p.name:id),undoData:{productId:id}});
   }
   toast('Deleted','ok');loadProducts();filterProducts();renderDashboard();
+}
+
+/* ── CSV Export / Import ── */
+function csvField(v){
+  const s=String(v===null||v===undefined?'':v);
+  return /[,"\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
+}
+function exportProductsCSV(){
+  const prods=getAdminProducts();
+  const header=['id','name','brand','category','price','old_price','discount'];
+  const rows=prods.map(p=>[p.id,csvField(p.name),csvField(p.brand),p.category,p.price,p.oldPrice||'',p.discount||'']);
+  const csv=[header.join(','),...rows.map(r=>r.join(','))].join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='orbiva-products-'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();
+  toast('CSV downloaded — '+prods.length+' products','ok');
+}
+function parseCSVLine(line){
+  const out=[];let cur='',inQ=false;
+  for(let i=0;i<line.length;i++){
+    const c=line[i];
+    if(c==='"'){if(inQ&&line[i+1]==='"'){cur+='"';i++;}else inQ=!inQ;}
+    else if(c===','&&!inQ){out.push(cur.trim());cur='';}
+    else cur+=c;
+  }
+  out.push(cur.trim());return out;
+}
+function importProductsCSV(input){
+  const file=input.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      const lines=e.target.result.replace(/\r/g,'').split('\n').filter(l=>l.trim());
+      const hdrs=parseCSVLine(lines[0]).map(h=>h.toLowerCase());
+      const iId=hdrs.indexOf('id'),iPr=hdrs.indexOf('price'),iOp=hdrs.indexOf('old_price'),iDi=hdrs.indexOf('discount');
+      if(iId<0||iPr<0){toast('CSV must have id and price columns','err');return;}
+      const edits=lsGet('obv_prod_edits',{});
+      let updated=0,skipped=0;
+      for(let i=1;i<lines.length;i++){
+        const cols=parseCSVLine(lines[i]);
+        const id=parseInt(cols[iId]);
+        const newPrice=parseFloat(cols[iPr]);
+        if(!id||isNaN(newPrice)){skipped++;continue;}
+        const prod=adminProds.find(p=>p.id===id);
+        if(!prod){skipped++;continue;}
+        const newOp=iOp>=0&&cols[iOp]?parseFloat(cols[iOp]):null;
+        const newDi=iDi>=0&&cols[iDi]?parseInt(cols[iDi]):null;
+        const changed=prod.price!==newPrice||(newOp!==null&&prod.oldPrice!==newOp);
+        if(changed){
+          if(!edits[id])edits[id]={};
+          edits[id]={...edits[id],price:newPrice};
+          if(newOp!==null)edits[id].oldPrice=newOp||undefined;
+          if(newDi!==null)edits[id].discount=newDi||undefined;
+          updated++;
+        }
+      }
+      lsSet('obv_prod_edits',edits);sbPush('obv_prod_edits');
+      loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
+      logHistory({type:'edit',label:'Bulk price update via CSV ('+updated+' products)',undoData:{}});
+      toast(updated+' product(s) updated'+(skipped?' · '+skipped+' skipped':''),'ok');
+    }catch(err){toast('CSV error: '+err.message,'err');}
+    input.value='';
+  };
+  reader.readAsText(file);
 }
 
 /* ── Images ── */

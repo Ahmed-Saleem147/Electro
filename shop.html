@@ -69,7 +69,10 @@
           <a href="shop.html" class="nav-link">Categories <i class="fas fa-chevron-down fa-xs"></i></a>
           <ul class="dropdown" id="catDropdown"></ul>
         </li>
-        <li><a href="shop.html" class="nav-link">Brands</a></li>
+        <li class="has-dropdown">
+          <a href="shop.html" class="nav-link">Brands <i class="fas fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown" id="brandDropdown"></ul>
+        </li>
         <li><a href="shop.html?filter=deals" class="nav-link deals-link"><i class="fas fa-fire"></i> Deals <span class="hot-tag">HOT</span></a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
@@ -296,8 +299,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Populate brand filter
   const brandList = document.getElementById('brandFilterList');
   if (brandList) {
-    const allBrands = [...BRANDS, ...JSON.parse(localStorage.getItem('obv_brand_adds')||'[]')]
-      .filter(b => !JSON.parse(localStorage.getItem('obv_brand_dels')||'[]').includes(b.id));
+    const allBrands = BRANDS;
     brandList.innerHTML = allBrands.slice(0, 10).map(b => `
       <label class="filter-item">
         <input type="checkbox" class="brand-filter-check" value="${b.id}" ${b.id === _urlBrand ? 'checked' : ''} />
@@ -316,6 +318,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const catDd = document.getElementById('catDropdown');
   if (catDd) {
     catDd.innerHTML = CATEGORIES.map(c => `<li><a href="shop.html?cat=${c.id}"><i class="${c.icon}" style="color:${c.color};margin-right:8px;width:16px"></i>${c.name}</a></li>`).join('');
+  }
+
+  // Nav brand dropdown
+  const brandDd = document.getElementById('brandDropdown');
+  if (brandDd) {
+    brandDd.innerHTML = BRANDS.map(b => `<li><a href="shop.html?brand=${b.id}">${b.name}</a></li>`).join('');
   }
 
   initShopPage();

@@ -730,6 +730,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderFeaturedProducts();
   renderBrands();
   renderRecentlyViewed();
+  // Populate brand nav dropdown
+  const brandDd = document.getElementById('brandDropdown');
+  if (brandDd) brandDd.innerHTML = BRANDS.map(b => `<li><a href="shop.html?brand=${b.id}">${b.name}</a></li>`).join('');
   startCountdown();
   initSearch();
   initSidebars();

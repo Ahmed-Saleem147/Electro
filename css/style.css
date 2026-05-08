@@ -705,8 +705,10 @@ input, select, textarea { font-family: inherit; }
   width: 100%;
   min-height: 320px;
   background-image: url('../img/hero-banner.jfif');
-  background-size: cover;
-  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: #fff;
   overflow: hidden;
   display: flex;
   align-items: stretch;
@@ -811,7 +813,7 @@ input, select, textarea { font-family: inherit; }
   transform: translateY(-2px);
 }
 @media (max-width: 480px) {
-  .hero-banner { min-height: 260px; background-position: right center; }
+  .hero-banner { min-height: 260px; background-size: contain; background-position: right center; }
   .hero-banner::before {
     background: linear-gradient(
       to right,

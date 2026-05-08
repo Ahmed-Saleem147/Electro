@@ -60,7 +60,7 @@ const CATEGORIES = [
     "id": "phones",
     "name": "Mobile & Tablets",
     "icon": "fas fa-mobile-alt",
-    "count": 6,
+    "count": 5,
     "color": "#fff",
     "bg": "linear-gradient(135deg,#0f172a,#1e293b)"
   },
@@ -111,15 +111,6 @@ const BRANDS = [
     "color": "#003087",
     "bg": "linear-gradient(135deg,#003087,#001a5c)",
     "logoStyle": "font-size:13px;letter-spacing:1px"
-  },
-  {
-    "id": "alcatel",
-    "name": "Alcatel",
-    "shortName": "ALCATEL",
-    "products": 1,
-    "color": "#e62b1e",
-    "bg": "linear-gradient(135deg,#e62b1e,#c0392b)",
-    "logoStyle": "font-size:13px;letter-spacing:0.5px"
   }
 ];
 
@@ -9777,29 +9768,6 @@ const PRODUCTS = [
     "description": "",
     "specs": {
       "Size": "75\""
-    }
-  },
-  {
-    "id": "alcatel-001",
-    "name": "Alcatel A31 6.5''",
-    "brand": "Alcatel",
-    "brandId": "alcatel",
-    "model": "ALCATEL-A31",
-    "category": "phones",
-    "images": [],
-    "price": 1099,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📱",
-    "color": "#e62b1e",
-    "tags": [
-      "alcatel",
-      "phones"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "6.5\""
     }
   },
   {

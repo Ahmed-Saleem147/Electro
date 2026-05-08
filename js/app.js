@@ -84,6 +84,7 @@ function renderProductCard(product) {
       <div class="product-info">
         <div class="product-cat-label">${catLabel}</div>
         <div class="product-name">${product.name}</div>
+        ${product.model ? `<div class="product-model">${product.model}</div>` : ''}
         ${product.description ? `<div class="product-desc">${product.description}</div>` : ''}
         ${specTags ? `<div class="product-spec-tags">${specTags}</div>` : ''}
         <div class="product-rating">
@@ -171,7 +172,8 @@ function showProductModal(p) {
         </div>
         <div class="product-detail-info">
           <div class="product-brand">${p.brand}</div>
-          <div class="product-name" style="font-size:1.4rem;font-weight:800;color:var(--text-dark);margin-bottom:14px">${p.name}</div>
+          <div class="product-name" style="font-size:1.4rem;font-weight:800;color:var(--text-dark);margin-bottom:6px">${p.name}</div>
+          ${p.model ? `<div style="font-size:12px;color:var(--text-muted);font-weight:500;margin-bottom:12px">Model: <strong style="color:var(--text-body)">${p.model}</strong></div>` : ''}
           <div class="product-rating" style="margin-bottom:16px">
             <div class="stars-row">${stars}</div>
             <span class="rating-count">(${p.reviews.toLocaleString()} reviews)</span>

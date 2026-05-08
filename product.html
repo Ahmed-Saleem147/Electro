@@ -475,6 +475,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </button>
       <div class="pp-brand-badge">${p.brand}</div>
       <h1 class="pp-name">${p.name}</h1>
+      ${p.model ? `<div style="font-size:13px;color:var(--text-muted);font-weight:500;margin-bottom:10px">Model: <strong style="color:var(--text-body)">${p.model}</strong></div>` : ''}
       <div class="pp-rating">
         <div class="pp-stars">${stars}</div>
         <span class="pp-review-count">(${p.reviews.toLocaleString()} reviews)</span>

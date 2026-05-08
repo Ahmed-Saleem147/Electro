@@ -1,73 +1,44 @@
 /* ================================================================
-   ORBIVA – IMAGE BANNER SLIDESHOW
+   ORBIVA – 3-PANEL IMAGE BANNER
+   Each panel independently cycles through its 6 images.
+   Panels are staggered so they don't change simultaneously.
 ================================================================ */
 
 (function () {
-  const slides   = document.querySelectorAll('#imgSlider .img-slide');
-  const dots     = document.querySelectorAll('.img-dot');
-  const sections = document.querySelectorAll('.img-section');
-  const prevBtn  = document.getElementById('imgPrev');
-  const nextBtn  = document.getElementById('imgNext');
-  if (!slides.length) return;
+  const panels = document.querySelectorAll('.tri-panel');
+  if (!panels.length) return;
 
-  const SECTION_SIZE = 6;
-  let current = 0;
-  let autoTimer = null;
-  const INTERVAL = 4500;
+  const INTERVAL   = 4000;  // ms between advances per panel
+  const STAGGER    = 1400;  // ms offset between panel start times
 
-  function goTo(idx) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = ((idx % slides.length) + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-    const secIdx = Math.floor(current / SECTION_SIZE);
-    sections.forEach((s, i) => s.classList.toggle('active', i === secIdx));
-  }
+  panels.forEach((panel, panelIdx) => {
+    const slides   = panel.querySelectorAll('.tri-pslide');
+    const dotsWrap = panel.querySelector('.tri-panel-dots');
+    if (!slides.length) return;
 
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
-
-  function resetTimer() {
-    clearInterval(autoTimer);
-    autoTimer = setInterval(next, INTERVAL);
-  }
-
-  if (prevBtn) prevBtn.addEventListener('click', () => { prev(); resetTimer(); });
-  if (nextBtn) nextBtn.addEventListener('click', () => { next(); resetTimer(); });
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      goTo(parseInt(dot.dataset.idx, 10));
-      resetTimer();
+    // Build dot indicators
+    slides.forEach((_, i) => {
+      const d = document.createElement('span');
+      d.className = 'tri-pdot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', e => { e.stopPropagation(); goTo(i); });
+      dotsWrap.appendChild(d);
     });
+
+    let current = 0;
+
+    function goTo(idx) {
+      slides[current].classList.remove('active');
+      dotsWrap.children[current].classList.remove('active');
+      current = (idx + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dotsWrap.children[current].classList.add('active');
+    }
+
+    function next() { goTo(current + 1); }
+
+    // Stagger panel start so they don't all flip at once
+    setTimeout(() => {
+      setInterval(next, INTERVAL);
+    }, panelIdx * STAGGER);
   });
-
-  sections.forEach(sec => {
-    sec.addEventListener('click', () => {
-      goTo(parseInt(sec.dataset.section, 10) * SECTION_SIZE);
-      resetTimer();
-    });
-  });
-
-  // Pause on hover
-  const banner = document.getElementById('imgBanner');
-  if (banner) {
-    banner.addEventListener('mouseenter', () => clearInterval(autoTimer));
-    banner.addEventListener('mouseleave', resetTimer);
-  }
-
-  // Touch / swipe
-  let touchStartX = 0;
-  if (banner) {
-    banner.addEventListener('touchstart', e => {
-      touchStartX = e.touches[0].clientX;
-    }, { passive: true });
-    banner.addEventListener('touchend', e => {
-      const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); resetTimer(); }
-    }, { passive: true });
-  }
-
-  resetTimer();
 })();

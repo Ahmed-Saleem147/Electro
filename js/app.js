@@ -68,15 +68,15 @@ function renderProductCard(product) {
     `<span class="spec-tag">${v}</span>`).join('') : '';
 
   return `
-    <div class="product-card reveal" data-tags="${product.tags.join(',')}" data-id="${product.id}" onclick="openProduct(${product.id})">
+    <div class="product-card reveal" data-tags="${product.tags.join(',')}" data-id="${product.id}" onclick="openProduct('${product.id}')">
       <div class="product-img-wrap">
         ${(product.images && product.images.length) ? `<img src="${product.images[0]}" alt="${product.name}" class="product-img-photo" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=\\'product-img-icon\\'>${product.icon}</div>'">` : `<div class="product-img-icon">${product.icon}</div>`}
         <div class="product-badges">${badge}</div>
         <div class="product-actions">
-          <button class="prod-action-btn${wishlisted}" data-wishlist="${product.id}" title="Add to Wishlist" onclick="event.stopPropagation();toggleWishlist(${product.id})">
+          <button class="prod-action-btn${wishlisted}" data-wishlist="${product.id}" title="Add to Wishlist" onclick="event.stopPropagation();toggleWishlist('${product.id}')">
             <i class="fas fa-heart"></i>
           </button>
-          <button class="prod-action-btn" title="Quick View" onclick="event.stopPropagation();openProduct(${product.id})">
+          <button class="prod-action-btn" title="Quick View" onclick="event.stopPropagation();openProduct('${product.id}')">
             <i class="fas fa-eye"></i>
           </button>
         </div>
@@ -191,10 +191,10 @@ function showProductModal(p) {
             </div>
           </div>
           <div class="detail-actions">
-            <button class="btn-primary" onclick="addToCart(${p.id},parseInt(document.getElementById('modalQty').value)||1);this.closest('.modal').remove()">
+            <button class="btn-primary" onclick="addToCart('${p.id}',parseInt(document.getElementById('modalQty').value)||1);this.closest('.modal').remove()">
               <i class="fas fa-shopping-cart"></i> Add to Cart
             </button>
-            <button class="btn-outline" onclick="toggleWishlist(${p.id})">
+            <button class="btn-outline" onclick="toggleWishlist('${p.id}')">
               <i class="fas fa-heart"></i>
             </button>
           </div>
@@ -291,20 +291,22 @@ function renderFlashProducts() {
   const grid = document.getElementById('flashProducts');
   if (!grid) return;
   grid.innerHTML = FLASH_PRODUCTS.map(fp => {
-    const full = PRODUCTS.find(p => p.id === fp.id);
-    const imgHtml = full && full.images && full.images.length
-      ? `<img src="${full.images[0]}" alt="${fp.name}" class="flash-product-img" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=\\'flash-product-icon\\'>${fp.icon}</div>'">`
-      : `<div class="flash-product-icon">${fp.icon}</div>`;
+    const p = PRODUCTS.find(x => x.id === fp.id);
+    if (!p) return '';
+    const imgHtml = p.images && p.images.length
+      ? `<img src="${p.images[0]}" alt="${p.name}" class="flash-product-img" loading="lazy" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=\\'flash-product-icon\\'>${p.icon}</div>'">`
+      : `<div class="flash-product-icon">${p.icon}</div>`;
+    const soldPct = Math.floor(Math.random() * 40 + 20);
     return `
-    <div class="flash-product-card" onclick="openProduct(${fp.id})">
+    <div class="flash-product-card" onclick="openProduct('${p.id}')">
       ${imgHtml}
-      <div class="flash-product-name">${fp.name}</div>
-      <div class="flash-product-price">${fmt(fp.price)}</div>
-      <div class="flash-product-old">${fmt(fp.oldPrice)}</div>
+      <div class="flash-product-name">${p.name}</div>
+      <div class="flash-product-price">${fmt(p.price)}</div>
+      <div class="flash-product-old">${fmt(p.oldPrice || p.price)}</div>
       <div class="flash-save">Save ${fp.discount}%</div>
       <div class="flash-progress">
-        <div class="flash-progress-bar"><div class="flash-progress-fill" style="width:${fp.soldPct}%"></div></div>
-        <div class="flash-sold">${fp.soldPct}% sold</div>
+        <div class="flash-progress-bar"><div class="flash-progress-fill" style="width:${soldPct}%"></div></div>
+        <div class="flash-sold">${soldPct}% sold</div>
       </div>
     </div>`;
   }).join('');
@@ -533,7 +535,7 @@ function initSearch() {
 function handleSearchSelect(type, id, text) {
   const el = document.getElementById('searchSuggestions');
   if (el) el.classList.remove('active');
-  if (type === 'product') openProduct(parseInt(id));
+  if (type === 'product') openProduct(id);
   else if (type === 'category') window.location.href = `shop.html?cat=${id}`;
   else if (type === 'brand') window.location.href = `shop.html?brand=${id}`;
 }

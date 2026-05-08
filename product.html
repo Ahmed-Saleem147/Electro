@@ -402,8 +402,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Read product ID from URL
   const params = new URLSearchParams(window.location.search);
-  const pid = parseInt(params.get('id'));
-  const p = PRODUCTS.find(x => x.id === pid);
+  const pid = params.get('id');
+  const p = PRODUCTS.find(x => String(x.id) === pid);
 
   if (!p) {
     document.getElementById('ppNotFound').style.display = 'block';

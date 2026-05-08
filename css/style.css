@@ -720,12 +720,22 @@ input, select, textarea { font-family: inherit; }
   transition: opacity 0.9s ease;
 }
 .tri-pslide.active { opacity: 1; }
+/* Blurred backdrop fills the gaps around the main image */
+.tri-slide-bg {
+  position: absolute;
+  inset: -30px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(18px) brightness(0.55);
+  z-index: 0;
+}
 .tri-pslide img {
+  position: relative;
+  z-index: 1;
   width: 100%; height: 100%;
   object-fit: contain;
   object-position: center;
   display: block;
-  background: #111;
 }
 /* Subtle hover zoom */
 .tri-panel:hover .tri-pslide.active img {

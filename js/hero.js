@@ -1,20 +1,32 @@
 /* ================================================================
    ORBIVA – 3-PANEL IMAGE BANNER
    Each panel independently cycles through its 6 images.
-   Panels are staggered so they don't change simultaneously.
+   Blurred backdrop fills the letterbox/pillarbox gaps.
 ================================================================ */
 
 (function () {
   const panels = document.querySelectorAll('.tri-panel');
   if (!panels.length) return;
 
-  const INTERVAL   = 4000;  // ms between advances per panel
-  const STAGGER    = 1400;  // ms offset between panel start times
+  const INTERVAL = 4000;
+  const STAGGER  = 1400;
 
   panels.forEach((panel, panelIdx) => {
     const slides   = panel.querySelectorAll('.tri-pslide');
     const dotsWrap = panel.querySelector('.tri-panel-dots');
     if (!slides.length) return;
+
+    // Inject blurred backdrop behind each slide's image
+    slides.forEach(slide => {
+      const img = slide.querySelector('img');
+      if (!img) return;
+      const bg = document.createElement('div');
+      bg.className = 'tri-slide-bg';
+      // Use the same src; set after img loads to avoid FOUT
+      const setSrc = () => { bg.style.backgroundImage = `url('${img.src}')`; };
+      img.complete ? setSrc() : img.addEventListener('load', setSrc);
+      slide.insertBefore(bg, img);
+    });
 
     // Build dot indicators
     slides.forEach((_, i) => {
@@ -36,9 +48,6 @@
 
     function next() { goTo(current + 1); }
 
-    // Stagger panel start so they don't all flip at once
-    setTimeout(() => {
-      setInterval(next, INTERVAL);
-    }, panelIdx * STAGGER);
+    setTimeout(() => setInterval(next, INTERVAL), panelIdx * STAGGER);
   });
 })();

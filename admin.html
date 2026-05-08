@@ -1000,8 +1000,8 @@ function renderTable(){
       <td><div class="price-main">${fmt(p.price)}</div>${p.oldPrice?`<div class="price-old">${fmt(p.oldPrice)}</div>`:''}</td>
       <td>${img?'<span style="color:var(--success);font-size:12px"><i class="fas fa-check-circle"></i></span>':'<span style="color:var(--muted);font-size:12px">—</span>'}</td>
       <td><div class="actions-cell">
-        <button class="btn btn-outline btn-sm" onclick="openEditModal(${p.id})"><i class="fas fa-edit"></i></button>
-        <button class="btn btn-danger btn-sm" onclick="confirmAction('Delete product?','Cannot be undone.',()=>deleteProduct(${p.id}))"><i class="fas fa-trash"></i></button>
+        <button class="btn btn-outline btn-sm" onclick="openEditModal('${p.id}')"><i class="fas fa-edit"></i></button>
+        <button class="btn btn-danger btn-sm" onclick="confirmAction('Delete product?','Cannot be undone.',()=>deleteProduct('${p.id}'))"><i class="fas fa-trash"></i></button>
       </div></td>
     </tr>`;}).join('')
     :'<tr><td colspan="7" style="text-align:center;padding:40px;color:var(--muted)">No products found</td></tr>';
@@ -1143,7 +1143,7 @@ function saveProduct(){
     toast('Updated!','ok');
   } else {
     const adds=lsGet('obv_prod_adds',[]);
-    product.id=Date.now();product.reviews=Math.floor(Math.random()*200+50);
+    product.id='admin-'+Date.now();product.reviews=Math.floor(Math.random()*200+50);
     adds.push(product);lsSet('obv_prod_adds',adds);sbPush('obv_prod_adds');
     logHistory({type:'add',label:'Added: '+product.name,undoData:{productId:product.id}});
     toast('Product added!','ok');
@@ -1203,7 +1203,7 @@ function importProductsCSV(input){
       let updated=0,skipped=0;
       for(let i=1;i<lines.length;i++){
         const cols=parseCSVLine(lines[i]);
-        const id=parseInt(cols[iId]);
+        const id=String(cols[iId]||'').trim();
         const newPrice=parseFloat(cols[iPr]);
         if(!id||isNaN(newPrice)){skipped++;continue;}
         const prod=adminProds.find(p=>p.id===id);

@@ -101,13 +101,13 @@ function updateCartUI() {
           <div class="cart-item-brand">${item.brand}</div>
           <div class="cart-item-price">${fmt(item.price)}</div>
           <div class="cart-item-qty">
-            <button class="qty-btn" onclick="updateCartQty(${item.id}, -1)">−</button>
+            <button class="qty-btn" onclick="updateCartQty('${item.id}', -1)">−</button>
             <span class="qty-num">${item.qty}</span>
-            <button class="qty-btn" onclick="updateCartQty(${item.id}, 1)">+</button>
+            <button class="qty-btn" onclick="updateCartQty('${item.id}', 1)">+</button>
             <span style="margin-left:auto;font-size:13px;font-weight:700;color:var(--primary)">${fmt(item.price * item.qty)}</span>
           </div>
         </div>
-        <button class="cart-item-remove" onclick="removeFromCart(${item.id})" title="Remove"><i class="fas fa-times"></i></button>
+        <button class="cart-item-remove" onclick="removeFromCart('${item.id}')" title="Remove"><i class="fas fa-times"></i></button>
       </li>
     `).join('');
   }
@@ -184,15 +184,15 @@ function updateWishlistUI() {
             ${item.oldPrice ? `<span class="product-old-price" style="font-size:12px;margin-left:8px">${fmt(item.oldPrice)}</span>` : ''}
           </div>
           <div class="cart-item-qty" style="margin-top:8px">
-            <button class="qty-btn" onclick="addToCart(${item.id})" style="background:var(--primary);color:#fff;width:auto;padding:0 10px;border-radius:var(--radius-full)">
+            <button class="qty-btn" onclick="addToCart('${item.id}')" style="background:var(--primary);color:#fff;width:auto;padding:0 10px;border-radius:var(--radius-full)">
               <i class="fas fa-cart-plus"></i> Add to Cart
             </button>
-            <button class="qty-btn" onclick="toggleWishlist(${item.id})" style="color:var(--accent)" title="Remove from wishlist">
+            <button class="qty-btn" onclick="toggleWishlist('${item.id}')" style="color:var(--accent)" title="Remove from wishlist">
               <i class="fas fa-trash"></i>
             </button>
           </div>
         </div>
-        <button class="cart-item-remove" onclick="toggleWishlist(${item.id})" title="Remove"><i class="fas fa-times"></i></button>
+        <button class="cart-item-remove" onclick="toggleWishlist('${item.id}')" title="Remove"><i class="fas fa-times"></i></button>
       </li>
     `).join('');
   }
@@ -200,7 +200,7 @@ function updateWishlistUI() {
 
 function updateWishlistButtons() {
   document.querySelectorAll('.prod-action-btn[data-wishlist]').forEach(btn => {
-    const id = parseInt(btn.getAttribute('data-wishlist'));
+    const id = btn.getAttribute('data-wishlist');
     if (isWishlisted(id)) {
       btn.classList.add('wishlisted');
       btn.title = 'Remove from Wishlist';

@@ -56,6 +56,18 @@ function initShopPage() {
   if (filter === 'deals' || filter === 'flash') filtered = filtered.filter(p => p.flashSale || p.discount >= 25);
   if (filter === 'clearance') filtered = filtered.filter(p => p.discount >= 30);
 
+  // Admin-added products (obv_prod_adds) always float to the top
+  const addedIds = new Set(
+    JSON.parse(localStorage.getItem('obv_prod_adds') || '[]').map(p => String(p.id))
+  );
+  if (addedIds.size) {
+    filtered.sort((a, b) => {
+      const aNew = addedIds.has(String(a.id)) ? 1 : 0;
+      const bNew = addedIds.has(String(b.id)) ? 1 : 0;
+      return bNew - aNew;
+    });
+  }
+
   renderShopGrid(filtered);
   setupShopFilters(filtered, sub);
   updateResultCount(filtered.length);
@@ -123,6 +135,7 @@ function setupShopFilters(initialProducts, sub) {
   const sortSelect = document.getElementById('shopSort');
   const priceRange = document.getElementById('priceRange');
   const priceLabel = document.getElementById('priceLabelValue');
+  const priceMax   = document.getElementById('priceLabelMax');
 
   let currentProducts = [...PRODUCTS];
   const { cat, brand, q } = getUrlParams();
@@ -130,6 +143,19 @@ function setupShopFilters(initialProducts, sub) {
   if (brand) currentProducts = currentProducts.filter(p => p.brandId === brand);
   if (q)     currentProducts = currentProducts.filter(p => p.name.toLowerCase().includes(q.toLowerCase()));
   if (sub)   currentProducts = applySubFilter(currentProducts, sub);
+
+  // Set price range max dynamically from actual product prices
+  if (priceRange && currentProducts.length) {
+    const maxPrice = Math.max(...currentProducts.map(p => p.price));
+    const roundedMax = Math.ceil(maxPrice / 1000) * 1000;
+    priceRange.max   = roundedMax;
+    priceRange.value = roundedMax;
+    if (priceLabel) priceLabel.textContent = fmt(roundedMax);
+    if (priceMax)   priceMax.textContent   = fmt(roundedMax);
+    // Also update the static label in the sidebar
+    const priceLabelMin = document.querySelector('.price-labels span:last-child');
+    if (priceLabelMin) priceLabelMin.textContent = fmt(roundedMax);
+  }
 
   function applyFilters() {
     let filtered = [...currentProducts];
@@ -152,14 +178,22 @@ function setupShopFilters(initialProducts, sub) {
     const minRating = parseFloat(document.querySelector('input[name="rating"]:checked')?.value || 0);
     if (minRating) filtered = filtered.filter(p => p.rating >= minRating);
 
-    // Sort
+    // Sort — newest = products added via admin come first (obv_prod_adds), then by index
     if (sortSelect) {
+      const adds = JSON.parse(localStorage.getItem('obv_prod_adds') || '[]');
+      const addedIds = new Set(adds.map(p => String(p.id)));
       switch (sortSelect.value) {
-        case 'price-asc': filtered.sort((a, b) => a.price - b.price); break;
+        case 'price-asc':  filtered.sort((a, b) => a.price - b.price); break;
         case 'price-desc': filtered.sort((a, b) => b.price - a.price); break;
-        case 'rating': filtered.sort((a, b) => b.rating - a.rating); break;
-        case 'discount': filtered.sort((a, b) => b.discount - a.discount); break;
-        case 'newest': filtered.sort((a, b) => b.id - a.id); break;
+        case 'rating':     filtered.sort((a, b) => (b.rating||0) - (a.rating||0)); break;
+        case 'discount':   filtered.sort((a, b) => (b.discount||0) - (a.discount||0)); break;
+        case 'newest':
+          filtered.sort((a, b) => {
+            const aNew = addedIds.has(String(a.id)) ? 1 : 0;
+            const bNew = addedIds.has(String(b.id)) ? 1 : 0;
+            return bNew - aNew;
+          });
+          break;
       }
     }
 

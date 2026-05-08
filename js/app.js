@@ -94,7 +94,7 @@ function renderProductCard(product) {
           <span class="product-price">${fmt(product.price)}</span>
           <div style="display:flex;align-items:center;gap:6px">${oldPriceStr}${discountStr}</div>
         </div>
-        <button class="add-to-cart-btn" onclick="event.stopPropagation();handleAddToCart(this,${product.id})">
+        <button class="add-to-cart-btn" onclick="event.stopPropagation();handleAddToCart(this,'${product.id}')">
           <i class="fas fa-shopping-cart"></i> Add to Cart
         </button>
       </div>

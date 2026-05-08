@@ -3,6 +3,9 @@
    Base = mobile, scale up with min-width breakpoints
 ================================================================ */
 
+/* Hide free delivery banner instantly before JS runs */
+html[data-no-delivery] .free-delivery-banner { display: none !important; }
+
 /* ── Variables ── */
 :root {
   --primary: #1d4ed8;

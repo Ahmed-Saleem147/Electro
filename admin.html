@@ -129,6 +129,12 @@ textarea{resize:vertical;min-height:70px}
 .img-upload-area:hover{border-color:var(--primary);background:#f0f7ff}
 .img-preview{width:100px;height:100px;border-radius:8px;object-fit:contain;border:1px solid var(--border);background:#f8fafc;margin:0 auto 10px;display:block}
 .upload-hint{font-size:13px;color:var(--muted)}
+.img-slot{display:grid;grid-template-columns:60px 1fr auto auto;gap:8px;align-items:center;background:#f8fafc;border:1.5px solid var(--border);border-radius:10px;padding:8px;margin-bottom:8px}
+.img-slot-thumb{width:52px;height:52px;border-radius:7px;background:#f1f5f9;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;font-size:11px;font-weight:700;color:#94a3b8}
+.img-slot-thumb img{width:100%;height:100%;object-fit:contain;display:none}
+.img-slot-thumb img.loaded{display:block}
+.img-slot:first-child{border-color:var(--primary);background:#f0f7ff}
+.img-slot:first-child .img-slot-thumb{background:#dbeafe}
 .spec-row{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-bottom:8px;align-items:center}
 .spec-row input{margin:0}
 .del-spec{padding:7px;border:none;background:none;cursor:pointer;color:#ef4444;font-size:13px}
@@ -477,14 +483,9 @@ textarea{resize:vertical;min-height:70px}
         <div class="form-group"><label>Selling Price (GH₵)</label><input type="number" id="f_price" min="1"></div>
         <div class="form-group"><label>Original Price (blank = no promo)</label><input type="number" id="f_oldPrice" min="1"></div>
         <div class="form-group full">
-          <label>Product Image</label>
-          <div class="img-upload-area" onclick="document.getElementById('imgFileInput').click()">
-            <img id="imgPreview" class="img-preview" src="" style="display:none" alt="">
-            <i class="fas fa-cloud-upload-alt" style="font-size:26px;color:#94a3b8;margin-bottom:6px"></i>
-            <div class="upload-hint">Click to upload, or paste URL below</div>
-            <input type="file" id="imgFileInput" accept="image/*" style="display:none" onchange="handleImgUpload(this)">
-          </div>
-          <input type="text" id="f_image" placeholder="Or paste image URL" oninput="previewUrl(this.value)" style="margin-top:8px">
+          <label>Product Images <span style="font-weight:400;color:var(--muted);font-size:12px">— up to 5, first image is the main photo</span></label>
+          <div id="imgSlotList"></div>
+          <button type="button" class="add-spec-btn" id="addImgBtn" onclick="addImageSlot()"><i class="fas fa-plus"></i> Add Another Image</button>
         </div>
         <div class="form-group full"><label>Description</label><textarea id="f_description" placeholder="Brief product description..."></textarea></div>
         <div class="form-group">
@@ -1032,9 +1033,10 @@ function populateBrandSelect(selected=''){
 function openAddModal(){
   editingId=null;
   document.getElementById('modalTitle').textContent='Add Product';
-  ['f_name','f_model','f_price','f_oldPrice','f_description','f_image'].forEach(id=>document.getElementById(id).value='');
+  ['f_name','f_model','f_price','f_oldPrice','f_description'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('f_badge').value='';document.getElementById('f_rating').value=4.5;
-  document.getElementById('specsContainer').innerHTML='';document.getElementById('imgPreview').style.display='none';
+  document.getElementById('specsContainer').innerHTML='';
+  clearImageSlots();addImageSlot();
   populateBrandSelect();
   document.getElementById('productModal').classList.add('open');
 }
@@ -1046,22 +1048,59 @@ function openEditModal(id){
   document.getElementById('f_price').value=p.price;document.getElementById('f_oldPrice').value=p.oldPrice||'';
   document.getElementById('f_description').value=p.description||'';document.getElementById('f_badge').value=p.badge||'';
   document.getElementById('f_rating').value=p.rating||4.5;
-  const imgVal=(p.images&&p.images[0])||'';
-  document.getElementById('f_image').value=imgVal;
   document.getElementById('f_name').value=p.name;
-  const prev=document.getElementById('imgPreview');
-  if(imgVal){prev.src=imgVal;prev.style.display='block';}else prev.style.display='none';
   document.getElementById('specsContainer').innerHTML='';
   if(p.specs)Object.entries(p.specs).forEach(([k,v])=>addSpecRow(k,v));
+  clearImageSlots();
+  const imgs=(p.images&&p.images.length)?p.images:[''];
+  imgs.forEach(url=>addImageSlot(url));
   populateBrandSelect(p.brand);
   document.getElementById('productModal').classList.add('open');
 }
-function previewUrl(url){const p=document.getElementById('imgPreview');if(url){p.src=url;p.style.display='block';}else p.style.display='none';}
-function handleImgUpload(input){
+
+/* ── Multi-image slots ── */
+function clearImageSlots(){document.getElementById('imgSlotList').innerHTML='';}
+function addImageSlot(url=''){
+  const list=document.getElementById('imgSlotList');
+  if(list.children.length>=5){toast('Maximum 5 images per product','info');return;}
+  const idx=list.children.length;
+  const slot=document.createElement('div');
+  slot.className='img-slot';
+  slot.innerHTML=`
+    <div class="img-slot-thumb"><img src="" alt="" onload="this.classList.add('loaded')" onerror="this.classList.remove('loaded')"><span>${idx+1}</span></div>
+    <input type="text" class="img-slot-url" placeholder="Paste image URL or upload →" value="${escHtml(url)}" oninput="slotUrlChange(this)">
+    <label class="btn btn-outline btn-sm" style="cursor:pointer;white-space:nowrap"><i class="fas fa-upload"></i> Upload<input type="file" accept="image/*" style="display:none" onchange="slotFileUpload(this)"></label>
+    <button type="button" class="del-spec" onclick="removeImageSlot(this)" title="Remove"><i class="fas fa-times"></i></button>`;
+  list.appendChild(slot);
+  if(url)slotUrlChange(slot.querySelector('.img-slot-url'));
+  refreshSlotNumbers();
+}
+function removeImageSlot(btn){
+  btn.closest('.img-slot').remove();
+  refreshSlotNumbers();
+  if(document.getElementById('imgSlotList').children.length===0)addImageSlot();
+}
+function refreshSlotNumbers(){
+  document.querySelectorAll('#imgSlotList .img-slot').forEach((slot,i)=>{
+    slot.querySelector('span').textContent=i+1;
+  });
+}
+function slotUrlChange(input){
+  const img=input.closest('.img-slot').querySelector('.img-slot-thumb img');
+  const url=input.value.trim();
+  img.src=url||'';
+  img.classList.toggle('loaded',!!url);
+}
+function slotFileUpload(input){
   const file=input.files[0];if(!file)return;
+  const urlInput=input.closest('.img-slot').querySelector('.img-slot-url');
   const reader=new FileReader();
-  reader.onload=e=>{document.getElementById('f_image').value=e.target.result;previewUrl(e.target.result);toast('Image ready!','ok');};
+  reader.onload=e=>{urlInput.value=e.target.result;slotUrlChange(urlInput);toast('Image ready!','ok');};
   reader.readAsDataURL(file);
+}
+function getImageSlotUrls(){
+  return Array.from(document.querySelectorAll('#imgSlotList .img-slot-url'))
+    .map(i=>i.value.trim()).filter(Boolean);
 }
 function addSpecRow(key='',val=''){
   const c=document.getElementById('specsContainer'),row=document.createElement('div');
@@ -1085,10 +1124,9 @@ function saveProduct(){
     const k=row.querySelector('.spec-key').value.trim(),v=row.querySelector('.spec-val').value.trim();
     if(k&&v)specs[k]=v;
   });
-  const imgVal=document.getElementById('f_image').value.trim();
   const product={name,brand,brandId:brand.toLowerCase().replace(/\s+/g,''),
     model:document.getElementById('f_model').value.trim(),category:cat,
-    images:imgVal?[imgVal]:[],
+    images:getImageSlotUrls(),
     price,rating:parseFloat(document.getElementById('f_rating').value)||4.5,
     icon:cIcons[cat]||'📦',tags:[brand.toLowerCase().replace(/\s+/g,''),cat],
     description:document.getElementById('f_description').value.trim(),

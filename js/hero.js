@@ -1,6 +1,6 @@
 /* ================================================================
    ORBIVA – 3-PANEL IMAGE BANNER
-   Each panel independently cycles through its 6 images.
+   All panels advance simultaneously on a single shared timer.
    Blurred backdrop fills the letterbox/pillarbox gaps.
 ================================================================ */
 
@@ -9,9 +9,11 @@
   if (!panels.length) return;
 
   const INTERVAL = 4000;
-  const STAGGER  = 1400;
 
-  panels.forEach((panel, panelIdx) => {
+  // Build state for each panel
+  const states = [];
+
+  panels.forEach(panel => {
     const slides   = panel.querySelectorAll('.tri-pslide');
     const dotsWrap = panel.querySelector('.tri-panel-dots');
     if (!slides.length) return;
@@ -22,32 +24,34 @@
       if (!img) return;
       const bg = document.createElement('div');
       bg.className = 'tri-slide-bg';
-      // Use the same src; set after img loads to avoid FOUT
       const setSrc = () => { bg.style.backgroundImage = `url('${img.src}')`; };
       img.complete ? setSrc() : img.addEventListener('load', setSrc);
       slide.insertBefore(bg, img);
     });
 
     // Build dot indicators
+    const state = { slides, dotsWrap, current: 0 };
+
     slides.forEach((_, i) => {
       const d = document.createElement('span');
       d.className = 'tri-pdot' + (i === 0 ? ' active' : '');
-      d.addEventListener('click', e => { e.stopPropagation(); goTo(i); });
+      d.addEventListener('click', e => { e.stopPropagation(); goTo(state, i); });
       dotsWrap.appendChild(d);
     });
 
-    let current = 0;
-
-    function goTo(idx) {
-      slides[current].classList.remove('active');
-      dotsWrap.children[current].classList.remove('active');
-      current = (idx + slides.length) % slides.length;
-      slides[current].classList.add('active');
-      dotsWrap.children[current].classList.add('active');
-    }
-
-    function next() { goTo(current + 1); }
-
-    setTimeout(() => setInterval(next, INTERVAL), panelIdx * STAGGER);
+    states.push(state);
   });
+
+  function goTo(state, idx) {
+    state.slides[state.current].classList.remove('active');
+    state.dotsWrap.children[state.current].classList.remove('active');
+    state.current = (idx + state.slides.length) % state.slides.length;
+    state.slides[state.current].classList.add('active');
+    state.dotsWrap.children[state.current].classList.add('active');
+  }
+
+  // Single timer — all panels advance together
+  setInterval(() => {
+    states.forEach(s => goTo(s, s.current + 1));
+  }, INTERVAL);
 })();

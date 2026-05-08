@@ -1171,8 +1171,8 @@ function csvField(v){
 }
 function exportProductsCSV(){
   const prods=getAdminProducts();
-  const header=['id','name','brand','category','price','old_price','discount'];
-  const rows=prods.map(p=>[p.id,csvField(p.name),csvField(p.brand),p.category,p.price,p.oldPrice||'',p.discount||'']);
+  const header=['id','model','name','brand','category','price','old_price','discount'];
+  const rows=prods.map(p=>[p.id,csvField(p.model||''),csvField(p.name),csvField(p.brand),p.category,p.price,p.oldPrice||'',p.discount||'']);
   const csv=[header.join(','),...rows.map(r=>r.join(','))].join('\n');
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));

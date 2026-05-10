@@ -425,13 +425,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function fmt(n) { return 'GH₵ ' + (n || 0).toLocaleString(); }
 
-  // Stars
-  const stars = Array.from({ length: 5 }, (_, i) =>
-    i < Math.floor(p.rating)
-      ? '<i class="fas fa-star"></i>'
-      : (i < p.rating ? '<i class="fas fa-star-half-alt"></i>' : '<i class="far fa-star"></i>')
-  ).join('');
-
   // Specs
   const specsHtml = p.specs ? Object.entries(p.specs).map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('') : '';
 
@@ -476,10 +469,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="pp-brand-badge">${p.brand}</div>
       <h1 class="pp-name">${p.name}</h1>
       ${p.model ? `<div style="font-size:13px;color:var(--text-muted);font-weight:500;margin-bottom:10px">Model: <strong style="color:var(--text-body)">${p.model}</strong></div>` : ''}
-      ${localStorage.getItem('obv_reviews')==='on'?`<div class="pp-rating">
-        <div class="pp-stars">${stars}</div>
-        <span class="pp-review-count">(${p.reviews.toLocaleString()} reviews)</span>
-      </div>`:''}
       <p class="pp-desc">${p.description || ''}</p>
       <div class="pp-price-row">
         <span class="pp-price">${fmt(p.price)}</span>

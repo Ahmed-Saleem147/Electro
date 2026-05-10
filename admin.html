@@ -413,16 +413,6 @@ textarea{resize:vertical;min-height:70px}
             <span class="toggle-slider"></span>
           </label>
         </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0">
-          <div>
-            <div style="font-size:13px;font-weight:600">Customer Reviews</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:3px">Show star ratings and the testimonials section on the site</div>
-          </div>
-          <label class="toggle-wrap">
-            <input type="checkbox" id="t_reviews" onchange="saveDisplaySettings()">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
       </div>
       <div class="settings-section">
         <h3><i class="fas fa-lock" style="color:var(--warn)"></i> Change Admin Password</h3>
@@ -1289,15 +1279,13 @@ function loadDisplaySettings(){
   document.getElementById('t_flashSale').checked=localStorage.getItem('obv_flashSale')==='on';
   document.getElementById('t_badges').checked=localStorage.getItem('obv_badges')==='on';
   document.getElementById('t_freeDelivery').checked=localStorage.getItem('obv_freeDelivery')!=='off';
-  document.getElementById('t_reviews').checked=localStorage.getItem('obv_reviews')==='on';
 }
 function saveDisplaySettings(){
-  const prev={flashSale:localStorage.getItem('obv_flashSale'),badges:localStorage.getItem('obv_badges'),freeDelivery:localStorage.getItem('obv_freeDelivery'),reviews:localStorage.getItem('obv_reviews')};
+  const prev={flashSale:localStorage.getItem('obv_flashSale'),badges:localStorage.getItem('obv_badges'),freeDelivery:localStorage.getItem('obv_freeDelivery')};
   localStorage.setItem('obv_flashSale',document.getElementById('t_flashSale').checked?'on':'off');
   localStorage.setItem('obv_badges',document.getElementById('t_badges').checked?'on':'off');
   localStorage.setItem('obv_freeDelivery',document.getElementById('t_freeDelivery').checked?'on':'off');
-  localStorage.setItem('obv_reviews',document.getElementById('t_reviews').checked?'on':'off');
-  sbPush('obv_flashSale');sbPush('obv_badges');sbPush('obv_freeDelivery');sbPush('obv_reviews');
+  sbPush('obv_flashSale');sbPush('obv_badges');sbPush('obv_freeDelivery');
   logHistory({type:'display',label:'Display settings changed',undoData:prev});
   toast('Display settings saved!','ok');
 }
@@ -1422,7 +1410,6 @@ function undoHistory(id){
     if(u.flashSale!==null){localStorage.setItem('obv_flashSale',u.flashSale||'off');sbPush('obv_flashSale');}
     if(u.badges!==null){localStorage.setItem('obv_badges',u.badges||'off');sbPush('obv_badges');}
     if(u.freeDelivery!==null){localStorage.setItem('obv_freeDelivery',u.freeDelivery||'on');sbPush('obv_freeDelivery');}
-    if(u.reviews!==null&&u.reviews!==undefined){localStorage.setItem('obv_reviews',u.reviews||'off');sbPush('obv_reviews');}
   } else if(entry.type==='brand_add'){
     lsSet('obv_brand_adds',lsGet('obv_brand_adds',[]).filter(b=>b.id!==u.brandId));sbPush('obv_brand_adds');
   } else if(entry.type==='brand_delete'){

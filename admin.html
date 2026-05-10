@@ -237,7 +237,6 @@ textarea{resize:vertical;min-height:70px}
       <div class="nav-section" style="margin-top:8px">Catalog</div>
       <div class="nav-item" onclick="showPage('products')" id="nav-products"><i class="fas fa-box"></i> Products</div>
       <div class="nav-item" onclick="showPage('images')" id="nav-images"><i class="fas fa-images"></i> Image Library</div>
-      <div class="nav-section" style="margin-top:8px">Catalog</div>
       <div class="nav-item" onclick="showPage('brands')" id="nav-brands"><i class="fas fa-copyright"></i> Brands</div>
       <div class="nav-section" style="margin-top:8px">Admin</div>
       <div class="nav-item" onclick="showPage('history')" id="nav-history"><i class="fas fa-history"></i> Change History</div>
@@ -328,8 +327,6 @@ textarea{resize:vertical;min-height:70px}
         </select>
         <select class="filter-sel" id="filterBrand" onchange="filterProducts()">
           <option value="">All Brands</option>
-          <option value="samsung">Samsung</option><option value="tcl">TCL</option>
-          <option value="midea">Midea</option><option value="nasco">NASCO</option>
         </select>
         <select class="filter-sel" id="filterImg" onchange="filterProducts()">
           <option value="">All Products</option>
@@ -670,7 +667,7 @@ function showPage(page) {
   if (page==='dashboard') renderDashboard();
   if (page==='orders')    { filteredOrders=[...ORDERS].reverse(); renderOrdersTable(); }
   if (page==='deals')     { populateDealBrandSelect(); renderDeals(); }
-  if (page==='products')  { filtered=[...adminProds]; renderTable(); }
+  if (page==='products')  { populateFilterBrand(); filtered=[...adminProds]; renderTable(); }
   if (page==='images')    loadImages();
   if (page==='brands')    renderBrands();
   if (page==='history')   renderHistory();
@@ -687,6 +684,7 @@ let editingId=null, editingDealId=null;
 async function init() {
   await (window.obvSyncPromise || Promise.resolve());
   loadProducts(); loadOrders(); loadDeals();
+  populateFilterBrand();
   renderDashboard(); updatePendingBadge();
   setInterval(()=>{ loadOrders(); updatePendingBadge(); }, 30000);
 }
@@ -851,7 +849,7 @@ function openOrderModal(id) {
 function updateOrderStatus(id,status) {
   const orders=lsGet('obv_orders',[]);
   const o=orders.find(x=>x.id===id);
-  if(o){ o.status=status; lsSet('obv_orders',orders); }
+  if(o){ o.status=status; lsSet('obv_orders',orders); sbPush('obv_orders'); }
   toast('Order #'+id+' → '+statusLabel(status),'ok');
   loadOrders(); updatePendingBadge(); renderOrdersTable(); renderDashboard(); openOrderModal(id);
 }
@@ -859,11 +857,12 @@ function addOrderNote(id) {
   const note=document.getElementById('orderNoteInput').value.trim(); if(!note) return;
   const orders=lsGet('obv_orders',[]);
   const o=orders.find(x=>x.id===id);
-  if(o){ o.notes=o.notes?o.notes+'\n'+note:note; lsSet('obv_orders',orders); }
+  if(o){ o.notes=o.notes?o.notes+'\n'+note:note; lsSet('obv_orders',orders); sbPush('obv_orders'); }
   loadOrders(); toast('Note added','ok'); openOrderModal(id);
 }
 function deleteOrder(id) {
   lsSet('obv_orders',lsGet('obv_orders',[]).filter(o=>o.id!==id));
+  sbPush('obv_orders');
   toast('Order deleted','ok'); loadOrders(); filterOrders(); updatePendingBadge(); renderDashboard();
 }
 function openAddOrderModal(){document.getElementById('addOrderModal').classList.add('open');}
@@ -878,7 +877,7 @@ function saveManualOrder() {
   const maxId=orders.length?Math.max(...orders.map(o=>o.id)):1000;
   orders.push({id:maxId+1,customerName:name,phone,deliveryArea:document.getElementById('ao_area').value.trim(),
     items:items||[],total,notes:document.getElementById('ao_notes').value.trim(),status:'pending',createdAt:new Date().toISOString()});
-  lsSet('obv_orders',orders);
+  lsSet('obv_orders',orders); sbPush('obv_orders');
   toast('Order saved!','ok'); closeModal('addOrderModal');
   ['ao_name','ao_phone','ao_area','ao_items','ao_notes'].forEach(id=>document.getElementById(id).value='');
   loadOrders(); filteredOrders=[...ORDERS].reverse(); renderOrdersTable(); updatePendingBadge(); renderDashboard();
@@ -1023,6 +1022,11 @@ function getAllBrands(){
   const adds=lsGet('obv_brand_adds',[]);
   const dels=new Set(lsGet('obv_brand_dels',[]));
   return [...base.filter(b=>!dels.has(b.id)),...adds];
+}
+function populateFilterBrand(){
+  const sel=document.getElementById('filterBrand');if(!sel)return;
+  const cur=sel.value;
+  sel.innerHTML='<option value="">All Brands</option>'+getAllBrands().map(b=>`<option value="${b.id}"${b.id===cur?' selected':''}>${escHtml(b.name)}</option>`).join('');
 }
 function populateBrandSelect(selected=''){
   const sel=document.getElementById('f_brand');

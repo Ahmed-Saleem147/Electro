@@ -50,7 +50,7 @@ function applyOverrides() {
 }
 
 /* ── Product card renderer ── */
-const CAT_NAMES = { tv: 'Televisions', ac: 'Air Conditioners', fridge: 'Refrigerators', laundry: 'Washing Machines', kitchen: 'Kitchen Appliances', small: 'Small Appliances' };
+const CAT_NAMES = { tv: 'Televisions', ac: 'Air Conditioners', fridge: 'Refrigerators', laundry: 'Washing Machines', kitchen: 'Kitchen Appliances', small: 'Small Appliances', phones: 'Phones', tablets: 'Tablets', commercial: 'Commercial Displays' };
 
 function renderProductCard(product) {
   const discountStr = product.oldPrice ? `<span class="product-discount">-${product.discount}%</span>` : '';

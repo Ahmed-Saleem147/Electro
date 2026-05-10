@@ -58,11 +58,19 @@ const CATEGORIES = [
   },
   {
     "id": "phones",
-    "name": "Mobile & Tablets",
+    "name": "Phones",
     "icon": "fas fa-mobile-alt",
-    "count": 5,
+    "count": 3,
     "color": "#fff",
     "bg": "linear-gradient(135deg,#0f172a,#1e293b)"
+  },
+  {
+    "id": "tablets",
+    "name": "Tablets",
+    "icon": "fas fa-tablet-alt",
+    "count": 2,
+    "color": "#fff",
+    "bg": "linear-gradient(135deg,#155e75,#0891b2)"
   },
   {
     "id": "commercial",
@@ -9845,7 +9853,7 @@ const PRODUCTS = [
     "brand": "TCL",
     "brandId": "tcl",
     "model": "TCL-TAB10L-GEN4(64GB) CASE)_8183A2",
-    "category": "phones",
+    "category": "tablets",
     "images": [],
     "price": 1999,
     "rating": 4.5,
@@ -9854,7 +9862,7 @@ const PRODUCTS = [
     "color": "#cc0000",
     "tags": [
       "tcl",
-      "phones"
+      "tablets"
     ],
     "badge": "",
     "description": "",
@@ -9868,7 +9876,7 @@ const PRODUCTS = [
     "brand": "TCL",
     "brandId": "tcl",
     "model": "TCL-TAB11/FE-LTE",
-    "category": "phones",
+    "category": "tablets",
     "images": [],
     "price": 2699,
     "rating": 4.5,
@@ -9877,7 +9885,7 @@ const PRODUCTS = [
     "color": "#cc0000",
     "tags": [
       "tcl",
-      "phones"
+      "tablets"
     ],
     "badge": "",
     "description": "",

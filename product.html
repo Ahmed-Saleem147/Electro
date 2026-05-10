@@ -357,7 +357,7 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <div class="logo"><img src="img/logo.jpeg" alt="Orbiva Technologies" class="logo-img"></div>
-      <p class="footer-about">Ghana's #1 destination for premium electronics.</p>
+      <p class="footer-about">Your Trusted Home Appliance Store in Ghana.</p>
     </div>
     <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Categories</h4><ul id="footerCatLinks"></ul></div>
@@ -476,10 +476,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="pp-brand-badge">${p.brand}</div>
       <h1 class="pp-name">${p.name}</h1>
       ${p.model ? `<div style="font-size:13px;color:var(--text-muted);font-weight:500;margin-bottom:10px">Model: <strong style="color:var(--text-body)">${p.model}</strong></div>` : ''}
-      <div class="pp-rating">
+      ${localStorage.getItem('obv_reviews')==='on'?`<div class="pp-rating">
         <div class="pp-stars">${stars}</div>
         <span class="pp-review-count">(${p.reviews.toLocaleString()} reviews)</span>
-      </div>
+      </div>`:''}
       <p class="pp-desc">${p.description || ''}</p>
       <div class="pp-price-row">
         <span class="pp-price">${fmt(p.price)}</span>
@@ -557,5 +557,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   initMegaBackdrop();
 });
 </script>
+
+<a class="whatsapp-float" href="https://wa.me/233502578905" target="_blank" rel="noopener" title="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 </body>
 </html>

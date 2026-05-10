@@ -395,6 +395,47 @@
 </section>
 
 <!-- ============================================================
+     WHY BUY FROM US
+============================================================ -->
+<section class="why-buy-section">
+  <div class="container">
+    <div class="section-header center-header">
+      <div>
+        <span class="section-tag">Our Promise</span>
+        <h2 class="section-title">Why Buy From Us</h2>
+      </div>
+    </div>
+    <div class="why-buy-grid">
+      <div class="why-buy-card">
+        <div class="why-buy-icon"><i class="fas fa-shield-check"></i></div>
+        <h3>1 Year Warranty</h3>
+        <p>All products come with a full 1-year manufacturer warranty for your peace of mind.</p>
+      </div>
+      <div class="why-buy-card">
+        <div class="why-buy-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Fast Delivery</h3>
+        <p>Quick and reliable delivery across Ghana, straight to your doorstep.</p>
+      </div>
+      <div class="why-buy-card">
+        <div class="why-buy-icon"><i class="fas fa-check-circle"></i></div>
+        <h3>Genuine Products</h3>
+        <p>100% authentic products sourced directly from authorised distributors.</p>
+      </div>
+      <div class="why-buy-card">
+        <div class="why-buy-icon"><i class="fas fa-lock"></i></div>
+        <h3>Secure Payment</h3>
+        <p>Pay safely with MTN MoMo, Visa, Mastercard or cash on delivery.</p>
+      </div>
+      <div class="why-buy-card">
+        <div class="why-buy-icon"><i class="fas fa-headset"></i></div>
+        <h3>Customer Support</h3>
+        <p>Friendly support available via WhatsApp and phone whenever you need help.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      SHOP BY CATEGORY
 ============================================================ -->
 <section class="section categories-section" id="categories">
@@ -589,7 +630,7 @@
 <!-- ============================================================
      TESTIMONIALS
 ============================================================ -->
-<section class="section testimonials-section">
+<section class="section testimonials-section" id="testimonialsSection" style="display:none">
   <div class="container">
     <div class="section-header center-header">
       <div>
@@ -656,7 +697,7 @@
       <div class="logo">
         <img src="img/logo.jpeg" alt="Orbiva Technologies" class="logo-img">
       </div>
-      <p class="footer-about">Ghana's #1 destination for premium electronics and home appliances. Quality products, unbeatable prices, delivered to your door.</p>
+      <p class="footer-about">Your Trusted Home Appliance Store in Ghana. Quality products, unbeatable prices, delivered to your door.</p>
       <div class="footer-socials">
         <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -789,6 +830,17 @@
 <script src="js/cart.js"></script>
 
 <script src="js/shop.js"></script>
+
+<script>
+if (localStorage.getItem('obv_reviews') === 'on') {
+  const ts = document.getElementById('testimonialsSection');
+  if (ts) ts.style.display = '';
+}
+</script>
+
+<a class="whatsapp-float" href="https://wa.me/233502578905" target="_blank" rel="noopener" title="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>

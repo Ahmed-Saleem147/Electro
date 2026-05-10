@@ -87,10 +87,10 @@ function renderProductCard(product) {
         ${product.model ? `<div class="product-model">${product.model}</div>` : ''}
         ${product.description ? `<div class="product-desc">${product.description}</div>` : ''}
         ${specTags ? `<div class="product-spec-tags">${specTags}</div>` : ''}
-        <div class="product-rating">
+        ${localStorage.getItem('obv_reviews') === 'on' ? `<div class="product-rating">
           <div class="stars-row">${stars}</div>
           <span class="rating-count">(${product.reviews.toLocaleString()} reviews)</span>
-        </div>
+        </div>` : ''}
         <div class="product-price-row">
           <span class="product-price">${fmt(product.price)}</span>
           <div style="display:flex;align-items:center;gap:6px">${oldPriceStr}${discountStr}</div>
@@ -174,10 +174,10 @@ function showProductModal(p) {
           <div class="product-brand">${p.brand}</div>
           <div class="product-name" style="font-size:1.4rem;font-weight:800;color:var(--text-dark);margin-bottom:6px">${p.name}</div>
           ${p.model ? `<div style="font-size:12px;color:var(--text-muted);font-weight:500;margin-bottom:12px">Model: <strong style="color:var(--text-body)">${p.model}</strong></div>` : ''}
-          <div class="product-rating" style="margin-bottom:16px">
+          ${localStorage.getItem('obv_reviews') === 'on' ? `<div class="product-rating" style="margin-bottom:16px">
             <div class="stars-row">${stars}</div>
             <span class="rating-count">(${p.reviews.toLocaleString()} reviews)</span>
-          </div>
+          </div>` : ''}
           <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:20px">${p.description}</p>
           <div class="detail-price-row">
             <span class="detail-price">${fmt(p.price)}</span>

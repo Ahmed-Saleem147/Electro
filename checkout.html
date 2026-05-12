@@ -58,58 +58,53 @@
           <div class="form-group"><label>Last Name*</label><input type="text" id="co_lastName" placeholder="Doe" /></div>
         </div>
         <div class="form-grid-2" style="margin-top:12px">
-          <div class="form-group"><label>Email Address*</label><input type="email" id="co_email" placeholder="john@example.com" /></div>
+          <div class="form-group"><label>Email Address <span style="font-weight:400;color:var(--text-muted)">(Optional)</span></label><input type="email" id="co_email" placeholder="john@example.com" /></div>
           <div class="form-group"><label>Phone Number*</label><input type="tel" id="co_phone" placeholder="+233 XX XXX XXXX" /></div>
         </div>
       </div>
 
-      <!-- Delivery Address -->
+      <!-- Fulfillment Method -->
       <div class="checkout-section">
-        <h3><i class="fas fa-map-marker-alt"></i> Delivery Address</h3>
-        <div class="form-group" style="margin-bottom:12px"><label>Street Address*</label><input type="text" id="co_address" placeholder="123 Example Street, Accra" /></div>
-        <div class="form-grid-2">
-          <div class="form-group"><label>City*</label>
-            <select id="co_city" style="padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:14px;outline:none;width:100%;color:var(--text-dark);background:#fff">
-              <option>Accra</option><option>Kumasi</option><option>Tamale</option><option>Takoradi</option><option>Cape Coast</option>
-            </select>
-          </div>
-          <div class="form-group"><label>Region*</label>
-            <select id="co_region" style="padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:14px;outline:none;width:100%;color:var(--text-dark);background:#fff">
-              <option>Greater Accra</option><option>Ashanti</option><option>Northern</option><option>Western</option><option>Central</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group" style="margin-top:12px">
-          <label>Delivery Notes (Optional)</label>
-          <textarea id="co_notes" style="padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:14px;outline:none;width:100%;color:var(--text-dark);min-height:80px;resize:vertical" placeholder="e.g. Gate colour, landmark near house…"></textarea>
-        </div>
-        <!-- Delivery Options -->
-        <div style="margin-top:16px">
-          <h4 style="font-size:13px;font-weight:700;color:var(--text-dark);margin-bottom:12px">Delivery Option</h4>
-          <div class="payment-method selected" style="margin-bottom:8px">
-            <input type="radio" name="delivery" checked />
+        <h3><i class="fas fa-map-marker-alt"></i> Fulfillment</h3>
+        <div style="display:flex;gap:10px;margin-bottom:16px">
+          <div class="payment-method selected" style="flex:1;cursor:pointer" onclick="selectFulfillment('delivery',this)">
+            <input type="radio" name="fulfillment" checked />
             <div class="payment-method-icon"><i class="fas fa-truck"></i></div>
-            <div>
-              <strong style="font-size:14px">Standard Delivery (2–5 days)</strong>
-              <p style="font-size:12px;color:var(--text-muted);margin:0">Free on orders above GH₵ 500</p>
-            </div>
-            <span style="margin-left:auto;color:var(--success);font-weight:700;font-size:13px">FREE</span>
+            <div><strong style="font-size:14px">Home Delivery</strong></div>
           </div>
-          <div class="payment-method">
-            <input type="radio" name="delivery" />
-            <div class="payment-method-icon"><i class="fas fa-shipping-fast"></i></div>
-            <div>
-              <strong style="font-size:14px">Express Delivery (Same day)</strong>
-              <p style="font-size:12px;color:var(--text-muted);margin:0">Order before 12PM for same-day</p>
-            </div>
-            <span style="margin-left:auto;color:var(--primary);font-weight:700;font-size:13px">GH₵ 80</span>
+          <div class="payment-method" style="flex:1;cursor:pointer" onclick="selectFulfillment('pickup',this)">
+            <input type="radio" name="fulfillment" />
+            <div class="payment-method-icon"><i class="fas fa-store"></i></div>
+            <div><strong style="font-size:14px">Pickup from Store</strong></div>
           </div>
+        </div>
+
+        <div id="addressFields">
+          <div class="form-group" style="margin-bottom:12px"><label>Street Address*</label><input type="text" id="co_address" placeholder="123 Example Street, Accra" /></div>
+          <div class="form-grid-2">
+            <div class="form-group"><label>City*</label>
+              <select id="co_city" style="padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:14px;outline:none;width:100%;color:var(--text-dark);background:#fff">
+                <option>Accra</option><option>Kumasi</option><option>Tamale</option><option>Takoradi</option><option>Cape Coast</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Region*</label>
+              <select id="co_region" style="padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:14px;outline:none;width:100%;color:var(--text-dark);background:#fff">
+                <option>Greater Accra</option><option>Ashanti</option><option>Northern</option><option>Western</option><option>Central</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top:12px">
+          <label>Notes (Optional)</label>
+          <textarea id="co_notes" style="padding:12px 16px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:14px;outline:none;width:100%;color:var(--text-dark);min-height:80px;resize:vertical" placeholder="e.g. Gate colour, landmark near house…"></textarea>
         </div>
       </div>
 
       <!-- Payment Method -->
       <div class="checkout-section">
         <h3><i class="fas fa-credit-card"></i> Payment Method</h3>
+        <div id="paymentOptions">
         <div class="payment-method selected" onclick="selectPayment(this,'momo')">
           <input type="radio" name="payment" checked />
           <div class="payment-method-icon" style="color:#fcd34d"><i class="fas fa-mobile-alt"></i></div>
@@ -133,6 +128,7 @@
             <strong style="font-size:14px">Cash on Delivery</strong>
             <p style="font-size:12px;color:var(--text-muted);margin:0">Pay when you receive your order</p>
           </div>
+        </div>
         </div>
 
         <!-- Dynamic payment input -->
@@ -209,6 +205,17 @@
 
 <div class="toast-container" id="toastContainer"></div>
 
+<!-- Receipt Modal -->
+<div id="receiptModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;padding:16px">
+  <div style="background:#fff;border-radius:18px;max-width:480px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+    <div id="receiptContent" style="padding:32px 28px"></div>
+    <div style="padding:0 28px 24px;display:flex;gap:10px">
+      <button onclick="downloadReceipt()" style="flex:1;padding:13px;background:#1d4ed8;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px"><i class="fas fa-download"></i> Download Receipt</button>
+      <a href="index.html" style="flex:1;padding:13px;background:#f1f5f9;color:#1e293b;border-radius:10px;font-size:14px;font-weight:700;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center">Continue Shopping</a>
+    </div>
+  </div>
+</div>
+
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script src="js/supabase.js"></script>
 <script src="js/data.js"></script>
@@ -250,10 +257,19 @@ function renderCheckoutSummary() {
 }
 
 let currentPaymentMethod = 'momo';
+let currentFulfillment  = 'delivery';
+
+function selectFulfillment(method, el) {
+  currentFulfillment = method;
+  document.querySelectorAll('[name="fulfillment"]').forEach(r => r.closest('.payment-method').classList.remove('selected'));
+  el.classList.add('selected');
+  el.querySelector('input[type="radio"]').checked = true;
+  document.getElementById('addressFields').style.display = method === 'delivery' ? '' : 'none';
+}
 
 function selectPayment(el, method) {
   currentPaymentMethod = method;
-  document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('selected'));
+  document.querySelectorAll('#paymentOptions .payment-method').forEach(m => m.classList.remove('selected'));
   el.classList.add('selected');
   el.querySelector('input[type="radio"]').checked = true;
 
@@ -292,11 +308,12 @@ function saveAndConfirmOrder(paymentMethod, paystackRef) {
   const lastName  = (document.getElementById('co_lastName')?.value  || '').trim();
   const phone     = (document.getElementById('co_phone')?.value     || '').trim();
   const email     = (document.getElementById('co_email')?.value     || '').trim();
-  const address   = (document.getElementById('co_address')?.value   || '').trim();
-  const city      = document.getElementById('co_city')?.value   || '';
-  const region    = document.getElementById('co_region')?.value || '';
+  const address   = currentFulfillment === 'delivery' ? (document.getElementById('co_address')?.value || '').trim() : '';
+  const city      = currentFulfillment === 'delivery' ? (document.getElementById('co_city')?.value   || '') : '';
+  const region    = currentFulfillment === 'delivery' ? (document.getElementById('co_region')?.value || '') : '';
   const notes     = (document.getElementById('co_notes')?.value || '').trim();
   const total     = getDisplayTotal();
+  const itemsSnap = cart.map(i => ({ name: i.name, qty: i.qty || 1, price: i.price }));
 
   const orders = JSON.parse(localStorage.getItem('obv_orders') || '[]');
   const maxId  = orders.length ? Math.max(...orders.map(o => o.id)) : 1000;
@@ -304,8 +321,9 @@ function saveAndConfirmOrder(paymentMethod, paystackRef) {
     id: maxId + 1,
     customerName: firstName + (lastName ? ' ' + lastName : ''),
     phone, email,
-    deliveryArea: address + ', ' + city + ', ' + region,
-    items: cart.map(i => ({ name: i.name, qty: i.qty || 1, price: i.price })),
+    fulfillment: currentFulfillment,
+    deliveryArea: currentFulfillment === 'delivery' ? (address + (city ? ', ' + city : '') + (region ? ', ' + region : '')) : 'Store Pickup',
+    items: itemsSnap,
     total, notes,
     paymentMethod,
     paymentRef: paystackRef || null,
@@ -316,7 +334,86 @@ function saveAndConfirmOrder(paymentMethod, paystackRef) {
   localStorage.setItem('obv_orders', JSON.stringify(orders));
   sbPush('obv_orders');
   clearCart();
-  window.location.href = 'confirmation.html';
+  showReceiptModal(order);
+}
+
+function showReceiptModal(order) {
+  const methodLabel = { momo: 'MTN Mobile Money', card: 'Card', cod: 'Cash on Delivery' }[order.paymentMethod] || order.paymentMethod;
+  const statusColor = order.status === 'confirmed' ? '#16a34a' : '#d97706';
+  const statusLabel = order.status === 'confirmed' ? '✓ Payment Confirmed' : '⏳ Pending Payment';
+  const itemsHtml = (order.items || []).map(i =>
+    `<tr><td style="padding:7px 0;border-bottom:1px solid #f1f5f9;font-size:13px">${i.name}</td><td style="padding:7px 0;border-bottom:1px solid #f1f5f9;text-align:center;color:#64748b;font-size:13px">×${i.qty}</td><td style="padding:7px 0;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:600;font-size:13px">GH₵ ${(i.price*i.qty).toLocaleString()}</td></tr>`
+  ).join('');
+
+  document.getElementById('receiptContent').innerHTML = `
+    <div style="text-align:center;margin-bottom:24px">
+      <img src="img/logo.jpeg" style="height:48px;border-radius:8px;margin-bottom:10px">
+      <div style="font-size:11px;color:#64748b;letter-spacing:.5px;text-transform:uppercase">Order Receipt</div>
+      <div style="font-size:22px;font-weight:800;color:#0f172a;margin:6px 0">Order #${order.id}</div>
+      <span style="display:inline-block;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;background:${order.status==='confirmed'?'#dcfce7':'#fef3c7'};color:${statusColor}">${statusLabel}</span>
+    </div>
+    <div style="background:#f8fafc;border-radius:10px;padding:14px 16px;margin-bottom:16px;font-size:13px">
+      <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="color:#64748b">Customer</span><strong>${order.customerName}</strong></div>
+      <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="color:#64748b">Phone</span><strong>${order.phone}</strong></div>
+      ${order.email?`<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="color:#64748b">Email</span><strong>${order.email}</strong></div>`:''}
+      <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="color:#64748b">Fulfillment</span><strong>${order.fulfillment==='pickup'?'Store Pickup':'Home Delivery'}</strong></div>
+      ${order.deliveryArea&&order.deliveryArea!=='Store Pickup'?`<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="color:#64748b">Address</span><strong style="text-align:right;max-width:60%">${order.deliveryArea}</strong></div>`:''}
+      <div style="display:flex;justify-content:space-between"><span style="color:#64748b">Payment</span><strong>${methodLabel}</strong></div>
+      ${order.paymentRef?`<div style="display:flex;justify-content:space-between;margin-top:6px"><span style="color:#64748b">Ref</span><strong style="font-size:11px">${order.paymentRef}</strong></div>`:''}
+    </div>
+    <table style="width:100%;border-collapse:collapse;margin-bottom:12px">${itemsHtml}</table>
+    <div style="display:flex;justify-content:space-between;background:#1d4ed8;color:#fff;border-radius:10px;padding:14px 16px;font-size:16px;font-weight:800">
+      <span>Total</span><span>GH₵ ${order.total.toLocaleString()}</span>
+    </div>
+    <div style="text-align:center;margin-top:16px;font-size:11px;color:#94a3b8">
+      ${new Date(order.createdAt).toLocaleString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})} · Orbiva Technologies
+    </div>`;
+
+  const modal = document.getElementById('receiptModal');
+  modal.style.display = 'flex';
+  window._lastOrder = order;
+}
+
+function downloadReceipt() {
+  const o = window._lastOrder;
+  if (!o) return;
+  const methodLabel = { momo: 'MTN Mobile Money', card: 'Card', cod: 'Cash on Delivery' }[o.paymentMethod] || o.paymentMethod;
+  const itemsRows = (o.items||[]).map(i =>
+    `<tr><td>${i.name}</td><td style="text-align:center">×${i.qty}</td><td style="text-align:right">GH₵ ${(i.price*i.qty).toLocaleString()}</td></tr>`
+  ).join('');
+  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Receipt - Order #${o.id}</title>
+  <style>body{font-family:Arial,sans-serif;max-width:420px;margin:30px auto;color:#1e293b;font-size:13px}
+  h1{font-size:20px;margin:0}.header{text-align:center;margin-bottom:20px;padding-bottom:16px;border-bottom:2px solid #1d4ed8}
+  .info-row{display:flex;justify-content:space-between;margin:5px 0}
+  .info-box{background:#f8fafc;border-radius:8px;padding:12px;margin-bottom:16px}
+  table{width:100%;border-collapse:collapse;margin-bottom:12px}
+  td{padding:7px 4px;border-bottom:1px solid #f1f5f9}
+  .total-row{background:#1d4ed8;color:#fff;border-radius:8px;padding:12px;display:flex;justify-content:space-between;font-size:16px;font-weight:800}
+  .footer{text-align:center;margin-top:16px;font-size:11px;color:#94a3b8}
+  @media print{body{margin:10px}button{display:none}}</style></head>
+  <body>
+  <div class="header"><h1>Orbiva Technologies</h1><div style="font-size:11px;color:#64748b;margin:4px 0">ORDER RECEIPT</div>
+  <div style="font-size:18px;font-weight:800">Order #${o.id}</div>
+  <div style="color:${o.status==='confirmed'?'#16a34a':'#d97706'};font-weight:700">${o.status==='confirmed'?'✓ Payment Confirmed':'⏳ Pending Payment'}</div></div>
+  <div class="info-box">
+  <div class="info-row"><span style="color:#64748b">Customer</span><strong>${o.customerName}</strong></div>
+  <div class="info-row"><span style="color:#64748b">Phone</span><strong>${o.phone}</strong></div>
+  ${o.email?`<div class="info-row"><span style="color:#64748b">Email</span><strong>${o.email}</strong></div>`:''}
+  <div class="info-row"><span style="color:#64748b">Fulfillment</span><strong>${o.fulfillment==='pickup'?'Store Pickup':'Home Delivery'}</strong></div>
+  ${o.deliveryArea&&o.deliveryArea!=='Store Pickup'?`<div class="info-row"><span style="color:#64748b">Address</span><strong>${o.deliveryArea}</strong></div>`:''}
+  <div class="info-row"><span style="color:#64748b">Payment</span><strong>${methodLabel}</strong></div>
+  ${o.paymentRef?`<div class="info-row"><span style="color:#64748b">Ref</span><strong style="font-size:11px">${o.paymentRef}</strong></div>`:''}
+  <div class="info-row"><span style="color:#64748b">Date</span><strong>${new Date(o.createdAt).toLocaleString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})}</strong></div>
+  </div>
+  <table>${itemsRows}</table>
+  <div class="total-row"><span>Total</span><span>GH₵ ${o.total.toLocaleString()}</span></div>
+  <div class="footer">Thank you for shopping with Orbiva Technologies · orbivagh.com</div>
+  <br><button onclick="window.print()" style="width:100%;padding:10px;background:#1d4ed8;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer">🖨 Print / Save as PDF</button>
+  </body></html>`;
+  const w = window.open('', '_blank');
+  w.document.write(html);
+  w.document.close();
+  setTimeout(() => w.print(), 600);
 }
 
 function placeOrder() {
@@ -331,8 +428,12 @@ function placeOrder() {
   const email     = (document.getElementById('co_email')?.value     || '').trim();
   const address   = (document.getElementById('co_address')?.value   || '').trim();
 
-  if (!firstName || !phone || !address) {
-    showToast('error', 'Missing Info', 'Please fill in your name, phone number and address.', 'fas fa-exclamation-circle');
+  if (!firstName || !phone) {
+    showToast('error', 'Missing Info', 'Please fill in your name and phone number.', 'fas fa-exclamation-circle');
+    return;
+  }
+  if (currentFulfillment === 'delivery' && !address) {
+    showToast('error', 'Missing Address', 'Please enter your delivery address.', 'fas fa-exclamation-circle');
     return;
   }
 
@@ -342,11 +443,8 @@ function placeOrder() {
     return;
   }
 
-  // Paystack — MoMo or Card
-  if (!email) {
-    showToast('error', 'Email Required', 'Please enter your email address to pay online.', 'fas fa-exclamation-circle');
-    return;
-  }
+  // Paystack — MoMo or Card; generate fallback email if blank
+  const paystackEmail = email || (phone.replace(/\s+/g, '').replace(/^\+/, '') + '@orbivagh.com');
 
   const btn = document.querySelector('.order-summary-card .btn-primary');
   if (btn) { btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening Payment…'; btn.disabled = true; }
@@ -356,7 +454,7 @@ function placeOrder() {
 
   const handler = PaystackPop.setup({
     key: 'pk_test_50ad13304cc39d1589122a347c0a8b201f44245e',
-    email: email,
+    email: paystackEmail,
     amount: total * 100,
     currency: 'GHS',
     ref: ref,

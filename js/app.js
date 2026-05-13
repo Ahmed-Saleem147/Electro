@@ -49,6 +49,16 @@ function applyOverrides() {
   } catch(e) {}
 }
 
+/* ── Format description: each line becomes a bullet point ── */
+function fmtDesc(desc, limit = 0) {
+  if (!desc) return '';
+  const lines = desc.split('\n').map(l => l.trim()).filter(Boolean);
+  const shown = limit ? lines.slice(0, limit) : lines;
+  if (shown.length === 0) return '';
+  if (shown.length === 1) return `<p style="font-size:13px;color:var(--text-muted);line-height:1.6">${shown[0]}</p>`;
+  return `<ul style="padding-left:16px;margin:0;font-size:13px;color:var(--text-muted);line-height:1.8">${shown.map(l => `<li>${l}</li>`).join('')}</ul>`;
+}
+
 /* ── Product card renderer ── */
 const CAT_NAMES = { tv: 'Televisions', ac: 'Air Conditioners', fridge: 'Refrigerators', laundry: 'Washing Machines', kitchen: 'Kitchen Appliances', small: 'Small Appliances', phones: 'Phones', tablets: 'Tablets', commercial: 'Commercial Displays' };
 
@@ -81,7 +91,7 @@ function renderProductCard(product) {
         <div class="product-cat-label">${catLabel}</div>
         <div class="product-name">${product.name}</div>
         ${product.model ? `<div class="product-model">${product.model}</div>` : ''}
-        ${product.description ? `<div class="product-desc">${product.description}</div>` : ''}
+        ${product.description ? `<div class="product-desc">${fmtDesc(product.description, 3)}</div>` : ''}
         ${specTags ? `<div class="product-spec-tags">${specTags}</div>` : ''}
         <div class="product-price-row">
           <span class="product-price">${fmt(product.price)}</span>
@@ -162,7 +172,7 @@ function showProductModal(p) {
           <div class="product-brand">${p.brand}</div>
           <div class="product-name" style="font-size:1.4rem;font-weight:800;color:var(--text-dark);margin-bottom:6px">${p.name}</div>
           ${p.model ? `<div style="font-size:12px;color:var(--text-muted);font-weight:500;margin-bottom:12px">Model: <strong style="color:var(--text-body)">${p.model}</strong></div>` : ''}
-          <p style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:20px">${p.description}</p>
+          <div style="margin-bottom:20px">${fmtDesc(p.description)}</div>
           <div class="detail-price-row">
             <span class="detail-price">${fmt(p.price)}</span>
             ${p.oldPrice ? `<span class="detail-old-price">${fmt(p.oldPrice)}</span>` : ''}

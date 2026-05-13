@@ -470,7 +470,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="pp-brand-badge">${p.brand}</div>
       <h1 class="pp-name">${p.name}</h1>
       ${p.model ? `<div style="font-size:13px;color:var(--text-muted);font-weight:500;margin-bottom:10px">Model: <strong style="color:var(--text-body)">${p.model}</strong></div>` : ''}
-      <p class="pp-desc">${p.description || ''}</p>
+      <div class="pp-desc">${fmtDesc(p.description)}</div>
       <div class="pp-price-row">
         <span class="pp-price">${fmt(p.price)}</span>
         ${p.oldPrice ? `<span class="pp-old-price">${fmt(p.oldPrice)}</span>` : ''}

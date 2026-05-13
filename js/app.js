@@ -711,7 +711,7 @@ function initMegaBackdrop() {
    INIT ALL
 ════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', async () => {
-  await (window.obvSyncPromise || Promise.resolve());
+  await Promise.race([window.obvSyncPromise || Promise.resolve(), new Promise(r => setTimeout(r, 3000))]);
   applyOverrides();
   renderCategories();
   renderFlashProducts();

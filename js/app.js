@@ -712,37 +712,44 @@ function initMegaBackdrop() {
 ════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', async () => {
   await Promise.race([window.obvSyncPromise || Promise.resolve(), new Promise(r => setTimeout(r, 3000))]);
-  applyOverrides();
-  renderCategories();
-  renderFlashProducts();
-  renderFeaturedProducts();
-  renderBrands();
-  renderRecentlyViewed();
-  // Populate brand nav dropdown
-  const brandDd = document.getElementById('brandDropdown');
-  if (brandDd) brandDd.innerHTML = BRANDS.map(b => `<li><a href="shop.html?brand=${b.id}">${b.name}</a></li>`).join('');
-  startCountdown();
-  initSearch();
-  initSidebars();
-  initHeaderScroll();
-  initMobileNav();
-  initProductTabs();
-  initModalTabs();
-  initNewsletter();
-  initMegaBackdrop();
+  try { applyOverrides(); } catch(e) {}
+  try { renderCategories(); } catch(e) {}
+  try { renderFlashProducts(); } catch(e) {}
+  try { renderFeaturedProducts(); } catch(e) {}
+  try { renderBrands(); } catch(e) {}
+  try { renderRecentlyViewed(); } catch(e) {}
+  try {
+    const brandDd = document.getElementById('brandDropdown');
+    if (brandDd) brandDd.innerHTML = BRANDS.map(b => `<li><a href="shop.html?brand=${b.id}">${b.name}</a></li>`).join('');
+  } catch(e) {}
+  try { startCountdown(); } catch(e) {}
+  try { initSearch(); } catch(e) {}
+  try { initSidebars(); } catch(e) {}
+  try { initHeaderScroll(); } catch(e) {}
+  try { initMobileNav(); } catch(e) {}
+  try { initProductTabs(); } catch(e) {}
+  try { initModalTabs(); } catch(e) {}
+  try { initNewsletter(); } catch(e) {}
+  try { initMegaBackdrop(); } catch(e) {}
   triggerReveal();
 
-  // Animate section headers on load
+  // Failsafe: force-reveal any elements still hidden after 1.5s (catches IntersectionObserver misses on mobile)
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.revealed),.reveal-left:not(.revealed),.reveal-right:not(.revealed)')
+      .forEach(el => el.classList.add('revealed'));
+  }, 1500);
+
   setTimeout(() => {
     document.querySelectorAll('.section-header').forEach((el, i) => {
       setTimeout(() => el.classList.add('animated'), i * 120);
     });
   }, 300);
 
-  // Apply admin display settings
-  if (localStorage.getItem('obv_freeDelivery') === 'off') {
-    document.querySelectorAll('.free-delivery-banner').forEach(el => el.style.display = 'none');
-  }
-  const flashEl = document.getElementById('flashSaleSection');
-  if (flashEl) flashEl.style.display = localStorage.getItem('obv_flashSale') === 'on' ? '' : 'none';
+  try {
+    if (localStorage.getItem('obv_freeDelivery') === 'off') {
+      document.querySelectorAll('.free-delivery-banner').forEach(el => el.style.display = 'none');
+    }
+    const flashEl = document.getElementById('flashSaleSection');
+    if (flashEl) flashEl.style.display = localStorage.getItem('obv_flashSale') === 'on' ? '' : 'none';
+  } catch(e) {}
 });

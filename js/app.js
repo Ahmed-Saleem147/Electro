@@ -171,7 +171,7 @@ function showProductModal(p) {
         <div class="product-detail-info">
           <div class="product-brand">${p.brand}</div>
           <div class="product-name" style="font-size:1.4rem;font-weight:800;color:var(--text-dark);margin-bottom:6px">${p.name}</div>
-          ${p.model ? `<div style="font-size:12px;color:var(--text-muted);font-weight:500;margin-bottom:12px">Model: <strong style="color:var(--text-body)">${p.model}</strong></div>` : ''}
+          ${p.model ? `<div style="font-size:12px;color:var(--text-muted);font-weight:500;margin-bottom:12px">SKU: <strong style="color:var(--text-body)">${p.model}</strong></div>` : ''}
           <div style="margin-bottom:20px">${fmtDesc(p.description)}</div>
           <div class="detail-price-row">
             <span class="detail-price">${fmt(p.price)}</span>

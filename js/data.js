@@ -1,9 +1,8 @@
 /* ================================================================
    ORBIVA – DATA LAYER
-   Sources: EGL Easter Promo 2026 + EGL Pricelist April 2026
-            + Samsung Mobile April 2026
-   Prices: Retail (promo where available)
-   Generated: 2026-05-08
+   Source: Electroland Ghana (electrolandgh.com)
+   Generated: 2026-05-15
+   Products: 750 (deduplicated)
 ================================================================ */
 
 /* ── CATEGORIES ── */
@@ -12,7 +11,7 @@ const CATEGORIES = [
     "id": "tv",
     "name": "Televisions",
     "icon": "fas fa-tv",
-    "count": 36,
+    "count": 80,
     "color": "#fff",
     "bg": "linear-gradient(135deg,#1d4ed8,#3b82f6)"
   },
@@ -20,7 +19,7 @@ const CATEGORIES = [
     "id": "ac",
     "name": "Air Conditioners",
     "icon": "fas fa-snowflake",
-    "count": 48,
+    "count": 118,
     "color": "#fff",
     "bg": "linear-gradient(135deg,#0ea5e9,#38bdf8)"
   },
@@ -28,10308 +27,13657 @@ const CATEGORIES = [
     "id": "fridge",
     "name": "Refrigerators",
     "icon": "fas fa-cube",
-    "count": 99,
+    "count": 198,
     "color": "#fff",
-    "bg": "linear-gradient(135deg,#0891b2,#06b6d4)"
+    "bg": "linear-gradient(135deg,#0f766e,#14b8a6)"
   },
   {
     "id": "laundry",
     "name": "Washing Machines",
-    "icon": "fas fa-tshirt",
-    "count": 44,
+    "icon": "fas fa-tint",
+    "count": 84,
     "color": "#fff",
-    "bg": "linear-gradient(135deg,#7c3aed,#a855f7)"
+    "bg": "linear-gradient(135deg,#7c3aed,#a78bfa)"
   },
   {
     "id": "kitchen",
     "name": "Kitchen Appliances",
-    "icon": "fas fa-blender",
-    "count": 67,
+    "icon": "fas fa-utensils",
+    "count": 186,
     "color": "#fff",
-    "bg": "linear-gradient(135deg,#dc2626,#f87171)"
+    "bg": "linear-gradient(135deg,#b45309,#f59e0b)"
   },
   {
     "id": "small",
     "name": "Small Appliances",
-    "icon": "fas fa-fan",
-    "count": 78,
+    "icon": "fas fa-plug",
+    "count": 81,
     "color": "#fff",
-    "bg": "linear-gradient(135deg,#d97706,#fbbf24)"
+    "bg": "linear-gradient(135deg,#be185d,#f472b6)"
   },
   {
-    "id": "phones",
-    "name": "Phones",
-    "icon": "fas fa-mobile-alt",
+    "id": "accessories",
+    "name": "Accessories",
+    "icon": "fas fa-headphones",
     "count": 3,
     "color": "#fff",
-    "bg": "linear-gradient(135deg,#0f172a,#1e293b)"
-  },
-  {
-    "id": "tablets",
-    "name": "Tablets",
-    "icon": "fas fa-tablet-alt",
-    "count": 2,
-    "color": "#fff",
-    "bg": "linear-gradient(135deg,#155e75,#0891b2)"
-  },
-  {
-    "id": "commercial",
-    "name": "Commercial Displays",
-    "icon": "fas fa-desktop",
-    "count": 38,
-    "color": "#fff",
-    "bg": "linear-gradient(135deg,#1e293b,#334155)"
+    "bg": "linear-gradient(135deg,#374151,#6b7280)"
   }
 ];
 
 /* ── BRANDS ── */
 const BRANDS = [
   {
+    "id": "nasco",
+    "name": "Nasco",
+    "logo": "",
+    "color": "#e31e25",
+    "products": 323
+  },
+  {
     "id": "samsung",
     "name": "Samsung",
-    "shortName": "SAMSUNG",
-    "products": 107,
+    "logo": "",
     "color": "#1428a0",
-    "bg": "linear-gradient(135deg,#1428a0,#0049a0)",
-    "logoStyle": "font-size:13px;letter-spacing:-0.5px"
+    "products": 145
   },
   {
     "id": "tcl",
     "name": "TCL",
-    "shortName": "TCL",
-    "products": 80,
-    "color": "#cc0000",
-    "bg": "linear-gradient(135deg,#cc0000,#990000)",
-    "logoStyle": "font-size:18px;font-style:italic"
+    "logo": "",
+    "color": "#d40000",
+    "products": 109
   },
   {
     "id": "midea",
     "name": "Midea",
-    "shortName": "Midea",
-    "products": 112,
-    "color": "#00a0e9",
-    "bg": "linear-gradient(135deg,#00a0e9,#007dc5)",
-    "logoStyle": "font-size:14px"
-  },
-  {
-    "id": "nasco",
-    "name": "NASCO",
-    "shortName": "NASCO",
-    "products": 116,
-    "color": "#003087",
-    "bg": "linear-gradient(135deg,#003087,#001a5c)",
-    "logoStyle": "font-size:13px;letter-spacing:1px"
-  }
-];
-
-/* ── FLASH SALE ── */
-const FLASH_PRODUCTS = [
-  {
-    "id": "midea-038",
-    "discount": 92
-  },
-  {
-    "id": "midea-073",
-    "discount": 53
-  },
-  {
-    "id": "midea-032",
-    "discount": 51
-  },
-  {
-    "id": "midea-025",
-    "discount": 50
-  },
-  {
-    "id": "midea-090",
-    "discount": 50
-  },
-  {
-    "id": "tcl-018",
-    "discount": 49
-  },
-  {
-    "id": "tcl-016",
-    "discount": 46
-  },
-  {
-    "id": "nasco-022",
-    "discount": 44
+    "logo": "",
+    "color": "#0066cc",
+    "products": 173
   }
 ];
 
 /* ── PRODUCTS ── */
 const PRODUCTS = [
   {
-    "id": "samsung-001",
-    "name": "Samsung Led Fhd Smart 32\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA32H5000FUXGH",
-    "category": "tv",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "32\""
-    },
-    "oldPrice": 3399,
-    "discount": 12
-  },
-  {
-    "id": "samsung-002",
-    "name": "Samsung Led Fhd Smart 32\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA32T5300",
-    "category": "tv",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "32\""
-    },
-    "oldPrice": 3399,
-    "discount": 12
-  },
-  {
-    "id": "samsung-003",
-    "name": "Samsung Led Fhd Smart 43''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA43F6000FUXGH",
-    "category": "tv",
-    "images": [],
-    "price": 4499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "43\""
-    },
-    "oldPrice": 5299,
-    "discount": 15
-  },
-  {
-    "id": "samsung-004",
-    "name": "Samsung Uhd Smart 4K 43''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA43U8000FUXGH",
-    "category": "tv",
-    "images": [],
-    "price": 5499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "43\""
-    },
-    "oldPrice": 6599,
-    "discount": 17
-  },
-  {
-    "id": "samsung-005",
-    "name": "Samsung Uhd Smart 4K 50\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA50U8000FUXGH",
-    "category": "tv",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "50\""
-    },
-    "oldPrice": 9199,
-    "discount": 24
-  },
-  {
-    "id": "samsung-006",
-    "name": "Samsung Uhd Smart 4K 55''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA55U8000FUXGH",
-    "category": "tv",
-    "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "55\""
-    },
-    "oldPrice": 9699,
-    "discount": 18
-  },
-  {
-    "id": "samsung-007",
-    "name": "Samsung Uhd Smart 4K 65''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA65U8000FUXGH",
-    "category": "tv",
-    "images": [],
-    "price": 10999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "65\""
-    },
-    "oldPrice": 13099,
-    "discount": 16
-  },
-  {
-    "id": "samsung-008",
-    "name": "Samsung Uhd Smart 4K 75''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA75U8000FUXGH",
-    "category": "tv",
-    "images": [],
-    "price": 17999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "75\""
-    },
-    "oldPrice": 21799,
-    "discount": 17
-  },
-  {
-    "id": "samsung-009",
-    "name": "Samsung Uhd Smart 4K 85''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA85U8000FUXGH",
-    "category": "tv",
-    "images": [],
-    "price": 24999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "85\""
-    },
-    "oldPrice": 34899,
-    "discount": 28
-  },
-  {
-    "id": "samsung-010",
-    "name": "Samsung Uhd Smart 4K 98''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "UA98DU9000UXGH",
-    "category": "tv",
-    "images": [],
-    "price": 54999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "98\""
-    },
-    "oldPrice": 86999,
-    "discount": 37
-  },
-  {
-    "id": "samsung-011",
-    "name": "Samsung Q-Led 4K 55\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "QA55Q7FAAUXGH",
-    "category": "small",
-    "images": [],
-    "price": 10999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "55\""
-    },
-    "oldPrice": 13999,
-    "discount": 21
-  },
-  {
-    "id": "samsung-012",
-    "name": "Samsung Q-Led 4K 65\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "QA65Q7FAAUXGH",
-    "category": "small",
-    "images": [],
-    "price": 14499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "65\""
-    },
-    "oldPrice": 17499,
-    "discount": 17
-  },
-  {
-    "id": "samsung-013",
-    "name": "Samsung Q-Led 4K 75\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "QA75Q7FAAUXGH",
-    "category": "small",
-    "images": [],
-    "price": 22999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "75\""
-    },
-    "oldPrice": 30599,
-    "discount": 25
-  },
-  {
-    "id": "samsung-014",
-    "name": "Samsung Q-Led 4K 85\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "QA85Q7FAAUXGH",
-    "category": "small",
-    "images": [],
-    "price": 32999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "85\""
-    },
-    "oldPrice": 44999,
-    "discount": 27
-  },
-  {
-    "id": "samsung-015",
-    "name": "Samsung Regrigerators - Duracool Top Mounted Freezer 203 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT20HAR2DSA",
-    "category": "fridge",
-    "images": [],
-    "price": 5499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "203 L"
-    },
-    "oldPrice": 6899,
-    "discount": 20
-  },
-  {
-    "id": "samsung-016",
-    "name": "Samsung Regrigerators - Duracool Top Mounted Freezer 203 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT26HAR2DSA",
-    "category": "fridge",
-    "images": [],
-    "price": 5499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "203 L"
-    },
-    "oldPrice": 6899,
-    "discount": 20
-  },
-  {
-    "id": "samsung-017",
-    "name": "Samsung Regrigerators - Duracool Top Mounted Freezer 234 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT22HAR4DSA/GH",
-    "category": "fridge",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "234 L"
-    },
-    "oldPrice": 7299,
-    "discount": 18
-  },
-  {
-    "id": "samsung-018",
-    "name": "Samsung Regrigerators - Duracool Top Mounted Freezer 234 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT28HAR4DSA",
-    "category": "fridge",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "234 L"
-    },
-    "oldPrice": 7299,
-    "discount": 18
-  },
-  {
-    "id": "samsung-019",
-    "name": "Samsung Regrigerators - Duracool Top Mounted Freezer 255 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT25HAR4DSA/GH",
-    "category": "fridge",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "255 L"
-    },
-    "oldPrice": 8299,
-    "discount": 16
-  },
-  {
-    "id": "samsung-020",
-    "name": "Samsung Regrigerators - Duracool Top Mounted Freezer 255 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT31HAR4DSA",
-    "category": "fridge",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "255 L"
-    },
-    "oldPrice": 8299,
-    "discount": 16
-  },
-  {
-    "id": "samsung-021",
-    "name": "Samsung Regrigerators - Duracool Twin Cooling Plus - New 301 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT31CG5421S9GH",
-    "category": "small",
-    "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "301 L"
-    },
-    "oldPrice": 9699,
-    "discount": 18
-  },
-  {
-    "id": "samsung-022",
-    "name": "Samsung Regrigerators - Duracool Twin Cooling Plus - New 345 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT35CG5421S9GH",
-    "category": "small",
-    "images": [],
-    "price": 9449,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "345 L"
-    },
-    "oldPrice": 10899,
-    "discount": 13
-  },
-  {
-    "id": "samsung-023",
-    "name": "Samsung Regrigerators - Duracool Twin Cooling Plus - New 411 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT42CG6621S9GH",
-    "category": "small",
-    "images": [],
-    "price": 10999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "411 L"
-    },
-    "oldPrice": 13499,
-    "discount": 19
-  },
-  {
-    "id": "samsung-024",
-    "name": "Samsung Regrigerators - Duracool Twin Cooling Plus - New 460 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT47CG6631B1UT",
-    "category": "small",
-    "images": [],
-    "price": 12999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "460 L"
-    },
-    "oldPrice": 14999,
-    "discount": 13
-  },
-  {
-    "id": "samsung-025",
-    "name": "Samsung Regrigerators - Duracool Twin Cooling Plus - New 525 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RT53DG7B60B1UT",
-    "category": "small",
-    "images": [],
-    "price": 15999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "525 L"
-    },
-    "oldPrice": 17499,
-    "discount": 9
-  },
-  {
-    "id": "samsung-026",
-    "name": "Samsung Refrigerators - Side By Side 583",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RS57DG4000B4GH",
-    "category": "fridge",
-    "images": [],
-    "price": 15999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "583"
-    },
-    "oldPrice": 16599,
-    "discount": 4
-  },
-  {
-    "id": "samsung-027",
-    "name": "Samsung Refrigerators - Side By Side 578",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RS57DG4100B4GH",
-    "category": "fridge",
-    "images": [],
-    "price": 17499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "578"
-    },
-    "oldPrice": 18299,
-    "discount": 4
-  },
-  {
-    "id": "samsung-028",
-    "name": "Samsung Refrigerators- 4 Doors Bespoke 650 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RF65DB970E22",
-    "category": "fridge",
-    "images": [],
-    "price": 49999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "650 L"
-    },
-    "oldPrice": 52199,
-    "discount": 4
-  },
-  {
-    "id": "samsung-029",
-    "name": "Samsung Refrigerators- 4 Doors Bespoke 650 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RF65DB960E22EF",
-    "category": "fridge",
-    "images": [],
-    "price": 45999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "650 L"
-    },
-    "oldPrice": 52199,
-    "discount": 12
-  },
-  {
-    "id": "samsung-030",
-    "name": "Samsung Refrigerators- 4 Doors Family Hub 632 L",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RF65DG9H0EB1EU",
-    "category": "fridge",
-    "images": [],
-    "price": 54999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "632 L"
-    },
-    "oldPrice": 59999,
-    "discount": 8
-  },
-  {
-    "id": "samsung-031",
-    "name": "Samsung Glass Panel WHITE",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RA-F18DBB12GG",
-    "category": "fridge",
-    "images": [],
-    "price": 599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "WHITE"
-    },
-    "oldPrice": 899,
-    "discount": 33
-  },
-  {
-    "id": "samsung-032",
-    "name": "Samsung Glass Panel SATIN BEIGE",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RA-F18DBB39GG",
-    "category": "fridge",
-    "images": [],
-    "price": 599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "SATIN BEIGE"
-    },
-    "oldPrice": 899,
-    "discount": 33
-  },
-  {
-    "id": "samsung-033",
-    "name": "Samsung Glass Panel WHITE",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RA-F18DUU12GG",
-    "category": "fridge",
-    "images": [],
-    "price": 599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "WHITE"
-    },
-    "oldPrice": 899,
-    "discount": 33
-  },
-  {
-    "id": "samsung-034",
-    "name": "Samsung Glass Panel SATIN BEIGE",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RA-F18DUU39GG",
-    "category": "fridge",
-    "images": [],
-    "price": 599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "SATIN BEIGE"
-    },
-    "oldPrice": 899,
-    "discount": 33
-  },
-  {
-    "id": "samsung-035",
-    "name": "Samsung Chest Freezer 198L- GRAY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RI70F20V1GAGH",
-    "category": "fridge",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "198L- GRAY"
-    },
-    "oldPrice": 6499,
-    "discount": 23
-  },
-  {
-    "id": "samsung-036",
-    "name": "Samsung Chest Freezer 287L- GRAY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RI70F29V1GAGH",
-    "category": "fridge",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "287L- GRAY"
-    },
-    "oldPrice": 7999,
-    "discount": 25
-  },
-  {
-    "id": "samsung-037",
-    "name": "Samsung Chest Freezer 371L- GRAY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "RI70F37V1GAGH",
-    "category": "fridge",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "371L- GRAY"
-    },
-    "oldPrice": 8999,
-    "discount": 22
-  },
-  {
-    "id": "samsung-038",
-    "name": "Samsung Split Acs - R410 1.0 HP",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "AR09CRHGAWK/AF",
-    "category": "ac",
-    "images": [],
-    "price": 4499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.0 HP"
-    },
-    "oldPrice": 5299,
-    "discount": 15
-  },
-  {
-    "id": "samsung-039",
-    "name": "Samsung Split Acs - R410 1.5 HP",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "AR12CRHGAWK/AF",
-    "category": "ac",
-    "images": [],
-    "price": 5499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 6599,
-    "discount": 17
-  },
-  {
-    "id": "samsung-040",
-    "name": "Samsung Split Acs - R410 2.0 HP",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "AR18CRHGAWK/AF",
-    "category": "ac",
-    "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 8799,
-    "discount": 9
-  },
-  {
-    "id": "samsung-041",
-    "name": "Samsung Split Acs - R410 2.5 HP",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "AR24CRHGAWK/AF",
-    "category": "ac",
-    "images": [],
-    "price": 10499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 12299,
-    "discount": 15
-  },
-  {
-    "id": "samsung-042",
-    "name": "Samsung Split Acs - Inverter R32 1.5 HP",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "AR40F12D0AG/AF",
-    "category": "ac",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 8999,
-    "discount": 22
-  },
-  {
-    "id": "samsung-043",
-    "name": "Samsung Split Acs - Inverter R32 2.0 HP",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "AR40F18D0AG/AF",
-    "category": "ac",
-    "images": [],
-    "price": 9499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 14999,
-    "discount": 37
-  },
-  {
-    "id": "samsung-044",
-    "name": "Samsung Split Acs - Inverter R32 2.5 HP",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "AR40F24D0AG/AF",
-    "category": "ac",
-    "images": [],
-    "price": 11499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 17499,
-    "discount": 34
-  },
-  {
-    "id": "samsung-045",
-    "name": "Samsung Floor Standing Acs 36,000 BTU",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "AC036TNPPEH/AC036TXQREH",
-    "category": "ac",
-    "images": [],
-    "price": 29999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "36,000 BTU"
-    },
-    "oldPrice": 32299,
-    "discount": 7
-  },
-  {
-    "id": "samsung-046",
-    "name": "Samsung Floor Standing Acs 48,000 BTU",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "AC048TNPPEH/AC048TXQREH",
-    "category": "ac",
-    "images": [],
-    "price": 39999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "48,000 BTU"
-    },
-    "oldPrice": 42999,
-    "discount": 7
-  },
-  {
-    "id": "samsung-047",
-    "name": "Samsung Washing Machines - Twin Top Semi Auto Washer 6 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WT60H2500",
-    "category": "laundry",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "6 KG"
-    },
-    "oldPrice": 3499,
-    "discount": 14
-  },
-  {
-    "id": "samsung-048",
-    "name": "Samsung Washing Machines - Top Load Active Wash 19 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WA80F19S8BNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 10499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "19 KG"
-    },
-    "oldPrice": 13399,
-    "discount": 22
-  },
-  {
-    "id": "samsung-049",
-    "name": "Samsung Washing Machines - Top Load Active Wash 17 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WA80F17S8CNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 9499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "17 KG"
-    },
-    "oldPrice": 10799,
-    "discount": 12
-  },
-  {
-    "id": "samsung-050",
-    "name": "Samsung Washing Machines - Top Load Active Wash 16 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WA16CG6745BDNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 9699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "16 KG"
-    }
-  },
-  {
-    "id": "samsung-051",
-    "name": "Samsung Washing Machines - Top Load Active Wash 13 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WA13CG5441BYNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 8799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "13 KG"
-    }
-  },
-  {
-    "id": "samsung-052",
-    "name": "Samsung Washing Machines - Top Load Active Wash 13 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WA80F13S5CNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 7499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "13 KG"
-    },
-    "oldPrice": 8799,
-    "discount": 15
-  },
-  {
-    "id": "samsung-053",
-    "name": "Samsung Washing Machines - Top Load Active Wash 8 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WA80CG4240BWNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 4799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "8 KG"
-    },
-    "oldPrice": 5699,
-    "discount": 16
-  },
-  {
-    "id": "samsung-054",
-    "name": "Samsung Washing Machines - Front Load Full Auto Washer 11 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WW11CGC04DABSG",
-    "category": "laundry",
-    "images": [],
-    "price": 9499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "11 KG"
-    },
-    "oldPrice": 13999,
-    "discount": 32
-  },
-  {
-    "id": "samsung-055",
-    "name": "Samsung Washing Machines - Front Load Full Auto Washer 10.1 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WW10DG6U94LBNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 8999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "10.1 KG"
-    },
-    "oldPrice": 12999,
-    "discount": 31
-  },
-  {
-    "id": "samsung-056",
-    "name": "Samsung Washing Machines - Front Load Full Auto Washer",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WW80FG3M05AWNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 6499,
-    "discount": 8
-  },
-  {
-    "id": "samsung-057",
-    "name": "Samsung Washing Machines - Front Load Full Auto Washer",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WW80T3040BS/NQ",
-    "category": "laundry",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 9199,
-    "discount": 24
-  },
-  {
-    "id": "samsung-058",
-    "name": "Samsung Washing Machines - Front Load Full Auto Washer 7 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WW70T3010BS/NQ",
-    "category": "laundry",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "7 KG"
-    },
-    "oldPrice": 7499,
-    "discount": 20
-  },
-  {
-    "id": "samsung-059",
-    "name": "Samsung Washing Machines - Front Load Full Auto Washer",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WW70FG3M05AWNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 5999,
-    "discount": 17
-  },
-  {
-    "id": "samsung-060",
-    "name": "Samsung Washing Machines - Washer & Dryer 22 KG WASH / 11 KG DRY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WD90F22BCSNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 24999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "22 KG WASH / 11 KG DRY"
-    },
-    "oldPrice": 26999,
-    "discount": 7
-  },
-  {
-    "id": "samsung-061",
-    "name": "Samsung Washing Machines - Washer & Dryer 21 KG WASH / 12 KG DRY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WD21T6300GV/NQ",
-    "category": "laundry",
-    "images": [],
-    "price": 19999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "21 KG WASH / 12 KG DRY"
-    },
-    "oldPrice": 25299,
-    "discount": 21
-  },
-  {
-    "id": "samsung-062",
-    "name": "Samsung Washing Machines - Washer & Dryer 17 KGS WASH / 10 KGS DRY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WD17T6300GP/SP",
-    "category": "laundry",
-    "images": [],
-    "price": 17999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "17 KGS WASH / 10 KGS DRY"
-    },
-    "oldPrice": 21799,
-    "discount": 17
-  },
-  {
-    "id": "samsung-063",
-    "name": "Samsung Washing Machines - Washer & Dryer 12KG WASH/ 8KG DRY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WD12T504DBN/NQ",
-    "category": "laundry",
-    "images": [],
-    "price": 20899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "12KG WASH/ 8KG DRY"
-    }
-  },
-  {
-    "id": "samsung-064",
-    "name": "Samsung Washing Machines - Washer & Dryer 11KG WASH/ 7KG DRY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WD11DB7B85GBNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 13999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "11KG WASH/ 7KG DRY"
-    },
-    "oldPrice": 15799,
-    "discount": 11
-  },
-  {
-    "id": "samsung-065",
-    "name": "Samsung Bespoke - Washing Machines 12 KG",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WW12BB944DGMNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 13999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12 KG"
-    },
-    "oldPrice": 17499,
-    "discount": 20
-  },
-  {
-    "id": "samsung-066",
-    "name": "Samsung Bespoke - Washing Machines 12KG WASH/ 7KG DRY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WD12BB944DGBNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 15999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12KG WASH/ 7KG DRY"
-    },
-    "oldPrice": 20099,
-    "discount": 20
-  },
-  {
-    "id": "samsung-067",
-    "name": "Samsung Bespoke - Washing Machines 25KG WASH / 15KGS DRY",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "WD25DB8995BZNQ",
-    "category": "laundry",
-    "images": [],
-    "price": 39999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "25KG WASH / 15KGS DRY"
-    },
-    "oldPrice": 49699,
-    "discount": 20
-  },
-  {
-    "id": "samsung-068",
-    "name": "Samsung Microwaves - Grill MG30T5018AK/EF",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "MG30T5018AK/EF",
-    "category": "kitchen",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "MG30T5018AK/EF"
-    },
-    "oldPrice": 3299,
-    "discount": 9
-  },
-  {
-    "id": "samsung-069",
-    "name": "Samsung Microwaves - Grill",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "MG32DG4524AGSG",
-    "category": "kitchen",
-    "images": [],
-    "price": 3299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 3499,
-    "discount": 6
-  },
-  {
-    "id": "tcl-001",
-    "name": "TCL Qled 2K 32\"",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "32S5K",
-    "category": "tv",
-    "images": [],
-    "price": 2299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "32\""
-    },
-    "oldPrice": 2799,
-    "discount": 18
-  },
-  {
-    "id": "tcl-002",
-    "name": "TCL Qled 2K 43\"",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "43S5K",
-    "category": "tv",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "43\""
-    },
-    "oldPrice": 4199,
-    "discount": 29
-  },
-  {
-    "id": "tcl-003",
-    "name": "TCL Qled 2K 50''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "50S5K",
-    "category": "tv",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "50\""
-    },
-    "oldPrice": 4499,
-    "discount": 11
-  },
-  {
-    "id": "tcl-004",
-    "name": "TCL Uhd Smart Tvs 55\"",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "55P6K",
-    "category": "tv",
-    "images": [],
-    "price": 5499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "55\""
-    },
-    "oldPrice": 7099,
-    "discount": 23
-  },
-  {
-    "id": "tcl-005",
-    "name": "TCL Uhd Smart Tvs 55''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "55P755",
-    "category": "tv",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "55\""
-    },
-    "oldPrice": 8299,
-    "discount": 28
-  },
-  {
-    "id": "tcl-006",
-    "name": "TCL Uhd Smart Tvs 65''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "65P755",
-    "category": "tv",
-    "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "65\""
-    },
-    "oldPrice": 10499,
-    "discount": 24
-  },
-  {
-    "id": "tcl-007",
-    "name": "TCL Uhd Smart Tvs 75''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "75P6K",
-    "category": "tv",
-    "images": [],
-    "price": 9999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "75\""
-    },
-    "oldPrice": 16599,
-    "discount": 40
-  },
-  {
-    "id": "tcl-008",
-    "name": "TCL Uhd Smart Tvs 75''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "75P755",
-    "category": "tv",
-    "images": [],
-    "price": 10999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "75\""
-    },
-    "oldPrice": 16599,
-    "discount": 34
-  },
-  {
-    "id": "tcl-009",
-    "name": "TCL Qled Pro 4K Smart Android 50\"",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "50P7K",
-    "category": "tv",
-    "images": [],
-    "price": 5299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "50\""
-    },
-    "oldPrice": 8799,
-    "discount": 40
-  },
-  {
-    "id": "tcl-010",
-    "name": "TCL Qled Pro 4K Smart Android 55''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "55P7K",
-    "category": "tv",
-    "images": [],
-    "price": 6799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "55\""
-    },
-    "oldPrice": 9699,
-    "discount": 30
-  },
-  {
-    "id": "tcl-011",
-    "name": "TCL Qled Pro 4K Smart Android 65''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "65P7K",
-    "category": "tv",
-    "images": [],
-    "price": 8999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "65\""
-    },
-    "oldPrice": 12299,
-    "discount": 27
-  },
-  {
-    "id": "tcl-012",
-    "name": "TCL Qled Pro 4K Smart Android",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "75P7K",
-    "category": "tv",
-    "images": [],
-    "price": 12999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 19199,
-    "discount": 32
-  },
-  {
-    "id": "tcl-013",
-    "name": "TCL Qled Pro 4K Smart Android 85\"",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "85P8K",
-    "category": "tv",
-    "images": [],
-    "price": 21999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "85\""
-    },
-    "oldPrice": 28799,
-    "discount": 24
-  },
-  {
-    "id": "tcl-014",
-    "name": "TCL Qled Pro 4K Smart Android",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "98P8k",
-    "category": "tv",
-    "images": [],
-    "price": 34999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 49999,
-    "discount": 30
-  },
-  {
-    "id": "tcl-015",
-    "name": "TCL Qd-Mini Led 4K Tv 65\"",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "65C6K",
-    "category": "tv",
-    "images": [],
-    "price": 10999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "65\""
-    },
-    "oldPrice": 15799,
-    "discount": 30
-  },
-  {
-    "id": "tcl-016",
-    "name": "TCL Qd-Mini Led 4K Tv 75\"",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "75C6K",
-    "category": "tv",
-    "images": [],
-    "price": 14999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "75\""
-    },
-    "oldPrice": 27899,
-    "discount": 46
-  },
-  {
-    "id": "tcl-017",
-    "name": "TCL Qd-Mini Led 4K Tv 85\"",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "85C6K",
-    "category": "tv",
-    "images": [],
-    "price": 24999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "85\""
-    },
-    "oldPrice": 37499,
-    "discount": 33
-  },
-  {
-    "id": "tcl-018",
-    "name": "TCL Qd-Mini Led 4K Tv 98\"",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "98C6K",
-    "category": "tv",
-    "images": [],
-    "price": 39999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "98\""
-    },
-    "oldPrice": 78299,
-    "discount": 49
-  },
-  {
-    "id": "tcl-019",
-    "name": "TCL Qd-Mini Led 4K Tv 115''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "115X955",
-    "category": "tv",
-    "images": [],
-    "price": 299999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "115\""
-    },
-    "oldPrice": 434699,
-    "discount": 31
-  },
-  {
-    "id": "tcl-020",
-    "name": "TCL Qd-Mini Led 4K Tv 115''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "115C7K",
-    "category": "tv",
-    "images": [],
-    "price": 199999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "115\""
-    },
-    "oldPrice": 299999,
-    "discount": 33
-  },
-  {
-    "id": "tcl-021",
-    "name": "TCL Curved -Gaming Monitors 27''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "27R73Q",
-    "category": "small",
-    "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "27\""
-    },
-    "oldPrice": 11699,
-    "discount": 32
-  },
-  {
-    "id": "tcl-022",
-    "name": "TCL Curved -Gaming Monitors 34''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "34R83Q",
-    "category": "small",
-    "images": [],
-    "price": 11999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "34\""
-    },
-    "oldPrice": 16599,
-    "discount": 28
-  },
-  {
-    "id": "tcl-023",
-    "name": "TCL Sound Bar 100W",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "S45H",
-    "category": "small",
-    "images": [],
-    "price": 1399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "100W"
-    },
-    "oldPrice": 1799,
-    "discount": 22
-  },
-  {
-    "id": "tcl-024",
-    "name": "TCL Sound Bar 220W",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "S55H",
-    "category": "small",
-    "images": [],
-    "price": 2199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "220W"
-    },
-    "oldPrice": 2699,
-    "discount": 19
-  },
-  {
-    "id": "tcl-025",
-    "name": "TCL Sound Bar 580 W",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "Q65H",
-    "category": "small",
-    "images": [],
-    "price": 4299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "580 W"
-    },
-    "oldPrice": 5399,
-    "discount": 20
-  },
-  {
-    "id": "tcl-026",
-    "name": "TCL Sound Bar 620 W",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "Q75H",
-    "category": "small",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "620 W"
-    },
-    "oldPrice": 8999,
-    "discount": 22
-  },
-  {
-    "id": "tcl-027",
-    "name": "TCL Sound Bar 860 W",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "Q85H",
-    "category": "small",
-    "images": [],
-    "price": 8999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "860 W"
-    },
-    "oldPrice": 10799,
-    "discount": 17
-  },
-  {
-    "id": "tcl-028",
-    "name": "TCL Sound Tower 220 W",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TP200K",
-    "category": "small",
-    "images": [],
-    "price": 3499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "220 W"
-    },
-    "oldPrice": 4499,
-    "discount": 22
-  },
-  {
-    "id": "tcl-029",
-    "name": "TCL Sound Tower 340W",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TP300K",
-    "category": "small",
-    "images": [],
-    "price": 5499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "340W"
-    },
-    "oldPrice": 6299,
-    "discount": 13
-  },
-  {
-    "id": "tcl-030",
-    "name": "TCL Compressor Cooling 2 TAP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TY-LYR47W",
-    "category": "small",
-    "images": [],
-    "price": 1399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2 TAP"
-    },
-    "oldPrice": 1899,
-    "discount": 26
-  },
-  {
-    "id": "tcl-031",
-    "name": "TCL Compressor Cooling 3 TAPS",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TY-LWYR109W",
-    "category": "small",
-    "images": [],
-    "price": 1599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "3 TAPS"
-    },
-    "oldPrice": 2099,
-    "discount": 24
-  },
-  {
-    "id": "tcl-032",
-    "name": "TCL Compressor Cooling 3 TAPS",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TY-LWYR107T",
-    "category": "small",
-    "images": [],
-    "price": 2199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "3 TAPS"
-    },
-    "oldPrice": 2699,
-    "discount": 19
-  },
-  {
-    "id": "tcl-033",
-    "name": "TCL Split On/Off R32 Gas- Silver 1.5 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-12CSD/ZG11",
-    "category": "small",
-    "images": [],
-    "price": 3499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 3999,
-    "discount": 13
-  },
-  {
-    "id": "tcl-034",
-    "name": "TCL Split On/Off R32 Gas- Silver 2.0 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-18CSD/ZG11",
-    "category": "small",
-    "images": [],
-    "price": 5499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 5999,
-    "discount": 8
-  },
-  {
-    "id": "tcl-035",
-    "name": "TCL Split Inverter R32 Gas 1.5 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-12CSD/XA73I",
-    "category": "small",
-    "images": [],
-    "price": 3799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 5499,
-    "discount": 31
-  },
-  {
-    "id": "tcl-036",
-    "name": "TCL Split Inverter R410 Gas- Black Mirror 1.5 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-12CSA/XA82I",
-    "category": "small",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 7099,
-    "discount": 30
-  },
-  {
-    "id": "tcl-037",
-    "name": "TCL Split Inverter R410 Gas- Black Mirror 2.0 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-18CSA/XA82I",
-    "category": "small",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 9699,
-    "discount": 28
-  },
-  {
-    "id": "tcl-038",
-    "name": "TCL Split Inverter R410 Gas- Black Mirror 2.5 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-24CSA/XA82I",
-    "category": "small",
-    "images": [],
-    "price": 8999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 11799,
-    "discount": 24
-  },
-  {
-    "id": "tcl-039",
-    "name": "TCL Split Freshin Inverter R32 Gas- Silver 1.5 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-12CSD/FCI",
-    "category": "small",
-    "images": [],
-    "price": 6799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 7299,
-    "discount": 7
-  },
-  {
-    "id": "tcl-040",
-    "name": "TCL Split Freshin Inverter R32 Gas- Silver 2.0 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-18CSD/FCI",
-    "category": "small",
-    "images": [],
-    "price": 7799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 8999,
-    "discount": 13
-  },
-  {
-    "id": "tcl-041",
-    "name": "TCL Split Inverter R410 Gas- Breeze In White 1.5 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-12CSA/TPH11I",
-    "category": "small",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 5499,
-    "discount": 27
-  },
-  {
-    "id": "tcl-042",
-    "name": "TCL Split Inverter R410 Gas- Breeze In White 2.0 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-18CSA/TPH11I",
-    "category": "small",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 8299,
-    "discount": 28
-  },
-  {
-    "id": "tcl-043",
-    "name": "TCL Split Inverter R410 Gas- Breeze In White 2.5 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-24CSA/TPH11I",
-    "category": "small",
-    "images": [],
-    "price": 7499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 11399,
-    "discount": 34
-  },
-  {
-    "id": "tcl-044",
-    "name": "TCL Round Floor Standing Inverter - R32 Gas 2.0 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-18CFD/MCI",
-    "category": "small",
-    "images": [],
-    "price": 9999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 12699,
-    "discount": 21
-  },
-  {
-    "id": "tcl-045",
-    "name": "TCL Floor Standing Inverter R32 Gas 2.5 HP",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TAC-24CFD/V7I",
-    "category": "small",
-    "images": [],
-    "price": 11999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 12999,
-    "discount": 8
-  },
-  {
-    "id": "tcl-046",
-    "name": "TCL Cassette - Inverter/R410 Gas 2.5 HP -WHITE",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCC-24CHRA/DV(02)",
-    "category": "small",
-    "images": [],
-    "price": 13999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP -WHITE"
-    },
-    "oldPrice": 14999,
-    "discount": 7
-  },
-  {
-    "id": "tcl-047",
-    "name": "TCL Cassette - Inverter/R410 Gas 3.5 HP - WHITE",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCC-36CHRA/DV(02)",
-    "category": "small",
-    "images": [],
-    "price": 15999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "3.5 HP - WHITE"
-    },
-    "oldPrice": 16999,
-    "discount": 6
-  },
-  {
-    "id": "tcl-048",
-    "name": "TCL Cassette - Inverter/R410 Gas 5 HP - WHITE",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCC-48CHRA/DV7(02)",
-    "category": "small",
-    "images": [],
-    "price": 23999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "5 HP - WHITE"
-    },
-    "oldPrice": 24999,
-    "discount": 4
-  },
-  {
-    "id": "tcl-049",
-    "name": "TCL Cassette - Inverter/R410 Gas 6 HP - WHITE",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCC-60CHRA/DV7(02)",
-    "category": "small",
-    "images": [],
-    "price": 27999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "6 HP - WHITE"
-    },
-    "oldPrice": 29999,
-    "discount": 7
-  },
-  {
-    "id": "tcl-050",
-    "name": "TCL Ceiling & Floor / R410 Gas 3.5 HP - WHITE",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCC-36ZHRA/DV(02)",
-    "category": "small",
-    "images": [],
-    "price": 14999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "3.5 HP - WHITE"
-    },
-    "oldPrice": 15999,
-    "discount": 6
-  },
-  {
-    "id": "tcl-051",
-    "name": "TCL Single Door 90 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F117SDS",
-    "category": "small",
-    "images": [],
-    "price": 1899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "90 L"
-    },
-    "oldPrice": 2199,
-    "discount": 14
-  },
-  {
-    "id": "tcl-052",
-    "name": "TCL Single Door 117 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F152TMS",
-    "category": "small",
-    "images": [],
-    "price": 2499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "117 L"
-    },
-    "oldPrice": 2999,
-    "discount": 17
-  },
-  {
-    "id": "tcl-053",
-    "name": "TCL Single Door 165 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F216TMS",
-    "category": "small",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "165 L"
-    },
-    "oldPrice": 3999,
-    "discount": 25
-  },
-  {
-    "id": "tcl-054",
-    "name": "TCL Single Door 413 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "P540TMGWD",
-    "category": "small",
-    "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "413 L"
-    },
-    "oldPrice": 8999,
-    "discount": 11
-  },
-  {
-    "id": "tcl-055",
-    "name": "TCL Single Door 635 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "P826TMN",
-    "category": "small",
-    "images": [],
-    "price": 10999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "635 L"
-    },
-    "oldPrice": 11999,
-    "discount": 8
-  },
-  {
-    "id": "tcl-056",
-    "name": "TCL Bottom Mount 108 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F141BFS",
-    "category": "small",
-    "images": [],
-    "price": 2599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "108 L"
-    },
-    "oldPrice": 2799,
-    "discount": 7
-  },
-  {
-    "id": "tcl-057",
-    "name": "TCL Bottom Mount 142 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F185BFS",
-    "category": "small",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "142 L"
-    },
-    "oldPrice": 3299,
-    "discount": 9
-  },
-  {
-    "id": "tcl-058",
-    "name": "TCL Bottom Mount 309 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F410BFS",
-    "category": "small",
-    "images": [],
-    "price": 5199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "309 L"
-    },
-    "oldPrice": 7499,
-    "discount": 31
-  },
-  {
-    "id": "tcl-059",
-    "name": "TCL Side By Side 433 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "P575SBGWD",
-    "category": "small",
-    "images": [],
-    "price": 9999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "433 L"
-    },
-    "oldPrice": 11499,
-    "discount": 13
-  },
-  {
-    "id": "tcl-060",
-    "name": "TCL Side By Side 529 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "P692SBNWD",
-    "category": "small",
-    "images": [],
-    "price": 9999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "529  L"
-    },
-    "oldPrice": 11999,
-    "discount": 17
-  },
-  {
-    "id": "tcl-061",
-    "name": "TCL Side By Side 529 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "P692SBBG",
-    "category": "small",
-    "images": [],
-    "price": 10999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "529 L"
-    },
-    "oldPrice": 11999,
-    "discount": 8
-  },
-  {
-    "id": "tcl-062",
-    "name": "TCL Standing 168 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F208SDS",
-    "category": "fridge",
-    "images": [],
-    "price": 3699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "168 L"
-    },
-    "oldPrice": 3999,
-    "discount": 8
-  },
-  {
-    "id": "tcl-063",
-    "name": "TCL Chest 145 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F188CFSL",
-    "category": "fridge",
-    "images": [],
-    "price": 2499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "145 L"
-    },
-    "oldPrice": 2999,
-    "discount": 17
-  },
-  {
-    "id": "tcl-064",
-    "name": "TCL Chest 200 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F257CFSL",
-    "category": "fridge",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "200 L"
-    },
-    "oldPrice": 3399,
-    "discount": 12
-  },
-  {
-    "id": "tcl-065",
-    "name": "TCL Chest 380 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F494CFSL",
-    "category": "fridge",
-    "images": [],
-    "price": 5299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "380 L"
-    },
-    "oldPrice": 5499,
-    "discount": 4
-  },
-  {
-    "id": "tcl-066",
-    "name": "TCL Chest 508 L",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F660CFSL",
-    "category": "fridge",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "508 L"
-    },
-    "oldPrice": 7999,
-    "discount": 13
-  },
-  {
-    "id": "tcl-067",
-    "name": "TCL Twin Top 7 KG",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F207TT",
-    "category": "laundry",
-    "images": [],
-    "price": 1899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "7 KG"
-    },
-    "oldPrice": 2299,
-    "discount": 17
-  },
-  {
-    "id": "tcl-068",
-    "name": "TCL Twin Top 10.1 KG",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F211TT",
-    "category": "laundry",
-    "images": [],
-    "price": 2399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "10.1 KG"
-    },
-    "oldPrice": 2999,
-    "discount": 20
-  },
-  {
-    "id": "tcl-069",
-    "name": "TCL Top Load 9 KG",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F709TL",
-    "category": "laundry",
-    "images": [],
-    "price": 3499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "9 KG"
-    },
-    "oldPrice": 4899,
-    "discount": 29
-  },
-  {
-    "id": "tcl-070",
-    "name": "TCL Top Load 10.5 KG",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "F711TL",
-    "category": "laundry",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "10.5 KG"
-    },
-    "oldPrice": 5699,
-    "discount": 30
-  },
-  {
-    "id": "tcl-071",
-    "name": "TCL Front Load 7KGS",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "P607FL",
-    "category": "laundry",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "7KGS"
-    },
-    "oldPrice": 4999,
-    "discount": 20
-  },
-  {
-    "id": "tcl-072",
-    "name": "TCL Front Load- Inverter 8 KG",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "P1108FLG",
-    "category": "laundry",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "8 KG"
-    },
-    "oldPrice": 7099,
-    "discount": 15
-  },
-  {
-    "id": "tcl-073",
-    "name": "TCL Front Load- Inverter 9 KG",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "P1109FLG",
-    "category": "laundry",
-    "images": [],
-    "price": 6499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "9 KG"
-    },
-    "oldPrice": 7499,
-    "discount": 13
-  },
-  {
-    "id": "tcl-074",
-    "name": "TCL Front Load- Inverter 10.5 KG",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "P211FLG",
-    "category": "laundry",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "10.5 KG"
-    },
-    "oldPrice": 8299,
-    "discount": 16
-  },
-  {
-    "id": "tcl-075",
-    "name": "TCL Combo 10.5 KG\\ 6 KGS",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "C211WDG",
-    "category": "laundry",
-    "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "10.5 KG\\ 6 KGS"
-    },
-    "oldPrice": 9699,
-    "discount": 18
-  },
-  {
-    "id": "midea-001",
-    "name": "Midea Split Acs Inverter R410-Unicool 1.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAF24B-12CRDN1",
-    "category": "ac",
-    "images": [],
-    "price": 4399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 6399,
-    "discount": 31
-  },
-  {
-    "id": "midea-002",
-    "name": "Midea Split Acs Inverter R32 Gas-Unicool + 1.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAF24B-12CRDN1-R32",
-    "category": "ac",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 6399,
-    "discount": 22
-  },
-  {
-    "id": "midea-003",
-    "name": "Midea Split Acs Inverter R32 Gas-Unicool + 2.0 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAF24C-18CRDN1-R32",
-    "category": "ac",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 8299,
-    "discount": 16
-  },
-  {
-    "id": "midea-004",
-    "name": "Midea Split Acs Inverter R32 Gas-Unicool + 2.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAF-24CRDN1-R32",
-    "category": "ac",
-    "images": [],
-    "price": 9999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 12999,
-    "discount": 23
-  },
-  {
-    "id": "midea-005",
-    "name": "Midea Split Inverter - R290 1.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAGBU-12HRFN7",
-    "category": "ac",
-    "images": [],
-    "price": 5499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 8499,
-    "discount": 35
-  },
-  {
-    "id": "midea-006",
-    "name": "Midea Split Acs Inverter R32 1.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAFB-12CRDN8-QD2",
-    "category": "ac",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 6199,
-    "discount": 3
-  },
-  {
-    "id": "midea-007",
-    "name": "Midea Split Acs Inverter R32 2.0HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAFC-17CRDN8/MOX230-18CDN8-Q",
-    "category": "ac",
-    "images": [],
-    "price": 8799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "2.0HP"
-    }
-  },
-  {
-    "id": "midea-008",
-    "name": "Midea Split Acs Inverter R32 2.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAFD-22CRFN8/MOX330-22CFN8-Q",
-    "category": "ac",
-    "images": [],
-    "price": 11999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 12799,
-    "discount": 6
-  },
-  {
-    "id": "midea-009",
-    "name": "Midea Split Acs Inverter -Breezeless-R32 1.5 hp",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSCB1B-12CRFN8",
-    "category": "ac",
-    "images": [],
-    "price": 6299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 hp"
-    },
-    "oldPrice": 6699,
-    "discount": 6
-  },
-  {
-    "id": "midea-010",
-    "name": "Midea Split Acs Inverter -Breezeless-R32 2.0 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSCB1CU-18HRFN8",
-    "category": "ac",
-    "images": [],
-    "price": 9499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 9999,
-    "discount": 5
-  },
-  {
-    "id": "midea-011",
-    "name": "Midea Split Acs Inverter -Breezeless-R32 2.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSCB1DU-24HRFN8",
-    "category": "ac",
-    "images": [],
-    "price": 11999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 14199,
-    "discount": 15
-  },
-  {
-    "id": "midea-012",
-    "name": "Midea Split Acs R410 1.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAF-12CRN1",
-    "category": "ac",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 HP"
-    },
-    "oldPrice": 5299,
-    "discount": 25
-  },
-  {
-    "id": "midea-013",
-    "name": "Midea Split Acs R410 2.0 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAF-18CRN1",
-    "category": "ac",
-    "images": [],
-    "price": 6499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.0 HP"
-    },
-    "oldPrice": 7899,
-    "discount": 18
-  },
-  {
-    "id": "midea-014",
-    "name": "Midea Split Acs R410 2.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MSAF-24CRN1",
-    "category": "ac",
-    "images": [],
-    "price": 8999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 11399,
-    "discount": 21
-  },
-  {
-    "id": "midea-015",
-    "name": "Midea Floor Standing - R410 48000 BTU",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MJ2-48CRN1",
-    "category": "ac",
-    "images": [],
-    "price": 22999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "48000 BTU"
-    },
-    "oldPrice": 27899,
-    "discount": 18
-  },
-  {
-    "id": "midea-016",
-    "name": "Midea Floor Standing - Inverter R410 24000 BTU/H",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MFYA400-24ARFN1",
-    "category": "ac",
-    "images": [],
-    "price": 13999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "24000 BTU/H"
-    },
-    "oldPrice": 18299,
-    "discount": 23
-  },
-  {
-    "id": "midea-017",
-    "name": "Midea Floor Standing - Inverter R410 48000 BTU/H",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MFPA400-48HRFN1",
-    "category": "ac",
-    "images": [],
-    "price": 29999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "48000 BTU/H"
-    },
-    "oldPrice": 36499,
-    "discount": 18
-  },
-  {
-    "id": "midea-018",
-    "name": "Midea Floor Standing - Inverter R410 24000 BTU/H",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MPA-24CRDN1",
-    "category": "ac",
-    "images": [],
-    "price": 11999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "24000 BTU/H"
-    },
-    "oldPrice": 14499,
-    "discount": 17
-  },
-  {
-    "id": "midea-019",
-    "name": "Midea Floor Standing - Inverter R410 18000 btu",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MFPA-18CRDN1",
-    "category": "ac",
-    "images": [],
-    "price": 9999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "18000 btu"
-    },
-    "oldPrice": 13999,
-    "discount": 29
-  },
-  {
-    "id": "midea-020",
-    "name": "Midea Cassette Inverter R410 2.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MCD-24HRND1",
-    "category": "ac",
-    "images": [],
-    "price": 15999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2.5 HP"
-    },
-    "oldPrice": 18499,
-    "discount": 14
-  },
-  {
-    "id": "midea-021",
-    "name": "Midea Cassette Inverter R410 3.5 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MCD-36HRDN1",
-    "category": "ac",
-    "images": [],
-    "price": 23999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "3.5 HP"
-    },
-    "oldPrice": 26999,
-    "discount": 11
-  },
-  {
-    "id": "midea-022",
-    "name": "Midea Cassette Inverter R410 5.0 HP",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MCD-48HRDN1",
-    "category": "ac",
-    "images": [],
-    "price": 29999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "ac"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "5.0 HP"
-    },
-    "oldPrice": 31999,
-    "discount": 6
-  },
-  {
-    "id": "midea-023",
-    "name": "Midea Air Purifier 220 M³/hr",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "KJ200G-D41",
-    "category": "small",
-    "images": [],
-    "price": 1299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "220 M³/hr"
-    },
-    "oldPrice": 1599,
-    "discount": 19
-  },
-  {
-    "id": "midea-024",
-    "name": "Midea Standing Air Cooler 60W",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "AC120-15F",
-    "category": "small",
-    "images": [],
-    "price": 1499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "60W"
-    },
-    "oldPrice": 2099,
-    "discount": 29
-  },
-  {
-    "id": "midea-025",
-    "name": "Midea Standing Air Cooler 50W",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "AC100-18B",
-    "category": "small",
-    "images": [],
-    "price": 899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "50W"
-    },
-    "oldPrice": 1799,
-    "discount": 50
-  },
-  {
-    "id": "midea-026",
-    "name": "Midea Standing Fan",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "FS40-19K",
-    "category": "small",
-    "images": [],
-    "price": 399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 699,
-    "discount": 43
-  },
-  {
-    "id": "midea-027",
-    "name": "Midea Standing Fan",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "FS40-21M",
-    "category": "small",
-    "images": [],
-    "price": 249,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 279,
-    "discount": 11
-  },
-  {
-    "id": "midea-028",
-    "name": "Midea Standing Fan 16\"",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "FS40-13QRA",
-    "category": "small",
-    "images": [],
-    "price": 1099,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "16\""
-    },
-    "oldPrice": 1299,
-    "discount": 15
-  },
-  {
-    "id": "midea-029",
-    "name": "Midea Recharghable Fan 18''",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "FS45-23MRD",
-    "category": "small",
-    "images": [],
-    "price": 999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "18\""
-    },
-    "oldPrice": 1099,
-    "discount": 9
-  },
-  {
-    "id": "midea-030",
-    "name": "Midea Dehumidifier 30 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDDP-30DEN7",
-    "category": "small",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "30 L"
-    },
-    "oldPrice": 3599,
-    "discount": 17
-  },
-  {
-    "id": "midea-031",
-    "name": "Midea Table Top 93 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRD142FGN50",
-    "category": "fridge",
-    "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "93 L"
-    },
-    "oldPrice": 2899,
-    "discount": 31
-  },
-  {
-    "id": "midea-032",
-    "name": "Midea Dd Table Top 87 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRT134FGN50",
-    "category": "fridge",
-    "images": [],
-    "price": 1699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "87 L"
-    },
-    "oldPrice": 3499,
-    "discount": 51
-  },
-  {
-    "id": "midea-033",
-    "name": "Midea Defrost- Top Freezer 463 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRT645MTN46D",
-    "category": "fridge",
-    "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "463 L"
-    },
-    "oldPrice": 11399,
-    "discount": 30
-  },
-  {
-    "id": "midea-034",
-    "name": "Midea Defrost- Top Freezer 360 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRT489MTN46",
-    "category": "fridge",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "360 L"
-    },
-    "oldPrice": 9199,
-    "discount": 24
-  },
-  {
-    "id": "midea-035",
-    "name": "Midea Defrost- Top Freezer 207 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRT294FGN28",
-    "category": "fridge",
-    "images": [],
-    "price": 3499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "207 L"
-    },
-    "oldPrice": 4599,
-    "discount": 24
-  },
-  {
-    "id": "midea-036",
-    "name": "Midea Defrost- Top Freezer 128 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRT187FGG28",
-    "category": "fridge",
-    "images": [],
-    "price": 2499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "128 L"
-    },
-    "oldPrice": 3599,
-    "discount": 31
-  },
-  {
-    "id": "midea-037",
-    "name": "Midea Single Door Display 211 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRZ302FZG21",
-    "category": "fridge",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "211 L"
-    },
-    "oldPrice": 7099,
-    "discount": 30
-  },
-  {
-    "id": "midea-038",
-    "name": "Midea Side By Side 548 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRS710FGN02D",
-    "category": "fridge",
-    "images": [],
-    "price": 1199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "548 L"
-    },
-    "oldPrice": 15699,
-    "discount": 92
-  },
-  {
-    "id": "midea-039",
-    "name": "Midea Side By Side",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRC207FZN43",
-    "category": "fridge",
-    "images": [],
-    "price": 2399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 3599,
-    "discount": 33
-  },
-  {
-    "id": "midea-040",
-    "name": "Midea Side By Side 198 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRC280FZN43",
-    "category": "fridge",
-    "images": [],
-    "price": 2899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "198 L"
-    },
-    "oldPrice": 4499,
-    "discount": 36
-  },
-  {
-    "id": "midea-041",
-    "name": "Midea Chest Freezer 249 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRC345FZG43",
-    "category": "fridge",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "249 L"
-    },
-    "oldPrice": 5299,
-    "discount": 25
-  },
-  {
-    "id": "midea-042",
-    "name": "Midea Chest Freezer 418 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRC564FZN01",
-    "category": "fridge",
-    "images": [],
-    "price": 6499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "418 L"
-    },
-    "oldPrice": 8799,
-    "discount": 26
-  },
-  {
-    "id": "midea-043",
-    "name": "Midea Dd-Chest Freezer 508 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRC698FZN01",
-    "category": "fridge",
-    "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "508 L"
-    },
-    "oldPrice": 9699,
-    "discount": 18
-  },
-  {
-    "id": "midea-044",
-    "name": "Midea Inverter 99 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRC193FZG43D",
-    "category": "fridge",
-    "images": [],
-    "price": 2099,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "99 L"
-    },
-    "oldPrice": 2499,
-    "discount": 16
-  },
-  {
-    "id": "midea-045",
-    "name": "Midea Inverter 143 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRC265FZG43D",
-    "category": "fridge",
-    "images": [],
-    "price": 2599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "143 L"
-    },
-    "oldPrice": 2899,
-    "discount": 10
-  },
-  {
-    "id": "midea-046",
-    "name": "Midea Inverter 198 L",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDRC362FZG43D",
-    "category": "fridge",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "fridge"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "198 L"
-    },
-    "oldPrice": 3499,
-    "discount": 14
-  },
-  {
-    "id": "midea-047",
-    "name": "Midea Front Load 12 KG",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MF200W120WB/T",
-    "category": "laundry",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12 KG"
-    },
-    "oldPrice": 8799,
-    "discount": 20
-  },
-  {
-    "id": "midea-048",
-    "name": "Midea Front Load 8 KG",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MF110W80B/T",
-    "category": "laundry",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "8 KG"
-    },
-    "oldPrice": 6399,
-    "discount": 22
-  },
-  {
-    "id": "midea-049",
-    "name": "Midea Front Load 7 KG",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MF110W70/T",
-    "category": "laundry",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "7 KG"
-    },
-    "oldPrice": 5499,
-    "discount": 27
-  },
-  {
-    "id": "midea-050",
-    "name": "Midea Twin Top 12 KG",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MT100W120/WG",
-    "category": "laundry",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12 KG"
-    },
-    "oldPrice": 3399,
-    "discount": 12
-  },
-  {
-    "id": "midea-051",
-    "name": "Midea Twin Top 7 KGS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MT100W70/WG",
-    "category": "laundry",
-    "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "7 KGS"
-    },
-    "oldPrice": 2199,
-    "discount": 9
-  },
-  {
-    "id": "midea-052",
-    "name": "Midea 4 Burner 4 BURNERS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "SP5055T082-B",
-    "category": "kitchen",
-    "images": [],
-    "price": 1499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "4 BURNERS"
-    },
-    "oldPrice": 2599,
-    "discount": 42
-  },
-  {
-    "id": "midea-053",
-    "name": "Midea 4 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "SP5055T082-S",
-    "category": "kitchen",
-    "images": [],
-    "price": 1599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 2699,
-    "discount": 41
-  },
-  {
-    "id": "midea-054",
-    "name": "Midea 4 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "SP5055T082-BG",
-    "category": "kitchen",
-    "images": [],
-    "price": 1699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 2699,
-    "discount": 37
-  },
-  {
-    "id": "midea-055",
-    "name": "Midea 4 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "SP5055T082-SGH",
-    "category": "kitchen",
-    "images": [],
-    "price": 1799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 2699,
-    "discount": 33
-  },
-  {
-    "id": "midea-056",
-    "name": "Midea 4 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "24TMG4G081-S",
-    "category": "kitchen",
-    "images": [],
-    "price": 2799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 3799,
-    "discount": 26
-  },
-  {
-    "id": "midea-057",
-    "name": "Midea 4 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "24TMG4G081-B",
-    "category": "kitchen",
-    "images": [],
-    "price": 2899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 3899,
-    "discount": 26
-  },
-  {
-    "id": "midea-058",
-    "name": "Midea 4 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "24TMG4G081-WD",
-    "category": "kitchen",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 3999,
-    "discount": 25
-  },
-  {
-    "id": "midea-059",
-    "name": "Midea 4 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "24LMG4G027",
-    "category": "kitchen",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 5699,
-    "discount": 30
-  },
-  {
-    "id": "midea-060",
-    "name": "Midea 5 Burner 5 BURNERS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "30AMG5G027-SILVER",
-    "category": "kitchen",
-    "images": [],
-    "price": 4799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "5 BURNERS"
-    },
-    "oldPrice": 7499,
-    "discount": 36
-  },
-  {
-    "id": "midea-061",
-    "name": "Midea 5 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "36LMG5G080V",
-    "category": "kitchen",
-    "images": [],
-    "price": 6499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 9199,
-    "discount": 29
-  },
-  {
-    "id": "midea-062",
-    "name": "Midea 5 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "36LMG5G027-C",
-    "category": "kitchen",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 9199,
-    "discount": 35
-  },
-  {
-    "id": "midea-063",
-    "name": "Midea 5 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "LMG90030",
-    "category": "kitchen",
-    "images": [],
-    "price": 6499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 8999,
-    "discount": 28
-  },
-  {
-    "id": "midea-064",
-    "name": "Midea 5 Burner",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "VESTA-P48C",
-    "category": "kitchen",
-    "images": [],
-    "price": 9999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 11399,
-    "discount": 12
-  },
-  {
-    "id": "midea-065",
-    "name": "Midea Solo 30 LTRS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "EM9P032MO-B",
-    "category": "kitchen",
-    "images": [],
-    "price": 1499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "30 LTRS"
-    },
-    "oldPrice": 1699,
-    "discount": 12
-  },
-  {
-    "id": "midea-066",
-    "name": "Midea Solo 20 LTRS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MM7P012MZ-B",
-    "category": "kitchen",
-    "images": [],
-    "price": 699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "20 LTRS"
-    },
-    "oldPrice": 1199,
-    "discount": 42
-  },
-  {
-    "id": "midea-067",
-    "name": "Midea Microwave 17 LTRS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "AM717BS7",
-    "category": "kitchen",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "17 LTRS"
-    },
-    "oldPrice": 3599,
-    "discount": 17
-  },
-  {
-    "id": "midea-068",
-    "name": "Midea Microwave 25 LTRS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "AM925BVE",
-    "category": "kitchen",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "25 LTRS"
-    },
-    "oldPrice": 4899,
-    "discount": 18
-  },
-  {
-    "id": "midea-069",
-    "name": "Midea Electric Oven 60 CM",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "65M80M1-012",
-    "category": "kitchen",
-    "images": [],
-    "price": 4499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "60 CM"
-    },
-    "oldPrice": 5699,
-    "discount": 21
-  },
-  {
-    "id": "midea-070",
-    "name": "Midea Electric Oven 60 CM",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "65M80M1-004BK",
-    "category": "kitchen",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "60 CM"
-    },
-    "oldPrice": 5999,
-    "discount": 17
-  },
-  {
-    "id": "midea-071",
-    "name": "Midea Gas Hob 4 BURNER - 60CM",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "60G40ME",
-    "category": "kitchen",
-    "images": [],
-    "price": 2499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "4 BURNER - 60CM"
-    },
-    "oldPrice": 3099,
-    "discount": 19
-  },
-  {
-    "id": "midea-072",
-    "name": "Midea Gas Hob",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "90G50ME",
-    "category": "kitchen",
-    "images": [],
-    "price": 3499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {},
-    "oldPrice": 4299,
-    "discount": 19
-  },
-  {
-    "id": "midea-073",
-    "name": "Midea Electric Hob 2 HOBS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MC-HD301",
-    "category": "kitchen",
-    "images": [],
-    "price": 1799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2 HOBS"
-    },
-    "oldPrice": 3799,
-    "discount": 53
-  },
-  {
-    "id": "midea-074",
-    "name": "Midea Electric Hob 4 HOBS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MC-HF605",
-    "category": "kitchen",
-    "images": [],
-    "price": 4499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "4 HOBS"
-    },
-    "oldPrice": 5099,
-    "discount": 12
-  },
-  {
-    "id": "midea-075",
-    "name": "Midea Electric Hob 5 HOBS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MC-HV848",
-    "category": "kitchen",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "5 HOBS"
-    },
-    "oldPrice": 7099,
-    "discount": 30
-  },
-  {
-    "id": "midea-076",
-    "name": "Midea Electric Hob 60 CM",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "60M21-S",
-    "category": "kitchen",
-    "images": [],
-    "price": 2199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "60 CM"
-    },
-    "oldPrice": 2899,
-    "discount": 24
-  },
-  {
-    "id": "midea-077",
-    "name": "Midea Electric Hob 90 CM",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "90M21",
-    "category": "kitchen",
-    "images": [],
-    "price": 2499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "90 CM"
-    },
-    "oldPrice": 3799,
-    "discount": 34
-  },
-  {
-    "id": "midea-078",
-    "name": "Midea Electric Hob 90 CM",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "90M21-S",
-    "category": "kitchen",
-    "images": [],
-    "price": 2499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "90 CM"
-    },
-    "oldPrice": 3799,
-    "discount": 34
-  },
-  {
-    "id": "midea-079",
-    "name": "Midea Electric Hob 60 CM - BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "60L03-B",
-    "category": "kitchen",
-    "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "60 CM - BLACK"
-    },
-    "oldPrice": 2799,
-    "discount": 29
-  },
-  {
-    "id": "midea-080",
-    "name": "Midea Dishwahsher 14 PLATES- SILVER CONTROL BOARD",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "WQP14-7713F",
-    "category": "kitchen",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "14 PLATES- SILVER CONTROL BOARD"
-    },
-    "oldPrice": 6999,
-    "discount": 14
-  },
-  {
-    "id": "midea-081",
-    "name": "Midea Dishwahsher 14 PLATES-BLACK CONTROL BOARD",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "WQP14-W7703L(B)",
-    "category": "kitchen",
-    "images": [],
-    "price": 6499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "14 PLATES-BLACK CONTROL BOARD"
-    },
-    "oldPrice": 7499,
-    "discount": 13
-  },
-  {
-    "id": "midea-082",
-    "name": "Midea Dishwahsher 12 PLATES- SILVER BODY",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "WQP12-5201G(S)",
-    "category": "kitchen",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12 PLATES- SILVER BODY"
-    },
-    "oldPrice": 5999,
-    "discount": 17
-  },
-  {
-    "id": "midea-083",
-    "name": "Midea Washer/Dryer Built-In 8 KG/ 6KG",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MFA06D80B/W",
-    "category": "laundry",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "laundry"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "8 KG/ 6KG"
-    },
-    "oldPrice": 10999,
-    "discount": 36
-  },
-  {
-    "id": "midea-084",
-    "name": "Midea Electric Oven 68 LTR",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MC68ABA",
-    "category": "kitchen",
-    "images": [],
-    "price": 1799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "68 LTR"
-    },
-    "oldPrice": 2199,
-    "discount": 18
-  },
-  {
-    "id": "midea-085",
-    "name": "Midea Air Fryer 4 LTR - BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MF-CN40E2",
-    "category": "kitchen",
-    "images": [],
-    "price": 599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "4 LTR - BLACK"
-    },
-    "oldPrice": 899,
-    "discount": 33
-  },
-  {
-    "id": "midea-086",
-    "name": "Midea Air Fryer 4.5 LTR - BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MF-CN45WK",
-    "category": "kitchen",
-    "images": [],
-    "price": 699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "4.5 LTR - BLACK"
-    },
-    "oldPrice": 999,
-    "discount": 30
-  },
-  {
-    "id": "midea-087",
-    "name": "Midea Air Fryer 6 LTR - BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MF-CY55WK",
-    "category": "kitchen",
-    "images": [],
-    "price": 749,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "6 LTR - BLACK"
-    },
-    "oldPrice": 1199,
-    "discount": 38
-  },
-  {
-    "id": "midea-088",
-    "name": "Midea Air Fryer 7 LTR - BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MF-CY70K",
-    "category": "kitchen",
-    "images": [],
-    "price": 1099,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "7 LTR - BLACK"
-    },
-    "oldPrice": 1499,
-    "discount": 27
-  },
-  {
-    "id": "midea-089",
-    "name": "Midea Air Fryer 7 LTR - BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MF-CY85WK",
-    "category": "kitchen",
-    "images": [],
-    "price": 1199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "7 LTR - BLACK"
-    },
-    "oldPrice": 1599,
-    "discount": 25
-  },
-  {
-    "id": "midea-090",
-    "name": "Midea Juicer 0.5 LTR",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "JE2802",
-    "category": "kitchen",
-    "images": [],
-    "price": 399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "0.5 LTR"
-    },
-    "oldPrice": 799,
-    "discount": 50
-  },
-  {
-    "id": "midea-091",
-    "name": "Midea Kettle 1.7 LTR",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MK-17S32A2",
-    "category": "kitchen",
-    "images": [],
-    "price": 199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.7 LTR"
-    },
-    "oldPrice": 299,
-    "discount": 33
-  },
-  {
-    "id": "midea-092",
-    "name": "Midea Kettle 1.7 LTR",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MK-17G02A2",
-    "category": "kitchen",
-    "images": [],
-    "price": 279,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.7 LTR"
-    },
-    "oldPrice": 299,
-    "discount": 7
-  },
-  {
-    "id": "midea-093",
-    "name": "Midea Stand Mixer 2 LTRS",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "HM0293A",
-    "category": "kitchen",
-    "images": [],
-    "price": 499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "2 LTRS"
-    },
-    "oldPrice": 599,
-    "discount": 17
-  },
-  {
-    "id": "midea-094",
-    "name": "Midea Table Blender 1.5 LTR - BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "BL2518",
-    "category": "kitchen",
-    "images": [],
-    "price": 249,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 LTR - BLACK"
-    },
-    "oldPrice": 329,
-    "discount": 24
-  },
-  {
-    "id": "midea-095",
-    "name": "Midea Table Blender 1.5 LTR - WHITE",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MJ-BL40G1",
-    "category": "kitchen",
-    "images": [],
-    "price": 449,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 LTR - WHITE"
-    },
-    "oldPrice": 529,
-    "discount": 15
-  },
-  {
-    "id": "midea-096",
-    "name": "Midea Table Blender 1.5 LTR - WHITE",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MJ-BL2516CEE-MP01S",
-    "category": "kitchen",
-    "images": [],
-    "price": 299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 LTR - WHITE"
-    },
-    "oldPrice": 499,
-    "discount": 40
-  },
-  {
-    "id": "midea-097",
-    "name": "Midea Stand Blender 1.5 LTR - BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MJ-BL6006W",
-    "category": "kitchen",
-    "images": [],
-    "price": 399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.5 LTR - BLACK"
-    },
-    "oldPrice": 469,
-    "discount": 15
-  },
-  {
-    "id": "midea-098",
-    "name": "Midea Stand Blender 1 LTR - BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MJ-BL6008BW",
-    "category": "kitchen",
-    "images": [],
-    "price": 299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1 LTR - BLACK"
-    },
-    "oldPrice": 399,
-    "discount": 25
-  },
-  {
-    "id": "midea-099",
-    "name": "Midea Stand Blender 800W- WHITE",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MJ-FP8003W",
-    "category": "kitchen",
-    "images": [],
-    "price": 599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "800W- WHITE"
-    },
-    "oldPrice": 699,
-    "discount": 14
-  },
-  {
-    "id": "midea-100",
-    "name": "Midea Rice Cooker 1 LTR- GOLD",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "YJ308J",
-    "category": "kitchen",
-    "images": [],
-    "price": 349,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1 LTR- GOLD"
-    },
-    "oldPrice": 379,
-    "discount": 8
-  },
-  {
-    "id": "midea-101",
-    "name": "Midea Rice Cooker 1.8 LTR- GOLD",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "YJ508J",
-    "category": "kitchen",
-    "images": [],
-    "price": 379,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1.8 LTR- GOLD"
-    },
-    "oldPrice": 399,
-    "discount": 5
-  },
-  {
-    "id": "midea-102",
-    "name": "Midea Hand Blender 600W-BLACK",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MJ-BH6001W",
-    "category": "kitchen",
-    "images": [],
-    "price": 399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "600W-BLACK"
-    },
-    "oldPrice": 449,
-    "discount": 11
-  },
-  {
-    "id": "midea-103",
-    "name": "Midea Electric Pressure Cooker 1000W",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MY-CS6037WP2",
-    "category": "kitchen",
-    "images": [],
-    "price": 899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1000W"
-    },
-    "oldPrice": 999,
-    "discount": 10
-  },
-  {
-    "id": "midea-104",
-    "name": "Midea Electric Pressure Cooker 1000W",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MY-CS8037WP2",
-    "category": "kitchen",
-    "images": [],
-    "price": 999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "kitchen"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "1000W"
-    },
-    "oldPrice": 1199,
-    "discount": 17
-  },
-  {
     "id": "nasco-001",
-    "name": "NASCO Led Flat 24''",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-J24FB",
+    "name": "NASCO 24″ LED FHD Digital Satellite Television",
+    "brand": "Nasco",
     "category": "tv",
-    "images": [],
+    "model": "NAS-J24FB",
     "price": 699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "24\""
-    },
     "oldPrice": 1099,
-    "discount": 36
+    "discount": 36,
+    "icon": "📺",
+    "images": [],
+    "description": "24 inch LED FHD digital satellite TV",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-002",
-    "name": "NASCO Led Flat",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-B24FB-A",
+    "name": "Nasco 32 LED Digital Satellite Television",
+    "brand": "Nasco",
     "category": "tv",
-    "images": [],
-    "price": 649,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-B32FBFL",
+    "price": 999,
+    "oldPrice": 1499,
+    "discount": 33,
     "icon": "📺",
-    "color": "#003087",
+    "images": [],
+    "description": "32 inch LED FHD digital satellite TV",
     "tags": [
-      "nasco",
-      "tv"
+      "top-deals"
     ],
-    "badge": "PROMO",
-    "description": "",
     "specs": {},
-    "oldPrice": 1099,
-    "discount": 41
+    "badge": "sale"
   },
   {
     "id": "nasco-003",
-    "name": "NASCO Led Flat 32\"",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-J32FBFL",
+    "name": "Nasco 32″ LED Digital Satellite Television",
+    "brand": "Nasco",
     "category": "tv",
-    "images": [],
+    "model": "NAS-J32FBFL",
     "price": 999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📺",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "tv"
-    ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "32\""
-    },
     "oldPrice": 1499,
-    "discount": 33
+    "discount": 33,
+    "icon": "📺",
+    "images": [],
+    "description": "32 inch LED FHD satellite smart TV",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-004",
-    "name": "NASCO Led Flat",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-B32FBFL",
+    "name": "Nasco 32″ LED Satellite Smart Television",
+    "brand": "Nasco",
     "category": "tv",
-    "images": [],
-    "price": 999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-J32FB-AND",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
     "icon": "📺",
-    "color": "#003087",
+    "images": [],
+    "description": "32 inch LED satellite smart TV with Android",
     "tags": [
-      "nasco",
-      "tv"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
     "specs": {},
-    "oldPrice": 1499,
-    "discount": 33
+    "badge": null
   },
   {
     "id": "nasco-005",
-    "name": "NASCO Led Flat 43 ''",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-B43FBFL",
+    "name": "Nasco 32″ UHD Smart Flat Television",
+    "brand": "Nasco",
     "category": "tv",
-    "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-J32FBFL-VID",
+    "price": 2299,
+    "oldPrice": null,
+    "discount": null,
     "icon": "📺",
-    "color": "#003087",
+    "images": [],
+    "description": "32 inch UHD smart flat TV",
     "tags": [
-      "nasco",
-      "tv"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "43 \""
-    },
-    "oldPrice": 2699,
-    "discount": 26
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-006",
-    "name": "NASCO Led Flat 43 ''",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-J43FBFL",
+    "name": "Nasco 40″ Led Satellite Television",
+    "brand": "Nasco",
     "category": "tv",
-    "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-B40FBFL",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
     "icon": "📺",
-    "color": "#003087",
+    "images": [],
+    "description": "40 inch LED satellite TV",
     "tags": [
-      "nasco",
-      "tv"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "43 \""
-    },
-    "oldPrice": 2699,
-    "discount": 26
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-007",
-    "name": "NASCO Split Ac - R410 Gas-Eco 12000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-J12-N1-ECO",
-    "category": "ac",
+    "name": "Nasco 40″ Led Digital Satellite Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J40FBFL",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 2899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "40 inch LED digital satellite TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12000 Btu/h"
-    },
-    "oldPrice": 3499,
-    "discount": 17
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-008",
-    "name": "NASCO Split Ac - R32 Gas 12000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-T12V1-NI",
-    "category": "ac",
+    "name": "Nasco 43\" UHD Smart Flat Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J43FB-VID",
+    "price": 3449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 2899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "43 inch UHD smart flat TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12000 Btu/h"
-    },
-    "oldPrice": 3499,
-    "discount": 17
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-009",
-    "name": "NASCO Split Ac - R32 Mirror 12000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-MR12N1-MIRROR",
-    "category": "ac",
+    "name": "Nasco 43″ LED Digital Satellite Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J43FBFL",
+    "price": 1999,
+    "oldPrice": 2699,
+    "discount": 26,
+    "icon": "📺",
     "images": [],
-    "price": 3199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "43 inch LED digital satellite TV",
     "tags": [
-      "nasco",
-      "ac"
+      "top-deals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12000 Btu/h"
-    },
-    "oldPrice": 4149,
-    "discount": 23
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-010",
-    "name": "NASCO Split Ac - R32 Mirror 18000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-MR18N1-MIRROR",
-    "category": "ac",
+    "name": "Nasco 43″ LED Satellite Smart Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J43FBFL-AND",
+    "price": 3499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 5199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "43 inch LED satellite smart TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "18000 Btu/h"
-    },
-    "oldPrice": 6749,
-    "discount": 23
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-011",
-    "name": "NASCO Split Ac - R32 Mirror 24000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-MR24N1-MIRROR",
-    "category": "ac",
+    "name": "Nasco 50 UHD 4K Digital Satellite Smart Tv",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J50FUS-AND",
+    "price": 4999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "50 inch UHD 4K digital satellite smart TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "24000 Btu/h"
-    },
-    "oldPrice": 8549,
-    "discount": 18
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-012",
-    "name": "NASCO Split Ac- R410 Gas White 12000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-T12N1",
-    "category": "ac",
+    "name": "Nasco 50\" UHD Smart Flat Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J50FUS-VID",
+    "price": 5449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "50 inch UHD smart flat TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12000 Btu/h"
-    },
-    "oldPrice": 3949,
-    "discount": 24
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-013",
-    "name": "NASCO Split Ac- R410 Gas White 18000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-T18N1",
-    "category": "ac",
+    "name": "Nasco 50\" UHD Smart Flat Television VIDAA",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-H50FS-VID",
+    "price": 5449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 4899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "50 inch UHD smart flat VIDAA TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "18000 Btu/h"
-    },
-    "oldPrice": 6549,
-    "discount": 25
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-014",
-    "name": "NASCO Split Ac- R410 Gas White 24000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-T24N1",
-    "category": "ac",
+    "name": "Nasco 50″ LED Digital Satellite Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-H50FB",
+    "price": 3899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "50 inch LED digital satellite TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "24000 Btu/h"
-    },
-    "oldPrice": 9599,
-    "discount": 27
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-015",
-    "name": "NASCO Split Ac- R410- Black 18000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-J18-V1B",
-    "category": "ac",
+    "name": "Nasco 50″ LED Digital Satellite Television CI+",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J50FB-CI+",
+    "price": 3899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 4899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "50 inch LED digital satellite TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "18000 Btu/h"
-    },
-    "oldPrice": 5999,
-    "discount": 18
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-016",
-    "name": "NASCO Split Ac- R410 Dual Inverter 18000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-J18-V1",
-    "category": "ac",
-    "images": [],
+    "name": "Nasco 50″ UHD 4K Digital Satellite Smart Television CI+",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J50FUS-AND-CI+",
     "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "50 inch UHD 4K digital satellite smart TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "18000 Btu/h"
-    },
-    "oldPrice": 6499,
-    "discount": 23
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-017",
-    "name": "NASCO Split Ac- R32 Inverter 12000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-A12INV-X-R32",
-    "category": "ac",
+    "name": "Nasco 55\" UHD Smart Flat Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J55FUS-VID",
+    "price": 6249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 3299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "55 inch UHD smart flat TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "12000 Btu/h"
-    },
-    "oldPrice": 4599,
-    "discount": 28
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-018",
-    "name": "NASCO Split Ac- R32 Inverter 18000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-A18INV-X-R32",
-    "category": "ac",
+    "name": "Nasco 55″ UHD 4K Smart Tv",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J55FUS-AND",
+    "price": 5999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "UHD 4K Smart Television",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "18000 Btu/h"
-    },
-    "oldPrice": 6499,
-    "discount": 23
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-019",
-    "name": "NASCO Split Ac- R32 Inverter 24000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-A24INV-X-R32",
-    "category": "ac",
+    "name": "Nasco 65″ UHD Smart Flat Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J65FUS-VID",
+    "price": 7949,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "UHD Smart Flat TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "24000 Btu/h"
-    },
-    "oldPrice": 9149,
-    "discount": 23
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-020",
-    "name": "NASCO Floor Standing Acs 18000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-JFS-18N1",
-    "category": "ac",
+    "name": "Nasco 75″ UHD Smart Flat Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-J75FUS-VID",
+    "price": 13599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 6799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "UHD Smart Flat TV",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "18000 Btu/h"
-    },
-    "oldPrice": 9899,
-    "discount": 31
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-021",
-    "name": "NASCO Floor Standing Acs 24000 BTU/H",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-JFS-24N1",
-    "category": "ac",
+    "name": "Nasco Led Flat Television",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-B43FBFL",
+    "price": 2799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
     "images": [],
-    "price": 8999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "LED Smart Television",
     "tags": [
-      "nasco",
-      "ac"
+      "new-arrivals"
     ],
-    "badge": "PROMO",
-    "description": "",
-    "specs": {
-      "Size": "24000 BTU/H"
-    },
-    "oldPrice": 12449,
-    "discount": 28
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-022",
-    "name": "NASCO Round Floor Standing Acs - Inverter 18000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-TFSI-18N1",
-    "category": "ac",
+    "name": "Nasco Satellite TV",
+    "brand": "Nasco",
+    "category": "tv",
+    "model": "NAS-B24FB-A",
+    "price": 649,
+    "oldPrice": 1099,
+    "discount": 41,
+    "icon": "📺",
     "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "❄️",
-    "color": "#003087",
+    "description": "LED Television with satellite capability",
     "tags": [
-      "nasco",
-      "ac"
+      "top-deals"
     ],
-    "badge": "PROMO",
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-001",
+    "name": "Samsung 32″ Inch Digital Satellite LED Full HD Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "UA32N5000AUXGH",
+    "price": 2799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "LED Full HD Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-002",
+    "name": "Samsung 32″ LED FHD Smart Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "UA32T5300",
+    "price": 3399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "LED FHD Smart Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-003",
+    "name": "Samsung 43″ LED FHD Smart Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "UA43F6000FUXGH",
+    "price": 3999,
+    "oldPrice": 5299,
+    "discount": 25,
+    "icon": "📺",
+    "images": [],
+    "description": "LED FHD Smart Television",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-004",
+    "name": "Samsung 43″ LED FHD Tv",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "UA43N5000AUXGH",
+    "price": 4899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "LED FHD Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-005",
+    "name": "Samsung 43″ UHD Smart 4K LED Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "UA43CU7000UXGH",
+    "price": 6599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "UHD Smart 4K LED Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-006",
+    "name": "Samsung 50″ The Serif QLED 4K HDR Smart Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA50LS01TAUXZN",
+    "price": 23499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "The Serif QLED 4K HDR Smart TV",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-007",
+    "name": "Samsung 55″ QLED Flat 4K Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA55Q60DAUXKE",
+    "price": 13999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Flat 4K Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-008",
+    "name": "Samsung 55″ Serif QLED 4K Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA55LS01TAKXXA",
+    "price": 26099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "Serif QLED 4K Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-009",
+    "name": "Samsung 65″ OLED 4K Smart Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA65S85FAEXGH",
+    "price": 47899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "OLED 4K Smart Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-010",
+    "name": "Samsung 65″ QLED Flat 4K Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA65Q60DAUXGH",
+    "price": 17499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Flat 4K Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-011",
+    "name": "Samsung 65″ QLED Serif Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA65LS01BAUXGH",
+    "price": 34899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Serif Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-012",
+    "name": "Samsung 65″ QLED 4K Neo Smart Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA65QN85AAUXKE",
+    "price": 39199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED 4K Neo Smart Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-013",
+    "name": "Samsung 65″ Qn800A Neo QLED 8K Smart Tv",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA65QN800DUXLY",
+    "price": 79999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "Neo QLED 8K Smart TV",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-014",
+    "name": "Samsung 65″ OLED 4K Smart Tv",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA65S90DAUXKE",
+    "price": 47899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "OLED 4K Smart TV",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-015",
+    "name": "Samsung 75″ Qn800A Neo QLED 8K Smart Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA75QN800AUXKE",
+    "price": 113099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "Neo QLED 8K Smart Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-016",
+    "name": "Samsung 77″ OLED 4K Smart Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA77S90DAEXGH",
+    "price": 78299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "OLED 4K Smart Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-017",
+    "name": "Samsung 83″ OLED 4K Smart Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA83S90DAEXGH",
+    "price": 121799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "OLED 4K Smart Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-018",
+    "name": "Samsung 85″ Neo QLED 8K Smart Tv",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA85QN800CUXZN",
+    "price": 99999,
+    "oldPrice": 130499,
+    "discount": 23,
+    "icon": "📺",
+    "images": [],
+    "description": "Neo QLED 8K Smart TV",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-019",
+    "name": "Samsung 98″ QLED Flat 4K Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA98Q80CAUXZN",
+    "price": 116999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Flat 4K Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-020",
+    "name": "Samsung Neo QLED Vision AI Smart Tv",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA85QN900FUXGH",
+    "price": 60999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "Neo QLED Vision AI Smart TV",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-021",
+    "name": "Samsung QLED Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "QA55Q60CAUXGH",
+    "price": 13999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-022",
+    "name": "Samsung UHD Smart Television",
+    "brand": "Samsung",
+    "category": "tv",
+    "model": "",
+    "price": 5299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "UHD Smart Television multiple sizes",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-001",
+    "name": "TCL 115″ QD Mini LED 4K Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "115X955",
+    "price": 434699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QD Mini LED 4K Television 115 inches",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-002",
+    "name": "TCL 115″ QD-MINI LED 4K Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "115C7K",
+    "price": 199999,
+    "oldPrice": 299999,
+    "discount": 33,
+    "icon": "📺",
+    "images": [],
+    "description": "QD Mini LED 4K Television",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-003",
+    "name": "TCL 27″ Curved Gaming Monitor",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "27R73Q",
+    "price": 7999,
+    "oldPrice": 11699,
+    "discount": 32,
+    "icon": "📺",
+    "images": [],
+    "description": "Curved Gaming Monitor",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-004",
+    "name": "TCL 32″ FHD Satellite Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "32D3400",
+    "price": 2299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "FHD Satellite Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-005",
+    "name": "TCL 32″ FHD Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "32S4500A",
+    "price": 2799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "FHD Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-006",
+    "name": "TCL 34″ Curved Gaming Monitor",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "34R83Q",
+    "price": 11999,
+    "oldPrice": 16599,
+    "discount": 28,
+    "icon": "📺",
+    "images": [],
+    "description": "Curved Gaming Monitor",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-007",
+    "name": "TCL 43\" FHD Satellite Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "43D3400",
+    "price": 3499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "FHD Satellite Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-008",
+    "name": "TCL 43\" FHD Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "43S4500A",
+    "price": 4199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "FHD Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-009",
+    "name": "TCL 50\" 4K UHD Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "50P755",
+    "price": 6499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "4K UHD Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-010",
+    "name": "TCL 50\" QLED 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "50C645",
+    "price": 8799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-011",
+    "name": "TCL 50\" QLED Pro 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "50P7K",
+    "price": 8799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Pro 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-012",
+    "name": "TCL 50\" QLED Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "50C655",
+    "price": 8799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-013",
+    "name": "TCL 55\" 4K UHD Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "55P755",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "4K UHD Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-014",
+    "name": "TCL 55\" QLED 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "55C645",
+    "price": 9699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-015",
+    "name": "TCL 55\" QLED Pro 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "55P7K",
+    "price": 9699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Pro 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-016",
+    "name": "TCL 55\" UHD 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "55P635",
+    "price": 7099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "UHD 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-017",
+    "name": "TCL 65\" 4K UHD Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "65P755",
+    "price": 7999,
+    "oldPrice": 10499,
+    "discount": 24,
+    "icon": "📺",
+    "images": [],
+    "description": "4K UHD Smart Android Television",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-018",
+    "name": "TCL 65\" QD Mini LED 4K Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "65C6K",
+    "price": 10999,
+    "oldPrice": 15799,
+    "discount": 30,
+    "icon": "📺",
+    "images": [],
+    "description": "QD Mini LED 4K Television",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-019",
+    "name": "TCL 65\" QLED 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "65C645",
+    "price": 12299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-020",
+    "name": "TCL 65\" QLED Pro 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "65P7K",
+    "price": 12299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Pro 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-021",
+    "name": "TCL 75\" QD Mini LED 4K Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "75C755",
+    "price": 27899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QD Mini LED 4K Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-022",
+    "name": "TCL 75\" QLED 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "75C645",
+    "price": 19199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-023",
+    "name": "TCL 75\" QLED Pro 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "75P7K",
+    "price": 11999,
+    "oldPrice": 19199,
+    "discount": 38,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Pro 4K Smart Android Television",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-024",
+    "name": "TCL 75\" QLED Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "75C655",
+    "price": 19199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-025",
+    "name": "TCL 75\" 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "75P755",
+    "price": 16599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "UHD 4K Smart Android TV",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-026",
+    "name": "TCL 85\" QD Mini LED 4K Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "85C755",
+    "price": 37499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QD Mini LED 4K Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-027",
+    "name": "TCL 85\" QD-Mini LED 4K Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "85C6K",
+    "price": 24999,
+    "oldPrice": 37499,
+    "discount": 33,
+    "icon": "📺",
+    "images": [],
+    "description": "QD-Mini LED 4K Television",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-028",
+    "name": "TCL 85\" QLED 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "85C645",
+    "price": 28799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-029",
+    "name": "TCL 85\" QLED Pro 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "85P8K",
+    "price": 28799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Pro 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-030",
+    "name": "TCL 85\" QLED Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "85C655",
+    "price": 28799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-031",
+    "name": "TCL 85\" UHD 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "85V6B",
+    "price": 26099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "UHD 4K Smart Android TV",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-032",
+    "name": "TCL 98\" QD Mini LED 4K Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "98C755",
+    "price": 78299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QD Mini LED 4K Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-033",
+    "name": "TCL 98\" QLED 4K Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "98C655",
+    "price": 60999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED 4K Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-034",
+    "name": "TCL UHD 4K Smart Android Television 75\"",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "75P6K",
+    "price": 16599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "UHD 4K Smart Android TV",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-035",
+    "name": "TCL QLED FHD Smart Android Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "",
+    "price": 2299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "QLED FHD Smart Android Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-036",
+    "name": "TCL UHD Hotel Television",
+    "brand": "TCL",
+    "category": "tv",
+    "model": "",
+    "price": 6499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "📺",
+    "images": [],
+    "description": "UHD Hotel Television",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-001",
+    "name": "Midea 1.0Hp Split AC R32 Inverter 5 Stars",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSEP-09CRFN8",
+    "price": 6999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "18000 Btu/h"
-    },
-    "oldPrice": 10749,
-    "discount": 44
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-002",
+    "name": "Midea 1.5Hp Inverter R410 Split Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAF-12CRDN1",
+    "price": 6199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-003",
+    "name": "Midea 1.5Hp R410 Split Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAF-12CRN1",
+    "price": 5299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-004",
+    "name": "Midea 1.5Hp Split AC R32 Inverter 5 Stars",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSEP-12CRFN8",
+    "price": 7299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-005",
+    "name": "Midea 1.5HP Split Inverter Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAG-12CRDN8",
+    "price": 5199,
+    "oldPrice": 6199,
+    "discount": 16,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-006",
+    "name": "Midea 15Ltrs Air Cooler",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "AC120-15F",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-007",
+    "name": "Midea 2.0Hp Inverter R410 Cassette Unit",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MCA3-18HRFN1",
+    "price": 14999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-008",
+    "name": "Midea 2.0Hp Inverter R410 Split Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAF-18CRDN1",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-009",
+    "name": "Midea 2.0Hp R410 Split Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAF-18CRN1",
+    "price": 7899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-010",
+    "name": "Midea 2.0Hp Split AC R32 Inverter 5 Stars",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSEP-18HRFN8",
+    "price": 9999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-011",
+    "name": "Midea 2.0HP Split Inverter Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAG-18CRDN8",
+    "price": 7499,
+    "oldPrice": 8299,
+    "discount": 10,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-012",
+    "name": "Midea 2.0HP Split Inverter Breezeless Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSCB1CU-18HRFN8",
+    "price": 8499,
+    "oldPrice": 9999,
+    "discount": 15,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-013",
+    "name": "Midea 2.5Hp Floor Standing Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MPA-22CRN1-N",
+    "price": 13099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-014",
+    "name": "Midea 2.5Hp Floor Standing Inverter",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MFYA400-24ARFN1",
+    "price": 18299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-015",
+    "name": "Midea 2.5Hp Floor Standing Inverter R410",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MPA-24CRDN1",
+    "price": 14499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-016",
+    "name": "Midea 2.5Hp Inverter R410 Cassette Unit",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MCD-24HRND1",
+    "price": 18499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-017",
+    "name": "Midea 2.5Hp Inverter R410 Split Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAF-24CRDN1",
+    "price": 12299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-018",
+    "name": "Midea 2.5Hp R410 Split Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAF-24CRN1",
+    "price": 11399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-019",
+    "name": "Midea 2.5HP Split Inverter Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAG-24CRDN8",
+    "price": 11799,
+    "oldPrice": 12299,
+    "discount": 4,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-020",
+    "name": "Midea 2.5Hp Split Inverter Air Conditioner R32",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAGDU-24CRFN8",
+    "price": 13099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-021",
+    "name": "Midea 2.5HP Split Inverter Breezeless Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSCB1DU-24HRFN8",
+    "price": 10999,
+    "oldPrice": 14199,
+    "discount": 23,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-022",
+    "name": "Midea 3.0Hp Floor Standing Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MPA-27CRN1-N",
+    "price": 13999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-023",
+    "name": "Midea 3.5Hp Floor Standing Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MFTJ-36CRN1",
+    "price": 17999,
+    "oldPrice": 19999,
+    "discount": 10,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-024",
+    "name": "Midea 3.5Hp Inverter R410 Cassette Unit",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MCD-36HRDN1",
+    "price": 26999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-025",
+    "name": "Midea 3.5Hp R410 Cassette Unit",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MCD-36CRN1",
+    "price": 15299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-026",
+    "name": "Midea 5.0Hp Floor Standing Air Conditioner",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MJ2-48CRN1",
+    "price": 22999,
+    "oldPrice": 27899,
+    "discount": 18,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-027",
+    "name": "Midea 5.0Hp Inverter R410 Cassette Unit",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MCD-48HRDN1",
+    "price": 31999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-028",
+    "name": "Midea 5.0Hp R410 Cassette Unit",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MCD-48CRN1",
+    "price": 27299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-029",
+    "name": "Midea 50Ltr Air Cooler",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "AC200-17JR",
+    "price": 3799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-030",
+    "name": "Midea 50Watt Air Cooler",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "AC100-R",
+    "price": 1799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-031",
+    "name": "Midea 50Watt Air Cooler White",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "AC100-18B",
+    "price": 1799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-032",
+    "name": "Midea 5Hp Floor Standing Inverter R410",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MFPA400-48HRFN1",
+    "price": 26999,
+    "oldPrice": 36499,
+    "discount": 26,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-033",
+    "name": "Midea 6.0Hp R410 Cassette Unit",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MCD_60CR",
+    "price": 17999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-034",
+    "name": "Midea Split AC Inverter Breezeless R32 1.5Hp",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSCB1B-12CRFN8",
+    "price": 5999,
+    "oldPrice": 6699,
+    "discount": 10,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-035",
+    "name": "Midea Split Air Conditioner Inverter",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAGBU-12HRFN7-2",
+    "price": 5499,
+    "oldPrice": 8499,
+    "discount": 35,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-036",
+    "name": "Midea Split Inverter R410 Unicool 1.5Hp AC",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAF24B-12CRDN1",
+    "price": 4399,
+    "oldPrice": 6399,
+    "discount": 31,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-037",
+    "name": "Midea Split Inverter R410 Unicool 2.0Hp AC",
+    "brand": "Midea",
+    "category": "ac",
+    "model": "MSAF24C-18CRDN1",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-023",
-    "name": "NASCO Round Floor Standing Acs - Inverter 24000 Btu/h",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-TFSI-24N1",
+    "name": "Nasco 1.0Hp R410 Split Air Conditioner White",
+    "brand": "Nasco",
     "category": "ac",
-    "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-T09N1",
+    "price": 3499,
+    "oldPrice": null,
+    "discount": null,
     "icon": "❄️",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "ac"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "24000 Btu/h"
-    },
-    "oldPrice": 12449,
-    "discount": 44
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-024",
-    "name": "NASCO Refrigerators-French Door 421 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-68FDR",
-    "category": "fridge",
+    "name": "Nasco 1.5Hp Gas Split Inverter Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-M12V1-R32",
+    "price": 5699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 8999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "421 L"
-    },
-    "oldPrice": 10999,
-    "discount": 18
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-025",
-    "name": "NASCO Refrigerators-French Door 360 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-400FDR",
-    "category": "fridge",
+    "name": "Nasco 1.5Hp R410 Split Air Conditioner Mirror",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-M12N1-MIRROR",
+    "price": 4149,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "360 L"
-    },
-    "oldPrice": 7999,
-    "discount": 13
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-026",
-    "name": "NASCO Refrigerators-Side By Side 425 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-55SK",
-    "category": "fridge",
+    "name": "Nasco 1.5Hp R410 Split Air Conditioner White ECO",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-J12-N1-ECO",
+    "price": 2899,
+    "oldPrice": 3499,
+    "discount": 17,
+    "icon": "❄️",
     "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "425 L"
-    },
-    "oldPrice": 10799,
-    "discount": 26
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-027",
-    "name": "NASCO Refrigerators-Side By Side 400 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-66.1FF",
-    "category": "fridge",
+    "name": "Nasco 1.5Hp R410 Split Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-T12N1",
+    "price": 3949,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 6999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "400 L"
-    },
-    "oldPrice": 9999,
-    "discount": 30
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-028",
-    "name": "NASCO Refregerator- Top Mount - No Frost 401 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-500WD",
-    "category": "fridge",
+    "name": "Nasco 1.5Hp R410 Split Dual Inverter Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-T12V1",
+    "price": 4999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 7999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "401 L"
-    },
-    "oldPrice": 8999,
-    "discount": 11
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-029",
-    "name": "NASCO Refregerator- Top Mount 320 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-45",
-    "category": "fridge",
+    "name": "Nasco 1.5HP Split Dual Inverter R410 Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-J12-V1",
+    "price": 4599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 4499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "320 L"
-    },
-    "oldPrice": 6599,
-    "discount": 32
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-030",
-    "name": "NASCO Refregerator- Top Mount 280 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-320FLD",
-    "category": "fridge",
+    "name": "Nasco 1.5HP Split Inverter Air Conditioner R32",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-A12INV-X-R32",
+    "price": 3299,
+    "oldPrice": 3799,
+    "discount": 13,
+    "icon": "❄️",
     "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "280 L"
-    },
-    "oldPrice": 4999,
-    "discount": 20
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-031",
-    "name": "NASCO Refregerator- Top Mount 210 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-250FLD",
-    "category": "fridge",
+    "name": "Nasco 1.5Hp Split Inverter Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NASHRN1-12",
+    "price": 5449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 3799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "210 L"
-    },
-    "oldPrice": 4599,
-    "discount": 17
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-032",
-    "name": "NASCO Refregerator- Top Mount 207 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-30",
-    "category": "fridge",
+    "name": "Nasco 1.5HP Split Mirror Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-MR12N1-MIRROR",
+    "price": 4149,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 3399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "207 L"
-    },
-    "oldPrice": 3699,
-    "discount": 8
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-033",
-    "name": "NASCO Refregerator- Top Mount 166 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "DF2-22",
-    "category": "fridge",
+    "name": "Nasco 2.0Hp Floor Standing Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-JFS-18N1",
+    "price": 6999,
+    "oldPrice": 9899,
+    "discount": 29,
+    "icon": "❄️",
     "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "166 L"
-    },
-    "oldPrice": 4349,
-    "discount": 31
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-034",
-    "name": "NASCO Refregerator- Top Mount 166 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-24",
-    "category": "fridge",
+    "name": "Nasco 2.0Hp Gas Split Inverter Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-M18V1-R32",
+    "price": 8249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 2499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "166 L"
-    },
-    "oldPrice": 2999,
-    "discount": 17
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-035",
-    "name": "NASCO Refregerator- Top Mount 118 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-15S",
-    "category": "fridge",
+    "name": "Nasco 2.0Hp R410 Split Air Conditioner Mirror",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-M18N1-MIRROR",
+    "price": 6749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "118 L"
-    },
-    "oldPrice": 2899,
-    "discount": 31
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-036",
-    "name": "NASCO Refregerator- Top Mount 95 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-12S",
-    "category": "fridge",
+    "name": "Nasco 2.0Hp R410 Split Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-T18N1",
+    "price": 4999,
+    "oldPrice": 6549,
+    "discount": 24,
+    "icon": "❄️",
     "images": [],
-    "price": 1849,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "95 L"
-    },
-    "oldPrice": 2349,
-    "discount": 21
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-037",
-    "name": "NASCO Refrigerators-Bottom Freezer 147 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "DD2-20",
-    "category": "fridge",
+    "name": "Nasco 2.0Hp R410 Split Dual Inverter Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-T18V1",
+    "price": 7049,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 2899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "147 L"
-    },
-    "oldPrice": 3799,
-    "discount": 24
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-038",
-    "name": "NASCO Refrigerators-Bottom Freezer 268 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-36",
-    "category": "fridge",
+    "name": "Nasco 2.0Hp Round Floor Standing Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-TFSI-18N1",
+    "price": 5999,
+    "oldPrice": 10749,
+    "discount": 44,
+    "icon": "❄️",
     "images": [],
-    "price": 6699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "268 L"
-    }
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-039",
-    "name": "NASCO Refrigerators-Bottom Freezer 287 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-44",
-    "category": "fridge",
+    "name": "Nasco 2.0HP Split Dual Inverter R410 Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-J18-V1",
+    "price": 6499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 5199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "287 L"
-    },
-    "oldPrice": 7149,
-    "discount": 27
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-040",
-    "name": "NASCO Refrigerators-Bottom Freezer 307 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-40WD",
-    "category": "fridge",
+    "name": "Nasco 2.0HP Split Inverter Air Conditioner R32",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-A18INV-X-R32",
+    "price": 5299,
+    "oldPrice": 5999,
+    "discount": 12,
+    "icon": "❄️",
     "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "307 L"
-    },
-    "oldPrice": 8299,
-    "discount": 40
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-041",
-    "name": "NASCO Bed Side Fridge 41 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF1-06",
-    "category": "fridge",
+    "name": "Nasco 2.0Hp Split Inverter Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NASHRN1-18",
+    "price": 8249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "41 L"
-    },
-    "oldPrice": 1599,
-    "discount": 19
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-042",
-    "name": "NASCO Refrigerator-Table Top 70 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF1-09S",
-    "category": "fridge",
+    "name": "Nasco 2.0HP Split Mirror Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-MR18N1-MIRROR",
+    "price": 6749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "70 L"
-    },
-    "oldPrice": 1749,
-    "discount": 31
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-043",
-    "name": "NASCO Refrigerator-Table Top 76 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF1-95FL",
-    "category": "fridge",
+    "name": "Nasco 2.5Hp Floor Standing Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-JFS-24N1",
+    "price": 12449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "76 L"
-    },
-    "oldPrice": 1799,
-    "discount": 33
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-044",
-    "name": "NASCO Refrigerator-Table Top 92 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF1-110FL-B",
-    "category": "fridge",
+    "name": "Nasco 2.5Hp R410 Split Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-T24N1",
+    "price": 6999,
+    "oldPrice": 9599,
+    "discount": 27,
+    "icon": "❄️",
     "images": [],
-    "price": 1299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "92 L"
-    },
-    "oldPrice": 1899,
-    "discount": 32
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-045",
-    "name": "NASCO Refrigerator-Table Top 91 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF1-11S",
-    "category": "fridge",
+    "name": "Nasco 2.5Hp R410 Split Air Conditioner Mirror",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-M24N1-MIRROR",
+    "price": 8549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "91 L"
-    },
-    "oldPrice": 1899,
-    "discount": 26
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-046",
-    "name": "NASCO Refrigerator New Models - Top Freezer 86 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-11FL-B-MIRROR",
-    "category": "fridge",
+    "name": "Nasco 2.5Hp R410 Split Dual Inverter Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-T24V1",
+    "price": 9149,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "86 L"
-    },
-    "oldPrice": 2199,
-    "discount": 18
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-047",
-    "name": "NASCO Refrigerator New Models - Top Freezer 102 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-12FL-B",
-    "category": "fridge",
+    "name": "Nasco 2.5Hp Round Floor Standing Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-TFSI-24N1",
+    "price": 12449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "102 L"
-    },
-    "oldPrice": 2399,
-    "discount": 21
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-048",
-    "name": "NASCO Retro New Models - Table Top 86 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-110RT",
-    "category": "fridge",
+    "name": "Nasco 2.5Hp Split Air Conditioner R32",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-M24V1-R32",
+    "price": 10749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 2299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "86 L"
-    },
-    "oldPrice": 2349,
-    "discount": 2
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-049",
-    "name": "NASCO Refrigerator New Models - Top Freezer 112 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-13FL",
-    "category": "fridge",
+    "name": "Nasco 2.5HP Split Dual Inverter R410 Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-J24-V1",
+    "price": 9149,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "112 L"
-    },
-    "oldPrice": 2649,
-    "discount": 32
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-050",
-    "name": "NASCO Refrigerator New Models - Top Freezer 138 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-16FL",
-    "category": "fridge",
+    "name": "Nasco 2.5HP Split Inverter Air Conditioner R32",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-A24INV-X-R32",
+    "price": 7199,
+    "oldPrice": 7499,
+    "discount": 4,
+    "icon": "❄️",
     "images": [],
-    "price": 1899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "138 L"
-    },
-    "oldPrice": 2999,
-    "discount": 37
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-051",
-    "name": "NASCO Refrigerator New Models - Top Freezer 158 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASF2-18FL",
-    "category": "fridge",
+    "name": "Nasco 2.5Hp Split Inverter Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NASHRN1-24",
+    "price": 10749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "158 L"
-    },
-    "oldPrice": 3249,
-    "discount": 38
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-052",
-    "name": "NASCO Refrigerator New Models - Bottom Freezer 106 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-10FL",
-    "category": "fridge",
+    "name": "Nasco 2.5HP Split Mirror Air Conditioner",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-MR24N1-MIRROR",
+    "price": 8549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "106 L"
-    },
-    "oldPrice": 2649,
-    "discount": 32
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-053",
-    "name": "NASCO Refrigerator New Models - Bottom Freezer 106 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-10FL-B",
-    "category": "fridge",
+    "name": "Nasco 3.5Hp Floor Standing AC",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-TFS-36N1",
+    "price": 17549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 1799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "106 L"
-    },
-    "oldPrice": 2649,
-    "discount": 32
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-054",
-    "name": "NASCO Refrigerator New Models - Bottom Freezer 116 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-14FL",
-    "category": "fridge",
+    "name": "Nasco 5.0Hp Floor Standing AC",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-TFS-48N1",
+    "price": 25249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 2299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "116 L"
-    },
-    "oldPrice": 2799,
-    "discount": 18
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-055",
-    "name": "NASCO Refrigerator New Models - Bottom Freezer 136 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-18FL-B",
-    "category": "fridge",
+    "name": "Nasco 5.0Hp Floor Standing AC cassette",
+    "brand": "Nasco",
+    "category": "ac",
+    "model": "NAS-48N1-CH",
+    "price": 25249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
     "images": [],
-    "price": 2599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "136 L"
-    },
-    "oldPrice": 3249,
-    "discount": 20
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-023",
+    "name": "Samsung 1.0HP Split Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR09CRHGAWK/AF",
+    "price": 3999,
+    "oldPrice": 5299,
+    "discount": 25,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-024",
+    "name": "Samsung 1.5HP R410 Split Inverter AC",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR12BVEAMWK/GA",
+    "price": 10499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-025",
+    "name": "Samsung 1.5HP R410 Split Inverter Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR12TVHABWK/GA",
+    "price": 8999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-026",
+    "name": "Samsung 1.5Hp Split AC Inverter R410",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR12TVHGAWKN",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-027",
+    "name": "Samsung 1.5HP Split Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR12TRHGAWK/GA",
+    "price": 6599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-028",
+    "name": "Samsung 1.5HP Split Inverter R410 Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR12BVHGAWK/GA",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-029",
+    "name": "Samsung 1.5HP Split R410 Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR12CRHGAWK/AF",
+    "price": 4599,
+    "oldPrice": 6599,
+    "discount": 30,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-030",
+    "name": "Samsung 2.0HP R410 Split AC",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR18TRHGAWK/GA",
+    "price": 8799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-031",
+    "name": "Samsung 2.0HP R410 Split Inverter Wind Free AC",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR18BVEAMWK/GA",
+    "price": 14999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-032",
+    "name": "Samsung 2.0HP R410 Split Inverter Wind Free Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR18TVHABWK/GA",
+    "price": 14999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-033",
+    "name": "Samsung 2.0Hp Split AC Inverter R410",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR18TVHGAWKN",
+    "price": 11399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-034",
+    "name": "Samsung 2.0HP Split ACS Inverter R410 Wind Free Smart",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR18TSEAAWK/FA",
+    "price": 12999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-035",
+    "name": "Samsung 2.0HP Split Inverter R410 Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR18BVHGAWK/AF",
+    "price": 11399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-036",
+    "name": "Samsung 2.0HP Split R410 Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR18CRHGAWK/AF",
+    "price": 6999,
+    "oldPrice": 8799,
+    "discount": 20,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-037",
+    "name": "Samsung 2.5HP R410 Split Inverter AC",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR24BVEAMWK/GA",
+    "price": 17499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-038",
+    "name": "Samsung 2.5HP R410 Split Inverter Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR24TVHABWK/GA",
+    "price": 17499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-039",
+    "name": "Samsung 2.5HP R410-Split AC",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR24TRHGAWK/GA",
+    "price": 12299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-040",
+    "name": "Samsung 2.5HP Split Inverter R410 Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR24BVHGAWK/GA",
+    "price": 13499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-041",
+    "name": "Samsung 2.5HP Split R410 Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR24CRHGAWK/AF",
+    "price": 9999,
+    "oldPrice": 12299,
+    "discount": 19,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-042",
+    "name": "Samsung 3.5HP Floor Standing AC R410",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AC036TNPPEH/AC036TXQREH",
+    "price": 29999,
+    "oldPrice": 32299,
+    "discount": 7,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-043",
+    "name": "Samsung Split ACS Inverter R410 Wind Free Smart",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR12TSEAAWK/FA",
+    "price": 8999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-044",
+    "name": "Samsung Split Inverter R32 Air Conditioner",
+    "brand": "Samsung",
+    "category": "ac",
+    "model": "AR40F24D0AG/AF",
+    "price": 9999,
+    "oldPrice": 17499,
+    "discount": 43,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-037",
+    "name": "TCL 1.5HP Split Inverter Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-12CSD/ZG21I",
+    "price": 3999,
+    "oldPrice": 5499,
+    "discount": 27,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-038",
+    "name": "TCL 1.5HP Split Inverter R410 Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-12CSA/XA73I",
+    "price": 5499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-039",
+    "name": "TCL 1.5HP Split Inverter R410 Black Mirror Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-12CSA/XA82I",
+    "price": 4999,
+    "oldPrice": 7099,
+    "discount": 30,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-040",
+    "name": "TCL 1.5HP Split ON/OFF Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-12CSD/ZG11",
+    "price": 3499,
+    "oldPrice": 3999,
+    "discount": 13,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-041",
+    "name": "TCL 1.5HP Split R410 Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-12CSA/XA51",
+    "price": 4199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-042",
+    "name": "TCL 2.0HP Floor Standing Inverter R32 Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-18CFD/MCI",
+    "price": 9999,
+    "oldPrice": 12699,
+    "discount": 21,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-043",
+    "name": "TCL 2.0HP Split Inverter Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-18CSD/ZG21I",
+    "price": 5999,
+    "oldPrice": 8299,
+    "discount": 28,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-044",
+    "name": "TCL 2.0HP Split Inverter R410 Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-18CSA/XA73I",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-045",
+    "name": "TCL 2.0HP Split Inverter R410 Black Mirror Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-18CSA/XA82I",
+    "price": 6999,
+    "oldPrice": 9699,
+    "discount": 28,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-046",
+    "name": "TCL 2.0HP Split ON/OFF Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-18CSD/ZG11",
+    "price": 5499,
+    "oldPrice": 5999,
+    "discount": 8,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-047",
+    "name": "TCL 2.0HP Split R410 Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-18CSA/XA51",
+    "price": 6499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-048",
+    "name": "TCL 2.5HP Floor Standing Inverter Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-24CFD/V7I",
+    "price": 11999,
+    "oldPrice": 12999,
+    "discount": 8,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-049",
+    "name": "TCL 2.5HP Floor Standing Inverter R32 Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-24CFD/MCI",
+    "price": 14399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-050",
+    "name": "TCL 2.5HP Inverter Cassette Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TCC-24CHRA/DV(02)",
+    "price": 14999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-051",
+    "name": "TCL 2.5HP Split Inverter Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-24CSD/ZG21I",
+    "price": 7499,
+    "oldPrice": 11399,
+    "discount": 34,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-052",
+    "name": "TCL 2.5HP Split Inverter R410 Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-24CSA/XA73I",
+    "price": 11399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-053",
+    "name": "TCL 2.5HP Split Inverter R410 Black Mirror Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-24CSA/XA82I",
+    "price": 8999,
+    "oldPrice": 11799,
+    "discount": 24,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-054",
+    "name": "TCL 3.5HP Cassette Inverter Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TCC-36CHRA/DV(02)",
+    "price": 16999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-055",
+    "name": "TCL 3.5HP Ceiling Floor Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TCC-36ZHRA/DV(02)",
+    "price": 14999,
+    "oldPrice": 15999,
+    "discount": 6,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-056",
+    "name": "TCL 3.5HP Floor Standing R410 Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-36CFA/C",
+    "price": 17999,
+    "oldPrice": 22699,
+    "discount": 21,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-057",
+    "name": "TCL 5.0HP Cassette Inverter Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TCC-48CHRA/DV7(02)",
+    "price": 24999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-058",
+    "name": "TCL 5.0HP Floor Standing R410 Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-48CFA/C",
+    "price": 21999,
+    "oldPrice": 28799,
+    "discount": 24,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-059",
+    "name": "TCL 6.0HP Cassette Inverter Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TCC-60CHRA/DV7(02)",
+    "price": 29999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-060",
+    "name": "TCL 10.0HP Floor Standing Inverter Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TCC-96FHRA/DV",
+    "price": 54999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-061",
+    "name": "TCL Floor Standing Air Conditioner",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-60CHFA/FDI",
+    "price": 32999,
+    "oldPrice": 39999,
+    "discount": 18,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-062",
+    "name": "TCL Split Inverter Air Conditioner 1.5HP",
+    "brand": "TCL",
+    "category": "ac",
+    "model": "TAC-12CSD/XA73I",
+    "price": 5499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "❄️",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-038",
+    "name": "Midea 128Ltrs Double Door Top Mount Fridge",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRT187FGG28",
+    "price": 2499,
+    "oldPrice": 3599,
+    "discount": 31,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-039",
+    "name": "Midea 129Ltrs Bottom Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRB197FGF30",
+    "price": 3399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-040",
+    "name": "Midea 129Ltrs Double Door Bottom Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "HD-176R(N)",
+    "price": 4699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-041",
+    "name": "Midea 142Ltrs Chest Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "HS-186",
+    "price": 2699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-042",
+    "name": "Midea 173Ltrs Double Door Top Freezer Fridge",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRT237FGG28",
+    "price": 4499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-043",
+    "name": "Midea 174Ltrs Double Door Bottom Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRT241FTGN50",
+    "price": 3299,
+    "oldPrice": 4899,
+    "discount": 33,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-044",
+    "name": "Midea 198Ltrs Chest Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRC280FZN43",
+    "price": 4499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-045",
+    "name": "Midea 211Ltrs Display Fridge",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRZ302FZG21",
+    "price": 4999,
+    "oldPrice": 7099,
+    "discount": 30,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-046",
+    "name": "Midea 238L Built-In Refrigerator",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRE353FGN01",
+    "price": 8999,
+    "oldPrice": 9999,
+    "discount": 10,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-047",
+    "name": "Midea 249Ltrs Chest Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRC345FZG43",
+    "price": 5299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-048",
+    "name": "Midea 262Ltrs Double Door Bottom Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRB369FGN02",
+    "price": 6599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-049",
+    "name": "Midea 290Ltrs Chest Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRC398FZG43",
+    "price": 6599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-050",
+    "name": "Midea 294Ltrs Inverter Chest Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRC407FZN43D",
+    "price": 4499,
+    "oldPrice": 5399,
+    "discount": 17,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-051",
+    "name": "Midea 302Ltrs Double Door Bottom Freezer 4 Stars",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRB424FGF02",
+    "price": 7999,
+    "oldPrice": 10799,
+    "discount": 26,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-052",
+    "name": "Midea 316Ltrs Single Door Display Fridge",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRZ432FZG21",
+    "price": 5999,
+    "oldPrice": 7899,
+    "discount": 24,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-053",
+    "name": "Midea 418Ltrs Chest Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRC564FZF01",
+    "price": 8799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-054",
+    "name": "Midea 463Ltrs Defrost Top Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRT645MTN46D",
+    "price": 7999,
+    "oldPrice": 11399,
+    "discount": 30,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-055",
+    "name": "Midea 474 Ltrs 4 Doors French Door",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRF632FGN46D",
+    "price": 13399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-056",
+    "name": "Midea 508Ltrs Chest Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRC698FZN01",
+    "price": 9699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-057",
+    "name": "Midea 548 Ltrs Side By Side",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRS710FGN02D",
+    "price": 15699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-058",
+    "name": "Midea 85Ltrs Table Top Fridge",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRD133FGG31",
+    "price": 2799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-059",
+    "name": "Midea 87Ltrs Double Door Table Top Fridge",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRT134FGF08",
+    "price": 3499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-060",
+    "name": "Midea 93Ltrs Table Top Fridge",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRD142FGN50",
+    "price": 1999,
+    "oldPrice": 2899,
+    "discount": 31,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-061",
+    "name": "Midea 93Ltrs Table Top Fridge White Retro",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "HS-121LN-RETRO",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-062",
+    "name": "Midea 99Ltrs Chest Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "HS-131CN",
+    "price": 3499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-063",
+    "name": "Midea Chest Freezer",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRC193FZG43D",
+    "price": 2099,
+    "oldPrice": 2499,
+    "discount": 16,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-064",
+    "name": "Midea Chest Freezer 418L",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRC564FZN01",
+    "price": 8799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-065",
+    "name": "Midea Table Top Refrigerator",
+    "brand": "Midea",
+    "category": "fridge",
+    "model": "MDRT134FGN50",
+    "price": 1699,
+    "oldPrice": 3499,
+    "discount": 51,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-056",
-    "name": "NASCO Refrigerator New Models - Bottom Freezer 136 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-18Fl-G",
+    "name": "Nasco 100Ltr Chest Freezer Silver",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 2399,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-110S",
+    "price": 2699,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "136 L"
-    },
-    "oldPrice": 3249,
-    "discount": 26
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-057",
-    "name": "NASCO Refrigerator New Models - Bottom Freezer 158 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-20FL",
+    "name": "Nasco 100Ltrs Chest Freezer",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 2699,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-110",
+    "price": 2999,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "158 L"
-    },
-    "oldPrice": 3449,
-    "discount": 22
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-058",
-    "name": "NASCO Refrigerator New Models - Bottom Freezer 196 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD2-24FL",
+    "name": "Nasco 100Ltrs Chest Freezer Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 3499,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-110SK",
+    "price": 2999,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "196 L"
-    },
-    "oldPrice": 4049,
-    "discount": 14
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-059",
-    "name": "NASCO Standing Freezer 150 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD1-225FL",
+    "name": "Nasco 102Ltrs Table Top Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASF2-12FL",
+    "price": 2249,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "150 L"
-    },
-    "oldPrice": 3599,
-    "discount": 17
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-060",
-    "name": "NASCO Standing Freezer 166 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASD1-200SK",
+    "name": "Nasco 106Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 3499,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASD2-10FL-B",
+    "price": 1899,
+    "oldPrice": 2649,
+    "discount": 28,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "166 L"
-    },
-    "oldPrice": 3599,
-    "discount": 3
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-061",
-    "name": "NASCO Standing Freezer 225 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "DD1-33",
+    "name": "Nasco 1080L Display Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 4899,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-FL1300-2DR",
+    "price": 15999,
+    "oldPrice": 16999,
+    "discount": 6,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "225 L"
-    },
-    "oldPrice": 6849,
-    "discount": 28
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-062",
-    "name": "NASCO Display Fridges 110 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FL110SC",
+    "name": "Nasco 108Ltrs Top Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 2299,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASF2-14S",
+    "price": 2799,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "110 L"
-    },
-    "oldPrice": 2999,
-    "discount": 23
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-063",
-    "name": "NASCO Display Fridges 200 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FL200SC",
+    "name": "Nasco 110Ltrs Top Freezer Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 3599,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASF2-130",
+    "price": 1749,
+    "oldPrice": 2349,
+    "discount": 26,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "200 L"
-    },
-    "oldPrice": 3999,
-    "discount": 10
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-064",
-    "name": "NASCO Display Fridges 288L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FL350-1DR",
+    "name": "Nasco 112Ltrs Table Top Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 4499,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASF2-13FL",
+    "price": 1799,
+    "oldPrice": 2649,
+    "discount": 32,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "288L"
-    },
-    "oldPrice": 6149,
-    "discount": 27
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-065",
-    "name": "NASCO Display Fridges 298L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FL360-1DR",
+    "name": "Nasco 116Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 4799,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASD2-14FL",
+    "price": 2099,
+    "oldPrice": 2799,
+    "discount": 25,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "298L"
-    },
-    "oldPrice": 6699,
-    "discount": 28
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-066",
-    "name": "NASCO Display Fridges 358L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FL400-1DR",
+    "name": "Nasco 118Ltrs Top Mount Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 5699,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASF2-15S",
+    "price": 1999,
+    "oldPrice": 2899,
+    "discount": 31,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "358L"
-    },
-    "oldPrice": 7149,
-    "discount": 20
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-067",
-    "name": "NASCO Display Fridges 350 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-375DFG",
+    "name": "Nasco 1200L Display Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 5999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-FL1400-3DR",
+    "price": 17999,
+    "oldPrice": 18999,
+    "discount": 5,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "350 L"
-    },
-    "oldPrice": 7499,
-    "discount": 20
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-068",
-    "name": "NASCO Display Fridges 728 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FL850-2DR",
+    "name": "Nasco 120Ltrs Display Fridge",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 11999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-CH150-1DRTT",
+    "price": 4899,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "728 L"
-    },
-    "oldPrice": 14999,
-    "discount": 20
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-069",
-    "name": "NASCO Display Fridges 1080 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FL1300-2DR",
+    "name": "Nasco 135Ltrs Top Mount Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 15999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASF2-18KD",
+    "price": 3699,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "1080 L"
-    },
-    "oldPrice": 16999,
-    "discount": 6
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-070",
-    "name": "NASCO Display Fridges 1200 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FL1400-3DR",
+    "name": "Nasco 136L Bottom Freezer",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 17999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASD2-18FL-B",
+    "price": 2599,
+    "oldPrice": 3249,
+    "discount": 20,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "1200 L"
-    },
-    "oldPrice": 18999,
-    "discount": 5
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-071",
-    "name": "NASCO Chest Freezers 150L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-200FL-G",
+    "name": "Nasco 138Ltrs Chest Freezer",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-175FL-G",
+    "price": 2349,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "150L"
-    },
-    "oldPrice": 3149,
-    "discount": 37
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-072",
-    "name": "NASCO Chest Freezers 145 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-160",
+    "name": "Nasco 138Ltrs Top Mount Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 2099,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASF2-20S",
+    "price": 2999,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "145 L"
-    },
-    "oldPrice": 3099,
-    "discount": 32
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-073",
-    "name": "NASCO Chest Freezers 200 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-210",
+    "name": "Nasco 138Ltrs Top Mounted Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 2899,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASF2-16FL",
+    "price": 1999,
+    "oldPrice": 2999,
+    "discount": 33,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "200 L"
-    },
-    "oldPrice": 3899,
-    "discount": 26
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-074",
-    "name": "NASCO Chest Freezers 200 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-250FL",
+    "name": "Nasco 142Ltrs Chest Freezer",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 2799,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-200SK",
+    "price": 2199,
+    "oldPrice": 3149,
+    "discount": 30,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "200 L"
-    },
-    "oldPrice": 3549,
-    "discount": 21
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-075",
-    "name": "NASCO Chest Freezers 250 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-350FL",
+    "name": "Nasco 145Ltrs Chest Freezer",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 3199,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-160",
+    "price": 2099,
+    "oldPrice": 3099,
+    "discount": 32,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "250 L"
-    },
-    "oldPrice": 4599,
-    "discount": 30
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-076",
-    "name": "NASCO Chest Freezers 251 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-300",
+    "name": "Nasco 147Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 3199,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "DD2-20",
+    "price": 2899,
+    "oldPrice": 3799,
+    "discount": 24,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "251 L"
-    },
-    "oldPrice": 4799,
-    "discount": 33
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-077",
-    "name": "NASCO Chest Freezers 288L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-400FL-G",
+    "name": "Nasco 150Ltrs Chest Freezer",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 3799,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NAS-200FL",
+    "price": 3099,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "288L"
-    },
-    "oldPrice": 5099,
-    "discount": 25
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-078",
-    "name": "NASCO Chest Freezers 290 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-360",
+    "name": "Nasco 150Ltrs Standing Freezer",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASD1-18FL",
+    "price": 3449,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "290 L"
-    },
-    "oldPrice": 5399,
-    "discount": 26
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-079",
-    "name": "NASCO Chest Freezers 318 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-425FL-G",
+    "name": "Nasco 158Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASD2-20FL",
+    "price": 2699,
+    "oldPrice": 3449,
+    "discount": 22,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "318 L"
-    },
-    "oldPrice": 5399,
-    "discount": 26
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-080",
-    "name": "NASCO Chest Freezers 380 L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-420",
+    "name": "Nasco 158Ltrs Top Mounted Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASF2-18FL",
+    "price": 2099,
+    "oldPrice": 3249,
+    "discount": 35,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "380 L"
-    },
-    "oldPrice": 6249,
-    "discount": 20
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-081",
-    "name": "NASCO Chest Freezers 400L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-475FL-B",
+    "name": "Nasco 166Ltrs Standing Freezer",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 5299,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASD1-200SK",
+    "price": 3499,
+    "oldPrice": 3599,
+    "discount": 3,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "400L"
-    },
-    "oldPrice": 5999,
-    "discount": 12
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-082",
-    "name": "NASCO Display Chest Freezer 239L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FS305FL",
+    "name": "Nasco 166Ltrs Top Mount Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 5499,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "DF2-22",
+    "price": 4349,
+    "oldPrice": null,
+    "discount": null,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "239L"
-    },
-    "oldPrice": 6699,
-    "discount": 18
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-083",
-    "name": "NASCO Display Chest Freezer 360L",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-FS405FL",
+    "name": "Nasco 170Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
     "category": "fridge",
-    "images": [],
-    "price": 6299,
-    "rating": 4.5,
-    "reviews": 0,
+    "model": "NASD2-23-SK",
+    "price": 2999,
+    "oldPrice": 3799,
+    "discount": 21,
     "icon": "🧊",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "fridge"
-    ],
-    "badge": "PROMO",
+    "images": [],
     "description": "",
-    "specs": {
-      "Size": "360L"
-    },
-    "oldPrice": 7499,
-    "discount": 16
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-084",
-    "name": "NASCO Microwaves - Grill 25 LTRS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "EG925EFF",
-    "category": "kitchen",
+    "name": "Nasco 186Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD2-27",
+    "price": 5149,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 1499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "25 LTRS"
-    },
-    "oldPrice": 1999,
-    "discount": 25
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-085",
-    "name": "NASCO Microwaves - Grill 36 LTRS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "AG036AFK",
-    "category": "kitchen",
+    "name": "Nasco 196Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD2-24FL",
+    "price": 3499,
+    "oldPrice": 4049,
+    "discount": 14,
+    "icon": "🧊",
     "images": [],
-    "price": 1799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "36 LTRS"
-    },
-    "oldPrice": 2099,
-    "discount": 14
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-086",
-    "name": "NASCO Microwaves - Solo 20 LTRS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MWO20NAS-2LV(B)",
-    "category": "kitchen",
+    "name": "Nasco 198Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-250FL",
+    "price": 2799,
+    "oldPrice": 3549,
+    "discount": 21,
+    "icon": "🧊",
     "images": [],
-    "price": 679,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "20 LTRS"
-    },
-    "oldPrice": 849,
-    "discount": 20
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-087",
-    "name": "NASCO Washing Machines ( Twin Top ) 5 KGS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-05-TW",
-    "category": "laundry",
+    "name": "Nasco 198Ltrs Top Mount Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-24KD",
+    "price": 4249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "laundry"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "5 KGS"
-    },
-    "oldPrice": 1649,
-    "discount": 39
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-088",
-    "name": "NASCO Washing Machines ( Twin Top ) 10 KGS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASTT-JS100",
-    "category": "laundry",
+    "name": "Nasco 200Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-210",
+    "price": 2799,
+    "oldPrice": 3899,
+    "discount": 28,
+    "icon": "🧊",
     "images": [],
-    "price": 2199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "laundry"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "10 KGS"
-    },
-    "oldPrice": 2399,
-    "discount": 8
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-089",
-    "name": "NASCO Washing Machines (Top Load) 12 KGS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASTL-B120FL",
-    "category": "laundry",
+    "name": "Nasco 207Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD2-29",
+    "price": 4949,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 3799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "laundry"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "12 KGS"
-    },
-    "oldPrice": 3999,
-    "discount": 5
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-090",
-    "name": "NASCO Washing Machines (Top Load) 8 KGS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASTL-B80",
-    "category": "laundry",
+    "name": "Nasco 207Ltrs Double Door Top Mount Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-30",
+    "price": 3299,
+    "oldPrice": 3699,
+    "discount": 11,
+    "icon": "🧊",
     "images": [],
-    "price": 2799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "laundry"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "8 KGS"
-    },
-    "oldPrice": 2999,
-    "discount": 7
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-091",
-    "name": "NASCO Washing Machines (Front Load) 12 KGS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASFL-JS12KG-S",
-    "category": "laundry",
+    "name": "Nasco 210Ltrs Top Mounted Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-250FLD",
+    "price": 3799,
+    "oldPrice": 4599,
+    "discount": 17,
+    "icon": "🧊",
     "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "laundry"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "12 KGS"
-    },
-    "oldPrice": 5399,
-    "discount": 7
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-092",
-    "name": "NASCO Washing Machines (Front Load) 10 KGS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASFL-JS10KG-S",
-    "category": "laundry",
+    "name": "Nasco 225Ltrs Standing Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "DD1-33",
+    "price": 4899,
+    "oldPrice": 6849,
+    "discount": 28,
+    "icon": "🧊",
     "images": [],
-    "price": 4299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "laundry"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "10 KGS"
-    },
-    "oldPrice": 5049,
-    "discount": 15
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-093",
-    "name": "NASCO Washing Machines (Front Load) 8 KGS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASFL-J8KG-S",
-    "category": "laundry",
+    "name": "Nasco 229Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD2-30",
+    "price": 4499,
+    "oldPrice": 5849,
+    "discount": 23,
+    "icon": "🧊",
     "images": [],
-    "price": 3399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "laundry"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "8 KGS"
-    },
-    "oldPrice": 4599,
-    "discount": 26
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-094",
-    "name": "NASCO Washing Machines (Front Load) 6 KGS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASFL-J6KG-S",
-    "category": "laundry",
+    "name": "Nasco 244Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-380SK",
+    "price": 3199,
+    "oldPrice": 4449,
+    "discount": 28,
+    "icon": "🧊",
     "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🫧",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "laundry"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "6 KGS"
-    },
-    "oldPrice": 3699,
-    "discount": 19
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-095",
-    "name": "NASCO Gas Cooker 4 BURNER",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASGC-50X50S-CTZ",
-    "category": "kitchen",
+    "name": "Nasco 246Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD2-33",
+    "price": 6149,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 1399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "4 BURNER"
-    },
-    "oldPrice": 2099,
-    "discount": 33
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-096",
-    "name": "NASCO Gas Cooker",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASGC-50MO+ST-CTZ",
-    "category": "kitchen",
+    "name": "Nasco 251Ltrs Bottom Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD2-29SK",
+    "price": 4499,
+    "oldPrice": 5399,
+    "discount": 17,
+    "icon": "🧊",
     "images": [],
-    "price": 1199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
+    "tags": [
+      "top-deals"
+    ],
     "specs": {},
-    "oldPrice": 1749,
-    "discount": 31
+    "badge": "sale"
   },
   {
     "id": "nasco-097",
-    "name": "NASCO Gas Cooker",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASGC-50MO-CTZ",
-    "category": "kitchen",
+    "name": "Nasco 251Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-300",
+    "price": 4799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
     "specs": {},
-    "oldPrice": 1649,
-    "discount": 39
+    "badge": null
   },
   {
     "id": "nasco-098",
-    "name": "NASCO Gas Cooker",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASGC-SNIPER50TB",
-    "category": "kitchen",
+    "name": "Nasco 255Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD2-36",
+    "price": 6699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 1699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
     "specs": {},
-    "oldPrice": 2099,
-    "discount": 19
+    "badge": null
   },
   {
     "id": "nasco-099",
-    "name": "NASCO Gas Cooker",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASGC-SNIPER50TS-G",
-    "category": "kitchen",
+    "name": "Nasco 250Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-350FL",
+    "price": 3199,
+    "oldPrice": 4599,
+    "discount": 30,
+    "icon": "🧊",
     "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
+    "tags": [
+      "top-deals"
+    ],
     "specs": {},
-    "oldPrice": 2499,
-    "discount": 20
+    "badge": "sale"
   },
   {
     "id": "nasco-100",
-    "name": "NASCO Gas Cooker",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASGC-LME60I",
-    "category": "kitchen",
+    "name": "Nasco 270Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-370-SK",
+    "price": 3999,
+    "oldPrice": 4899,
+    "discount": 18,
+    "icon": "🧊",
     "images": [],
-    "price": 3299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
+    "tags": [
+      "top-deals"
+    ],
     "specs": {},
-    "oldPrice": 4499,
-    "discount": 27
+    "badge": "sale"
   },
   {
     "id": "nasco-101",
-    "name": "NASCO Gas Cooker 5 BURNERS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASGC-LME90I",
-    "category": "kitchen",
+    "name": "Nasco 280L Top Mount Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-320FL-B",
+    "price": 3799,
+    "oldPrice": 3999,
+    "discount": 5,
+    "icon": "🧊",
     "images": [],
-    "price": 5199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "5 BURNERS"
-    },
-    "oldPrice": 8199,
-    "discount": 37
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-102",
-    "name": "NASCO Gas Cooker",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASGC-LME90B",
-    "category": "kitchen",
+    "name": "Nasco 280Ltrs Top Mounted Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-320FLD",
+    "price": 3999,
+    "oldPrice": 4999,
+    "discount": 20,
+    "icon": "🧊",
     "images": [],
-    "price": 4999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
+    "tags": [
+      "top-deals"
+    ],
     "specs": {},
-    "oldPrice": 7849,
-    "discount": 36
+    "badge": "sale"
   },
   {
     "id": "nasco-103",
-    "name": "NASCO Gas Cooker 5 BURNERS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NASGC-AMG80S",
-    "category": "kitchen",
+    "name": "Nasco 280Ltrs Top Mounted Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-28FL",
+    "price": 4349,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 3799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "5 BURNERS"
-    },
-    "oldPrice": 5249,
-    "discount": 28
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-104",
-    "name": "NASCO Electric Cooker 4 HOBS",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NAS-DM4H109",
-    "category": "kitchen",
+    "name": "Nasco 287Ltrs Bottom Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD2-44",
+    "price": 5199,
+    "oldPrice": 7149,
+    "discount": 27,
+    "icon": "🧊",
     "images": [],
-    "price": 2999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🍳",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "kitchen"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "4 HOBS"
-    },
-    "oldPrice": 4599,
-    "discount": 35
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-105",
-    "name": "NASCO Ice Maker 26 LB - BLACK",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "IMB1008-GS",
-    "category": "small",
+    "name": "Nasco 288Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-400FL-G",
+    "price": 3799,
+    "oldPrice": 5049,
+    "discount": 25,
+    "icon": "🧊",
     "images": [],
-    "price": 999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "PROMO",
     "description": "",
-    "specs": {
-      "Size": "26 LB - BLACK"
-    },
-    "oldPrice": 1299,
-    "discount": 23
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-106",
-    "name": "NASCO Ice Maker 5 WATT",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MKNAS-200",
-    "category": "small",
+    "name": "Nasco 288Ltrs Display Fridge",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-FL350-1DR",
+    "price": 4499,
+    "oldPrice": 6149,
+    "discount": 27,
+    "icon": "🧊",
     "images": [],
-    "price": 249,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "5 WATT"
-    }
-  },
-  {
-    "id": "samsung-070",
-    "name": "Samsung Video Wall 46''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH46VMBUBGBXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 33299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
     "tags": [
-      "samsung",
-      "commercial"
+      "top-deals"
     ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "46\""
-    }
-  },
-  {
-    "id": "samsung-071",
-    "name": "Samsung Video Wall 55''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55VMBUBGBXEN",
-    "category": "commercial",
-    "images": [],
-    "price": 37299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "55\""
-    }
-  },
-  {
-    "id": "samsung-072",
-    "name": "Samsung Video Wall",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55VMCEBGBXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 39999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-073",
-    "name": "Samsung Video Wall",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55UDEBLBB/UE",
-    "category": "commercial",
-    "images": [],
-    "price": 37299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-074",
-    "name": "Samsung Video Wall",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55UDEHLBB/NG",
-    "category": "commercial",
-    "images": [],
-    "price": 37299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-075",
-    "name": "Samsung Video Wall",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55VMTUBGBXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 37299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-076",
-    "name": "Samsung Standalone - Touch 13''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH13QBRTBGCXEN",
-    "category": "commercial",
-    "images": [],
-    "price": 13199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "13\""
-    }
-  },
-  {
-    "id": "samsung-077",
-    "name": "Samsung Standalone - Touch 55''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55QMRTBGCXEN",
-    "category": "commercial",
-    "images": [],
-    "price": 33199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "55\""
-    }
-  },
-  {
-    "id": "samsung-078",
-    "name": "Samsung Standalone - Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55WMBWBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 26599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-079",
-    "name": "Samsung Standalone - Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55WMRWBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 26599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-080",
-    "name": "Samsung Standalone - Touch 65''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH65WMBWBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 33199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "65\""
-    }
-  },
-  {
-    "id": "samsung-081",
-    "name": "Samsung Standalone - Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH65WMRWBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 33199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-082",
-    "name": "Samsung Standalone - Touch 75''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH75WMAWLGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 57999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "75\""
-    }
-  },
-  {
-    "id": "samsung-083",
-    "name": "Samsung Standalone - Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH75WMBWLGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 57999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-084",
-    "name": "Samsung Standalone - Touch 85''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH85WMBWLGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 74599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "85\""
-    }
-  },
-  {
-    "id": "samsung-085",
-    "name": "Samsung Standalone - None Touch 13''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH13QBREBGCXEN",
-    "category": "commercial",
-    "images": [],
-    "price": 5399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "13\""
-    }
-  },
-  {
-    "id": "samsung-086",
-    "name": "Samsung Standalone - None Touch 43''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH43QMBEBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 13199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "43\""
-    }
-  },
-  {
-    "id": "samsung-087",
-    "name": "Samsung Standalone - None Touch 49''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH49QMREBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 11699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "49\""
-    }
-  },
-  {
-    "id": "samsung-088",
-    "name": "Samsung Standalone - None Touch 50''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH50QMBEBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 14199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "50\""
-    }
-  },
-  {
-    "id": "samsung-089",
-    "name": "Samsung Standalone - None Touch 55''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55MEB",
-    "category": "commercial",
-    "images": [],
-    "price": 16599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "55\""
-    }
-  },
-  {
-    "id": "samsung-090",
-    "name": "Samsung Standalone - None Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55OHFPVBC/UE",
-    "category": "commercial",
-    "images": [],
-    "price": 66299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-091",
-    "name": "Samsung Standalone - None Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55QHBEBGCXEN",
-    "category": "commercial",
-    "images": [],
-    "price": 16599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-092",
-    "name": "Samsung Standalone - None Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH55QMCEBGCXEN",
-    "category": "commercial",
-    "images": [],
-    "price": 16599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-093",
-    "name": "Samsung Standalone - None Touch 65''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH65MDCPLG",
-    "category": "commercial",
-    "images": [],
-    "price": 52299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "65\""
-    }
-  },
-  {
-    "id": "samsung-094",
-    "name": "Samsung Standalone - None Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH65QBBEBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 30099,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-095",
-    "name": "Samsung Standalone - None Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH65QMRABGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 30099,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-096",
-    "name": "Samsung Standalone - None Touch 75''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH75QBBEBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 41899,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "75\""
-    }
-  },
-  {
-    "id": "samsung-097",
-    "name": "Samsung Standalone - None Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH75QMRABGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 52299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-098",
-    "name": "Samsung Standalone - None Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH75QMREBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 37299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-099",
-    "name": "Samsung Standalone - None Touch 85''",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH85QBRBBGCXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 57999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "85\""
-    }
-  },
-  {
-    "id": "samsung-100",
-    "name": "Samsung Standalone - None Touch",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "LH85QMNEBGC/UE",
-    "category": "commercial",
-    "images": [],
-    "price": 69999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-101",
-    "name": "Samsung Hospitality 43",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "HG43AU800EEXEN",
-    "category": "commercial",
-    "images": [],
-    "price": 13399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "43"
-    }
-  },
-  {
-    "id": "samsung-102",
-    "name": "Samsung Hospitality 50",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "HG50BU800AUXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 14999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "50"
-    }
-  },
-  {
-    "id": "samsung-103",
-    "name": "Samsung Hospitality 55\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "HG55AU800AUXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 15799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "55\""
-    }
-  },
-  {
-    "id": "samsung-104",
-    "name": "Samsung Hospitality",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "HG55AU800EEXEN",
-    "category": "commercial",
-    "images": [],
-    "price": 15799,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-105",
-    "name": "Samsung Hospitality 65\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "HG65AU800AUXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 19099,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "65\""
-    }
-  },
-  {
-    "id": "samsung-106",
-    "name": "Samsung Hospitality",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "HG65AU800EEXEN",
-    "category": "commercial",
-    "images": [],
-    "price": 19099,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "samsung-107",
-    "name": "Samsung Hospitality 75\"",
-    "brand": "Samsung",
-    "brandId": "samsung",
-    "model": "HG75BU800AUXUE",
-    "category": "commercial",
-    "images": [],
-    "price": 20699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "🖥️",
-    "color": "#1428a0",
-    "tags": [
-      "samsung",
-      "commercial"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "75\""
-    }
-  },
-  {
-    "id": "tcl-076",
-    "name": "TCL 503 6.6''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCL-503",
-    "category": "phones",
-    "images": [],
-    "price": 1199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📱",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "phones"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "6.6\""
-    }
-  },
-  {
-    "id": "tcl-077",
-    "name": "TCL 605 6.7''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCL-605(128GB)",
-    "category": "phones",
-    "images": [],
-    "price": 1599,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📱",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "phones"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "6.7\""
-    }
-  },
-  {
-    "id": "tcl-078",
-    "name": "TCL 60SE NEXTPAPER 5G 6.7''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCL-60SENXTPAPER-5G",
-    "category": "phones",
-    "images": [],
-    "price": 3499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📱",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "phones"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "6.7\""
-    }
-  },
-  {
-    "id": "tcl-079",
-    "name": "TCL TAB 10L 10''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCL-TAB10L-GEN4(64GB) CASE)_8183A2",
-    "category": "tablets",
-    "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📱",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tablets"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "10\""
-    }
-  },
-  {
-    "id": "tcl-080",
-    "name": "TCL TAB 11FE LTE 11''",
-    "brand": "TCL",
-    "brandId": "tcl",
-    "model": "TCL-TAB11/FE-LTE",
-    "category": "tablets",
-    "images": [],
-    "price": 2699,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "📱",
-    "color": "#cc0000",
-    "tags": [
-      "tcl",
-      "tablets"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {
-      "Size": "11\""
-    }
-  },
-  {
-    "id": "midea-105",
-    "name": "Midea Midea 16A Extension Board,3 Sockets With 2M Cable",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDL-3K3B-2M-U",
-    "category": "small",
-    "images": [],
-    "price": 135,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "midea-106",
-    "name": "Midea Midea 16A Extension Board,3 Sockets With 5M Cable",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDL-3K3B-5M-U",
-    "category": "small",
-    "images": [],
-    "price": 200,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "midea-107",
-    "name": "Midea Midea 16A Extension Board,5 Sockets With 2M Cable",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDL-5K5B-2M-U",
-    "category": "small",
-    "images": [],
-    "price": 155,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "midea-108",
-    "name": "Midea Midea 16A Extension Board,5 Sockets With 5M Cable",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDL-5K5B-5M-U",
-    "category": "small",
-    "images": [],
-    "price": 220,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "midea-109",
-    "name": "Midea Midea 16A Extension Board,3 Sockets Usb Type C 2M",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDL-4K3B2U1C-2M-U",
-    "category": "small",
-    "images": [],
-    "price": 190,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "midea-110",
-    "name": "Midea Midea 16A Extension Board,3 Sockets Usb Type C 5M",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDL-4K3B2U1C-5M-U",
-    "category": "small",
-    "images": [],
-    "price": 260,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "midea-111",
-    "name": "Midea Midea 16A Extension Board,4 Sockets Usb Type C 2M",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDL-5K4B2U1C-2M-U",
-    "category": "small",
-    "images": [],
-    "price": 200,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
-  },
-  {
-    "id": "midea-112",
-    "name": "Midea Midea 16A Extension Board,4 Sockets Usb Type C 5M",
-    "brand": "Midea",
-    "brandId": "midea",
-    "model": "MDL-5K4B2U1C-5M-U",
-    "category": "small",
-    "images": [],
-    "price": 270,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#00a0e9",
-    "tags": [
-      "midea",
-      "small"
-    ],
-    "badge": "",
-    "description": "",
-    "specs": {}
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-107",
-    "name": "NASCO TV Wall Bracket 32\"-63\"",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MCR-Y3260",
-    "category": "small",
+    "name": "Nasco 290Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-360",
+    "price": 5399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 99,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "32\"-63\""
-    }
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-108",
-    "name": "NASCO TV Wall Bracket 40\"-80\"",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MCR-Y4080",
-    "category": "small",
+    "name": "Nasco 298Ltrs Display Fridge",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-FL360-1DR",
+    "price": 4799,
+    "oldPrice": 6699,
+    "discount": 28,
+    "icon": "🧊",
     "images": [],
-    "price": 199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "40\"-80\""
-    }
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-109",
-    "name": "NASCO TV Wall Bracket 32\"-70\"",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MCR-WG09",
-    "category": "small",
+    "name": "Nasco 307Ltrs Bottom Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD2-40WD",
+    "price": 4999,
+    "oldPrice": 8299,
+    "discount": 40,
+    "icon": "🧊",
     "images": [],
-    "price": 189,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "32\"-70\""
-    }
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-110",
-    "name": "NASCO TV Wall Bracket 26\"-55\"",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MCR-500",
-    "category": "small",
+    "name": "Nasco 318Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-425FL",
+    "price": 5399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "26\"-55\""
-    }
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-111",
-    "name": "NASCO TV Wall Bracket 32\"-70\"",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "NS-P800",
-    "category": "small",
+    "name": "Nasco 320Ltrs Top Mounted Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-45",
+    "price": 4499,
+    "oldPrice": 6599,
+    "discount": 32,
+    "icon": "🧊",
     "images": [],
-    "price": 999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "32\"-70\""
-    }
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-112",
-    "name": "NASCO TV Wall Bracket 32“-65”",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MCR-1500",
-    "category": "small",
+    "name": "Nasco 358Ltrs Display Fridge",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-FL400-1DR",
+    "price": 5699,
+    "oldPrice": 7149,
+    "discount": 20,
+    "icon": "🧊",
     "images": [],
-    "price": 1199,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "32“-65”"
-    }
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-113",
-    "name": "NASCO TV Wall Bracket 50“-80”",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MCR-1800",
-    "category": "small",
+    "name": "Nasco 360L French Door Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-400FDR",
+    "price": 6999,
+    "oldPrice": 7999,
+    "discount": 13,
+    "icon": "🧊",
     "images": [],
-    "price": 1999,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "50“-80”"
-    }
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-114",
-    "name": "NASCO TV Wall Bracket 60“-100”",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MCR-2100",
-    "category": "small",
+    "name": "Nasco 360Ltrs Display Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-375DFG",
+    "price": 5999,
+    "oldPrice": 7499,
+    "discount": 20,
+    "icon": "🧊",
     "images": [],
-    "price": 3299,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "60“-100”"
-    }
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
   },
   {
     "id": "nasco-115",
-    "name": "NASCO TV Wall Bracket 32\"-75\"",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MCR-AVA1500",
-    "category": "small",
+    "name": "Nasco 370Ltrs Side By Side Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-55S",
+    "price": 11649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 1499,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "32\"-75\""
-    }
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
   },
   {
     "id": "nasco-116",
-    "name": "NASCO TV Wall Bracket 55\"-100\"",
-    "brand": "NASCO",
-    "brandId": "nasco",
-    "model": "MCR-R9",
-    "category": "small",
+    "name": "Nasco 380Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-420",
+    "price": 6249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
     "images": [],
-    "price": 2399,
-    "rating": 4.5,
-    "reviews": 0,
-    "icon": "⚡",
-    "color": "#003087",
-    "tags": [
-      "nasco",
-      "small"
-    ],
-    "badge": "",
     "description": "",
-    "specs": {
-      "Size": "55\"-100\""
-    }
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-117",
+    "name": "Nasco 392Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-420S-SK",
+    "price": 4999,
+    "oldPrice": 6499,
+    "discount": 23,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-118",
+    "name": "Nasco 400 Ltrs Double Door Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-500FL-DD",
+    "price": 5499,
+    "oldPrice": 7149,
+    "discount": 23,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-119",
+    "name": "Nasco 400Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-475FL-B",
+    "price": 5299,
+    "oldPrice": 5999,
+    "discount": 12,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-120",
+    "name": "Nasco 400Ltrs Side By Side Refrigerator Metalic Silver",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-66.1FF",
+    "price": 6999,
+    "oldPrice": 9999,
+    "discount": 30,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-121",
+    "name": "Nasco 421Ltrs French Door Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-68FDR",
+    "price": 10999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-122",
+    "name": "Nasco 510 Ltrs Double Door Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-725FL-DD",
+    "price": 8749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-123",
+    "name": "Nasco 521Ltrs Side By Side Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-66.1",
+    "price": 12449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-124",
+    "name": "Nasco 522Lts French Door Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASFDR-62S",
+    "price": 15299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-125",
+    "name": "Nasco 527 Ltr Side By Side Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASSB2-64S",
+    "price": 12249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-126",
+    "name": "Nasco 529Ltrs Side By Side Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-66D",
+    "price": 12449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-127",
+    "name": "Nasco 545Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-800FL-DD",
+    "price": 7999,
+    "oldPrice": 9199,
+    "discount": 13,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-128",
+    "name": "Nasco 577Ltrs Double Door Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-600",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-129",
+    "name": "Nasco 58Ltrs Top Mounted Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-80FL",
+    "price": 1749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-130",
+    "name": "Nasco 600Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-850FL-DD",
+    "price": 8499,
+    "oldPrice": 9999,
+    "discount": 15,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-131",
+    "name": "Nasco 65Ltrs Top Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-90",
+    "price": 1549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-132",
+    "name": "Nasco 70Ltrs Table Top Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF1-09S",
+    "price": 1749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-133",
+    "name": "Nasco 715Ltrs Display Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-HA715-1DR",
+    "price": 14799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-134",
+    "name": "Nasco 728Ltrs Display Fridge",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-FL850-2DR",
+    "price": 11999,
+    "oldPrice": 14999,
+    "discount": 20,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-135",
+    "name": "Nasco 76Ltrs Table Top Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-10FL",
+    "price": 1999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-136",
+    "name": "Nasco 782Ltrs Display Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASD1-1000-2DR",
+    "price": 40899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-137",
+    "name": "Nasco 800Ltrs Chest Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-1200FL-DD",
+    "price": 9999,
+    "oldPrice": 11799,
+    "discount": 15,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-138",
+    "name": "Nasco 80Ltrs Table Top Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF1-10S",
+    "price": 1899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-139",
+    "name": "Nasco 82Ltrs Table Top Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF1-11S",
+    "price": 1399,
+    "oldPrice": 1899,
+    "discount": 26,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-140",
+    "name": "Nasco 85Ltrs Top Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-110",
+    "price": 1799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-141",
+    "name": "Nasco 86Ltrs Retro Model Table Top Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-110RT",
+    "price": 2299,
+    "oldPrice": 2349,
+    "discount": 2,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-142",
+    "name": "Nasco 86Ltrs Table Top Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-11FL",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-143",
+    "name": "Nasco 90Ltrs Top Freezer Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-120",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-144",
+    "name": "Nasco 92Ltrs Table Top Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF1-110FL-B",
+    "price": 1299,
+    "oldPrice": 1899,
+    "discount": 32,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-145",
+    "name": "Nasco 95Ltrs Double Door Top Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-12S",
+    "price": 1849,
+    "oldPrice": 2349,
+    "discount": 21,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-146",
+    "name": "Nasco 95Ltrs Wine Cooler",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASFW-100SB",
+    "price": 5049,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-147",
+    "name": "Nasco 98Ltrs Top Mounted Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-13S",
+    "price": 2549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-148",
+    "name": "Nasco Bed Side Fridge",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF1-06",
+    "price": 1299,
+    "oldPrice": 1599,
+    "discount": 19,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-149",
+    "name": "Nasco Display Chest Freezer 239 Ltrs",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-FS305FL",
+    "price": 4999,
+    "oldPrice": 6699,
+    "discount": 25,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-150",
+    "name": "Nasco Display Chest Freezer 360 Ltrs",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NAS-FS405FL",
+    "price": 5499,
+    "oldPrice": 7499,
+    "discount": 27,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-151",
+    "name": "Nasco Ice Maker",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "IMB1008-GS",
+    "price": 999,
+    "oldPrice": 1299,
+    "discount": 23,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-152",
+    "name": "Nasco Side By Side Refrigerator 410Ltrs",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-52S",
+    "price": 9649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-153",
+    "name": "Nasco Side By Side Refrigerator 460Ltrs",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-58SWD",
+    "price": 11349,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-154",
+    "name": "Nasco Top Mount Refrigerator",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-15-SK",
+    "price": 2699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-155",
+    "name": "Nasco Top Mounted Freezer",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-24",
+    "price": 2999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-156",
+    "name": "Nasco Top Mount Refrigerator 440 Ltrs",
+    "brand": "Nasco",
+    "category": "fridge",
+    "model": "NASF2-660TM",
+    "price": 8749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-045",
+    "name": "Samsung 203Ltrs Duracool Top Mounted Freezer",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT20HAR2DSA",
+    "price": 5499,
+    "oldPrice": 6899,
+    "discount": 20,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-046",
+    "name": "Samsung 225Ltrs Duracool Top Mounted Freezer",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT25HAR4DSA/GH",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-047",
+    "name": "Samsung 234Ltrs Duracool Top Mounted Freezer",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT22HAR4DSA/GH",
+    "price": 5999,
+    "oldPrice": 7299,
+    "discount": 18,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-048",
+    "name": "Samsung 255Ltrs Duracool Top Mounted Freezer",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT31HAR4DSA",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-049",
+    "name": "Samsung 290Ltrs Double Door Bottom Freezer",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RB29FERNDSA/MU",
+    "price": 12299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-050",
+    "name": "Samsung 290Ltrs Double Door Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RB37N4160B1/GH",
+    "price": 11799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-051",
+    "name": "Samsung 301Ltrs Duracool Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT31CG5421S9GH",
+    "price": 7999,
+    "oldPrice": 9699,
+    "discount": 18,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-052",
+    "name": "Samsung 315Ltrs 1 Door All Round Twin Cooling Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RZ32M71157F",
+    "price": 16599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-053",
+    "name": "Samsung 345Ltrs Duracool Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT35CG5421S9GH",
+    "price": 8999,
+    "oldPrice": 10899,
+    "discount": 17,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-054",
+    "name": "Samsung 385Ltrs 1 Door All Round Twin Cooling Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RR39M71357F",
+    "price": 16599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-055",
+    "name": "Samsung 388L Bespoke Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT38CB66218AGH",
+    "price": 13999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-056",
+    "name": "Samsung 388Ltrs Duracool Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT38CG6421S9GH",
+    "price": 9999,
+    "oldPrice": 11799,
+    "discount": 15,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-057",
+    "name": "Samsung 411L Bespoke Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT42CB66218AGH",
+    "price": 15299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-058",
+    "name": "Samsung 411Ltrs Duracool Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT42CG6621S9GH",
+    "price": 10499,
+    "oldPrice": 13499,
+    "discount": 22,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-059",
+    "name": "Samsung 460L Bespoke Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT47CB66318AGH",
+    "price": 19199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-060",
+    "name": "Samsung 460Ltrs Duracool Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT47CG6631B1UT",
+    "price": 10999,
+    "oldPrice": 14999,
+    "discount": 27,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-061",
+    "name": "Samsung 468L French Door Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RF48A401EB4/EU",
+    "price": 18999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-062",
+    "name": "Samsung 468Ltrs French Door Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RF48A4000M9/GH",
+    "price": 14999,
+    "oldPrice": 17499,
+    "discount": 14,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-063",
+    "name": "Samsung 525Ltrs Duracool Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT67K6541BS/UT",
+    "price": 17499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-064",
+    "name": "Samsung 578Ltrs Side By Side Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RS57DG4100B4GH",
+    "price": 15999,
+    "oldPrice": 18299,
+    "discount": 13,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-065",
+    "name": "Samsung 583Ltrs Side By Side Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RS57DG4000B4GH",
+    "price": 14999,
+    "oldPrice": 16599,
+    "discount": 10,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-066",
+    "name": "Samsung 617Ltrs Side By Side Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RS64R5111M9/GH",
+    "price": 28799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-067",
+    "name": "Samsung 627Ltrs Side By Side Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RS65CG5691B4/GH",
+    "price": 30599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-068",
+    "name": "Samsung 647Ltrs Side By Side Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RS62R5001M9/GH",
+    "price": 21799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-069",
+    "name": "Samsung 650Ltrs 4 Doors Bespoke Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RF65DB970E22",
+    "price": 39999,
+    "oldPrice": 52199,
+    "discount": 23,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-070",
+    "name": "Samsung 650Ltrs Bespoke 4 Door Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RF65DB960E22EF",
+    "price": 39999,
+    "oldPrice": 52199,
+    "discount": 23,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-071",
+    "name": "Samsung 654L Side By Side Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RS70F65Q4TGH",
+    "price": 25999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-072",
+    "name": "Samsung 820Ltrs 4 Doors Bespoke Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RF71A967532/UT",
+    "price": 52199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-073",
+    "name": "Samsung Bespoke AI French Door Refrigerator with Family Hub",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RF65DG9H0EB1EU",
+    "price": 44999,
+    "oldPrice": 59999,
+    "discount": 25,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-074",
+    "name": "Samsung Bespoke Twin Cooling Plus Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT60CB66218AGH",
+    "price": 15999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-075",
+    "name": "Samsung Chest Freezer",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RI70F20V1GAGH",
+    "price": 4999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-076",
+    "name": "Samsung Duracool 203Ltrs Top Mount Fridge",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT26HAR2DSA",
+    "price": 5499,
+    "oldPrice": 6899,
+    "discount": 20,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-077",
+    "name": "Samsung Duracool 234Ltr Top Mount Fridge",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RT28HAR4DSA",
+    "price": 5999,
+    "oldPrice": 7299,
+    "discount": 18,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-078",
+    "name": "Samsung Glass Panel Bottom Door",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RA-F18DBB12GG",
+    "price": 899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-079",
+    "name": "Samsung Glass Panel Upper Door",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RA-F18DUU12GG",
+    "price": 899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-080",
+    "name": "Samsung Side By Side Refrigerator",
+    "brand": "Samsung",
+    "category": "fridge",
+    "model": "RS70F65K4TGH",
+    "price": 19999,
+    "oldPrice": 28799,
+    "discount": 31,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-063",
+    "name": "TCL 108L Bottom Freezer",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F141BFS",
+    "price": 2599,
+    "oldPrice": 2799,
+    "discount": 7,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-064",
+    "name": "TCL 168L Standing Freezer",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F208SDS",
+    "price": 3499,
+    "oldPrice": 3999,
+    "discount": 13,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-065",
+    "name": "TCL 225Ltrs Display Fridge",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F215SCB",
+    "price": 7499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-066",
+    "name": "TCL 290L Chest Freezer",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F378CFSL",
+    "price": 3999,
+    "oldPrice": 4799,
+    "discount": 17,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-067",
+    "name": "TCL 325Ltrs Display Fridge",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F305SCB",
+    "price": 8599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-068",
+    "name": "TCL 413L Top Mount Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P540TMGWD",
+    "price": 7999,
+    "oldPrice": 8999,
+    "discount": 11,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-069",
+    "name": "TCL 415L Top Mount Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P540TMG",
+    "price": 7499,
+    "oldPrice": 8999,
+    "discount": 17,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-070",
+    "name": "TCL 436L Side By Side Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P572SBBG",
+    "price": 11999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-071",
+    "name": "TCL 442L Side By Side Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P572SBSG",
+    "price": 8999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-072",
+    "name": "TCL 480L Top Mount Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P624TMN",
+    "price": 9499,
+    "oldPrice": 10499,
+    "discount": 10,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-073",
+    "name": "TCL 528L Top Mount Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P687TMN",
+    "price": 11999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-074",
+    "name": "TCL 529L Side By Side Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P692SBBG",
+    "price": 10999,
+    "oldPrice": 11999,
+    "discount": 8,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-075",
+    "name": "TCL 595L Side By Side Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P774SBBG",
+    "price": 13999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-076",
+    "name": "TCL 90Ltrs Table Top Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F95SD",
+    "price": 2599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-077",
+    "name": "TCL Bed Side Fridge 47Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F47SD",
+    "price": 2199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-078",
+    "name": "TCL Bottom Mount Fridge 162Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F163BF",
+    "price": 4499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-079",
+    "name": "TCL Bottom Mount Fridge 260Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F265BF",
+    "price": 5399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-080",
+    "name": "TCL Bottom Mount Refrigerator",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F410BFS",
+    "price": 5199,
+    "oldPrice": 7499,
+    "discount": 31,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-081",
+    "name": "TCL Bottom Mount Refrigerator 417Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P417BF",
+    "price": 10499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-082",
+    "name": "TCL Chest Freezer",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F494CFSL",
+    "price": 4999,
+    "oldPrice": 5499,
+    "discount": 9,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-083",
+    "name": "TCL Chest Freezer 300Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F300CF",
+    "price": 5999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-084",
+    "name": "TCL Chest Freezer 400Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F400CF",
+    "price": 7899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-085",
+    "name": "TCL Chest Freezer 208Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F208CF",
+    "price": 4899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-086",
+    "name": "TCL French Door Refrigerator 460Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P460CD",
+    "price": 12699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-087",
+    "name": "TCL French Door Refrigerator 476Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P521CD",
+    "price": 13999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-088",
+    "name": "TCL Refrigerator Side By Side",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P692SBNWD",
+    "price": 9999,
+    "oldPrice": 11999,
+    "discount": 17,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-089",
+    "name": "TCL Side By Side Refrigerator 607Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P520SBN",
+    "price": 13099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-090",
+    "name": "TCL Side By Side Refrigerator 608Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P650SBN",
+    "price": 13999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-091",
+    "name": "TCL Single Door Fridge",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F117SDS",
+    "price": 1899,
+    "oldPrice": 2199,
+    "discount": 14,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-092",
+    "name": "TCL Standing Freezer",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F293SDS",
+    "price": 5999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-093",
+    "name": "TCL Top Mount 606Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "P605TM",
+    "price": 11399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-094",
+    "name": "TCL Top Mount Fridge 118Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F118TM",
+    "price": 3599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-095",
+    "name": "TCL Top Mount Fridge 207Ltrs",
+    "brand": "TCL",
+    "category": "fridge",
+    "model": "F210TM",
+    "price": 5299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🧊",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-066",
+    "name": "Midea 10.5KG Top Load Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MA200W105/G",
+    "price": 5299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-067",
+    "name": "Midea 12KG Front Load Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MF200W120WB/T",
+    "price": 8799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-068",
+    "name": "Midea 12KG Twin Top Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MT100W120/WG",
+    "price": 3399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-069",
+    "name": "Midea 12kg Washer 8KG Dryer Combo Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MF200D120WB/T",
+    "price": 10099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-070",
+    "name": "Midea 14KG Top Load Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MA200W140/G",
+    "price": 7499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-071",
+    "name": "Midea 18KG Top Load Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MA500W180D/G-AFC",
+    "price": 9199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-072",
+    "name": "Midea 18KG Twin Top Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MT100W180/WG-7",
+    "price": 4999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-073",
+    "name": "Midea 7KG Twin Top Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MT100W70/WG",
+    "price": 2199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-074",
+    "name": "Midea 8KG Top Load Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MA200W80/G",
+    "price": 4499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-075",
+    "name": "Midea 8KG Twin Top Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MT100W80/WG",
+    "price": 2699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-076",
+    "name": "Midea 8KG Washer 6KG Dryer Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MF200D80WB/T",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-077",
+    "name": "Midea Washer & Dryer Washing Machine",
+    "brand": "Midea",
+    "category": "laundry",
+    "model": "MFA06D80B/W",
+    "price": 6999,
+    "oldPrice": 10999,
+    "discount": 36,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-157",
+    "name": "Nasco 10Kg Front Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASFL-JS10KG-S",
+    "price": 4299,
+    "oldPrice": 5049,
+    "discount": 15,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-158",
+    "name": "Nasco 11Kg Front Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS11WFLINVS",
+    "price": 7149,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-159",
+    "name": "Nasco 11Kg Top Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-11TLS",
+    "price": 5699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-160",
+    "name": "Nasco 12KG Front Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASFL-JS12KG-S",
+    "price": 4999,
+    "oldPrice": 5399,
+    "discount": 7,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-161",
+    "name": "Nasco 12KG Top Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASTL-B120FL",
+    "price": 3799,
+    "oldPrice": 3999,
+    "discount": 5,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-162",
+    "name": "Nasco 13Kg Top Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-13TLS",
+    "price": 6849,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-163",
+    "name": "Nasco 15Kg Twin Top Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASTG150-P2001Q",
+    "price": 6299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-164",
+    "name": "Nasco 18Kg Top Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-18TLS",
+    "price": 7949,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-165",
+    "name": "Nasco 6Kg Front Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASFL-J6KG-S",
+    "price": 2999,
+    "oldPrice": 3699,
+    "discount": 19,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-166",
+    "name": "Nasco 7Kg Front Load Full Auto Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-07FL-FF",
+    "price": 4599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-167",
+    "name": "Nasco 7KG Top Load Full Auto Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "MAE70-1104TPS/01FM",
+    "price": 4599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-168",
+    "name": "Nasco 7KG Top Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASTL-B70FL",
+    "price": 2799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-169",
+    "name": "Nasco 8Kg Front Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASFL-J8KG-S",
+    "price": 3399,
+    "oldPrice": 4599,
+    "discount": 26,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-170",
+    "name": "Nasco 8KG Top Load Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASTL-B80",
+    "price": 2799,
+    "oldPrice": 2999,
+    "discount": 7,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-171",
+    "name": "Nasco 8Kg Twin Top Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-08-TW",
+    "price": 2199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-172",
+    "name": "Nasco 8KG Twin Tub Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASTT-JS80",
+    "price": 1999,
+    "oldPrice": 2199,
+    "discount": 9,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-173",
+    "name": "Nasco 9Kg Front Load Full Auto Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-WM9KG-KD12B",
+    "price": 5149,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-174",
+    "name": "Nasco Front Load Full Auto Washing Machine 9KG SBD",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASFL-9KG-SBD",
+    "price": 7399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-175",
+    "name": "Nasco Front Load Full Auto Washing Machine 8KG SBD",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NASFL-8KG-SBD",
+    "price": 6599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-176",
+    "name": "Nasco Front Load Full Auto Washing Machine 11KG",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-11KG-SBDINV",
+    "price": 4499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-177",
+    "name": "Nasco In Top Washing Machine 5Kg",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-05-TW",
+    "price": 999,
+    "oldPrice": 1649,
+    "discount": 39,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-178",
+    "name": "Nasco In Top Washing Machine 7Kg",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-07-TW",
+    "price": 1699,
+    "oldPrice": 1999,
+    "discount": 15,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-179",
+    "name": "Nasco In Top Washing Machine 11Kg",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-11-TW",
+    "price": 2799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-180",
+    "name": "Nasco Washing Machine",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-07TLS",
+    "price": 2999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-181",
+    "name": "Nasco Washing Machine Top Load 8KG",
+    "brand": "Nasco",
+    "category": "laundry",
+    "model": "NAS-08TLS",
+    "price": 3399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-081",
+    "name": "Samsung 10Kg Top Load Washer",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA10CG4545BWNQ",
+    "price": 7099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-082",
+    "name": "Samsung 10KG Top Load Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA10T5260BW/NQ",
+    "price": 7099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-083",
+    "name": "Samsung 11Kg Front Load Full Auto Washer",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WW11CGC04DABSG",
+    "price": 9499,
+    "oldPrice": 13999,
+    "discount": 32,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-084",
+    "name": "Samsung 11Kg Top Load Active Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA11CG5441BYNQ",
+    "price": 7899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-085",
+    "name": "Samsung 11Kg Washer And 7Kg Dryer Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WD11DB7B85GBNQ",
+    "price": 15799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-086",
+    "name": "Samsung 12Kg Bespoke Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WW12BB944DGMNQ",
+    "price": 17499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-087",
+    "name": "Samsung 12KG Front Load Full Auto Washer",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WW12T504DAN/S1",
+    "price": 14799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-088",
+    "name": "Samsung 12Kg Twin Top Semi Auto Washer",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WT12J4200",
+    "price": 6399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-089",
+    "name": "Samsung 12Kg Wash 7Kg Dry Bespoke Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WD12BB944DGBNQ",
+    "price": 20099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-090",
+    "name": "Samsung 12KG Wash And 8KG Dryer Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WD12T504DBN/NQ",
+    "price": 20899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-091",
+    "name": "Samsung 13Kg Top Load Active Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA13CG5441BYNQ",
+    "price": 8799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-092",
+    "name": "Samsung 13KG Top Load Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA80F13S5CNQ",
+    "price": 7499,
+    "oldPrice": 8799,
+    "discount": 15,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-093",
+    "name": "Samsung 16Kg Top Load Active Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA16CG6745BDNQ",
+    "price": 9699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-094",
+    "name": "Samsung 17KG Top Load Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA80F17S8CNQ",
+    "price": 8999,
+    "oldPrice": 10799,
+    "discount": 17,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-095",
+    "name": "Samsung 17KG Washer 10KG Dryer Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WD17T6300GP/SP",
+    "price": 16999,
+    "oldPrice": 21799,
+    "discount": 22,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-096",
+    "name": "Samsung 18KG Front Load Full Auto Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WF18T8000GV/EU",
+    "price": 19199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-097",
+    "name": "Samsung 19KG Top Load Active Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA80F19S8BNQ",
+    "price": 9999,
+    "oldPrice": 13399,
+    "discount": 25,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-098",
+    "name": "Samsung 19KG Top Load Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA19A8370GV/NQ",
+    "price": 16599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-099",
+    "name": "Samsung 21KG Wash And 12KG Dryer Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WD21T6300GV/NQ",
+    "price": 18999,
+    "oldPrice": 25299,
+    "discount": 25,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-100",
+    "name": "Samsung 25KG Wash And 15KG Dry Bespoke AI Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WD25DB8995BZNQ",
+    "price": 49699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-101",
+    "name": "Samsung 6Kg Twin Top Semi Auto Washer",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WT60H2500",
+    "price": 2799,
+    "oldPrice": 3499,
+    "discount": 20,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-102",
+    "name": "Samsung 7KG Front Load Full Auto Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WW70T4020CX/NQ",
+    "price": 8799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-103",
+    "name": "Samsung 7KG Wash And 5KG Dryer Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WD70TA046BX/NQ",
+    "price": 13099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-104",
+    "name": "Samsung 8KG Dryer Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "DV80CGC0B0AEEF",
+    "price": 13999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-105",
+    "name": "Samsung 8KG Front Load Full Auto Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WW80TA046AX/EU",
+    "price": 9699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-106",
+    "name": "Samsung 8Kg Top Load Active Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WA80CG4240BWNQ",
+    "price": 4499,
+    "oldPrice": 5699,
+    "discount": 21,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-107",
+    "name": "Samsung 8KG Wash And 5KG Dryer Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WD80TA046BX/NQ",
+    "price": 13999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-108",
+    "name": "Samsung 9KG Add Wash Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WW90T4540AX/EU",
+    "price": 10499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-109",
+    "name": "Samsung 9KG Dryer Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "DV90DG52A0ABEF",
+    "price": 14199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-110",
+    "name": "Samsung 9KG Front Load Full Auto Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WW90TA046AX/NQ",
+    "price": 10499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-111",
+    "name": "Samsung 9Kg Twin Top Semi Auto Washer",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WT90H3230MG",
+    "price": 3499,
+    "oldPrice": 4299,
+    "discount": 19,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-112",
+    "name": "Samsung Front Load Full Auto Washer",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WF90F26ADSNQ",
+    "price": 19999,
+    "oldPrice": 22999,
+    "discount": 13,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-113",
+    "name": "Samsung Washer and Dryer Washing Machine",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WD90F22BCSNQ",
+    "price": 22999,
+    "oldPrice": 26999,
+    "discount": 15,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-114",
+    "name": "Samsung Washing Machine Front Load",
+    "brand": "Samsung",
+    "category": "laundry",
+    "model": "WW10DG6U94LBNQ",
+    "price": 8999,
+    "oldPrice": 12999,
+    "discount": 31,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-096",
+    "name": "TCL 10.1KG Twin Top Washing Machine",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "F211TT",
+    "price": 2999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-097",
+    "name": "TCL 7KG Front Load Washing Machine",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "P607FL",
+    "price": 3999,
+    "oldPrice": 4999,
+    "discount": 20,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-098",
+    "name": "TCL Front Load 11Kg Washing Machine",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "P611FL",
+    "price": 7899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-099",
+    "name": "TCL Front Load 8Kg Washing Machine",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "P608FL",
+    "price": 6399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-100",
+    "name": "TCL Front Load 9Kg Washing Machine",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "P609FL",
+    "price": 7099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-101",
+    "name": "TCL Front Load Inverter 10.5Kg Washing Machine",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "P211FLG",
+    "price": 6999,
+    "oldPrice": 8299,
+    "discount": 16,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-102",
+    "name": "TCL Front Load Inverter 8Kg Washing Machine",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "P1108FLG",
+    "price": 5999,
+    "oldPrice": 7099,
+    "discount": 15,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-103",
+    "name": "TCL Front Load Inverter 9Kg Washing Machine",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "P1109FLG",
+    "price": 6499,
+    "oldPrice": 7499,
+    "discount": 13,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-104",
+    "name": "TCL Top Load Washing Machine 10.5Kg",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "F711TL",
+    "price": 3999,
+    "oldPrice": 5699,
+    "discount": 30,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-105",
+    "name": "TCL Top Load Washing Machine 8Kg",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "F708TL",
+    "price": 3999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-106",
+    "name": "TCL Top Load Washing Machine 9Kg",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "F709TL",
+    "price": 3499,
+    "oldPrice": 4899,
+    "discount": 29,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "tcl-107",
+    "name": "TCL Twin Top Washing Machine 7Kg",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "F207TT",
+    "price": 2299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-108",
+    "name": "TCL Washer 10.5Kg Dryer 6Kgs Washing Machine",
+    "brand": "TCL",
+    "category": "laundry",
+    "model": "C211WDG",
+    "price": 7999,
+    "oldPrice": 9699,
+    "discount": 18,
+    "icon": "👕",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-078",
+    "name": "Midea 0.5Ltrs Juice Extractor",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "JE2802",
+    "price": 399,
+    "oldPrice": 799,
+    "discount": 50,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-079",
+    "name": "Midea 1.25Ltrs Juice Extractor",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MJ-60JM01B",
+    "price": 699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-080",
+    "name": "Midea 1.2L Stand Blender",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MJ-FP8003W",
+    "price": 599,
+    "oldPrice": 699,
+    "discount": 14,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-081",
+    "name": "Midea 1.2Ltrs 200Watts Blender",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "BL1197A",
+    "price": 499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-082",
+    "name": "Midea 1.5 Ltr 350 Watts Blender",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "BL1190",
+    "price": 899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-083",
+    "name": "Midea 1.5Ltrs Table Blender",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MJ-BL2516CEE-MP01S",
+    "price": 299,
+    "oldPrice": 499,
+    "discount": 40,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-084",
+    "name": "Midea 1.7Ltrs Kettle",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MK-17G02A2",
+    "price": 279,
+    "oldPrice": 299,
+    "discount": 7,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-085",
+    "name": "Midea 1000Watt Electric Pressure Cooker",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MY-CS6037WP2",
+    "price": 899,
+    "oldPrice": 999,
+    "discount": 10,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-086",
+    "name": "Midea 10Plates Dishwasher",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "WQP10-W7704L",
+    "price": 5299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-087",
+    "name": "Midea 12 Plates Dishwasher",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "WQP12-7713E",
+    "price": 6599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-088",
+    "name": "Midea 14Plates Dishwasher",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "WQP14-W7703L(B)",
+    "price": 7499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-089",
+    "name": "Midea 16Ltrs 3 Taps Water Dispenser Black",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "YL1638S-W",
+    "price": 1999,
+    "oldPrice": 2299,
+    "discount": 13,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-090",
+    "name": "Midea 17Liters Microwave",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "AM717BS7-B",
+    "price": 3999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-091",
+    "name": "Midea 17Ltrs Solo Microwave",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "AM717BS7",
+    "price": 3599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-092",
+    "name": "Midea 1Ltrs Stand Blender",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MJ-BL6008BW",
+    "price": 299,
+    "oldPrice": 399,
+    "discount": 25,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-093",
+    "name": "Midea 2 Burner Electric Hob",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MC-HD301",
+    "price": 3799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-094",
+    "name": "Midea 20Ltrs Grill Microwave Silver",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MG720CFB",
+    "price": 1299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-095",
+    "name": "Midea 20Ltrs Microwave Solo",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MM7P012MZ-B",
+    "price": 699,
+    "oldPrice": 1099,
+    "discount": 36,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-096",
+    "name": "Midea 20Ltrs Solo Microwave",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MM720C2GS-B",
+    "price": 1199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-097",
+    "name": "Midea 25Ltrs Built In Microwave Oven",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "AM925BVE",
+    "price": 4899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-098",
+    "name": "Midea 25Ltrs Grill Microwave",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "AG925AGN",
+    "price": 1999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-099",
+    "name": "Midea 2Ltrs Stand Mixer",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "HM0293A",
+    "price": 499,
+    "oldPrice": 599,
+    "discount": 17,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-100",
+    "name": "Midea 300 Watt Hand Blender",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "SM0794",
+    "price": 349,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-101",
+    "name": "Midea 30L Solo Microwave",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "EM9P032MO-S",
+    "price": 1499,
+    "oldPrice": 1799,
+    "discount": 17,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-102",
+    "name": "Midea 30Ltrs 900W Grill Microwave With Oven",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "EG9P032MX-S",
+    "price": 1799,
+    "oldPrice": 1899,
+    "discount": 5,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-103",
+    "name": "Midea 34L Solo Microwave",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "EM034A2MO-B",
+    "price": 1799,
+    "oldPrice": 1899,
+    "discount": 5,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-104",
+    "name": "Midea 4 Burner Gas Cooker",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "24TMG4G081-WD",
+    "price": 2999,
+    "oldPrice": 3999,
+    "discount": 25,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-105",
+    "name": "Midea 4 Burner Electric Hob",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MC-HF605",
+    "price": 5099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-106",
+    "name": "Midea 4 Burner Gas Cooker Black",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "M-SNIPER60-BLACK",
+    "price": 3799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-107",
+    "name": "Midea 4 Burner Gas Cooker Black Mirror",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "SP5055T082-B",
+    "price": 1499,
+    "oldPrice": 2599,
+    "discount": 42,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-108",
+    "name": "Midea 4 Burner Gas Cooker Mirror",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "SP5055T082-S",
+    "price": 1599,
+    "oldPrice": 2699,
+    "discount": 41,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-109",
+    "name": "Midea 4 Burner Gas Cooker Silver",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "24LMG4G027",
+    "price": 5699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-110",
+    "name": "Midea 4 Burner Gas Cooker Sniper Model Silver",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "M_SNIPER60-SILVER",
+    "price": 3899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-111",
+    "name": "Midea 4 Burner Gas Cooker With Grill",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "BMG6060-WD",
+    "price": 4499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-112",
+    "name": "Midea 4 Burner Gas Hob",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "60G40ME",
+    "price": 3099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-113",
+    "name": "Midea 4 Hobs Electric Cooker With Oven",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "6060DME4R109",
+    "price": 8299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-114",
+    "name": "Midea 4.5Ltrs Kitchen Machine",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "BM2096",
+    "price": 1499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-115",
+    "name": "Midea 42L Solo Microwave",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "EM142A2MI-B",
+    "price": 1999,
+    "oldPrice": 2299,
+    "discount": 13,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-116",
+    "name": "Midea 4Ltrs Air Fryer",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MF-CN40E2",
+    "price": 599,
+    "oldPrice": 899,
+    "discount": 33,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-117",
+    "name": "Midea 5 Burner Gas Cooker",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "LMG90030",
+    "price": 8999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-118",
+    "name": "Midea 5 Burner Cooker",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "36LMG5G080V",
+    "price": 6499,
+    "oldPrice": 9199,
+    "discount": 29,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-119",
+    "name": "Midea 5 Burner Electric Hob",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MC-HV848",
+    "price": 7099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-120",
+    "name": "Midea 5 Burner Gas Cooker With Oven Silver",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "36LMG5G027-SILVER",
+    "price": 9199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-121",
+    "name": "Midea 5 Burner Gas Cooker With Oven",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "30AMG5G027-SILVER",
+    "price": 7499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-122",
+    "name": "Midea 5 Burner Gas Cooker With Oven And Grill Industrial",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "VESTA-P48C",
+    "price": 9999,
+    "oldPrice": 11399,
+    "discount": 12,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-123",
+    "name": "Midea 5 Burner Gas Hob",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "75G50ME",
+    "price": 3999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-124",
+    "name": "Midea 5Ltrs Air Fryer",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MF-CN55K",
+    "price": 1099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-125",
+    "name": "Midea 60cm Built In Oven",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "65M80M1-012",
+    "price": 5699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-126",
+    "name": "Midea 60cm Cooker Hood Built In",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "60L03",
+    "price": 2699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-127",
+    "name": "Midea 60cm Hood Extractor",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "60M21-S",
+    "price": 2899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-128",
+    "name": "Midea 68L Electric Oven",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MC68ABA",
+    "price": 1799,
+    "oldPrice": 2199,
+    "discount": 18,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-129",
+    "name": "Midea 7Ltrs Air Fryer",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MF-CY70K",
+    "price": 1099,
+    "oldPrice": 1499,
+    "discount": 27,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-130",
+    "name": "Midea 90cm Built In Oven",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "93M90D0",
+    "price": 10999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-131",
+    "name": "Midea 90cm Cooker Hood",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "90M21",
+    "price": 3799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-132",
+    "name": "Midea 90cm Hood Built In Extractor",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "90T01",
+    "price": 3599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-133",
+    "name": "Midea Blender",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MJ-BL40G1",
+    "price": 449,
+    "oldPrice": 529,
+    "discount": 15,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-134",
+    "name": "Midea Built-In Microwave",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "AM925BVE-B",
+    "price": 4999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-135",
+    "name": "Midea Chimney Hood",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "60J72-B",
+    "price": 3299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-136",
+    "name": "Midea Contact Sandwich Grill",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MC-JK2313P",
+    "price": 179,
+    "oldPrice": 199,
+    "discount": 10,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-137",
+    "name": "Midea Dishwasher 12 Plates",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "WQP12-5201G(S)",
+    "price": 5999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-138",
+    "name": "Midea Dishwasher 12 Plates Black",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "WQP12-5201G(B)",
+    "price": 6499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-139",
+    "name": "Midea Dishwasher 14 Plates",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "WQP14-7713F",
+    "price": 6999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-140",
+    "name": "Midea Electric Kettle Stainless Steel 1.7Ltrs",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MK-17S32A2",
+    "price": 199,
+    "oldPrice": 299,
+    "discount": 33,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-141",
+    "name": "Midea Electric Oven",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "65M80M1-004BK",
+    "price": 5999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-142",
+    "name": "Midea Electric Pressure Cooker",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MY-CS8037WP2",
+    "price": 999,
+    "oldPrice": 1199,
+    "discount": 17,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-143",
+    "name": "Midea Fully Automatic Coffee Machine",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MA-FACM1001",
+    "price": 5499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-144",
+    "name": "Midea Gas Hob 4 Burner",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "60GJ084",
+    "price": 3299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-145",
+    "name": "Midea Gas Hob 5 Burner",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "90GQ095",
+    "price": 4399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-146",
+    "name": "Midea Hand Blender",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MJ-BH6001W",
+    "price": 399,
+    "oldPrice": 449,
+    "discount": 11,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-147",
+    "name": "Midea Kitchen Machine",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "MJ-KM1201W",
+    "price": 2499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-148",
+    "name": "Midea T-Shape Chimney Hood",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "90M21-S",
+    "price": 3799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-149",
+    "name": "Midea Telescopic Built-In Hood",
+    "brand": "Midea",
+    "category": "kitchen",
+    "model": "60L03-B",
+    "price": 2799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-182",
+    "name": "Nasco 0.25Ltrs Coffee Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-CM1200CB",
+    "price": 549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-183",
+    "name": "Nasco 0.5Ltr Coffee Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "CM1093-CB",
+    "price": 179,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-184",
+    "name": "Nasco 1 Burner Gas Stove",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K1CSS",
+    "price": 199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-185",
+    "name": "Nasco 1 Burner Gas Stove 2 Shelve Stand",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K1CSS-SI",
+    "price": 749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-186",
+    "name": "Nasco 1 Burner Gas Stove Black Cap",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K1BW",
+    "price": 199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-187",
+    "name": "Nasco 1.0Ltr Coffee Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "CM4313AM-GS",
+    "price": 649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-188",
+    "name": "Nasco 1.25Ltr Coffee Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "CM4313A-CB",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-189",
+    "name": "Nasco 1.2Ltrs Food Processor",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "FP9026KE-CB",
+    "price": 499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-190",
+    "name": "Nasco 1.2Ltrs Rice Cooker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASRC-1.5LT",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-191",
+    "name": "Nasco 1.5Ltr Espresso Coffee Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-CM850GS",
+    "price": 549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-192",
+    "name": "Nasco 1.5Ltr Professional Blender",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-BL2005CG",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-193",
+    "name": "Nasco 1.5Ltrs Juicer",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "JE6010-GS",
+    "price": 549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-194",
+    "name": "Nasco 1.75Ltr 800Watts Blender",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-BL1703-SS",
+    "price": 449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-195",
+    "name": "Nasco 1.7Ltr Kettle With Wooden Coating",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "KE5501E-GS",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-196",
+    "name": "Nasco 1.7Ltrs Kettle Stainless Steel",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "KES-1777",
+    "price": 199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-197",
+    "name": "Nasco 1.7Ltrs Kettle Transparent Glass",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "KEG-1706",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-198",
+    "name": "Nasco 1145 Watt Coffee Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "CAFE-CM7001",
+    "price": 649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-199",
+    "name": "Nasco 1200 Watt Coffee Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "CAFE-CM7000-GS",
+    "price": 849,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-200",
+    "name": "Nasco 1200 Watts Pop Corn Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "PC1005A-CB",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-201",
+    "name": "Nasco 12Ltrs Air Fryer",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "AF7009C-GS",
+    "price": 1299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-202",
+    "name": "Nasco 1300 Watt 4 Slice Toaster",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "XB32784PV",
+    "price": 649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-203",
+    "name": "Nasco 170 Watt Hand Blender",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "XB986B",
+    "price": 179,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-204",
+    "name": "Nasco 2 Burner Gas Stove Silver",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K212FS",
+    "price": 849,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-205",
+    "name": "Nasco 2.2Ltrs Air Fryer",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "AF9009-GS",
+    "price": 649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-206",
+    "name": "Nasco 2.4Ltrs Food Processor",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-FP9076E-CB",
+    "price": 599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-207",
+    "name": "Nasco 2000 Watt Sandwich Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "GC1700-CB",
+    "price": 389,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-208",
+    "name": "Nasco 200Watts Food Chopper",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "MC353",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-209",
+    "name": "Nasco 20L Solo Microwave",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "MWO20NAS-2LV(B)",
+    "price": 679,
+    "oldPrice": 849,
+    "discount": 20,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-210",
+    "name": "Nasco 20Ltrs Solo Microwave",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "MW20NAS-PZB",
+    "price": 999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-211",
+    "name": "Nasco 2100 Watt Oven Toaster",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "TO9603",
+    "price": 899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-212",
+    "name": "Nasco 2200Watts Kettle",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "KE01405Z-GS",
+    "price": 429,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-213",
+    "name": "Nasco 250 Watt Hand Mixer",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "HM945-B",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-214",
+    "name": "Nasco 250 Watt Hand Mixer White",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "HM411",
+    "price": 179,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-215",
+    "name": "Nasco 25Ltrs Microwave With Grill",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "EG925EFF",
+    "price": 1499,
+    "oldPrice": 1999,
+    "discount": 25,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-216",
+    "name": "Nasco 3 Burner Gas Stove Black Cap",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K3BW",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-217",
+    "name": "Nasco 3 Burner Gas Stove Silver",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K332FS",
+    "price": 899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-218",
+    "name": "Nasco 3 Burner Gas Stove Silver Gold Cap",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K311FS",
+    "price": 849,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-219",
+    "name": "Nasco 3 Burner Gas Stove White",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K3CSS",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-220",
+    "name": "Nasco 3.0Ltrs Kettle",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASKEC-3LTR",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-221",
+    "name": "Nasco 3.5Ltrs Multi Cooker Airfryer",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-DF7000GS",
+    "price": 999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-222",
+    "name": "Nasco 300 Watt Blender",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "BL1030K-GS",
+    "price": 449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-223",
+    "name": "Nasco 300 Watts Hand Mixer",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "HM9106-GS",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-224",
+    "name": "Nasco 300 Watts Hand Mixer Silver And Black",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "HM825S",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-225",
+    "name": "Nasco 300 Watts Professional Blender",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "HB1902",
+    "price": 249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-226",
+    "name": "Nasco 3000 Watt Deep Fryer",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "DF7703-GS",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-227",
+    "name": "Nasco 36Ltrs Grill Microwave",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "AG036AFK",
+    "price": 1799,
+    "oldPrice": 2099,
+    "discount": 14,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-228",
+    "name": "Nasco 370 Watts Pop Corn Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "PC5400-GS",
+    "price": 499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-229",
+    "name": "Nasco 4 Burner Gas Cooker With Grill Silver",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-SNIPER50S-G",
+    "price": 2549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-230",
+    "name": "Nasco 4 Burner Gas Cooker With Grill Black",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-SNIPER50B-G",
+    "price": 2549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-231",
+    "name": "Nasco 4 Burner Electric Hob With Oven",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-DM4H109",
+    "price": 2999,
+    "oldPrice": 4599,
+    "discount": 35,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-232",
+    "name": "Nasco 4 Burner Gas Cooker With Grill",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS60GRL-S",
+    "price": 3249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-233",
+    "name": "Nasco 4 Burner Gas Stove Gold Cap",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K4CSS-S",
+    "price": 549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-234",
+    "name": "Nasco 4 Burner Gas Cooker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-SNIPER50TB",
+    "price": 1499,
+    "oldPrice": 2099,
+    "discount": 29,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-235",
+    "name": "Nasco 4 Burner Gas Cooker Oven",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-50MO+ST-CTZ",
+    "price": 1749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-236",
+    "name": "Nasco 4 Burner Gas Cooker Sniper B Black",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-SNIPER60B",
+    "price": 2399,
+    "oldPrice": 3149,
+    "discount": 24,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-237",
+    "name": "Nasco 4 Burner Gas Cooker Sniper B Silver",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-SNIPER60S",
+    "price": 2499,
+    "oldPrice": 3249,
+    "discount": 23,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-238",
+    "name": "Nasco 4 Burner Gas Cooker Sniper Model Black",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-SNIPER50B",
+    "price": 2249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-239",
+    "name": "Nasco 4 Burner Gas Cooker Stainless Steel",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-LME60I",
+    "price": 3299,
+    "oldPrice": 4499,
+    "discount": 27,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-240",
+    "name": "Nasco 4 Burner Gas Stove White",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K4BW",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-241",
+    "name": "Nasco 4 Burner Gas Stove White Black Cap",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K4BSS-S",
+    "price": 899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-242",
+    "name": "Nasco 4 Burner Mini Gas Cooker Oven",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-50MO-CTZ",
+    "price": 1649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-243",
+    "name": "Nasco 4.5Ltrs Deep Fryer",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-DF5000GB",
+    "price": 449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-244",
+    "name": "Nasco 400Watts Blender",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "BL1008AK-CB",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-245",
+    "name": "Nasco 5 Burner Gas Cooker With Oven",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "C6090SS-1GC-511-IDSP-S",
+    "price": 6849,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-246",
+    "name": "Nasco 5 Burner Gas Stove",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGS-K5BW-S",
+    "price": 499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-247",
+    "name": "Nasco 5 Burner Gas Cooker Stainless Steel",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "C6090SS-DC-511-IDSC",
+    "price": 8549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-248",
+    "name": "Nasco 5 Burner Gas Cooker With Grill",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-LME90B",
+    "price": 4999,
+    "oldPrice": 7849,
+    "discount": 36,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-249",
+    "name": "Nasco 5 Burner Gas Cooker With Oven & Grill",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "PRM6090SS-DC-511-IDSC",
+    "price": 9099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-250",
+    "name": "Nasco 500 Watts Professional Blender",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "BL9295-A",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-251",
+    "name": "Nasco 500Watts Blender With Wooden Coating",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "BL9703A-CB",
+    "price": 549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-252",
+    "name": "Nasco 6 Burner Gas Cooker Black With Grill",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-AMG80B",
+    "price": 5849,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-253",
+    "name": "Nasco 6 Burner Gas Cooker With Oven",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "GCNAS-8060B",
+    "price": 5399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-254",
+    "name": "Nasco 600Watt Hand Blender",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "HB5010KB-GS",
+    "price": 379,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-255",
+    "name": "Nasco 600Watt Meat Grinder",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-MG5000GS",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-256",
+    "name": "Nasco 700 Watt Sandwich Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "ST1015-CB",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-257",
+    "name": "Nasco 800W Stand Mixer",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-KM5005B-GS",
+    "price": 1199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-258",
+    "name": "Nasco 800Watt Hand Blender With Wooden Coating",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "HB6020KD-CE",
+    "price": 549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-259",
+    "name": "Nasco 800Watt Meat Grinder",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-MG6000GS",
+    "price": 899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-260",
+    "name": "Nasco 800Watts Crepe Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "EP2111B",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-261",
+    "name": "Nasco 850 Watt 2 Slice Toaster",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "TA-8211",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-262",
+    "name": "Nasco 900Watt Coffee Maker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "CM9410T-GS",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-263",
+    "name": "Nasco Electric Hot Pot 3.5L 1200W",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-SC1200AB",
+    "price": 449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-264",
+    "name": "Nasco Gas Cooker",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NASGC-SNIPER50TS",
+    "price": 2199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-265",
+    "name": "Nasco Kettle",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "KEC-1798A",
+    "price": 129,
+    "oldPrice": 149,
+    "discount": 13,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-266",
+    "name": "Nasco Kettle 1.7Ltrs",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "KES4116-GS",
+    "price": 119,
+    "oldPrice": 159,
+    "discount": 25,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-267",
+    "name": "Nasco Meat Grinder",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "MG5849-GS",
+    "price": 449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-268",
+    "name": "Nasco Rice Cooker 1.8 Liter",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-RC1.8WB",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-269",
+    "name": "Nasco Rice Cooker 2.8 Liter",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-RC2.8WM",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-270",
+    "name": "Nasco Water Boiler 20L",
+    "brand": "Nasco",
+    "category": "kitchen",
+    "model": "NAS-KEX-20LTR",
+    "price": 899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-115",
+    "name": "Samsung 22L Built-In Microwave Grill",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MG22M8274AT/E3",
+    "price": 6999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-116",
+    "name": "Samsung 23L Solo Microwave",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MS23DG4504ATE3",
+    "price": 2699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-117",
+    "name": "Samsung 23Ltrs Grill Microwave",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MG23F301TAK",
+    "price": 2599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-118",
+    "name": "Samsung 23Ltrs Solo Microwave",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MS23F301TAK",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-119",
+    "name": "Samsung 28Ltrs Solo Microwave",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MS28F303TAS/EU",
+    "price": 2699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-120",
+    "name": "Samsung 32L Microwave Grill",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MC32DG7646CKE1",
+    "price": 5199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-121",
+    "name": "Samsung 32Ltrs Grill Microwave",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MC32K7055CK",
+    "price": 5199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-122",
+    "name": "Samsung 4 Burner Gas Cooker With Grill",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "NX24BG45411VGH",
+    "price": 5999,
+    "oldPrice": 7899,
+    "discount": 24,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "samsung-123",
+    "name": "Samsung 40Ltrs Grill Microwave",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MG40DG5525AGSG",
+    "price": 3599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-124",
+    "name": "Samsung 40Ltrs Solo Microwave",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MS40DG5504AGSG",
+    "price": 3399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-125",
+    "name": "Samsung 60CM 12Plate Dish Washer",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "DW60CG550B00EU",
+    "price": 9399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-126",
+    "name": "Samsung 60CM Dishwasher 14 Plates",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "DW60CG550FSGSV",
+    "price": 19099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-127",
+    "name": "Samsung Built-In Decorative Hood",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "NK36C7070WB/UR",
+    "price": 10599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-128",
+    "name": "Samsung Built-In Compact Oven",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "NQ5B4553FBS/U1",
+    "price": 10999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-129",
+    "name": "Samsung Built-In Electric Oven",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "NV68A1140BK/EU",
+    "price": 7699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-130",
+    "name": "Samsung Ceramic Hub",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "C61R2AEE/XEU",
+    "price": 6699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-131",
+    "name": "Samsung Gas Cooktop",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "NA36R5310FS/AA",
+    "price": 11399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-132",
+    "name": "Samsung Gas Hob",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "NA64N7100AB/SG",
+    "price": 4999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-133",
+    "name": "Samsung Glass Ceramic Hob",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "C21RJAN/EU",
+    "price": 5099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-134",
+    "name": "Samsung Microwave Grill 30L",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MG30T5018AK/EF",
+    "price": 3299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-135",
+    "name": "Samsung Microwave Grill",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MG32DG4524AGSG",
+    "price": 3499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-136",
+    "name": "Samsung Microwave",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "MS22M8254AK/E3",
+    "price": 6399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-137",
+    "name": "Samsung Sloping Hood",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "NK24C7070WB/UR",
+    "price": 9099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-138",
+    "name": "Samsung Telescopic Hood",
+    "brand": "Samsung",
+    "category": "kitchen",
+    "model": "NK24M1030IB/UR",
+    "price": 3599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "tcl-109",
+    "name": "TCL 16Ltrs Water Dispenser",
+    "brand": "TCL",
+    "category": "kitchen",
+    "model": "TY-LWYR109W",
+    "price": 1599,
+    "oldPrice": 2099,
+    "discount": 24,
+    "icon": "🍳",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-150",
+    "name": "Midea 100Ltrs Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "D100-15FN",
+    "price": 1799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-151",
+    "name": "Midea 10Ltrs Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "D10-20VI",
+    "price": 1199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-152",
+    "name": "Midea 15Ltrs Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "D15-20VD",
+    "price": 1299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-153",
+    "name": "Midea 16 Ceiling Fan",
+    "brand": "Midea",
+    "category": "small",
+    "model": "FC-56",
+    "price": 399,
+    "oldPrice": 479,
+    "discount": 17,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-154",
+    "name": "Midea 16 Mist Fan",
+    "brand": "Midea",
+    "category": "small",
+    "model": "FS40-13QRA",
+    "price": 1299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-155",
+    "name": "Midea 16 Standing Fan",
+    "brand": "Midea",
+    "category": "small",
+    "model": "FS50-12P",
+    "price": 799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-156",
+    "name": "Midea 16 Wall Fan",
+    "brand": "Midea",
+    "category": "small",
+    "model": "FW40-7J",
+    "price": 499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-157",
+    "name": "Midea 16 Wall Fan White",
+    "brand": "Midea",
+    "category": "small",
+    "model": "FW40-7JR",
+    "price": 699,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-158",
+    "name": "Midea 16\" Standing Fan",
+    "brand": "Midea",
+    "category": "small",
+    "model": "FS40-21MR",
+    "price": 599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-159",
+    "name": "Midea 16Ltrs Water Dispenser",
+    "brand": "Midea",
+    "category": "small",
+    "model": "YL1674S-B",
+    "price": 2199,
+    "oldPrice": 2499,
+    "discount": 12,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-160",
+    "name": "Midea 18 Standing Fan",
+    "brand": "Midea",
+    "category": "small",
+    "model": "FS40-18BR",
+    "price": 799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-161",
+    "name": "Midea 18\" Rechargeable Fan",
+    "brand": "Midea",
+    "category": "small",
+    "model": "FS45-23MRD",
+    "price": 999,
+    "oldPrice": 1099,
+    "discount": 9,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-162",
+    "name": "Midea 3 In 1 Turbo Filter Air Purifier",
+    "brand": "Midea",
+    "category": "small",
+    "model": "KJ200G-D41",
+    "price": 1599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-163",
+    "name": "Midea 30Ltrs Dehumidifier",
+    "brand": "Midea",
+    "category": "small",
+    "model": "MDDP-30DEN7",
+    "price": 3599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-164",
+    "name": "Midea 30Ltrs Instant Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "D30-20VI",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-165",
+    "name": "Midea 30Ltrs Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "D30-20VD",
+    "price": 3299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-166",
+    "name": "Midea 4500Watt Instant Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "DSK45US",
+    "price": 1299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-167",
+    "name": "Midea 50Ltrs Horizontal Smart WiFi Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "D50-20ED6",
+    "price": 3599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-168",
+    "name": "Midea 50Ltrs Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "D50-15A6",
+    "price": 2099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-169",
+    "name": "Midea 70Ltrs Standing Air Cooler",
+    "brand": "Midea",
+    "category": "small",
+    "model": "AC400-20B",
+    "price": 2999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-170",
+    "name": "Midea 80Ltrs Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "D80-15FN",
+    "price": 1599,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-171",
+    "name": "Midea Instant Water Heater",
+    "brand": "Midea",
+    "category": "small",
+    "model": "D15-20VI",
+    "price": 1299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "midea-172",
+    "name": "Midea Steam Iron",
+    "brand": "Midea",
+    "category": "small",
+    "model": "YPJ20A1W",
+    "price": 279,
+    "oldPrice": 299,
+    "discount": 7,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "midea-173",
+    "name": "Midea Water Dispenser",
+    "brand": "Midea",
+    "category": "small",
+    "model": "YL2037S-W",
+    "price": 1799,
+    "oldPrice": 1999,
+    "discount": 10,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "top-deals"
+    ],
+    "specs": {},
+    "badge": "sale"
+  },
+  {
+    "id": "nasco-271",
+    "name": "Nasco 10 Tripod Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FD-25MC",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-272",
+    "name": "Nasco 1000 Watts Dry Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-FR170D",
+    "price": 199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-273",
+    "name": "Nasco 100Ltrs Water Heater",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "D100-15Z",
+    "price": 2649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-274",
+    "name": "Nasco 10Ltrs Water Heater",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "D10-20VT",
+    "price": 1199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-275",
+    "name": "Nasco 12 Wooden Tripod Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FD-30MC",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-276",
+    "name": "Nasco 1200 Watts Dry Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NA-8820A",
+    "price": 199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-277",
+    "name": "Nasco 1200 Watts Steam Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-FR158ST",
+    "price": 199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-278",
+    "name": "Nasco 15Ltrs Water Heater",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "D15-20VT",
+    "price": 1449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-279",
+    "name": "Nasco 16\" 45 Watts Wall Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FS40-21",
+    "price": 549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-280",
+    "name": "Nasco 16\" 55 Watt Standing Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FS40-89R",
+    "price": 749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-281",
+    "name": "Nasco 16\" Standing Fan 5 Blades",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NA-FS163335",
+    "price": 749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-282",
+    "name": "Nasco 16\" Standing Fan Black",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NA-FS1690B",
+    "price": 899,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-283",
+    "name": "Nasco 16\" Standing Fan Blades",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FS40-5",
+    "price": 349,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-284",
+    "name": "Nasco 16\" Standing Fan Red",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FS40-71R",
+    "price": 649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-285",
+    "name": "Nasco 16\" Standing Fan White",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FS40-24",
+    "price": 199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-286",
+    "name": "Nasco 16 Rechargeable Standing Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FS40-38A",
+    "price": 1449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-287",
+    "name": "Nasco 16 Standing Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FD40M",
+    "price": 749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-288",
+    "name": "Nasco 16 Tripod Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FD-40MH",
+    "price": 549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-289",
+    "name": "Nasco 16 Wooden Tripod Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FD-40MC",
+    "price": 499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-290",
+    "name": "Nasco 1600 Watts Steam Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NA-8817E",
+    "price": 199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-291",
+    "name": "Nasco 1600W Vacuum Cleaner",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "VCH4807F-GS",
+    "price": 999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-292",
+    "name": "Nasco 1600Watt Rechargeable Vacuum Cleaner",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "VC2938C-GS",
+    "price": 999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-293",
+    "name": "Nasco 16Ltrs 2Taps Water Dispenser",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-MYD718S-X",
+    "price": 1449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-294",
+    "name": "Nasco 16Ltrs 3 Taps Water Dispenser",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-YL1632-B",
+    "price": 2649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-295",
+    "name": "Nasco 16Ltrs 3Taps Water Dispenser",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-YL-1128BLM",
+    "price": 1999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-296",
+    "name": "Nasco 16Ltrs Water Dispenser",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "YL2233S-W",
+    "price": 1749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-297",
+    "name": "Nasco 18 Industrial Standing Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FS45-6",
+    "price": 289,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-298",
+    "name": "Nasco 2000 Watt Steam Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NA-8811",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-299",
+    "name": "Nasco 2000 Watts Steam Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NA-8868",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-300",
+    "name": "Nasco 2200 Watts Steam Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NA-8878",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-301",
+    "name": "Nasco 2400 Watts Multi Functional Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "EC1720",
+    "price": 1649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-302",
+    "name": "Nasco 2Ltrs Air Cooler",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NASFAN-2LTS",
+    "price": 399,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-303",
+    "name": "Nasco 30 Commercial Standing Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FS-750B",
+    "price": 1449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-304",
+    "name": "Nasco 30Ltrs Water Heater",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "D30-15Z",
+    "price": 1649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-305",
+    "name": "Nasco 32 Colonne Fan",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "LG32-06R",
+    "price": 649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-306",
+    "name": "Nasco 3500 Watt Instant Water Heater",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "DSK69055-J",
+    "price": 349,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-307",
+    "name": "Nasco 4500 Watt Instant Water Heater",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-H5500",
+    "price": 1099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-308",
+    "name": "Nasco 5.5Ltrs Air Cooler",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "AC-0601A",
+    "price": 849,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-309",
+    "name": "Nasco 50Ltrs Water Heater",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "D50-15Z",
+    "price": 1999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-310",
+    "name": "Nasco 55Watts Standing Fan 16\"",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FS40-88R",
+    "price": 749,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-311",
+    "name": "Nasco 7Ltrs Air Cooler",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "AC-0801R",
+    "price": 999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-312",
+    "name": "Nasco 80Ltrs Water Heater",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "D80-15Z",
+    "price": 2249,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-313",
+    "name": "Nasco Air Purifier",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "AP1209-CB",
+    "price": 649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-314",
+    "name": "Nasco Att Mosquito Killer Lamp",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "FANAS-2W-BLACK",
+    "price": 99,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-315",
+    "name": "Nasco Automatic Regulator",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-AVR-3000WM",
+    "price": 1099,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-316",
+    "name": "Nasco Blender 400 Watt",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "BL-J2001AK-CB",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-317",
+    "name": "Nasco Dry Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-2203-DI",
+    "price": 149,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-318",
+    "name": "Nasco Handheld Steamer",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-2206-GS",
+    "price": 299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-319",
+    "name": "Nasco Portable Rechargeable Vacuum Cleaner",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "VC3907-GS",
+    "price": 649,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-320",
+    "name": "Nasco Rechargeable Vacuum Cleaner",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "VC2980C-GS",
+    "price": 1299,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-321",
+    "name": "Nasco Steam Iron",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "NAS-2202C-DS",
+    "price": 199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-322",
+    "name": "Nasco Ultrasonic Humidifier",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "HF1207-GS",
+    "price": 449,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "nasco-323",
+    "name": "Nasco Voltage Regulator Digital Display",
+    "brand": "Nasco",
+    "category": "small",
+    "model": "TDR-3000VA",
+    "price": 1549,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-139",
+    "name": "Samsung 100 UHD Processor 4K HDR Freestyle Projector",
+    "brand": "Samsung",
+    "category": "small",
+    "model": "SP-LSP3BLAXZN",
+    "price": 17499,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-140",
+    "name": "Samsung 120 Smart 4K UHD Ultra Short Throw Laser Projector",
+    "brand": "Samsung",
+    "category": "small",
+    "model": "SP-LSP7TUAXGH",
+    "price": 49999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-141",
+    "name": "Samsung Vacuum Cleaner 1800Watts",
+    "brand": "Samsung",
+    "category": "small",
+    "model": "VC18M2120",
+    "price": 2199,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-142",
+    "name": "Samsung Vacuum Cleaner 2000 Watts",
+    "brand": "Samsung",
+    "category": "small",
+    "model": "VCC4570S4K",
+    "price": 1799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🔌",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-143",
+    "name": "Samsung Buds 3",
+    "brand": "Samsung",
+    "category": "accessories",
+    "model": "SM-R530NZWAMEA",
+    "price": 2029,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🎧",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-144",
+    "name": "Samsung Fit 3 Watch",
+    "brand": "Samsung",
+    "category": "accessories",
+    "model": "SM-R390NIDAMEA",
+    "price": 799,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🎧",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  },
+  {
+    "id": "samsung-145",
+    "name": "Samsung Watch Ultra 47mm Lte",
+    "brand": "Samsung",
+    "category": "accessories",
+    "model": "SM-L705FDAAXFA",
+    "price": 8999,
+    "oldPrice": null,
+    "discount": null,
+    "icon": "🎧",
+    "images": [],
+    "description": "",
+    "tags": [
+      "new-arrivals"
+    ],
+    "specs": {},
+    "badge": null
+  }
+];
+
+/* ── FLASH SALE ── */
+const FLASH_PRODUCTS = [
+  {
+    "id": "nasco-001",
+    "discount": "36%",
+    "originalPrice": 1099,
+    "salePrice": 699
+  },
+  {
+    "id": "nasco-002",
+    "discount": "33%",
+    "originalPrice": 1499,
+    "salePrice": 999
+  },
+  {
+    "id": "nasco-003",
+    "discount": "33%",
+    "originalPrice": 1499,
+    "salePrice": 999
+  },
+  {
+    "id": "nasco-009",
+    "discount": "26%",
+    "originalPrice": 2699,
+    "salePrice": 1999
+  },
+  {
+    "id": "nasco-022",
+    "discount": "41%",
+    "originalPrice": 1099,
+    "salePrice": 649
+  },
+  {
+    "id": "samsung-003",
+    "discount": "25%",
+    "originalPrice": 5299,
+    "salePrice": 3999
   }
 ];
 
 /* ── BLOG POSTS ── */
 const BLOG_POSTS = [
   {
-    "id": 1,
-    "title": "Best NASCO TVs to Buy in Ghana – 2025 Guide",
-    "category": "Televisions",
-    "date": "April 15, 2025",
-    "excerpt": "NASCO offers some of the best value TVs in Ghana. From 24-inch bedroom sets to stunning 55-inch UHD Smart displays — here is what to look for.",
-    "icon": "📺",
-    "bgColor": "linear-gradient(135deg, #0f172a, #1e3a5f)",
-    "readTime": "6 min read"
+    "id": "blog-001",
+    "title": "Top 5 Energy-Saving Tips for Your Home Appliances",
+    "category": "Tips & Guides",
+    "date": "May 1, 2026",
+    "excerpt": "Learn how to reduce your electricity bill while getting the most out of your home appliances.",
+    "icon": "💡",
+    "bgColor": "linear-gradient(135deg, #1d4ed8, #3b82f6)",
+    "readTime": "4 min read"
   },
   {
-    "id": 2,
-    "title": "How to Choose the Right Air Conditioner for Your Home",
-    "category": "Air Conditioners",
-    "date": "April 10, 2025",
-    "excerpt": "BTU ratings, inverter vs non-inverter, R32 vs R410 — we break down everything you need to know before buying your next Midea AC unit.",
+    "id": "blog-002",
+    "title": "How to Choose the Right Air Conditioner for Your Space",
+    "category": "Buying Guide",
+    "date": "April 20, 2026",
+    "excerpt": "BTU ratings, inverter vs. non-inverter, and everything else you need to know before buying an AC.",
     "icon": "❄️",
-    "bgColor": "linear-gradient(135deg, #0d2137, #0a4a6b)",
-    "readTime": "6 min read"
+    "bgColor": "linear-gradient(135deg, #0ea5e9, #38bdf8)",
+    "readTime": "5 min read"
   },
   {
-    "id": 3,
-    "title": "Chest Freezer vs. Fridge Freezer: Which Is Right for You?",
-    "category": "Refrigerators",
-    "date": "April 5, 2025",
-    "excerpt": "Deciding between a chest freezer and a fridge-freezer combo? We compare capacity, energy use, and cost to help you choose the best Midea model.",
-    "icon": "🧊",
-    "bgColor": "linear-gradient(135deg, #1a0a2e, #0a4a6b)",
-    "readTime": "5 min read"
+    "id": "blog-003",
+    "title": "Samsung vs. TCL: Which TV Brand Is Right for You?",
+    "category": "Comparisons",
+    "date": "April 10, 2026",
+    "excerpt": "We compare picture quality, smart features, and value for money across Samsung and TCL TV ranges.",
+    "icon": "📺",
+    "bgColor": "linear-gradient(135deg, #1428a0, #d40000)",
+    "readTime": "6 min read"
   }
 ];
 
 /* ── SEARCH INDEX ── */
 const SEARCH_INDEX = [
   ...PRODUCTS.map(p => ({ type: 'product', id: p.id, text: p.name, sub: p.brand, icon: p.icon })),
-  ...CATEGORIES.map(c => ({ type: 'category', id: c.id, text: c.name, sub: `${c.count} products`, icon: '📂' })),
-  ...BRANDS.map(b => ({ type: 'brand', id: b.id, text: b.name, sub: `${b.products} products`, icon: '🏷️' })),
+  ...CATEGORIES.map(c => ({ type: 'category', id: c.id, text: c.name, sub: c.count + ' products', icon: '📂' })),
+  ...BRANDS.map(b => ({ type: 'brand', id: b.id, text: b.name, sub: b.products + ' products', icon: '🏷️' })),
 ];

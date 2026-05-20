@@ -338,6 +338,7 @@ textarea{resize:vertical;min-height:70px}
           <i class="fas fa-file-upload"></i> Import CSV
           <input type="file" accept=".csv" style="display:none" onchange="importProductsCSV(this)">
         </label>
+        <button class="btn btn-danger btn-sm" onclick="confirmAction('Delete all products?','Images will be saved to the library by SKU and auto-mapped when products are re-uploaded.',deleteAllKeepImages)" title="Delete all products but keep images mapped by SKU"><i class="fas fa-trash-alt"></i> Delete All (Keep Images)</button>
       </div>
       <div class="table-wrap">
         <table>
@@ -356,12 +357,13 @@ textarea{resize:vertical;min-height:70px}
 
     <!-- IMAGES -->
     <div class="content" id="page-images" style="display:none">
-      <div style="margin-bottom:18px;display:flex;align-items:center;gap:12px">
+      <div style="margin-bottom:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
         <label class="btn btn-primary" style="cursor:pointer">
           <i class="fas fa-upload"></i> Upload Images
           <input type="file" accept="image/*" multiple style="display:none" onchange="uploadImages(this)">
         </label>
         <span style="font-size:13px;color:var(--muted)">Uploaded images can be assigned to any product.</span>
+        <div id="skuMapInfo" style="margin-left:auto;font-size:12px;color:var(--muted);background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:6px 12px"></div>
       </div>
       <div id="imageGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px"></div>
     </div>
@@ -1058,8 +1060,9 @@ function openEditModal(id){
   document.getElementById('specsContainer').innerHTML='';
   if(p.specs)Object.entries(p.specs).forEach(([k,v])=>addSpecRow(k,v));
   clearImageSlots();
-  const imgs=(p.images&&p.images.length)?p.images:[''];
-  imgs.forEach(url=>addImageSlot(url));
+  let imgs=(p.images&&p.images.length)?p.images:null;
+  if(!imgs&&p.model){const skuMap=lsGet('obv_sku_img_map',{});imgs=skuMap[(p.model||'').trim()]||null;}
+  (imgs||['']).forEach(url=>addImageSlot(url));
   populateBrandSelect(p.brand);
   document.getElementById('productModal').classList.add('open');
 }
@@ -1130,9 +1133,12 @@ function saveProduct(){
     const k=row.querySelector('.spec-key').value.trim(),v=row.querySelector('.spec-val').value.trim();
     if(k&&v)specs[k]=v;
   });
+  const _sku=document.getElementById('f_model').value.trim();
+  let _imgs=getImageSlotUrls();
+  if(!_imgs.length&&_sku){const skuMap=lsGet('obv_sku_img_map',{});_imgs=skuMap[_sku]||[];}
   const product={name,brand,brandId:brand.toLowerCase().replace(/\s+/g,''),
-    model:document.getElementById('f_model').value.trim(),category:cat,
-    images:getImageSlotUrls(),
+    model:_sku,category:cat,
+    images:_imgs,
     price,rating:parseFloat(document.getElementById('f_rating').value)||4.5,
     icon:cIcons[cat]||'📦',tags:[brand.toLowerCase().replace(/\s+/g,''),cat],
     description:document.getElementById('f_description').value.trim(),
@@ -1168,6 +1174,37 @@ function deleteProduct(id){
     logHistory({type:'delete',label:'Deleted: '+(p?p.name:id),undoData:{productId:id}});
   }
   toast('Deleted','ok');loadProducts();filterProducts();renderDashboard();
+}
+
+function deleteAllKeepImages() {
+  const prods = getAdminProducts();
+  const skuMap = lsGet('obv_sku_img_map', {});
+  const imgs = lsGet('obv_images', []);
+  let mapped = 0;
+  prods.forEach(p => {
+    const sku = (p.model || '').trim();
+    const images = (p.images || []).filter(Boolean);
+    if (sku && images.length) {
+      skuMap[sku] = images;
+      images.forEach(dataUrl => {
+        if (!imgs.some(img => img.dataUrl === dataUrl)) {
+          imgs.push({ name: sku, dataUrl });
+        }
+      });
+      mapped++;
+    }
+  });
+  lsSet('obv_sku_img_map', skuMap);
+  lsSet('obv_images', imgs);
+  sbPush('obv_images');
+  const base = typeof PRODUCTS !== 'undefined' ? PRODUCTS : [];
+  lsSet('obv_prod_dels', base.map(p => p.id));
+  lsSet('obv_prod_adds', []);
+  lsSet('obv_prod_edits', {});
+  sbPush('obv_prod_dels'); sbPush('obv_prod_adds'); sbPush('obv_prod_edits');
+  logHistory({type:'delete_all_keep_img', label:`Deleted all ${prods.length} products · saved ${mapped} SKU→image mappings`, undoData:{}});
+  toast(`All products deleted. ${mapped} image${mapped!==1?'s':''} saved by SKU.`, 'ok');
+  loadProducts(); filtered=[...adminProds]; renderTable(); renderDashboard();
 }
 
 /* ── CSV Export / Import ── */
@@ -1206,7 +1243,8 @@ function importProductsCSV(input){
       const iId=hdrs.indexOf('id'),iPr=hdrs.indexOf('price'),iOp=hdrs.indexOf('old_price'),iDi=hdrs.indexOf('discount');
       if(iId<0||iPr<0){toast('CSV must have id and price columns','err');return;}
       const edits=lsGet('obv_prod_edits',{});
-      let updated=0,skipped=0;
+      const skuMap=lsGet('obv_sku_img_map',{});
+      let updated=0,skipped=0,imgMapped=0;
       for(let i=1;i<lines.length;i++){
         const cols=parseCSVLine(lines[i]);
         const id=String(cols[iId]||'').trim();
@@ -1224,11 +1262,17 @@ function importProductsCSV(input){
           if(newDi!==null)edits[id].discount=newDi||undefined;
           updated++;
         }
+        const sku=(prod.model||'').trim();
+        if(sku&&!(prod.images&&prod.images.length)&&skuMap[sku]&&skuMap[sku].length){
+          if(!edits[id])edits[id]={};
+          edits[id]={...edits[id],images:skuMap[sku]};
+          imgMapped++;
+        }
       }
       lsSet('obv_prod_edits',edits);sbPush('obv_prod_edits');
       loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
-      logHistory({type:'edit',label:'Bulk price update via CSV ('+updated+' products)',undoData:{}});
-      toast(updated+' product(s) updated'+(skipped?' · '+skipped+' skipped':''),'ok');
+      logHistory({type:'edit',label:'Bulk CSV update ('+updated+' prices'+(imgMapped?' · '+imgMapped+' images mapped':'')+' )',undoData:{}});
+      toast(updated+' updated'+(imgMapped?' · '+imgMapped+' images auto-mapped':'')+(skipped?' · '+skipped+' skipped':''),'ok');
     }catch(err){toast('CSV error: '+err.message,'err');}
     input.value='';
   };
@@ -1238,6 +1282,10 @@ function importProductsCSV(input){
 /* ── Images ── */
 function loadImages(){
   const imgs=lsGet('obv_images',[]);
+  const skuMap=lsGet('obv_sku_img_map',{});
+  const skuCount=Object.keys(skuMap).length;
+  const info=document.getElementById('skuMapInfo');
+  if(info)info.innerHTML=skuCount?`<i class="fas fa-link" style="color:var(--primary)"></i> ${skuCount} SKU${skuCount!==1?'s':''} mapped · <a href="#" onclick="clearSkuMap();return false" style="color:#dc2626">Clear map</a>`:'<i class="fas fa-link" style="color:var(--muted)"></i> No SKU map yet';
   const g=document.getElementById('imageGrid');
   if(!imgs.length){g.innerHTML='<div style="color:var(--muted);font-size:13px;padding:20px 0">No images uploaded yet.</div>';return;}
   g.innerHTML=imgs.map((img,i)=>`
@@ -1266,6 +1314,10 @@ function uploadImages(input){
 }
 function deleteImage(index){
   const imgs=lsGet('obv_images',[]);imgs.splice(index,1);lsSet('obv_images',imgs);loadImages();
+}
+function clearSkuMap(){
+  lsSet('obv_sku_img_map',{});
+  toast('SKU image map cleared','ok');loadImages();
 }
 function copyImgUrl(index){
   const imgs=lsGet('obv_images',[]);
@@ -1383,8 +1435,8 @@ function renderHistory(){
   const list=document.getElementById('historyList');
   const hist=lsGet('obv_history',[]);
   if(!hist.length){list.innerHTML='<div class="empty-state"><i class="fas fa-history"></i><p>No changes recorded yet.</p></div>';return;}
-  const icons={edit:'fas fa-edit',add:'fas fa-plus-circle',delete:'fas fa-trash',add_delete:'fas fa-minus-circle',display:'fas fa-sliders-h',brand_add:'fas fa-copyright',brand_delete:'fas fa-copyright'};
-  const colors={edit:'#1d4ed8',add:'#15803d',delete:'#dc2626',add_delete:'#dc2626',display:'#7c3aed',brand_add:'#0ea5e9',brand_delete:'#f59e0b'};
+  const icons={edit:'fas fa-edit',add:'fas fa-plus-circle',delete:'fas fa-trash',add_delete:'fas fa-minus-circle',display:'fas fa-sliders-h',brand_add:'fas fa-copyright',brand_delete:'fas fa-copyright',delete_all_keep_img:'fas fa-images'};
+  const colors={edit:'#1d4ed8',add:'#15803d',delete:'#dc2626',add_delete:'#dc2626',display:'#7c3aed',brand_add:'#0ea5e9',brand_delete:'#f59e0b',delete_all_keep_img:'#b45309'};
   list.innerHTML=hist.map(h=>`
     <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;background:#fff;border:1.5px solid var(--border);border-radius:10px;margin-bottom:10px">
       <div style="width:36px;height:36px;border-radius:50%;background:${colors[h.type]||'#64748b'}20;display:flex;align-items:center;justify-content:center;flex-shrink:0">

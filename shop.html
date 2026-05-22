@@ -279,32 +279,38 @@
 <script src="js/shop.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
-  await (window.obvSyncPromise || Promise.resolve());
+  await Promise.race([window.obvSyncPromise || Promise.resolve(), new Promise(r => setTimeout(r, 3000))]);
   applyOverrides();
   const _urlp = new URLSearchParams(window.location.search);
   const _urlCat = _urlp.get('cat') || '';
   const _urlBrand = _urlp.get('brand') || '';
 
+  // Compute live counts from current PRODUCTS array
+  const _catCount = {}, _brandCount = {};
+  PRODUCTS.forEach(p => {
+    _catCount[p.category] = (_catCount[p.category] || 0) + 1;
+    _brandCount[p.brand]  = (_brandCount[p.brand]  || 0) + 1;
+  });
+
   // Populate category filter
   const catList = document.getElementById('catFilterList');
   if (catList) {
-    catList.innerHTML = CATEGORIES.map(c => `
+    catList.innerHTML = CATEGORIES.filter(c => _catCount[c.id] > 0).map(c => `
       <label class="filter-item">
         <input type="checkbox" class="cat-filter-check" value="${c.id}" ${c.id === _urlCat ? 'checked' : ''} />
         <span>${c.name}</span>
-        <span class="filter-count">${c.count}</span>
+        <span class="filter-count">${_catCount[c.id] || 0}</span>
       </label>`).join('');
   }
 
   // Populate brand filter
   const brandList = document.getElementById('brandFilterList');
   if (brandList) {
-    const allBrands = BRANDS;
-    brandList.innerHTML = allBrands.slice(0, 10).map(b => `
+    brandList.innerHTML = BRANDS.filter(b => _brandCount[b.name] > 0).slice(0, 10).map(b => `
       <label class="filter-item">
         <input type="checkbox" class="brand-filter-check" value="${b.id}" ${b.id === _urlBrand ? 'checked' : ''} />
         <span>${b.name}</span>
-        <span class="filter-count">${b.products || 0}</span>
+        <span class="filter-count">${_brandCount[b.name] || 0}</span>
       </label>`).join('');
   }
 

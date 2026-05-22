@@ -306,11 +306,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Populate brand filter
   const brandList = document.getElementById('brandFilterList');
   if (brandList) {
-    brandList.innerHTML = BRANDS.filter(b => _brandCount[b.name] > 0).slice(0, 10).map(b => `
+    brandList.innerHTML = BRANDS.slice(0, 10).map(b => `
       <label class="filter-item">
         <input type="checkbox" class="brand-filter-check" value="${b.id}" ${b.id === _urlBrand ? 'checked' : ''} />
         <span>${b.name}</span>
-        <span class="filter-count">${_brandCount[b.name] || 0}</span>
       </label>`).join('');
   }
 

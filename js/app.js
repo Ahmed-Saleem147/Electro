@@ -361,10 +361,6 @@ function renderBrands() {
   const grid = document.getElementById('brandsGrid');
   if (!grid) return;
 
-  // Compute live counts from current PRODUCTS array (after admin overrides)
-  const countMap = {};
-  PRODUCTS.forEach(p => { countMap[p.brand] = (countMap[p.brand] || 0) + 1; });
-
   const brandLogos = {
     samsung: 'img/samsung.webp',
     tcl:     'img/tcl.webp',
@@ -374,17 +370,7 @@ function renderBrands() {
     nasco: { text: 'NASCO', style: 'font-size:22px;font-weight:900;letter-spacing:2px;color:#003087;font-family:"Poppins",sans-serif' },
   };
 
-  const visible = BRANDS.filter(b => (countMap[b.name] || 0) > 0);
-  const section = document.getElementById('brands');
-  if (!visible.length) {
-    if (section) section.style.display = 'none';
-    grid.innerHTML = '';
-    return;
-  }
-  if (section) section.style.display = '';
-
-  grid.innerHTML = visible.map((b, i) => {
-    const count = countMap[b.name] || 0;
+  grid.innerHTML = BRANDS.map((b, i) => {
     const logoSrc = brandLogos[b.id];
     const fb = brandFallback[b.id];
     const logoHtml = logoSrc
@@ -396,7 +382,6 @@ function renderBrands() {
     return `
       <div class="brand-card reveal delay-${Math.min(i * 100, 400)}" onclick="window.location='shop.html?brand=${b.id}'">
         ${logoHtml}${textHtml}
-        <div class="brand-count">${count} Products</div>
       </div>
     `;
   }).join('');

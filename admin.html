@@ -1228,19 +1228,54 @@ function csvField(v){
   return /[,"\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
 }
 function exportProductsCSV(){
-  // Always export from base PRODUCTS so SKUs are available even after deleting all
   const baseProds=typeof PRODUCTS!=='undefined'?PRODUCTS:[];
   const edits=lsGet('obv_prod_edits',{});
   const prods=baseProds.map(p=>edits[p.id]?Object.assign({},p,edits[p.id]):p);
   if(!prods.length){toast('No products to export','err');return;}
-  const header=['id','model','name','brand','category','price','old_price','discount'];
-  const rows=prods.map(p=>[p.id,csvField(p.model||''),csvField(p.name),csvField(p.brand),p.category,p.price,p.oldPrice||'',p.discount||'']);
-  const csv=[header.join(','),...rows.map(r=>r.join(','))].join('\n');
+
+  const CAT_NAMES_FULL={tv:'Televisions',ac:'Air Conditioners',fridge:'Refrigerators',laundry:'Washing Machines',kitchen:'Kitchen Appliances',small:'Small Appliances',accessories:'Accessories',phones:'Phones',tablets:'Tablets',commercial:'Commercial'};
+
+  // Collect all spec keys across every product so each key gets its own column
+  const specKeys=[];
+  const specKeySet=new Set();
+  prods.forEach(p=>{
+    Object.keys(p.specs||{}).forEach(k=>{if(!specKeySet.has(k)){specKeySet.add(k);specKeys.push(k);}});
+  });
+
+  const header=[
+    'Product Name','Brand','SKU / Model','Category',
+    'Selling Price (GH₵)','Original Price (GH₵)','Discount %',
+    'Has Image','Description',
+    ...specKeys.map(k=>'Spec: '+k),
+    'ID'   // keep at end for re-import use
+  ];
+
+  const rows=prods.map(p=>{
+    const hasImg=!!(p.images&&p.images[0]);
+    const desc=(p.description||'').replace(/\n/g,' | ');
+    const specVals=specKeys.map(k=>csvField((p.specs||{})[k]||''));
+    return[
+      csvField(p.name),
+      csvField(p.brand),
+      csvField(p.model||p.sku||''),
+      csvField(CAT_NAMES_FULL[p.category]||p.category),
+      p.price||'',
+      p.oldPrice||'',
+      p.discount||'',
+      hasImg?'Yes':'No',
+      csvField(desc),
+      ...specVals,
+      csvField(p.id)
+    ];
+  });
+
+  const csv=[header.map(csvField).join(','),...rows.map(r=>r.join(','))].join('\n');
+  const bom='﻿'; // UTF-8 BOM so Excel opens it correctly
   const a=document.createElement('a');
-  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.href=URL.createObjectURL(new Blob([bom+csv],{type:'text/csv;charset=utf-8'}));
   a.download='orbiva-products-'+new Date().toISOString().slice(0,10)+'.csv';
   a.click();
-  toast('CSV downloaded — '+prods.length+' products (all, including deleted)','ok');
+  toast('CSV downloaded — '+prods.length+' products','ok');
 }
 function parseCSVLine(line){
   const out=[];let cur='',inQ=false;

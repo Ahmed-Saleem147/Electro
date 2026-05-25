@@ -1,9 +1,10 @@
 /* ================================================================
    ORBIVA – DATA LAYER
-   Source: EGL World Cup Promo 2026
+   Source: EGL World Cup Promo 2026.xlsx
    Generated: 2026-05-25
    Products: 334 (deduplicated)
 ================================================================ */
+
 const DATA_VERSION = '2026-05-25-egl';
 
 /* ── CATEGORIES ── */
@@ -282,6 +283,7 @@ const PRODUCTS = [
     "images": [],
     "description": "LED TV\n55\"",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -318,6 +320,7 @@ const PRODUCTS = [
     "images": [],
     "description": "LED TV\n65''",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -354,6 +357,7 @@ const PRODUCTS = [
     "images": [],
     "description": "LED TV\n75\"",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -1416,6 +1420,7 @@ const PRODUCTS = [
     "images": [],
     "description": "UHD 4K Smart TV\n55\"",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -1452,6 +1457,7 @@ const PRODUCTS = [
     "images": [],
     "description": "UHD 4K Smart TV\n75''",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -1470,6 +1476,7 @@ const PRODUCTS = [
     "images": [],
     "description": "QLED 4K TV\n55''",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -1488,6 +1495,7 @@ const PRODUCTS = [
     "images": [],
     "description": "QLED 4K TV\n65''",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -1524,6 +1532,7 @@ const PRODUCTS = [
     "images": [],
     "description": "QLED 4K TV\n85\"",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -1884,6 +1893,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Split AC (R32)\n2.5 HP",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -2028,6 +2038,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Floor Standing AC\n2.5 HP",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -2658,6 +2669,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Split Inverter AC (R32)\n1.5 HP",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -2676,6 +2688,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Split Inverter AC (R32)\n2.0 HP",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -2694,6 +2707,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Split Inverter AC (R32)\n2.5 HP",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -3720,6 +3734,7 @@ const PRODUCTS = [
     "images": [],
     "description": "CONTACT SANDWICH GRILL\n1500W",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -3864,6 +3879,7 @@ const PRODUCTS = [
     "images": [],
     "description": "LED FHD Smart TV\n50\"",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -3939,7 +3955,7 @@ const PRODUCTS = [
       "new-arrivals"
     ],
     "specs": {},
-    "badge": null
+    "badge": "new"
   },
   {
     "id": "nasco-nasm18v1",
@@ -3954,6 +3970,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Split Inverter AC (R410)\n18000 Btu/h",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -3972,6 +3989,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Split Inverter AC (R410)\n24000 Btu/h",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -3990,6 +4008,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Split Inverter AC (R32)\n12000 Btu/h",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4008,6 +4027,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Split Inverter AC (R32)\n18000 Btu/h",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4026,6 +4046,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Split Inverter AC (R32)\n24000 Btu/h",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4062,6 +4083,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Floor Standing AC\n36000 BTU/H",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4080,6 +4102,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Floor Standing AC\n48000 BTU/H",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4098,6 +4121,7 @@ const PRODUCTS = [
     "images": [],
     "description": "French Door Refrigerator\n360 L",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4116,6 +4140,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Side-by-Side Refrigerator\n425 L",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4137,7 +4162,7 @@ const PRODUCTS = [
       "new-arrivals"
     ],
     "specs": {},
-    "badge": null
+    "badge": "new"
   },
   {
     "id": "nasco-nasf2661ff",
@@ -4224,6 +4249,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Top Mount Refrigerator\n280 L",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4242,6 +4268,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Top Mount Refrigerator",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4278,6 +4305,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Top Mount Refrigerator\n207 L",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -4800,6 +4828,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Display Refrigerator\n110 L",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5124,6 +5153,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Chest Freezer\n335 L",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5322,6 +5352,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Microwave\n20 LTRS",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5376,6 +5407,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Twin Tub Semi-Auto Washer\n8 KGS",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5412,6 +5444,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Top Load Washer\n12 KGS",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5448,6 +5481,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Front Load Washer\n12 KGS",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5592,6 +5626,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Electric Kettle",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5610,6 +5645,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Ice Maker\n26 LB - BLACK",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5628,6 +5664,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Voltage Regulator\n2000VA",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5646,6 +5683,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Voltage Regulator\n5000VA",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},
@@ -5664,6 +5702,7 @@ const PRODUCTS = [
     "images": [],
     "description": "Voltage Regulator\n3000VA",
     "tags": [
+      "new-arrivals",
       "top-deals"
     ],
     "specs": {},

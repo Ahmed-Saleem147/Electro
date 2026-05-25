@@ -58,12 +58,14 @@ function disc(price, old) {
 /* ── Assign badge ─────────────────────────────────────────────── */
 function badge(p) {
   if (p.oldPrice && p.oldPrice > p.price) return 'sale';
+  if (p.isNew) return 'new';
   return null;
 }
 
 /* ── Assign tags ──────────────────────────────────────────────── */
 function tags(p) {
   const t = [];
+  if (p.isNew) t.push('new-arrivals');
   if (p.oldPrice && p.oldPrice > p.price) t.push('top-deals');
   return t.length ? t : ['new-arrivals'];
 }
@@ -159,12 +161,15 @@ const BLOG_POSTS = [
 ];
 
 /* ── Assemble data.js ─────────────────────────────────────────── */
+const BUILD_DATE = new Date().toISOString().split('T')[0];
 const out = `/* ================================================================
    ORBIVA – DATA LAYER
-   Source: Electroland Ghana (electrolandgh.com)
-   Generated: ${new Date().toISOString().split('T')[0]}
+   Source: EGL World Cup Promo 2026.xlsx
+   Generated: ${BUILD_DATE}
    Products: ${converted.length} (deduplicated)
 ================================================================ */
+
+const DATA_VERSION = '${BUILD_DATE}-egl';
 
 /* ── CATEGORIES ── */
 const CATEGORIES = ${JSON.stringify(CATEGORIES, null, 2)};

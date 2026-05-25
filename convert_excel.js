@@ -5,7 +5,19 @@
 const XLSX = require('xlsx');
 const fs   = require('fs');
 
-const wb = XLSX.readFile('C:/Users/Ahmed/Downloads/Electronics/EGL WORLD CUP PROMO 2026.xlsx');
+const wb = XLSX.readFile('C:/Users/Ahmed/Downloads/Electronics/EGL WORLD CUP PROMO 2026.xlsx', {cellStyles: true});
+
+/* ── Detect yellow-highlighted row (new product marker) ── */
+function isYellowRow(ws, rowIdx, maxCol) {
+  for (let c = 0; c <= maxCol; c++) {
+    const cell = ws[XLSX.utils.encode_cell({r: rowIdx, c})];
+    if (!cell || !cell.s) continue;
+    const fg = (cell.s.fgColor && cell.s.fgColor.rgb || '').toUpperCase();
+    const bg = (cell.s.bgColor && cell.s.bgColor.rgb || '').toUpperCase();
+    if (fg === 'FFFF00' || bg === 'FFFF00') return true;
+  }
+  return false;
+}
 const products = [];
 
 /* ── Category → site ID ── */
@@ -114,7 +126,8 @@ function fillDown(data, col) {
    Data rows start at index 5
 ──────────────────────────────────── */
 (function parseSamsung() {
-  const rows = XLSX.utils.sheet_to_json(wb.Sheets['SAMSUNG'], {header:1});
+  const ws = wb.Sheets['SAMSUNG'];
+  const rows = XLSX.utils.sheet_to_json(ws, {header:1});
   const cats = fillDown(rows, 0);
   rows.forEach((r, i) => {
     if (i < 5) return;
@@ -132,7 +145,7 @@ function fillDown(data, col) {
       category: siteCategory(cat, ''),
       price: promo, oldPrice: isNaN(retail) ? null : retail,
       description: type + (size ? '\n' + size : ''),
-      specs: {}
+      specs: {}, isNew: isYellowRow(ws, i, 5)
     });
   });
   console.log('Samsung:', products.length, 'products');
@@ -144,7 +157,8 @@ function fillDown(data, col) {
 ──────────────────────────────────── */
 (function parseTCL() {
   const before = products.length;
-  const rows = XLSX.utils.sheet_to_json(wb.Sheets['TCL'], {header:1});
+  const ws = wb.Sheets['TCL'];
+  const rows = XLSX.utils.sheet_to_json(ws, {header:1});
   const mainCats = fillDown(rows, 0);
   const subCats  = fillDown(rows, 1);
   rows.forEach((r, i) => {
@@ -163,7 +177,7 @@ function fillDown(data, col) {
       category: siteCategory(cat0, cat1),
       price: promo, oldPrice: isNaN(retail) ? null : retail,
       description: type + (size ? '\n' + size : ''),
-      specs: {}
+      specs: {}, isNew: isYellowRow(ws, i, 6)
     });
   });
   console.log('TCL:', products.length - before, 'products');
@@ -175,7 +189,8 @@ function fillDown(data, col) {
 ──────────────────────────────────── */
 (function parseMidea() {
   const before = products.length;
-  const rows = XLSX.utils.sheet_to_json(wb.Sheets['MIDEA'], {header:1});
+  const ws = wb.Sheets['MIDEA'];
+  const rows = XLSX.utils.sheet_to_json(ws, {header:1});
   const cats  = fillDown(rows, 0);
   const items = fillDown(rows, 1);
   rows.forEach((r, i) => {
@@ -194,7 +209,7 @@ function fillDown(data, col) {
       category: siteCategory(cat0, item),
       price: promo, oldPrice: isNaN(retail) ? null : retail,
       description: type + (size ? '\n' + size : ''),
-      specs: {}
+      specs: {}, isNew: isYellowRow(ws, i, 6)
     });
   });
   console.log('Midea:', products.length - before, 'products');
@@ -206,7 +221,8 @@ function fillDown(data, col) {
 ──────────────────────────────────── */
 (function parseNasco() {
   const before = products.length;
-  const rows = XLSX.utils.sheet_to_json(wb.Sheets['NASCO'], {header:1});
+  const ws = wb.Sheets['NASCO'];
+  const rows = XLSX.utils.sheet_to_json(ws, {header:1});
   const cats = fillDown(rows, 0);
   rows.forEach((r, i) => {
     if (i < 4) return;
@@ -224,7 +240,7 @@ function fillDown(data, col) {
       category: siteCategory(cat, ''),
       price: promo, oldPrice: isNaN(retail) ? null : retail,
       description: type + (size ? '\n' + size : ''),
-      specs: {}
+      specs: {}, isNew: isYellowRow(ws, i, 5)
     });
   });
   console.log('Nasco:', products.length - before, 'products');

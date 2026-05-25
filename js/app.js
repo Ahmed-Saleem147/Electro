@@ -31,6 +31,15 @@ let _overridesApplied = false;
 function applyOverrides() {
   if (_overridesApplied) return;
   _overridesApplied = true;
+  // If data.js was redeployed with a new version, clear stale product deletions/edits
+  try {
+    const dv = typeof DATA_VERSION !== 'undefined' ? DATA_VERSION : '';
+    if (dv && localStorage.getItem('obv_data_version') !== dv) {
+      localStorage.removeItem('obv_prod_dels');
+      localStorage.removeItem('obv_prod_edits');
+      localStorage.setItem('obv_data_version', dv);
+    }
+  } catch(e) {}
   try {
     const edits = JSON.parse(localStorage.getItem('obv_prod_edits') || '{}');
     const adds  = JSON.parse(localStorage.getItem('obv_prod_adds')  || '[]');

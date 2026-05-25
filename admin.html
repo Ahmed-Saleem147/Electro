@@ -685,6 +685,16 @@ let editingId=null, editingDealId=null;
 
 async function init() {
   await (window.obvSyncPromise || Promise.resolve());
+  // Clear stale deletions/edits when data.js is redeployed with a new version
+  try {
+    const dv = typeof DATA_VERSION !== 'undefined' ? DATA_VERSION : '';
+    if (dv && localStorage.getItem('obv_data_version') !== dv) {
+      localStorage.removeItem('obv_prod_dels');
+      localStorage.removeItem('obv_prod_edits');
+      localStorage.setItem('obv_data_version', dv);
+      sbPush('obv_prod_dels'); sbPush('obv_prod_edits');
+    }
+  } catch(e) {}
   loadProducts(); loadOrders(); loadDeals();
   populateFilterBrand();
   renderDashboard(); updatePendingBadge();

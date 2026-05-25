@@ -362,7 +362,8 @@ textarea{resize:vertical;min-height:70px}
           <i class="fas fa-upload"></i> Upload Images
           <input type="file" accept="image/*" multiple style="display:none" onchange="uploadImages(this)">
         </label>
-        <span style="font-size:13px;color:var(--muted)">Uploaded images can be assigned to any product.</span>
+        <button class="btn btn-outline" onclick="autoMapFromLibrary()" title="Match library images to products whose SKU appears in the filename (e.g. NAS-J50FBFL-G.jpg)"><i class="fas fa-magic"></i> Auto-Map by SKU &amp; Publish</button>
+        <span style="font-size:13px;color:var(--muted)">Name files by SKU (e.g. <em>QA55Q6FAAUXGH.jpg</em>) then click Auto-Map.</span>
         <div id="skuMapInfo" style="margin-left:auto;font-size:12px;color:var(--muted);background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:6px 12px"></div>
       </div>
       <div id="imageGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px"></div>
@@ -501,7 +502,8 @@ textarea{resize:vertical;min-height:70px}
     </div>
     <div class="modal-footer">
       <button class="btn btn-outline" onclick="closeModal('productModal')">Cancel</button>
-      <button class="btn btn-primary" onclick="saveProduct()"><i class="fas fa-save"></i> Save Product</button>
+      <button class="btn btn-outline" onclick="saveProduct(true)"><i class="fas fa-save"></i> Save &amp; Continue Editing</button>
+      <button class="btn btn-primary" onclick="saveProduct()"><i class="fas fa-save"></i> Save &amp; Close</button>
     </div>
   </div>
 </div>
@@ -1086,14 +1088,14 @@ function openEditModal(id){
 function clearImageSlots(){document.getElementById('imgSlotList').innerHTML='';}
 function addImageSlot(url=''){
   const list=document.getElementById('imgSlotList');
-  if(list.children.length>=5){toast('Maximum 5 images per product','info');return;}
+  if(list.children.length>=10){toast('Maximum 10 images per product','info');return;}
   const idx=list.children.length;
   const slot=document.createElement('div');
   slot.className='img-slot';
   slot.innerHTML=`
     <div class="img-slot-thumb"><img src="" alt="" onload="this.classList.add('loaded')" onerror="this.classList.remove('loaded')"><span>${idx+1}</span></div>
     <input type="text" class="img-slot-url" placeholder="Paste image URL or upload →" value="${escHtml(url)}" oninput="slotUrlChange(this)">
-    <label class="btn btn-outline btn-sm" style="cursor:pointer;white-space:nowrap"><i class="fas fa-upload"></i> Upload<input type="file" accept="image/*" style="display:none" onchange="slotFileUpload(this)"></label>
+    <label class="btn btn-outline btn-sm" style="cursor:pointer;white-space:nowrap" title="Select one or multiple images"><i class="fas fa-upload"></i> Upload<input type="file" accept="image/*" multiple style="display:none" onchange="slotFilesUpload(this)"></label>
     <button type="button" class="del-spec" onclick="removeImageSlot(this)" title="Remove"><i class="fas fa-times"></i></button>`;
   list.appendChild(slot);
   if(url)slotUrlChange(slot.querySelector('.img-slot-url'));
@@ -1115,12 +1117,22 @@ function slotUrlChange(input){
   img.src=url||'';
   img.classList.toggle('loaded',!!url);
 }
-function slotFileUpload(input){
-  const file=input.files[0];if(!file)return;
-  const urlInput=input.closest('.img-slot').querySelector('.img-slot-url');
-  const reader=new FileReader();
-  reader.onload=e=>{urlInput.value=e.target.result;slotUrlChange(urlInput);toast('Image ready!','ok');};
-  reader.readAsDataURL(file);
+function slotFilesUpload(input){
+  const files=Array.from(input.files);if(!files.length)return;
+  const slot=input.closest('.img-slot');
+  const urlInput=slot.querySelector('.img-slot-url');
+  // Read files sequentially to preserve order
+  files.reduce((chain,file,idx)=>chain.then(()=>new Promise(resolve=>{
+    const reader=new FileReader();
+    reader.onload=e=>{
+      if(idx===0){urlInput.value=e.target.result;slotUrlChange(urlInput);}
+      else addImageSlot(e.target.result);
+      resolve();
+    };
+    reader.readAsDataURL(file);
+  })),Promise.resolve()).then(()=>{
+    toast(files.length+' image'+(files.length!==1?'s':'')+' added!','ok');
+  });
 }
 function getImageSlotUrls(){
   return Array.from(document.querySelectorAll('#imgSlotList .img-slot-url'))
@@ -1134,7 +1146,7 @@ function addSpecRow(key='',val=''){
     <button type="button" class="del-spec" onclick="this.parentNode.remove()"><i class="fas fa-times"></i></button>`;
   c.appendChild(row);
 }
-function saveProduct(){
+function saveProduct(stayOpen=false){
   const name=document.getElementById('f_name').value.trim();
   const price=parseInt(document.getElementById('f_price').value);
   if(!name||!price){toast('Name and price required','err');return;}
@@ -1151,11 +1163,16 @@ function saveProduct(){
   const _sku=document.getElementById('f_model').value.trim();
   let _imgs=getImageSlotUrls();
   if(!_imgs.length&&_sku){const skuMap=lsGet('obv_sku_img_map',{});_imgs=skuMap[_sku]||[];}
+  // Preserve original tags; only add/remove top-deals based on current pricing
+  const _baseProds=(typeof PRODUCTS!=='undefined'?PRODUCTS:[]);
+  const _baseProd=editingId?_baseProds.find(p=>p.id===editingId):null;
+  const _tSet=new Set(_baseProd?(_baseProd.tags||[]):[brand.toLowerCase().replace(/\s+/g,''),cat]);
+  if(op&&op>price)_tSet.add('top-deals');else _tSet.delete('top-deals');
   const product={name,brand,brandId:brand.toLowerCase().replace(/\s+/g,''),
     model:_sku,category:cat,
     images:_imgs,
     price,rating:parseFloat(document.getElementById('f_rating').value)||4.5,
-    icon:cIcons[cat]||'📦',tags:[brand.toLowerCase().replace(/\s+/g,''),cat],
+    icon:cIcons[cat]||'📦',tags:[..._tSet],
     description:document.getElementById('f_description').value.trim(),
     badge:document.getElementById('f_badge').value||'',
     specs:Object.keys(specs).length?specs:undefined};
@@ -1175,7 +1192,8 @@ function saveProduct(){
     logHistory({type:'add',label:'Added: '+product.name,undoData:{productId:product.id}});
     toast('Product added!','ok');
   }
-  closeModal('productModal');loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
+  if(!stayOpen)closeModal('productModal');
+  loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
 }
 function deleteProduct(id){
   const p=adminProds.find(x=>x.id===id);
@@ -1387,6 +1405,42 @@ function deleteImage(index){
 function clearSkuMap(){
   lsSet('obv_sku_img_map',{});
   toast('SKU image map cleared','ok');loadImages();
+}
+function autoMapFromLibrary(){
+  const imgs=lsGet('obv_images',[]);
+  if(!imgs.length){toast('No images in library — upload images first','err');return;}
+  const prods=getAdminProducts();
+  if(!prods.length){toast('No products loaded','err');return;}
+  const skuMap=lsGet('obv_sku_img_map',{});
+  const edits=lsGet('obv_prod_edits',{});
+  let matched=0,alreadyDone=0;
+  prods.forEach(p=>{
+    const sku=(p.model||'').trim();if(!sku)return;
+    const skuLow=sku.toLowerCase();
+    // Group all library images whose filename contains this SKU
+    const found=imgs.filter(img=>{
+      const base=img.name.replace(/\.[^.]+$/,'').toLowerCase();
+      return base===skuLow||base.startsWith(skuLow+'_')||base.startsWith(skuLow+'-')||base.startsWith(skuLow+' ');
+    }).map(img=>img.dataUrl);
+    if(!found.length)return;
+    const alreadyHasImg=!!(p.images&&p.images.length);
+    if(alreadyHasImg){alreadyDone++;return;}
+    skuMap[sku]=found;
+    if(!edits[p.id])edits[p.id]={};
+    edits[p.id]={...edits[p.id],images:found};
+    matched++;
+  });
+  if(!matched){
+    toast(alreadyDone?'All matching products already have images':'No SKU matches — name files like the SKU (e.g. NAS-M12V1.jpg)','info');
+    return;
+  }
+  lsSet('obv_sku_img_map',skuMap);
+  lsSet('obv_prod_edits',edits);
+  sbPush('obv_prod_edits');
+  loadProducts();filtered=[...adminProds];renderTable();renderDashboard();loadImages();
+  logHistory({type:'edit',label:'Auto-mapped '+matched+' products from image library by SKU',undoData:{}});
+  const note=alreadyDone?' ('+alreadyDone+' already had images)':'';
+  toast(matched+' product'+(matched!==1?'s':'')+' mapped & published to site!'+note,'ok');
 }
 function copyImgUrl(index){
   const imgs=lsGet('obv_images',[]);

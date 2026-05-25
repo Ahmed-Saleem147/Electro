@@ -47,6 +47,10 @@ function applyOverrides() {
     }
     brandAdds.forEach(b => { if (!BRANDS.some(x => x.id === b.id)) BRANDS.push(b); });
   } catch(e) {}
+  // Only show products that have at least one image
+  for (let i = PRODUCTS.length - 1; i >= 0; i--) {
+    if (!(PRODUCTS[i].images && PRODUCTS[i].images.length)) PRODUCTS.splice(i, 1);
+  }
 }
 
 /* ── Format description: each line becomes a bullet point ── */

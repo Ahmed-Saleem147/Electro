@@ -357,13 +357,17 @@ textarea{resize:vertical;min-height:70px}
 
     <!-- IMAGES -->
     <div class="content" id="page-images" style="display:none">
+      <div style="background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:10px;padding:14px 16px;margin-bottom:16px;font-size:13px;line-height:1.7">
+        <strong><i class="fab fa-google-drive" style="color:#1d4ed8"></i> Use Google Drive as image storage</strong> — no file size limits, no storage errors.<br>
+        <span style="color:var(--muted)">1. Upload images to Google Drive &nbsp;→&nbsp; 2. Right-click image → <em>Share → Anyone with the link</em> → Copy link &nbsp;→&nbsp; 3. Paste the link directly into any product's image field — it auto-converts.</span>
+      </div>
       <div style="margin-bottom:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
         <label class="btn btn-primary" style="cursor:pointer">
-          <i class="fas fa-upload"></i> Upload Images
+          <i class="fas fa-upload"></i> Upload to Library
           <input type="file" accept="image/*" multiple style="display:none" onchange="uploadImages(this)">
         </label>
         <button class="btn btn-outline" onclick="autoMapFromLibrary()" title="Match library images to products whose SKU appears in the filename (e.g. NAS-J50FBFL-G.jpg)"><i class="fas fa-magic"></i> Auto-Map by SKU &amp; Publish</button>
-        <span style="font-size:13px;color:var(--muted)">Name files by SKU (e.g. <em>QA55Q6FAAUXGH.jpg</em>) then click Auto-Map.</span>
+        <span style="font-size:13px;color:var(--muted)">Or upload locally — name files by SKU (e.g. <em>QA55Q6FAAUXGH.jpg</em>) then click Auto-Map.</span>
         <div id="skuMapInfo" style="margin-left:auto;font-size:12px;color:var(--muted);background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:6px 12px"></div>
       </div>
       <div id="imageGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px"></div>
@@ -483,7 +487,7 @@ textarea{resize:vertical;min-height:70px}
         <div class="form-group"><label>Selling Price (GH₵)</label><input type="number" id="f_price" min="1"></div>
         <div class="form-group"><label>Original Price (blank = no promo)</label><input type="number" id="f_oldPrice" min="1"></div>
         <div class="form-group full">
-          <label>Product Images <span style="font-weight:400;color:var(--muted);font-size:12px">— up to 5, first image is the main photo</span></label>
+          <label>Product Images <span style="font-weight:400;color:var(--muted);font-size:12px">— paste a Google Drive share link or upload directly · first image is the main photo</span></label>
           <div id="imgSlotList"></div>
           <button type="button" class="add-spec-btn" id="addImgBtn" onclick="addImageSlot()"><i class="fas fa-plus"></i> Add Another Image</button>
         </div>
@@ -1094,7 +1098,7 @@ function addImageSlot(url=''){
   slot.className='img-slot';
   slot.innerHTML=`
     <div class="img-slot-thumb"><img src="" alt="" onload="this.classList.add('loaded')" onerror="this.classList.remove('loaded')"><span>${idx+1}</span></div>
-    <input type="text" class="img-slot-url" placeholder="Paste image URL or upload →" value="${escHtml(url)}" oninput="slotUrlChange(this)">
+    <input type="text" class="img-slot-url" placeholder="Paste Google Drive share link or any image URL" value="${escHtml(url)}" oninput="slotUrlChange(this)">
     <label class="btn btn-outline btn-sm" style="cursor:pointer;white-space:nowrap" title="Select one or multiple images"><i class="fas fa-upload"></i> Upload<input type="file" accept="image/*" multiple style="display:none" onchange="slotFilesUpload(this)"></label>
     <button type="button" class="del-spec" onclick="removeImageSlot(this)" title="Remove"><i class="fas fa-times"></i></button>`;
   list.appendChild(slot);
@@ -1111,9 +1115,21 @@ function refreshSlotNumbers(){
     slot.querySelector('span').textContent=i+1;
   });
 }
+function driveToDirectUrl(url){
+  // Handles all common Google Drive share link formats and converts to embeddable URL
+  let m=url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if(!m)m=url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if(!m)m=url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if(m)return'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w1000';
+  return url;
+}
 function slotUrlChange(input){
   const img=input.closest('.img-slot').querySelector('.img-slot-thumb img');
-  const url=input.value.trim();
+  let url=input.value.trim();
+  if(url&&url.includes('drive.google.com')){
+    url=driveToDirectUrl(url);
+    input.value=url;
+  }
   img.src=url||'';
   img.classList.toggle('loaded',!!url);
 }

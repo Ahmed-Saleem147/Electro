@@ -634,7 +634,7 @@ const fmt = n => 'GH₵ ' + Number(n||0).toLocaleString();
 
 /* ── Storage helpers ── */
 function lsGet(key, def) { try { const v=localStorage.getItem(key); return v===null?def:JSON.parse(v); } catch { return def; } }
-function lsSet(key, val) { localStorage.setItem(key, JSON.stringify(val)); }
+function lsSet(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) { throw new Error('Storage full — try removing unused images from the Image Library.'); } }
 
 /* ── Auth ── */
 function doLogin() {
@@ -1148,12 +1148,12 @@ function addSpecRow(key='',val=''){
 }
 function saveProduct(stayOpen=false){
   const name=document.getElementById('f_name').value.trim();
-  const price=parseInt(document.getElementById('f_price').value);
+  const price=parseFloat(document.getElementById('f_price').value);
   if(!name||!price){toast('Name and price required','err');return;}
   const brand=document.getElementById('f_brand').value;
   const cat=document.getElementById('f_category').value;
   const cIcons={tv:'📺',ac:'❄️',fridge:'🧊',laundry:'🫧',kitchen:'🍳',small:'⚡',phones:'📱',commercial:'🏭'};
-  const op=parseInt(document.getElementById('f_oldPrice').value)||null;
+  const op=parseFloat(document.getElementById('f_oldPrice').value)||null;
   const disc=op&&op>price?Math.round((op-price)/op*100):null;
   const specs={};
   document.querySelectorAll('.spec-row').forEach(row=>{
@@ -1163,7 +1163,7 @@ function saveProduct(stayOpen=false){
   const _sku=document.getElementById('f_model').value.trim();
   let _imgs=getImageSlotUrls();
   if(!_imgs.length&&_sku){const skuMap=lsGet('obv_sku_img_map',{});_imgs=skuMap[_sku]||[];}
-  // Preserve original tags; only add/remove top-deals based on current pricing
+  // Preserve original tags; only adjust top-deals based on current pricing
   const _baseProds=(typeof PRODUCTS!=='undefined'?PRODUCTS:[]);
   const _baseProd=editingId?_baseProds.find(p=>p.id===editingId):null;
   const _tSet=new Set(_baseProd?(_baseProd.tags||[]):[brand.toLowerCase().replace(/\s+/g,''),cat]);
@@ -1177,23 +1177,30 @@ function saveProduct(stayOpen=false){
     badge:document.getElementById('f_badge').value||'',
     specs:Object.keys(specs).length?specs:undefined};
   if(op){product.oldPrice=op;product.discount=disc;}
-  if(editingId){
-    const orig=adminProds.find(p=>p.id===editingId);
-    if(orig){product.reviews=orig.reviews;product.id=orig.id;}
-    const edits=lsGet('obv_prod_edits',{});
-    const prevEdit=edits[editingId]||null;
-    edits[editingId]=product;lsSet('obv_prod_edits',edits);sbPush('obv_prod_edits');
-    logHistory({type:'edit',label:'Edited: '+product.name,undoData:{productId:editingId,prevEdit}});
-    toast('Updated!','ok');
-  } else {
-    const adds=lsGet('obv_prod_adds',[]);
-    product.id='admin-'+Date.now();product.reviews=Math.floor(Math.random()*200+50);
-    adds.push(product);lsSet('obv_prod_adds',adds);sbPush('obv_prod_adds');
-    logHistory({type:'add',label:'Added: '+product.name,undoData:{productId:product.id}});
-    toast('Product added!','ok');
+  try {
+    if(editingId){
+      const orig=adminProds.find(p=>p.id===editingId);
+      if(orig){product.reviews=orig.reviews;product.id=orig.id;}
+      const edits=lsGet('obv_prod_edits',{});
+      edits[editingId]=product;
+      lsSet('obv_prod_edits',edits);
+      sbPush('obv_prod_edits');
+      toast('Updated!','ok');
+      try{logHistory({type:'edit',label:'Edited: '+product.name,undoData:{productId:editingId}});}catch(e){}
+    } else {
+      const adds=lsGet('obv_prod_adds',[]);
+      product.id='admin-'+Date.now();product.reviews=Math.floor(Math.random()*200+50);
+      adds.push(product);
+      lsSet('obv_prod_adds',adds);
+      sbPush('obv_prod_adds');
+      toast('Product added!','ok');
+      try{logHistory({type:'add',label:'Added: '+product.name,undoData:{productId:product.id}});}catch(e){}
+    }
+    if(!stayOpen)closeModal('productModal');
+    loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
+  } catch(e){
+    toast('Save failed: '+e.message,'err');
   }
-  if(!stayOpen)closeModal('productModal');
-  loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
 }
 function deleteProduct(id){
   const p=adminProds.find(x=>x.id===id);
@@ -1550,9 +1557,13 @@ function deleteBrand(id){
 
 /* ── Change History ── */
 function logHistory(entry){
-  const hist=lsGet('obv_history',[]);
-  hist.unshift({...entry,id:Date.now(),timestamp:new Date().toISOString()});
-  lsSet('obv_history',hist.slice(0,200));
+  try{
+    const hist=lsGet('obv_history',[]);
+    // Strip images from undoData to keep history size small
+    const safe={...entry,undoData:entry.undoData?Object.fromEntries(Object.entries(entry.undoData).filter(([k])=>k!=='product'&&k!=='prevEdit')):{}};
+    hist.unshift({...safe,id:Date.now(),timestamp:new Date().toISOString()});
+    lsSet('obv_history',hist.slice(0,100));
+  }catch(e){}
 }
 function renderHistory(){
   const list=document.getElementById('historyList');

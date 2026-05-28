@@ -51,7 +51,7 @@ const CATEGORIES = [
   },
   {
     "id": "small",
-    "name": "Small Appliances",
+    "name": "Other Appliances",
     "icon": "fas fa-plug",
     "count": 74,
     "color": "#fff",

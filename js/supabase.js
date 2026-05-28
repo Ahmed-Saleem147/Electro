@@ -20,16 +20,34 @@ async function sbSync() {
   } catch(e) {}
 }
 
-/* Write current localStorage value for key to Supabase (fire-and-forget). */
+/* Strip base64 image data from a product edits object before pushing to Supabase.
+   Only URL-based images (http/https/drive) are kept — base64 blobs stay local only. */
+function _cleanEditsForPush(raw) {
+  try {
+    const edits = JSON.parse(raw);
+    let stripped = false;
+    Object.values(edits).forEach(edit => {
+      if (edit.images) {
+        const clean = edit.images.filter(img => !String(img).startsWith('data:'));
+        if (clean.length !== edit.images.length) { edit.images = clean; stripped = true; }
+      }
+    });
+    return { value: JSON.stringify(edits), stripped };
+  } catch(e) { return { value: raw, stripped: false }; }
+}
+
+/* Write current localStorage value for key to Supabase (fire-and-forget).
+   For obv_prod_edits: base64 images are stripped so the payload stays small. */
 function sbPush(key) {
-  const value = localStorage.getItem(key);
+  let value = localStorage.getItem(key);
   if (value === null) return;
-  const kb = Math.round(value.length / 1024);
-  // Warn if payload contains raw base64 images (data: URLs) — too large for Supabase
-  if (value.includes('"data:image') && kb > 200) {
-    if (typeof window.sbPushError === 'function') window.sbPushError(key, 'too_large', kb);
-    return;
+  let stripped = false;
+  if (key === 'obv_prod_edits' || key === 'obv_prod_adds') {
+    const r = _cleanEditsForPush(value);
+    value = r.value; stripped = r.stripped;
   }
+  const kb = Math.round(value.length / 1024);
+  if (stripped && typeof window.sbPushError === 'function') window.sbPushError(key, 'stripped', kb);
   fetch(`${SB_URL}/rest/v1/kv_store`, {
     method: 'POST',
     headers: {

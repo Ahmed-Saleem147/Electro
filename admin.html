@@ -417,6 +417,16 @@ textarea{resize:vertical;min-height:70px}
             <span class="toggle-slider"></span>
           </label>
         </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)">
+          <div>
+            <div style="font-size:13px;font-weight:600">Show Only Products With Images</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:3px">ON by default: hides products that have no image. Turn OFF to show all products including those without photos.</div>
+          </div>
+          <label class="toggle-wrap">
+            <input type="checkbox" id="t_imgRequired" onchange="saveDisplaySettings()">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
       </div>
       <div class="settings-section">
         <h3><i class="fas fa-lock" style="color:var(--warn)"></i> Change Admin Password</h3>
@@ -689,10 +699,10 @@ let currentPage=1, orderPage=1;
 const PAGE_SIZE=25;
 let editingId=null, editingDealId=null;
 
-// Show a clear error when sbPush is blocked by large base64 image data
+// Feedback when sbPush strips or fails
 window.sbPushError = function(key, reason, kb) {
-  if (reason === 'too_large') {
-    toast('⚠️ Images too large to sync ('+kb+'KB). Use Google Drive links instead of uploading files — customers won\'t see uploaded images until you switch to Drive URLs.','err');
+  if (reason === 'stripped') {
+    toast('Note: uploaded (file) images are local only. Paste a Google Drive link to make images visible to customers.','info');
   }
 };
 
@@ -1490,14 +1500,16 @@ function loadDisplaySettings(){
   document.getElementById('t_flashSale').checked=localStorage.getItem('obv_flashSale')==='on';
   document.getElementById('t_badges').checked=localStorage.getItem('obv_badges')==='on';
   document.getElementById('t_freeDelivery').checked=localStorage.getItem('obv_freeDelivery')!=='off';
+  document.getElementById('t_imgRequired').checked=localStorage.getItem('obv_img_required')==='on';
 }
 function saveDisplaySettings(){
-  const prev={flashSale:localStorage.getItem('obv_flashSale'),badges:localStorage.getItem('obv_badges'),freeDelivery:localStorage.getItem('obv_freeDelivery')};
+  const prev={flashSale:localStorage.getItem('obv_flashSale'),badges:localStorage.getItem('obv_badges'),freeDelivery:localStorage.getItem('obv_freeDelivery'),imgRequired:localStorage.getItem('obv_img_required')};
   localStorage.setItem('obv_flashSale',document.getElementById('t_flashSale').checked?'on':'off');
   localStorage.setItem('obv_badges',document.getElementById('t_badges').checked?'on':'off');
   localStorage.setItem('obv_freeDelivery',document.getElementById('t_freeDelivery').checked?'on':'off');
-  sbPush('obv_flashSale');sbPush('obv_badges');sbPush('obv_freeDelivery');
-  logHistory({type:'display',label:'Display settings changed',undoData:prev});
+  localStorage.setItem('obv_img_required',document.getElementById('t_imgRequired').checked?'on':'off');
+  sbPush('obv_flashSale');sbPush('obv_badges');sbPush('obv_freeDelivery');sbPush('obv_img_required');
+  try{logHistory({type:'display',label:'Display settings changed',undoData:prev});}catch(e){}
   toast('Display settings saved!','ok');
 }
 function saveSettings(){

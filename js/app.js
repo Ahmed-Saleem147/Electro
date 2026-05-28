@@ -56,9 +56,11 @@ function applyOverrides() {
     }
     brandAdds.forEach(b => { if (!BRANDS.some(x => x.id === b.id)) BRANDS.push(b); });
   } catch(e) {}
-  // Only show products that have at least one image
-  for (let i = PRODUCTS.length - 1; i >= 0; i--) {
-    if (!(PRODUCTS[i].images && PRODUCTS[i].images.length)) PRODUCTS.splice(i, 1);
+  // Hide products without images (default ON; admin can turn off in Settings)
+  if (localStorage.getItem('obv_img_required') !== 'off') {
+    for (let i = PRODUCTS.length - 1; i >= 0; i--) {
+      if (!(PRODUCTS[i].images && PRODUCTS[i].images.length)) PRODUCTS.splice(i, 1);
+    }
   }
   // Apply store settings (WhatsApp, phone, store name)
   try {

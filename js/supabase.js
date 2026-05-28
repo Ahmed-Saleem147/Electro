@@ -24,6 +24,12 @@ async function sbSync() {
 function sbPush(key) {
   const value = localStorage.getItem(key);
   if (value === null) return;
+  const kb = Math.round(value.length / 1024);
+  // Warn if payload contains raw base64 images (data: URLs) — too large for Supabase
+  if (value.includes('"data:image') && kb > 200) {
+    if (typeof window.sbPushError === 'function') window.sbPushError(key, 'too_large', kb);
+    return;
+  }
   fetch(`${SB_URL}/rest/v1/kv_store`, {
     method: 'POST',
     headers: {
@@ -33,6 +39,8 @@ function sbPush(key) {
       'Prefer': 'resolution=merge-duplicates'
     },
     body: JSON.stringify({ key, value })
+  }).then(r => {
+    if (!r.ok && typeof window.sbPushError === 'function') window.sbPushError(key, r.status, kb);
   }).catch(() => {});
 }
 

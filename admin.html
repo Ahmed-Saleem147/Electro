@@ -689,6 +689,13 @@ let currentPage=1, orderPage=1;
 const PAGE_SIZE=25;
 let editingId=null, editingDealId=null;
 
+// Show a clear error when sbPush is blocked by large base64 image data
+window.sbPushError = function(key, reason, kb) {
+  if (reason === 'too_large') {
+    toast('⚠️ Images too large to sync ('+kb+'KB). Use Google Drive links instead of uploading files — customers won\'t see uploaded images until you switch to Drive URLs.','err');
+  }
+};
+
 async function init() {
   await (window.obvSyncPromise || Promise.resolve());
   // Clear stale deletions/edits when data.js is redeployed with a new version

@@ -1500,7 +1500,8 @@ function saveSettings(){
     storeEmail:document.getElementById('s_email').value.trim(),
     currency:document.getElementById('s_currency').value.trim()
   });
-  toast('Settings saved!','ok');
+  sbPush('obv_settings');
+  toast('Settings saved & published!','ok');
 }
 function changePassword(){
   const cur=document.getElementById('s_curPass').value;

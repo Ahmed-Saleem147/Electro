@@ -60,6 +60,21 @@ function applyOverrides() {
   for (let i = PRODUCTS.length - 1; i >= 0; i--) {
     if (!(PRODUCTS[i].images && PRODUCTS[i].images.length)) PRODUCTS.splice(i, 1);
   }
+  // Apply store settings (WhatsApp, phone, store name)
+  try {
+    const s = JSON.parse(localStorage.getItem('obv_settings') || '{}');
+    if (s.storePhone) {
+      document.querySelectorAll('[data-store-phone]').forEach(el => el.textContent = s.storePhone);
+      document.querySelectorAll('a[href^="tel:"]').forEach(el => { el.href = 'tel:' + s.storePhone.replace(/\s/g,''); });
+    }
+    if (s.storeWhatsapp || s.storePhone) {
+      const wa = (s.storeWhatsapp || s.storePhone).replace(/\D/g,'');
+      document.querySelectorAll('a.whatsapp-float, a[href*="wa.me"]').forEach(el => { el.href = 'https://wa.me/' + wa; });
+    }
+    if (s.storeName) {
+      document.querySelectorAll('[data-store-name]').forEach(el => el.textContent = s.storeName);
+    }
+  } catch(e) {}
 }
 
 /* ── Format description: each line becomes a bullet point ── */

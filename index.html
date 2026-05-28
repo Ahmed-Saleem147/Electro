@@ -278,12 +278,12 @@
       <p class="modal-sub">Sign in to your account</p>
       <form class="auth-form" id="loginForm">
         <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="Enter your email" required />
+          <label for="login_email">Email Address</label>
+          <input type="email" id="login_email" name="email" placeholder="Enter your email" required />
         </div>
         <div class="form-group">
-          <label>Password</label>
-          <input type="password" placeholder="Enter your password" required />
+          <label for="login_password">Password</label>
+          <input type="password" id="login_password" name="password" placeholder="Enter your password" required />
         </div>
         <div class="form-row">
           <label class="checkbox-label"><input type="checkbox" /> Remember me</label>
@@ -305,25 +305,25 @@
       <form class="auth-form" id="registerForm">
         <div class="form-row-2">
           <div class="form-group">
-            <label>First Name</label>
-            <input type="text" placeholder="John" required />
+            <label for="reg_fname">First Name</label>
+            <input type="text" id="reg_fname" name="first_name" placeholder="John" required />
           </div>
           <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" placeholder="Doe" required />
+            <label for="reg_lname">Last Name</label>
+            <input type="text" id="reg_lname" name="last_name" placeholder="Doe" required />
           </div>
         </div>
         <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="Enter your email" required />
+          <label for="reg_email">Email Address</label>
+          <input type="email" id="reg_email" name="email" placeholder="Enter your email" required />
         </div>
         <div class="form-group">
-          <label>Phone Number</label>
-          <input type="tel" placeholder="+233 XX XXX XXXX" />
+          <label for="reg_phone">Phone Number</label>
+          <input type="tel" id="reg_phone" name="phone" placeholder="+233 XX XXX XXXX" />
         </div>
         <div class="form-group">
-          <label>Password</label>
-          <input type="password" placeholder="Create a strong password" required />
+          <label for="reg_password">Password</label>
+          <input type="password" id="reg_password" name="password" placeholder="Create a strong password" required />
         </div>
         <button type="submit" class="btn-primary btn-block">Create Account</button>
       </form>
@@ -467,17 +467,17 @@
         <div class="countdown" id="countdown">
           <div class="count-unit">
             <span id="countHours">08</span>
-            <label>Hours</label>
+            <span class="count-label">Hours</span>
           </div>
           <div class="count-sep">:</div>
           <div class="count-unit">
             <span id="countMins">45</span>
-            <label>Minutes</label>
+            <span class="count-label">Minutes</span>
           </div>
           <div class="count-sep">:</div>
           <div class="count-unit">
             <span id="countSecs">30</span>
-            <label>Seconds</label>
+            <span class="count-label">Seconds</span>
           </div>
         </div>
       </div>
@@ -641,7 +641,7 @@
       </div>
       <form class="newsletter-form" id="newsletterForm">
         <div class="newsletter-input-wrap">
-          <input type="email" placeholder="Enter your email address" required />
+          <input type="email" id="newsletter_email" name="email" placeholder="Enter your email address" required />
           <button type="submit" class="btn-primary">Subscribe <i class="fas fa-paper-plane"></i></button>
         </div>
         <p class="newsletter-legal">By subscribing you agree to our <a href="contact.html">Privacy Policy</a>. No spam – ever.</p>

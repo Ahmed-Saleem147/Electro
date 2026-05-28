@@ -6,6 +6,9 @@
 /* Hide free delivery banner instantly before JS runs */
 html[data-no-delivery] .free-delivery-banner { display: none !important; }
 
+/* Accessible visually-hidden utility */
+.sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+
 /* ── Variables ── */
 :root {
   --primary: #1d4ed8;
@@ -987,7 +990,7 @@ input, select, textarea { font-family: inherit; }
   font-size: 24px; font-weight: 800; color: #fff;
   font-family: var(--font-heading);
 }
-.count-unit label {
+.count-unit .count-label {
   font-size: 10px; font-weight: 600; letter-spacing: 0.5px;
   text-transform: uppercase; color: rgba(255,255,255,0.55);
   margin-top: 5px; display: block;

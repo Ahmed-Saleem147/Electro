@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="canonical" href="https://www.orbivagh.com/shop.html">
+  <link rel="canonical" href="https://orbivagh.com/shop.html">
+  <meta name="description" content="Shop premium electronics in Ghana — Samsung, TCL, Nasco & more. Televisions, Air Conditioners, Refrigerators, Audio Devices and small appliances at the best prices.">
   <script>if(localStorage.getItem('obv_freeDelivery')==='off')document.documentElement.setAttribute('data-no-delivery','');</script>
   <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,13 +38,14 @@
     <div class="search-bar" id="searchBar">
       <div class="search-input-wrap">
         <select class="search-category" id="searchCategory">
-          <option>All Categories</option>
-          <option>Televisions</option>
-          <option>Air Conditioners</option>
-          <option>Refrigerators</option>
-          <option>Washing Machines</option>
-          <option>Kitchen Appliances</option>
-          <option>Small Appliances</option>
+          <option value="">All Categories</option>
+          <option value="tv">Televisions</option>
+          <option value="ac">Air Conditioners</option>
+          <option value="fridge">Refrigerators</option>
+          <option value="laundry">Washing Machines</option>
+          <option value="kitchen">Kitchen Appliances</option>
+          <option value="audio">Audio Devices</option>
+          <option value="small">Small Appliances</option>
         </select>
         <input type="text" class="search-input" id="searchInput" placeholder="Search for products, brands..." />
         <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
@@ -333,6 +335,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   initShopPage();
   initMegaBackdrop();
+
+  // Make search category dropdown navigate immediately when changed without typing
+  const sc = document.getElementById('searchCategory');
+  if (sc) sc.addEventListener('change', () => {
+    const q = document.getElementById('searchInput')?.value.trim() || '';
+    if (sc.value) window.location.href = `shop.html?cat=${sc.value}${q ? '&q=' + encodeURIComponent(q) : ''}`;
+  });
 
   // Free delivery toggle
   if (localStorage.getItem('obv_freeDelivery') === 'off') {

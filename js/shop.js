@@ -24,13 +24,17 @@ const SUB_KEYWORDS = {
   double: ['double door','double-door'],
   front:  ['front load','front-load','front loader'],
   top:    ['top load','top-load','top loader'],
-  combo:  ['washer-dryer','washer dryer']
+  combo:  ['washer-dryer','washer dryer'],
+  soundbar: ['soundbar','sound bar'],
+  tower:    ['sound tower'],
+  earbuds:  ['flybuds','earbuds','earbud','tws'],
 };
 const SUB_TITLES = {
   uhd:'UHD / 4K',qled:'QLED',oled:'OLED',miniled:'Mini-LED',smart:'Smart',
   split:'Split',window:'Window',portable:'Portable',inverter:'Inverter',central:'Central',
   single:'Single Door',double:'Double Door',side:'Side-by-Side',french:'French Door',mini:'Mini',
-  front:'Front Load',top:'Top Load',dryer:'Dryer',combo:'Washer-Dryer Combo'
+  front:'Front Load',top:'Top Load',dryer:'Dryer',combo:'Washer-Dryer Combo',
+  soundbar:'Soundbars',tower:'Sound Towers',earbuds:'Earbuds & TWS'
 };
 function applySubFilter(products, sub) {
   if (!sub) return products;
@@ -50,13 +54,13 @@ function initShopPage() {
 
   // Apply filters from URL
   if (cat)    filtered = filtered.filter(p => p.category === cat);
-  if (brand)  filtered = filtered.filter(p => p.brandId === brand);
+  if (brand)  filtered = filtered.filter(p => p.brandId === brand || p.brand.toLowerCase() === brand.toLowerCase());
   if (q)      filtered = filtered.filter(p => p.name.toLowerCase().includes(q.toLowerCase()) || p.brand.toLowerCase().includes(q.toLowerCase()));
   if (sub)    filtered = applySubFilter(filtered, sub);
   if (filter === 'deals' || filter === 'flash') filtered = filtered.filter(p => p.flashSale || p.discount >= 25);
   if (filter === 'clearance') filtered = filtered.filter(p => p.discount >= 30);
 
-  // Admin-added products (obv_prod_adds) always float to the top
+  // Admin-added products float to top
   const addedIds = new Set(
     JSON.parse(localStorage.getItem('obv_prod_adds') || '[]').map(p => String(p.id))
   );
@@ -69,7 +73,7 @@ function initShopPage() {
   }
 
   renderShopGrid(filtered);
-  setupShopFilters(filtered, sub);
+  setupShopFilters(cat, brand, q, sub);
   updateResultCount(filtered.length);
 
   // Set page title
@@ -131,54 +135,55 @@ function splitProductsBelowSidebar() {
   cards.slice(cardsAlongside).forEach(card => gridFull.appendChild(card));
 }
 
-function setupShopFilters(initialProducts, sub) {
+function setupShopFilters(urlCat, urlBrand, urlQ, sub) {
   const sortSelect = document.getElementById('shopSort');
   const priceRange = document.getElementById('priceRange');
   const priceLabel = document.getElementById('priceLabelValue');
-  const priceMax   = document.getElementById('priceLabelMax');
 
-  let currentProducts = [...PRODUCTS];
-  const { cat, brand, q } = getUrlParams();
-  if (cat)   currentProducts = currentProducts.filter(p => p.category === cat);
-  if (brand) currentProducts = currentProducts.filter(p => p.brandId === brand);
-  if (q)     currentProducts = currentProducts.filter(p => p.name.toLowerCase().includes(q.toLowerCase()));
-  if (sub)   currentProducts = applySubFilter(currentProducts, sub);
+  // Base pool: all products, only non-sidebar URL filters applied (text search, sub-category)
+  // Sidebar checkboxes (category, brand) work on this full pool — so unchecking never breaks results
+  let baseProducts = [...PRODUCTS];
+  if (urlQ) baseProducts = baseProducts.filter(p =>
+    p.name.toLowerCase().includes(urlQ.toLowerCase()) ||
+    p.brand.toLowerCase().includes(urlQ.toLowerCase())
+  );
+  if (sub) baseProducts = applySubFilter(baseProducts, sub);
 
-  // Set price range max dynamically from actual product prices
-  if (priceRange && currentProducts.length) {
-    const maxPrice = Math.max(...currentProducts.map(p => p.price));
+  // Set price range max from base products
+  if (priceRange && baseProducts.length) {
+    const maxPrice = Math.max(...baseProducts.map(p => p.price));
     const roundedMax = Math.ceil(maxPrice / 1000) * 1000;
     priceRange.max   = roundedMax;
     priceRange.value = roundedMax;
     if (priceLabel) priceLabel.textContent = fmt(roundedMax);
-    if (priceMax)   priceMax.textContent   = fmt(roundedMax);
-    // Also update the static label in the sidebar
-    const priceLabelMin = document.querySelector('.price-labels span:last-child');
-    if (priceLabelMin) priceLabelMin.textContent = fmt(roundedMax);
+    const lastPriceLabel = document.querySelector('.price-labels span:last-child');
+    if (lastPriceLabel) lastPriceLabel.textContent = fmt(roundedMax);
   }
 
   function applyFilters() {
-    let filtered = [...currentProducts];
+    let filtered = [...baseProducts];
 
     // Price filter
     if (priceRange) {
-      const maxPrice = parseInt(priceRange.value);
-      filtered = filtered.filter(p => p.price <= maxPrice);
+      const maxVal = parseInt(priceRange.value);
+      filtered = filtered.filter(p => p.price <= maxVal);
     }
 
-    // Category checkboxes
+    // Category checkboxes — source of truth (not URL)
     const catChecks = [...document.querySelectorAll('.cat-filter-check:checked')].map(c => c.value);
     if (catChecks.length) filtered = filtered.filter(p => catChecks.includes(p.category));
 
-    // Brand checkboxes
+    // Brand checkboxes — source of truth (not URL)
     const brandChecks = [...document.querySelectorAll('.brand-filter-check:checked')].map(b => b.value);
-    if (brandChecks.length) filtered = filtered.filter(p => brandChecks.includes(p.brandId));
+    if (brandChecks.length) filtered = filtered.filter(p =>
+      brandChecks.includes(p.brandId) || brandChecks.includes(p.brand?.toLowerCase())
+    );
 
     // Rating filter
     const minRating = parseFloat(document.querySelector('input[name="rating"]:checked')?.value || 0);
     if (minRating) filtered = filtered.filter(p => p.rating >= minRating);
 
-    // Sort — newest = products added via admin come first (obv_prod_adds), then by index
+    // Sort
     if (sortSelect) {
       const adds = JSON.parse(localStorage.getItem('obv_prod_adds') || '[]');
       const addedIds = new Set(adds.map(p => String(p.id)));

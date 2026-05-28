@@ -542,19 +542,18 @@ function initSearch() {
     if (!e.target.closest('#searchBar')) suggestions.classList.remove('active');
   });
 
-  if (btn) {
-    btn.addEventListener('click', () => {
-      const q = input.value.trim();
-      if (q) window.location.href = `shop.html?q=${encodeURIComponent(q)}`;
-    });
+  function doSearch() {
+    const q = input.value.trim();
+    const cat = document.getElementById('searchCategory')?.value || '';
+    if (!q && !cat) return;
+    let url = 'shop.html?';
+    if (q) url += `q=${encodeURIComponent(q)}`;
+    if (cat) url += `${q ? '&' : ''}cat=${encodeURIComponent(cat)}`;
+    window.location.href = url;
   }
 
-  input.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-      const q = input.value.trim();
-      if (q) window.location.href = `shop.html?q=${encodeURIComponent(q)}`;
-    }
-  });
+  if (btn) btn.addEventListener('click', doSearch);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
 }
 
 function handleSearchSelect(type, id, text) {

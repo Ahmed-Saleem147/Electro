@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="canonical" href="https://www.orbivagh.com/index.html">
+  <link rel="canonical" href="https://orbivagh.com/">
+  <meta name="description" content="Orbiva Technologies — Ghana's premium electronics store. Shop Samsung, TCL, Nasco & Midea TVs, Air Conditioners, Refrigerators, Audio Devices and more. Fast delivery across Ghana.">
   <script>if(localStorage.getItem('obv_freeDelivery')==='off')document.documentElement.setAttribute('data-no-delivery','');</script>
   <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orbiva Technologies – Premium Electronics Store</title>
+  <title>Orbiva Technologies – Premium Electronics Store in Ghana</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,14 +48,14 @@
     <div class="search-bar" id="searchBar">
       <div class="search-input-wrap">
         <select class="search-category" id="searchCategory">
-          <option>All Categories</option>
-          <option>Televisions</option>
-          <option>Air Conditioners</option>
-          <option>Refrigerators</option>
-          <option>Washing Machines</option>
-          <option>Kitchen Appliances</option>
-          <option>Small Appliances</option>
-          <option>Mobile &amp; Tablets</option>
+          <option value="">All Categories</option>
+          <option value="tv">Televisions</option>
+          <option value="ac">Air Conditioners</option>
+          <option value="fridge">Refrigerators</option>
+          <option value="laundry">Washing Machines</option>
+          <option value="kitchen">Kitchen Appliances</option>
+          <option value="audio">Audio Devices</option>
+          <option value="small">Small Appliances</option>
         </select>
         <input type="text" class="search-input" id="searchInput" placeholder="Search for products, brands..." />
         <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
@@ -147,6 +148,15 @@
                 </ul>
               </div>
               <div class="mega-col">
+                <h4><i class="fas fa-music"></i> Audio Devices</h4>
+                <ul>
+                  <li><a href="shop.html?cat=audio&sub=soundbar">Soundbars</a></li>
+                  <li><a href="shop.html?cat=audio&sub=tower">Sound Towers</a></li>
+                  <li><a href="shop.html?cat=audio&sub=earbuds">Earbuds & TWS</a></li>
+                  <li><a href="shop.html?cat=audio">All Audio</a></li>
+                </ul>
+              </div>
+              <div class="mega-col">
                 <h4><i class="fas fa-fan"></i> Small Appliances</h4>
                 <ul>
                   <li><a href="shop.html?cat=small">Fans</a></li>
@@ -154,16 +164,6 @@
                   <li><a href="shop.html?cat=small">Water Dispensers</a></li>
                   <li><a href="shop.html?cat=small">Air Coolers</a></li>
                   <li><a href="shop.html?cat=small">Extension Boards</a></li>
-                </ul>
-              </div>
-              <div class="mega-col">
-                <h4><i class="fas fa-mobile-alt"></i> Mobile & Tablets</h4>
-                <ul>
-                  <li><a href="shop.html?cat=phones">Samsung Phones</a></li>
-                  <li><a href="shop.html?cat=phones">TCL Phones</a></li>
-                  <li><a href="shop.html?cat=phones">Galaxy Tablets</a></li>
-                  <li><a href="shop.html?cat=phones">Galaxy Watches</a></li>
-                  <li><a href="shop.html?cat=phones">Accessories</a></li>
                 </ul>
               </div>
               <div class="mega-col mega-col-banner">
@@ -591,11 +591,11 @@
 <section class="section three-promo-section">
   <div class="container">
     <div class="three-promo-grid">
-      <div class="three-promo-card" style="background: linear-gradient(135deg, #1e3a5f, #2563eb)">
-        <i class="fas fa-fan"></i>
-        <h3>Small Appliances</h3>
-        <p>Fans, water heaters, dispensers & air coolers from GH₵ 249</p>
-        <a href="shop.html?cat=small">Shop Now</a>
+      <div class="three-promo-card" style="background: linear-gradient(135deg, #6d28d9, #a78bfa)">
+        <i class="fas fa-music"></i>
+        <h3>Audio Devices</h3>
+        <p>Soundbars, sound towers & wireless earbuds from top brands</p>
+        <a href="shop.html?cat=audio">Shop Audio</a>
       </div>
       <div class="three-promo-card" style="background: linear-gradient(135deg, #1a2e1a, #16a34a)">
         <i class="fas fa-blender"></i>
@@ -603,10 +603,10 @@
         <p>Microwaves, blenders, ovens & more for modern kitchens</p>
         <a href="shop.html?cat=kitchen">Shop Kitchen</a>
       </div>
-      <div class="three-promo-card" style="background: linear-gradient(135deg, #2e1a1a, #dc2626)">
+      <div class="three-promo-card" style="background: linear-gradient(135deg, #1e3a5f, #2563eb)">
         <i class="fas fa-fan"></i>
         <h3>Small Appliances</h3>
-        <p>Fans, irons, vacuum cleaners & personal care gadgets</p>
+        <p>Fans, water heaters, dispensers & personal care gadgets</p>
         <a href="shop.html?cat=small">Shop Appliances</a>
       </div>
     </div>
@@ -682,6 +682,7 @@
         <li><a href="shop.html?cat=fridge">Refrigerators</a></li>
         <li><a href="shop.html?cat=laundry">Washing Machines</a></li>
         <li><a href="shop.html?cat=kitchen">Kitchen Appliances</a></li>
+        <li><a href="shop.html?cat=audio">Audio Devices</a></li>
         <li><a href="shop.html?cat=small">Small Appliances</a></li>
       </ul>
     </div>

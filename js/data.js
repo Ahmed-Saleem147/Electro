@@ -72,7 +72,7 @@ const BRANDS = [
   {
     "id": "nasco",
     "name": "Nasco",
-    "logo": "",
+    "logo": "https://cdn.ghanafa.org/2023/05/NASCO.png",
     "color": "#e31e25",
     "products": 108
   },

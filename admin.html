@@ -322,7 +322,7 @@ textarea{resize:vertical;min-height:70px}
           <option value="">All Categories</option>
           <option value="tv">Televisions</option><option value="ac">Air Conditioners</option>
           <option value="fridge">Refrigerators</option><option value="laundry">Washing Machines</option>
-          <option value="kitchen">Kitchen</option><option value="small">Small Appliances</option>
+          <option value="kitchen">Kitchen</option><option value="audio">Sound System</option><option value="small">Other Appliances</option>
           <option value="phones">Phones</option><option value="tablets">Tablets</option><option value="commercial">Commercial</option>
         </select>
         <select class="filter-sel" id="filterBrand" onchange="filterProducts()">
@@ -490,7 +490,7 @@ textarea{resize:vertical;min-height:70px}
           <select id="f_category">
             <option value="tv">Televisions</option><option value="ac">Air Conditioners</option>
             <option value="fridge">Refrigerators</option><option value="laundry">Washing Machines</option>
-            <option value="kitchen">Kitchen</option><option value="small">Small Appliances</option>
+            <option value="kitchen">Kitchen</option><option value="audio">Sound System</option><option value="small">Other Appliances</option>
             <option value="phones">Phones</option><option value="tablets">Tablets</option><option value="commercial">Commercial</option>
           </select>
         </div>
@@ -601,7 +601,7 @@ textarea{resize:vertical;min-height:70px}
             <option value="all">All Categories</option>
             <option value="tv">Televisions</option><option value="ac">Air Conditioners</option>
             <option value="fridge">Refrigerators</option><option value="laundry">Washing Machines</option>
-            <option value="kitchen">Kitchen</option><option value="small">Small Appliances</option>
+            <option value="kitchen">Kitchen</option><option value="audio">Sound System</option><option value="small">Other Appliances</option>
             <option value="phones">Phones</option><option value="tablets">Tablets</option><option value="commercial">Commercial</option>
           </select>
         </div>
@@ -642,8 +642,8 @@ textarea{resize:vertical;min-height:70px}
 /* ── Constants ── */
 const ADMIN_PASS_KEY = 'obv_pass';
 const DEFAULT_PASS   = 'orbiva2026';
-const CAT_LABELS = {tv:'Televisions',ac:'Air Conditioners',fridge:'Refrigerators',laundry:'Washing Machines',kitchen:'Kitchen',small:'Small Appliances',phones:'Phones',tablets:'Tablets',commercial:'Commercial'};
-const CAT_CLASS  = {tv:'cat-tv',ac:'cat-ac',fridge:'cat-fridge',laundry:'cat-laundry',kitchen:'cat-kitchen',small:'cat-small',phones:'cat-phones',tablets:'cat-phones',commercial:'cat-commercial'};
+const CAT_LABELS = {tv:'Televisions',ac:'Air Conditioners',fridge:'Refrigerators',laundry:'Washing Machines',kitchen:'Kitchen',audio:'Sound System',small:'Other Appliances',phones:'Phones',tablets:'Tablets',commercial:'Commercial'};
+const CAT_CLASS  = {tv:'cat-tv',ac:'cat-ac',fridge:'cat-fridge',laundry:'cat-laundry',kitchen:'cat-kitchen',audio:'cat-small',small:'cat-small',phones:'cat-phones',tablets:'cat-phones',commercial:'cat-commercial'};
 const fmt = n => 'GH₵ ' + Number(n||0).toLocaleString();
 
 /* ── Storage helpers ── */
@@ -1185,7 +1185,7 @@ function saveProduct(stayOpen=false){
   if(!name||!price){toast('Name and price required','err');return;}
   const brand=document.getElementById('f_brand').value;
   const cat=document.getElementById('f_category').value;
-  const cIcons={tv:'📺',ac:'❄️',fridge:'🧊',laundry:'🫧',kitchen:'🍳',small:'⚡',phones:'📱',commercial:'🏭'};
+  const cIcons={tv:'📺',ac:'❄️',fridge:'🧊',laundry:'🫧',kitchen:'🍳',audio:'🔊',small:'⚡',phones:'📱',commercial:'🏭'};
   const op=parseFloat(document.getElementById('f_oldPrice').value)||null;
   const disc=op&&op>price?Math.round((op-price)/op*100):null;
   const specs={};
@@ -1291,7 +1291,7 @@ function exportProductsCSV(){
   const prods=baseProds.map(p=>edits[p.id]?Object.assign({},p,edits[p.id]):p);
   if(!prods.length){toast('No products to export','err');return;}
 
-  const CAT_NAMES_FULL={tv:'Televisions',ac:'Air Conditioners',fridge:'Refrigerators',laundry:'Washing Machines',kitchen:'Kitchen Appliances',small:'Small Appliances',accessories:'Accessories',phones:'Phones',tablets:'Tablets',commercial:'Commercial'};
+  const CAT_NAMES_FULL={tv:'Televisions',ac:'Air Conditioners',fridge:'Refrigerators',laundry:'Washing Machines',kitchen:'Kitchen Appliances',audio:'Sound System',small:'Other Appliances',accessories:'Accessories',phones:'Phones',tablets:'Tablets',commercial:'Commercial'};
 
   // Collect all spec keys across every product so each key gets its own column
   const specKeys=[];

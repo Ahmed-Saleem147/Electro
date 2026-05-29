@@ -395,6 +395,7 @@ function renderBrands() {
     samsung: 'img/samsung.webp',
     tcl:     'img/tcl.webp',
     midea:   'img/midea.webp',
+    nasco:   'https://cdn.ghanafa.org/2023/05/NASCO.png',
   };
   const brandFallback = {
     nasco: { text: 'NASCO', style: 'font-size:22px;font-weight:900;letter-spacing:2px;color:#003087;font-family:"Poppins",sans-serif' },

@@ -397,9 +397,7 @@ function renderBrands() {
     midea:   'img/midea.webp',
     nasco:   'https://cdn.ghanafa.org/2023/05/NASCO.png',
   };
-  const brandFallback = {
-    nasco: { text: 'NASCO', style: 'font-size:22px;font-weight:900;letter-spacing:2px;color:#003087;font-family:"Poppins",sans-serif' },
-  };
+  const brandFallback = {};
 
   grid.innerHTML = BRANDS.map((b, i) => {
     const logoSrc = brandLogos[b.id];

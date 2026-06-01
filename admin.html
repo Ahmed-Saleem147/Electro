@@ -918,7 +918,8 @@ function openOrderModal(id) {
     <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px">Items Ordered</div>
     <div class="order-items-list">${(o.items||[]).length
       ?(o.items).map(it=>`<div class="order-item-row">
-          <span style="font-weight:600">${escHtml(it.name||it)}</span>
+          <span style="font-weight:600">${escHtml(it.name||it)}${it.model?`<span style="display:block;font-size:11px;font-weight:700;color:var(--muted);margin-top:1px">SKU: ${escHtml(it.model)}${it.sku?` &nbsp;·&nbsp; ID: ${escHtml(it.sku)}`:''}</span>`:''}
+          </span>
           <span style="color:var(--muted)">Qty: ${it.qty||1}</span>
           <span style="font-weight:700;color:var(--primary)">${it.price?fmt(it.price*(it.qty||1)):'—'}</span>
         </div>`).join('')

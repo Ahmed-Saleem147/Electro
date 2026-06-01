@@ -313,7 +313,10 @@ function saveAndConfirmOrder(paymentMethod, paystackRef) {
   const region    = currentFulfillment === 'delivery' ? (document.getElementById('co_region')?.value || '') : '';
   const notes     = (document.getElementById('co_notes')?.value || '').trim();
   const total     = getDisplayTotal();
-  const itemsSnap = cart.map(i => ({ name: i.name, qty: i.qty || 1, price: i.price }));
+  const itemsSnap = cart.map(i => {
+    const prod = (typeof PRODUCTS !== 'undefined' ? PRODUCTS : []).find(p => p.id === i.id);
+    return { name: i.name, qty: i.qty || 1, price: i.price, sku: i.id, model: prod?.model || '' };
+  });
 
   const orders = JSON.parse(localStorage.getItem('obv_orders') || '[]');
   const maxId  = orders.length ? Math.max(...orders.map(o => o.id)) : 1000;

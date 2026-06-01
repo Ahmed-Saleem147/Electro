@@ -1013,7 +1013,7 @@ function filterProducts(){
   filtered=adminProds.filter(p=>{
     if(q&&!p.name.toLowerCase().includes(q)&&!(p.model||'').toLowerCase().includes(q)) return false;
     if(cat&&p.category!==cat) return false;
-    if(br&&p.brandId!==br) return false;
+    if(br&&p.brandId!==br&&(p.brand||'').toLowerCase()!==br.toLowerCase()) return false;
     const hasImg=p.images&&p.images[0];
     if(img==='noimg'&&hasImg) return false;
     if(img==='hasimg'&&!hasImg) return false;

@@ -747,6 +747,42 @@ function initMegaBackdrop() {
 /* ════════════════════════════════════════
    INIT ALL
 ════════════════════════════════════════ */
+/* ── Visit Tracker ── */
+async function trackVisit() {
+  if (sessionStorage.getItem('obv_v')) return;
+  sessionStorage.setItem('obv_v', '1');
+  try {
+    let geo = {};
+    try {
+      const gr = await fetch('https://ipapi.co/json/');
+      if (gr.ok) {
+        const gd = await gr.json();
+        geo = { country: gd.country_name || '', city: gd.city || '', ip: gd.ip || '' };
+      }
+    } catch(e) {}
+    const visit = {
+      t: new Date().toISOString(),
+      p: location.pathname.split('/').pop() || 'index.html',
+      country: geo.country || 'Unknown',
+      city: geo.city || '',
+      ip: geo.ip || ''
+    };
+    const h = { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}` };
+    const r = await fetch(`${SB_URL}/rest/v1/kv_store?key=eq.obv_visit_log`, { headers: h });
+    const rows = await r.json();
+    let log = [];
+    try { log = JSON.parse(rows[0]?.value || '[]'); } catch(e) {}
+    if (!Array.isArray(log)) log = [];
+    log.unshift(visit);
+    if (log.length > 500) log = log.slice(0, 500);
+    await fetch(`${SB_URL}/rest/v1/kv_store`, {
+      method: 'POST',
+      headers: { ...h, 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates' },
+      body: JSON.stringify({ key: 'obv_visit_log', value: JSON.stringify(log) })
+    });
+  } catch(e) {}
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   await Promise.race([window.obvSyncPromise || Promise.resolve(), new Promise(r => setTimeout(r, 3000))]);
   try { applyOverrides(); } catch(e) {}
@@ -781,6 +817,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       setTimeout(() => el.classList.add('animated'), i * 120);
     });
   }, 300);
+
+  try { trackVisit(); } catch(e) {}
+
 
   try {
     if (localStorage.getItem('obv_freeDelivery') === 'off') {

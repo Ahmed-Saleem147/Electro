@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="description" content="Checkout – Orbiva Technologies">
   <link rel="canonical" href="https://orbivagh.com/checkout.html">
-  <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+  <link rel="icon" type="image/jpeg" href="img/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkout – Orbiva Technologies</title>
   <link rel="stylesheet" href="css/style.css" />
@@ -18,7 +18,7 @@
 <header class="header" style="position:sticky;top:0" id="mainHeader">
   <div class="container header-inner">
     <a href="index.html" class="logo">
-      <img src="img/logo.jpeg" alt="Orbiva Technologies" class="logo-img">
+      <img src="img/logo.png" alt="Orbiva Technologies" class="logo-img">
     </a>
     <div style="display:flex;align-items:center;gap:20px;color:var(--text-muted);font-size:13px">
       <span><i class="fas fa-lock" style="color:var(--success)"></i> SSL Secured</span>
@@ -350,7 +350,7 @@ function showReceiptModal(order) {
 
   document.getElementById('receiptContent').innerHTML = `
     <div style="text-align:center;margin-bottom:24px">
-      <img src="img/logo.jpeg" style="height:48px;border-radius:8px;margin-bottom:10px">
+      <img src="img/logo.png" style="height:48px;border-radius:8px;margin-bottom:10px">
       <div style="font-size:11px;color:#64748b;letter-spacing:.5px;text-transform:uppercase">Order Receipt</div>
       <div style="font-size:22px;font-weight:800;color:#0f172a;margin:6px 0">Order #${order.id}</div>
       <span style="display:inline-block;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;background:${order.status==='confirmed'?'#dcfce7':'#fef3c7'};color:${statusColor}">${statusLabel}</span>

@@ -293,6 +293,7 @@ textarea{resize:vertical;min-height:70px}
           <option value="delivered">Delivered</option>
           <option value="cancelled">Cancelled</option>
         </select>
+        <button class="btn btn-outline btn-sm" id="clearOrderFiltersBtn" onclick="clearOrderFilters()" style="display:none"><i class="fas fa-times"></i> Clear</button>
         <span style="margin-left:auto;font-size:13px;color:var(--muted)" id="orderCountLabel"></span>
       </div>
       <div class="table-wrap">
@@ -340,6 +341,7 @@ textarea{resize:vertical;min-height:70px}
           <option value="">All Products</option>
           <option value="noimg">No Image</option><option value="hasimg">Has Image</option>
         </select>
+        <button class="btn btn-outline btn-sm" id="clearFiltersBtn" onclick="clearProductFilters()" style="display:none"><i class="fas fa-times"></i> Clear</button>
         <span style="margin-left:auto;font-size:13px;color:var(--muted)" id="countLabel"></span>
         <button class="btn btn-outline btn-sm" onclick="exportProductsCSV()" title="Download all products as CSV"><i class="fas fa-file-download"></i> Export CSV</button>
         <label class="btn btn-outline btn-sm" style="cursor:pointer" title="Upload edited CSV to update prices">
@@ -691,9 +693,9 @@ function showPage(page) {
   document.getElementById('topAddOrderBtn').style.display  = page==='orders'?'inline-flex':'none';
   document.getElementById('topAddDealBtn').style.display   = page==='deals'?'inline-flex':'none';
   if (page==='dashboard') renderDashboard();
-  if (page==='orders')    { filteredOrders=[...ORDERS].reverse(); renderOrdersTable(); }
+  if (page==='orders')    { document.getElementById('orderSearch').value=''; document.getElementById('orderStatusFilter').value=''; const ocb=document.getElementById('clearOrderFiltersBtn');if(ocb)ocb.style.display='none'; filteredOrders=[...ORDERS].reverse(); renderOrdersTable(); }
   if (page==='deals')     { populateDealBrandSelect(); renderDeals(); }
-  if (page==='products')  { populateFilterBrand(); filtered=[...adminProds]; renderTable(); }
+  if (page==='products')  { document.getElementById('searchBox').value=''; document.getElementById('filterCat').value=''; document.getElementById('filterImg').value=''; const pcb=document.getElementById('clearFiltersBtn');if(pcb)pcb.style.display='none'; populateFilterBrand(); filtered=[...adminProds]; renderTable(); }
   if (page==='images')    loadImages();
   if (page==='brands')    renderBrands();
   if (page==='history')   renderHistory();
@@ -855,10 +857,20 @@ function filterOrders() {
   const q  = document.getElementById('orderSearch').value.toLowerCase();
   const st = document.getElementById('orderStatusFilter').value;
   filteredOrders = [...ORDERS].reverse().filter(o=>{
-    if(q&&!(o.customerName||'').toLowerCase().includes(q)&&!(o.phone||'').includes(q)) return false;
+    if(q&&!(o.customerName||'').toLowerCase().includes(q)&&!(o.phone||'').includes(q)&&!String(o.id).includes(q)) return false;
     if(st&&o.status!==st) return false; return true;
   });
   orderPage=1; renderOrdersTable();
+  const active=q||st;
+  const btn=document.getElementById('clearOrderFiltersBtn');
+  if(btn) btn.style.display=active?'inline-flex':'none';
+}
+function clearOrderFilters(){
+  document.getElementById('orderSearch').value='';
+  document.getElementById('orderStatusFilter').value='';
+  const btn=document.getElementById('clearOrderFiltersBtn');
+  if(btn) btn.style.display='none';
+  filteredOrders=[...ORDERS].reverse();orderPage=1;renderOrdersTable();
 }
 
 function renderOrdersTable() {
@@ -1073,7 +1085,7 @@ function filterProducts(){
   const br=document.getElementById('filterBrand').value;
   const img=document.getElementById('filterImg').value;
   filtered=adminProds.filter(p=>{
-    if(q&&!p.name.toLowerCase().includes(q)&&!(p.model||'').toLowerCase().includes(q)) return false;
+    if(q&&!p.name.toLowerCase().includes(q)&&!(p.model||'').toLowerCase().includes(q)&&!(p.brand||'').toLowerCase().includes(q)&&!(p.id||'').toLowerCase().includes(q)) return false;
     if(cat&&p.category!==cat) return false;
     if(br&&p.brandId!==br&&(p.brand||'').toLowerCase()!==br.toLowerCase()) return false;
     const hasImg=p.images&&p.images[0];
@@ -1082,6 +1094,18 @@ function filterProducts(){
     return true;
   });
   currentPage=1;renderTable();
+  const active=q||cat||br||img;
+  const btn=document.getElementById('clearFiltersBtn');
+  if(btn) btn.style.display=active?'inline-flex':'none';
+}
+function clearProductFilters(){
+  document.getElementById('searchBox').value='';
+  document.getElementById('filterCat').value='';
+  document.getElementById('filterBrand').value='';
+  document.getElementById('filterImg').value='';
+  const btn=document.getElementById('clearFiltersBtn');
+  if(btn) btn.style.display='none';
+  filtered=[...adminProds];currentPage=1;renderTable();
 }
 function renderTable(){
   const start=(currentPage-1)*PAGE_SIZE,page=filtered.slice(start,start+PAGE_SIZE);

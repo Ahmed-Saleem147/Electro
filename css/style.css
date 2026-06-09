@@ -1027,12 +1027,12 @@ input, select, textarea { font-family: inherit; }
   font-size: 26px; margin-bottom: 8px; flex-shrink: 0;
 }
 .flash-product-img {
-  width: 64px; height: 64px;
+  width: 100%; height: 90px;
   object-fit: contain;
   border-radius: var(--radius-md);
   background: rgba(255,255,255,0.92);
   margin-bottom: 8px;
-  padding: 4px;
+  padding: 6px;
   display: block;
 }
 .flash-product-name { font-size: 12px; font-weight: 600; color: #fff; margin-bottom: 4px; line-height: 1.3; }
@@ -1070,12 +1070,27 @@ input, select, textarea { font-family: inherit; }
 .product-img-wrap {
   position: relative; overflow: hidden;
   background: var(--border-light);
-  aspect-ratio: 4/3;
+  aspect-ratio: 1/1;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
 .product-img-icon { font-size: 64px; }
-.product-img-photo { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
+.product-img-photo { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+
+/* ── Image loading spinner ── */
+.img-loading::after {
+  content: '';
+  position: absolute;
+  width: 28px; height: 28px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: img-spin 0.7s linear infinite;
+  z-index: 2;
+}
+@keyframes img-spin { to { transform: rotate(360deg); } }
+.img-loading .product-img-photo { opacity: 0; transition: opacity 0.3s; }
+.product-img-wrap:not(.img-loading) .product-img-photo { opacity: 1; }
 .modal-img-photo { width: 100%; height: 100%; object-fit: contain; }
 
 /* ── Zoom hint on product gallery image ── */
@@ -1754,16 +1769,52 @@ input, select, textarea { font-family: inherit; }
    MOBILE 2-COL CARD COMPACT — max-width: 599px
 ================================================================ */
 @media (max-width: 599px) {
-  .product-info { padding: 8px 10px 10px; }
+  /* Product cards */
+  .product-info { padding: 8px 8px 10px; }
   .product-name { font-size: 12px; -webkit-line-clamp: 2; }
-  .product-price { font-size: 15px; }
+  .product-price { font-size: 14px; }
   .product-old-price { font-size: 11px; }
-  .product-discount { font-size: 10px; padding: 2px 6px; }
+  .product-discount { font-size: 10px; padding: 2px 5px; }
   .product-desc, .product-spec-tags, .product-rating { display: none; }
   .product-cat-label { font-size: 10px; margin-bottom: 3px; }
-  .add-to-cart-btn { font-size: 11px; padding: 9px 6px; min-height: 36px; gap: 4px; }
-  .add-to-cart-btn i { font-size: 12px; }
-  .product-img-icon { font-size: 42px; }
+  .add-to-cart-btn { font-size: 11px; padding: 8px 4px; min-height: 34px; gap: 3px; }
+  .add-to-cart-btn i { font-size: 11px; }
+  .product-img-icon { font-size: 38px; }
+  .product-img-photo { padding: 6px; }
+  .product-img-wrap { aspect-ratio: 1/1; }
+
+  /* Grids — ensure 2 cols fit with no overflow */
+  .products-grid, #shopProductsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  /* Logo */
+  .logo-img { height: 42px; max-width: 130px; padding: 4px 8px; }
+
+  /* Trust strip — compact horizontal scroll */
+  .trust-inner { gap: 0; }
+  .trust-item { padding: 12px 14px; min-width: 140px; }
+  .trust-text strong { font-size: 12px; }
+  .trust-text span { font-size: 11px; }
+
+  /* Section headers */
+  .section-title { font-size: 17px; }
+
+  /* Promo cards */
+  .promo-grid, .three-promo-grid { grid-template-columns: 1fr; gap: 10px; padding: 0 8px; }
+
+  /* Flash sale cards */
+  .flash-product-card { width: 140px; }
+  .flash-product-img { width: 100%; height: 100px; object-fit: contain; }
+
+  /* Shop page header */
+  .shop-main-header { padding: 0 8px; }
+
+  /* Container padding */
+  .container { padding: 0 8px; }
+  .section-header { padding: 0 8px; }
 }
 
 /* ================================================================

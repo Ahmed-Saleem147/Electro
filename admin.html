@@ -1316,7 +1316,7 @@ function saveProduct(stayOpen=false){
       try{logHistory({type:'add',label:'Added: '+product.name,undoData:{productId:product.id}});}catch(e){}
     }
     if(!stayOpen)closeModal('productModal');
-    loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
+    loadProducts();filterProducts();renderDashboard();
   } catch(e){
     toast('Save failed: '+e.message,'err');
   }
@@ -1363,7 +1363,7 @@ function deleteAllKeepImages() {
   sbPush('obv_prod_dels'); sbPush('obv_prod_adds'); sbPush('obv_prod_edits');
   logHistory({type:'delete_all_keep_img', label:`Deleted all ${prods.length} products · saved ${mapped} SKU→image mappings`, undoData:{}});
   toast(`All products deleted. ${mapped} image${mapped!==1?'s':''} saved by SKU.`, 'ok');
-  loadProducts(); filtered=[...adminProds]; renderTable(); renderDashboard();
+  loadProducts(); filterProducts(); renderDashboard();
 }
 
 /* ── CSV Export / Import ── */
@@ -1482,7 +1482,7 @@ function importProductsCSV(input){
       }
       if(delsChanged){lsSet('obv_prod_dels',dels);sbPush('obv_prod_dels');}
       lsSet('obv_prod_edits',edits);sbPush('obv_prod_edits');
-      loadProducts();filtered=[...adminProds];renderTable();renderDashboard();
+      loadProducts();filterProducts();renderDashboard();
       const summary=[updated+' updated',restored?restored+' restored':'',imgMapped?imgMapped+' images mapped':'',skipped?skipped+' skipped':''].filter(Boolean).join(' · ');
       logHistory({type:'edit',label:'Bulk CSV update: '+summary,undoData:{}});
       toast(summary,'ok');
@@ -1563,7 +1563,7 @@ function autoMapFromLibrary(){
   lsSet('obv_sku_img_map',skuMap);
   lsSet('obv_prod_edits',edits);
   sbPush('obv_prod_edits');
-  loadProducts();filtered=[...adminProds];renderTable();renderDashboard();loadImages();
+  loadProducts();filterProducts();renderDashboard();loadImages();
   logHistory({type:'edit',label:'Auto-mapped '+matched+' products from image library by SKU',undoData:{}});
   const note=alreadyDone?' ('+alreadyDone+' already had images)':'';
   toast(matched+' product'+(matched!==1?'s':'')+' mapped & published to site!'+note,'ok');
@@ -1731,7 +1731,7 @@ function undoHistory(id){
   }
   lsSet('obv_history',hist.filter(h=>h.id!==id));
   toast('Undone!','ok');
-  loadProducts();filtered=[...adminProds];
+  loadProducts();filterProducts();
   renderHistory();renderDashboard();
 }
 function clearHistory(){lsSet('obv_history',[]);renderHistory();toast('History cleared','ok');}

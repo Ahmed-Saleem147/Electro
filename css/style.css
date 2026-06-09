@@ -904,32 +904,22 @@ input, select, textarea { font-family: inherit; }
 /* ================================================================
    CATEGORIES — auto-scrolling marquee
 ================================================================ */
-.categories-section { background: #fff; padding: 20px 0; overflow: hidden; }
-.categories-scroll {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 4px 16px 8px;
+.categories-section { background: #fff; padding: 20px 0; }
+.categories-marquee-wrap {
+  overflow: hidden;
+  width: 100%;
+  padding: 4px 0 8px;
 }
-.categories-scroll::-webkit-scrollbar { display: none; }
 .categories-grid {
   display: flex;
-  gap: 12px;
-  overflow: hidden;
-  padding: 4px 0 8px;
-  width: 100%;
+  gap: 16px;
+  flex-wrap: nowrap;
+  width: max-content;
+  padding: 4px 16px 8px;
 }
-.categories-grid::-webkit-scrollbar { display: none; }
-
 /* Marquee animation */
 .cat-marquee {
-  display: flex;
-  gap: 12px;
-  width: max-content;
-  animation: cat-scroll 22s linear infinite;
-  padding: 4px 0 8px;
+  animation: cat-scroll 24s linear infinite;
 }
 .cat-marquee:hover { animation-play-state: paused; }
 @keyframes cat-scroll {

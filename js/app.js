@@ -299,17 +299,18 @@ function renderCategories() {
   if (!grid) return;
   const countMap = {};
   PRODUCTS.forEach(p => { countMap[p.category] = (countMap[p.category] || 0) + 1; });
-  grid.innerHTML = CATEGORIES.map((c, i) => {
+  const cards = CATEGORIES.map(c => {
     const count = countMap[c.id] || 0;
     if (!count) return '';
-    return `
-    <div class="category-card reveal delay-${Math.min(i * 100, 500)}" onclick="window.location='shop.html?cat=${c.id}'">
+    return `<div class="category-card" onclick="window.location='shop.html?cat=${c.id}'">
       <div class="cat-icon" style="background:${c.bg};color:${c.color}"><i class="${c.icon}"></i></div>
       <div class="cat-name">${c.name}</div>
       <div class="cat-count">${count} Products</div>
     </div>`;
   }).join('');
-  triggerReveal();
+  // Duplicate for seamless infinite scroll
+  grid.innerHTML = cards + cards;
+  grid.classList.add('cat-marquee');
 }
 
 /* Flash Sale */

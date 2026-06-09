@@ -18,6 +18,14 @@ const CATEGORIES = [
     "bg": "linear-gradient(135deg,#1d4ed8,#3b82f6)"
   },
   {
+    "id": "audio",
+    "name": "Audio Devices",
+    "icon": "fas fa-music",
+    "count": 32,
+    "color": "#fff",
+    "bg": "linear-gradient(135deg,#6d28d9,#a78bfa)"
+  },
+  {
     "id": "ac",
     "name": "Air Conditioners",
     "icon": "fas fa-snowflake",
@@ -56,14 +64,6 @@ const CATEGORIES = [
     "count": 72,
     "color": "#fff",
     "bg": "linear-gradient(135deg,#be185d,#f472b6)"
-  },
-  {
-    "id": "audio",
-    "name": "Audio Devices",
-    "icon": "fas fa-music",
-    "count": 32,
-    "color": "#fff",
-    "bg": "linear-gradient(135deg,#6d28d9,#a78bfa)"
   }
 ];
 

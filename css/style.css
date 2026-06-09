@@ -905,23 +905,24 @@ input, select, textarea { font-family: inherit; }
    CATEGORIES — auto-scrolling marquee
 ================================================================ */
 .categories-section { background: #fff; padding: 20px 0; }
+
+/* Outer clip */
 .categories-marquee-wrap {
   overflow: hidden;
   width: 100%;
-  padding: 4px 0 8px;
 }
-.categories-grid {
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
+
+/* Single scrolling row — never wraps */
+.cat-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
   width: max-content;
-  padding: 4px 16px 8px;
+  gap: 12px;
+  padding: 8px 16px 12px;
+  animation: cat-scroll 26s linear infinite;
 }
-/* Marquee animation */
-.cat-marquee {
-  animation: cat-scroll 24s linear infinite;
-}
-.cat-marquee:hover { animation-play-state: paused; }
+.cat-track:hover { animation-play-state: paused; }
+
 @keyframes cat-scroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -1917,7 +1918,7 @@ input, select, textarea { font-family: inherit; }
   .product-img-icon { font-size: 88px; }
   .product-name { font-size: 14px; }
   .product-price { font-size: 18px; }
-  .categories-grid { display: grid; grid-template-columns: repeat(8,1fr); gap: 16px; padding: 0; overflow-x: unset; }
+  .cat-track { gap: 20px; padding: 8px 24px 12px; }
   .category-card { width: auto; padding: 24px 16px; }
   .cat-icon { width: 60px; height: 60px; font-size: 26px; }
   .cat-name { font-size: 13px; }

@@ -310,7 +310,6 @@ function renderCategories() {
   }).join('');
   // Duplicate for seamless infinite scroll
   grid.innerHTML = cards + cards;
-  grid.classList.add('cat-marquee');
 }
 
 /* Flash Sale */

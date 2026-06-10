@@ -929,12 +929,18 @@ function openOrderModal(id) {
     </div>
     <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px">Items Ordered</div>
     <div class="order-items-list">${(o.items||[]).length
-      ?(o.items).map(it=>`<div class="order-item-row">
-          <span style="font-weight:600">${escHtml(it.name||it)}${it.model?`<span style="display:block;font-size:11px;font-weight:700;color:var(--muted);margin-top:1px">SKU: ${escHtml(it.model)}${it.sku?` &nbsp;·&nbsp; ID: ${escHtml(it.sku)}`:''}</span>`:''}
+      ?(o.items).map(it=>{
+        let model=it.model||'', sku=it.sku||'';
+        if(!model){
+          const match=(typeof PRODUCTS!=='undefined'?PRODUCTS:[]).find(p=>p.name===it.name||(it.sku&&p.id===it.sku));
+          if(match){model=match.model||'';sku=sku||match.id||'';}
+        }
+        return `<div class="order-item-row">
+          <span style="font-weight:600">${escHtml(it.name||it)}${model?`<span style="display:block;font-size:11px;font-weight:700;color:var(--muted);margin-top:1px">SKU: ${escHtml(model)}${sku?` &nbsp;·&nbsp; ID: ${escHtml(sku)}`:''}</span>`:''}
           </span>
           <span style="color:var(--muted)">Qty: ${it.qty||1}</span>
           <span style="font-weight:700;color:var(--primary)">${it.price?fmt(it.price*(it.qty||1)):'—'}</span>
-        </div>`).join('')
+        </div>`;}).join('')
       :'<div class="order-item-row" style="color:var(--muted)">No items recorded</div>'}
     </div>
     <div style="display:flex;justify-content:space-between;background:#f8fafc;border-radius:8px;padding:13px 15px;margin-bottom:16px">

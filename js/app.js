@@ -154,6 +154,15 @@ function handleAddToCart(btn, productId) {
 
 /* ── Product Quick View / Detail ── */
 function openProduct(productId) {
+  // Show full-screen loading overlay
+  let ov = document.getElementById('pageLoadOverlay');
+  if (!ov) {
+    ov = document.createElement('div');
+    ov.id = 'pageLoadOverlay';
+    ov.innerHTML = '<div class="page-load-spinner"></div>';
+    document.body.appendChild(ov);
+  }
+  ov.style.display = 'flex';
   window.location.href = 'product.html?id=' + productId;
 }
 
@@ -827,5 +836,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     const flashEl = document.getElementById('flashSaleSection');
     if (flashEl) flashEl.style.display = localStorage.getItem('obv_flashSale') === 'on' ? '' : 'none';
+  } catch(e) {}
+
+  // Footer collapsible columns on mobile
+  try {
+    document.querySelectorAll('.footer-col h4').forEach(h4 => {
+      if (h4.closest('.footer-contact-col')) return;
+      h4.addEventListener('click', () => {
+        if (window.innerWidth >= 1024) return;
+        h4.classList.toggle('open');
+        const ul = h4.nextElementSibling;
+        if (ul) ul.classList.toggle('open');
+      });
+    });
+  } catch(e) {}
+
+  // Marquee: disable on wide screens where all categories fit
+  try {
+    const track = document.getElementById('categoriesGrid');
+    if (track) {
+      const check = () => {
+        if (window.innerWidth >= 900) {
+          track.style.animation = 'none';
+          track.style.transform = 'none';
+        } else {
+          track.style.animation = '';
+          track.style.transform = '';
+        }
+      };
+      check();
+      window.addEventListener('resize', check);
+    }
   } catch(e) {}
 });

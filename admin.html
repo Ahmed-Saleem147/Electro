@@ -320,6 +320,18 @@ textarea{resize:vertical;min-height:70px}
         </div>
         <span class="coming-soon-badge" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.85)"><i class="fas fa-credit-card"></i> Online Payments — Coming Soon</span>
       </div>
+      <!-- Flash Sale Product Picker -->
+      <div class="settings-section" style="margin-bottom:20px">
+        <h3><i class="fas fa-bolt" style="color:#f59e0b"></i> Flash Sale Products</h3>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:14px">Choose which products appear in the Flash Sale section. Mix any brand.</p>
+        <div style="display:flex;gap:8px;margin-bottom:12px">
+          <input type="text" id="flashSearchInput" placeholder="Search products to add..." style="flex:1" oninput="searchFlashProducts(this.value)">
+        </div>
+        <div id="flashSearchResults" style="max-height:200px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;margin-bottom:14px;display:none"></div>
+        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Selected Products (<span id="flashCount">0</span>)</div>
+        <div id="flashSelectedList" style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px"></div>
+        <button class="btn btn-primary" onclick="saveFlashProducts()"><i class="fas fa-save"></i> Save Flash Sale</button>
+      </div>
       <div id="dealsGrid" class="deals-grid"></div>
     </div>
 
@@ -444,15 +456,21 @@ textarea{resize:vertical;min-height:70px}
             <span class="toggle-slider"></span>
           </label>
         </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)">
-          <div>
-            <div style="font-size:13px;font-weight:600">Free Delivery Banner</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:3px">Show "Free delivery on orders above GH₵ 500" across the site</div>
+        <div style="padding:12px 0;border-bottom:1px solid var(--border)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+            <div>
+              <div style="font-size:13px;font-weight:600">Free Delivery Banner</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:3px">Show free delivery notice across the site</div>
+            </div>
+            <label class="toggle-wrap">
+              <input type="checkbox" id="t_freeDelivery" onchange="saveDisplaySettings()">
+              <span class="toggle-slider"></span>
+            </label>
           </div>
-          <label class="toggle-wrap">
-            <input type="checkbox" id="t_freeDelivery" onchange="saveDisplaySettings()">
-            <span class="toggle-slider"></span>
-          </label>
+          <div style="display:flex;gap:8px;align-items:center">
+            <input type="text" id="s_deliveryText" placeholder="Orders above GH₵ 500" style="flex:1;font-size:13px">
+            <button class="btn btn-outline btn-sm" onclick="saveDeliveryText()"><i class="fas fa-save"></i> Save Text</button>
+          </div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)">
           <div>
@@ -721,7 +739,7 @@ function showPage(page) {
   document.getElementById('topAddDealBtn').style.display   = page==='deals'?'inline-flex':'none';
   if (page==='dashboard') renderDashboard();
   if (page==='orders')    { document.getElementById('orderSearch').value=''; document.getElementById('orderStatusFilter').value=''; const ocb=document.getElementById('clearOrderFiltersBtn');if(ocb)ocb.style.display='none'; filteredOrders=[...ORDERS].reverse(); renderOrdersTable(); }
-  if (page==='deals')     { populateDealBrandSelect(); renderDeals(); }
+  if (page==='deals')     { populateDealBrandSelect(); renderDeals(); loadFlashPicker(); }
   if (page==='products')  { document.getElementById('searchBox').value=''; document.getElementById('filterCat').value=''; document.getElementById('filterImg').value=''; const pcb=document.getElementById('clearFiltersBtn');if(pcb)pcb.style.display='none'; populateFilterBrand(); filtered=[...adminProds]; renderTable(); }
   if (page==='images')    loadImages();
   if (page==='brands')    renderBrands();
@@ -1032,6 +1050,64 @@ function saveManualOrder() {
 /* ── Deals ── */
 const DTL={flash_sale:'Flash Sale',discount:'Category Discount',banner:'Promo Banner'};
 const DTC={flash_sale:'dt-flash',discount:'dt-discount',banner:'dt-banner'};
+/* ── Flash Sale Product Picker ── */
+let flashProds = [];
+function loadFlashPicker(){
+  flashProds = lsGet('obv_flash_prods', []);
+  renderFlashSelected();
+}
+function searchFlashProducts(q){
+  const res = document.getElementById('flashSearchResults');
+  if(!q.trim()){res.style.display='none';return;}
+  const matches = (typeof PRODUCTS!=='undefined'?PRODUCTS:[])
+    .filter(p => p.name.toLowerCase().includes(q.toLowerCase()) || (p.model||'').toLowerCase().includes(q.toLowerCase()) || (p.brand||'').toLowerCase().includes(q.toLowerCase()))
+    .slice(0,12);
+  if(!matches.length){res.style.display='block';res.innerHTML='<div style="padding:10px;color:var(--muted);font-size:13px">No products found</div>';return;}
+  res.style.display='block';
+  res.innerHTML = matches.map(p=>`
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;cursor:pointer;border-bottom:1px solid var(--border);font-size:13px" onclick="addFlashProduct('${p.id}')">
+      ${p.images&&p.images[0]?`<img src="${p.images[0]}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;background:#f1f5f9">`:'<div style="width:36px;height:36px;background:#f1f5f9;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px">'+p.icon+'</div>'}
+      <div style="flex:1;min-width:0"><div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escHtml(p.name)}</div><div style="font-size:11px;color:var(--muted)">${escHtml(p.brand)} · ${fmt(p.price)}</div></div>
+      <i class="fas fa-plus" style="color:var(--primary)"></i>
+    </div>`).join('');
+}
+function addFlashProduct(id){
+  if(flashProds.find(f=>f.id===id)){toast('Already in flash sale','info');return;}
+  const p=(typeof PRODUCTS!=='undefined'?PRODUCTS:[]).find(x=>x.id===id);
+  if(!p) return;
+  const discount = p.oldPrice ? Math.round((1-p.price/p.oldPrice)*100) : 10;
+  flashProds.push({id, discount});
+  renderFlashSelected();
+  document.getElementById('flashSearchInput').value='';
+  document.getElementById('flashSearchResults').style.display='none';
+}
+function removeFlashProduct(id){ flashProds=flashProds.filter(f=>f.id!==id); renderFlashSelected(); }
+function renderFlashSelected(){
+  const el=document.getElementById('flashSelectedList');
+  const cnt=document.getElementById('flashCount');
+  if(cnt) cnt.textContent=flashProds.length;
+  if(!el) return;
+  if(!flashProds.length){el.innerHTML='<div style="font-size:13px;color:var(--muted);padding:8px 0">No products selected. Search above to add products from any brand.</div>';return;}
+  el.innerHTML=flashProds.map(fp=>{
+    const p=(typeof PRODUCTS!=='undefined'?PRODUCTS:[]).find(x=>x.id===fp.id);
+    if(!p) return '';
+    return `<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bg);border-radius:8px;font-size:13px">
+      ${p.images&&p.images[0]?`<img src="${p.images[0]}" style="width:36px;height:36px;object-fit:contain;border-radius:4px;background:#fff">`:'<div style="font-size:20px">'+p.icon+'</div>'}
+      <div style="flex:1;min-width:0"><div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escHtml(p.name)}</div><div style="font-size:11px;color:var(--muted)">${escHtml(p.brand)} · ${fmt(p.price)}</div></div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)">
+        Discount: <input type="number" value="${fp.discount}" min="1" max="90" style="width:52px;padding:3px 6px;font-size:12px;border:1px solid var(--border);border-radius:4px" onchange="flashProds.find(f=>f.id==='${fp.id}').discount=parseInt(this.value)||10">%
+      </div>
+      <button onclick="removeFlashProduct('${fp.id}')" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:15px"><i class="fas fa-times"></i></button>
+    </div>`;
+  }).join('');
+}
+async function saveFlashProducts(){
+  lsSet('obv_flash_prods', flashProds);
+  const h={apikey:SB_KEY,Authorization:`Bearer ${SB_KEY}`};
+  await fetch(`${SB_URL}/rest/v1/kv_store`,{method:'POST',headers:{...h,'Content-Type':'application/json',Prefer:'resolution=merge-duplicates'},body:JSON.stringify({key:'obv_flash_prods',value:JSON.stringify(flashProds)})});
+  toast(`Flash sale saved — ${flashProds.length} products live!`,'ok');
+}
+
 function populateDealBrandSelect(selected=''){
   const sel=document.getElementById('d_brand');if(!sel)return;
   const allBrands=getAllBrands();
@@ -1669,6 +1745,14 @@ function loadDisplaySettings(){
   document.getElementById('t_badges').checked=localStorage.getItem('obv_badges')==='on';
   document.getElementById('t_freeDelivery').checked=localStorage.getItem('obv_freeDelivery')!=='off';
   document.getElementById('t_imgRequired').checked=localStorage.getItem('obv_img_required')==='on';
+  const dtEl=document.getElementById('s_deliveryText');
+  if(dtEl) dtEl.value=localStorage.getItem('obv_delivery_text')||'';
+}
+function saveDeliveryText(){
+  const txt=(document.getElementById('s_deliveryText')?.value||'').trim();
+  localStorage.setItem('obv_delivery_text', txt);
+  sbPush('obv_delivery_text');
+  toast('Free delivery text updated!','ok');
 }
 function saveDisplaySettings(){
   const prev={flashSale:localStorage.getItem('obv_flashSale'),badges:localStorage.getItem('obv_badges'),freeDelivery:localStorage.getItem('obv_freeDelivery'),imgRequired:localStorage.getItem('obv_img_required')};

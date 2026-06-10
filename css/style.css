@@ -912,20 +912,14 @@ input, select, textarea { font-family: inherit; }
   width: 100%;
 }
 
-/* Single scrolling row — never wraps */
+/* Single scrolling row — JS drives the scroll, no CSS animation needed */
 .cat-track {
   display: flex !important;
   flex-wrap: nowrap !important;
   width: max-content;
   gap: 12px;
   padding: 8px 16px 12px;
-  animation: cat-scroll 26s linear infinite;
-}
-.cat-track:hover { animation-play-state: paused; }
-
-@keyframes cat-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  will-change: transform;
 }
 
 .category-card {
@@ -1279,20 +1273,14 @@ input, select, textarea { font-family: inherit; }
 }
 .brands-grid::-webkit-scrollbar { display: none; }
 
-/* Marquee on mobile */
+/* JS-driven scroll */
 .brands-track {
   display: flex !important;
   flex-wrap: nowrap !important;
   width: max-content;
   gap: 12px;
   padding: 8px 16px 12px;
-  animation: cat-scroll 20s linear infinite;
-  overflow: visible;
-}
-.brands-track:hover { animation-play-state: paused; }
-@media (min-width: 900px) {
-  .brands-track { animation: none; transform: none; flex-wrap: wrap !important; width: auto; justify-content: center; }
-  .brands-marquee-wrap { overflow: visible; }
+  will-change: transform;
 }
 .brand-card {
   background: var(--bg-card);

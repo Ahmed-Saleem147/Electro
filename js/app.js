@@ -294,12 +294,39 @@ function openLightbox(src, name) {
 ════════════════════════════════════════ */
 
 /* Categories */
+/* Shared infinite card marquee — rotates DOM nodes, no duplication */
+function startCardMarquee(track, wrap, speed) {
+  if (!track || !wrap) return;
+  let offset = 0, paused = false, raf;
+  wrap.addEventListener('mouseenter', () => paused = true);
+  wrap.addEventListener('mouseleave', () => paused = false);
+  wrap.addEventListener('touchstart', () => paused = true, {passive:true});
+  wrap.addEventListener('touchend',   () => setTimeout(() => paused = false, 1200), {passive:true});
+  function tick() {
+    if (!paused) {
+      offset += speed;
+      const first = track.firstElementChild;
+      if (first) {
+        const gap = parseFloat(getComputedStyle(track).gap) || 12;
+        const cardW = first.offsetWidth + gap;
+        if (offset >= cardW) {
+          track.appendChild(first);   // move first card to end
+          offset -= cardW;            // compensate so nothing jumps
+        }
+      }
+      track.style.transform = `translateX(-${offset}px)`;
+    }
+    raf = requestAnimationFrame(tick);
+  }
+  raf = requestAnimationFrame(tick);
+}
+
 function renderCategories() {
   const grid = document.getElementById('categoriesGrid');
   if (!grid) return;
   const countMap = {};
   PRODUCTS.forEach(p => { countMap[p.category] = (countMap[p.category] || 0) + 1; });
-  const cards = CATEGORIES.map(c => {
+  grid.innerHTML = CATEGORIES.map(c => {
     const count = countMap[c.id] || 0;
     if (!count) return '';
     return `<div class="category-card" onclick="window.location='shop.html?cat=${c.id}'">
@@ -308,15 +335,20 @@ function renderCategories() {
       <div class="cat-count">${count} Products</div>
     </div>`;
   }).join('');
-  // Duplicate for seamless infinite scroll
-  grid.innerHTML = cards + cards;
+  startCardMarquee(grid, grid.parentElement, 0.6);
 }
 
 /* Flash Sale */
 function renderFlashProducts() {
   const grid = document.getElementById('flashProducts');
   if (!grid) return;
-  grid.innerHTML = FLASH_PRODUCTS.map(fp => {
+  // Use admin-selected products if available, else fall back to data.js defaults
+  let flashList = FLASH_PRODUCTS;
+  try {
+    const custom = JSON.parse(localStorage.getItem('obv_flash_prods') || 'null');
+    if (custom && custom.length) flashList = custom;
+  } catch(e) {}
+  grid.innerHTML = flashList.map(fp => {
     const p = PRODUCTS.find(x => x.id === fp.id);
     if (!p) return '';
     const imgHtml = p.images && p.images.length
@@ -399,7 +431,7 @@ function renderBrands() {
   };
   const brandFallback = {};
 
-  const cards = BRANDS.map(b => {
+  grid.innerHTML = BRANDS.map(b => {
     const logoSrc = brandLogos[b.id];
     const logoHtml = logoSrc
       ? `<img src="${logoSrc}" alt="${b.name}" class="brand-logo-img" onerror="this.onerror=null;this.style.display='none';this.nextSibling.style.display='block'">`
@@ -407,10 +439,7 @@ function renderBrands() {
     const textHtml = `<div style="font-size:20px;font-weight:800;color:var(--text-dark);${logoSrc ? 'display:none' : ''}">${b.name}</div>`;
     return `<div class="brand-card" onclick="window.location='shop.html?brand=${b.id}'">${logoHtml}${textHtml}</div>`;
   }).join('');
-
-  // Duplicate for seamless marquee on mobile
-  grid.innerHTML = cards + cards;
-  grid.classList.add('brands-track');
+  startCardMarquee(grid, grid.parentElement, 0.5);
 }
 
 /* Blog */
@@ -838,21 +867,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   } catch(e) {}
 
-  // Marquee: disable on wide screens where all categories fit
-  try {
-    const track = document.getElementById('categoriesGrid');
-    if (track) {
-      const check = () => {
-        if (window.innerWidth >= 900) {
-          track.style.animation = 'none';
-          track.style.transform = 'none';
-        } else {
-          track.style.animation = '';
-          track.style.transform = '';
-        }
-      };
-      check();
-      window.addEventListener('resize', check);
-    }
-  } catch(e) {}
 });

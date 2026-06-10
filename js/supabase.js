@@ -18,6 +18,7 @@ async function sbSync() {
     const rows = await res.json();
     rows.forEach(r => localStorage.setItem(r.key, r.value));
     applyBranding();
+    applyDeliveryText();
   } catch(e) {}
 }
 
@@ -75,6 +76,16 @@ function sbPush(key) {
   }).then(r => {
     if (!r.ok && typeof window.sbPushError === 'function') window.sbPushError(key, r.status, kb);
   }).catch(() => {});
+}
+
+function applyDeliveryText() {
+  try {
+    const txt = localStorage.getItem('obv_delivery_text');
+    if (!txt) return;
+    document.querySelectorAll('.free-delivery-banner span').forEach(el => {
+      el.textContent = txt;
+    });
+  } catch(e) {}
 }
 
 /* Kick off sync immediately so it's ready by DOMContentLoaded. */

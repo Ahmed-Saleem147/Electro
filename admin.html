@@ -932,7 +932,11 @@ function openOrderModal(id) {
       ?(o.items).map(it=>{
         let model=it.model||'', sku=it.sku||'';
         if(!model){
-          const match=(typeof PRODUCTS!=='undefined'?PRODUCTS:[]).find(p=>p.name===it.name||(it.sku&&p.id===it.sku));
+          const prods=typeof PRODUCTS!=='undefined'?PRODUCTS:[];
+          const itName=(it.name||'').toLowerCase();
+          const match=prods.find(p=>p.id===it.sku)||
+                      prods.find(p=>p.name===it.name)||
+                      prods.find(p=>itName.includes(p.name.toLowerCase())||p.name.toLowerCase().includes(itName));
           if(match){model=match.model||'';sku=sku||match.id||'';}
         }
         return `<div class="order-item-row">

@@ -104,10 +104,14 @@
           btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
           btn.disabled = true;
           try {
-            const res = await fetch('https://formspree.io/f/xqenjkwd', {
+            const formData = new FormData(this);
+            formData.append('_subject', 'New Message from Orbiva Website - ' + (formData.get('subject') || 'Contact Form'));
+            formData.append('_template', 'table');
+            formData.append('_captcha', 'false');
+            const res = await fetch('https://formsubmit.co/ajax/info@orbivagh.com', {
               method: 'POST',
               headers: { 'Accept': 'application/json' },
-              body: new FormData(this)
+              body: formData
             });
             if (res.ok) {
               msg.style.display = 'block';

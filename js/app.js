@@ -399,22 +399,18 @@ function renderBrands() {
   };
   const brandFallback = {};
 
-  grid.innerHTML = BRANDS.map((b, i) => {
+  const cards = BRANDS.map(b => {
     const logoSrc = brandLogos[b.id];
-    const fb = brandFallback[b.id];
     const logoHtml = logoSrc
       ? `<img src="${logoSrc}" alt="${b.name}" class="brand-logo-img" onerror="this.onerror=null;this.style.display='none';this.nextSibling.style.display='block'">`
       : '';
-    const textHtml = fb
-      ? `<div style="${fb.style}${logoSrc ? ';display:none' : ''}">${fb.text}</div>`
-      : `<div style="font-size:20px;font-weight:800;color:var(--text-dark);${logoSrc ? 'display:none' : ''}">${b.name}</div>`;
-    return `
-      <div class="brand-card reveal delay-${Math.min(i * 100, 400)}" onclick="window.location='shop.html?brand=${b.id}'">
-        ${logoHtml}${textHtml}
-      </div>
-    `;
+    const textHtml = `<div style="font-size:20px;font-weight:800;color:var(--text-dark);${logoSrc ? 'display:none' : ''}">${b.name}</div>`;
+    return `<div class="brand-card" onclick="window.location='shop.html?brand=${b.id}'">${logoHtml}${textHtml}</div>`;
   }).join('');
-  triggerReveal();
+
+  // Duplicate for seamless marquee on mobile
+  grid.innerHTML = cards + cards;
+  grid.classList.add('brands-track');
 }
 
 /* Blog */

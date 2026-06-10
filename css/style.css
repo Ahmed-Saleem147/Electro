@@ -1267,6 +1267,7 @@ input, select, textarea { font-family: inherit; }
    BRANDS — horizontal scroll
 ================================================================ */
 .brands-section { background: #fff; padding: 24px 0; }
+.brands-marquee-wrap { overflow: hidden; width: 100%; }
 .brands-grid {
   display: flex;
   gap: 12px;
@@ -1277,6 +1278,22 @@ input, select, textarea { font-family: inherit; }
   grid-template-columns: unset;
 }
 .brands-grid::-webkit-scrollbar { display: none; }
+
+/* Marquee on mobile */
+.brands-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content;
+  gap: 12px;
+  padding: 8px 16px 12px;
+  animation: cat-scroll 20s linear infinite;
+  overflow: visible;
+}
+.brands-track:hover { animation-play-state: paused; }
+@media (min-width: 900px) {
+  .brands-track { animation: none; transform: none; flex-wrap: wrap !important; width: auto; justify-content: center; }
+  .brands-marquee-wrap { overflow: visible; }
+}
 .brand-card {
   background: var(--bg-card);
   border: 1.5px solid var(--border-light);
@@ -1869,7 +1886,6 @@ input, select, textarea { font-family: inherit; }
   .testimonial-card { width: auto; }
   .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; overflow-x: unset; padding: 0 20px; }
   .blog-card { width: auto; }
-  .brands-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; overflow-x: unset; padding: 0 20px; }
   .brand-card { min-width: unset; }
   #shopProductsGrid { padding: 0 20px; grid-template-columns: repeat(2, 1fr); }
 }
@@ -1957,7 +1973,7 @@ input, select, textarea { font-family: inherit; }
   .flash-products { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; overflow-x: unset; padding: 0; }
   .flash-product-card { width: auto; }
   .promo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 0; }
-  .brands-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; overflow-x: unset; padding: 0; }
+  .brands-track { gap: 20px; padding: 8px 24px 12px; }
   .brand-card { min-width: unset; }
   .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; overflow-x: unset; padding: 0; }
   .testimonial-card { width: auto; }

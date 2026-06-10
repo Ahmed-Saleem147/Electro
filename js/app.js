@@ -154,15 +154,6 @@ function handleAddToCart(btn, productId) {
 
 /* ── Product Quick View / Detail ── */
 function openProduct(productId) {
-  // Show full-screen loading overlay
-  let ov = document.getElementById('pageLoadOverlay');
-  if (!ov) {
-    ov = document.createElement('div');
-    ov.id = 'pageLoadOverlay';
-    ov.innerHTML = '<div class="page-load-spinner"></div>';
-    document.body.appendChild(ov);
-  }
-  ov.style.display = 'flex';
   window.location.href = 'product.html?id=' + productId;
 }
 

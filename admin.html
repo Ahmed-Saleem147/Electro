@@ -396,6 +396,33 @@ textarea{resize:vertical;min-height:70px}
         <div style="margin-top:16px"><button class="btn btn-primary" onclick="saveSettings()"><i class="fas fa-save"></i> Save Settings</button></div>
       </div>
       <div class="settings-section">
+        <h3><i class="fas fa-image" style="color:#7c3aed"></i> Logo &amp; Branding</h3>
+        <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+          <div style="flex:1;min-width:220px">
+            <div class="form-group" style="margin-bottom:14px">
+              <label>Logo URL <span style="font-size:11px;color:var(--muted)">(paste a direct image link or Drive thumbnail URL)</span></label>
+              <input type="text" id="b_logoUrl" placeholder="https://..." style="width:100%">
+            </div>
+            <div class="form-group" style="margin-bottom:14px">
+              <label>Or Upload Logo</label>
+              <input type="file" id="b_logoFile" accept="image/*" onchange="previewBrandingLogo(this)" style="width:100%;font-size:13px">
+            </div>
+            <div class="form-group" style="margin-bottom:14px">
+              <label>Logo Height: <strong id="b_sizeLabel">54px</strong></label>
+              <input type="range" id="b_logoSize" min="28" max="120" value="54" oninput="document.getElementById('b_sizeLabel').textContent=this.value+'px';document.getElementById('b_logoPreviewImg').style.height=this.value+'px'" style="width:100%;accent-color:var(--primary)">
+            </div>
+            <button class="btn btn-primary" onclick="saveBranding()"><i class="fas fa-save"></i> Save &amp; Apply Logo</button>
+            <button class="btn btn-outline" onclick="resetBranding()" style="margin-left:8px"><i class="fas fa-undo"></i> Reset to Default</button>
+          </div>
+          <div style="flex-shrink:0;text-align:center">
+            <div style="font-size:11px;font-weight:600;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Preview</div>
+            <div style="background:var(--primary);padding:14px 20px;border-radius:10px;display:inline-block">
+              <img id="b_logoPreviewImg" src="img/logo.png" alt="Logo Preview" style="height:54px;max-width:200px;object-fit:contain;display:block;background:#fff;border-radius:6px;padding:5px 10px">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="settings-section">
         <h3><i class="fas fa-sliders-h" style="color:var(--primary)"></i> Promotions &amp; Display</h3>
         <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)">
           <div>
@@ -1591,6 +1618,51 @@ function loadSettings(){
   document.getElementById('s_email').value=s.storeEmail||'';
   document.getElementById('s_currency').value=s.currency||'GH₵';
   loadDisplaySettings();
+  loadBranding();
+}
+function loadBranding(){
+  const b=lsGet('obv_branding',{});
+  const url=b.logoUrl||'img/logo.png';
+  const size=b.logoSize||54;
+  const urlInput=document.getElementById('b_logoUrl');
+  const sizeInput=document.getElementById('b_logoSize');
+  const sizeLabel=document.getElementById('b_sizeLabel');
+  const preview=document.getElementById('b_logoPreviewImg');
+  if(urlInput) urlInput.value=url==='img/logo.png'?'':url;
+  if(sizeInput){sizeInput.value=size;}
+  if(sizeLabel) sizeLabel.textContent=size+'px';
+  if(preview){preview.src=url;preview.style.height=size+'px';}
+}
+function previewBrandingLogo(input){
+  const file=input.files[0]; if(!file) return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    const preview=document.getElementById('b_logoPreviewImg');
+    if(preview) preview.src=e.target.result;
+    const urlInput=document.getElementById('b_logoUrl');
+    if(urlInput) urlInput.value=e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+async function saveBranding(){
+  const urlInput=document.getElementById('b_logoUrl');
+  const sizeInput=document.getElementById('b_logoSize');
+  const url=(urlInput?.value||'').trim()||'img/logo.png';
+  const size=parseInt(sizeInput?.value||54);
+  const branding={logoUrl:url,logoSize:size};
+  lsSet('obv_branding',branding);
+  // Push to Supabase so all pages see it
+  const h={apikey:SB_KEY,Authorization:`Bearer ${SB_KEY}`};
+  await fetch(`${SB_URL}/rest/v1/kv_store`,{method:'POST',headers:{...h,'Content-Type':'application/json',Prefer:'resolution=merge-duplicates'},body:JSON.stringify({key:'obv_branding',value:JSON.stringify(branding)})});
+  toast('Logo updated! Refresh the site to see it live.','ok');
+}
+async function resetBranding(){
+  const branding={logoUrl:'img/logo.png',logoSize:54};
+  lsSet('obv_branding',branding);
+  const h={apikey:SB_KEY,Authorization:`Bearer ${SB_KEY}`};
+  await fetch(`${SB_URL}/rest/v1/kv_store`,{method:'POST',headers:{...h,'Content-Type':'application/json',Prefer:'resolution=merge-duplicates'},body:JSON.stringify({key:'obv_branding',value:JSON.stringify(branding)})});
+  loadBranding();
+  toast('Logo reset to default.','ok');
 }
 function loadDisplaySettings(){
   document.getElementById('t_flashSale').checked=localStorage.getItem('obv_flashSale')==='on';

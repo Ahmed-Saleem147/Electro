@@ -17,6 +17,21 @@ async function sbSync() {
     if (!res.ok) return;
     const rows = await res.json();
     rows.forEach(r => localStorage.setItem(r.key, r.value));
+    applyBranding();
+  } catch(e) {}
+}
+
+function applyBranding() {
+  try {
+    const b = JSON.parse(localStorage.getItem('obv_branding') || '{}');
+    if (!b.logoUrl && !b.logoSize) return;
+    const url = b.logoUrl || 'img/logo.png';
+    const size = (b.logoSize || 54) + 'px';
+    document.querySelectorAll('.logo-img').forEach(img => {
+      img.src = url;
+      img.style.height = size;
+      img.style.maxWidth = 'none';
+    });
   } catch(e) {}
 }
 

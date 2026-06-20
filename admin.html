@@ -1551,54 +1551,96 @@ function importProductsCSV(input){
   reader.onload=function(e){
     try{
       const lines=e.target.result.replace(/\r/g,'').split('\n').filter(l=>l.trim());
-      const hdrs=parseCSVLine(lines[0]).map(h=>h.toLowerCase());
-      const iId=hdrs.indexOf('id'),iPr=hdrs.indexOf('price'),iOp=hdrs.indexOf('old_price'),iDi=hdrs.indexOf('discount');
-      if(iId<0||iPr<0){toast('CSV must have id and price columns','err');return;}
+      const hdrs=parseCSVLine(lines[0]).map(h=>h.toLowerCase().trim());
+
+      // Flexible column finder — matches any header containing one of the given keywords
+      function col(...names){
+        for(const n of names){const i=hdrs.findIndex(h=>h.includes(n));if(i>=0)return i;}
+        return -1;
+      }
+
+      const iId    = col('id');
+      const iName  = col('product name','name');
+      const iBrand = col('brand');
+      const iModel = col('sku / model','sku/model','model','sku');
+      const iCat   = col('category');
+      const iPr    = col('selling price','price');
+      const iOp    = col('original price','old price','old_price');
+      const iDi    = col('discount');
+      const iImgs  = col('image urls','images');
+      const iDesc  = col('description');
+      // Spec columns: any header starting with 'spec:'
+      const specCols=hdrs.map((h,i)=>h.startsWith('spec:')?{i,key:h.replace('spec:','').trim()}:null).filter(Boolean);
+
+      if(iId<0){toast('CSV must have an ID column','err');return;}
+
+      // Map category display names → internal IDs
+      const CAT_ID={
+        'televisions':'tv','tv':'tv',
+        'air conditioners':'ac','ac':'ac',
+        'refrigerators':'fridge','fridge':'fridge',
+        'washing machines':'laundry','laundry':'laundry',
+        'kitchen appliances':'kitchen','kitchen':'kitchen',
+        'sound system':'audio','audio devices':'audio','audio':'audio',
+        'other appliances':'small','small':'small',
+        'accessories':'accessories','phones':'phones','tablets':'tablets','commercial':'commercial'
+      };
+
       const edits=lsGet('obv_prod_edits',{});
-      const skuMap=lsGet('obv_sku_img_map',{});
-      const iModel=hdrs.indexOf('model');
-      let dels=lsGet('obv_prod_dels',[]);let delsChanged=false;
+      let dels=lsGet('obv_prod_dels',[]);
+      let delsChanged=false;
       const baseProds=typeof PRODUCTS!=='undefined'?PRODUCTS:[];
-      let updated=0,restored=0,skipped=0,imgMapped=0;
+      let updated=0,restored=0,skipped=0;
+
       for(let i=1;i<lines.length;i++){
         const cols=parseCSVLine(lines[i]);
         const id=String(cols[iId]||'').trim();
-        const newPrice=parseFloat(cols[iPr]);
-        if(!id||isNaN(newPrice)){skipped++;continue;}
-        // Find in active products first, then in base (handles products deleted via admin)
+        if(!id){skipped++;continue;}
+
         let prod=adminProds.find(p=>p.id===id);
         let wasDeleted=false;
-        if(!prod){
-          prod=baseProds.find(p=>p.id===id);
-          if(!prod){skipped++;continue;}
-          wasDeleted=true;
-        }
-        // Restore from dels if needed
-        if(wasDeleted){
-          const di=dels.indexOf(id);
-          if(di>=0){dels.splice(di,1);delsChanged=true;restored++;}
-        }
-        const newOp=iOp>=0&&cols[iOp]?parseFloat(cols[iOp]):null;
-        const newDi=iDi>=0&&cols[iDi]?parseInt(cols[iDi]):null;
+        if(!prod){prod=baseProds.find(p=>p.id===id);if(!prod){skipped++;continue;}wasDeleted=true;}
+
+        if(wasDeleted){const di=dels.indexOf(id);if(di>=0){dels.splice(di,1);delsChanged=true;restored++;}}
+
         if(!edits[id])edits[id]={};
-        edits[id]={...edits[id],price:newPrice};
-        if(newOp!==null)edits[id].oldPrice=newOp||undefined;
-        if(newDi!==null)edits[id].discount=newDi||undefined;
-        updated++;
-        // Map images from SKU store — use model column from CSV if available, else product model
-        const csvSku=iModel>=0?(cols[iModel]||'').trim():'';
-        const sku=csvSku||(prod.model||'').trim();
-        const alreadyHasImg=!!(edits[id].images&&edits[id].images.length)||(prod.images&&prod.images.length);
-        if(sku&&!alreadyHasImg&&skuMap[sku]&&skuMap[sku].length){
-          edits[id]={...edits[id],images:skuMap[sku]};
-          imgMapped++;
+        let changed=false;
+
+        function applyField(colIdx,apply){
+          if(colIdx>=0&&cols[colIdx]!==undefined){apply(cols[colIdx].trim());changed=true;}
         }
+
+        applyField(iName,  v=>{if(v)edits[id].name=v;});
+        applyField(iBrand, v=>{if(v)edits[id].brand=v;});
+        applyField(iModel, v=>{edits[id].model=v;});
+        applyField(iCat,   v=>{const cid=CAT_ID[v.toLowerCase()];if(cid)edits[id].category=cid;});
+        applyField(iPr,    v=>{const n=parseFloat(v);if(!isNaN(n)&&n>0)edits[id].price=n;});
+        applyField(iOp,    v=>{const n=parseFloat(v);if(!isNaN(n)&&n>0)edits[id].oldPrice=n;});
+        applyField(iDi,    v=>{const n=parseInt(v);if(!isNaN(n))edits[id].discount=n;});
+        applyField(iDesc,  v=>{edits[id].description=v.replace(/ \| /g,'\n');});
+        applyField(iImgs,  v=>{
+          if(v){
+            const urls=v.split(' | ').map(u=>u.trim()).filter(u=>u.startsWith('http')||u.startsWith('//'));
+            if(urls.length)edits[id].images=urls;
+          }
+        });
+
+        specCols.forEach(({i:si,key})=>{
+          if(cols[si]!==undefined){
+            if(!edits[id].specs)edits[id].specs={};
+            edits[id].specs[key]=cols[si].trim();
+            changed=true;
+          }
+        });
+
+        if(changed)updated++;
       }
+
       if(delsChanged){lsSet('obv_prod_dels',dels);sbPush('obv_prod_dels');}
       lsSet('obv_prod_edits',edits);sbPush('obv_prod_edits');
       loadProducts();filterProducts();renderDashboard();
-      const summary=[updated+' updated',restored?restored+' restored':'',imgMapped?imgMapped+' images mapped':'',skipped?skipped+' skipped':''].filter(Boolean).join(' · ');
-      logHistory({type:'edit',label:'Bulk CSV update: '+summary,undoData:{}});
+      const summary=[updated+' products updated',restored?restored+' restored':'',skipped?skipped+' skipped':''].filter(Boolean).join(' · ');
+      logHistory({type:'edit',label:'Bulk CSV import: '+summary,undoData:{}});
       toast(summary,'ok');
     }catch(err){toast('CSV error: '+err.message,'err');}
     input.value='';

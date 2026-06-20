@@ -655,17 +655,18 @@ function initMobileSearch() {
     }).join('');
   });
 
-  /* Make the header search bar a tap-to-open trigger on mobile */
+  /* Transparent tap-catcher sitting on top of the entire search bar.
+     Catches all taps reliably regardless of which child element (input/select/btn)
+     the user touches — the select's native picker would otherwise swallow the event. */
   const bar = document.getElementById('searchBar');
-  const mainInput = document.getElementById('searchInput');
   if (bar) {
-    bar.style.cursor = 'pointer';
-    bar.addEventListener('click', openOverlay);
-  }
-  if (mainInput) {
-    mainInput.setAttribute('readonly', 'readonly');
-    mainInput.style.cursor = 'pointer';
-    mainInput.addEventListener('focus', e => { e.target.blur(); openOverlay(); });
+    const tapLayer = document.createElement('div');
+    tapLayer.style.cssText =
+      'position:absolute;inset:0;z-index:5;cursor:pointer;' +
+      '-webkit-tap-highlight-color:transparent';
+    bar.appendChild(tapLayer);
+    tapLayer.addEventListener('click', openOverlay);
+    tapLayer.addEventListener('touchend', e => { e.preventDefault(); openOverlay(); });
   }
 }
 

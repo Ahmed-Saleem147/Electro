@@ -640,22 +640,44 @@ function initSearchPanel() {
       .sort((a, b) => b.score - a.score)
       .slice(0, 8)
       .map(({ item }) => item);
-    if (!matches.length) { sugs.innerHTML = ''; return; }
+    if (!matches.length) { sugs.innerHTML = '<div style="padding:20px 14px;color:var(--text-muted);font-size:14px">No results found</div>'; return; }
+
     sugs.innerHTML = matches.map(item => {
-      const sku = item.type === 'product' && skuMap[item.id] ? ' · ' + skuMap[item.id].toUpperCase() : '';
-      return `
-        <div class="search-panel-sug-item" onclick="handleSearchSelect('${item.type}','${item.id}','${item.text.replace(/'/g,"\\'")}');document.getElementById('searchPanelClose').click()">
-          <span style="font-size:20px">${item.icon}</span>
-          <div>
-            <div style="font-size:14px;font-weight:600;color:var(--text-dark)">${highlightMatch(item.text, q)}</div>
-            <div style="font-size:12px;color:var(--text-muted)">${item.sub}${sku} · ${capitalise(item.type)}</div>
-          </div>
-        </div>`;
+      if (item.type === 'product') {
+        const p = (window.PRODUCTS || []).find(x => x.id === item.id);
+        const imgHtml = p && p.images && p.images[0]
+          ? `<img src="${p.images[0]}" class="sug-thumb" onerror="this.style.display='none';this.nextSibling.style.display='flex'">`
+          : '';
+        const fallback = `<span class="sug-thumb-fallback" style="${p && p.images && p.images[0] ? 'display:none' : ''}">${item.icon}</span>`;
+        const priceHtml = p ? `<span class="sug-price">${fmt(p.price)}</span>` : '';
+        const skuText = skuMap[item.id] ? `<span class="sug-sku">${skuMap[item.id].toUpperCase()}</span>` : '';
+        return `
+          <div class="search-panel-sug-item" onclick="handleSearchSelect('product','${item.id}','${item.text.replace(/'/g,"\\'")}');window.closeSearchPanel&&window.closeSearchPanel()">
+            <div class="sug-img-wrap">${imgHtml}${fallback}</div>
+            <div class="sug-info">
+              <div class="sug-name">${highlightMatch(item.text, q)}</div>
+              <div class="sug-meta">${item.sub}${skuText ? ' · ' : ''}${skuText}</div>
+              ${priceHtml}
+            </div>
+          </div>`;
+      } else {
+        const label = item.type === 'category' ? 'Browse Category' : 'Browse Brand';
+        const bg = item.type === 'category' ? '#eff6ff' : '#f0fdf4';
+        return `
+          <div class="search-panel-sug-item sug-item-nav" onclick="handleSearchSelect('${item.type}','${item.id}','${item.text.replace(/'/g,"\\'")}');window.closeSearchPanel&&window.closeSearchPanel()">
+            <div class="sug-thumb-fallback" style="background:${bg}">${item.icon}</div>
+            <div class="sug-info">
+              <div class="sug-name">${highlightMatch(item.text, q)}</div>
+              <div class="sug-meta">${label} · ${item.sub}</div>
+            </div>
+            <i class="fas fa-chevron-right" style="font-size:11px;color:var(--text-muted);margin-left:auto"></i>
+          </div>`;
+      }
     }).join('');
   });
 
-  /* Expose globally for inline onclick fallback */
-  window.openMobileSearch = openPanel;
+  window.openMobileSearch  = openPanel;
+  window.closeSearchPanel  = closePanel;
 }
 
 function initSearch() { /* replaced by initSearchPanel — kept as stub */ }

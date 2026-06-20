@@ -1995,7 +1995,7 @@ input, select, textarea { font-family: inherit; }
   body { padding-bottom: 0; }
   .bottom-nav { display: none; }
   .top-bar { display: block; }
-  .nav { display: block; }
+  .nav { display: none; }
   .hamburger { display: none; }
   .cart-total-label { display: flex; font-size: 13px; font-weight: 700; white-space: nowrap; }
   .cart-btn { width: auto !important; padding: 0 10px; gap: 6px; }

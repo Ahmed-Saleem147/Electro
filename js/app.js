@@ -586,7 +586,7 @@ function initSearchPanel() {
 
   function openPanel() {
     const skuMap = {};
-    (window.PRODUCTS || []).forEach(p => { if (p.model) skuMap[p.id] = p.model.toLowerCase(); });
+    (typeof PRODUCTS !== 'undefined' ? PRODUCTS : []).forEach(p => { if (p.model) skuMap[p.id] = p.model.toLowerCase(); });
     panel._skuMap = skuMap;
     panel.classList.add('open');
     if (backdrop) backdrop.classList.add('open');
@@ -619,7 +619,7 @@ function initSearchPanel() {
     const q = input.value.trim().toLowerCase();
     if (q.length < 2) { sugs.innerHTML = ''; return; }
     const skuMap = panel._skuMap || {};
-    const idx = window.SEARCH_INDEX || [];
+    const idx = (typeof SEARCH_INDEX !== 'undefined' ? SEARCH_INDEX : []);
 
     function scoreItem(item) {
       const name = item.text.toLowerCase();
@@ -644,7 +644,7 @@ function initSearchPanel() {
 
     sugs.innerHTML = matches.map(item => {
       if (item.type === 'product') {
-        const p = (window.PRODUCTS || []).find(x => x.id === item.id);
+        const p = (typeof PRODUCTS !== 'undefined' ? PRODUCTS : []).find(x => x.id === item.id);
         const imgHtml = p && p.images && p.images[0]
           ? `<img src="${p.images[0]}" class="sug-thumb" onerror="this.style.display='none';this.nextSibling.style.display='flex'">`
           : '';

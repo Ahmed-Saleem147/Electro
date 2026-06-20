@@ -35,24 +35,27 @@
     <a href="index.html" class="logo">
       <img src="img/logo.png" alt="Orbiva Technologies" class="logo-img">
     </a>
-    <div class="search-bar" id="searchBar">
-      <div class="search-input-wrap">
-        <select class="search-category" id="searchCategory">
-          <option value="">All Categories</option>
-          <option value="tv">Televisions</option>
-          <option value="ac">Air Conditioners</option>
-          <option value="fridge">Refrigerators</option>
-          <option value="laundry">Washing Machines</option>
-          <option value="kitchen">Kitchen Appliances</option>
-          <option value="audio">Audio Devices</option>
-          <option value="small">Other Appliances</option>
-        </select>
-        <input type="text" class="search-input" id="searchInput" placeholder="Search for products, brands..." />
-        <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+    <nav class="desktop-nav" id="desktopNav">
+      <a href="shop.html" class="desktop-nav-link">Shop</a>
+      <div class="desktop-nav-item">
+        <a href="shop.html" class="desktop-nav-link">Brands <i class="fas fa-chevron-down fa-xs"></i></a>
+        <ul class="desktop-dropdown" id="desktopBrandDropdown"></ul>
       </div>
-      <div class="search-suggestions" id="searchSuggestions"></div>
-    </div>
+      <div class="desktop-nav-item">
+        <a href="shop.html" class="desktop-nav-link">Categories <i class="fas fa-chevron-down fa-xs"></i></a>
+        <ul class="desktop-dropdown">
+          <li><a href="shop.html?cat=tv"><span>📺</span> Televisions</a></li>
+          <li><a href="shop.html?cat=ac"><span>❄️</span> Air Conditioners</a></li>
+          <li><a href="shop.html?cat=fridge"><span>🧊</span> Refrigerators</a></li>
+          <li><a href="shop.html?cat=laundry"><span>👕</span> Washing Machines</a></li>
+          <li><a href="shop.html?cat=kitchen"><span>🍳</span> Kitchen Appliances</a></li>
+          <li><a href="shop.html?cat=audio"><span>🎵</span> Audio Devices</a></li>
+          <li><a href="shop.html?cat=small"><span>🔌</span> Other Appliances</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="header-actions">
+      <button class="action-btn" id="searchToggle" title="Search"><i class="fas fa-search"></i></button>
       <button class="action-btn" id="wishlistToggle" title="Wishlist">
         <i class="fas fa-heart"></i><span class="badge" id="wishlistCount">0</span>
       </button>
@@ -271,6 +274,19 @@
   </button>
 </nav>
 
+<div class="search-panel" id="searchPanel">
+  <div class="search-panel-hd">
+    <h2 class="search-panel-title">Search</h2>
+    <button class="search-panel-close" id="searchPanelClose"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="search-panel-bd">
+    <div class="search-panel-input-wrap">
+      <input type="text" id="searchPanelInput" class="search-panel-input" placeholder="Search products, brands, SKU…" autocomplete="off">
+    </div>
+    <div id="searchPanelSugs" class="search-panel-sugs"></div>
+  </div>
+</div>
+<div class="search-panel-backdrop" id="searchPanelBackdrop"></div>
 <div class="toast-container" id="toastContainer"></div>
 <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 

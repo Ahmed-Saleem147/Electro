@@ -25,6 +25,7 @@
       <img src="img/logo.png" alt="Orbiva Technologies" class="logo-img">
     </a>
     <div class="header-actions">
+      <button class="action-btn" id="searchToggle" title="Search"><i class="fas fa-search"></i></button>
       <a href="shop.html" class="btn-primary"><i class="fas fa-shopping-bag"></i> Shop Now</a>
     </div>
   </div>
@@ -206,6 +207,19 @@
   </a>
 </nav>
 
+<div class="search-panel" id="searchPanel">
+  <div class="search-panel-hd">
+    <h2 class="search-panel-title">Search</h2>
+    <button class="search-panel-close" id="searchPanelClose"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="search-panel-bd">
+    <div class="search-panel-input-wrap">
+      <input type="text" id="searchPanelInput" class="search-panel-input" placeholder="Search products, brands, SKU…" autocomplete="off">
+    </div>
+    <div id="searchPanelSugs" class="search-panel-sugs"></div>
+  </div>
+</div>
+<div class="search-panel-backdrop" id="searchPanelBackdrop"></div>
 <div class="toast-container" id="toastContainer"></div>
 <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 

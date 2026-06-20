@@ -365,7 +365,7 @@ function renderCategories() {
       <div class="cat-count">${count} Products</div>
     </div>`;
   }).join('');
-  startCardMarquee(grid, grid.parentElement, 0.6);
+  if (window.innerWidth < 1024) startCardMarquee(grid, grid.parentElement, 0.6);
 }
 
 /* Flash Sale */
@@ -479,7 +479,7 @@ function renderBrands() {
     const textHtml = `<div style="font-size:20px;font-weight:800;color:var(--text-dark);${logoSrc ? 'display:none' : ''}">${b.name}</div>`;
     return `<div class="brand-card" onclick="window.location='shop.html?brand=${b.id}'">${logoHtml}${textHtml}</div>`;
   }).join('');
-  startCardMarquee(grid, grid.parentElement, 0.5);
+  if (window.innerWidth < 1024) startCardMarquee(grid, grid.parentElement, 0.5);
 }
 
 /* Blog */

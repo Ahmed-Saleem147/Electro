@@ -1489,10 +1489,19 @@ const BACKUP_KEYS=[
   'obv_prod_edits','obv_prod_adds','obv_prod_dels',
   'obv_settings','obv_branding','obv_flash_prods',
   'obv_delivery_text','obv_freeDelivery','obv_sku_img_map',
-  'obv_img_required','obv_images','obv_history'
+  'obv_img_required','obv_images','obv_history',
+  'obv_orders','obv_data_version'
 ];
+// Keys too large for Supabase or irrelevant to the storefront
+const BACKUP_LOCAL_ONLY=new Set(['obv_images','obv_history','obv_orders']);
+
 function backupSiteData(){
-  const data={_version:1,_date:new Date().toISOString(),keys:{}};
+  const data={
+    _version:2,
+    _date:new Date().toISOString(),
+    _dataVersion:(typeof DATA_VERSION!=='undefined'?DATA_VERSION:''),
+    keys:{}
+  };
   BACKUP_KEYS.forEach(k=>{const v=localStorage.getItem(k);if(v!==null)data.keys[k]=v;});
   const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
   const a=document.createElement('a');
@@ -1505,21 +1514,24 @@ function restoreSiteData(input){
   const file=input.files[0];if(!file)return;
   confirmAction(
     'Restore backup?',
-    'This will overwrite all current admin data (products, settings, branding) with the backup file. This cannot be undone.',
+    'This will overwrite all current admin data (products, settings, branding) with the backup file. The page will reload automatically.',
     ()=>{
       const reader=new FileReader();
       reader.onload=function(e){
         try{
           const data=JSON.parse(e.target.result);
-          if(!data.keys)throw new Error('Invalid backup file');
+          if(!data.keys)throw new Error('Invalid backup file — missing keys section');
           let count=0;
           Object.entries(data.keys).forEach(([k,v])=>{
             localStorage.setItem(k,v);
-            sbPush(k);
+            if(!BACKUP_LOCAL_ONLY.has(k)) sbPush(k);
             count++;
           });
+          // Critical: stamp current DATA_VERSION so init() doesn't wipe dels/edits on reload
+          const curDV=typeof DATA_VERSION!=='undefined'?DATA_VERSION:'';
+          if(curDV) localStorage.setItem('obv_data_version',curDV);
           toast('Restored '+count+' data stores from backup dated '+data._date.slice(0,10),'ok');
-          setTimeout(()=>location.reload(),1200);
+          setTimeout(()=>location.reload(),1500);
         }catch(err){toast('Restore error: '+err.message,'err');}
         input.value='';
       };
@@ -1534,9 +1546,8 @@ function csvField(v){
   return /[,"\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
 }
 function exportProductsCSV(){
-  const baseProds=typeof PRODUCTS!=='undefined'?PRODUCTS:[];
-  const edits=lsGet('obv_prod_edits',{});
-  const prods=baseProds.map(p=>edits[p.id]?Object.assign({},p,edits[p.id]):p);
+  // Use adminProds: edits applied, deleted products excluded, added products included
+  const prods=adminProds.length?adminProds:getAdminProducts();
   if(!prods.length){toast('No products to export','err');return;}
 
   const CAT_NAMES_FULL={tv:'Televisions',ac:'Air Conditioners',fridge:'Refrigerators',laundry:'Washing Machines',kitchen:'Kitchen Appliances',audio:'Sound System',small:'Other Appliances',accessories:'Accessories',phones:'Phones',tablets:'Tablets',commercial:'Commercial'};
@@ -1635,60 +1646,86 @@ function importProductsCSV(input){
         'accessories':'accessories','phones':'phones','tablets':'tablets','commercial':'commercial'
       };
 
-      const edits=lsGet('obv_prod_edits',{});
-      let dels=lsGet('obv_prod_dels',[]);
+      const edits   = lsGet('obv_prod_edits',{});
+      const skuMap  = lsGet('obv_sku_img_map',{});
+      let dels      = lsGet('obv_prod_dels',[]);
       let delsChanged=false;
       const baseProds=typeof PRODUCTS!=='undefined'?PRODUCTS:[];
-      let updated=0,restored=0,skipped=0;
+      let updated=0,restored=0,skipped=0,imgMapped=0;
 
       for(let i=1;i<lines.length;i++){
         const cols=parseCSVLine(lines[i]);
         const id=String(cols[iId]||'').trim();
         if(!id){skipped++;continue;}
 
+        // Look in active products first, fall back to base (handles post-Delete-All)
         let prod=adminProds.find(p=>p.id===id);
         let wasDeleted=false;
         if(!prod){prod=baseProds.find(p=>p.id===id);if(!prod){skipped++;continue;}wasDeleted=true;}
 
+        // Restore from deletion list if needed
         if(wasDeleted){const di=dels.indexOf(id);if(di>=0){dels.splice(di,1);delsChanged=true;restored++;}}
 
         if(!edits[id])edits[id]={};
         let changed=false;
 
         function applyField(colIdx,apply){
-          if(colIdx>=0&&cols[colIdx]!==undefined){apply(cols[colIdx].trim());changed=true;}
+          if(colIdx>=0&&cols[colIdx]!==undefined&&cols[colIdx].trim()!==''){
+            apply(cols[colIdx].trim());changed=true;
+          }
         }
 
-        applyField(iName,  v=>{if(v)edits[id].name=v;});
-        applyField(iBrand, v=>{if(v)edits[id].brand=v;});
-        applyField(iModel, v=>{edits[id].model=v;});
-        applyField(iCat,   v=>{const cid=CAT_ID[v.toLowerCase()];if(cid)edits[id].category=cid;});
-        applyField(iPr,    v=>{const n=parseFloat(v);if(!isNaN(n)&&n>0)edits[id].price=n;});
-        applyField(iOp,    v=>{const n=parseFloat(v);if(!isNaN(n)&&n>0)edits[id].oldPrice=n;});
-        applyField(iDi,    v=>{const n=parseInt(v);if(!isNaN(n))edits[id].discount=n;});
-        applyField(iDesc,  v=>{edits[id].description=v.replace(/ \| /g,'\n');});
-        applyField(iImgs,  v=>{
-          if(v){
-            const urls=v.split(' | ').map(u=>u.trim()).filter(u=>u.startsWith('http')||u.startsWith('//'));
-            if(urls.length)edits[id].images=urls;
+        applyField(iName, v=>{if(v)edits[id].name=v;});
+        applyField(iBrand,v=>{if(v)edits[id].brand=v;});
+        applyField(iModel,v=>{edits[id].model=v;});
+        applyField(iCat,  v=>{const cid=CAT_ID[v.toLowerCase()];if(cid)edits[id].category=cid;});
+        applyField(iPr,   v=>{const n=parseFloat(v);if(!isNaN(n)&&n>0)edits[id].price=n;});
+        applyField(iOp,   v=>{const n=parseFloat(v);if(!isNaN(n)&&n>0)edits[id].oldPrice=n;});
+        applyField(iDi,   v=>{const n=parseInt(v);if(!isNaN(n))edits[id].discount=n;});
+        applyField(iDesc, v=>{edits[id].description=v.replace(/ \| /g,'\n');});
+
+        // Images: apply URLs from CSV; fall back to SKU map if column is empty
+        if(iImgs>=0&&cols[iImgs]!==undefined){
+          const raw=(cols[iImgs]||'').trim();
+          const urls=raw.split(' | ').map(u=>u.trim()).filter(u=>u.startsWith('http')||u.startsWith('//'));
+          if(urls.length){edits[id].images=urls;changed=true;}
+          else{
+            // No URLs in CSV — try SKU map fallback
+            const sku=(edits[id].model||prod.model||'').trim();
+            const alreadyHasImg=!!(edits[id].images&&edits[id].images.length)||!!(prod.images&&prod.images.length);
+            if(sku&&!alreadyHasImg&&skuMap[sku]&&skuMap[sku].length){
+              edits[id].images=skuMap[sku];changed=true;imgMapped++;
+            }
           }
-        });
+        } else {
+          // No image column at all — still try SKU map for products with no images
+          const sku=(edits[id].model||prod.model||'').trim();
+          const alreadyHasImg=!!(edits[id].images&&edits[id].images.length)||!!(prod.images&&prod.images.length);
+          if(sku&&!alreadyHasImg&&skuMap[sku]&&skuMap[sku].length){
+            edits[id].images=skuMap[sku];changed=true;imgMapped++;
+          }
+        }
 
         specCols.forEach(({i:si,key})=>{
-          if(cols[si]!==undefined){
+          if(cols[si]!==undefined&&cols[si].trim()!==''){
             if(!edits[id].specs)edits[id].specs={};
             edits[id].specs[key]=cols[si].trim();
             changed=true;
           }
         });
 
-        if(changed)updated++;
+        if(changed||wasDeleted)updated++;
       }
 
       if(delsChanged){lsSet('obv_prod_dels',dels);sbPush('obv_prod_dels');}
       lsSet('obv_prod_edits',edits);sbPush('obv_prod_edits');
       loadProducts();filterProducts();renderDashboard();
-      const summary=[updated+' products updated',restored?restored+' restored':'',skipped?skipped+' skipped':''].filter(Boolean).join(' · ');
+      const summary=[
+        updated+' products updated',
+        restored?restored+' restored from deleted':'',
+        imgMapped?imgMapped+' images auto-mapped from SKU':'',
+        skipped?skipped+' skipped (not found)':''
+      ].filter(Boolean).join(' · ');
       logHistory({type:'edit',label:'Bulk CSV import: '+summary,undoData:{}});
       toast(summary,'ok');
     }catch(err){toast('CSV error: '+err.message,'err');}

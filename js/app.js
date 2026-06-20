@@ -362,7 +362,6 @@ function renderCategories() {
     return `<div class="category-card" onclick="window.location='shop.html?cat=${c.id}'">
       <div class="cat-icon" style="background:${c.bg};color:${c.color}"><i class="${c.icon}"></i></div>
       <div class="cat-name">${c.name}</div>
-      <div class="cat-count">${count} Products</div>
     </div>`;
   }).join('');
   if (window.innerWidth < 1024) startCardMarquee(grid, grid.parentElement, 0.6);

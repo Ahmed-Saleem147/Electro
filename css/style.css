@@ -214,11 +214,10 @@ input, select, textarea { font-family: inherit; }
 .logo-main { font-family: var(--font-heading); font-size: 17px; font-weight: 800; color: var(--text-dark); }
 .logo-sub { font-size: 9px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.3px; display: none; }
 
-/* Search bar — icon only on mobile, expands on tap */
+/* Search bar — full width on mobile */
 .search-bar {
-  flex: 0 0 auto;
+  flex: 1;
   position: relative;
-  transition: flex 0.3s ease;
 }
 .search-input-wrap {
   display: flex;
@@ -228,8 +227,7 @@ input, select, textarea { font-family: inherit; }
   border-radius: var(--radius-full);
   overflow: hidden;
   height: 40px;
-  width: 40px;
-  transition: width 0.3s ease, border-color var(--transition);
+  transition: border-color var(--transition);
 }
 .search-input-wrap:focus-within {
   border-color: var(--primary);
@@ -240,15 +238,11 @@ input, select, textarea { font-family: inherit; }
   flex: 1;
   border: none;
   background: transparent;
-  padding: 0;
+  padding: 0 12px;
   font-size: 14px;
   color: var(--text-dark);
   outline: none;
   min-width: 0;
-  width: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
 }
 .search-input::placeholder { color: var(--text-muted); }
 .search-btn {
@@ -259,14 +253,7 @@ input, select, textarea { font-family: inherit; }
   font-size: 14px;
   flex-shrink: 0;
   border-left: none;
-  border-radius: 50%;
 }
-
-/* Expanded search bar (JS adds .mobile-open) */
-.search-bar.mobile-open { flex: 1; }
-.search-bar.mobile-open .search-input-wrap { width: 100%; }
-.search-bar.mobile-open .search-input { width: auto; padding: 0 12px; opacity: 1; pointer-events: auto; }
-.search-bar.mobile-open .search-btn { border-radius: 0; }
 
 /* Search suggestions */
 .search-suggestions {

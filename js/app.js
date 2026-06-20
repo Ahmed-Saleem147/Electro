@@ -593,31 +593,14 @@ function initSearch() {
     window.location.href = url;
   }
 
-  /* Mobile: tap icon → expand bar; second tap → search */
-  if (btn) {
-    btn.addEventListener('click', e => {
-      if (window.innerWidth < 1024 && bar && !bar.classList.contains('mobile-open')) {
-        e.preventDefault(); e.stopPropagation();
-        bar.classList.add('mobile-open');
-        input.focus();
-        return;
-      }
-      doSearch();
-    });
-  }
+  if (btn) btn.addEventListener('click', doSearch);
 
   document.addEventListener('click', e => {
-    if (bar && !bar.contains(e.target)) {
-      suggestions.classList.remove('active');
-      if (window.innerWidth < 1024) bar.classList.remove('mobile-open');
-    }
+    if (bar && !bar.contains(e.target)) suggestions.classList.remove('active');
   });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && bar) {
-      bar.classList.remove('mobile-open');
-      suggestions.classList.remove('active');
-    }
+    if (e.key === 'Escape') suggestions.classList.remove('active');
   });
 
   input.addEventListener('input', () => {

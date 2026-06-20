@@ -299,7 +299,9 @@ function startCardMarquee(track, wrap, speed) {
   if (!track || !wrap) return;
   wrap.scrollLeft = 0;
   track.style.transform = 'translateX(0)';
-  let offset = 0, autoRunning = true, dragActive = false, prevX = 0;
+  /* Start paused so users see position 0; begin scrolling after 1.5 s */
+  let offset = 0, autoRunning = false, dragActive = false, prevX = 0;
+  setTimeout(() => { autoRunning = true; }, 1500);
 
   function cardW() {
     const first = track.firstElementChild;
@@ -731,9 +733,10 @@ function initSearch() {
 
   input.addEventListener('focus', () => { if (input.value.length >= 2) suggestions.classList.add('active'); });
   input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
-  /* Clear existing text on click so user can start a fresh search immediately */
-  input.addEventListener('click', () => {
+  /* Clear text + suggestions on mousedown (fires before focus, no suggestion flash) */
+  input.addEventListener('mousedown', () => {
     input.value = '';
+    suggestions.innerHTML = '';
     suggestions.classList.remove('active');
   });
 }

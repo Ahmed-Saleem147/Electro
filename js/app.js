@@ -298,9 +298,8 @@ function openLightbox(src, name) {
 function startCardMarquee(track, wrap, speed) {
   if (!track || !wrap) return;
   wrap.scrollLeft = 0;
-  track.style.transition = 'none';
   track.style.transform = 'translateX(0)';
-  let offset = 0, autoRunning = false, dragActive = false, prevX = 0;
+  let offset = 0, autoRunning = true, dragActive = false, prevX = 0;
 
   function cardW() {
     const first = track.firstElementChild;
@@ -311,28 +310,11 @@ function startCardMarquee(track, wrap, speed) {
   function shift(delta) {
     const cw = cardW();
     if (cw <= 0) return;
-    track.style.transition = ''; /* cancel any CSS transition on interaction */
     offset += delta;
     while (offset >= cw) { track.appendChild(track.firstElementChild); offset -= cw; }
     while (offset < 0)   { track.prepend(track.lastElementChild);      offset += cw; }
     track.style.transform = `translateX(-${offset}px)`;
   }
-
-  /* Slide in from the right, then hand off to JS auto-scroll */
-  setTimeout(() => {
-    const ww = wrap.clientWidth || window.innerWidth;
-    track.style.transition = 'none';
-    track.style.transform = `translateX(${ww}px)`;
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      track.style.transition = 'transform 1.2s cubic-bezier(0.25,0.46,0.45,0.94)';
-      track.style.transform = 'translateX(0)';
-      setTimeout(() => {
-        track.style.transition = '';
-        track.style.transform = `translateX(-${offset}px)`;
-        autoRunning = true;
-      }, 1250);
-    }));
-  }, 0);
 
 
   function tick() {
@@ -344,7 +326,6 @@ function startCardMarquee(track, wrap, speed) {
   /* mouse drag */
   wrap.style.cursor = 'grab';
   wrap.addEventListener('mousedown', e => {
-    track.style.transition = '';
     dragActive = true; autoRunning = false;
     prevX = e.clientX; wrap.style.cursor = 'grabbing'; e.preventDefault();
   });
@@ -359,7 +340,6 @@ function startCardMarquee(track, wrap, speed) {
 
   /* touch swipe */
   wrap.addEventListener('touchstart', e => {
-    track.style.transition = '';
     dragActive = true; autoRunning = false; prevX = e.touches[0].clientX;
   }, {passive:true});
   wrap.addEventListener('touchmove', e => {

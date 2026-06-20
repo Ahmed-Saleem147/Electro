@@ -360,6 +360,11 @@ textarea{resize:vertical;min-height:70px}
           <i class="fas fa-file-upload"></i> Import CSV
           <input type="file" accept=".csv" style="display:none" onchange="importProductsCSV(this)">
         </label>
+        <button class="btn btn-outline btn-sm" onclick="backupSiteData()" title="Download a full backup of all admin data"><i class="fas fa-shield-alt"></i> Backup</button>
+        <label class="btn btn-outline btn-sm" style="cursor:pointer" title="Restore a previously downloaded backup">
+          <i class="fas fa-undo"></i> Restore
+          <input type="file" accept=".json" style="display:none" onchange="restoreSiteData(this)">
+        </label>
         <button class="btn btn-danger btn-sm" onclick="confirmAction('Delete all products?','Images will be saved to the library by SKU and auto-mapped when products are re-uploaded.',deleteAllKeepImages)" title="Delete all products but keep images mapped by SKU"><i class="fas fa-trash-alt"></i> Delete All (Keep Images)</button>
       </div>
       <div class="table-wrap">
@@ -1477,6 +1482,50 @@ function deleteAllKeepImages() {
   logHistory({type:'delete_all_keep_img', label:`Deleted all ${prods.length} products · saved ${mapped} SKU→image mappings`, undoData:{}});
   toast(`All products deleted. ${mapped} image${mapped!==1?'s':''} saved by SKU.`, 'ok');
   loadProducts(); filterProducts(); renderDashboard();
+}
+
+/* ── Backup / Restore ── */
+const BACKUP_KEYS=[
+  'obv_prod_edits','obv_prod_adds','obv_prod_dels',
+  'obv_settings','obv_branding','obv_flash_prods',
+  'obv_delivery_text','obv_freeDelivery','obv_sku_img_map',
+  'obv_img_required','obv_images','obv_history'
+];
+function backupSiteData(){
+  const data={_version:1,_date:new Date().toISOString(),keys:{}};
+  BACKUP_KEYS.forEach(k=>{const v=localStorage.getItem(k);if(v!==null)data.keys[k]=v;});
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='orbiva-backup-'+new Date().toISOString().slice(0,10)+'.json';
+  a.click();
+  toast('Backup downloaded — '+Object.keys(data.keys).length+' data stores saved','ok');
+}
+function restoreSiteData(input){
+  const file=input.files[0];if(!file)return;
+  confirmAction(
+    'Restore backup?',
+    'This will overwrite all current admin data (products, settings, branding) with the backup file. This cannot be undone.',
+    ()=>{
+      const reader=new FileReader();
+      reader.onload=function(e){
+        try{
+          const data=JSON.parse(e.target.result);
+          if(!data.keys)throw new Error('Invalid backup file');
+          let count=0;
+          Object.entries(data.keys).forEach(([k,v])=>{
+            localStorage.setItem(k,v);
+            sbPush(k);
+            count++;
+          });
+          toast('Restored '+count+' data stores from backup dated '+data._date.slice(0,10),'ok');
+          setTimeout(()=>location.reload(),1200);
+        }catch(err){toast('Restore error: '+err.message,'err');}
+        input.value='';
+      };
+      reader.readAsText(file);
+    }
+  );
 }
 
 /* ── CSV Export / Import ── */

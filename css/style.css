@@ -400,7 +400,7 @@ input, select, textarea { font-family: inherit; }
 .suggestion-item:active { background: var(--bg); }
 
 /* Header Actions */
-.header-actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+.header-actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; margin-left: auto; }
 .action-btn {
   position: relative;
   display: flex; align-items: center; justify-content: center;

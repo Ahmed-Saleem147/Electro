@@ -655,13 +655,14 @@ function initMobileSearch() {
      the user touches — the select's native picker would otherwise swallow the event. */
   const bar = document.getElementById('searchBar');
   if (bar) {
-    const tapLayer = document.createElement('div');
-    tapLayer.style.cssText =
-      'position:absolute;inset:0;z-index:5;cursor:pointer;' +
-      '-webkit-tap-highlight-color:transparent';
-    bar.appendChild(tapLayer);
-    tapLayer.addEventListener('click', openOverlay);
-    tapLayer.addEventListener('touchend', e => { e.preventDefault(); openOverlay(); });
+    /* Capture phase: fires before the <select> or <input> children can react,
+       so the native select picker never opens and no keyboard appears. */
+    bar.addEventListener('touchstart', e => {
+      e.preventDefault();
+      openOverlay();
+    }, { capture: true, passive: false });
+    /* Click fallback for hybrid/desktop-mobile emulation */
+    bar.addEventListener('click', openOverlay, { capture: true });
   }
 }
 
@@ -730,6 +731,11 @@ function initSearch() {
 
   input.addEventListener('focus', () => { if (input.value.length >= 2) suggestions.classList.add('active'); });
   input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+  /* Clear existing text on click so user can start a fresh search immediately */
+  input.addEventListener('click', () => {
+    input.value = '';
+    suggestions.classList.remove('active');
+  });
 }
 
 function handleSearchSelect(type, id, text) {

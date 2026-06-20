@@ -297,7 +297,6 @@ function openLightbox(src, name) {
 /* Shared infinite card marquee — rotates DOM nodes, drag/swipe both directions */
 function startCardMarquee(track, wrap, speed) {
   if (!track || !wrap) return;
-  /* Reset any prior scroll/transform so we always start from the first card */
   wrap.scrollLeft = 0;
   track.style.transform = 'translateX(0)';
   let offset = 0, autoRunning = true, dragActive = false, prevX = 0;
@@ -309,14 +308,19 @@ function startCardMarquee(track, wrap, speed) {
   }
 
   function shift(delta) {
-    offset += delta;
     const cw = cardW();
-    if (cw > 0) {
-      while (offset >= cw) { track.appendChild(track.firstElementChild); offset -= cw; }
-      while (offset < 0)   { track.prepend(track.lastElementChild);      offset += cw; }
-    }
+    if (cw <= 0) return; /* layout not ready — skip to avoid offset accumulation */
+    offset += delta;
+    while (offset >= cw) { track.appendChild(track.firstElementChild); offset -= cw; }
+    while (offset < 0)   { track.prepend(track.lastElementChild);      offset += cw; }
     track.style.transform = `translateX(-${offset}px)`;
   }
+
+  /* After layout is ready, position so first card enters from the right edge */
+  setTimeout(() => {
+    const ww = wrap.clientWidth;
+    if (ww > 0 && track.children.length > 1) shift(-ww);
+  }, 0);
 
   function tick() {
     if (autoRunning && !dragActive) shift(speed);

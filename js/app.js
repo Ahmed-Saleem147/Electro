@@ -294,31 +294,59 @@ function openLightbox(src, name) {
 ════════════════════════════════════════ */
 
 /* Categories */
-/* Shared infinite card marquee — rotates DOM nodes, no duplication */
+/* Shared infinite card marquee — rotates DOM nodes, drag/swipe both directions */
 function startCardMarquee(track, wrap, speed) {
   if (!track || !wrap) return;
-  let offset = 0, paused = false, raf;
-  wrap.addEventListener('mouseenter', () => paused = true);
-  wrap.addEventListener('mouseleave', () => paused = false);
-  wrap.addEventListener('touchstart', () => paused = true, {passive:true});
-  wrap.addEventListener('touchend',   () => setTimeout(() => paused = false, 1200), {passive:true});
-  function tick() {
-    if (!paused) {
-      offset += speed;
-      const first = track.firstElementChild;
-      if (first) {
-        const gap = parseFloat(getComputedStyle(track).gap) || 12;
-        const cardW = first.offsetWidth + gap;
-        if (offset >= cardW) {
-          track.appendChild(first);   // move first card to end
-          offset -= cardW;            // compensate so nothing jumps
-        }
-      }
-      track.style.transform = `translateX(-${offset}px)`;
-    }
-    raf = requestAnimationFrame(tick);
+  let offset = 0, autoRunning = true, dragActive = false, prevX = 0;
+
+  function cardW() {
+    const first = track.firstElementChild;
+    if (!first) return 0;
+    return first.offsetWidth + (parseFloat(getComputedStyle(track).gap) || 12);
   }
-  raf = requestAnimationFrame(tick);
+
+  function shift(delta) {
+    offset += delta;
+    const cw = cardW();
+    if (cw > 0) {
+      while (offset >= cw) { track.appendChild(track.firstElementChild); offset -= cw; }
+      while (offset < 0)   { track.prepend(track.lastElementChild);      offset += cw; }
+    }
+    track.style.transform = `translateX(-${offset}px)`;
+  }
+
+  function tick() {
+    if (autoRunning && !dragActive) shift(speed);
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  /* mouse drag */
+  wrap.style.cursor = 'grab';
+  wrap.addEventListener('mousedown', e => {
+    dragActive = true; autoRunning = false;
+    prevX = e.clientX; wrap.style.cursor = 'grabbing'; e.preventDefault();
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragActive) return;
+    shift(prevX - e.clientX); prevX = e.clientX;
+  });
+  document.addEventListener('mouseup', () => {
+    if (!dragActive) return;
+    dragActive = false; autoRunning = true; wrap.style.cursor = 'grab';
+  });
+
+  /* touch swipe */
+  wrap.addEventListener('touchstart', e => {
+    dragActive = true; autoRunning = false; prevX = e.touches[0].clientX;
+  }, {passive:true});
+  wrap.addEventListener('touchmove', e => {
+    if (!dragActive) return;
+    shift(prevX - e.touches[0].clientX); prevX = e.touches[0].clientX;
+  }, {passive:true});
+  wrap.addEventListener('touchend', () => {
+    dragActive = false; setTimeout(() => { autoRunning = true; }, 800);
+  }, {passive:true});
 }
 
 function renderCategories() {
@@ -373,14 +401,25 @@ function renderFlashProducts() {
 /* Featured Products */
 let visibleCount = 8;
 let activeFilter = 'all';
+let shuffledAll = null;
 
 function renderFeaturedProducts(filter = 'all', append = false) {
   const grid = document.getElementById('featuredGrid');
   if (!grid) return;
   activeFilter = filter;
 
-  let filtered = PRODUCTS;
-  if (filter !== 'all') {
+  let filtered;
+  if (filter === 'all') {
+    if (!shuffledAll) {
+      shuffledAll = [...PRODUCTS];
+      for (let i = shuffledAll.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledAll[i], shuffledAll[j]] = [shuffledAll[j], shuffledAll[i]];
+      }
+    }
+    filtered = shuffledAll;
+  } else {
+    shuffledAll = null;
     filtered = PRODUCTS.filter(p => p.tags.includes(filter));
   }
 
@@ -391,7 +430,6 @@ function renderFeaturedProducts(filter = 'all', append = false) {
   updateWishlistButtons();
   triggerReveal();
 
-  // Load more button
   const lmBtn = document.getElementById('loadMoreBtn');
   if (lmBtn) {
     lmBtn.style.display = filtered.length > showing.length ? 'inline-flex' : 'none';
@@ -403,10 +441,10 @@ function loadMore() {
   const grid = document.getElementById('featuredGrid');
   if (!grid) return;
 
-  let filtered = PRODUCTS;
-  if (activeFilter !== 'all') {
-    filtered = PRODUCTS.filter(p => p.tags.includes(activeFilter));
-  }
+  const filtered = (activeFilter === 'all')
+    ? (shuffledAll || PRODUCTS)
+    : PRODUCTS.filter(p => p.tags.includes(activeFilter));
+
   const showing = filtered.slice(0, visibleCount);
   grid.innerHTML = showing.map(p => renderProductCard(p)).join('');
   updateWishlistButtons();
@@ -537,34 +575,13 @@ function initSearch() {
   const input = document.getElementById('searchInput');
   const suggestions = document.getElementById('searchSuggestions');
   const btn = document.getElementById('searchBtn');
+  const bar = document.getElementById('searchBar');
 
   if (!input || !suggestions) return;
 
-  input.addEventListener('input', () => {
-    const q = input.value.trim().toLowerCase();
-    if (q.length < 2) { suggestions.classList.remove('active'); return; }
-
-    const matches = SEARCH_INDEX.filter(item => item.text.toLowerCase().includes(q)).slice(0, 7);
-
-    if (matches.length === 0) { suggestions.classList.remove('active'); return; }
-
-    suggestions.innerHTML = matches.map(item => `
-      <div class="suggestion-item" onclick="handleSearchSelect('${item.type}','${item.id}','${item.text.replace(/'/g, "\\'")}')">
-        <span style="font-size:18px">${item.icon}</span>
-        <div>
-          <div style="font-size:13.5px;font-weight:600;color:var(--text-dark)">${highlightMatch(item.text, q)}</div>
-          <div style="font-size:12px;color:var(--text-muted)">${item.sub} • ${capitalise(item.type)}</div>
-        </div>
-      </div>
-    `).join('');
-    suggestions.classList.add('active');
-  });
-
-  input.addEventListener('focus', () => { if (input.value.length >= 2) suggestions.classList.add('active'); });
-
-  document.addEventListener('click', e => {
-    if (!e.target.closest('#searchBar')) suggestions.classList.remove('active');
-  });
+  /* SKU/model lookup for fast matching */
+  const skuMap = {};
+  PRODUCTS.forEach(p => { if (p.model) skuMap[p.id] = p.model.toLowerCase(); });
 
   function doSearch() {
     const q = input.value.trim();
@@ -576,7 +593,62 @@ function initSearch() {
     window.location.href = url;
   }
 
-  if (btn) btn.addEventListener('click', doSearch);
+  /* Mobile: tap icon → expand bar; second tap → search */
+  if (btn) {
+    btn.addEventListener('click', e => {
+      if (window.innerWidth < 1024 && bar && !bar.classList.contains('mobile-open')) {
+        e.preventDefault(); e.stopPropagation();
+        bar.classList.add('mobile-open');
+        input.focus();
+        return;
+      }
+      doSearch();
+    });
+  }
+
+  document.addEventListener('click', e => {
+    if (bar && !bar.contains(e.target)) {
+      suggestions.classList.remove('active');
+      if (window.innerWidth < 1024) bar.classList.remove('mobile-open');
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && bar) {
+      bar.classList.remove('mobile-open');
+      suggestions.classList.remove('active');
+    }
+  });
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    if (q.length < 2) { suggestions.classList.remove('active'); return; }
+
+    /* Match by name OR by SKU/model number */
+    const matches = SEARCH_INDEX.filter(item => {
+      if (item.text.toLowerCase().includes(q)) return true;
+      if (item.type === 'product') return (skuMap[item.id] || '').includes(q);
+      return false;
+    }).slice(0, 7);
+
+    if (matches.length === 0) { suggestions.classList.remove('active'); return; }
+
+    suggestions.innerHTML = matches.map(item => {
+      const sku = item.type === 'product' && skuMap[item.id] ? skuMap[item.id].toUpperCase() : '';
+      const subText = sku ? `${item.sub} · ${sku}` : item.sub;
+      return `
+      <div class="suggestion-item" onclick="handleSearchSelect('${item.type}','${item.id}','${item.text.replace(/'/g, "\\'")}')">
+        <span style="font-size:18px">${item.icon}</span>
+        <div>
+          <div style="font-size:13.5px;font-weight:600;color:var(--text-dark)">${highlightMatch(item.text, q)}</div>
+          <div style="font-size:12px;color:var(--text-muted)">${subText} • ${capitalise(item.type)}</div>
+        </div>
+      </div>`;
+    }).join('');
+    suggestions.classList.add('active');
+  });
+
+  input.addEventListener('focus', () => { if (input.value.length >= 2) suggestions.classList.add('active'); });
   input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
 }
 
@@ -647,6 +719,18 @@ function initSidebars() {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') { closeCart(); closeWishlist(); closeAccount(); }
   });
+}
+
+/* ════════════════════════════════════════
+   TRUST STRIP MARQUEE (mobile only)
+════════════════════════════════════════ */
+function initTrustMarquee() {
+  if (window.innerWidth >= 768) return;
+  const strip = document.querySelector('.trust-strip');
+  const inner = document.querySelector('.trust-inner');
+  if (!strip || !inner) return;
+  strip.style.overflow = 'hidden';
+  startCardMarquee(inner, strip, 0.45);
 }
 
 /* ════════════════════════════════════════
@@ -822,6 +906,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch(e) {}
   try { startCountdown(); } catch(e) {}
   try { initSearch(); } catch(e) {}
+  try { initTrustMarquee(); } catch(e) {}
   try { initSidebars(); } catch(e) {}
   try { initHeaderScroll(); } catch(e) {}
   try { initMobileNav(); } catch(e) {}

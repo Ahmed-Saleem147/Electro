@@ -573,83 +573,65 @@ function startCountdown() {
 /* ════════════════════════════════════════
    MOBILE SEARCH OVERLAY
 ════════════════════════════════════════ */
-function initMobileSearch() {
-  if (window.innerWidth >= 1024) return;
-  if (document.getElementById('mobileSearchOverlay')) return; /* already initialised */
+/* ════════════════════════════════════════
+   SEARCH PANEL  (right-side drawer, all devices)
+════════════════════════════════════════ */
+function initSearchPanel() {
+  const panel    = document.getElementById('searchPanel');
+  const backdrop = document.getElementById('searchPanelBackdrop');
+  const closeBtn = document.getElementById('searchPanelClose');
+  const input    = document.getElementById('searchPanelInput');
+  const sugs     = document.getElementById('searchPanelSugs');
+  const toggle   = document.getElementById('searchToggle');
+  if (!panel || !input) return;
 
-  /* Build overlay */
-  const overlay = document.createElement('div');
-  overlay.id = 'mobileSearchOverlay';
-  overlay.className = 'mobile-search-overlay';
-  overlay.innerHTML = `
-    <div class="mobile-search-row">
-      <div class="mobile-search-input-wrap">
-        <input type="text" id="mobileSearchInput" class="mobile-search-input"
-               placeholder="Search products, brands, SKU..." autocomplete="off">
-        <button class="mobile-search-submit" id="mobileSearchSubmit">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-      <button class="mobile-search-close" id="mobileSearchClose">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <div id="mobileSearchSugs" class="mobile-search-sug-list"></div>`;
-  document.body.appendChild(overlay);
-
-  const mInput  = overlay.querySelector('#mobileSearchInput');
-  const mSugs   = overlay.querySelector('#mobileSearchSugs');
-  const mClose  = overlay.querySelector('#mobileSearchClose');
-  const mSubmit = overlay.querySelector('#mobileSearchSubmit');
-
-  function openOverlay() {
-    if (overlay.classList.contains('open')) return;
-    /* Rebuild skuMap here so it picks up any admin edits */
+  function openPanel() {
     const skuMap = {};
     (window.PRODUCTS || []).forEach(p => { if (p.model) skuMap[p.id] = p.model.toLowerCase(); });
-    overlay._skuMap = skuMap;
-    overlay.classList.add('open');
+    panel._skuMap = skuMap;
+    panel.classList.add('open');
+    if (backdrop) backdrop.classList.add('open');
     document.body.style.overflow = 'hidden';
-    setTimeout(() => { try { mInput.focus(); } catch(e){} }, 80);
+    setTimeout(() => { try { input.focus(); } catch(e){} }, 80);
   }
-  function closeOverlay() {
-    overlay.classList.remove('open');
+  function closePanel() {
+    panel.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('open');
     document.body.style.overflow = '';
-    mInput.value = '';
-    mSugs.innerHTML = '';
+    input.value = '';
+    sugs.innerHTML = '';
   }
   function doSearch() {
-    const q = mInput.value.trim();
+    const q = input.value.trim();
     if (!q) return;
     window.location.href = `shop.html?q=${encodeURIComponent(q)}`;
   }
 
-  /* Expose globally so inline onclick and other code can open it */
-  window.openMobileSearch = openOverlay;
+  if (toggle) {
+    toggle.addEventListener('click', openPanel);
+    toggle.addEventListener('touchend', e => { e.preventDefault(); openPanel(); }, { passive: false });
+  }
+  if (closeBtn) closeBtn.addEventListener('click', closePanel);
+  if (backdrop) backdrop.addEventListener('click', closePanel);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
 
-  mClose.addEventListener('click', closeOverlay);
-  mSubmit.addEventListener('click', doSearch);
-  mInput.addEventListener('keydown', e => {
-    if (e.key === 'Enter') doSearch();
-    if (e.key === 'Escape') closeOverlay();
-  });
-
-  mInput.addEventListener('input', () => {
-    const q = mInput.value.trim().toLowerCase();
-    if (q.length < 2) { mSugs.innerHTML = ''; return; }
-    const skuMap = overlay._skuMap || {};
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    if (q.length < 2) { sugs.innerHTML = ''; return; }
+    const skuMap = panel._skuMap || {};
     const idx = window.SEARCH_INDEX || [];
     const matches = idx.filter(item => {
       if (item.text.toLowerCase().includes(q)) return true;
       if (item.type === 'product') return (skuMap[item.id] || '').includes(q);
       return false;
-    }).slice(0, 7);
-    if (!matches.length) { mSugs.innerHTML = ''; return; }
-    mSugs.innerHTML = matches.map(item => {
+    }).slice(0, 8);
+    if (!matches.length) { sugs.innerHTML = ''; return; }
+    sugs.innerHTML = matches.map(item => {
       const sku = item.type === 'product' && skuMap[item.id] ? ' · ' + skuMap[item.id].toUpperCase() : '';
       return `
-        <div class="mobile-search-sug-item" onclick="handleSearchSelect('${item.type}','${item.id}','${item.text.replace(/'/g,"\\'")}')">
-          <span style="font-size:18px">${item.icon}</span>
+        <div class="search-panel-sug-item" onclick="handleSearchSelect('${item.type}','${item.id}','${item.text.replace(/'/g,"\\'")}');document.getElementById('searchPanelClose').click()">
+          <span style="font-size:20px">${item.icon}</span>
           <div>
             <div style="font-size:14px;font-weight:600;color:var(--text-dark)">${highlightMatch(item.text, q)}</div>
             <div style="font-size:12px;color:var(--text-muted)">${item.sub}${sku} · ${capitalise(item.type)}</div>
@@ -658,95 +640,11 @@ function initMobileSearch() {
     }).join('');
   });
 
-  /* Document-level touch listener — most reliable on all mobile browsers */
-  document.addEventListener('touchstart', e => {
-    const bar = document.getElementById('searchBar');
-    if (bar && bar.contains(e.target)) {
-      e.preventDefault();
-      openOverlay();
-    }
-  }, { passive: false });
-  /* Click fallback (also covers hybrid/PWA environments) */
-  document.addEventListener('click', e => {
-    const bar = document.getElementById('searchBar');
-    if (bar && bar.contains(e.target) && !overlay.classList.contains('open')) {
-      openOverlay();
-    }
-  });
+  /* Expose globally for inline onclick fallback */
+  window.openMobileSearch = openPanel;
 }
 
-/* ════════════════════════════════════════
-   SEARCH
-════════════════════════════════════════ */
-function initSearch() {
-  const input = document.getElementById('searchInput');
-  const suggestions = document.getElementById('searchSuggestions');
-  const btn = document.getElementById('searchBtn');
-  const bar = document.getElementById('searchBar');
-
-  if (!input || !suggestions) return;
-
-  /* SKU/model lookup for fast matching */
-  const skuMap = {};
-  PRODUCTS.forEach(p => { if (p.model) skuMap[p.id] = p.model.toLowerCase(); });
-
-  function doSearch() {
-    const q = input.value.trim();
-    const cat = document.getElementById('searchCategory')?.value || '';
-    if (!q && !cat) return;
-    let url = 'shop.html?';
-    if (q) url += `q=${encodeURIComponent(q)}`;
-    if (cat) url += `${q ? '&' : ''}cat=${encodeURIComponent(cat)}`;
-    window.location.href = url;
-  }
-
-  if (btn) btn.addEventListener('click', doSearch);
-
-  document.addEventListener('click', e => {
-    if (bar && !bar.contains(e.target)) suggestions.classList.remove('active');
-  });
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') suggestions.classList.remove('active');
-  });
-
-  input.addEventListener('input', () => {
-    const q = input.value.trim().toLowerCase();
-    if (q.length < 2) { suggestions.classList.remove('active'); return; }
-
-    /* Match by name OR by SKU/model number */
-    const matches = SEARCH_INDEX.filter(item => {
-      if (item.text.toLowerCase().includes(q)) return true;
-      if (item.type === 'product') return (skuMap[item.id] || '').includes(q);
-      return false;
-    }).slice(0, 7);
-
-    if (matches.length === 0) { suggestions.classList.remove('active'); return; }
-
-    suggestions.innerHTML = matches.map(item => {
-      const sku = item.type === 'product' && skuMap[item.id] ? skuMap[item.id].toUpperCase() : '';
-      const subText = sku ? `${item.sub} · ${sku}` : item.sub;
-      return `
-      <div class="suggestion-item" onclick="handleSearchSelect('${item.type}','${item.id}','${item.text.replace(/'/g, "\\'")}')">
-        <span style="font-size:18px">${item.icon}</span>
-        <div>
-          <div style="font-size:13.5px;font-weight:600;color:var(--text-dark)">${highlightMatch(item.text, q)}</div>
-          <div style="font-size:12px;color:var(--text-muted)">${subText} • ${capitalise(item.type)}</div>
-        </div>
-      </div>`;
-    }).join('');
-    suggestions.classList.add('active');
-  });
-
-  input.addEventListener('focus', () => { if (input.value.length >= 2) suggestions.classList.add('active'); });
-  input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
-  /* Clear text + suggestions on mousedown (fires before focus, no suggestion flash) */
-  input.addEventListener('mousedown', () => {
-    input.value = '';
-    suggestions.innerHTML = '';
-    suggestions.classList.remove('active');
-  });
-}
+function initSearch() { /* replaced by initSearchPanel — kept as stub */ }
 
 function handleSearchSelect(type, id, text) {
   const el = document.getElementById('searchSuggestions');
@@ -990,7 +888,7 @@ async function trackVisit() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   /* Mobile search must be ready immediately — before the Supabase wait */
-  try { initMobileSearch(); } catch(e) {}
+  try { initSearchPanel(); } catch(e) {}
 
   await Promise.race([window.obvSyncPromise || Promise.resolve(), new Promise(r => setTimeout(r, 3000))]);
   try { applyOverrides(); } catch(e) {}
@@ -1000,11 +898,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   try { renderBrands(); } catch(e) {}
   try { renderRecentlyViewed(); } catch(e) {}
   try {
+    const html = BRANDS.map(b => `<li><a href="shop.html?brand=${b.id}">${b.name}</a></li>`).join('');
     const brandDd = document.getElementById('brandDropdown');
-    if (brandDd) brandDd.innerHTML = BRANDS.map(b => `<li><a href="shop.html?brand=${b.id}">${b.name}</a></li>`).join('');
+    if (brandDd) brandDd.innerHTML = html;
+    /* Also populate the desktop nav brand dropdown */
+    const deskBrandDd = document.getElementById('desktopBrandDropdown');
+    if (deskBrandDd) deskBrandDd.innerHTML = html;
   } catch(e) {}
   try { startCountdown(); } catch(e) {}
   try { initSearch(); } catch(e) {}
+  try { initSearchPanel(); } catch(e) {}
   try { initTrustMarquee(); } catch(e) {}
   try { initSidebars(); } catch(e) {}
   try { initHeaderScroll(); } catch(e) {}

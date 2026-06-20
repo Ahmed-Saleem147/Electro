@@ -47,28 +47,32 @@
       <img src="img/logo.png" alt="Orbiva Technologies" class="logo-img">
     </a>
 
-    <!-- Search Bar -->
-    <div class="search-bar" id="searchBar" onclick="if(window.innerWidth<1024&&window.openMobileSearch)window.openMobileSearch()">
-      <div class="search-input-wrap">
-        <select class="search-category" id="searchCategory">
-          <option value="">All Categories</option>
-          <option value="tv">Televisions</option>
-          <option value="ac">Air Conditioners</option>
-          <option value="fridge">Refrigerators</option>
-          <option value="laundry">Washing Machines</option>
-          <option value="kitchen">Kitchen Appliances</option>
-          <option value="audio">Audio Devices</option>
-          <option value="small">Other Appliances</option>
-        </select>
-        <input type="text" class="search-input" id="searchInput" placeholder="Search for products, brands..." />
-        <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+    <!-- Desktop Navigation (hidden on mobile, shown on 1024px+) -->
+    <nav class="desktop-nav" id="desktopNav">
+      <a href="shop.html" class="desktop-nav-link">Shop</a>
+      <div class="desktop-nav-item">
+        <a href="shop.html" class="desktop-nav-link">Brands <i class="fas fa-chevron-down fa-xs"></i></a>
+        <ul class="desktop-dropdown" id="desktopBrandDropdown"></ul>
       </div>
-      <!-- Search Suggestions Dropdown -->
-      <div class="search-suggestions" id="searchSuggestions"></div>
-    </div>
+      <div class="desktop-nav-item">
+        <a href="shop.html" class="desktop-nav-link">Categories <i class="fas fa-chevron-down fa-xs"></i></a>
+        <ul class="desktop-dropdown">
+          <li><a href="shop.html?cat=tv"><i class="fas fa-tv" style="width:18px;color:var(--primary)"></i> Televisions</a></li>
+          <li><a href="shop.html?cat=audio"><i class="fas fa-music" style="width:18px;color:#6d28d9"></i> Audio Devices</a></li>
+          <li><a href="shop.html?cat=ac"><i class="fas fa-snowflake" style="width:18px;color:#0ea5e9"></i> Air Conditioners</a></li>
+          <li><a href="shop.html?cat=fridge"><i class="fas fa-cube" style="width:18px;color:#0f766e"></i> Refrigerators</a></li>
+          <li><a href="shop.html?cat=laundry"><i class="fas fa-tshirt" style="width:18px;color:#7c3aed"></i> Washing Machines</a></li>
+          <li><a href="shop.html?cat=kitchen"><i class="fas fa-utensils" style="width:18px;color:#b45309"></i> Kitchen Appliances</a></li>
+          <li><a href="shop.html?cat=small"><i class="fas fa-plug" style="width:18px;color:#be185d"></i> Other Appliances</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- Header Actions -->
     <div class="header-actions">
+      <button class="action-btn" id="searchToggle" title="Search">
+        <i class="fas fa-search"></i>
+      </button>
       <button class="action-btn" id="wishlistToggle" title="Wishlist">
         <i class="fas fa-heart"></i>
         <span class="badge" id="wishlistCount">0</span>
@@ -676,6 +680,26 @@
 <script src="js/app.js"></script>
 <script src="js/cart.js"></script>
 
+
+<!-- ============================================================
+     SEARCH PANEL (right-side drawer)
+============================================================ -->
+<div class="search-panel" id="searchPanel">
+  <div class="search-panel-hd">
+    <h2 class="search-panel-title">Search</h2>
+    <button class="search-panel-close" id="searchPanelClose">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="search-panel-bd">
+    <div class="search-panel-input-wrap">
+      <input type="text" id="searchPanelInput" class="search-panel-input"
+             placeholder="Search products, brands, SKU…" autocomplete="off">
+    </div>
+    <div id="searchPanelSugs" class="search-panel-sugs"></div>
+  </div>
+</div>
+<div class="search-panel-backdrop" id="searchPanelBackdrop"></div>
 
 <a class="whatsapp-float" href="https://wa.me/233502578905" target="_blank" rel="noopener" title="Chat with us on WhatsApp">
   <i class="fab fa-whatsapp"></i>

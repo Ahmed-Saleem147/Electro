@@ -62,12 +62,24 @@ function applyOverrides() {
       if (!(PRODUCTS[i].images && PRODUCTS[i].images.length)) PRODUCTS.splice(i, 1);
     }
   }
-  // Apply store settings (WhatsApp, phone, store name)
+  // Apply store settings (WhatsApp, phone, email, store name)
   try {
     const s = JSON.parse(localStorage.getItem('obv_settings') || '{}');
     if (s.storePhone) {
-      document.querySelectorAll('[data-store-phone]').forEach(el => el.textContent = s.storePhone);
-      document.querySelectorAll('a[href^="tel:"]').forEach(el => { el.href = 'tel:' + s.storePhone.replace(/\s/g,''); });
+      const ph = s.storePhone;
+      document.querySelectorAll('[data-store-phone]').forEach(el => el.textContent = ph);
+      document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+        el.href = 'tel:' + ph.replace(/\D/g, '');
+        Array.from(el.childNodes).filter(n => n.nodeType === 3 && n.textContent.trim()).forEach(n => { n.textContent = ' ' + ph; });
+      });
+    }
+    if (s.storeEmail) {
+      const em = s.storeEmail;
+      document.querySelectorAll('[data-store-email]').forEach(el => el.textContent = em);
+      document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+        el.href = 'mailto:' + em;
+        Array.from(el.childNodes).filter(n => n.nodeType === 3 && n.textContent.trim()).forEach(n => { n.textContent = ' ' + em; });
+      });
     }
     if (s.storeWhatsapp || s.storePhone) {
       const wa = (s.storeWhatsapp || s.storePhone).replace(/\D/g,'');

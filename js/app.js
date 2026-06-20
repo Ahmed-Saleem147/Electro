@@ -620,11 +620,26 @@ function initSearchPanel() {
     if (q.length < 2) { sugs.innerHTML = ''; return; }
     const skuMap = panel._skuMap || {};
     const idx = window.SEARCH_INDEX || [];
-    const matches = idx.filter(item => {
-      if (item.text.toLowerCase().includes(q)) return true;
-      if (item.type === 'product') return (skuMap[item.id] || '').includes(q);
-      return false;
-    }).slice(0, 8);
+
+    function scoreItem(item) {
+      const name = item.text.toLowerCase();
+      const sub  = (item.sub || '').toLowerCase();
+      const sku  = (skuMap[item.id] || '').toLowerCase();
+      if (name === q)            return 6;
+      if (name.startsWith(q))   return 5;
+      if (name.includes(q))     return 4;
+      if (sku && sku.includes(q)) return 3;
+      if (sub.startsWith(q))    return 2;
+      if (sub.includes(q))      return 1;
+      return 0;
+    }
+
+    const matches = idx
+      .map(item => ({ item, score: scoreItem(item) }))
+      .filter(({ score }) => score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 8)
+      .map(({ item }) => item);
     if (!matches.length) { sugs.innerHTML = ''; return; }
     sugs.innerHTML = matches.map(item => {
       const sku = item.type === 'product' && skuMap[item.id] ? ' · ' + skuMap[item.id].toUpperCase() : '';

@@ -55,7 +55,30 @@ function initShopPage() {
   // Apply filters from URL
   if (cat)    filtered = filtered.filter(p => p.category === cat);
   if (brand)  filtered = filtered.filter(p => p.brandId === brand || p.brand.toLowerCase() === brand.toLowerCase());
-  if (q)      filtered = filtered.filter(p => p.name.toLowerCase().includes(q.toLowerCase()) || p.brand.toLowerCase().includes(q.toLowerCase()));
+  if (q) {
+    const ql = q.toLowerCase();
+    filtered = filtered.filter(p => {
+      const name  = p.name.toLowerCase();
+      const brand = p.brand.toLowerCase();
+      const model = (p.model || '').toLowerCase();
+      const desc  = (p.description || '').toLowerCase();
+      const tags  = (p.tags || []).join(' ').toLowerCase();
+      const cat   = (CATEGORIES.find(c => c.id === p.category) || {}).name?.toLowerCase() || '';
+      return name.includes(ql) || brand.includes(ql) || model.includes(ql) || desc.includes(ql) || tags.includes(ql) || cat.includes(ql);
+    });
+    filtered.sort((a, b) => {
+      const ql2 = ql;
+      function rank(p) {
+        const n = p.name.toLowerCase();
+        if (n === ql2) return 5;
+        if (n.startsWith(ql2)) return 4;
+        if (n.includes(ql2)) return 3;
+        if (p.brand.toLowerCase().includes(ql2)) return 2;
+        return 1;
+      }
+      return rank(b) - rank(a);
+    });
+  }
   if (sub)    filtered = applySubFilter(filtered, sub);
   if (filter === 'deals' || filter === 'flash') filtered = filtered.filter(p => p.flashSale || p.discount >= 25);
   if (filter === 'clearance') filtered = filtered.filter(p => p.discount >= 30);

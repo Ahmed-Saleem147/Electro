@@ -297,6 +297,9 @@ function openLightbox(src, name) {
 /* Shared infinite card marquee — rotates DOM nodes, drag/swipe both directions */
 function startCardMarquee(track, wrap, speed) {
   if (!track || !wrap) return;
+  /* Reset any prior scroll/transform so we always start from the first card */
+  wrap.scrollLeft = 0;
+  track.style.transform = 'translateX(0)';
   let offset = 0, autoRunning = true, dragActive = false, prevX = 0;
 
   function cardW() {
@@ -566,6 +569,100 @@ function startCountdown() {
     if (rem > 0) requestAnimationFrame(() => setTimeout(update, 1000));
   }
   update();
+}
+
+/* ════════════════════════════════════════
+   MOBILE SEARCH OVERLAY
+════════════════════════════════════════ */
+function initMobileSearch() {
+  if (window.innerWidth >= 1024) return;
+
+  /* Build overlay once */
+  const overlay = document.createElement('div');
+  overlay.id = 'mobileSearchOverlay';
+  overlay.className = 'mobile-search-overlay';
+  overlay.innerHTML = `
+    <div class="mobile-search-row">
+      <div class="mobile-search-input-wrap">
+        <input type="text" id="mobileSearchInput" class="mobile-search-input"
+               placeholder="Search products, brands, SKU..." autocomplete="off">
+        <button class="mobile-search-submit" id="mobileSearchSubmit">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <button class="mobile-search-close" id="mobileSearchClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div id="mobileSearchSugs" class="mobile-search-sug-list"></div>`;
+  document.body.appendChild(overlay);
+
+  const mInput   = document.getElementById('mobileSearchInput');
+  const mSugs    = document.getElementById('mobileSearchSugs');
+  const mClose   = document.getElementById('mobileSearchClose');
+  const mSubmit  = document.getElementById('mobileSearchSubmit');
+
+  const skuMap = {};
+  PRODUCTS.forEach(p => { if (p.model) skuMap[p.id] = p.model.toLowerCase(); });
+
+  function openOverlay() {
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => mInput.focus(), 60);
+  }
+  function closeOverlay() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    mInput.value = '';
+    mSugs.innerHTML = '';
+  }
+  function doSearch() {
+    const q = mInput.value.trim();
+    if (!q) return;
+    window.location.href = `shop.html?q=${encodeURIComponent(q)}`;
+  }
+
+  mClose.addEventListener('click', closeOverlay);
+  mSubmit.addEventListener('click', doSearch);
+  mInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') doSearch();
+    if (e.key === 'Escape') closeOverlay();
+  });
+
+  mInput.addEventListener('input', () => {
+    const q = mInput.value.trim().toLowerCase();
+    if (q.length < 2) { mSugs.innerHTML = ''; return; }
+    const matches = SEARCH_INDEX.filter(item => {
+      if (item.text.toLowerCase().includes(q)) return true;
+      if (item.type === 'product') return (skuMap[item.id] || '').includes(q);
+      return false;
+    }).slice(0, 7);
+    if (!matches.length) { mSugs.innerHTML = ''; return; }
+    mSugs.innerHTML = matches.map(item => {
+      const sku = item.type === 'product' && skuMap[item.id] ? ' · ' + skuMap[item.id].toUpperCase() : '';
+      return `
+        <div class="mobile-search-sug-item" onclick="handleSearchSelect('${item.type}','${item.id}','${item.text.replace(/'/g,"\\'")}')">
+          <span style="font-size:18px">${item.icon}</span>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:var(--text-dark)">${highlightMatch(item.text, q)}</div>
+            <div style="font-size:12px;color:var(--text-muted)">${item.sub}${sku} · ${capitalise(item.type)}</div>
+          </div>
+        </div>`;
+    }).join('');
+  });
+
+  /* Make the header search bar a tap-to-open trigger on mobile */
+  const bar = document.getElementById('searchBar');
+  const mainInput = document.getElementById('searchInput');
+  if (bar) {
+    bar.style.cursor = 'pointer';
+    bar.addEventListener('click', openOverlay);
+  }
+  if (mainInput) {
+    mainInput.setAttribute('readonly', 'readonly');
+    mainInput.style.cursor = 'pointer';
+    mainInput.addEventListener('focus', e => { e.target.blur(); openOverlay(); });
+  }
 }
 
 /* ════════════════════════════════════════
@@ -889,6 +986,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch(e) {}
   try { startCountdown(); } catch(e) {}
   try { initSearch(); } catch(e) {}
+  try { initMobileSearch(); } catch(e) {}
   try { initTrustMarquee(); } catch(e) {}
   try { initSidebars(); } catch(e) {}
   try { initHeaderScroll(); } catch(e) {}

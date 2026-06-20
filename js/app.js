@@ -316,11 +316,6 @@ function startCardMarquee(track, wrap, speed) {
     track.style.transform = `translateX(-${offset}px)`;
   }
 
-  /* After layout is ready, position so first card enters from the right edge */
-  setTimeout(() => {
-    const ww = wrap.clientWidth;
-    if (ww > 0 && track.children.length > 1) shift(-ww);
-  }, 0);
 
   function tick() {
     if (autoRunning && !dragActive) shift(speed);

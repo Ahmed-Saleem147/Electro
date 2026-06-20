@@ -1822,8 +1822,10 @@ input, select, textarea { font-family: inherit; }
     padding: 0 8px;
   }
 
-  /* Logo */
-  .logo-img { height: 42px; max-width: 140px; }
+  /* Logo + header layout — tighter on small phones */
+  .logo-img { height: 38px; max-width: 90px; }
+  .header-inner { gap: 6px; padding: 0 10px; }
+  .header-actions { gap: 0; }
 
   /* Trust strip — compact horizontal scroll */
   .trust-inner { gap: 0; }

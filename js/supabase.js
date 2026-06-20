@@ -28,7 +28,7 @@ function applyBranding() {
     if (!b.logoUrl && !b.logoSize) return;
     const url = b.logoUrl || 'img/logo.png';
     const size = (b.logoSize || 54) + 'px';
-    document.querySelectorAll('.logo-img').forEach(img => {
+    document.querySelectorAll('.logo-img, .admin-logo-img').forEach(img => {
       img.src = url;
       img.style.height = size;
       img.style.maxWidth = 'none';

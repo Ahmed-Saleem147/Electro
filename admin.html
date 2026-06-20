@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var b=JSON.parse(localStorage.getItem('obv_branding')||'{}');if(b.logoUrl){document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.admin-logo-img').forEach(function(i){i.src=b.logoUrl;if(b.logoSize)i.style.height=b.logoSize+'px';});});}}catch(e){}}());</script>
 <link rel="icon" type="image/jpeg" href="img/logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Orbiva Admin Portal</title>
@@ -209,7 +210,7 @@ textarea{resize:vertical;min-height:70px}
 <!-- Login -->
 <div id="loginScreen">
   <div class="login-box">
-    <img src="img/logo.png" alt="Orbiva" style="height:52px;border-radius:8px;margin-bottom:16px;background:#fff;padding:4px 8px">
+    <img src="" alt="Orbiva" class="admin-logo-img" style="height:52px;border-radius:8px;margin-bottom:16px;background:#fff;padding:4px 8px">
     <div class="login-logo">Admin Portal</div>
     <div class="login-sub">Orbiva Technologies — Management Console</div>
     <input type="password" id="loginPass" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')doLogin()">
@@ -222,7 +223,7 @@ textarea{resize:vertical;min-height:70px}
 <div id="app">
   <aside class="sidebar">
     <div class="sidebar-logo">
-      <img src="img/logo.png" alt="Orbiva">
+      <img src="" alt="Orbiva" class="admin-logo-img">
       <div class="sidebar-logo-sub">Admin Portal v2</div>
     </div>
     <nav class="sidebar-nav">

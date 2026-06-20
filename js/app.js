@@ -475,7 +475,7 @@ function renderBrands() {
     const logoHtml = logoSrc
       ? `<img src="${logoSrc}" alt="${b.name}" class="brand-logo-img" onerror="this.onerror=null;this.style.display='none';this.nextSibling.style.display='block'">`
       : '';
-    const textHtml = `<div style="font-size:20px;font-weight:800;color:var(--text-dark);${logoSrc ? 'display:none' : ''}">${b.name}</div>`;
+    const textHtml = `<div style="font-size:20px;font-weight:800;color:var(--text-dark);text-align:center;width:100%;${logoSrc ? 'display:none' : ''}">${b.name}</div>`;
     return `<div class="brand-card" onclick="window.location='shop.html?brand=${b.id}'">${logoHtml}${textHtml}</div>`;
   }).join('');
   if (window.innerWidth < 1024) startCardMarquee(grid, grid.parentElement, 0.5);

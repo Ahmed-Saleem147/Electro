@@ -577,8 +577,9 @@ function startCountdown() {
 ════════════════════════════════════════ */
 function initMobileSearch() {
   if (window.innerWidth >= 1024) return;
+  if (document.getElementById('mobileSearchOverlay')) return; /* already initialised */
 
-  /* Build overlay once */
+  /* Build overlay */
   const overlay = document.createElement('div');
   overlay.id = 'mobileSearchOverlay';
   overlay.className = 'mobile-search-overlay';
@@ -598,18 +599,20 @@ function initMobileSearch() {
     <div id="mobileSearchSugs" class="mobile-search-sug-list"></div>`;
   document.body.appendChild(overlay);
 
-  const mInput   = document.getElementById('mobileSearchInput');
-  const mSugs    = document.getElementById('mobileSearchSugs');
-  const mClose   = document.getElementById('mobileSearchClose');
-  const mSubmit  = document.getElementById('mobileSearchSubmit');
-
-  const skuMap = {};
-  PRODUCTS.forEach(p => { if (p.model) skuMap[p.id] = p.model.toLowerCase(); });
+  const mInput  = overlay.querySelector('#mobileSearchInput');
+  const mSugs   = overlay.querySelector('#mobileSearchSugs');
+  const mClose  = overlay.querySelector('#mobileSearchClose');
+  const mSubmit = overlay.querySelector('#mobileSearchSubmit');
 
   function openOverlay() {
+    if (overlay.classList.contains('open')) return;
+    /* Rebuild skuMap here so it picks up any admin edits */
+    const skuMap = {};
+    (window.PRODUCTS || []).forEach(p => { if (p.model) skuMap[p.id] = p.model.toLowerCase(); });
+    overlay._skuMap = skuMap;
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
-    setTimeout(() => mInput.focus(), 60);
+    setTimeout(() => { try { mInput.focus(); } catch(e){} }, 80);
   }
   function closeOverlay() {
     overlay.classList.remove('open');
@@ -623,6 +626,9 @@ function initMobileSearch() {
     window.location.href = `shop.html?q=${encodeURIComponent(q)}`;
   }
 
+  /* Expose globally so inline onclick and other code can open it */
+  window.openMobileSearch = openOverlay;
+
   mClose.addEventListener('click', closeOverlay);
   mSubmit.addEventListener('click', doSearch);
   mInput.addEventListener('keydown', e => {
@@ -633,7 +639,9 @@ function initMobileSearch() {
   mInput.addEventListener('input', () => {
     const q = mInput.value.trim().toLowerCase();
     if (q.length < 2) { mSugs.innerHTML = ''; return; }
-    const matches = SEARCH_INDEX.filter(item => {
+    const skuMap = overlay._skuMap || {};
+    const idx = window.SEARCH_INDEX || [];
+    const matches = idx.filter(item => {
       if (item.text.toLowerCase().includes(q)) return true;
       if (item.type === 'product') return (skuMap[item.id] || '').includes(q);
       return false;
@@ -652,20 +660,21 @@ function initMobileSearch() {
     }).join('');
   });
 
-  /* Transparent tap-catcher sitting on top of the entire search bar.
-     Catches all taps reliably regardless of which child element (input/select/btn)
-     the user touches — the select's native picker would otherwise swallow the event. */
-  const bar = document.getElementById('searchBar');
-  if (bar) {
-    /* Capture phase: fires before the <select> or <input> children can react,
-       so the native select picker never opens and no keyboard appears. */
-    bar.addEventListener('touchstart', e => {
+  /* Document-level touch listener — most reliable on all mobile browsers */
+  document.addEventListener('touchstart', e => {
+    const bar = document.getElementById('searchBar');
+    if (bar && bar.contains(e.target)) {
       e.preventDefault();
       openOverlay();
-    }, { capture: true, passive: false });
-    /* Click fallback for hybrid/desktop-mobile emulation */
-    bar.addEventListener('click', openOverlay, { capture: true });
-  }
+    }
+  }, { passive: false });
+  /* Click fallback (also covers hybrid/PWA environments) */
+  document.addEventListener('click', e => {
+    const bar = document.getElementById('searchBar');
+    if (bar && bar.contains(e.target) && !overlay.classList.contains('open')) {
+      openOverlay();
+    }
+  });
 }
 
 /* ════════════════════════════════════════
@@ -982,6 +991,9 @@ async function trackVisit() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+  /* Mobile search must be ready immediately — before the Supabase wait */
+  try { initMobileSearch(); } catch(e) {}
+
   await Promise.race([window.obvSyncPromise || Promise.resolve(), new Promise(r => setTimeout(r, 3000))]);
   try { applyOverrides(); } catch(e) {}
   try { renderCategories(); } catch(e) {}
@@ -995,7 +1007,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch(e) {}
   try { startCountdown(); } catch(e) {}
   try { initSearch(); } catch(e) {}
-  try { initMobileSearch(); } catch(e) {}
   try { initTrustMarquee(); } catch(e) {}
   try { initSidebars(); } catch(e) {}
   try { initHeaderScroll(); } catch(e) {}

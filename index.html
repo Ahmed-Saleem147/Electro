@@ -48,7 +48,7 @@
     </a>
 
     <!-- Search Bar -->
-    <div class="search-bar" id="searchBar">
+    <div class="search-bar" id="searchBar" onclick="if(window.innerWidth<1024&&window.openMobileSearch)window.openMobileSearch()">
       <div class="search-input-wrap">
         <select class="search-category" id="searchCategory">
           <option value="">All Categories</option>

@@ -1502,13 +1502,14 @@ function exportProductsCSV(){
   const header=[
     'Product Name','Brand','SKU / Model','Category',
     'Selling Price (GH₵)','Original Price (GH₵)','Discount %',
-    'Has Image','Description',
+    'Image URLs','Description',
     ...specKeys.map(k=>'Spec: '+k),
     'ID'   // keep at end for re-import use
   ];
 
   const rows=prods.map(p=>{
-    const hasImg=!!(p.images&&p.images[0]);
+    const imgs=(p.images||[]).filter(u=>typeof u==='string'&&(u.startsWith('http')||u.startsWith('//')));
+    const imgUrls=imgs.join(' | ');
     const desc=(p.description||'').replace(/\n/g,' | ');
     const specVals=specKeys.map(k=>csvField((p.specs||{})[k]||''));
     return[
@@ -1519,7 +1520,7 @@ function exportProductsCSV(){
       p.price||'',
       p.oldPrice||'',
       p.discount||'',
-      hasImg?'Yes':'No',
+      csvField(imgUrls),
       csvField(desc),
       ...specVals,
       csvField(p.id)

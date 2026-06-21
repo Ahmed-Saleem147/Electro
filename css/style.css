@@ -1739,11 +1739,11 @@ input, select, textarea { font-family: inherit; }
 ================================================================ */
 .back-to-top {
   position: fixed; bottom: calc(var(--bottom-nav-h) + 12px); left: 14px;
-  width: 42px; height: 42px;
+  width: 32px; height: 32px;
   background: var(--primary); color: #fff;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 15px;
+  font-size: 12px;
   box-shadow: var(--shadow-md); z-index: 500;
   opacity: 0; visibility: hidden; transform: translateY(10px);
   transition: all var(--transition);
@@ -2254,6 +2254,12 @@ input, select, textarea { font-family: inherit; }
 
   /* Dropdown */
   .has-dropdown { position: relative; }
+  /* Invisible bridge: extends hover area 10px below the nav item so the
+     mouse can travel into the dropdown without triggering mouseleave */
+  .has-dropdown::after {
+    content: ''; position: absolute;
+    top: 100%; left: 0; right: 0; height: 10px;
+  }
   .dropdown {
     position: absolute; top: 100%; left: 0;
     background: #fff; border: 1px solid var(--border);
@@ -2263,10 +2269,10 @@ input, select, textarea { font-family: inherit; }
     min-width: 210px; padding: 8px 0;
     opacity: 0; visibility: hidden;
     transform: translateY(-4px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s 0.15s;
     z-index: 9999;
   }
-  .has-dropdown:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .has-dropdown:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s 0s; }
   .dropdown li a {
     display: flex; align-items: center; gap: 8px;
     padding: 10px 16px; font-size: 13.5px; color: var(--text-body);

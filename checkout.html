@@ -159,7 +159,7 @@
       <!-- Totals -->
       <div style="margin-top:8px">
         <div class="summary-row"><span>Subtotal</span><strong id="coSubtotal">GH₵ 0</strong></div>
-        <div class="summary-row"><span>Delivery</span><strong class="free-ship">Free</strong></div>
+        <div class="summary-row" id="deliveryRow"><span>Delivery</span><strong id="deliveryVal" class="free-ship">Free</strong></div>
         <div class="summary-row" id="promoRow" style="display:none;color:var(--success)"><span>Promo Discount</span><strong id="promoDiscount">-GH₵ 0</strong></div>
         <div class="summary-row summary-total"><span>Total</span><strong id="coTotal">GH₵ 0</strong></div>
       </div>
@@ -243,9 +243,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function renderCheckoutSummary() {
-  const itemsEl = document.getElementById('checkoutOrderItems');
+  const itemsEl    = document.getElementById('checkoutOrderItems');
   const subtotalEl = document.getElementById('coSubtotal');
-  const totalEl = document.getElementById('coTotal');
+  const totalEl    = document.getElementById('coTotal');
+  const delivRow   = document.getElementById('deliveryRow');
+  const delivVal   = document.getElementById('deliveryVal');
   if (!itemsEl) return;
 
   if (cart.length === 0) {
@@ -264,9 +266,33 @@ function renderCheckoutSummary() {
     </div>
   `).join('');
 
-  const total = getCartTotal();
-  if (subtotalEl) subtotalEl.textContent = fmt(total);
-  if (totalEl) totalEl.textContent = fmt(total);
+  const subtotal = getCartTotal();
+  if (subtotalEl) subtotalEl.textContent = fmt(subtotal);
+
+  // Delivery logic
+  const freeEnabled = localStorage.getItem('obv_freeDelivery') !== 'off';
+  const s = JSON.parse(localStorage.getItem('obv_settings') || '{}');
+  const threshold = s.deliveryThreshold !== undefined ? parseFloat(s.deliveryThreshold) : 500;
+  const fee       = s.deliveryFee       !== undefined ? parseFloat(s.deliveryFee)       : 0;
+
+  let deliveryFee = 0;
+  if (!freeEnabled) {
+    // Free delivery disabled — hide delivery row entirely
+    if (delivRow) delivRow.style.display = 'none';
+  } else {
+    if (delivRow) delivRow.style.display = '';
+    if (subtotal >= threshold || fee === 0) {
+      // Free delivery
+      deliveryFee = 0;
+      if (delivVal) { delivVal.textContent = 'Free'; delivVal.className = 'free-ship'; }
+    } else {
+      // Below threshold — show fee
+      deliveryFee = fee;
+      if (delivVal) { delivVal.textContent = fmt(fee); delivVal.className = ''; }
+    }
+  }
+
+  if (totalEl) totalEl.textContent = fmt(subtotal + deliveryFee);
 }
 
 let currentPaymentMethod = 'momo';

@@ -473,9 +473,20 @@ textarea{resize:vertical;min-height:70px}
               <span class="toggle-slider"></span>
             </label>
           </div>
-          <div style="display:flex;gap:8px;align-items:center">
+          <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
             <input type="text" id="s_deliveryText" placeholder="Orders above GH₵ 500" style="flex:1;font-size:13px">
             <button class="btn btn-outline btn-sm" onclick="saveDeliveryText()"><i class="fas fa-save"></i> Save Text</button>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="flex:1">
+              <label style="font-size:11px;color:var(--muted);display:block;margin-bottom:3px">Free delivery threshold (GH₵)</label>
+              <input type="number" id="s_deliveryThreshold" placeholder="500" min="0" style="width:100%;font-size:13px">
+            </div>
+            <div style="flex:1">
+              <label style="font-size:11px;color:var(--muted);display:block;margin-bottom:3px">Delivery fee below threshold (GH₵)</label>
+              <input type="number" id="s_deliveryFee" placeholder="0" min="0" style="width:100%;font-size:13px">
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="saveDeliverySettings()" style="align-self:flex-end"><i class="fas fa-save"></i> Save</button>
           </div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)">
@@ -1877,6 +1888,11 @@ function loadDisplaySettings(){
   document.getElementById('t_imgRequired').checked=localStorage.getItem('obv_img_required')==='on';
   const dtEl=document.getElementById('s_deliveryText');
   if(dtEl) dtEl.value=localStorage.getItem('obv_delivery_text')||'';
+  const s=lsGet('obv_settings',{});
+  const thrEl=document.getElementById('s_deliveryThreshold');
+  const feeEl=document.getElementById('s_deliveryFee');
+  if(thrEl) thrEl.value=s.deliveryThreshold!==undefined?s.deliveryThreshold:500;
+  if(feeEl) feeEl.value=s.deliveryFee!==undefined?s.deliveryFee:0;
 }
 function saveDeliveryText(){
   const txt=(document.getElementById('s_deliveryText')?.value||'').trim();
@@ -1894,8 +1910,20 @@ function saveDisplaySettings(){
   try{logHistory({type:'display',label:'Display settings changed',undoData:prev});}catch(e){}
   toast('Display settings saved!','ok');
 }
+function saveDeliverySettings(){
+  const s=lsGet('obv_settings',{});
+  const thr=parseFloat(document.getElementById('s_deliveryThreshold')?.value);
+  const fee=parseFloat(document.getElementById('s_deliveryFee')?.value);
+  if(!isNaN(thr)) s.deliveryThreshold=thr;
+  if(!isNaN(fee)) s.deliveryFee=fee;
+  lsSet('obv_settings',s);
+  sbPush('obv_settings');
+  toast('Delivery settings saved!','ok');
+}
 function saveSettings(){
+  const s=lsGet('obv_settings',{});
   lsSet('obv_settings',{
+    ...s,
     storeName:document.getElementById('s_name').value.trim(),
     storePhone:document.getElementById('s_phone').value.trim(),
     storeEmail:document.getElementById('s_email').value.trim(),

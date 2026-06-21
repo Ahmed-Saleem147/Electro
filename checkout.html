@@ -286,14 +286,19 @@ function renderCheckoutSummary() {
     if (delivRow) delivRow.style.display = 'none';
   } else {
     if (delivRow) delivRow.style.display = '';
-    if (subtotal >= threshold || fee === 0) {
-      // Free delivery
+    if (subtotal >= threshold) {
+      // Threshold met — free delivery
       deliveryFee = 0;
       if (delivVal) { delivVal.textContent = 'Free'; delivVal.className = 'free-ship'; }
-    } else {
-      // Below threshold — show fee
+    } else if (fee > 0) {
+      // Below threshold and a fee is configured — charge it
       deliveryFee = fee;
       if (delivVal) { delivVal.textContent = fmt(fee); delivVal.className = ''; }
+    } else {
+      // Below threshold, no fee set — show how much more is needed
+      deliveryFee = 0;
+      const needed = fmt(threshold - subtotal);
+      if (delivVal) { delivVal.innerHTML = `<span style="font-size:11px;color:var(--text-muted)">Add ${needed} more for free delivery</span>`; delivVal.className = ''; }
     }
   }
 

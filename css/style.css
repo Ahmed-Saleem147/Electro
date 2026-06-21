@@ -6,6 +6,22 @@
 /* Hide free delivery banner instantly before JS runs */
 html[data-no-delivery] .free-delivery-banner { display: none !important; }
 
+/* Full-width delivery announcement bar */
+.delivery-bar {
+  background: #16a34a;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.2px;
+}
+.delivery-bar i { font-size: 13px; }
+
 /* Accessible visually-hidden utility */
 .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
 

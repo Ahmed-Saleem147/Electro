@@ -982,8 +982,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
   try {
-    if (localStorage.getItem('obv_freeDelivery') === 'off') {
+    const fdOff = localStorage.getItem('obv_freeDelivery') === 'off';
+    if (fdOff) {
       document.querySelectorAll('.free-delivery-banner').forEach(el => el.style.display = 'none');
+    } else {
+      document.documentElement.removeAttribute('data-no-delivery');
+      document.querySelectorAll('.free-delivery-banner').forEach(el => el.style.display = '');
     }
     const flashEl = document.getElementById('flashSaleSection');
     if (flashEl) flashEl.style.display = localStorage.getItem('obv_flashSale') === 'on' ? '' : 'none';

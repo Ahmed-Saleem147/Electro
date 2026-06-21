@@ -361,10 +361,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (sc.value) window.location.href = `shop.html?cat=${sc.value}${q ? '&q=' + encodeURIComponent(q) : ''}`;
   });
 
-  // Free delivery toggle
-  if (localStorage.getItem('obv_freeDelivery') === 'off') {
-    document.querySelectorAll('.free-delivery-banner').forEach(el => el.style.display = 'none');
-  }
 });
 
 function setView(type) {

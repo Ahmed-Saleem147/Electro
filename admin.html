@@ -889,31 +889,7 @@ async function loadVisitLog() {
             <span style="font-size:13px;font-weight:700;color:#16a34a;min-width:28px;text-align:right">${cnt}</span>
             ${bar(cnt,maxReg,'#16a34a')}
           </div>`).join('')}
-      </div>` : ''}
-
-      <div style="margin-top:18px">
-        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:10px">Recent Visits</div>
-        <div style="overflow-x:auto">
-          <table style="width:100%;border-collapse:collapse;font-size:12.5px">
-            <thead><tr style="background:#f8fafc;border-bottom:2px solid #e2e8f0">
-              <th style="padding:7px 10px;text-align:left;font-weight:700;color:var(--muted)">TIME</th>
-              <th style="padding:7px 10px;text-align:left;font-weight:700;color:var(--muted)">LOCATION</th>
-              <th style="padding:7px 10px;text-align:left;font-weight:700;color:var(--muted)">PAGE</th>
-            </tr></thead>
-            <tbody>${log.slice(0,30).map(v=>{
-              const d=new Date(v.t);
-              const ts=isNaN(d)?'—':d.toLocaleDateString('en-GB',{day:'2-digit',month:'short'})+' '+d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-              const parts=[v.city, (v.region||'').replace(/ Region$/i,''), v.country].filter((x,i,a)=>x&&a.indexOf(x)===i);
-              return `<tr style="border-bottom:1px solid #f1f5f9">
-                <td style="padding:7px 10px;color:var(--muted)">${ts}</td>
-                <td style="padding:7px 10px;font-weight:600">${flag(v)} ${parts.join(', ')||'Unknown'}</td>
-                <td style="padding:7px 10px"><span style="background:#f1f5f9;border-radius:4px;padding:2px 7px;font-size:11px">${pageLbl(v.p)}</span></td>
-              </tr>`;
-            }).join('')}</tbody>
-          </table>
-          ${log.length>30?`<div style="text-align:center;padding:8px;font-size:12px;color:var(--muted)">Showing 30 of ${log.length} visits</div>`:''}
-        </div>
-      </div>`;
+      </div>` : ''}`;
   } catch(e) {
     el.innerHTML = '<div style="text-align:center;padding:20px;color:#ef4444;font-size:13px">Failed to load visit data.</div>';
   }

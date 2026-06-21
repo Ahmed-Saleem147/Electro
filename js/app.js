@@ -923,13 +923,21 @@ async function trackVisit() {
       const gr = await fetch('https://ipapi.co/json/');
       if (gr.ok) {
         const gd = await gr.json();
-        geo = { country: gd.country_name || '', city: gd.city || '', ip: gd.ip || '' };
+        geo = {
+          country: gd.country_name || '',
+          cc: gd.country || '',
+          region: gd.region || '',
+          city: gd.city || '',
+          ip: gd.ip || ''
+        };
       }
     } catch(e) {}
     const visit = {
       t: new Date().toISOString(),
       p: location.pathname.split('/').pop() || 'index.html',
       country: geo.country || 'Unknown',
+      cc: geo.cc || '',
+      region: geo.region || '',
       city: geo.city || '',
       ip: geo.ip || ''
     };

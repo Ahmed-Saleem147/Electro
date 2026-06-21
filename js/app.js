@@ -778,6 +778,21 @@ function initTrustMarquee() {
 /* ════════════════════════════════════════
    HEADER SCROLL EFFECTS
 ════════════════════════════════════════ */
+function initDesktopDropdowns() {
+  if (window.innerWidth < 1024) return;
+  document.querySelectorAll('.has-dropdown').forEach(li => {
+    const dd = li.querySelector(':scope > .dropdown');
+    if (!dd) return;
+    let hideTimer;
+    const open  = () => { clearTimeout(hideTimer); dd.style.opacity = '1'; dd.style.visibility = 'visible'; dd.style.transform = 'translateY(0)'; };
+    const close = () => { hideTimer = setTimeout(() => { dd.style.opacity = ''; dd.style.visibility = ''; dd.style.transform = ''; }, 220); };
+    li.addEventListener('mouseenter', open);
+    li.addEventListener('mouseleave', close);
+    dd.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+    dd.addEventListener('mouseleave', close);
+  });
+}
+
 function initHeaderScroll() {
   const header = document.getElementById('mainHeader');
   const backToTop = document.getElementById('backToTop');
@@ -960,6 +975,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   try { initSidebars(); } catch(e) {}
   try { initHeaderScroll(); } catch(e) {}
   try { initMobileNav(); } catch(e) {}
+  try { initDesktopDropdowns(); } catch(e) {}
   try { initProductTabs(); } catch(e) {}
   try { initModalTabs(); } catch(e) {}
   try { initNewsletter(); } catch(e) {}
